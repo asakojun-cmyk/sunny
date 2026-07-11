@@ -31,47 +31,44 @@
       </a>
       <p class="site-header__tagline">「ことば」から学べる、キャリアコンサルタント試験対策</p>
     </div>
-    <nav class="site-nav" aria-label="メインナビゲーション">
-      <ul><li><a href="./terms/index.html">ことば図鑑</a></li><li><a href="./theorists/index.html">理論家</a></li><li><a href="./start/index.html">試験対策</a></li><li><a href="./schools/index.html">養成講座</a></li><li><a href="./careers/index.html">資格取得後</a></li>
-        <li><a href="./search/index.html" class="site-nav__search">検索</a></li>
-      </ul>
-    </nav>
-    <button type="button" class="menu-button" data-menu-toggle aria-expanded="false" aria-controls="site-drawer">
-      <span class="menu-button__icon" aria-hidden="true"></span>メニュー
-    </button>
   </div>
 </header>
-<div class="drawer" id="site-drawer" hidden>
-  <div class="drawer__inner">
-    <p class="drawer__label">MENU</p>
-    <ul class="drawer__list">
-      <li><a href="./index.html">ホーム</a></li>
-      <li><a href="./terms/index.html">キャリコンことば図鑑</a></li>
-      <li><a href="./theorists/index.html">理論家図鑑</a></li>
-      <li><a href="./laws/index.html">労働法・統計・制度</a></li>
-      <li><a href="./exam/index.html">学科・論述・面接(過去問リンク)</a></li>
-      <li><a href="./start/index.html">はじめての学習ルート(試験対策)</a></li>
-      <li><a href="./schools/index.html">養成学校一覧</a></li>
-      <li><a href="./schools/compare/index.html">養成学校を比較する</a></li>
-      <li><a href="./school-guides/how-to-choose/index.html">養成学校の選び方</a></li>
-      <li><a href="./school-guides/online/index.html">オンライン講座の選び方</a></li>
-      <li><a href="./school-guides/working-mothers/index.html">子育て中の学校選び</a></li>
-      <li><a href="./school-guides/training-and-exam-preparation/index.html">養成講習と試験対策講座の違い</a></li>
-      <li><a href="./school-reviews/chiiki-renkei-platform/index.html">運営者の受講記録</a></li>
-      <li><a href="./careers/index.html">資格取得後の働き方</a></li>
-      <li><a href="./search/index.html">サイト内検索</a></li>
-      <li><a href="./about/index.html">このサイトについて</a></li>
-    </ul>
-  </div>
-</div>
 <main id="main" class="site-main">
 
 
-<section class="hero">
+<section class="hero hero--story">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__veil" aria-hidden="true"></div>
     <div class="hero__inner">
-      <div class="hero__scene" aria-hidden="false">
-        <div class="hero__chara hero__chara--moyan">
-          <svg class="chara chara--moyan" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="もやん(黄色い通学帽をかぶった小学生の雲)">
+
+      <div class="story-stage">
+        <!-- 会話(あとで消える) -->
+        <p class="stage-balloon stage-balloon--moyan story-step step-2 fade-later">キャリアコンサルタントの勉強中なんだけど、用語の意味からわからないよ…</p>
+        <p class="stage-balloon stage-balloon--sunny story-step step-4 fade-later">だいじょうぶだよ〜。むずかしくないよ、見慣れない言葉なだけ。</p>
+
+        <!-- 虹のリボン(会話が消えたあとに出る) -->
+        <div class="stage-ribbon story-step step-6" aria-hidden="false">
+          <svg viewBox="0 0 560 190" class="stage-ribbon__svg" role="img" aria-label="もやもやモヤンとさんさんサニー先生とまなぶ たのしいキャリアコンサルタント試験対策">
+            <defs>
+              <path id="ribbon-arc" d="M 36 148 Q 280 44 524 148" fill="none"/>
+            </defs>
+            <!-- リボン: 上と下の2本の線(文字と同じ黒っぽい色) -->
+            <g fill="none" stroke="#3f4652" stroke-width="2" stroke-linecap="round">
+              <path d="M 30 122 Q 280 16 530 122"/>
+              <path d="M 30 172 Q 280 66 530 172"/>
+            </g>
+            <!-- 線と線のあいだを、リボンにそって曲がる文字 -->
+            <text class="stage-ribbon__text">
+              <textPath href="#ribbon-arc" startOffset="50%" text-anchor="middle">もやもやモヤンとさんさんサニー先生とまなぶ</textPath>
+            </text>
+          </svg>
+          <p class="stage-ribbon__line">＼ たのしいキャリアコンサルタント試験対策 ／</p>
+        </div>
+
+        <!-- ふたりは同じ場所に並んで立つ -->
+        <div class="stage-charas">
+          <div class="stage-chara story-step step-1">
+            <svg class="chara chara--moyan" width="104" height="104" viewBox="0 0 120 120" role="img" aria-label="モヤン(黄色い通学帽をかぶった小学生の雲)">
   <!-- からだ(白い雲・まるく幼い) -->
   <path d="M30 92
            C15 92 9 79 16 69 C7 60 14 46 27 47
@@ -94,14 +91,10 @@
   <!-- くち(ちいさな困り口) -->
   <path d="M55 76 q5 -4 10 0" fill="none" stroke="#4a505c" stroke-width="2.6" stroke-linecap="round"/>
 </svg>
-          <p class="hero__chara-name">もやん</p>
-        </div>
-        <div class="hero__balloons">
-          <p class="hero__balloon hero__balloon--moyan">キャリアコンサルタントの勉強がしたいんだけど、言葉の意味からわからないよー😢</p>
-          <p class="hero__balloon hero__balloon--sunny">だいじょうぶ、もやん。むずかしい言葉から、ひとつずつ一緒にやさしくしていこう☀️</p>
-        </div>
-        <div class="hero__chara hero__chara--sunny">
-          <svg class="chara chara--sunny" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="さんさんサニー(太陽のキャラクター)">
+            <p class="hero__chara-name">モヤン</p>
+          </div>
+          <div class="stage-chara story-step step-3">
+            <svg class="chara chara--sunny" width="104" height="104" viewBox="0 0 120 120" role="img" aria-label="さんさんサニー(太陽のキャラクター)">
   <!-- 光線 -->
   <g stroke="#e9dc4f" stroke-width="5" stroke-linecap="round">
     <line x1="60" y1="6" x2="60" y2="18"/>
@@ -130,35 +123,101 @@
   <!-- くち(にっこり) -->
   <path d="M52 72 q8 8 16 0" fill="none" stroke="#4a3a20" stroke-width="2.6" stroke-linecap="round"/>
 </svg>
-          <p class="hero__chara-name">サニー先生</p>
+            <p class="hero__chara-name">サニー先生</p>
+          </div>
         </div>
+      </div>
+
+      <div class="hero__mini story-step step-7">
+        <div class="hero__mini-chara"><svg class="chara chara--moyan" width="56" height="56" viewBox="0 0 120 120" role="img" aria-label="モヤン(黄色い通学帽をかぶった小学生の雲)">
+  <!-- からだ(白い雲・まるく幼い) -->
+  <path d="M30 92
+           C15 92 9 79 16 69 C7 60 14 46 27 47
+           C30 34 47 30 56 38 C65 28 86 32 88 47
+           C103 47 108 62 100 71 C108 81 99 92 87 92 Z"
+        fill="#ffffff" stroke="#9fa9b6" stroke-width="3" stroke-linejoin="round"/>
+  <!-- 黄色い通学帽 -->
+  <path d="M30 44 q28 -26 60 0 Z" fill="#f4d64f" stroke="#d3b032" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M26 44 q34 -7 68 0 q0 4 -4 5 q-30 -5 -60 0 q-4 -1 -4 -5 Z" fill="#f4d64f" stroke="#d3b032" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="60" cy="20" r="4" fill="#f4d64f" stroke="#d3b032" stroke-width="2.5"/>
+  <!-- ほっぺ -->
+  <circle cx="38" cy="70" r="5.5" fill="#f6b8ad" opacity="0.85"/>
+  <circle cx="82" cy="70" r="5.5" fill="#f6b8ad" opacity="0.85"/>
+  <!-- め(まん丸・ハイライトつき) -->
+  <circle cx="48" cy="62" r="6" fill="#4a505c"/>
+  <circle cx="72" cy="62" r="6" fill="#4a505c"/>
+  <circle cx="50.4" cy="59.6" r="1.9" fill="#ffffff"/>
+  <circle cx="74.4" cy="59.6" r="1.9" fill="#ffffff"/>
+  <!-- くち(ちいさな笑み) -->
+  <path d="M56 73 q4 4 8 0" fill="none" stroke="#4a505c" stroke-width="2.6" stroke-linecap="round"/>
+</svg></div>
+        <p class="hero__mini-bubble">過去問の用語がむずかしいと感じた人のための、試験対策室。</p>
       </div>
 
       <div class="hero__text">
-        <p class="hero__en" aria-hidden="true">CAREER CONSULTANT STUDY GUIDE</p>
-        <p class="hero__chara-tagline">モヤモヤもやんと さんさんサニーがおしえる、たのしいキャリコンことば図鑑</p>
-        <h1 class="hero__title">「ことば」から学べる、キャリアコンサルタント試験対策</h1>
-        <p class="hero__subconcept">むずかしい専門用語を、いちばんやさしい入口から。</p>
-        <p class="hero__lede">キャリアコンサルタント試験の「ことば」から学べる試験対策サイト。むずかしい専門用語を、暮らしの中の身近なたとえと、試験に必要な正式な説明の両方から学べます。</p>
-        <p class="hero__note">仕事・家事・育児で勉強時間が少ない人にも、1回3分から学べる内容を届けます。</p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="./search/index.html">わからない言葉を調べる</a>
+        <p class="hero__subconcept story-step step-8">こころは天気のよう。<br>晴れの日も、雨の日も、その空をじっとみつめ、よりそう。</p>
+        <p class="hero__en story-step step-9" aria-hidden="true">CAREER CONSULTANT STUDY GUIDE</p>
+        <h1 class="hero__title story-step step-9">キャリコンことば図鑑</h1>
+        <p class="hero__lede story-step step-10">キャリアコンサルタント試験の「ことば」の意味からわかる試験対策サイト。むずかしい専門用語を、暮らしの中の身近なたとえと、試験に必要な正式な説明の両方から学べます。</p>
+
+        <!-- サニー先生の検索吹き出し(そのまま入力できる) -->
+        <div class="hero-search story-step step-11">
+          <div class="hero-search__chara">
+            <svg class="chara chara--sunny" width="76" height="76" viewBox="0 0 120 120" role="img" aria-label="さんさんサニー(太陽のキャラクター)">
+  <!-- 光線 -->
+  <g stroke="#e9dc4f" stroke-width="5" stroke-linecap="round">
+    <line x1="60" y1="6" x2="60" y2="18"/>
+    <line x1="60" y1="102" x2="60" y2="114"/>
+    <line x1="6" y1="60" x2="18" y2="60"/>
+    <line x1="102" y1="60" x2="114" y2="60"/>
+    <line x1="22" y1="22" x2="30" y2="30"/>
+    <line x1="90" y1="90" x2="98" y2="98"/>
+    <line x1="90" y1="30" x2="98" y2="22"/>
+    <line x1="22" y1="98" x2="30" y2="90"/>
+  </g>
+  <!-- かお(レモンイエローの太陽) -->
+  <circle cx="60" cy="60" r="34" fill="#f9ef79" stroke="#cdbf3c" stroke-width="3"/>
+  <!-- ほっぺ -->
+  <circle cx="44" cy="68" r="5" fill="#f4b98a" opacity="0.8"/>
+  <circle cx="76" cy="68" r="5" fill="#f4b98a" opacity="0.8"/>
+  <!-- せんせいメガネ -->
+  <g fill="none" stroke="#8a7a20" stroke-width="2.4">
+    <circle cx="49" cy="58" r="8"/>
+    <circle cx="71" cy="58" r="8"/>
+    <path d="M57 58 h6"/>
+  </g>
+  <!-- め -->
+  <circle cx="49" cy="58" r="3.2" fill="#4a3a20"/>
+  <circle cx="71" cy="58" r="3.2" fill="#4a3a20"/>
+  <!-- くち(にっこり) -->
+  <path d="M52 72 q8 8 16 0" fill="none" stroke="#4a3a20" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
+            <p class="hero__chara-name">サニー先生</p>
+          </div>
+          <div class="hero-search__bubble">
+            <p class="hero-search__lead">わからない用語をけんさくしてみよう。ここに記入してね。</p>
+            <form class="hero-search__form" action="./search/index.html" method="get" role="search">
+              <label class="visually-hidden" for="hero-search-input">わからない用語を検索</label>
+              <input type="search" id="hero-search-input" name="q" placeholder="例:自己概念、ラポール、転機" autocomplete="off">
+              <button type="submit" class="button button--primary">検索</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="hero__actions story-step step-12">
           <a class="button button--secondary" href="./start/index.html">はじめての学習ルートを見る</a>
         </div>
-        <p class="hero__sub-cta"><a href="./index.html#daily">今日の3問に挑戦する →</a></p>
+        <p class="hero__sub-cta story-step step-12"><a href="./index.html#daily">今日の3問に挑戦する →</a></p>
       </div>
+
     </div>
   </section>
-
-<div class="weather-row" aria-hidden="true">
-  <span>🌥️</span><span>🌧️</span><span>⛅</span><span>☀️</span><span>🌈</span><span>☂️</span><span>🌥️</span>
-</div>
 
 <section class="section section--surface">
   <div class="container container--narrow">
     <section class="site-search site-search--large">
     <h2 class="site-search__heading">今、わからない言葉は何ですか?</h2>
-    <form class="site-search__form" action="/search/" method="get" role="search">
+    <form class="site-search__form" action="./search/index.html" method="get" role="search">
       <label class="visually-hidden" for="site-search-input">サイト内検索</label>
       <input type="search" id="site-search-input" name="q" placeholder="例:自己概念、スーパー、感情の反映" autocomplete="off">
       <button type="submit" class="button button--primary">検索</button>
@@ -320,7 +379,7 @@
   </header>
     <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <svg class="chara chara--moyan" width="72" height="72" viewBox="0 0 120 120" role="img" aria-label="もやん(黄色い通学帽をかぶった小学生の雲)">
+      <svg class="chara chara--moyan" width="72" height="72" viewBox="0 0 120 120" role="img" aria-label="モヤン(黄色い通学帽をかぶった小学生の雲)">
   <!-- からだ(白い雲・まるく幼い) -->
   <path d="M30 92
            C15 92 9 79 16 69 C7 60 14 46 27 47
@@ -342,12 +401,12 @@
   <!-- くち(ちいさな笑み) -->
   <path d="M56 73 q4 4 8 0" fill="none" stroke="#4a505c" stroke-width="2.6" stroke-linecap="round"/>
 </svg>
-      <span class="chara-guide__name">もやん</span>
+      <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">きょうはこの3つだけでいいの? …それならできそう!</p>
   </div>
     <div class="daily-grid">
-    <div class="daily-card" data-daily="term" data-items="[{&quot;name&quot;:&quot;自己概念&quot;,&quot;reading&quot;:&quot;じこがいねん&quot;,&quot;oneLiner&quot;:&quot;「自分はこんな人」と自分自身について持っているイメージ&quot;,&quot;url&quot;:&quot;/terms/jiko-gainen/&quot;},{&quot;name&quot;:&quot;感情の反映&quot;,&quot;reading&quot;:&quot;かんじょうのはんえい&quot;,&quot;oneLiner&quot;:&quot;相談者の気持ちをくみ取って、言葉にして返すカウンセリングの技法&quot;,&quot;url&quot;:&quot;/terms/kanjo-no-hanei/&quot;},{&quot;name&quot;:&quot;ラポール&quot;,&quot;reading&quot;:&quot;らぽーる&quot;,&quot;oneLiner&quot;:&quot;相談者とカウンセラーの間にできる、安心できる信頼関係&quot;,&quot;url&quot;:&quot;/terms/rapport/&quot;},{&quot;name&quot;:&quot;自己効力感&quot;,&quot;reading&quot;:&quot;じここうりょくかん&quot;,&quot;oneLiner&quot;:&quot;「自分ならこれをうまくやれそうだ」という見通しと自信&quot;,&quot;url&quot;:&quot;/terms/jiko-koryokukan/&quot;},{&quot;name&quot;:&quot;キャリア・アンカー&quot;,&quot;reading&quot;:&quot;きゃりあ・あんかー&quot;,&quot;oneLiner&quot;:&quot;働くうえで「これだけは手放せない」という自分の軸&quot;,&quot;url&quot;:&quot;/terms/career-anchor/&quot;},{&quot;name&quot;:&quot;ライフ・キャリア・レインボー&quot;,&quot;reading&quot;:&quot;らいふ・きゃりあ・れいんぼー&quot;,&quot;oneLiner&quot;:&quot;人生の役割を、虹のように重なり合う帯で表したスーパーの図&quot;,&quot;url&quot;:&quot;/terms/life-career-rainbow/&quot;},{&quot;name&quot;:&quot;傾聴&quot;,&quot;reading&quot;:&quot;けいちょう&quot;,&quot;oneLiner&quot;:&quot;相手の話を、評価やアドバイスをはさまずに心をこめて聴くこと&quot;,&quot;url&quot;:&quot;/terms/keicho/&quot;},{&quot;name&quot;:&quot;プランド・ハップンスタンス&quot;,&quot;reading&quot;:&quot;ぷらんど・はっぷんすたんす&quot;,&quot;oneLiner&quot;:&quot;偶然の出来事を、計画的にキャリアのチャンスに変えるという考え方&quot;,&quot;url&quot;:&quot;/terms/planned-happenstance/&quot;},{&quot;name&quot;:&quot;転機(トランジション)&quot;,&quot;reading&quot;:&quot;てんき(とらんじしょん)&quot;,&quot;oneLiner&quot;:&quot;人生の天気が変わる節目のこと。4つのS(状況・自分・支え・戦略)で点検して乗り切る&quot;,&quot;url&quot;:&quot;/terms/tenki/&quot;},{&quot;name&quot;:&quot;キャリア・アダプタビリティ&quot;,&quot;reading&quot;:&quot;きゃりあ・あだぷたびりてぃ&quot;,&quot;oneLiner&quot;:&quot;変化の時代にキャリアを合わせていく力。関心・統制・好奇心・自信の4つで育てる&quot;,&quot;url&quot;:&quot;/terms/career-adaptability/&quot;},{&quot;name&quot;:&quot;積極的不確実性&quot;,&quot;reading&quot;:&quot;せっきょくてきふかくじつせい&quot;,&quot;oneLiner&quot;:&quot;「先が読めないこと」を不安がらず、前向きに受け入れて決めていこうという考え方&quot;,&quot;url&quot;:&quot;/terms/positive-uncertainty/&quot;},{&quot;name&quot;:&quot;特性因子理論&quot;,&quot;reading&quot;:&quot;とくせいいんしりろん&quot;,&quot;oneLiner&quot;:&quot;「自分を知る × 仕事を知る × 2つを結ぶ」で職業を選ぶ、いちばん古典的な理論&quot;,&quot;url&quot;:&quot;/terms/tokusei-inshi/&quot;},{&quot;name&quot;:&quot;ジョハリの窓&quot;,&quot;reading&quot;:&quot;じょはりのまど&quot;,&quot;oneLiner&quot;:&quot;自分を「自分が知ってる/知らない × 他人が知ってる/知らない」の4つの窓で見る自己理解の道具&quot;,&quot;url&quot;:&quot;/terms/johari-window/&quot;},{&quot;name&quot;:&quot;自己一致(純粋性)&quot;,&quot;reading&quot;:&quot;じこいっち(じゅんすいせい)&quot;,&quot;oneLiner&quot;:&quot;カウンセラーが自分の心にうそをつかず、ありのままでいること。ロジャーズの3条件のひとつ&quot;,&quot;url&quot;:&quot;/terms/jiko-icchi/&quot;},{&quot;name&quot;:&quot;共感的理解&quot;,&quot;reading&quot;:&quot;きょうかんてきりかい&quot;,&quot;oneLiner&quot;:&quot;相手の気持ちを「相手の側から」感じ取ろうとすること。「私もそう思う」とは違う&quot;,&quot;url&quot;:&quot;/terms/kyokanteki-rikai/&quot;},{&quot;name&quot;:&quot;論理療法(ABC理論)&quot;,&quot;reading&quot;:&quot;ろんりりょうほう(えーびーしーりろん)&quot;,&quot;oneLiner&quot;:&quot;気持ちを決めるのは出来事そのものではなく「受け取り方」だと考える、エリスの理論&quot;,&quot;url&quot;:&quot;/terms/abc-riron/&quot;},{&quot;name&quot;:&quot;マイクロカウンセリング&quot;,&quot;reading&quot;:&quot;まいくろかうんせりんぐ&quot;,&quot;oneLiner&quot;:&quot;カウンセリングの技を小さな部品に分けて、積み木のように学ぶ方法。土台は「かかわり行動」&quot;,&quot;url&quot;:&quot;/terms/microcounseling/&quot;},{&quot;name&quot;:&quot;システマティック・アプローチ&quot;,&quot;reading&quot;:&quot;しすてまてぃっく・あぷろーち&quot;,&quot;oneLiner&quot;:&quot;相談を「関係づくり→問題把握→目標設定→方策実行→評価」と順序立てて進める枠組み&quot;,&quot;url&quot;:&quot;/terms/systematic-approach/&quot;},{&quot;name&quot;:&quot;コーヒーカップ・モデル&quot;,&quot;reading&quot;:&quot;こーひーかっぷ・もでる&quot;,&quot;oneLiner&quot;:&quot;面接の流れを「リレーションづくり→問題の核心をつかむ→処理する」の3段階で表したモデル&quot;,&quot;url&quot;:&quot;/terms/coffee-cup-model/&quot;},{&quot;name&quot;:&quot;アサーション&quot;,&quot;reading&quot;:&quot;あさーしょん&quot;,&quot;oneLiner&quot;:&quot;相手も自分も大切にしながら、言いたいことを率直に伝える自己表現の方法&quot;,&quot;url&quot;:&quot;/terms/assertion/&quot;},{&quot;name&quot;:&quot;セルフ・キャリアドック&quot;,&quot;reading&quot;:&quot;せるふ・きゃりあどっく&quot;,&quot;oneLiner&quot;:&quot;会社が従業員に定期的なキャリアコンサルティング等を行う「キャリアの健康診断」のような仕組み&quot;,&quot;url&quot;:&quot;/terms/self-career-dock/&quot;},{&quot;name&quot;:&quot;ジョブ・カード&quot;,&quot;reading&quot;:&quot;じょぶ・かーど&quot;,&quot;oneLiner&quot;:&quot;自分のキャリアを整理して記録する、国の様式の「キャリアの母子手帳」のようなツール&quot;,&quot;url&quot;:&quot;/terms/job-card/&quot;}]">
+    <div class="daily-card" data-daily="term" data-items="[{&quot;name&quot;:&quot;自己概念&quot;,&quot;reading&quot;:&quot;じこがいねん&quot;,&quot;oneLiner&quot;:&quot;「自分はこんな人」と自分自身について持っているイメージ&quot;,&quot;url&quot;:&quot;/terms/jiko-gainen/&quot;},{&quot;name&quot;:&quot;感情の反映&quot;,&quot;reading&quot;:&quot;かんじょうのはんえい&quot;,&quot;oneLiner&quot;:&quot;相談者の気持ちをくみ取って、言葉にして返すカウンセリングの技法&quot;,&quot;url&quot;:&quot;/terms/kanjo-no-hanei/&quot;},{&quot;name&quot;:&quot;ラポール&quot;,&quot;reading&quot;:&quot;らぽーる&quot;,&quot;oneLiner&quot;:&quot;相談者とカウンセラーの間にできる、安心できる信頼関係&quot;,&quot;url&quot;:&quot;/terms/rapport/&quot;},{&quot;name&quot;:&quot;自己効力感&quot;,&quot;reading&quot;:&quot;じここうりょくかん&quot;,&quot;oneLiner&quot;:&quot;「自分ならこれをうまくやれそうだ」という見通しと自信&quot;,&quot;url&quot;:&quot;/terms/jiko-koryokukan/&quot;},{&quot;name&quot;:&quot;キャリア・アンカー&quot;,&quot;reading&quot;:&quot;きゃりあ・あんかー&quot;,&quot;oneLiner&quot;:&quot;働くうえで「これだけは手放せない」という自分の軸&quot;,&quot;url&quot;:&quot;/terms/career-anchor/&quot;},{&quot;name&quot;:&quot;ライフ・キャリア・レインボー&quot;,&quot;reading&quot;:&quot;らいふ・きゃりあ・れいんぼー&quot;,&quot;oneLiner&quot;:&quot;人生の役割を、虹のように重なり合う帯で表したスーパーの図&quot;,&quot;url&quot;:&quot;/terms/life-career-rainbow/&quot;},{&quot;name&quot;:&quot;傾聴&quot;,&quot;reading&quot;:&quot;けいちょう&quot;,&quot;oneLiner&quot;:&quot;相手の話を、評価やアドバイスをはさまずに心をこめて聴くこと&quot;,&quot;url&quot;:&quot;/terms/keicho/&quot;},{&quot;name&quot;:&quot;プランド・ハップンスタンス&quot;,&quot;reading&quot;:&quot;ぷらんど・はっぷんすたんす&quot;,&quot;oneLiner&quot;:&quot;偶然の出来事を、計画的にキャリアのチャンスに変えるという考え方&quot;,&quot;url&quot;:&quot;/terms/planned-happenstance/&quot;},{&quot;name&quot;:&quot;転機(トランジション)&quot;,&quot;reading&quot;:&quot;てんき(とらんじしょん)&quot;,&quot;oneLiner&quot;:&quot;人生の天気が変わる節目のこと。4つのS(状況・自分・支え・戦略)で点検して乗り切る&quot;,&quot;url&quot;:&quot;/terms/tenki/&quot;},{&quot;name&quot;:&quot;キャリア・アダプタビリティ&quot;,&quot;reading&quot;:&quot;きゃりあ・あだぷたびりてぃ&quot;,&quot;oneLiner&quot;:&quot;変化の時代にキャリアを合わせていく力。関心・統制・好奇心・自信の4つで育てる&quot;,&quot;url&quot;:&quot;/terms/career-adaptability/&quot;},{&quot;name&quot;:&quot;積極的不確実性&quot;,&quot;reading&quot;:&quot;せっきょくてきふかくじつせい&quot;,&quot;oneLiner&quot;:&quot;「先が読めないこと」を不安がらず、前向きに受け入れて決めていこうという考え方&quot;,&quot;url&quot;:&quot;/terms/positive-uncertainty/&quot;},{&quot;name&quot;:&quot;特性因子理論&quot;,&quot;reading&quot;:&quot;とくせいいんしりろん&quot;,&quot;oneLiner&quot;:&quot;「自分を知る × 仕事を知る × 2つを結ぶ」で職業を選ぶ、いちばん古典的な理論&quot;,&quot;url&quot;:&quot;/terms/tokusei-inshi/&quot;},{&quot;name&quot;:&quot;ジョハリの窓&quot;,&quot;reading&quot;:&quot;じょはりのまど&quot;,&quot;oneLiner&quot;:&quot;自分を「自分が知ってる/知らない × 他人が知ってる/知らない」の4つの窓で見る自己理解の道具&quot;,&quot;url&quot;:&quot;/terms/johari-window/&quot;},{&quot;name&quot;:&quot;自己一致(純粋性)&quot;,&quot;reading&quot;:&quot;じこいっち(じゅんすいせい)&quot;,&quot;oneLiner&quot;:&quot;カウンセラーが自分の心にうそをつかず、ありのままでいること。ロジャーズの3条件のひとつ&quot;,&quot;url&quot;:&quot;/terms/jiko-icchi/&quot;},{&quot;name&quot;:&quot;共感的理解&quot;,&quot;reading&quot;:&quot;きょうかんてきりかい&quot;,&quot;oneLiner&quot;:&quot;相手の気持ちを「相手の側から」感じ取ろうとすること。「私もそう思う」とは違う&quot;,&quot;url&quot;:&quot;/terms/kyokanteki-rikai/&quot;},{&quot;name&quot;:&quot;論理療法(ABC理論)&quot;,&quot;reading&quot;:&quot;ろんりりょうほう(えーびーしーりろん)&quot;,&quot;oneLiner&quot;:&quot;気持ちを決めるのは出来事そのものではなく「受け取り方」だと考える、エリスの理論&quot;,&quot;url&quot;:&quot;/terms/abc-riron/&quot;},{&quot;name&quot;:&quot;マイクロカウンセリング&quot;,&quot;reading&quot;:&quot;まいくろかうんせりんぐ&quot;,&quot;oneLiner&quot;:&quot;カウンセリングの技を小さな部品に分けて、積み木のように学ぶ方法。土台は「かかわり行動」&quot;,&quot;url&quot;:&quot;/terms/microcounseling/&quot;},{&quot;name&quot;:&quot;システマティック・アプローチ&quot;,&quot;reading&quot;:&quot;しすてまてぃっく・あぷろーち&quot;,&quot;oneLiner&quot;:&quot;相談を「関係づくり→問題把握→目標設定→方策実行→評価」と順序立てて進める枠組み&quot;,&quot;url&quot;:&quot;/terms/systematic-approach/&quot;},{&quot;name&quot;:&quot;コーヒーカップ・モデル&quot;,&quot;reading&quot;:&quot;こーひーかっぷ・もでる&quot;,&quot;oneLiner&quot;:&quot;面接の流れを「リレーションづくり→問題の核心をつかむ→処理する」の3段階で表したモデル&quot;,&quot;url&quot;:&quot;/terms/coffee-cup-model/&quot;},{&quot;name&quot;:&quot;アサーション&quot;,&quot;reading&quot;:&quot;あさーしょん&quot;,&quot;oneLiner&quot;:&quot;相手も自分も大切にしながら、言いたいことを率直に伝える自己表現の方法&quot;,&quot;url&quot;:&quot;/terms/assertion/&quot;},{&quot;name&quot;:&quot;セルフ・キャリアドック&quot;,&quot;reading&quot;:&quot;せるふ・きゃりあどっく&quot;,&quot;oneLiner&quot;:&quot;会社が従業員に定期的なキャリアコンサルティング等を行う「キャリアの健康診断」のような仕組み&quot;,&quot;url&quot;:&quot;/terms/self-career-dock/&quot;},{&quot;name&quot;:&quot;ジョブ・カード&quot;,&quot;reading&quot;:&quot;じょぶ・かーど&quot;,&quot;oneLiner&quot;:&quot;自分のキャリアを整理して記録する、国の様式の「キャリアの母子手帳」のようなツール&quot;,&quot;url&quot;:&quot;/terms/job-card/&quot;},{&quot;name&quot;:&quot;スーパービジョン&quot;,&quot;reading&quot;:&quot;すーぱーびじょん&quot;,&quot;oneLiner&quot;:&quot;経験豊かな指導者(スーパーバイザー)から、自分の面談について指導を受けて成長すること&quot;,&quot;url&quot;:&quot;/terms/supervision/&quot;},{&quot;name&quot;:&quot;リファー&quot;,&quot;reading&quot;:&quot;りふぁー&quot;,&quot;oneLiner&quot;:&quot;自分の専門や力量を超える相談を、適切な専門家・専門機関へ紹介してつなぐこと&quot;,&quot;url&quot;:&quot;/terms/refer/&quot;},{&quot;name&quot;:&quot;インテーク面談(受理面接)&quot;,&quot;reading&quot;:&quot;いんてーくめんだん(じゅりめんせつ)&quot;,&quot;oneLiner&quot;:&quot;いちばん最初の面談のこと。困りごとを受け取り、関係をつくり、これからの進め方を決める&quot;,&quot;url&quot;:&quot;/terms/intake/&quot;},{&quot;name&quot;:&quot;ナラティブ・アプローチ&quot;,&quot;reading&quot;:&quot;ならてぃぶ・あぷろーち&quot;,&quot;oneLiner&quot;:&quot;人生を「物語」として捉え、語り直すことで新しい意味を見つけていく支援の考え方&quot;,&quot;url&quot;:&quot;/terms/narrative-approach/&quot;},{&quot;name&quot;:&quot;プロティアン・キャリア&quot;,&quot;reading&quot;:&quot;ぷろてぃあん・きゃりあ&quot;,&quot;oneLiner&quot;:&quot;会社ではなく自分がキャリアの主人公で、変幻自在に形を変えていくというホールの考え方&quot;,&quot;url&quot;:&quot;/terms/protean-career/&quot;},{&quot;name&quot;:&quot;ワーク・エンゲージメント&quot;,&quot;reading&quot;:&quot;わーく・えんげーじめんと&quot;,&quot;oneLiner&quot;:&quot;仕事に対して「活力・熱意・没頭」がそろった、いきいきとした心の状態&quot;,&quot;url&quot;:&quot;/terms/work-engagement/&quot;},{&quot;name&quot;:&quot;リアリティ・ショック&quot;,&quot;reading&quot;:&quot;りありてぃ・しょっく&quot;,&quot;oneLiner&quot;:&quot;入社前の期待と入社後の現実のギャップに直面して受ける衝撃のこと&quot;,&quot;url&quot;:&quot;/terms/reality-shock/&quot;},{&quot;name&quot;:&quot;職業能力開発促進法&quot;,&quot;reading&quot;:&quot;しょくぎょうのうりょくかいはつそくしんほう&quot;,&quot;oneLiner&quot;:&quot;キャリアコンサルタントという資格の「生まれ故郷」にあたる法律&quot;,&quot;url&quot;:&quot;/terms/shokugyo-nouryoku-kaihatsu-sokushin-ho/&quot;},{&quot;name&quot;:&quot;アセスメント(職業適性検査)&quot;,&quot;reading&quot;:&quot;あせすめんと&quot;,&quot;oneLiner&quot;:&quot;興味・適性・価値観などを客観的に測る検査ツールのこと。自己理解を助ける道具&quot;,&quot;url&quot;:&quot;/terms/assessment/&quot;},{&quot;name&quot;:&quot;グループアプローチ&quot;,&quot;reading&quot;:&quot;ぐるーぷあぷろーち&quot;,&quot;oneLiner&quot;:&quot;1対1ではなく、グループの力を使って気づきや成長を促す支援方法&quot;,&quot;url&quot;:&quot;/terms/group-approach/&quot;},{&quot;name&quot;:&quot;無条件の肯定的配慮(受容)&quot;,&quot;reading&quot;:&quot;むじょうけんのこうていてきはいりょ(じゅよう)&quot;,&quot;oneLiner&quot;:&quot;「〜だったら認める」という条件をつけずに、相手の存在をそのまま大切に受け止めること&quot;,&quot;url&quot;:&quot;/terms/mujoken-no-koteiteki-hairyo/&quot;},{&quot;name&quot;:&quot;防衛機制&quot;,&quot;reading&quot;:&quot;ぼうえいきせい&quot;,&quot;oneLiner&quot;:&quot;心が傷つきそうなとき、無意識に自分を守ろうとする心の働き(フロイトの精神分析)&quot;,&quot;url&quot;:&quot;/terms/boei-kisei/&quot;},{&quot;name&quot;:&quot;認知療法(ベック)&quot;,&quot;reading&quot;:&quot;にんちりょうほう(べっく)&quot;,&quot;oneLiner&quot;:&quot;頭に自動的に浮かぶ考え(自動思考)のクセに気づいて、見直していく心理療法&quot;,&quot;url&quot;:&quot;/terms/ninchi-ryoho/&quot;},{&quot;name&quot;:&quot;行動療法(系統的脱感作)&quot;,&quot;reading&quot;:&quot;こうどうりょうほう(けいとうてきだつかんさ)&quot;,&quot;oneLiner&quot;:&quot;「行動は学習で身につく。だから学習で変えられる」と考える心理療法の一族&quot;,&quot;url&quot;:&quot;/terms/kodo-ryoho/&quot;},{&quot;name&quot;:&quot;ゲシュタルト療法(パールズ)&quot;,&quot;reading&quot;:&quot;げしゅたるとりょうほう(ぱーるず)&quot;,&quot;oneLiner&quot;:&quot;過去の分析より「今ここ」での気づきを大切にする心理療法。空の椅子の技法が有名&quot;,&quot;url&quot;:&quot;/terms/gestalt-ryoho/&quot;},{&quot;name&quot;:&quot;交流分析(バーン・エゴグラム)&quot;,&quot;reading&quot;:&quot;こうりゅうぶんせき&quot;,&quot;oneLiner&quot;:&quot;心の中の「親・大人・子ども」の3人を手がかりに、人とのやりとりのクセを見直す理論&quot;,&quot;url&quot;:&quot;/terms/koryu-bunseki/&quot;},{&quot;name&quot;:&quot;森田療法・内観療法&quot;,&quot;reading&quot;:&quot;もりたりょうほう・ないかんりょうほう&quot;,&quot;oneLiner&quot;:&quot;日本で生まれた2つの心理療法。「あるがまま」の森田と、「3つの問い」の内観&quot;,&quot;url&quot;:&quot;/terms/morita-naikan/&quot;},{&quot;name&quot;:&quot;マズローの欲求階層説&quot;,&quot;reading&quot;:&quot;まずろーのよっきゅうかいそうせつ&quot;,&quot;oneLiner&quot;:&quot;人の欲求を5段階のピラミッドで表し、頂上を「自己実現」とした理論&quot;,&quot;url&quot;:&quot;/terms/maslow/&quot;},{&quot;name&quot;:&quot;動機づけ・衛生理論(ハーズバーグ)&quot;,&quot;reading&quot;:&quot;どうきづけ・えいせいりろん(はーずばーぐ)&quot;,&quot;oneLiner&quot;:&quot;仕事の「満足」と「不満足」は別々の原因から生まれる、という二要因理論&quot;,&quot;url&quot;:&quot;/terms/herzberg/&quot;},{&quot;name&quot;:&quot;発達課題(ハヴィガースト)&quot;,&quot;reading&quot;:&quot;はったつかだい(はゔぃがーすと)&quot;,&quot;oneLiner&quot;:&quot;人生の各時期に取り組むべき「宿題」があるという考え方を最初に広めた人の理論&quot;,&quot;url&quot;:&quot;/terms/havighurst/&quot;},{&quot;name&quot;:&quot;統合的人生設計(ハンセンの4L)&quot;,&quot;reading&quot;:&quot;とうごうてきじんせいせっけい&quot;,&quot;oneLiner&quot;:&quot;仕事・愛・学び・余暇の4つを、キルトのように縫い合わせて人生をつくるという考え方&quot;,&quot;url&quot;:&quot;/terms/hansen-4l/&quot;},{&quot;name&quot;:&quot;コーピング(ストレス対処)&quot;,&quot;reading&quot;:&quot;こーぴんぐ&quot;,&quot;oneLiner&quot;:&quot;ストレスに意識的に対処する方法。問題そのものを変える型と、気持ちを整える型がある&quot;,&quot;url&quot;:&quot;/terms/coping/&quot;},{&quot;name&quot;:&quot;転移・逆転移&quot;,&quot;reading&quot;:&quot;てんい・ぎゃくてんい&quot;,&quot;oneLiner&quot;:&quot;相談者が過去の大切な人への感情をカウンセラーに向けるのが転移。その逆が逆転移&quot;,&quot;url&quot;:&quot;/terms/teni-gyakuteni/&quot;},{&quot;name&quot;:&quot;エンプロイアビリティ&quot;,&quot;reading&quot;:&quot;えんぷろいあびりてぃ&quot;,&quot;oneLiner&quot;:&quot;「雇用され続ける力」のこと。今の会社の外でも通用する力を含む&quot;,&quot;url&quot;:&quot;/terms/employability/&quot;},{&quot;name&quot;:&quot;ディーセント・ワーク&quot;,&quot;reading&quot;:&quot;でぃーせんと・わーく&quot;,&quot;oneLiner&quot;:&quot;「働きがいのある人間らしい仕事」のこと。ILO(国際労働機関)が掲げる目標&quot;,&quot;url&quot;:&quot;/terms/decent-work/&quot;},{&quot;name&quot;:&quot;リカレント教育とリスキリング&quot;,&quot;reading&quot;:&quot;りかれんときょういくとりすきりんぐ&quot;,&quot;oneLiner&quot;:&quot;大人になってからの「学び直し」の2つのキーワード。似ているが力点が違う&quot;,&quot;url&quot;:&quot;/terms/recurrent-reskilling/&quot;},{&quot;name&quot;:&quot;OJTとOff-JT&quot;,&quot;reading&quot;:&quot;おーじぇいてぃーとおふじぇいてぃー&quot;,&quot;oneLiner&quot;:&quot;OJT=仕事をしながらの訓練、Off-JT=仕事を離れての研修。人材育成の基本の型&quot;,&quot;url&quot;:&quot;/terms/ojt-offjt/&quot;},{&quot;name&quot;:&quot;完全失業率と有効求人倍率&quot;,&quot;reading&quot;:&quot;かんぜんしつぎょうりつとゆうこうきゅうじんばいりつ&quot;,&quot;oneLiner&quot;:&quot;働く世界の「体温計」となる2大統計。定義と出どころ(どの調査か)がテストに出る&quot;,&quot;url&quot;:&quot;/terms/shitsugyoritsu-kyujinbairitsu/&quot;},{&quot;name&quot;:&quot;メンタルヘルスの4つのケア&quot;,&quot;reading&quot;:&quot;めんたるへるすのよっつのけあ&quot;,&quot;oneLiner&quot;:&quot;職場の心の健康づくりを、4つの担い手(自分・上司・社内専門家・社外資源)で支える枠組み&quot;,&quot;url&quot;:&quot;/terms/mental-health-care/&quot;},{&quot;name&quot;:&quot;教育訓練給付制度&quot;,&quot;reading&quot;:&quot;きょういくくんれんきゅうふせいど&quot;,&quot;oneLiner&quot;:&quot;働く人の学び直しの受講料の一部を、雇用保険から支援してくれる制度&quot;,&quot;url&quot;:&quot;/terms/kyoiku-kunren-kyufu/&quot;}]">
     <p class="daily-card__label">🌥️ 今日の用語</p>
     <div class="daily-card__body" data-daily-body>
       <p class="daily-card__title"><a href="./terms/jiko-gainen/index.html">自己概念</a></p>
@@ -361,7 +420,7 @@
       <p class="daily-card__desc">キャリアを「一生かけて自分らしさを実現する旅」と考えた人</p>
     </div>
   </div>
-    <div class="daily-card daily-card--quiz" data-daily="quiz" data-items="[{&quot;question&quot;:&quot;スーパーの理論では、職業選択は自己概念を実現する過程であるとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。スーパーはキャリア発達を「自己概念を職業を通して実現していく過程」と捉えました。&quot;,&quot;url&quot;:&quot;/terms/jiko-gainen/&quot;,&quot;termName&quot;:&quot;自己概念&quot;},{&quot;question&quot;:&quot;「感情の反映」とは、相談者の話した事実関係を簡潔にまとめて返す技法である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。事実関係を返すのは「言い換え(内容の反映)」や「要約」。感情の反映は相談者の気持ちを言葉にして返す技法です。&quot;,&quot;url&quot;:&quot;/terms/kanjo-no-hanei/&quot;,&quot;termName&quot;:&quot;感情の反映&quot;},{&quot;question&quot;:&quot;ラポールの形成は、カウンセリングの最終段階で初めて必要になる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。ラポールはカウンセリングの初期(関係構築の段階)から重視されます。&quot;,&quot;url&quot;:&quot;/terms/rapport/&quot;,&quot;termName&quot;:&quot;ラポール&quot;},{&quot;question&quot;:&quot;バンデューラは、自己効力感を高める情報源のひとつとして「代理的経験(モデリング)」を挙げた。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。成功体験・代理的経験・言語的説得・情動的喚起の4つが自己効力感の情報源とされています。&quot;,&quot;url&quot;:&quot;/terms/jiko-koryokukan/&quot;,&quot;termName&quot;:&quot;自己効力感&quot;},{&quot;question&quot;:&quot;キャリア・アンカーは、就職前の学生の段階で完全に確立されるとシャインは考えた。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。キャリア・アンカーは実際の仕事経験を積む中で形成・明確化されるとされています。&quot;,&quot;url&quot;:&quot;/terms/career-anchor/&quot;,&quot;termName&quot;:&quot;キャリア・アンカー&quot;},{&quot;question&quot;:&quot;ライフ・キャリア・レインボーでは、人は同時に複数の役割を担い、その比重は生涯を通じて変化するとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。時間軸(ライフスパン)と役割(ライフスペース)の2次元でキャリアを捉えるのがポイントです。&quot;,&quot;url&quot;:&quot;/terms/life-career-rainbow/&quot;,&quot;termName&quot;:&quot;ライフ・キャリア・レインボー&quot;},{&quot;question&quot;:&quot;ロジャーズが挙げたカウンセラーの3つの基本的態度は「自己一致」「無条件の肯定的配慮」「共感的理解」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。3条件はセットで頻出です。「共感」と「同感」の違いも整理しておきましょう。&quot;,&quot;url&quot;:&quot;/terms/keicho/&quot;,&quot;termName&quot;:&quot;傾聴&quot;},{&quot;question&quot;:&quot;クランボルツの計画された偶発性理論では、偶然の出来事は避けるべきものとされている。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。偶然はキャリアの機会として積極的に活用すべきものとされ、5つのスキル(好奇心・持続性・柔軟性・楽観性・冒険心)が挙げられています。&quot;,&quot;url&quot;:&quot;/terms/planned-happenstance/&quot;,&quot;termName&quot;:&quot;プランド・ハップンスタンス&quot;},{&quot;question&quot;:&quot;シュロスバーグの4Sとは、Situation・Self・Support・Strategies の4つである。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。状況・自己・支援・戦略の4つの資源を点検して転機に対処します。転機の3分類とセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/tenki/&quot;,&quot;termName&quot;:&quot;転機(トランジション)&quot;},{&quot;question&quot;:&quot;キャリア・アダプタビリティの4次元は「関心・統制・好奇心・自信」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。4つのC(concern・control・curiosity・confidence)。クランボルツの5つのスキルと混同しないように注意。&quot;,&quot;url&quot;:&quot;/terms/career-adaptability/&quot;,&quot;termName&quot;:&quot;キャリア・アダプタビリティ&quot;},{&quot;question&quot;:&quot;ジェラットの「積極的不確実性」は、不確実な未来を否定的に捉えて排除すべきだとする考え方である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。不確実性を前向きに受け入れ、柔軟に意思決定していこうとする考え方です。&quot;,&quot;url&quot;:&quot;/terms/positive-uncertainty/&quot;,&quot;termName&quot;:&quot;積極的不確実性&quot;},{&quot;question&quot;:&quot;特性因子理論では、自己理解・職業理解・両者の合理的な推論の3要素で職業選択を行うとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。パーソンズの3要素です。「職業指導の父」「丸い釘は丸い穴に」もセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/tokusei-inshi/&quot;,&quot;termName&quot;:&quot;特性因子理論&quot;},{&quot;question&quot;:&quot;ジョハリの窓で、「自分は気づいていないが他人は知っている」領域は「盲点の窓」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。開放・盲点・秘密・未知の4つの窓の位置関係は図で覚えるのが確実です。&quot;,&quot;url&quot;:&quot;/terms/johari-window/&quot;,&quot;termName&quot;:&quot;ジョハリの窓&quot;},{&quot;question&quot;:&quot;ロジャーズの3条件における「自己一致」とは、相談者の意見に必ず同意することを指す。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。自己一致はカウンセラーが自分の内面の体験とありのままに一致していること。相談者への同意とは別の概念です。&quot;,&quot;url&quot;:&quot;/terms/jiko-icchi/&quot;,&quot;termName&quot;:&quot;自己一致(純粋性)&quot;},{&quot;question&quot;:&quot;共感的理解では、「あたかも〜のように」という性質を失わないことが重要とされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。相手の世界にのみ込まれず、as if の姿勢を保つことがポイントです。&quot;,&quot;url&quot;:&quot;/terms/kyokanteki-rikai/&quot;,&quot;termName&quot;:&quot;共感的理解&quot;},{&quot;question&quot;:&quot;論理療法のABC理論では、感情(C)を直接引き起こすのは出来事(A)であるとされる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。感情を生むのは出来事(A)ではなく信念・受け取り方(B)だと考えるのがABC理論の核心です。&quot;,&quot;url&quot;:&quot;/terms/abc-riron/&quot;,&quot;termName&quot;:&quot;論理療法(ABC理論)&quot;},{&quot;question&quot;:&quot;マイクロカウンセリングの技法階層の土台は「かかわり行動」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。視線の位置・身体言語・声の調子・言語的追跡の4つ。階層の一番下=最初に身につける技法です。&quot;,&quot;url&quot;:&quot;/terms/microcounseling/&quot;,&quot;termName&quot;:&quot;マイクロカウンセリング&quot;},{&quot;question&quot;:&quot;システマティック・アプローチでは、目標の設定よりも先に方策を実行することが望ましいとされる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。目標を相談者と合意してから方策を実行します。順番の入れ替え問題に注意。&quot;,&quot;url&quot;:&quot;/terms/systematic-approach/&quot;,&quot;termName&quot;:&quot;システマティック・アプローチ&quot;},{&quot;question&quot;:&quot;コーヒーカップ・モデルの3段階は「リレーションをつくる→問題の核心をつかむ→問題を解決する」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。國分康孝が提唱。順番と提唱者をセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/coffee-cup-model/&quot;,&quot;termName&quot;:&quot;コーヒーカップ・モデル&quot;},{&quot;question&quot;:&quot;アサーションにおける「アサーティブな自己表現」とは、自分の意見を通すために相手を強く説得する表現を指す。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。それは攻撃的(アグレッシブ)な表現。アサーティブは自分も相手も尊重する表現です。&quot;,&quot;url&quot;:&quot;/terms/assertion/&quot;,&quot;termName&quot;:&quot;アサーション&quot;},{&quot;question&quot;:&quot;セルフ・キャリアドックは、従業員が自費で人間ドックを受診するための医療補助制度である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。定期的なキャリアコンサルティング等を組み合わせた、企業内のキャリア形成支援の仕組みです。&quot;,&quot;url&quot;:&quot;/terms/self-career-dock/&quot;,&quot;termName&quot;:&quot;セルフ・キャリアドック&quot;},{&quot;question&quot;:&quot;ジョブ・カードは「生涯を通じたキャリア・プランニング」と「職業能力証明」の機能を持つツールとされている。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。この2つの機能はキーワードとして頻出です。オンラインの「マイジョブ・カード」も覚えておきましょう。&quot;,&quot;url&quot;:&quot;/terms/job-card/&quot;,&quot;termName&quot;:&quot;ジョブ・カード&quot;}]">
+    <div class="daily-card daily-card--quiz" data-daily="quiz" data-items="[{&quot;question&quot;:&quot;スーパーの理論では、職業選択は自己概念を実現する過程であるとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。スーパーはキャリア発達を「自己概念を職業を通して実現していく過程」と捉えました。&quot;,&quot;url&quot;:&quot;/terms/jiko-gainen/&quot;,&quot;termName&quot;:&quot;自己概念&quot;},{&quot;question&quot;:&quot;「感情の反映」とは、相談者の話した事実関係を簡潔にまとめて返す技法である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。事実関係を返すのは「言い換え(内容の反映)」や「要約」。感情の反映は相談者の気持ちを言葉にして返す技法です。&quot;,&quot;url&quot;:&quot;/terms/kanjo-no-hanei/&quot;,&quot;termName&quot;:&quot;感情の反映&quot;},{&quot;question&quot;:&quot;ラポールの形成は、カウンセリングの最終段階で初めて必要になる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。ラポールはカウンセリングの初期(関係構築の段階)から重視されます。&quot;,&quot;url&quot;:&quot;/terms/rapport/&quot;,&quot;termName&quot;:&quot;ラポール&quot;},{&quot;question&quot;:&quot;バンデューラは、自己効力感を高める情報源のひとつとして「代理的経験(モデリング)」を挙げた。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。成功体験・代理的経験・言語的説得・情動的喚起の4つが自己効力感の情報源とされています。&quot;,&quot;url&quot;:&quot;/terms/jiko-koryokukan/&quot;,&quot;termName&quot;:&quot;自己効力感&quot;},{&quot;question&quot;:&quot;キャリア・アンカーは、就職前の学生の段階で完全に確立されるとシャインは考えた。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。キャリア・アンカーは実際の仕事経験を積む中で形成・明確化されるとされています。&quot;,&quot;url&quot;:&quot;/terms/career-anchor/&quot;,&quot;termName&quot;:&quot;キャリア・アンカー&quot;},{&quot;question&quot;:&quot;ライフ・キャリア・レインボーでは、人は同時に複数の役割を担い、その比重は生涯を通じて変化するとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。時間軸(ライフスパン)と役割(ライフスペース)の2次元でキャリアを捉えるのがポイントです。&quot;,&quot;url&quot;:&quot;/terms/life-career-rainbow/&quot;,&quot;termName&quot;:&quot;ライフ・キャリア・レインボー&quot;},{&quot;question&quot;:&quot;ロジャーズが挙げたカウンセラーの3つの基本的態度は「自己一致」「無条件の肯定的配慮」「共感的理解」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。3条件はセットで頻出です。「共感」と「同感」の違いも整理しておきましょう。&quot;,&quot;url&quot;:&quot;/terms/keicho/&quot;,&quot;termName&quot;:&quot;傾聴&quot;},{&quot;question&quot;:&quot;クランボルツの計画された偶発性理論では、偶然の出来事は避けるべきものとされている。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。偶然はキャリアの機会として積極的に活用すべきものとされ、5つのスキル(好奇心・持続性・柔軟性・楽観性・冒険心)が挙げられています。&quot;,&quot;url&quot;:&quot;/terms/planned-happenstance/&quot;,&quot;termName&quot;:&quot;プランド・ハップンスタンス&quot;},{&quot;question&quot;:&quot;シュロスバーグの4Sとは、Situation・Self・Support・Strategies の4つである。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。状況・自己・支援・戦略の4つの資源を点検して転機に対処します。転機の3分類とセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/tenki/&quot;,&quot;termName&quot;:&quot;転機(トランジション)&quot;},{&quot;question&quot;:&quot;キャリア・アダプタビリティの4次元は「関心・統制・好奇心・自信」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。4つのC(concern・control・curiosity・confidence)。クランボルツの5つのスキルと混同しないように注意。&quot;,&quot;url&quot;:&quot;/terms/career-adaptability/&quot;,&quot;termName&quot;:&quot;キャリア・アダプタビリティ&quot;},{&quot;question&quot;:&quot;ジェラットの「積極的不確実性」は、不確実な未来を否定的に捉えて排除すべきだとする考え方である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。不確実性を前向きに受け入れ、柔軟に意思決定していこうとする考え方です。&quot;,&quot;url&quot;:&quot;/terms/positive-uncertainty/&quot;,&quot;termName&quot;:&quot;積極的不確実性&quot;},{&quot;question&quot;:&quot;特性因子理論では、自己理解・職業理解・両者の合理的な推論の3要素で職業選択を行うとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。パーソンズの3要素です。「職業指導の父」「丸い釘は丸い穴に」もセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/tokusei-inshi/&quot;,&quot;termName&quot;:&quot;特性因子理論&quot;},{&quot;question&quot;:&quot;ジョハリの窓で、「自分は気づいていないが他人は知っている」領域は「盲点の窓」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。開放・盲点・秘密・未知の4つの窓の位置関係は図で覚えるのが確実です。&quot;,&quot;url&quot;:&quot;/terms/johari-window/&quot;,&quot;termName&quot;:&quot;ジョハリの窓&quot;},{&quot;question&quot;:&quot;ロジャーズの3条件における「自己一致」とは、相談者の意見に必ず同意することを指す。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。自己一致はカウンセラーが自分の内面の体験とありのままに一致していること。相談者への同意とは別の概念です。&quot;,&quot;url&quot;:&quot;/terms/jiko-icchi/&quot;,&quot;termName&quot;:&quot;自己一致(純粋性)&quot;},{&quot;question&quot;:&quot;共感的理解では、「あたかも〜のように」という性質を失わないことが重要とされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。相手の世界にのみ込まれず、as if の姿勢を保つことがポイントです。&quot;,&quot;url&quot;:&quot;/terms/kyokanteki-rikai/&quot;,&quot;termName&quot;:&quot;共感的理解&quot;},{&quot;question&quot;:&quot;論理療法のABC理論では、感情(C)を直接引き起こすのは出来事(A)であるとされる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。感情を生むのは出来事(A)ではなく信念・受け取り方(B)だと考えるのがABC理論の核心です。&quot;,&quot;url&quot;:&quot;/terms/abc-riron/&quot;,&quot;termName&quot;:&quot;論理療法(ABC理論)&quot;},{&quot;question&quot;:&quot;マイクロカウンセリングの技法階層の土台は「かかわり行動」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。視線の位置・身体言語・声の調子・言語的追跡の4つ。階層の一番下=最初に身につける技法です。&quot;,&quot;url&quot;:&quot;/terms/microcounseling/&quot;,&quot;termName&quot;:&quot;マイクロカウンセリング&quot;},{&quot;question&quot;:&quot;システマティック・アプローチでは、目標の設定よりも先に方策を実行することが望ましいとされる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。目標を相談者と合意してから方策を実行します。順番の入れ替え問題に注意。&quot;,&quot;url&quot;:&quot;/terms/systematic-approach/&quot;,&quot;termName&quot;:&quot;システマティック・アプローチ&quot;},{&quot;question&quot;:&quot;コーヒーカップ・モデルの3段階は「リレーションをつくる→問題の核心をつかむ→問題を解決する」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。國分康孝が提唱。順番と提唱者をセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/coffee-cup-model/&quot;,&quot;termName&quot;:&quot;コーヒーカップ・モデル&quot;},{&quot;question&quot;:&quot;アサーションにおける「アサーティブな自己表現」とは、自分の意見を通すために相手を強く説得する表現を指す。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。それは攻撃的(アグレッシブ)な表現。アサーティブは自分も相手も尊重する表現です。&quot;,&quot;url&quot;:&quot;/terms/assertion/&quot;,&quot;termName&quot;:&quot;アサーション&quot;},{&quot;question&quot;:&quot;セルフ・キャリアドックは、従業員が自費で人間ドックを受診するための医療補助制度である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。定期的なキャリアコンサルティング等を組み合わせた、企業内のキャリア形成支援の仕組みです。&quot;,&quot;url&quot;:&quot;/terms/self-career-dock/&quot;,&quot;termName&quot;:&quot;セルフ・キャリアドック&quot;},{&quot;question&quot;:&quot;ジョブ・カードは「生涯を通じたキャリア・プランニング」と「職業能力証明」の機能を持つツールとされている。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。この2つの機能はキーワードとして頻出です。オンラインの「マイジョブ・カード」も覚えておきましょう。&quot;,&quot;url&quot;:&quot;/terms/job-card/&quot;,&quot;termName&quot;:&quot;ジョブ・カード&quot;},{&quot;question&quot;:&quot;スーパービジョンとは、カウンセラーが熟練した指導者から自らの面談について指導を受けることをいう。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。指導を受ける側をスーパーバイジー、指導する側をスーパーバイザーと呼びます。&quot;,&quot;url&quot;:&quot;/terms/supervision/&quot;,&quot;termName&quot;:&quot;スーパービジョン&quot;},{&quot;question&quot;:&quot;リファーを行う際は、迅速さを優先し、相談者本人の同意を得ずに専門機関へ紹介するのが原則である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。原則は相談者の同意を得たうえで紹介します。相談者の利益と自己決定の尊重が基本です。&quot;,&quot;url&quot;:&quot;/terms/refer/&quot;,&quot;termName&quot;:&quot;リファー&quot;},{&quot;question&quot;:&quot;インテーク面談では、主訴の把握とともに、相談者との信頼関係(ラポール)の形成が重要とされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。最初の面談は情報収集だけの場ではなく、関係構築の場でもあります。&quot;,&quot;url&quot;:&quot;/terms/intake/&quot;,&quot;termName&quot;:&quot;インテーク面談(受理面接)&quot;},{&quot;question&quot;:&quot;ナラティブ・アプローチでは、問題がしみ込んだ支配的な物語を「オルタナティブ・ストーリー」と呼ぶ。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。支配的な物語は「ドミナント・ストーリー」。語り直しで見出す新しい物語が「オルタナティブ・ストーリー」です。&quot;,&quot;url&quot;:&quot;/terms/narrative-approach/&quot;,&quot;termName&quot;:&quot;ナラティブ・アプローチ&quot;},{&quot;question&quot;:&quot;プロティアン・キャリアにおける成功の基準は、昇進や報酬といった客観的な成功である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。基準は「心理的成功」。組織ではなく個人がキャリアの主体である点とセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/protean-career/&quot;,&quot;termName&quot;:&quot;プロティアン・キャリア&quot;},{&quot;question&quot;:&quot;ワーク・エンゲージメントは「活力・熱意・没頭」の3つの要素で特徴づけられる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。3要素はそのまま出題されます。バーンアウトの対概念である点もセットで。&quot;,&quot;url&quot;:&quot;/terms/work-engagement/&quot;,&quot;termName&quot;:&quot;ワーク・エンゲージメント&quot;},{&quot;question&quot;:&quot;採用前に仕事の良い面だけでなく厳しい面も伝えるRJPは、リアリティ・ショックの緩和策のひとつとされる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。RJP(現実的職務予告)は期待と現実のギャップを事前に小さくする取り組みです。&quot;,&quot;url&quot;:&quot;/terms/reality-shock/&quot;,&quot;termName&quot;:&quot;リアリティ・ショック&quot;},{&quot;question&quot;:&quot;キャリアコンサルタントは、職業能力開発促進法に基づく業務独占資格である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。名称独占資格です。「業務独占」との入れ替えは定番のひっかけです。&quot;,&quot;url&quot;:&quot;/terms/shokugyo-nouryoku-kaihatsu-sokushin-ho/&quot;,&quot;termName&quot;:&quot;職業能力開発促進法&quot;},{&quot;question&quot;:&quot;VPI職業興味検査は、ホランドの理論に基づく職業興味の検査である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。検査名と「誰の理論・何を測るか」の対応は学科の定番です。GATB(能力適性)との区別も忘れずに。&quot;,&quot;url&quot;:&quot;/terms/assessment/&quot;,&quot;termName&quot;:&quot;アセスメント(職業適性検査)&quot;},{&quot;question&quot;:&quot;構成的グループエンカウンター(SGE)は、ロジャーズが開発した非構成的なグループアプローチである。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。SGE=國分康孝(構成的)、ベーシック・エンカウンター・グループ=ロジャーズ(非構成的)。定番のひっかけです。&quot;,&quot;url&quot;:&quot;/terms/group-approach/&quot;,&quot;termName&quot;:&quot;グループアプローチ&quot;},{&quot;question&quot;:&quot;無条件の肯定的配慮とは、相談者のすべての意見や行動に同意することを意味する。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。同意ではなく、条件をつけずに存在を尊重し受け止めることです。&quot;,&quot;url&quot;:&quot;/terms/mujoken-no-koteiteki-hairyo/&quot;,&quot;termName&quot;:&quot;無条件の肯定的配慮(受容)&quot;},{&quot;question&quot;:&quot;防衛機制のうち、満たされない欲求をスポーツや芸術など社会的に認められる活動で発散することを「昇華」という。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。昇華は防衛機制の中でも適応的なものとされます。種類と具体例の対応で覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/boei-kisei/&quot;,&quot;termName&quot;:&quot;防衛機制&quot;},{&quot;question&quot;:&quot;認知療法における「自動思考」の概念を提唱したのはエリスである。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。自動思考はベック。エリスはABC理論(イラショナル・ビリーフ)です。&quot;,&quot;url&quot;:&quot;/terms/ninchi-ryoho/&quot;,&quot;termName&quot;:&quot;認知療法(ベック)&quot;},{&quot;question&quot;:&quot;系統的脱感作は、不安階層表を用いてリラクセーションと組み合わせながら段階的に不安に慣らしていく技法である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。ウォルピが開発。「逆制止」というキーワードもセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/kodo-ryoho/&quot;,&quot;termName&quot;:&quot;行動療法(系統的脱感作)&quot;},{&quot;question&quot;:&quot;ゲシュタルト療法では「今ここ」での気づきが重視され、エンプティ・チェアなどの技法が用いられる。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。パールズ・今ここ・空の椅子(エンプティチェア)の3点セットで頻出です。&quot;,&quot;url&quot;:&quot;/terms/gestalt-ryoho/&quot;,&quot;termName&quot;:&quot;ゲシュタルト療法(パールズ)&quot;},{&quot;question&quot;:&quot;エゴグラムを考案したのは、交流分析の創始者バーンである。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。エゴグラムはバーンの弟子のデュセイが考案。創始者と考案者の入れ替えに注意。&quot;,&quot;url&quot;:&quot;/terms/koryu-bunseki/&quot;,&quot;termName&quot;:&quot;交流分析(バーン・エゴグラム)&quot;},{&quot;question&quot;:&quot;内観療法の3項目は「してもらったこと」「して返したこと」「迷惑をかけたこと」である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。吉本伊信が創始。森田療法(森田正馬・あるがまま)とセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/morita-naikan/&quot;,&quot;termName&quot;:&quot;森田療法・内観療法&quot;},{&quot;question&quot;:&quot;マズローの欲求階層説では、最も高次の欲求は「承認の欲求」であるとされる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。最高次は「自己実現の欲求」。5段階の順番は正確に覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/maslow/&quot;,&quot;termName&quot;:&quot;マズローの欲求階層説&quot;},{&quot;question&quot;:&quot;ハーズバーグの二要因理論では、給与や作業条件は「動機づけ要因」に分類される。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。給与・作業条件・対人関係などは「衛生要因」。達成・承認・責任などが「動機づけ要因」です。&quot;,&quot;url&quot;:&quot;/terms/herzberg/&quot;,&quot;termName&quot;:&quot;動機づけ・衛生理論(ハーズバーグ)&quot;},{&quot;question&quot;:&quot;「発達課題」という概念を提唱したのはハヴィガーストである。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。6段階の生活課題。エリクソン(8段階)・レビンソン(四季)との区別が頻出です。&quot;,&quot;url&quot;:&quot;/terms/havighurst/&quot;,&quot;termName&quot;:&quot;発達課題(ハヴィガースト)&quot;},{&quot;question&quot;:&quot;ハンセンの4Lとは、労働(Labor)・愛(Love)・学習(Learning)・余暇(Leisure)である。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。キルトのたとえ、統合的人生設計(ILP)という名称もセットで覚えましょう。&quot;,&quot;url&quot;:&quot;/terms/hansen-4l/&quot;,&quot;termName&quot;:&quot;統合的人生設計(ハンセンの4L)&quot;},{&quot;question&quot;:&quot;ストレッサーそのものの解決に働きかける対処は「情動焦点型コーピング」と呼ばれる。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。問題そのものへの働きかけは「問題焦点型」。感情の調整が「情動焦点型」です。&quot;,&quot;url&quot;:&quot;/terms/coping/&quot;,&quot;termName&quot;:&quot;コーピング(ストレス対処)&quot;},{&quot;question&quot;:&quot;カウンセラーが自身の個人的な感情を相談者に向けることを「転移」という。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。それは「逆転移」。相談者→カウンセラーが転移、カウンセラー→相談者が逆転移です。&quot;,&quot;url&quot;:&quot;/terms/teni-gyakuteni/&quot;,&quot;termName&quot;:&quot;転移・逆転移&quot;},{&quot;question&quot;:&quot;エンプロイアビリティとは、特定の企業の中だけで通用する能力のことを指す。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。企業を超えて労働市場で雇用され得る力を含む概念です。&quot;,&quot;url&quot;:&quot;/terms/employability/&quot;,&quot;termName&quot;:&quot;エンプロイアビリティ&quot;},{&quot;question&quot;:&quot;ディーセント・ワークは、WHO(世界保健機関)が提唱した概念である。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。ILO(国際労働機関)です。国際機関の入れ替えひっかけに注意。&quot;,&quot;url&quot;:&quot;/terms/decent-work/&quot;,&quot;termName&quot;:&quot;ディーセント・ワーク&quot;},{&quot;question&quot;:&quot;リスキリングとは、おもに趣味や教養のために生涯にわたって学び続けることを指す。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。それは生涯学習に近い説明。リスキリングは新しい業務・職種に必要なスキルの(再)習得です。&quot;,&quot;url&quot;:&quot;/terms/recurrent-reskilling/&quot;,&quot;termName&quot;:&quot;リカレント教育とリスキリング&quot;},{&quot;question&quot;:&quot;Off-JTとは、日常の業務に就きながら上司や先輩の指導を受ける教育訓練のことである。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。それはOJT。Off-JTは通常の仕事を離れて行う研修などを指します。&quot;,&quot;url&quot;:&quot;/terms/ojt-offjt/&quot;,&quot;termName&quot;:&quot;OJTとOff-JT&quot;},{&quot;question&quot;:&quot;完全失業率は、厚生労働省の「職業安定業務統計」から算出される。○か×か。&quot;,&quot;answer&quot;:false,&quot;explanation&quot;:&quot;×。完全失業率は総務省「労働力調査」。有効求人倍率が厚労省「職業安定業務統計」です。出どころの入れ替えは超定番。&quot;,&quot;url&quot;:&quot;/terms/shitsugyoritsu-kyujinbairitsu/&quot;,&quot;termName&quot;:&quot;完全失業率と有効求人倍率&quot;},{&quot;question&quot;:&quot;メンタルヘルスの4つのケアとは、セルフケア、ラインによるケア、事業場内産業保健スタッフ等によるケア、事業場外資源によるケアである。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。担い手4つの組み合わせはそのまま出題されます。&quot;,&quot;url&quot;:&quot;/terms/mental-health-care/&quot;,&quot;termName&quot;:&quot;メンタルヘルスの4つのケア&quot;},{&quot;question&quot;:&quot;教育訓練給付には、一般教育訓練・特定一般教育訓練・専門実践教育訓練の区分がある。○か×か。&quot;,&quot;answer&quot;:true,&quot;explanation&quot;:&quot;○。3区分の名称は覚えましょう。給付率・要件は変わり得るので最新は公式で確認を。&quot;,&quot;url&quot;:&quot;/terms/kyoiku-kunren-kyufu/&quot;,&quot;termName&quot;:&quot;教育訓練給付制度&quot;}]">
     <p class="daily-card__label">🌈 今日の1問</p>
     <div class="daily-card__body" data-daily-body>
       <p class="daily-card__question">スーパーの理論では、職業選択は自己概念を実現する過程であるとされる。○か×か。</p>
@@ -700,20 +759,35 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" id="sitemap">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <p class="site-logo__ja">キャリコンことば図鑑</p>
+      <p class="site-logo__ja"><span aria-hidden="true">⛅</span>キャリコンことば図鑑</p>
       <p class="site-logo__en">CAREER CONSULTANT STUDY GUIDE</p>
       <p class="site-footer__desc">小学生でもわかるほどやさしい国家資格キャリアコンサルタント試験対策</p>
     </div>
-    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
-      <ul>
-        <li><a href="./terms/index.html">ことば図鑑</a></li>
+    <nav class="site-footer__sitemap" aria-label="サイト全体のメニュー">
+      <p class="drawer__label">MENU</p>
+      <ul class="drawer__list drawer__list--main">
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./terms/index.html">ことば図鑑</a></li><li><a href="./theorists/index.html">理論家</a></li><li><a href="./start/index.html">試験対策</a></li><li><a href="./schools/index.html">養成講座</a></li><li><a href="./careers/index.html">資格取得後</a></li>
+        <li><a href="./search/index.html">サイト内検索</a></li>
+      </ul>
+      <p class="drawer__label">ALL PAGES</p>
+      <ul class="drawer__list">
+        <li><a href="./terms/index.html">キャリコンことば図鑑(用語一覧)</a></li>
         <li><a href="./theorists/index.html">理論家図鑑</a></li>
-        <li><a href="./start/index.html">学習ルート</a></li>
-        <li><a href="./schools/index.html">養成学校</a></li>
-        <li><a href="./careers/index.html">資格取得後</a></li>
+        <li><a href="./laws/index.html">労働法・統計・制度</a></li>
+        <li><a href="./exam/index.html">学科・論述・面接(過去問リンク)</a></li>
+        <li><a href="./start/index.html">はじめての学習ルート</a></li>
+        <li><a href="./schools/index.html">養成学校一覧</a></li>
+        <li><a href="./schools/compare/index.html">養成学校を比較する</a></li>
+        <li><a href="./school-guides/how-to-choose/index.html">養成学校の選び方</a></li>
+        <li><a href="./school-guides/online/index.html">オンライン講座の選び方</a></li>
+        <li><a href="./school-guides/working-mothers/index.html">子育て中の学校選び</a></li>
+        <li><a href="./school-guides/training-and-exam-preparation/index.html">養成講習と試験対策講座の違い</a></li>
+        <li><a href="./school-reviews/chiiki-renkei-platform/index.html">運営者の受講記録</a></li>
+        <li><a href="./careers/index.html">資格取得後の働き方</a></li>
         <li><a href="./about/index.html">このサイトについて</a></li>
       </ul>
     </nav>
@@ -736,11 +810,10 @@
     </a><a class="bottom-nav__item" href="./schools/compare/index.html">
       <span class="bottom-nav__icon bottom-nav__icon--compare" aria-hidden="true"></span>
       <span class="bottom-nav__label">学校比較</span>
-    </a><a class="bottom-nav__item" href="#" data-menu-toggle role="button">
+    </a><a class="bottom-nav__item" href="#sitemap">
       <span class="bottom-nav__icon bottom-nav__icon--menu" aria-hidden="true"></span>
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
-<script src="./js/nav.js" defer></script>
 <script src="./js/reveal.js" defer></script>
 </body>
 </html>

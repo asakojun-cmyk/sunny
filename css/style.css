@@ -47,6 +47,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background: var(--color-background);
@@ -291,10 +294,20 @@ button {
 }
 .drawer__list a {
   display: block;
-  padding: 8px 0;
+  padding: 10px 0;
   text-decoration: none;
   border-bottom: 1px solid var(--color-border);
   font-size: 14px;
+}
+.drawer__list--main {
+  margin-bottom: 24px;
+}
+.drawer__list--main a {
+  font-size: 16px;
+  font-weight: 700;
+}
+.drawer__list--main a[aria-current="page"] {
+  color: var(--color-terracotta);
 }
 
 /* ---------- パンくず ---------- */
@@ -339,23 +352,63 @@ button {
   margin: 0;
 }
 
-/* ---------- ヒーロー ---------- */
+/* ---------- ヒーロー(左テキスト・右キャラクター・ゆったり) ---------- */
 .hero {
-  padding: 88px 0 80px;
+  padding: 128px 0 120px;
   position: relative;
   overflow: hidden;
 }
+
+/* 空の背景(img/hero-sky.jpg を置くと表示される。ゆっくり流れる=早送りの空) */
+.hero__bg {
+  position: absolute;
+  inset: -6%;
+  /* CSSからの相対パス(サブパス配信でも動く) */
+  background-image: url("../img/hero-sky.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: sky-drift 46s ease-in-out infinite alternate;
+  z-index: 0;
+}
+@keyframes sky-drift {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  100% {
+    transform: scale(1.1) translateX(-2.4%);
+  }
+}
+/* 文字を読みやすくする、うすいベール(左は濃く、右は淡く) */
+.hero__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.62) 0%,
+    rgba(255, 255, 255, 0.74) 55%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  z-index: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg {
+    animation: none;
+  }
+}
 .hero__inner {
-  max-width: 960px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 76px;
 }
 .hero__text {
-  text-align: center;
-  max-width: 640px;
-  margin: 40px auto 0;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
 }
 .hero__chara-tagline {
   display: inline-block;
@@ -369,42 +422,39 @@ button {
   margin-bottom: 18px;
 }
 .hero__actions {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-/* オープニングの掛け合いシーン */
-.hero__scene {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
+/* 右側: モヤンとサニー先生の掛け合い */
+.hero__characters {
+  flex: none;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+.hero__pair {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
 }
 .hero__chara {
   flex: none;
   text-align: center;
 }
 .hero__chara .chara {
-  width: 120px;
-  height: 120px;
+  width: 104px;
+  height: 104px;
+  animation: chara-float 4s ease-in-out infinite;
 }
-.hero__chara--moyan .chara {
-  animation: chara-float 3.4s ease-in-out infinite;
-}
-.hero__chara--sunny .chara {
-  animation: chara-float 3.4s ease-in-out infinite;
-  animation-delay: 1.2s;
+.hero__pair--sunny .chara {
+  animation-delay: 1.6s;
 }
 .hero__chara-name {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   font-size: 12px;
   font-weight: 700;
   color: var(--color-text-subtle);
-}
-.hero__balloons {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-width: 0;
 }
 .hero__balloon {
   position: relative;
@@ -415,16 +465,92 @@ button {
   font-weight: 500;
   line-height: 1.7;
 }
+/* 吹き出しの「しっぽ」: 話しているキャラクターの方を向く */
 .hero__balloon--moyan {
   background: #ffffff;
   border: 1.5px solid #b6c0cc;
-  border-bottom-left-radius: 4px;
+}
+.hero__balloon--moyan::before,
+.hero__balloon--moyan::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  border: solid transparent;
+}
+.hero__balloon--moyan::before {
+  left: -13px;
+  border-width: 9px 13px 9px 0;
+  border-right-color: #b6c0cc;
+}
+.hero__balloon--moyan::after {
+  left: -10px;
+  border-width: 8px 12px 8px 0;
+  border-right-color: #ffffff;
 }
 .hero__balloon--sunny {
   background: #fdf9dc;
   border: 1.5px solid #ded263;
-  border-bottom-right-radius: 4px;
-  align-self: flex-end;
+}
+.hero__balloon--sunny::before,
+.hero__balloon--sunny::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  border: solid transparent;
+}
+.hero__balloon--sunny::before {
+  right: -13px;
+  border-width: 9px 0 9px 13px;
+  border-left-color: #ded263;
+}
+.hero__balloon--sunny::after {
+  right: -10px;
+  border-width: 8px 0 8px 12px;
+  border-left-color: #fdf9dc;
+}
+.hero__characters .hero__chara-tagline {
+  margin: 14px auto 0;
+  font-size: 13px;
+  line-height: 1.9;
+  text-align: center;
+}
+/* ミニモヤンのひとこと */
+.hero__mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+.hero__mini-chara {
+  flex: none;
+}
+.hero__mini-bubble {
+  position: relative;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1.5px solid #b6c0cc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.hero__mini-bubble::before,
+.hero__mini-bubble::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid transparent;
+}
+.hero__mini-bubble::before {
+  left: -11px;
+  border-width: 7px 11px 7px 0;
+  border-right-color: #b6c0cc;
+}
+.hero__mini-bubble::after {
+  left: -8px;
+  border-width: 6px 10px 6px 0;
+  border-right-color: #ffffff;
 }
 .hero__en {
   font-size: 11px;
@@ -434,25 +560,28 @@ button {
 }
 .hero__title {
   font-size: clamp(30px, 5vw, 44px);
-  letter-spacing: 0.04em;
-  margin-bottom: 24px;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+  margin-bottom: 36px;
   max-width: 720px;
 }
 .hero__subconcept {
   font-size: 17px;
   font-weight: 700;
   color: var(--color-terracotta);
-  margin: -4px 0 16px;
+  line-height: 2.2;
+  margin: 0 0 32px;
 }
 .hero__lede {
   max-width: 560px;
-  margin-bottom: 8px;
+  line-height: 2.1;
+  margin-bottom: 20px;
 }
 .hero__note {
   color: var(--color-text-subtle);
   font-size: 14px;
   max-width: 560px;
-  margin-bottom: 32px;
+  margin-bottom: 44px;
 }
 .hero__actions {
   display: flex;
@@ -518,12 +647,44 @@ button {
 .chara-guide--moyan .chara-guide__bubble {
   border: 1.5px solid #b6c0cc;
   background: #ffffff;
-  border-bottom-left-radius: 4px;
+}
+.chara-guide--moyan .chara-guide__bubble::before,
+.chara-guide--moyan .chara-guide__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  border: solid transparent;
+}
+.chara-guide--moyan .chara-guide__bubble::before {
+  left: -12px;
+  border-width: 8px 12px 8px 0;
+  border-right-color: #b6c0cc;
+}
+.chara-guide--moyan .chara-guide__bubble::after {
+  left: -9px;
+  border-width: 7px 11px 7px 0;
+  border-right-color: #ffffff;
 }
 .chara-guide--sunny .chara-guide__bubble {
   border: 1.5px solid #ded263;
   background: #fdf9dc;
-  border-bottom-right-radius: 4px;
+}
+.chara-guide--sunny .chara-guide__bubble::before,
+.chara-guide--sunny .chara-guide__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  border: solid transparent;
+}
+.chara-guide--sunny .chara-guide__bubble::before {
+  right: -12px;
+  border-width: 8px 0 8px 12px;
+  border-left-color: #ded263;
+}
+.chara-guide--sunny .chara-guide__bubble::after {
+  right: -9px;
+  border-width: 7px 0 7px 11px;
+  border-left-color: #fdf9dc;
 }
 .chara-dialogue {
   margin: 8px 0 8px;
@@ -1818,19 +1979,11 @@ button {
   color: var(--color-text-subtle);
   margin-top: 8px;
 }
-.site-footer__nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  margin: 28px 0;
-  padding: 24px 0;
+.site-footer__sitemap {
+  margin: 32px 0;
+  padding: 28px 0 8px;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-}
-.site-footer__nav a {
-  text-decoration: none;
-  font-size: 14px;
 }
 .site-footer__note {
   font-size: 12px;
@@ -1849,9 +2002,6 @@ button {
 
 /* ---------- レスポンシブ ---------- */
 @media (max-width: 960px) {
-  .site-nav {
-    display: none;
-  }
   .category-grid,
   .daily-grid,
   .featured-grid {
@@ -1867,33 +2017,19 @@ button {
     padding-bottom: 76px; /* 下部ナビの高さぶん */
   }
   .hero {
-    padding: 56px 0 48px;
+    padding: 64px 0 56px;
   }
-  .hero__scene {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    justify-items: center;
+  .hero__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .hero__characters {
+    width: 100%;
   }
   .hero__chara .chara {
-    width: 88px;
-    height: 88px;
-  }
-  .hero__chara--moyan {
-    order: 1;
-  }
-  .hero__balloon--moyan {
-    order: 2;
-  }
-  .hero__balloon--sunny {
-    order: 4;
-    align-self: stretch;
-  }
-  .hero__chara--sunny {
-    order: 3;
-  }
-  .hero__balloons {
-    width: 100%;
-    order: 2;
+    width: 84px;
+    height: 84px;
   }
   .hero__balloon {
     font-size: 15px;
@@ -2147,68 +2283,345 @@ button {
   margin-top: 26px;
 }
 
-/* ヒーローに漂う水玉(とかちフルーツビレッジ風の遊び) */
-.hero {
-  position: relative;
+/* 動く飾りアイコン(水玉・天気の行進)は廃止。
+   天気アイコンは記事の見出し・本文の中でのみ使用する。 */
+
+/* ---------- オープニング・アニメーション(中央配置の物語) ---------- */
+.hero--story .hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 720px;
+  text-align: center;
 }
-.hero::before,
-.hero::after {
+
+/* 舞台: ふたりは同じ場所に並んで立ち、頭の上で会話→虹のリボン */
+.story-stage {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  height: 330px;
+  margin-bottom: 26px;
+}
+.stage-charas {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  gap: 44px;
+}
+.stage-chara {
+  text-align: center;
+}
+/* 会話の吹き出し(キャラの頭上・しっぽは下向きで本人を指す) */
+.stage-balloon {
+  position: absolute;
+  bottom: 190px;
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: left;
+  width: 265px;
+}
+.stage-balloon--moyan {
+  left: 8px;
+  background: #ffffff;
+  border: 1.5px solid #b6c0cc;
+}
+.stage-balloon--moyan::before,
+.stage-balloon--moyan::after {
   content: "";
   position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
+  border: solid transparent;
 }
-.hero::before {
-  width: 14px;
-  height: 14px;
-  left: 8%;
-  top: 22%;
-  background: var(--color-sky);
-  animation: dot-drift 7s ease-in-out infinite;
+.stage-balloon--moyan::before {
+  bottom: -13px;
+  left: 66%;
+  border-width: 13px 9px 0 9px;
+  border-top-color: #b6c0cc;
 }
-.hero::after {
-  width: 10px;
-  height: 10px;
-  right: 10%;
-  bottom: 18%;
-  background: var(--color-yellow);
-  animation: dot-drift 9s ease-in-out infinite reverse;
+.stage-balloon--moyan::after {
+  bottom: -10px;
+  left: calc(66% + 1px);
+  border-width: 12px 8px 0 8px;
+  border-top-color: #ffffff;
 }
-@keyframes dot-drift {
-  0%,
-  100% {
-    transform: translate(0, 0);
+.stage-balloon--sunny {
+  right: 8px;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+}
+.stage-balloon--sunny::before,
+.stage-balloon--sunny::after {
+  content: "";
+  position: absolute;
+  border: solid transparent;
+}
+.stage-balloon--sunny::before {
+  bottom: -13px;
+  left: 30%;
+  border-width: 13px 9px 0 9px;
+  border-top-color: #ded263;
+}
+.stage-balloon--sunny::after {
+  bottom: -10px;
+  left: calc(30% + 1px);
+  border-width: 12px 8px 0 8px;
+  border-top-color: #fdf9dc;
+}
+/* 会話は少し経つと消える */
+.fade-later {
+  animation-name: story-in, story-out !important;
+  animation-duration: 0.7s, 0.7s;
+  animation-fill-mode: forwards, forwards;
+  animation-timing-function: ease, ease;
+}
+.stage-balloon--moyan.fade-later {
+  animation-delay: 1s, 5.2s;
+}
+.stage-balloon--sunny.fade-later {
+  animation-delay: 2.9s, 5.2s;
+}
+@keyframes story-out {
+  from {
+    opacity: 1;
+    transform: none;
   }
-  50% {
-    transform: translate(8px, -14px);
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+  }
+}
+/* 虹のリボン(transformはアニメーションと衝突するためmarginで中央寄せ) */
+.stage-ribbon {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 560px;
+}
+.stage-ribbon__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.stage-ribbon__text {
+  font-family: var(--font-sans);
+  font-size: 23px;
+  font-weight: 700;
+  fill: #3f4652;
+}
+.stage-ribbon__line {
+  margin: 10px 0 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+}
+.hero--story .hero__mini {
+  justify-content: center;
+  margin: 0 0 34px;
+}
+.hero--story .hero__mini-bubble {
+  text-align: left;
+  max-width: 360px;
+}
+.hero--story .hero__text {
+  text-align: center;
+  max-width: 640px;
+}
+.hero--story .hero__subconcept {
+  margin-bottom: 26px;
+}
+.hero--story .hero__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.hero--story .hero__lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero--story .hero__actions {
+  justify-content: center;
+}
+
+/* 出現アニメーション: 台本の順番でふわっと登場 */
+.story-step {
+  opacity: 0;
+  animation: story-in 0.7s ease forwards;
+}
+.hero__pair.story-step,
+.hero__mini.story-step {
+  animation-name: story-pop;
+}
+@keyframes story-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes story-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.step-1 { animation-delay: 0.3s; }
+.step-2 { animation-delay: 1s; }
+.step-3 { animation-delay: 2.2s; }
+.step-4 { animation-delay: 2.9s; }
+.step-6 { animation-delay: 6.1s; }
+.step-7 { animation-delay: 7.1s; }
+.step-8 { animation-delay: 7.9s; }
+.step-9 { animation-delay: 8.5s; }
+.step-10 { animation-delay: 9.1s; }
+.step-11 { animation-delay: 9.7s; }
+.step-12 { animation-delay: 10.4s; }
+
+/* サニー先生の検索吹き出し */
+.hero-search {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  justify-content: center;
+  margin: 8px 0 26px;
+  text-align: left;
+}
+.hero-search__chara {
+  flex: none;
+  text-align: center;
+}
+.hero-search__bubble {
+  position: relative;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 16px;
+  padding: 16px 18px;
+  max-width: 460px;
+  flex: 1;
+}
+.hero-search__bubble::before,
+.hero-search__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  border: solid transparent;
+}
+.hero-search__bubble::before {
+  left: -13px;
+  border-width: 9px 13px 9px 0;
+  border-right-color: #ded263;
+}
+.hero-search__bubble::after {
+  left: -10px;
+  border-width: 8px 12px 8px 0;
+  border-right-color: #fdf9dc;
+}
+.hero-search__lead {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.hero-search__form {
+  display: flex;
+  gap: 8px;
+}
+.hero-search__form input[type="search"] {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 16px;
+  font-size: 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-text);
+}
+.hero-search__form input[type="search"]:focus {
+  outline: 2px solid var(--color-sky);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-step {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  /* 動きを減らす設定では会話は表示せず、リボン以降だけを見せる */
+  .stage-balloon.fade-later {
+    display: none;
   }
 }
 
-/* 天気アイコンの行進(区切りの遊び) */
-.weather-row {
-  display: flex;
-  justify-content: center;
-  gap: 26px;
-  font-size: 24px;
-  padding: 6px 0 40px;
-}
-.weather-row span {
-  animation: weather-bob 3.2s ease-in-out infinite;
-}
-.weather-row span:nth-child(2n) {
-  animation-delay: 0.5s;
-}
-.weather-row span:nth-child(3n) {
-  animation-delay: 1.1s;
-}
-@keyframes weather-bob {
-  0%,
-  100% {
-    transform: translateY(0);
+@media (max-width: 680px) {
+  .story-stage {
+    height: 420px;
   }
-  50% {
-    transform: translateY(-6px);
+  .stage-balloon {
+    width: 84%;
+  }
+  .stage-balloon--moyan {
+    left: 0;
+    bottom: 300px;
+  }
+  .stage-balloon--moyan::before {
+    left: 40%;
+  }
+  .stage-balloon--moyan::after {
+    left: calc(40% + 1px);
+  }
+  .stage-balloon--sunny {
+    right: 0;
+    bottom: 185px;
+  }
+  .stage-balloon--sunny::before {
+    left: 58%;
+  }
+  .stage-balloon--sunny::after {
+    left: calc(58% + 1px);
+  }
+  .stage-ribbon {
+    bottom: 165px;
+  }
+  .stage-ribbon__text {
+    font-size: 26px;
+  }
+  .stage-ribbon__line {
+    font-size: 15px;
+  }
+  .hero-search {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-search__bubble::before,
+  .hero-search__bubble::after {
+    display: none;
+  }
+  .hero-search__form {
+    flex-direction: column;
   }
 }
 
@@ -2318,9 +2731,7 @@ button {
     transform: none;
     transition: none;
   }
-  .weather-row span,
-  .hero::before,
-  .hero::after {
+  .chara {
     animation: none;
   }
 }
