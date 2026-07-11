@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asakojun-cmyk.github.io/sunny/sitemap.xml
