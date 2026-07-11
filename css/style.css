@@ -2083,3 +2083,255 @@ button {
     box-shadow: 0 5px 0 currentColor, 0 10px 0 currentColor;
   }
 }
+
+/* ============================================================
+   デザインリニューアル(参考: 編集的な余白 × 図鑑カード × 動き)
+   ============================================================ */
+
+/* ボタンをピル型に(やわらかさ) */
+.button {
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transform 0.18s, box-shadow 0.18s;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* 見出し下の手書き風・点線アクセント */
+.section-header__title::after {
+  content: "";
+  display: block;
+  width: 46px;
+  border-bottom: 3px dotted var(--color-terracotta);
+  margin-top: 12px;
+  opacity: 0.75;
+}
+.hero__text .section-header__title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 波形の区切り(セクションの境目をやわらかく) */
+.section--surface,
+.section--sky,
+.section--yellow,
+.site-footer {
+  position: relative;
+}
+.section--surface::before,
+.section--sky::before,
+.section--yellow::before,
+.site-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -22px;
+  height: 24px;
+  background-repeat: repeat-x;
+  background-size: 1200px 24px;
+  pointer-events: none;
+}
+.section--surface::before,
+.site-footer::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 12 Q150 0 300 12 T600 12 T900 12 T1200 12 V24 H0 Z' fill='%23fffdf8'/%3E%3C/svg%3E");
+}
+.section--sky::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 12 Q150 0 300 12 T600 12 T900 12 T1200 12 V24 H0 Z' fill='%23e8f0f1'/%3E%3C/svg%3E");
+}
+.section--yellow::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 12 Q150 0 300 12 T600 12 T900 12 T1200 12 V24 H0 Z' fill='%23f5efd9'/%3E%3C/svg%3E");
+}
+.site-footer {
+  margin-top: 26px;
+}
+
+/* ヒーローに漂う水玉(とかちフルーツビレッジ風の遊び) */
+.hero {
+  position: relative;
+}
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::before {
+  width: 14px;
+  height: 14px;
+  left: 8%;
+  top: 22%;
+  background: var(--color-sky);
+  animation: dot-drift 7s ease-in-out infinite;
+}
+.hero::after {
+  width: 10px;
+  height: 10px;
+  right: 10%;
+  bottom: 18%;
+  background: var(--color-yellow);
+  animation: dot-drift 9s ease-in-out infinite reverse;
+}
+@keyframes dot-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(8px, -14px);
+  }
+}
+
+/* 天気アイコンの行進(区切りの遊び) */
+.weather-row {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  font-size: 24px;
+  padding: 6px 0 40px;
+}
+.weather-row span {
+  animation: weather-bob 3.2s ease-in-out infinite;
+}
+.weather-row span:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+.weather-row span:nth-child(3n) {
+  animation-delay: 1.1s;
+}
+@keyframes weather-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ことば図鑑: 「集めたくなる」カード型(dodaしごとずかん風) */
+.term-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+.term-list__item a {
+  display: block;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 22px 24px;
+  height: 100%;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+.term-list__item a:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-yellow);
+  box-shadow: 0 10px 22px rgba(39, 39, 34, 0.07);
+}
+.term-list__number {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--color-yellow-light);
+  color: var(--color-terracotta);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+}
+.term-list__name {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+}
+.term-list__reading {
+  display: block;
+  margin: 0 0 8px;
+}
+.term-list__oneliner {
+  display: block;
+}
+
+/* 理論家図鑑もカード型に */
+.theorist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 18px;
+}
+.theorist-list__item a {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 20px;
+  height: 100%;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+.theorist-list__item a:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-yellow);
+  box-shadow: 0 10px 22px rgba(39, 39, 34, 0.07);
+}
+
+/* カテゴリーもカード型に(現場の3カード風) */
+.category-item {
+  border-top: none;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 26px 26px 22px;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+.category-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-sky);
+  box-shadow: 0 10px 22px rgba(39, 39, 34, 0.07);
+}
+.category-grid {
+  gap: 20px;
+}
+
+/* 角丸をそろえる */
+.daily-card,
+.school-card,
+.study-journal,
+.author-profile,
+.article-card {
+  border-radius: 18px;
+}
+
+/* スクロールでふわっと現れる */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .weather-row span,
+  .hero::before,
+  .hero::after {
+    animation: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .weather-row {
+    gap: 16px;
+    font-size: 20px;
+  }
+  .term-list,
+  .theorist-list {
+    grid-template-columns: 1fr;
+  }
+}
