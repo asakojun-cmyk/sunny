@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/style.css?v=v2026.0712.0600">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"キャリコンことば図鑑","alternateName":"CAREER CONSULTANT STUDY GUIDE","url":"https://asakojun-cmyk.github.io/sunny","description":"キャリアコンサルタント試験の「ことば」から学べる試験対策サイト。むずかしい専門用語を、暮らしの中の身近なたとえと、試験に必要な正式な説明の両方から学べます。"}</script>
 </head>
 <body>
@@ -87,26 +87,29 @@
     <div class="hero__veil" aria-hidden="true"></div>
     <div class="hero__inner">
 
-      <!-- リボン+小さなロゴ(世界観の導入・上部に小さく) -->
+      <!-- 虹がかかるようなアーチ状のテキスト(ふたりの上に出現) -->
       <div class="hero__head">
         <div class="hero-lockup story-step step-t1">
-          <svg viewBox="0 0 560 190" class="hero-lockup__svg" role="img" aria-label="もやもやモヤンと さんさんサニー先生とまなぶ">
+          <svg viewBox="0 0 560 214" class="hero-lockup__svg" role="img" aria-label="もやもやモヤンとさんさんサニー先生の たのしいキャリアコンサルタント試験対策室">
             <defs>
-              <path id="ribbon-arc" d="M 36 148 Q 280 44 524 148" fill="none"/>
+              <path id="ribbon-arc-1" d="M 36 128 Q 280 26 524 128" fill="none"/>
+              <path id="ribbon-arc-2" d="M 36 176 Q 280 74 524 176" fill="none"/>
             </defs>
             <g fill="none" stroke="#3f4652" stroke-width="2" stroke-linecap="round">
-              <path d="M 30 122 Q 280 16 530 122"/>
-              <path d="M 30 172 Q 280 66 530 172"/>
+              <path d="M 30 96 Q 280 -6 530 96"/>
+              <path d="M 30 204 Q 280 102 530 204"/>
             </g>
             <text class="stage-ribbon__text">
-              <textPath href="#ribbon-arc" startOffset="50%" text-anchor="middle">もやもやモヤンとさんさんサニー先生とまなぶ</textPath>
+              <textPath href="#ribbon-arc-1" startOffset="50%" text-anchor="middle">もやもやモヤンとさんさんサニー先生の</textPath>
+            </text>
+            <text class="stage-ribbon__text">
+              <textPath href="#ribbon-arc-2" startOffset="50%" text-anchor="middle">たのしいキャリアコンサルタント試験対策室</textPath>
             </text>
           </svg>
         </div>
-        <p class="hero-lockup__name story-step step-t2"><span aria-hidden="true">⛅</span>キャリコンことば図鑑</p>
       </div>
 
-      <!-- 世界観コピー〜タイトル〜ボタン -->
+      <!-- 中央に出現する文字たち(ふたりが下りたあと) -->
       <div class="hero__text">
         <p class="hero__worldview">
           <span class="wv-line story-step step-t3">こころは天気のよう。</span>
@@ -121,12 +124,15 @@
         </div>
       </div>
 
-      <!-- ふたりの舞台(一番下)。オープニング後、気持ちを代弁する会話がループ -->
+      <!-- ふたりの舞台。開幕は中央、アーチ出現後に下へ移動 -->
       <div class="story-stage">
         <div class="conv-area" aria-hidden="false">
-          <!-- オープニングの2言(1回だけ) -->
-          <p class="stage-balloon stage-balloon--moyan intro-balloon intro-1">キャリアコンサルタントの勉強中なんだけど、用語の意味からわからないよ…</p>
-          <p class="stage-balloon stage-balloon--sunny intro-balloon intro-2">だいじょうぶだよ〜。</p>
+          <!-- オープニング(1回だけ) -->
+          <p class="stage-balloon stage-balloon--moyan intro-balloon intro-m1">キャリアコンサルタントの勉強中なんだけど</p>
+          <p class="stage-balloon stage-balloon--moyan intro-balloon intro-m2">ことばの意味から難しいよ〜</p>
+          <p class="stage-balloon stage-balloon--sunny intro-balloon intro-s1">大丈夫だよ〜</p>
+          <p class="stage-balloon stage-balloon--sunny intro-balloon intro-s2">見慣れない言葉ってだけ。</p>
+          <p class="stage-balloon stage-balloon--sunny intro-balloon intro-s3">ここでは言葉の意味から学べるよ</p>
           <!-- 読者の気持ちを代弁する6往復(ループ再生) -->
           <p class="stage-balloon stage-balloon--moyan loop-balloon conv-1">シャインとスーパーって、<br>何をした人……?</p>
           <p class="stage-balloon stage-balloon--sunny loop-balloon conv-2">大丈夫だよ。</p>
@@ -741,8 +747,8 @@
     <p class="updates__text">新しい用語や記事は、このサイトの<a href="./terms/index.html">一覧ページ</a>から確認できます。</p>
   </div>
 </section>
-<script src="./js/daily.js" defer></script>
-<script src="./js/compare.js" defer></script>
+<script src="./js/daily.js?v=v2026.0712.0600" defer></script>
+<script src="./js/compare.js?v=v2026.0712.0600" defer></script>
 
 </main>
 
@@ -782,7 +788,7 @@
       <p>掲載している学校の料金・日程・給付金などの情報は変更される可能性があります。申込み前に必ず各校の公式サイトで最新情報をご確認ください。</p>
       <p>法律・統計・試験制度に関する記述は、一次資料で確認できた範囲で掲載しています。</p>
     </div>
-    <p class="site-footer__copy">&copy; 2026 キャリコンことば図鑑 <span class="site-footer__version">v2026.0712.0537</span></p>
+    <p class="site-footer__copy">&copy; 2026 キャリコンことば図鑑 <span class="site-footer__version">v2026.0712.0600</span></p>
   </div>
 </footer>
 <nav class="bottom-nav" aria-label="モバイルナビゲーション"><a class="bottom-nav__item is-active" href="./index.html">
@@ -801,7 +807,7 @@
       <span class="bottom-nav__icon bottom-nav__icon--menu" aria-hidden="true"></span>
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
-<script src="./js/reveal.js" defer></script>
-<script src="./js/search-fab.js" defer></script>
+<script src="./js/reveal.js?v=v2026.0712.0600" defer></script>
+<script src="./js/search-fab.js?v=v2026.0712.0600" defer></script>
 </body>
 </html>
