@@ -2370,6 +2370,10 @@ button {
   justify-content: center;
   margin-bottom: 0;
 }
+.hero--story .hero__actions .button {
+  color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
 
 /* 会話の舞台: 吹き出しエリア(高さ固定)+ふたり。
    レイアウト上は一番下。開幕は transform で中央に持ち上げておき、
@@ -2404,21 +2408,25 @@ button {
   text-align: center;
 }
 
-/* 吹き出し: conv-area 内の絶対配置(表示・非表示で他要素が動かない) */
+/* 吹き出し: conv-area 内の絶対配置(表示・非表示で他要素が動かない)。
+   大きさはテキストに合わせて縮み、テキストは中央揃え。
+   しっぽの位置は clamp で「話し手の頭の上」に固定される */
 .stage-balloon {
   position: absolute;
   bottom: 0;
-  margin: 0;
-  padding: 14px 18px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: max-content;
+  max-width: min(320px, 100%);
+  padding: 12px 18px;
   border-radius: 16px;
   font-size: 15px;
   font-weight: 500;
   line-height: 1.75;
-  text-align: left;
-  width: 280px;
+  text-align: center;
 }
 .stage-balloon--moyan {
-  left: 26px;
   background: #ffffff;
   border: 1.5px solid #b6c0cc;
 }
@@ -2430,18 +2438,17 @@ button {
 }
 .stage-balloon--moyan::before {
   bottom: -13px;
-  left: 66%;
+  left: clamp(14px, calc(50% - 83px), calc(100% - 32px));
   border-width: 13px 9px 0 9px;
   border-top-color: #b6c0cc;
 }
 .stage-balloon--moyan::after {
   bottom: -10px;
-  left: calc(66% + 1px);
+  left: clamp(15px, calc(50% - 82px), calc(100% - 31px));
   border-width: 12px 8px 0 8px;
   border-top-color: #ffffff;
 }
 .stage-balloon--sunny {
-  right: 26px;
   background: #fdf9dc;
   border: 1.5px solid #ded263;
 }
@@ -2453,13 +2460,13 @@ button {
 }
 .stage-balloon--sunny::before {
   bottom: -13px;
-  left: 30%;
+  left: clamp(14px, calc(50% + 65px), calc(100% - 32px));
   border-width: 13px 9px 0 9px;
   border-top-color: #ded263;
 }
 .stage-balloon--sunny::after {
   bottom: -10px;
-  left: calc(30% + 1px);
+  left: clamp(15px, calc(50% + 66px), calc(100% - 31px));
   border-width: 12px 8px 0 8px;
   border-top-color: #fdf9dc;
 }
@@ -2595,6 +2602,13 @@ button {
 .header-search__chara {
   display: block;
   line-height: 0;
+}
+.header-search__click {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-terracotta);
+  white-space: nowrap;
 }
 .header-search__chara svg {
   transition: transform 0.25s ease;
@@ -2736,26 +2750,301 @@ button {
     height: 88px;
   }
   .stage-balloon {
-    width: 86%;
     font-size: 14px;
+    max-width: 100%;
   }
-  .stage-balloon--moyan {
-    left: 0;
-  }
+  /* キャラ間隔が狭いぶん、しっぽの位置も内側に */
   .stage-balloon--moyan::before {
-    left: 40%;
+    left: clamp(14px, calc(50% - 68px), calc(100% - 32px));
   }
   .stage-balloon--moyan::after {
-    left: calc(40% + 1px);
-  }
-  .stage-balloon--sunny {
-    right: 0;
+    left: clamp(15px, calc(50% - 67px), calc(100% - 31px));
   }
   .stage-balloon--sunny::before {
-    left: 58%;
+    left: clamp(14px, calc(50% + 50px), calc(100% - 32px));
   }
   .stage-balloon--sunny::after {
-    left: calc(58% + 1px);
+    left: clamp(15px, calc(50% + 51px), calc(100% - 31px));
+  }
+}
+
+/* ---------- 3分ミニゲーム ---------- */
+.game-list {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0;
+}
+.game-card-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+a.game-card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(63, 70, 82, 0.1);
+}
+.game-card-link--soon {
+  opacity: 0.6;
+}
+.game-card-link__emoji {
+  font-size: 30px;
+  flex: none;
+}
+.game-card-link__title {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.game-card-link__desc {
+  display: block;
+  font-size: 13.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.8;
+}
+.game-card-link__arrow {
+  margin-left: auto;
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+.match-game {
+  margin-top: 20px;
+}
+.match-game__status {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.match-game__status .button {
+  margin-left: auto;
+  padding: 7px 16px;
+  font-size: 13px;
+}
+.match-game__board {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 12px;
+}
+.match-game__col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.match-game__col-label {
+  margin: 0 0 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.match-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: 2px solid var(--color-border);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, opacity 0.3s ease;
+}
+.match-card[hidden] {
+  display: none; /* display:flex が hidden 属性に勝たないように */
+}
+.match-card--theorist {
+  justify-content: flex-start;
+}
+.match-card__avatar {
+  flex: none;
+  line-height: 0;
+}
+.match-card__avatar svg {
+  width: 44px;
+  height: 44px;
+}
+.match-card__theory {
+  line-height: 1.7;
+  font-weight: 500;
+}
+.match-card em {
+  font-style: normal;
+  font-weight: 700;
+  color: #c23b2a; /* 試験に出やすいポイントは赤字 */
+}
+.match-card:hover {
+  border-color: var(--color-sky);
+}
+.match-card.is-selected {
+  border-color: var(--color-terracotta);
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(194, 108, 74, 0.18);
+}
+.match-card.is-matched {
+  border-color: #ded263;
+  background: #fdf9dc;
+  opacity: 0.55;
+  cursor: default;
+}
+.match-card.is-wrong {
+  animation: card-shake 0.4s ease;
+  border-color: #c23b2a;
+}
+@keyframes card-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+.match-game__feedback {
+  min-height: 1.8em;
+  margin: 14px 0 0;
+  font-weight: 700;
+  text-align: center;
+}
+.match-game__clear {
+  margin-top: 18px;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+}
+.match-game__clear-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.match-game__clear-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.match-game__note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--color-text-subtle);
+  text-align: center;
+}
+@media (max-width: 680px) {
+  .match-game__board {
+    grid-template-columns: 1fr 1.35fr;
+    gap: 8px;
+  }
+  .match-card {
+    padding: 8px 9px;
+    font-size: 12.5px;
+    border-radius: 12px;
+    gap: 7px;
+  }
+  .match-card__avatar svg {
+    width: 34px;
+    height: 34px;
+  }
+  .match-card__theory {
+    font-size: 12px;
+  }
+}
+
+/* ---------- 法律・制度の確認日ボックス ---------- */
+.law-notice {
+  margin-top: 18px;
+  background: #fef4ec;
+  border: 1.5px solid #ecc9ae;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 13.5px;
+  line-height: 1.9;
+}
+.law-notice__lead {
+  margin: 0 0 8px;
+}
+.law-notice__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.law-notice__links li {
+  display: inline-block;
+  margin-right: 16px;
+}
+.law-notice__links a {
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+
+/* ---------- サニー先生の試験アドバイス ---------- */
+.term-exam-advice {
+  margin-top: 40px;
+}
+.exam-advice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 14px;
+}
+.exam-advice__chara {
+  flex: none;
+  text-align: center;
+  padding-top: 6px;
+}
+.exam-advice__box {
+  flex: 1;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+.exam-advice__lead {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.exam-advice__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.exam-advice__list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  line-height: 1.9;
+  font-size: 14.5px;
+}
+.exam-advice__list li:last-child {
+  margin-bottom: 0;
+}
+.exam-advice__list li::before {
+  content: "✏️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 680px) {
+  .exam-advice {
+    flex-direction: column;
+    align-items: center;
+  }
+  .exam-advice__box {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 

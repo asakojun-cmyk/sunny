@@ -1,0 +1,339 @@
+[
+ {
+  "slug": "rodo-kijun-ho",
+  "name": "労働基準法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rodo-kijun-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労働基準法 改正",
+   "労働時間 法改正"
+  ],
+  "sources": [
+   {
+    "label": "e-Gov法令検索(労働基準法)",
+    "url": "https://laws.e-gov.go.jp/"
+   },
+   {
+    "label": "厚生労働省(労働基準)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "rodo-keiyaku-ho",
+  "name": "労働契約法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rodo-keiyaku-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労働契約法 改正",
+   "無期転換ルール 見直し"
+  ],
+  "sources": [
+   {
+    "label": "e-Gov法令検索(労働契約法)",
+    "url": "https://laws.e-gov.go.jp/"
+   },
+   {
+    "label": "厚生労働省(無期転換ルール)",
+    "url": "https://muki.mhlw.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "ikuji-kaigo-kyugyo-ho",
+  "name": "育児・介護休業法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/ikuji-kaigo-kyugyo-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "育児介護休業法 改正",
+   "育児休業 制度 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(育児・介護休業法)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kodomo/shokuba_kosodate/jigyou_ryouritsu/ryouritsu.html"
+   }
+  ]
+ },
+ {
+  "slug": "koyo-hoken",
+  "name": "雇用保険制度",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/koyo-hoken/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "雇用保険法 改正",
+   "基本手当 給付 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(雇用保険制度)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/koyouhoken/index_00003.html"
+   },
+   {
+    "label": "ハローワークインターネットサービス",
+    "url": "https://www.hellowork.mhlw.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "rodosha-haken-ho",
+  "name": "労働者派遣法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rodosha-haken-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労働者派遣法 改正"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(労働者派遣)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/haken-shoukai/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "danjo-koyo-kikai-kinto-ho",
+  "name": "男女雇用機会均等法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/danjo-koyo-kikai-kinto-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "男女雇用機会均等法 改正",
+   "ハラスメント防止 法改正"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(雇用における男女の均等な機会と待遇)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyoukintou/danjokintou/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "shogaisha-koyo",
+  "name": "障害者雇用促進法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/shogaisha-koyo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "障害者雇用促進法 改正",
+   "法定雇用率 引き上げ"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(障害者雇用対策)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/shougaishakoyou/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "konenrei-sha-koyo-antei-ho",
+  "name": "高年齢者雇用安定法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/konenrei-sha-koyo-antei-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "高年齢者雇用安定法 改正",
+   "70歳 就業確保"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(高年齢者雇用対策)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/koureisha/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "stress-check",
+  "name": "ストレスチェック制度",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/stress-check/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "ストレスチェック制度 改正",
+   "労働安全衛生法 改正 メンタル"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(ストレスチェック制度)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000041959.html"
+   }
+  ]
+ },
+ {
+  "slug": "hello-work",
+  "name": "ハローワーク(公共職業安定所)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/hello-work/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "求職者支援制度 変更",
+   "ハローワーク 制度 変更"
+  ],
+  "sources": [
+   {
+    "label": "ハローワークインターネットサービス",
+    "url": "https://www.hellowork.mhlw.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "kyoiku-kunren-kyufu",
+  "name": "教育訓練給付制度",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/kyoiku-kunren-kyufu/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "教育訓練給付 拡充",
+   "教育訓練給付 給付率 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(教育訓練給付制度)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/kyouiku.html"
+   }
+  ]
+ },
+ {
+  "slug": "shokugyo-nouryoku-kaihatsu-sokushin-ho",
+  "name": "職業能力開発促進法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/shokugyo-nouryoku-kaihatsu-sokushin-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "職業能力開発促進法 改正",
+   "キャリアコンサルタント 制度 変更"
+  ],
+  "sources": [
+   {
+    "label": "e-Gov法令検索(職業能力開発促進法)",
+    "url": "https://laws.e-gov.go.jp/"
+   },
+   {
+    "label": "厚生労働省(キャリアコンサルタント)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000198698.html"
+   }
+  ]
+ },
+ {
+  "slug": "job-card",
+  "name": "ジョブ・カード",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/job-card/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "ジョブカード 制度 変更"
+  ],
+  "sources": [
+   {
+    "label": "マイジョブ・カード(公式サイト)",
+    "url": "https://www.job-card.mhlw.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "self-career-dock",
+  "name": "セルフ・キャリアドック",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/self-career-dock/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "セルフキャリアドック 施策"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(セルフ・キャリアドック)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000192530.html"
+   }
+  ]
+ },
+ {
+  "slug": "mental-health-care",
+  "name": "メンタルヘルスの4つのケア",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/mental-health-care/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労働者の心の健康の保持増進のための指針 改正"
+  ],
+  "sources": [
+   {
+    "label": "こころの耳(厚生労働省)",
+    "url": "https://kokoro.mhlw.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "shitsugyoritsu-kyujinbairitsu",
+  "name": "完全失業率と有効求人倍率",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/shitsugyoritsu-kyujinbairitsu/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "完全失業率 最新",
+   "有効求人倍率 最新"
+  ],
+  "sources": [
+   {
+    "label": "総務省統計局(労働力調査)",
+    "url": "https://www.stat.go.jp/data/roudou/"
+   },
+   {
+    "label": "厚生労働省(一般職業紹介状況)",
+    "url": "https://www.mhlw.go.jp/toukei/list/114-1.html"
+   }
+  ]
+ },
+ {
+  "slug": "rodoryoku-chosa",
+  "name": "労働力調査",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rodoryoku-chosa/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労働力調査 最新 結果"
+  ],
+  "sources": [
+   {
+    "label": "総務省統計局(労働力調査)",
+    "url": "https://www.stat.go.jp/data/roudou/"
+   }
+  ]
+ },
+ {
+  "slug": "chingin-kozo-kihon-tokei",
+  "name": "賃金構造基本統計調査",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/chingin-kozo-kihon-tokei/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "賃金構造基本統計調査 最新 結果"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(賃金構造基本統計調査)",
+    "url": "https://www.mhlw.go.jp/toukei/list/chinginkouzou.html"
+   }
+  ]
+ },
+ {
+  "slug": "noryoku-kaihatsu-kihon-chosa",
+  "name": "能力開発基本調査",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/noryoku-kaihatsu-kihon-chosa/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "能力開発基本調査 最新 結果"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(能力開発基本調査)",
+    "url": "https://www.mhlw.go.jp/toukei/list/104-1.html"
+   }
+  ]
+ },
+ {
+  "slug": "rinri-koryo",
+  "name": "キャリアコンサルタントの倫理と義務",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rinri-koryo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "キャリアコンサルタント 倫理綱領 改正",
+   "キャリアコンサルタント 更新講習 変更"
+  ],
+  "sources": [
+   {
+    "label": "キャリアコンサルティング協議会",
+    "url": "https://new.career-cc.org/"
+   },
+   {
+    "label": "厚生労働省(キャリアコンサルタント)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000198698.html"
+   }
+  ]
+ }
+]
