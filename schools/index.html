@@ -13,6 +13,8 @@
 <meta property="og:url" content="https://asakojun-cmyk.github.io/sunny/schools/">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="apple-touch-icon" href="../img/sunny-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
@@ -217,9 +219,53 @@
       <p>掲載している学校の料金・日程・給付金などの情報は変更される可能性があります。申込み前に必ず各校の公式サイトで最新情報をご確認ください。</p>
       <p>法律・統計・試験制度に関する記述は、一次資料で確認できた範囲で掲載しています。</p>
     </div>
-    <p class="site-footer__copy">&copy; 2026 キャリコンことば図鑑</p>
+    <p class="site-footer__copy">&copy; 2026 キャリコンことば図鑑 <span class="site-footer__version">v2026.0712.0452</span></p>
   </div>
 </footer>
+
+<div class="search-fab" id="search-fab">
+  <a class="search-fab__toggle" href="../search/index.html" aria-expanded="false" aria-controls="search-fab-panel">
+    <span class="search-fab__bubble">ここをおすと、わからない<br>言葉を調べられるよ</span>
+    <span class="search-fab__chara"><svg class="chara chara--sunny" width="54" height="54" viewBox="0 0 120 120" role="img" aria-label="さんさんサニー(太陽のキャラクター)">
+  <!-- 光線 -->
+  <g stroke="#e9dc4f" stroke-width="5" stroke-linecap="round">
+    <line x1="60" y1="6" x2="60" y2="18"/>
+    <line x1="60" y1="102" x2="60" y2="114"/>
+    <line x1="6" y1="60" x2="18" y2="60"/>
+    <line x1="102" y1="60" x2="114" y2="60"/>
+    <line x1="22" y1="22" x2="30" y2="30"/>
+    <line x1="90" y1="90" x2="98" y2="98"/>
+    <line x1="90" y1="30" x2="98" y2="22"/>
+    <line x1="22" y1="98" x2="30" y2="90"/>
+  </g>
+  <!-- かお(レモンイエローの太陽) -->
+  <circle cx="60" cy="60" r="34" fill="#f9ef79" stroke="#cdbf3c" stroke-width="3"/>
+  <!-- ほっぺ -->
+  <circle cx="44" cy="68" r="5" fill="#f4b98a" opacity="0.8"/>
+  <circle cx="76" cy="68" r="5" fill="#f4b98a" opacity="0.8"/>
+  <!-- せんせいメガネ -->
+  <g fill="none" stroke="#8a7a20" stroke-width="2.4">
+    <circle cx="49" cy="58" r="8"/>
+    <circle cx="71" cy="58" r="8"/>
+    <path d="M57 58 h6"/>
+  </g>
+  <!-- め -->
+  <circle cx="49" cy="58" r="3.2" fill="#4a3a20"/>
+  <circle cx="71" cy="58" r="3.2" fill="#4a3a20"/>
+  <!-- くち(にっこり) -->
+  <path d="M52 72 q8 8 16 0" fill="none" stroke="#4a3a20" stroke-width="2.6" stroke-linecap="round"/>
+</svg></span>
+  </a>
+  <div class="search-fab__panel" id="search-fab-panel" hidden>
+    <p class="search-fab__lead">わからない言葉をここに書いてね</p>
+    <form class="search-fab__form" action="../search/index.html" method="get" role="search">
+      <label class="visually-hidden" for="search-fab-input">わからない言葉を検索</label>
+      <input type="search" id="search-fab-input" name="q" placeholder="例:自己概念、ラポール" autocomplete="off">
+      <button type="submit" class="button button--primary">検索</button>
+    </form>
+    <button type="button" class="search-fab__close" aria-label="検索ボックスをとじる">×</button>
+  </div>
+</div>
 <nav class="bottom-nav" aria-label="モバイルナビゲーション"><a class="bottom-nav__item" href="../index.html">
       <span class="bottom-nav__icon bottom-nav__icon--home" aria-hidden="true"></span>
       <span class="bottom-nav__label">ホーム</span>
@@ -237,5 +283,6 @@
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
 <script src="../js/reveal.js" defer></script>
+<script src="../js/search-fab.js" defer></script>
 </body>
 </html>

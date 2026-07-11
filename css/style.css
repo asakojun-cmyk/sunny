@@ -1994,6 +1994,16 @@ button {
   color: var(--color-text-subtle);
   margin-top: 24px;
 }
+.site-footer__version {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 1px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--color-text-subtle);
+  letter-spacing: 0.04em;
+}
 
 /* ---------- スマホ下部ナビ ---------- */
 .bottom-nav {
@@ -2286,7 +2296,10 @@ button {
 /* 動く飾りアイコン(水玉・天気の行進)は廃止。
    天気アイコンは記事の見出し・本文の中でのみ使用する。 */
 
-/* ---------- オープニング・アニメーション(中央配置の物語) ---------- */
+/* ---------- ファーストビュー(絵本のように、しずかに開く物語) ---------- */
+.hero--story {
+  padding: 48px 0 88px;
+}
 .hero--story .hero__inner {
   display: flex;
   flex-direction: column;
@@ -2296,41 +2309,104 @@ button {
   text-align: center;
 }
 
-/* 舞台: ふたりは同じ場所に並んで立ち、頭の上で会話→虹のリボン */
-.story-stage {
-  position: relative;
+/* 文字エリア: 最初から場所を確保し、opacityだけで現れる(シフトなし) */
+.hero--story .hero__text {
+  text-align: center;
+  max-width: 640px;
+  margin-top: 36px;
+}
+.hero__head {
   width: 100%;
-  max-width: 620px;
-  height: 330px;
+}
+.hero-lockup {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.hero-lockup__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.stage-ribbon__text {
+  font-family: var(--font-sans);
+  font-size: 23px;
+  font-weight: 700;
+  fill: #3f4652;
+}
+.hero-lockup__name {
+  margin: 8px 0 0;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+}
+.hero__worldview {
+  margin: 0 0 22px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  line-height: 2.1;
+}
+.wv-line {
+  display: block;
+}
+.hero--story .hero__en {
+  margin-bottom: 14px;
+}
+.hero--story .hero__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+.hero--story .hero__lede {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 26px;
 }
+.hero--story .hero__actions {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* 会話の舞台: 吹き出しエリア(高さ固定)+ふたり。ロゴの下・タイトルの上に立つ */
+.story-stage {
+  width: 100%;
+  max-width: 620px;
+  margin-top: 22px;
+}
+.conv-area {
+  position: relative;
+  height: 148px;
+}
 .stage-charas {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   gap: 44px;
+  margin-top: 14px;
 }
 .stage-chara {
   text-align: center;
 }
-/* 会話の吹き出し(キャラの頭上・しっぽは下向きで本人を指す) */
+
+/* 吹き出し: conv-area 内の絶対配置(表示・非表示で他要素が動かない) */
 .stage-balloon {
   position: absolute;
-  bottom: 190px;
+  bottom: 0;
   margin: 0;
   padding: 14px 18px;
   border-radius: 16px;
   font-size: 15px;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.75;
   text-align: left;
-  width: 265px;
+  width: 280px;
 }
 .stage-balloon--moyan {
-  left: 8px;
+  left: 26px;
   background: #ffffff;
   border: 1.5px solid #b6c0cc;
 }
@@ -2353,7 +2429,7 @@ button {
   border-top-color: #ffffff;
 }
 .stage-balloon--sunny {
-  right: 8px;
+  right: 26px;
   background: #fdf9dc;
   border: 1.5px solid #ded263;
 }
@@ -2375,18 +2451,17 @@ button {
   border-width: 12px 8px 0 8px;
   border-top-color: #fdf9dc;
 }
-/* 会話は少し経つと消える */
-.fade-later {
-  animation-name: story-in, story-out !important;
-  animation-duration: 0.7s, 0.7s;
-  animation-fill-mode: forwards, forwards;
-  animation-timing-function: ease, ease;
-}
-.stage-balloon--moyan.fade-later {
-  animation-delay: 1s, 5.2s;
-}
-.stage-balloon--sunny.fade-later {
-  animation-delay: 2.9s, 5.2s;
+
+/* ---------- アニメーションの台本(ぽつり、ぽつりと) ---------- */
+@keyframes story-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 @keyframes story-out {
   from {
@@ -2395,197 +2470,241 @@ button {
   }
   to {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     visibility: hidden;
-  }
-}
-/* 虹のリボン(transformはアニメーションと衝突するためmarginで中央寄せ) */
-.stage-ribbon {
-  position: absolute;
-  bottom: 150px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 560px;
-}
-.stage-ribbon__svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-.stage-ribbon__text {
-  font-family: var(--font-sans);
-  font-size: 23px;
-  font-weight: 700;
-  fill: #3f4652;
-}
-.stage-ribbon__line {
-  margin: 10px 0 0;
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--color-text);
-  text-align: center;
-}
-.hero--story .hero__mini {
-  justify-content: center;
-  margin: 0 0 34px;
-}
-.hero--story .hero__mini-bubble {
-  text-align: left;
-  max-width: 360px;
-}
-.hero--story .hero__text {
-  text-align: center;
-  max-width: 640px;
-}
-.hero--story .hero__subconcept {
-  margin-bottom: 26px;
-}
-.hero--story .hero__title {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-.hero--story .hero__lede {
-  margin-left: auto;
-  margin-right: auto;
-}
-.hero--story .hero__actions {
-  justify-content: center;
-}
-
-/* 出現アニメーション: 台本の順番でふわっと登場 */
-.story-step {
-  opacity: 0;
-  animation: story-in 0.7s ease forwards;
-}
-.hero__pair.story-step,
-.hero__mini.story-step {
-  animation-name: story-pop;
-}
-@keyframes story-in {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
   }
 }
 @keyframes story-pop {
   0% {
     opacity: 0;
-    transform: scale(0.7) translateY(10px);
+    transform: scale(0.8) translateY(8px);
   }
   70% {
-    transform: scale(1.05);
+    transform: scale(1.04);
   }
   100% {
     opacity: 1;
     transform: none;
   }
 }
-.step-1 { animation-delay: 0.3s; }
-.step-2 { animation-delay: 1s; }
-.step-3 { animation-delay: 2.2s; }
-.step-4 { animation-delay: 2.9s; }
-.step-6 { animation-delay: 6.1s; }
-.step-7 { animation-delay: 7.1s; }
-.step-8 { animation-delay: 7.9s; }
-.step-9 { animation-delay: 8.5s; }
-.step-10 { animation-delay: 9.1s; }
-.step-11 { animation-delay: 9.7s; }
-.step-12 { animation-delay: 10.4s; }
 
-/* サニー先生の検索吹き出し */
-.hero-search {
+/* 登場する要素の共通設定(文字はゆっくりフェードイン) */
+.story-step {
+  opacity: 0;
+  animation: story-in 1.6s ease forwards;
+}
+
+/* ふたりの登場(ふわっと) */
+.step-c1,
+.step-c2 {
+  animation-name: story-pop;
+  animation-duration: 1.2s;
+}
+.step-c1 { animation-delay: 0.6s; }
+.step-c2 { animation-delay: 1.8s; }
+
+/* 会話: 1つずつ、フェードイン→余韻→フェードアウト(最後の1つは残る) */
+.conv-balloon {
+  opacity: 0;
+  animation: story-in 0.9s ease forwards, story-out 0.8s ease forwards;
+}
+.conv-balloon--final {
+  animation: story-in 0.9s ease forwards;
+}
+/* 表示 約4.1秒(読み終わる余韻つき) + 次までの余白 約0.7秒 */
+.conv-1 { animation-delay: 3s, 6.3s; }
+.conv-2 { animation-delay: 7.8s, 11.1s; }
+.conv-3 { animation-delay: 12.6s, 15.9s; }
+.conv-4 { animation-delay: 17.4s, 20.7s; }
+.conv-5 { animation-delay: 22.2s, 25.5s; }
+.conv-6 { animation-delay: 27s; }
+
+/* 会話が終わったあと、空に文字が順番に浮かぶ */
+.step-t1 { animation-delay: 28.6s; }
+.step-t2 { animation-delay: 30s; }
+.step-t3 { animation-delay: 31.4s; }
+.step-t4 { animation-delay: 32.7s; }
+.step-t5 { animation-delay: 34s; }
+.step-t6 { animation-delay: 35.4s; }
+.step-t7 { animation-delay: 36.2s; }
+.step-t8 { animation-delay: 37.8s; }
+.step-t9 { animation-delay: 39.2s; }
+
+/* ---------- 右下についてくる検索ボックス(サニー先生) ---------- */
+.search-fab {
+  position: fixed;
+  right: 14px;
+  bottom: 26px;
+  z-index: 60;
+}
+.search-fab__toggle {
   display: flex;
-  align-items: flex-end;
-  gap: 14px;
-  justify-content: center;
-  margin: 8px 0 26px;
-  text-align: left;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-text);
+  cursor: pointer;
 }
-.hero-search__chara {
-  flex: none;
-  text-align: center;
-}
-.hero-search__bubble {
+.search-fab__bubble {
   position: relative;
   background: #fdf9dc;
   border: 1.5px solid #ded263;
-  border-radius: 16px;
-  padding: 16px 18px;
-  max-width: 460px;
-  flex: 1;
+  border-radius: 14px;
+  padding: 9px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(63, 70, 82, 0.14);
 }
-.hero-search__bubble::before,
-.hero-search__bubble::after {
+.search-fab__bubble::before,
+.search-fab__bubble::after {
   content: "";
   position: absolute;
-  bottom: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   border: solid transparent;
 }
-.hero-search__bubble::before {
-  left: -13px;
-  border-width: 9px 13px 9px 0;
-  border-right-color: #ded263;
+.search-fab__bubble::before {
+  right: -12px;
+  border-width: 8px 0 8px 12px;
+  border-left-color: #ded263;
 }
-.hero-search__bubble::after {
-  left: -10px;
-  border-width: 8px 12px 8px 0;
-  border-right-color: #fdf9dc;
+.search-fab__bubble::after {
+  right: -9px;
+  border-width: 7px 0 7px 11px;
+  border-left-color: #fdf9dc;
 }
-.hero-search__lead {
-  margin: 0 0 10px;
-  font-size: 15px;
+.search-fab__chara {
+  display: block;
+  line-height: 0;
+}
+.search-fab__chara svg {
+  filter: drop-shadow(0 5px 12px rgba(120, 100, 40, 0.25));
+  transition: transform 0.25s ease;
+}
+.search-fab__toggle:hover .search-fab__chara svg {
+  transform: scale(1.08) rotate(4deg);
+}
+.search-fab.is-open .search-fab__bubble {
+  visibility: hidden;
+}
+.search-fab__panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 12px);
+  width: min(320px, calc(100vw - 28px));
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(63, 70, 82, 0.16);
+  text-align: left;
+}
+.search-fab__lead {
+  margin: 0 26px 8px 0;
+  font-size: 13px;
   font-weight: 700;
 }
-.hero-search__form {
+.search-fab__form {
   display: flex;
   gap: 8px;
 }
-.hero-search__form input[type="search"] {
+.search-fab__form input[type="search"] {
   flex: 1;
   min-width: 0;
-  padding: 11px 16px;
+  padding: 9px 14px;
   font-size: 16px;
   border: 1.5px solid var(--color-border);
   border-radius: 999px;
   background: #ffffff;
   color: var(--color-text);
 }
-.hero-search__form input[type="search"]:focus {
+.search-fab__form input[type="search"]:focus {
   outline: 2px solid var(--color-sky);
   outline-offset: 1px;
 }
+.search-fab__form .button {
+  padding: 9px 18px;
+  font-size: 14px;
+}
+.search-fab__close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-text-subtle);
+  cursor: pointer;
+  padding: 4px;
+}
 
+/* ---------- 動きを減らす設定: 会話を再生せず、最終状態を即表示 ---------- */
 @media (prefers-reduced-motion: reduce) {
   .story-step {
     animation: none !important;
     opacity: 1;
     transform: none;
   }
-  /* 動きを減らす設定では会話は表示せず、リボン以降だけを見せる */
-  .stage-balloon.fade-later {
+  .conv-balloon {
+    animation: none !important;
     display: none;
+  }
+  .conv-balloon--final {
+    display: block;
+    opacity: 1;
   }
 }
 
+/* ---------- スマホ調整 ---------- */
+@media (max-width: 960px) {
+  .search-fab {
+    bottom: 92px; /* 下部ナビの上 */
+  }
+}
 @media (max-width: 680px) {
+  .hero--story {
+    padding: 30px 0 64px;
+  }
+  .hero-lockup {
+    max-width: 300px;
+  }
+  .stage-ribbon__text {
+    font-size: 23px;
+  }
+  .hero-lockup__name {
+    font-size: 18px;
+  }
+  .hero__worldview {
+    font-size: 16px;
+  }
+  .hero--story .hero__text {
+    margin-top: 34px;
+  }
+  .hero--story .hero__lede br {
+    display: none; /* スマホは自動折り返しにまかせる */
+  }
   .story-stage {
-    height: 420px;
+    margin-top: 14px;
+  }
+  .conv-area {
+    height: 158px;
+  }
+  .stage-charas {
+    gap: 30px;
+  }
+  .stage-chara .chara {
+    width: 88px;
+    height: 88px;
   }
   .stage-balloon {
-    width: 84%;
+    width: 86%;
+    font-size: 14px;
   }
   .stage-balloon--moyan {
     left: 0;
-    bottom: 300px;
   }
   .stage-balloon--moyan::before {
     left: 40%;
@@ -2595,7 +2714,6 @@ button {
   }
   .stage-balloon--sunny {
     right: 0;
-    bottom: 185px;
   }
   .stage-balloon--sunny::before {
     left: 58%;
@@ -2603,25 +2721,9 @@ button {
   .stage-balloon--sunny::after {
     left: calc(58% + 1px);
   }
-  .stage-ribbon {
-    bottom: 165px;
-  }
-  .stage-ribbon__text {
-    font-size: 26px;
-  }
-  .stage-ribbon__line {
-    font-size: 15px;
-  }
-  .hero-search {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-search__bubble::before,
-  .hero-search__bubble::after {
-    display: none;
-  }
-  .hero-search__form {
-    flex-direction: column;
+  .search-fab__bubble {
+    font-size: 11px;
+    max-width: 168px;
   }
 }
 
