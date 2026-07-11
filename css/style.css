@@ -49,6 +49,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* 固定ヘッダーのぶん、ページ内リンクの位置を下げる */
 }
 body {
   margin: 0;
@@ -182,10 +183,16 @@ button {
   color: var(--color-text);
 }
 
-/* ---------- ヘッダー ---------- */
+/* ---------- ヘッダー(固定・検索サニー先生つき) ---------- */
 .site-header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 70;
+}
+.site-header__inner {
+  position: relative;
 }
 .site-header__inner {
   max-width: var(--max-page);
@@ -2298,7 +2305,7 @@ button {
 
 /* ---------- ファーストビュー(絵本のように、しずかに開く物語) ---------- */
 .hero--story {
-  padding: 48px 0 88px;
+  padding: 44px 0 88px;
 }
 .hero--story .hero__inner {
   display: flex;
@@ -2313,7 +2320,7 @@ button {
 .hero--story .hero__text {
   text-align: center;
   max-width: 640px;
-  margin-top: 36px;
+  margin-top: 30px;
 }
 .hero__head {
   width: 100%;
@@ -2371,11 +2378,11 @@ button {
   margin-bottom: 0;
 }
 
-/* 会話の舞台: 吹き出しエリア(高さ固定)+ふたり。ロゴの下・タイトルの上に立つ */
+/* 会話の舞台: 吹き出しエリア(高さ固定)+ふたり。ボタンの下・一番下に立つ */
 .story-stage {
   width: 100%;
   max-width: 620px;
-  margin-top: 22px;
+  margin-top: 40px;
 }
 .conv-area {
   position: relative;
@@ -2452,7 +2459,7 @@ button {
   border-top-color: #fdf9dc;
 }
 
-/* ---------- アニメーションの台本(ぽつり、ぽつりと) ---------- */
+/* ---------- アニメーションの台本 ---------- */
 @keyframes story-in {
   from {
     opacity: 0;
@@ -2488,111 +2495,112 @@ button {
   }
 }
 
-/* 登場する要素の共通設定(文字はゆっくりフェードイン) */
+/* 登場する要素の共通設定 */
 .story-step {
   opacity: 0;
-  animation: story-in 1.6s ease forwards;
+  animation: story-in 1s ease forwards;
 }
 
-/* ふたりの登場(ふわっと) */
+/* ふたりの登場(ふわっと)。サニー先生はモヤンのひとことの後に */
 .step-c1,
 .step-c2 {
   animation-name: story-pop;
   animation-duration: 1.2s;
 }
 .step-c1 { animation-delay: 0.6s; }
-.step-c2 { animation-delay: 1.8s; }
+.step-c2 { animation-delay: 7.4s; }
 
-/* 会話: 1つずつ、フェードイン→余韻→フェードアウト(最後の1つは残る) */
-.conv-balloon {
+/* オープニングの2言(1回だけ):
+   モヤンの泣きごと(約4秒) → 消える → サニー先生「だいじょうぶだよ〜」(さらっと) */
+.intro-balloon {
   opacity: 0;
   animation: story-in 0.9s ease forwards, story-out 0.8s ease forwards;
 }
-.conv-balloon--final {
-  animation: story-in 0.9s ease forwards;
+.intro-1 { animation-delay: 2s, 6.2s; }
+.intro-2 { animation-delay: 8.8s, 11.6s; }
+
+/* モヤンのひとことのすぐあとから、上で文字が順番にあらわれる
+   (スマホで画面が空っぽにならないように早めに開始) */
+.step-t1 { animation-delay: 6.8s; }
+.step-t2 { animation-delay: 7.7s; }
+.step-t3 { animation-delay: 8.5s; }
+.step-t4 { animation-delay: 9.3s; }
+.step-t5 { animation-delay: 10.1s; }
+.step-t6 { animation-delay: 10.8s; }
+.step-t7 { animation-delay: 11.4s; }
+.step-t8 { animation-delay: 12.3s; }
+.step-t9 { animation-delay: 13.2s; }
+
+/* 読者の気持ちを代弁する6往復の会話(ループ再生)
+   1周 28.8秒 = 1つあたり 表示約4.1秒 + 余白約0.7秒 × 6つ */
+@keyframes conv-loop {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  3.2% {
+    opacity: 1;
+    transform: none;
+  }
+  11.4% {
+    opacity: 1;
+    transform: none;
+  }
+  14.3% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
-/* 表示 約4.1秒(読み終わる余韻つき) + 次までの余白 約0.7秒 */
-.conv-1 { animation-delay: 3s, 6.3s; }
-.conv-2 { animation-delay: 7.8s, 11.1s; }
-.conv-3 { animation-delay: 12.6s, 15.9s; }
-.conv-4 { animation-delay: 17.4s, 20.7s; }
-.conv-5 { animation-delay: 22.2s, 25.5s; }
-.conv-6 { animation-delay: 27s; }
+.loop-balloon {
+  opacity: 0;
+  animation: conv-loop 28.8s ease-in-out infinite;
+}
+.conv-1 { animation-delay: 15.5s; }
+.conv-2 { animation-delay: 20.3s; }
+.conv-3 { animation-delay: 25.1s; }
+.conv-4 { animation-delay: 29.9s; }
+.conv-5 { animation-delay: 34.7s; }
+.conv-6 { animation-delay: 39.5s; }
 
-/* 会話が終わったあと、空に文字が順番に浮かぶ */
-.step-t1 { animation-delay: 28.6s; }
-.step-t2 { animation-delay: 30s; }
-.step-t3 { animation-delay: 31.4s; }
-.step-t4 { animation-delay: 32.7s; }
-.step-t5 { animation-delay: 34s; }
-.step-t6 { animation-delay: 35.4s; }
-.step-t7 { animation-delay: 36.2s; }
-.step-t8 { animation-delay: 37.8s; }
-.step-t9 { animation-delay: 39.2s; }
-
-/* ---------- 右下についてくる検索ボックス(サニー先生) ---------- */
-.search-fab {
-  position: fixed;
-  right: 14px;
-  bottom: 26px;
-  z-index: 60;
+/* ---------- ヘッダーの検索サニー先生 ---------- */
+.header-search {
+  position: relative;
+  flex: none;
 }
 .search-fab__toggle {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 1px;
   text-decoration: none;
   color: var(--color-text);
   cursor: pointer;
 }
-.search-fab__bubble {
-  position: relative;
-  background: #fdf9dc;
-  border: 1.5px solid #ded263;
-  border-radius: 14px;
-  padding: 9px 13px;
-  font-size: 12px;
+.header-search__label {
+  font-size: 10px;
   font-weight: 700;
-  line-height: 1.7;
-  text-align: left;
-  box-shadow: 0 4px 16px rgba(63, 70, 82, 0.14);
+  letter-spacing: 0.06em;
+  color: var(--color-text-subtle);
+  white-space: nowrap;
 }
-.search-fab__bubble::before,
-.search-fab__bubble::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: solid transparent;
-}
-.search-fab__bubble::before {
-  right: -12px;
-  border-width: 8px 0 8px 12px;
-  border-left-color: #ded263;
-}
-.search-fab__bubble::after {
-  right: -9px;
-  border-width: 7px 0 7px 11px;
-  border-left-color: #fdf9dc;
-}
-.search-fab__chara {
+.header-search__chara {
   display: block;
   line-height: 0;
 }
-.search-fab__chara svg {
-  filter: drop-shadow(0 5px 12px rgba(120, 100, 40, 0.25));
+.header-search__chara svg {
   transition: transform 0.25s ease;
 }
-.search-fab__toggle:hover .search-fab__chara svg {
-  transform: scale(1.08) rotate(4deg);
-}
-.search-fab.is-open .search-fab__bubble {
-  visibility: hidden;
+.search-fab__toggle:hover .header-search__chara svg {
+  transform: scale(1.1) rotate(4deg);
 }
 .search-fab__panel {
   position: absolute;
   right: 0;
-  bottom: calc(100% + 12px);
+  top: calc(100% + 10px);
   width: min(320px, calc(100vw - 28px));
   background: #ffffff;
   border: 1.5px solid var(--color-border);
@@ -2600,6 +2608,7 @@ button {
   padding: 14px;
   box-shadow: 0 10px 30px rgba(63, 70, 82, 0.16);
   text-align: left;
+  z-index: 80;
 }
 .search-fab__lead {
   margin: 0 26px 8px 0;
@@ -2648,25 +2657,46 @@ button {
     opacity: 1;
     transform: none;
   }
-  .conv-balloon {
+  .intro-balloon,
+  .loop-balloon {
     animation: none !important;
     display: none;
   }
-  .conv-balloon--final {
+  .conv-6 {
     display: block;
     opacity: 1;
   }
 }
 
 /* ---------- スマホ調整 ---------- */
-@media (max-width: 960px) {
-  .search-fab {
-    bottom: 92px; /* 下部ナビの上 */
-  }
-}
 @media (max-width: 680px) {
+  /* ヘッダー: タイトル・コンセプトは中央揃え、右にサニー先生(イラストのみ) */
+  .site-header__inner {
+    justify-content: center;
+    padding: 10px 66px;
+  }
+  .site-header__brand {
+    text-align: center;
+  }
+  .site-header__tagline {
+    font-size: 10px;
+    text-wrap: balance; /* 2行になるときも左右バランスよく折り返す */
+  }
+  .header-search {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header-search__label {
+    font-size: 9px;
+  }
+  .header-search__chara svg {
+    width: 38px;
+    height: 38px;
+  }
   .hero--story {
-    padding: 30px 0 64px;
+    padding: 26px 0 64px;
   }
   .hero-lockup {
     max-width: 300px;
@@ -2681,13 +2711,13 @@ button {
     font-size: 16px;
   }
   .hero--story .hero__text {
-    margin-top: 34px;
+    margin-top: 24px;
   }
   .hero--story .hero__lede br {
     display: none; /* スマホは自動折り返しにまかせる */
   }
   .story-stage {
-    margin-top: 14px;
+    margin-top: 30px;
   }
   .conv-area {
     height: 158px;
@@ -2720,10 +2750,6 @@ button {
   }
   .stage-balloon--sunny::after {
     left: calc(58% + 1px);
-  }
-  .search-fab__bubble {
-    font-size: 11px;
-    max-width: 168px;
   }
 }
 
