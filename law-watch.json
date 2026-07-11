@@ -335,5 +335,145 @@
     "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000198698.html"
    }
   ]
+ },
+ {
+  "slug": "rodo-shisaku-suishin-ho",
+  "name": "労働施策総合推進法(パワハラ防止法)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rodo-shisaku-suishin-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "パワハラ防止法 改正",
+   "労働施策総合推進法 改正"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(職場におけるハラスメント防止)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyoukintou/seisaku06/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "shokugyo-antei-ho",
+  "name": "職業安定法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/shokugyo-antei-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "職業安定法 改正"
+  ],
+  "sources": [
+   {
+    "label": "e-Gov法令検索",
+    "url": "https://laws.e-gov.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "part-yuki-ho",
+  "name": "パートタイム・有期雇用労働法(同一労働同一賃金)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/part-yuki-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "同一労働同一賃金 見直し",
+   "パートタイム有期雇用労働法 改正"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(同一労働同一賃金)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000144972.html"
+   }
+  ]
+ },
+ {
+  "slug": "josei-katsuyaku",
+  "name": "女性活躍推進法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/josei-katsuyaku/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "女性活躍推進法 改正",
+   "男女賃金差 公表 義務"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(女性活躍推進法)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000091025.html"
+   }
+  ]
+ },
+ {
+  "slug": "wakamono-koyo",
+  "name": "若者雇用促進法(ユースエール)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/wakamono-koyo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "若者雇用促進法 改正",
+   "ユースエール認定 要件"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(若者雇用促進法)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000098679.html"
+   }
+  ]
+ },
+ {
+  "slug": "shakai-hoken",
+  "name": "社会保険制度(5つの保険)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/shakai-hoken/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "社会保険 適用拡大",
+   "短時間労働者 厚生年金"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(社会保険適用拡大)",
+    "url": "https://www.mhlw.go.jp/tekiyoukakudai/"
+   }
+  ]
+ },
+ {
+  "slug": "rosai-hoken",
+  "name": "労災保険",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rosai-hoken/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労災保険 制度 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(労災補償)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/rousai/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "trial-koyo",
+  "name": "トライアル雇用・インターンシップ",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/trial-koyo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "トライアル雇用助成金 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(トライアル雇用助成金)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyufukin/trial_koyou.html"
+   }
+  ]
+ },
+ {
+  "slug": "job-tag",
+  "name": "職業情報提供サイト(job tag)と職業理解",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/job-tag/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "job tag 職業情報提供サイト 更新"
+  ],
+  "sources": [
+   {
+    "label": "job tag(職業情報提供サイト)",
+    "url": "https://shigoto.mhlw.go.jp/User"
+   }
+  ]
  }
 ]

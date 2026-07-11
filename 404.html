@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<base href="https://asakojun-cmyk.github.io/sunny/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ページが見つかりません|キャリコンことば図鑑</title>
 <meta name="description" content="お探しのページは見つかりませんでした。">
@@ -18,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css?v=v2026.0712.0705">
+<link rel="stylesheet" href="./css/style.css?v=v2026.0712.0758">
 
 </head>
 <body>
@@ -86,6 +87,31 @@
 <div class="container container--narrow notfound">
   <p class="section-header__en" aria-hidden="true">404 NOT FOUND</p>
   <h1 class="section-header__title">ページが見つかりませんでした</h1>
+  <div class="notfound__chara"><svg class="chara chara--moyan" width="96" height="96" viewBox="0 0 120 120" role="img" aria-label="モヤン(黄色い通学帽をかぶった小学生の雲)">
+  <!-- からだ(白い雲・まるく幼い) -->
+  <path d="M30 92
+           C15 92 9 79 16 69 C7 60 14 46 27 47
+           C30 34 47 30 56 38 C65 28 86 32 88 47
+           C103 47 108 62 100 71 C108 81 99 92 87 92 Z"
+        fill="#ffffff" stroke="#9fa9b6" stroke-width="3" stroke-linejoin="round"/>
+  <!-- 黄色い通学帽 -->
+  <path d="M30 44 q28 -26 60 0 Z" fill="#f4d64f" stroke="#d3b032" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M26 44 q34 -7 68 0 q0 4 -4 5 q-30 -5 -60 0 q-4 -1 -4 -5 Z" fill="#f4d64f" stroke="#d3b032" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="60" cy="20" r="4" fill="#f4d64f" stroke="#d3b032" stroke-width="2.5"/>
+  <!-- ほっぺ -->
+  <circle cx="38" cy="70" r="5.5" fill="#f6b8ad" opacity="0.85"/>
+  <circle cx="82" cy="70" r="5.5" fill="#f6b8ad" opacity="0.85"/>
+  <!-- め(くりくりのおめめは開けたまま・ハイライトつき・すこし下に) -->
+  <circle cx="48" cy="64.5" r="6" fill="#4a505c"/>
+  <circle cx="72" cy="64.5" r="6" fill="#4a505c"/>
+  <circle cx="50.4" cy="62.1" r="1.9" fill="#ffffff"/>
+  <circle cx="74.4" cy="62.1" r="1.9" fill="#ffffff"/>
+  <!-- なみだ(目じりの外側から、すーっと流れる) -->
+  <path d="M39.5 71 q-3 8.5 0 12.5 q3 -3.8 0 -12.5 Z" fill="#8fd0e6"/>
+  <path d="M80.5 71 q-3 8.5 0 12.5 q3 -3.8 0 -12.5 Z" fill="#8fd0e6"/>
+  <!-- くち(ちいさな困り口・すこし下に) -->
+  <path d="M55 79.5 q5 -4 10 0" fill="none" stroke="#4a505c" stroke-width="2.6" stroke-linecap="round"/>
+</svg></div>
   <div class="chara-dialogue">
     <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
@@ -113,7 +139,7 @@
 </svg>
       <span class="chara-guide__name">モヤン</span>
     </div>
-    <p class="chara-guide__bubble">あれ…? このページ、どこかに行っちゃったみたい…</p>
+    <p class="chara-guide__bubble">あれ…? このページ、雲のむこうに行っちゃったみたい…</p>
   </div>
     <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
@@ -148,15 +174,39 @@
 </svg>
       <span class="chara-guide__name">サニー先生</span>
     </div>
-    <p class="chara-guide__bubble">だいじょうぶ。ホームか検索から、もう一度探してみよう!</p>
+    <p class="chara-guide__bubble">だいじょうぶ。ここから、行きたい場所にご案内するよ!</p>
   </div>
   </div>
-  <p>お探しのページは移動または削除された可能性があります。</p>
+
+  <p class="notfound__version-note" data-version-note hidden>
+    🌥️ 過去の版のボタンから来たみたいだね。ごめんね、この版はネット上に保存されていないの。<br>
+    いちばん新しいキャリコンことば図鑑は、下の「ホームに戻る」から見られるよ。
+  </p>
+
   <div class="notfound__actions">
     <a class="button button--primary" href="./index.html">ホームに戻る</a>
-    <a class="button button--secondary" href="./search/index.html">サイト内検索</a>
+    <a class="button button--secondary" href="./search/index.html">用語をさがす</a>
+  </div>
+
+  <div class="notfound__menu">
+    <p class="notfound__menu-title">☀️ よく使われるページ</p>
+    <ul class="notfound__menu-list">
+      <li><a href="./terms/index.html">📖 キャリコンことば図鑑(用語76語)</a></li>
+      <li><a href="./theorists/index.html">👩‍🏫 理論家図鑑(18人)</a></li>
+      <li><a href="./games/index.html">🎮 3分ミニゲーム</a></li>
+      <li><a href="./start/index.html">🌈 はじめての学習ルート</a></li>
+      <li><a href="./exam/index.html">✏️ 学科・論述・面接(公式過去問リンク)</a></li>
+      <li><a href="./schools/index.html">🏫 養成講座の選び方</a></li>
+    </ul>
   </div>
 </div>
+<script>
+  // 過去の版(/v/…)のURLで開かれた場合だけ、案内を表示する
+  if (location.pathname.indexOf("/v/") !== -1) {
+    var note = document.querySelector("[data-version-note]");
+    if (note) note.hidden = false;
+  }
+</script>
 </main>
 
 <footer class="site-footer" id="sitemap">
@@ -188,6 +238,7 @@
         <li><a href="./school-guides/training-and-exam-preparation/index.html">養成講習と試験対策講座の違い</a></li>
         <li><a href="./school-reviews/chiiki-renkei-platform/index.html">運営者の受講記録</a></li>
         <li><a href="./games/index.html">3分ミニゲーム</a></li>
+        <li><a href="./omamori/index.html">お守りページ(カウントダウン&待ち受け)</a></li>
         <li><a href="./careers/index.html">資格取得後の働き方</a></li>
         <li><a href="./about/index.html">このサイトについて</a></li>
       </ul>
@@ -196,7 +247,7 @@
       <p>掲載している学校の料金・日程・給付金などの情報は変更される可能性があります。申込み前に必ず各校の公式サイトで最新情報をご確認ください。</p>
       <p>法律・統計・試験制度に関する記述は、一次資料で確認できた範囲で掲載しています。</p>
     </div>
-    <p class="site-footer__copy">&copy; 2026 キャリコンことば図鑑 <span class="site-footer__version">v2026.0712.0705</span></p>
+    <p class="site-footer__copy">&copy; 2026 キャリコンことば図鑑 <span class="site-footer__version">v2026.0712.0758</span></p>
   </div>
 </footer>
 <nav class="bottom-nav" aria-label="モバイルナビゲーション"><a class="bottom-nav__item" href="./index.html">
@@ -215,7 +266,7 @@
       <span class="bottom-nav__icon bottom-nav__icon--menu" aria-hidden="true"></span>
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
-<script src="./js/reveal.js?v=v2026.0712.0705" defer></script>
-<script src="./js/search-fab.js?v=v2026.0712.0705" defer></script>
+<script src="./js/reveal.js?v=v2026.0712.0758" defer></script>
+<script src="./js/search-fab.js?v=v2026.0712.0758" defer></script>
 </body>
 </html>
