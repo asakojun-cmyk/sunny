@@ -201,8 +201,9 @@ button {
   display: block;
   font-family: var(--font-serif);
   font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap; /* スマホでタイトルを折り返さない */
 }
 .site-logo__en {
   display: block;
@@ -340,16 +341,90 @@ button {
 
 /* ---------- ヒーロー ---------- */
 .hero {
-  padding: 96px 0 88px;
+  padding: 88px 0 80px;
   position: relative;
   overflow: hidden;
 }
 .hero__inner {
-  max-width: var(--max-page);
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   z-index: 1;
+}
+.hero__text {
+  text-align: center;
+  max-width: 640px;
+  margin: 40px auto 0;
+}
+.hero__chara-tagline {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-yellow);
+  border-radius: 999px;
+  padding: 6px 18px;
+  margin-bottom: 18px;
+}
+.hero__actions {
+  justify-content: center;
+}
+
+/* オープニングの掛け合いシーン */
+.hero__scene {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+.hero__chara {
+  flex: none;
+  text-align: center;
+}
+.hero__chara .chara {
+  width: 120px;
+  height: 120px;
+}
+.hero__chara--moyan .chara {
+  animation: chara-float 3.4s ease-in-out infinite;
+}
+.hero__chara--sunny .chara {
+  animation: chara-float 3.4s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.hero__chara-name {
+  margin: 4px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+}
+.hero__balloons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.hero__balloon {
+  position: relative;
+  margin: 0;
+  padding: 16px 20px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.hero__balloon--moyan {
+  background: #ffffff;
+  border: 1.5px solid #b6c0cc;
+  border-bottom-left-radius: 4px;
+}
+.hero__balloon--sunny {
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
 }
 .hero__en {
   font-size: 11px;
@@ -362,6 +437,12 @@ button {
   letter-spacing: 0.04em;
   margin-bottom: 24px;
   max-width: 720px;
+}
+.hero__subconcept {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  margin: -4px 0 16px;
 }
 .hero__lede {
   max-width: 560px;
@@ -383,33 +464,69 @@ button {
   font-size: 14px;
   color: var(--color-text-subtle);
 }
-/* 静かな窓辺を思わせる抽象ビジュアル(CSSのみ) */
-.hero__visual {
-  position: absolute;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 380px;
-  height: 380px;
-  opacity: 0.8;
-  pointer-events: none;
+/* ---------- キャラクター(もやん&サニー) ---------- */
+.chara {
+  display: block;
+  animation: chara-float 4s ease-in-out infinite;
 }
-.hero__visual-window {
-  position: absolute;
-  inset: 0;
-  border-radius: 190px 190px 8px 8px;
-  background: linear-gradient(180deg, var(--color-sky-light), var(--color-sky));
-  border: 1px solid var(--color-border);
+.chara--sunny {
+  animation-delay: 1.6s;
 }
-.hero__visual-book {
-  position: absolute;
-  left: 60px;
-  bottom: 42px;
-  width: 180px;
-  height: 18px;
+@media (prefers-reduced-motion: reduce) {
+  .chara {
+    animation: none;
+  }
+}
+@keyframes chara-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.chara-guide {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin: 18px 0;
+}
+.chara-guide--sunny {
+  flex-direction: row-reverse;
+}
+.chara-guide__figure {
+  flex: none;
+  text-align: center;
+}
+.chara-guide__name {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  margin-top: 2px;
+}
+.chara-guide__bubble {
+  position: relative;
+  margin: 0 0 18px;
+  padding: 14px 18px;
+  border-radius: 16px;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 -22px 0 -4px var(--color-yellow-light), 0 -21px 0 -3px var(--color-border);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.chara-guide--moyan .chara-guide__bubble {
+  border: 1.5px solid #b6c0cc;
+  background: #ffffff;
+  border-bottom-left-radius: 4px;
+}
+.chara-guide--sunny .chara-guide__bubble {
+  border: 1.5px solid #ded263;
+  background: #fdf9dc;
+  border-bottom-right-radius: 4px;
+}
+.chara-dialogue {
+  margin: 8px 0 8px;
 }
 
 /* ---------- 検索 ---------- */
@@ -1175,6 +1292,147 @@ button {
   font-size: 18px;
 }
 
+/* ---------- 図解・過去問・先生モード ---------- */
+.term-diagram-section {
+  margin-bottom: 40px;
+}
+.diagram {
+  margin: 0 auto;
+  max-width: 480px;
+}
+.diagram__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-family: var(--font-sans);
+}
+.diagram figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-subtle);
+}
+.diagram__caption {
+  display: block;
+}
+.diagram__source {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+}
+.term-formal__box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+.term-formal__box dl > div {
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 0;
+}
+.term-formal__box dt {
+  font-weight: 700;
+}
+.term-formal__box dd {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.past-questions {
+  background: var(--color-sky-light);
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 44px 0;
+  font-size: 15px;
+}
+.past-questions__links {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.past-questions__links li {
+  padding: 6px 0;
+  border-bottom: 1px solid #b9cdd3;
+}
+.past-questions__note {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  margin: 8px 0 0;
+}
+
+/* 理論家の似顔絵 */
+.term-header--theorist {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.term-header__portrait {
+  flex: none;
+}
+.term-header__portrait {
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+.term-header__portrait:hover {
+  transform: scale(1.04);
+}
+.term-header__portrait-cta {
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+.term-header__portrait-cta a {
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+.term-header__portrait-note {
+  font-size: 11px;
+  color: var(--color-text-subtle);
+  margin: 8px 0 24px;
+}
+.term-episode {
+  background: var(--color-yellow-light);
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 40px 0;
+}
+.episode-list {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+.episode-list li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+.term-more {
+  margin: 40px 0;
+}
+.more-links {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.more-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 16px;
+}
+.more-links__icon {
+  flex: none;
+}
+.more-links__note {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  margin-top: 12px;
+}
+.theorist-avatar {
+  display: block;
+}
+
 /* ---------- 用語・理論家一覧 ---------- */
 .term-category {
   margin-bottom: 56px;
@@ -1190,8 +1448,7 @@ button {
   margin: 0;
   padding: 0;
 }
-.term-list__item a,
-.theorist-list__item a {
+.term-list__item a {
   display: grid;
   grid-template-columns: 110px 1fr;
   grid-template-areas:
@@ -1201,6 +1458,21 @@ button {
   padding: 18px 4px;
   border-bottom: 1px solid var(--color-border);
   text-decoration: none;
+}
+.theorist-list__item a {
+  display: grid;
+  grid-template-columns: 72px 96px 1fr;
+  grid-template-areas:
+    "avatar num name"
+    "avatar num oneliner";
+  align-items: center;
+  gap: 2px 16px;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+}
+.theorist-list__avatar {
+  grid-area: avatar;
 }
 .term-list__number,
 .theorist-list__number {
@@ -1595,10 +1867,40 @@ button {
     padding-bottom: 76px; /* 下部ナビの高さぶん */
   }
   .hero {
-    padding: 64px 0 56px;
+    padding: 56px 0 48px;
   }
-  .hero__visual {
-    display: none;
+  .hero__scene {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+  .hero__chara .chara {
+    width: 88px;
+    height: 88px;
+  }
+  .hero__chara--moyan {
+    order: 1;
+  }
+  .hero__balloon--moyan {
+    order: 2;
+  }
+  .hero__balloon--sunny {
+    order: 4;
+    align-self: stretch;
+  }
+  .hero__chara--sunny {
+    order: 3;
+  }
+  .hero__balloons {
+    width: 100%;
+    order: 2;
+  }
+  .hero__balloon {
+    font-size: 15px;
+  }
+  .chara-guide .chara {
+    width: 64px;
+    height: 64px;
   }
   .three-pillars {
     grid-template-columns: 1fr;
@@ -1622,13 +1924,28 @@ button {
   .site-search__form .button {
     width: 100%;
   }
-  .term-list__item a,
-  .theorist-list__item a {
+  .term-list__item a {
     grid-template-columns: 1fr;
     grid-template-areas:
       "num"
       "name"
       "oneliner";
+  }
+  .theorist-list__item a {
+    grid-template-columns: 64px 1fr;
+    grid-template-areas:
+      "avatar num"
+      "avatar name"
+      "avatar oneliner";
+    align-items: start;
+  }
+  .site-logo__ja {
+    font-size: 17px;
+  }
+  .term-header--theorist {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
   .review-toc ol {
     columns: 1;
