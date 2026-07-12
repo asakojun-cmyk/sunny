@@ -3914,6 +3914,141 @@ button {
   vertical-align: 2px;
 }
 
+/* ---------- ○×クイズドリル ---------- */
+.quiz-drill {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 26px 22px;
+  margin: 22px 0 10px;
+  min-height: 260px;
+}
+.quiz-drill__count {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.quiz-drill__progress {
+  font-size: 12.5px;
+  color: var(--color-text-subtle);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+}
+.quiz-drill__score {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--color-terracotta);
+}
+.quiz-drill__cat {
+  font-size: 11.5px;
+  color: var(--color-text-subtle);
+  margin-bottom: 6px;
+}
+.quiz-drill__q {
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+.quiz-drill__actions {
+  display: flex;
+  gap: 12px;
+}
+.quiz-drill__btn {
+  font-size: 22px;
+  font-weight: 700;
+  min-width: 84px;
+}
+.quiz-drill__btn.is-correct {
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+.quiz-drill__btn.is-wrong {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+.quiz-drill__result {
+  margin-top: 16px;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 14px;
+}
+.quiz-drill__verdict {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.quiz-drill__verdict.is-ok { color: var(--color-green); }
+.quiz-drill__verdict.is-ng { color: var(--color-terracotta); }
+.quiz-drill__exp {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 8px;
+}
+.quiz-drill__link {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.quiz-drill__endtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.quiz-drill__endscore {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  margin-bottom: 8px;
+}
+.quiz-drill__endnote {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 14px;
+}
+.quiz-drill__foot {
+  font-size: 11.5px;
+  color: var(--color-text-subtle);
+}
+
+/* ---------- 対策テキスト販売ページ ---------- */
+.text-sales__box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin: 18px 0;
+}
+.text-sales__box--note {
+  background: var(--color-yellow-light);
+  border-color: var(--color-yellow);
+}
+.text-sales__list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.text-sales__list li {
+  font-size: 14px;
+  line-height: 2;
+}
+.text-sales__list--small li {
+  font-size: 12px;
+}
+.text-sales__cta {
+  display: block;
+  text-align: center;
+  margin: 24px 0;
+}
+.text-sales__soon {
+  text-align: center;
+  background: var(--color-sky-light);
+  border: 1.5px dashed var(--color-sky);
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 14px;
+  line-height: 2;
+  margin: 24px 0;
+}
+
 /* ---------- さらに学べる本棚 ---------- */
 .book-shelf {
   margin: 36px 0;
@@ -4058,6 +4193,141 @@ button {
 }
 .freq-legend__note {
   font-size: 11px;
+}
+
+/* ---------- ○×クイズドリル ---------- */
+.quiz-drill {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 26px 22px;
+  margin: 22px 0 10px;
+  min-height: 260px;
+}
+.quiz-drill__count {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.quiz-drill__progress {
+  font-size: 12.5px;
+  color: var(--color-text-subtle);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+}
+.quiz-drill__score {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--color-terracotta);
+}
+.quiz-drill__cat {
+  font-size: 11.5px;
+  color: var(--color-text-subtle);
+  margin-bottom: 6px;
+}
+.quiz-drill__q {
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+.quiz-drill__actions {
+  display: flex;
+  gap: 12px;
+}
+.quiz-drill__btn {
+  font-size: 22px;
+  font-weight: 700;
+  min-width: 84px;
+}
+.quiz-drill__btn.is-correct {
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+.quiz-drill__btn.is-wrong {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+.quiz-drill__result {
+  margin-top: 16px;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 14px;
+}
+.quiz-drill__verdict {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.quiz-drill__verdict.is-ok { color: var(--color-green); }
+.quiz-drill__verdict.is-ng { color: var(--color-terracotta); }
+.quiz-drill__exp {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 8px;
+}
+.quiz-drill__link {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.quiz-drill__endtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.quiz-drill__endscore {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  margin-bottom: 8px;
+}
+.quiz-drill__endnote {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 14px;
+}
+.quiz-drill__foot {
+  font-size: 11.5px;
+  color: var(--color-text-subtle);
+}
+
+/* ---------- 対策テキスト販売ページ ---------- */
+.text-sales__box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin: 18px 0;
+}
+.text-sales__box--note {
+  background: var(--color-yellow-light);
+  border-color: var(--color-yellow);
+}
+.text-sales__list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.text-sales__list li {
+  font-size: 14px;
+  line-height: 2;
+}
+.text-sales__list--small li {
+  font-size: 12px;
+}
+.text-sales__cta {
+  display: block;
+  text-align: center;
+  margin: 24px 0;
+}
+.text-sales__soon {
+  text-align: center;
+  background: var(--color-sky-light);
+  border: 1.5px dashed var(--color-sky);
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 14px;
+  line-height: 2;
+  margin: 24px 0;
 }
 
 /* ---------- さらに学べる本棚 ---------- */
