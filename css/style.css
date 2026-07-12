@@ -3964,6 +3964,78 @@ button {
   }
 }
 
+/* ---------- 出題ひんど(めやす): 番号の横の🌥️アイコンのみ ---------- */
+.freq-marks {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-left: 6px;
+  vertical-align: 1px;
+}
+.freq-legend {
+  font-size: 12.5px;
+  color: var(--color-text-subtle);
+  margin: 10px 0 26px;
+  line-height: 2;
+}
+.freq-legend > span {
+  display: inline-block;
+  margin-right: 16px;
+  white-space: nowrap;
+}
+.freq-legend__note {
+  font-size: 11px;
+}
+
+/* ---------- 資格取得後の働き方(養成学校一覧の下) ---------- */
+.future-work {
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--color-border);
+}
+.future-work__list {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.future-work__list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.future-work__icon {
+  font-size: 26px;
+  line-height: 1;
+}
+.future-work__name {
+  font-weight: 700;
+  font-size: 15px;
+}
+.future-work__desc {
+  font-size: 12.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.8;
+}
+
+/* ヒーロー: アーチと「こころは天気のよう」の間の天気アイコン */
+.hero__weather {
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+@media (max-width: 680px) {
+  .hero__weather {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+
 /* ---------- 出題ひんど(めやす) ---------- */
 .freq-badge {
   display: inline-block;

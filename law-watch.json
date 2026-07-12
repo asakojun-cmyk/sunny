@@ -475,5 +475,258 @@
     "url": "https://shigoto.mhlw.go.jp/User"
    }
   ]
+ },
+ {
+  "slug": "kyushokusha-shien",
+  "name": "求職者支援制度",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/kyushokusha-shien/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "求職者支援制度 改正",
+   "職業訓練受講給付金 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(求職者支援制度)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyushokusha_shien/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "hello-training",
+  "name": "公共職業訓練(ハロートレーニング)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/hello-training/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "ハロートレーニング 制度 変更",
+   "公共職業訓練 改正"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(ハロートレーニング)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/hellotraining_top.html"
+   }
+  ]
+ },
+ {
+  "slug": "jinzai-kaihatsu-josei",
+  "name": "人材開発支援助成金・キャリアアップ助成金",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/jinzai-kaihatsu-josei/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "人材開発支援助成金 改正",
+   "キャリアアップ助成金 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(人材開発支援助成金)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyufukin/d01-1.html"
+   }
+  ]
+ },
+ {
+  "slug": "saburoku-kyotei",
+  "name": "36協定(時間外・休日労働に関する協定)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/saburoku-kyotei/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "時間外労働 上限規制 改正",
+   "36協定 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(時間外労働の上限規制)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000148322_00001.html"
+   }
+  ]
+ },
+ {
+  "slug": "hatarakikata-kaikaku",
+  "name": "働き方改革関連法(同一労働同一賃金)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/hatarakikata-kaikaku/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "働き方改革関連法 改正",
+   "同一労働同一賃金 最新"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(働き方改革)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000148322.html"
+   }
+  ]
+ },
+ {
+  "slug": "saitei-chingin-ho",
+  "name": "最低賃金法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/saitei-chingin-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "最低賃金 改定",
+   "地域別最低賃金 引き上げ"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(最低賃金制度)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "rodo-anzen-eisei-ho",
+  "name": "労働安全衛生法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/rodo-anzen-eisei-ho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "労働安全衛生法 改正",
+   "ストレスチェック 義務 拡大"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(労働安全衛生)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/anzen/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "jisedai-ikusei",
+  "name": "次世代育成支援対策推進法(くるみん)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/jisedai-ikusei/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "次世代育成支援対策推進法 改正",
+   "くるみん 認定基準 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(くるみんマーク)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kodomo/shokuba_kosodate/kurumin/index.html"
+   }
+  ]
+ },
+ {
+  "slug": "freelance-shinpo",
+  "name": "フリーランス新法(取引適正化法)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/freelance-shinpo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "フリーランス法 改正",
+   "特定受託事業者 制度 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(フリーランス法)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000186725_00001.html"
+   }
+  ]
+ },
+ {
+  "slug": "shuro-shien",
+  "name": "就労移行支援・就労継続支援(A型・B型)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/shuro-shien/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "就労移行支援 制度 改正",
+   "就労継続支援 報酬 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(障害者の就労支援)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/shurou.html"
+   }
+  ]
+ },
+ {
+  "slug": "muki-tenkan",
+  "name": "無期転換ルール(5年ルール)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/muki-tenkan/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "無期転換ルール 改正",
+   "労働契約法 18条 見直し"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(無期転換ポータル)",
+    "url": "https://muki.mhlw.go.jp/"
+   }
+  ]
+ },
+ {
+  "slug": "sabetsu-kaisho",
+  "name": "障害者差別解消法と合理的配慮",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/sabetsu-kaisho/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "障害者差別解消法 改正",
+   "合理的配慮 義務 変更"
+  ],
+  "sources": [
+   {
+    "label": "内閣府(障害者差別解消法)",
+    "url": "https://www8.cao.go.jp/shougai/suishin/sabekai.html"
+   }
+  ]
+ },
+ {
+  "slug": "fukugyo-kengyo",
+  "name": "副業・兼業ガイドライン",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/fukugyo-kengyo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "副業・兼業 ガイドライン 改定"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(副業・兼業)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000192188.html"
+   }
+  ]
+ },
+ {
+  "slug": "gaikokujin-koyo",
+  "name": "外国人雇用(特定技能・育成就労)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/gaikokujin-koyo/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "育成就労 施行",
+   "特定技能 分野 追加"
+  ],
+  "sources": [
+   {
+    "label": "出入国在留管理庁(育成就労制度)",
+    "url": "https://www.moj.go.jp/isa/ikuseishuro_01.html"
+   }
+  ]
+ },
+ {
+  "slug": "internship-sanshogoi",
+  "name": "インターンシップ(三省合意の見直し)",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/internship-sanshogoi/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "インターンシップ 三省合意 改正"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(インターンシップ)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000053131.html"
+   }
+  ]
+ },
+ {
+  "slug": "karoshi-boshi",
+  "name": "過労死等防止対策推進法",
+  "url": "https://asakojun-cmyk.github.io/sunny/terms/karoshi-boshi/",
+  "checkedAt": "2026-07-12",
+  "watchWords": [
+   "過労死等防止対策大綱 変更"
+  ],
+  "sources": [
+   {
+    "label": "厚生労働省(過労死等防止対策)",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000053725.html"
+   }
+  ]
  }
 ]
