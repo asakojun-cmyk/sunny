@@ -129,7 +129,7 @@ button {
   min-height: 60vh;
 }
 .section {
-  padding: 88px 0;
+  padding: 60px 0;
 }
 .section--surface {
   background: var(--color-surface);
@@ -2058,7 +2058,21 @@ button {
 
 @media (max-width: 680px) {
   .section {
-    padding: 60px 0;
+    padding: 36px 0;
+  }
+  .section-header__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .section-header__lede {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+  .section-header__en {
+    font-size: 10px;
+  }
+  .section__more {
+    margin-top: 16px;
   }
   body {
     padding-bottom: 76px; /* 下部ナビの高さぶん */
@@ -2085,19 +2099,50 @@ button {
     width: 64px;
     height: 64px;
   }
-  .three-pillars {
-    grid-template-columns: 1fr;
+  /* PCで横並びのものは、スマホでは縦積みではなく横スクロール */
+  .three-pillars,
+  .daily-grid,
+  .featured-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  .three-pillars > *,
+  .daily-grid > *,
+  .featured-grid > * {
+    flex: 0 0 76%;
+    max-width: 76%;
+    scroll-snap-align: start;
   }
   .pillar {
-    padding: 20px 4px;
+    padding: 20px 16px 18px;
   }
-  .pillar + .pillar {
-    border-left: none;
-    border-top: 1px solid var(--color-border);
+  .banner-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  .banner-row .game-banner {
+    flex: 0 0 84%;
+    max-width: 84%;
+    scroll-snap-align: start;
+  }
+  .banner-row .game-banner + .game-banner {
+    margin-top: 0;
   }
   .category-grid,
-  .daily-grid,
-  .featured-grid,
   .school-grid {
     grid-template-columns: 1fr;
   }
@@ -3741,8 +3786,8 @@ button {
   gap: 18px;
   background: linear-gradient(120deg, #f8f3e2 0%, var(--color-yellow-light) 100%);
   border: 1.5px solid var(--color-yellow);
-  border-radius: 22px;
-  padding: 20px 24px;
+  border-radius: 20px;
+  padding: 16px 20px;
   text-decoration: none;
   color: var(--color-text);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -3754,13 +3799,13 @@ button {
 .game-banner__cards {
   flex: none;
   position: relative;
-  width: 74px;
-  height: 64px;
+  width: 64px;
+  height: 56px;
 }
 .game-banner__card {
   position: absolute;
-  width: 34px;
-  height: 48px;
+  width: 30px;
+  height: 42px;
   background: var(--color-surface);
   border: 1.5px solid var(--color-yellow);
   border-radius: 7px;
@@ -3769,9 +3814,9 @@ button {
   font-size: 17px;
   box-shadow: 0 3px 8px rgba(110, 95, 55, 0.14);
 }
-.game-banner__card--1 { left: 0; top: 10px; transform: rotate(-10deg); }
-.game-banner__card--2 { left: 20px; top: 4px; transform: rotate(2deg); z-index: 1; }
-.game-banner__card--3 { left: 40px; top: 10px; transform: rotate(12deg); }
+.game-banner__card--1 { left: 0; top: 9px; transform: rotate(-10deg); }
+.game-banner__card--2 { left: 17px; top: 4px; transform: rotate(2deg); z-index: 1; }
+.game-banner__card--3 { left: 34px; top: 9px; transform: rotate(12deg); }
 .game-banner__body {
   flex: 1;
   min-width: 0;
@@ -3789,7 +3834,7 @@ button {
 }
 .game-banner__title {
   display: block;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
   margin-bottom: 4px;
 }
@@ -3804,9 +3849,9 @@ button {
   background: var(--color-terracotta);
   color: #ffffff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 999px;
-  padding: 11px 20px;
+  padding: 9px 16px;
   white-space: nowrap;
 }
 @media (max-width: 680px) {
@@ -3823,8 +3868,8 @@ button {
 }
 
 /* バナーを縦に並べたときの間隔と、テーマ別カラー */
-.game-banner + .game-banner {
-  margin-top: 16px;
+.banner-row .game-banner + .game-banner {
+  margin-top: 12px;
 }
 .game-banner--diagrams {
   background: linear-gradient(120deg, var(--color-sky-light) 0%, #dbe8ea 100%);
@@ -3866,6 +3911,43 @@ button {
   border-radius: 999px;
   font-size: 13px;
   vertical-align: 2px;
+}
+
+/* ---------- 資格取得後の働き方(養成学校一覧の下) ---------- */
+.future-work {
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--color-border);
+}
+.future-work__list {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.future-work__list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.future-work__icon {
+  font-size: 26px;
+  line-height: 1;
+}
+.future-work__name {
+  font-weight: 700;
+  font-size: 15px;
+}
+.future-work__desc {
+  font-size: 12.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.8;
 }
 
 /* ---------- 出題ひんど(めやす) ---------- */
