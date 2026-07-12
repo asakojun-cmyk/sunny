@@ -71,4 +71,25 @@
         "</p>";
     }
   });
+
+  /* お守りバナー: 試験日が保存されていれば「あと○日」を表示 */
+  (function () {
+    var badge = document.querySelector("[data-exam-days]");
+    if (!badge) return;
+    var v;
+    try {
+      v = localStorage.getItem("kotoba-exam-date");
+    } catch (_e) {
+      return;
+    }
+    if (!v) return;
+    var exam = new Date(v + "T00:00:00");
+    if (isNaN(exam.getTime())) return;
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var days = Math.round((exam - today) / 86400000);
+    if (days < 0) return;
+    badge.textContent = days === 0 ? "きょうが試験日!" : "あと" + days + "日";
+    badge.hidden = false;
+  })();
 })();
