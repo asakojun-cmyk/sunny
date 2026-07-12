@@ -2873,6 +2873,689 @@ button {
   color: var(--color-terracotta);
 }
 
+/* ---------- 資格まるわかりガイド ---------- */
+.schools-entry-link {
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 20px;
+}
+.schools-entry-link a {
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+.shikaku-guide section {
+  margin-top: 40px;
+}
+.shikaku-steps {
+  padding-left: 1.4em;
+  line-height: 2.1;
+}
+.shikaku-steps li {
+  margin-bottom: 8px;
+}
+.shikaku-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+.shikaku-cost-table th,
+.shikaku-cost-table td {
+  border: 1px solid var(--color-border);
+  padding: 10px 12px;
+  text-align: left;
+  line-height: 1.8;
+}
+.shikaku-cost-table th {
+  background: var(--color-surface);
+  font-size: 13px;
+}
+.kyufu-calc {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+.kyufu-calc h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+.kyufu-calc__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 700;
+}
+.kyufu-calc__row input {
+  padding: 9px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  width: 150px;
+  background: #fff;
+  color: var(--color-text);
+}
+.kyufu-calc__result td[data-kyufu] {
+  color: var(--color-terracotta);
+  font-weight: 700;
+}
+.kyufu-calc__note {
+  font-size: 12.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.9;
+  margin: 10px 0 0;
+}
+.shikaku-links {
+  list-style: none;
+  padding: 0;
+}
+.shikaku-links li {
+  margin-bottom: 10px;
+}
+.shikaku-faq div {
+  margin-bottom: 18px;
+}
+.shikaku-faq dt {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.shikaku-faq dd {
+  margin: 0;
+  line-height: 2;
+  color: var(--color-text);
+}
+
+/* ---------- モヤンの中の人コラム ---------- */
+.column-hub__chara {
+  text-align: center;
+  margin: 6px 0 10px;
+}
+.column-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+.column-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 20px;
+  padding: 22px 24px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.column-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(63, 70, 82, 0.1);
+}
+.column-card__no {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--color-terracotta);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.column-card__title {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.column-card__lede {
+  display: block;
+  font-size: 13.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.9;
+  margin-bottom: 10px;
+}
+.column-card__tags span {
+  display: inline-block;
+  font-size: 11.5px;
+  color: var(--color-terracotta);
+  font-weight: 700;
+  margin-right: 10px;
+}
+.column-hub__note {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--color-text-subtle);
+}
+.column-tag {
+  font-size: 12px;
+  color: var(--color-terracotta);
+  font-weight: 700;
+  margin-left: 8px;
+}
+.column-article .column-section {
+  margin-top: 36px;
+}
+.column-article .column-section h2 {
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+.column-article .column-section p {
+  line-height: 2.2;
+  margin-bottom: 16px;
+}
+.column-personal {
+  margin-top: 36px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 16px;
+  padding: 18px 22px;
+}
+.column-personal h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.column-personal p {
+  margin: 0;
+  line-height: 2.1;
+}
+.column-step {
+  margin-top: 36px;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 18px;
+  padding: 20px 24px;
+  text-align: center;
+}
+.column-step__title {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.column-step__body {
+  line-height: 2.1;
+  margin: 0 0 10px;
+}
+.column-step__note {
+  font-size: 12px;
+  color: #8a7a20;
+  margin: 0;
+}
+.column-related {
+  margin-top: 32px;
+}
+.column-related h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.column-related__links a {
+  display: inline-block;
+  margin: 3px 8px 3px 0;
+  padding: 6px 14px;
+  border: 1.5px solid var(--color-terracotta);
+  border-radius: 999px;
+  color: var(--color-terracotta);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.column-back {
+  margin-top: 32px;
+}
+
+/* ---------- つみきブロック ---------- */
+.tsumiki__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 210px;
+  justify-content: flex-end;
+}
+.tsumiki__stack {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.3s ease;
+}
+.tsumiki__stack.is-collapse {
+  animation: tsumiki-collapse 1.2s ease forwards;
+}
+@keyframes tsumiki-collapse {
+  0% { transform: rotate(0); }
+  30% { transform: rotate(-4deg); }
+  60% { transform: rotate(5deg); }
+  100% { transform: rotate(14deg) translateY(26px); opacity: 0.4; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tsumiki__stack.is-collapse { animation: none; opacity: 0.4; }
+}
+.tsumiki__ground {
+  width: 240px;
+  height: 10px;
+  background: #cbbf9a;
+  border-radius: 999px;
+  margin-top: 6px;
+}
+.tsumiki-block {
+  border: 2px solid;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.15s ease;
+}
+.tsumiki-block span {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #6f6b63;
+}
+.tsumiki-block:hover { transform: translateY(-2px); }
+.tsumiki-block--ningen { background: #f6ead8; border-color: #cfa972; width: 220px; }
+.tsumiki-block--taido { background: #fdf9dc; border-color: #ded263; width: 180px; }
+.tsumiki-block--giho { background: #e8f0f4; border-color: #9fb6c4; width: 140px; }
+.tsumiki-block--placed { cursor: default; }
+.tsumiki__bank {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.tsumiki__bank .tsumiki-block { width: auto; min-width: 150px; }
+.tsumiki__feedback {
+  text-align: center;
+  font-weight: 700;
+  min-height: 2em;
+  margin: 14px 0 0;
+  line-height: 1.9;
+}
+.tsumiki__clear {
+  margin-top: 20px;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 18px;
+  padding: 22px;
+}
+.tsumiki__clear-title {
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 12px;
+}
+.tsumiki__lesson div { margin-bottom: 12px; }
+.tsumiki__lesson dt { font-weight: 700; margin-bottom: 4px; }
+.tsumiki__lesson dd { margin: 0; line-height: 1.9; font-size: 14px; }
+.tsumiki__exam {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  line-height: 1.9;
+}
+
+/* ---------- 流派仕分け ---------- */
+.ryuha__status {
+  display: flex;
+  gap: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.ryuha__card-area {
+  display: flex;
+  justify-content: center;
+  min-height: 150px;
+}
+.ryuha-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px 26px;
+  text-align: center;
+}
+.ryuha-card.is-wrong { animation: card-shake 0.4s ease; border-color: #c23b2a; }
+.ryuha-card__name { font-size: 17px; font-weight: 700; }
+.ryuha-card__fact { display: none; }
+.ryuha__feedback {
+  text-align: center;
+  font-weight: 700;
+  min-height: 3em;
+  line-height: 1.9;
+  margin: 12px 0;
+}
+.ryuha__buckets {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.ryuha-bucket {
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 12px 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  line-height: 1.5;
+}
+.ryuha-bucket:hover { border-color: var(--color-sky); transform: translateY(-2px); }
+.ryuha-bucket.is-correct { border-color: #ded263; background: #fdf9dc; }
+.ryuha__clear {
+  margin-top: 20px;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 18px;
+  padding: 22px;
+}
+.ryuha__clear > p { text-align: center; font-weight: 700; }
+.ryuha-summary { margin-top: 14px; }
+.ryuha-summary__item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+.ryuha-summary__item h3 { margin: 0 0 6px; font-size: 15px; }
+.ryuha-summary__item p { margin: 0 0 4px; font-size: 13.5px; line-height: 1.9; }
+.ryuha-summary__derived { color: var(--color-terracotta); font-weight: 700; }
+@media (max-width: 680px) {
+  .ryuha__buckets { grid-template-columns: repeat(2, 1fr); }
+  .ryuha__buckets .ryuha-bucket:last-child { grid-column: 1 / -1; }
+}
+
+/* ---------- あなうめゲーム ---------- */
+.anaume__tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.anaume-tab {
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.anaume-tab.is-active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #fff;
+}
+.anaume-board {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 20px;
+}
+.anaume-board__intro { margin: 0 0 14px; font-weight: 700; }
+.anaume-board__slots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.anaume-slot {
+  border: 2px dashed #c9a94a;
+  border-radius: 12px;
+  background: #fffdf8;
+  font-family: inherit;
+  padding: 10px 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  max-width: 420px;
+}
+.anaume-slot__q { font-size: 15px; font-weight: 700; color: #8a7a20; }
+.anaume-slot__note { font-size: 10.5px; color: #6f6b63; }
+.anaume-slot.is-active { border-color: var(--color-terracotta); background: #fef4ec; }
+.anaume-slot.is-filled { border-style: solid; border-color: #ded263; background: #fdf9dc; cursor: default; }
+.anaume-slot.is-filled .anaume-slot__q { color: #3f4652; }
+/* ピラミッドは上ほど幅がせまい */
+.anaume-board--pyramid .anaume-slot:nth-child(1) { max-width: 200px; }
+.anaume-board--pyramid .anaume-slot:nth-child(2) { max-width: 260px; }
+.anaume-board--pyramid .anaume-slot:nth-child(3) { max-width: 320px; }
+.anaume-board--pyramid .anaume-slot:nth-child(4) { max-width: 380px; }
+.anaume-board--pyramid .anaume-slot:nth-child(5) { max-width: 440px; }
+/* アーチ: かなめ石+2本の柱 */
+.anaume-board--arch .anaume-board__slots { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+.anaume-board--arch .anaume-slot:nth-child(1) { width: 100%; max-width: 300px; order: 0; }
+.anaume-board--arch .anaume-slot:nth-child(2) { width: 44%; max-width: 220px; order: 1; min-height: 110px; justify-content: center; }
+.anaume-board--arch .anaume-slot:nth-child(3) { width: 44%; max-width: 220px; order: 2; min-height: 110px; justify-content: center; }
+/* リング: 内→外で幅が広がる */
+.anaume-board--rings .anaume-slot:nth-child(1) { max-width: 220px; }
+.anaume-board--rings .anaume-slot:nth-child(2) { max-width: 290px; }
+.anaume-board--rings .anaume-slot:nth-child(3) { max-width: 360px; }
+.anaume-board--rings .anaume-slot:nth-child(4) { max-width: 430px; }
+.anaume-board__chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
+.anaume-chip {
+  border: 1.5px solid var(--color-terracotta);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-terracotta);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.anaume-chip.is-used { opacity: 0.3; border-color: var(--color-border); color: var(--color-text-subtle); cursor: default; }
+.anaume-chip.is-wrong { animation: card-shake 0.4s ease; }
+.anaume-board__feedback {
+  text-align: center;
+  font-weight: 700;
+  min-height: 2em;
+  margin: 14px 0 0;
+  font-size: 13.5px;
+}
+.anaume-board__usage {
+  margin-top: 14px;
+  background: #fdf9dc;
+  border: 1.5px solid #ded263;
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+.anaume-board__usage p { margin: 0; line-height: 2; font-size: 14px; }
+
+/* ---------- 動的フローチャート・図解ライブラリ ---------- */
+.flowchart__lede {
+  line-height: 2;
+  margin: 0 0 16px;
+}
+.flowchart {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 20px;
+  padding: 20px;
+}
+.flowchart__steps {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.flow-step {
+  flex: 1 1 96px;
+  min-width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 6px;
+  border: 2px solid var(--color-border);
+  border-radius: 14px;
+  background: #ffffff;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.flow-step:hover {
+  border-color: var(--color-sky);
+}
+.flow-step.is-active {
+  background: #fdf9dc;
+  border-color: #ded263;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(180, 150, 40, 0.2);
+}
+.flow-step__num {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--color-terracotta);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+.flow-step__title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.flow-step__short {
+  font-size: 10.5px;
+  color: var(--color-text-subtle);
+}
+.flow-arrow {
+  align-self: center;
+  color: #c9a94a;
+  font-weight: 700;
+  animation: flow-pulse 1.6s ease-in-out infinite;
+}
+@keyframes flow-pulse {
+  0%, 100% { opacity: 0.4; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-arrow { animation: none; }
+}
+.flow-panel {
+  margin-top: 16px;
+  background: #fffdf8;
+  border: 1.5px dashed var(--color-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  animation: story-in 0.4s ease;
+}
+.flow-panel__desc {
+  margin: 0 0 10px;
+  line-height: 2;
+  font-size: 14.5px;
+}
+.flow-panel__sunny {
+  margin: 0 0 10px;
+  background: #fdf9dc;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.9;
+}
+.flow-panel__links {
+  margin: 0;
+  font-size: 13px;
+}
+.flow-panel__links a {
+  display: inline-block;
+  margin: 2px 6px 2px 0;
+  padding: 4px 12px;
+  border: 1.5px solid var(--color-terracotta);
+  border-radius: 999px;
+  color: var(--color-terracotta);
+  font-weight: 700;
+  text-decoration: none;
+}
+.flowchart__hint {
+  margin: 12px 0 0;
+  font-size: 11.5px;
+  color: var(--color-text-subtle);
+  text-align: center;
+}
+.diagram-shelf {
+  margin-top: 44px;
+}
+.diagram-shelf__note {
+  font-size: 13.5px;
+  color: var(--color-text-subtle);
+  margin: 0 0 16px;
+}
+.diagram-shelf__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.diagram-card {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.diagram-card .diagram {
+  margin: 0;
+}
+.diagram-card__link {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  text-align: right;
+}
+.diagram-lib__note {
+  margin-top: 36px;
+  font-size: 13.5px;
+  color: var(--color-text-subtle);
+  text-align: center;
+  line-height: 2;
+}
+@media (max-width: 680px) {
+  .flowchart__steps {
+    gap: 4px;
+  }
+  .flow-step {
+    flex: 1 1 30%;
+    min-width: 30%;
+    padding: 10px 4px;
+  }
+  .flow-arrow {
+    display: none;
+  }
+  .diagram-shelf__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- お守りページ ---------- */
 .omamori-link-row {
   margin: 14px 0 0;
