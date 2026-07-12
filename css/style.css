@@ -3739,8 +3739,8 @@ button {
   display: flex;
   align-items: center;
   gap: 18px;
-  background: linear-gradient(120deg, #fdf6d4 0%, #fceea9 100%);
-  border: 2px solid #e8d872;
+  background: linear-gradient(120deg, #f8f3e2 0%, var(--color-yellow-light) 100%);
+  border: 1.5px solid var(--color-yellow);
   border-radius: 22px;
   padding: 20px 24px;
   text-decoration: none;
@@ -3749,7 +3749,7 @@ button {
 }
 .game-banner:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(180, 150, 40, 0.22);
+  box-shadow: 0 10px 24px rgba(120, 105, 60, 0.16);
 }
 .game-banner__cards {
   flex: none;
@@ -3761,13 +3761,13 @@ button {
   position: absolute;
   width: 34px;
   height: 48px;
-  background: #ffffff;
-  border: 1.5px solid #d8cf9a;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-yellow);
   border-radius: 7px;
   display: grid;
   place-items: center;
   font-size: 17px;
-  box-shadow: 0 3px 8px rgba(120, 100, 40, 0.18);
+  box-shadow: 0 3px 8px rgba(110, 95, 55, 0.14);
 }
 .game-banner__card--1 { left: 0; top: 10px; transform: rotate(-10deg); }
 .game-banner__card--2 { left: 20px; top: 4px; transform: rotate(2deg); z-index: 1; }
@@ -3796,7 +3796,7 @@ button {
 .game-banner__desc {
   display: block;
   font-size: 13px;
-  color: #6d6547;
+  color: var(--color-text-subtle);
   line-height: 1.8;
 }
 .game-banner__cta {
@@ -3827,38 +3827,35 @@ button {
   margin-top: 16px;
 }
 .game-banner--diagrams {
-  background: linear-gradient(120deg, #e9f4fd 0%, #d6ecfb 100%);
-  border-color: #a9d3ee;
+  background: linear-gradient(120deg, var(--color-sky-light) 0%, #dbe8ea 100%);
+  border-color: var(--color-sky);
 }
 .game-banner--diagrams:hover {
-  box-shadow: 0 12px 28px rgba(60, 130, 190, 0.2);
+  box-shadow: 0 10px 24px rgba(70, 100, 110, 0.16);
 }
 .game-banner--diagrams .game-banner__card {
-  border-color: #a9cfe8;
-  box-shadow: 0 3px 8px rgba(50, 110, 170, 0.16);
-}
-.game-banner--diagrams .game-banner__desc {
-  color: #4f6b80;
+  border-color: var(--color-sky);
+  box-shadow: 0 3px 8px rgba(70, 100, 110, 0.14);
 }
 .game-banner--diagrams .game-banner__badge {
-  background: #4f93c4;
+  background: var(--label-official-text);
 }
 .game-banner--omamori {
-  background: linear-gradient(120deg, #fdeff0 0%, #fbe0e4 100%);
-  border-color: #f0bcc6;
+  background: linear-gradient(120deg, #f5ebe4 0%, #efe0d6 100%);
+  border-color: #d9bfae;
 }
 .game-banner--omamori:hover {
-  box-shadow: 0 12px 28px rgba(200, 110, 130, 0.2);
+  box-shadow: 0 10px 24px rgba(140, 100, 75, 0.16);
 }
 .game-banner--omamori .game-banner__card {
-  border-color: #eec3cc;
-  box-shadow: 0 3px 8px rgba(180, 90, 110, 0.16);
-}
-.game-banner--omamori .game-banner__desc {
-  color: #8a5a64;
+  border-color: #d9bfae;
+  box-shadow: 0 3px 8px rgba(140, 100, 75, 0.14);
 }
 .game-banner--omamori .game-banner__badge {
-  background: #d97a8c;
+  background: var(--color-terracotta);
+}
+.game-banner__days[hidden] {
+  display: none;
 }
 .game-banner__days {
   display: inline-block;
