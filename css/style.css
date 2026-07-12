@@ -2615,6 +2615,7 @@ button {
 
 /* アーチはふたりの会話のあと、文字はふたりが下りたあとに中央へ */
 .step-t1 { animation-delay: 24.2s; }
+.step-t2 { animation-delay: 27.2s; }
 .step-t3 { animation-delay: 27.8s; }
 .step-t4 { animation-delay: 28.6s; }
 .step-t5 { animation-delay: 29.4s; }
@@ -2791,17 +2792,17 @@ button {
 
 /* ---------- スマホ調整 ---------- */
 @media (max-width: 680px) {
-  /* ヘッダー: タイトル・コンセプトは中央揃え、右にサニー先生(イラストのみ) */
+  /* ヘッダー: タイトル・コンセプトは左揃え(右のサニー先生と重ならないよう右に余白) */
   .site-header__inner {
-    justify-content: center;
-    padding: 10px 66px;
+    justify-content: flex-start;
+    padding: 10px 66px 10px 16px;
   }
   .site-header__brand {
-    text-align: center;
+    text-align: left;
+    min-width: 0;
   }
   .site-header__tagline {
     font-size: 10px;
-    text-wrap: balance; /* 2行になるときも左右バランスよく折り返す */
   }
   .header-search {
     position: absolute;
@@ -3948,6 +3949,19 @@ button {
   font-size: 12.5px;
   color: var(--color-text-subtle);
   line-height: 1.8;
+}
+
+/* ヒーロー: アーチと「こころは天気のよう」の間の天気アイコン */
+.hero__weather {
+  font-size: 30px;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+@media (max-width: 680px) {
+  .hero__weather {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
 }
 
 /* ---------- 出題ひんど(めやす) ---------- */
