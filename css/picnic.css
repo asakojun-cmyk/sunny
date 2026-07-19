@@ -633,3 +633,22 @@
 .picnic-hero--note .picnic-stage:before{background:#eef4dd}
 .picnic-hero--note.is-done{animation:none;background:#fffdf8}
 @media(prefers-reduced-motion:reduce){.picnic-hero--note{animation:none;background:#fffdf8}}
+
+/* ---- v2.7 劇の舞台をまっさらに(2026-07-20 ちゃん指示:白背景・キャラ小さく・モヤンに縁取り・下の文字を見せない) ---- */
+.picnic-hero--note{background:#fffdf8;animation:none;min-height:calc(100vh - 120px);overflow:hidden}
+/* キャラを小さく */
+.hero-intro__moyan{width:112px;left:25%;top:30%}
+.hero-intro__sunny{width:144px;left:62%;top:25%}
+/* 白いモヤンに、やわらかい縁取り(白背景でも見える) */
+.hero-intro__moyan{filter:drop-shadow(0 0 1px #c8d3bf) drop-shadow(0 0 1px #c8d3bf) drop-shadow(0 10px 18px rgba(41,67,94,.10))}
+.hero-intro__sunny{filter:drop-shadow(0 8px 16px rgba(41,67,94,.08))}
+.ps-moyan{filter:drop-shadow(0 0 1px #cfd8c6)}
+.pm-moyan{filter:drop-shadow(0 0 1px #cfd8c6)}
+/* セリフ位置もキャラに合わせて少し下げる */
+.hero-say--moyan{top:14%}
+.hero-say--sunny{top:9%}
+@media(max-width:640px){
+  .picnic-hero--note{min-height:calc(100vh - 110px)}
+  .hero-intro__moyan{width:88px;left:14%;top:30%}
+  .hero-intro__sunny{width:112px;left:58%;top:26%}
+}
