@@ -585,3 +585,51 @@
 .picnic-hero--note .hero-note .step-1{animation-delay:10.6s}
 .picnic-hero--note .hero-note .step-2{animation-delay:11s}
 .picnic-hero--note .hero-note .step-3{animation-delay:11.4s}
+
+/* ---- v2.5 劇の調整(2026-07-20 ちゃん指示:緑背景・ゆったり・距離・えーんから) ---- */
+/* 背景をマップと同じ緑に(白いモヤンがちゃんと見える) */
+.picnic-hero--note{background:#eef4dd}
+.picnic-hero--note .picnic-stage:before{background:#e4eec9}
+/* ふたりの距離を離す */
+.hero-intro__sunny{left:20%;top:20%}
+.hero-intro__moyan{left:61%;top:25%}
+.hero-say--moyan{left:auto;right:8%;top:7%}
+.hero-say--sunny{left:11%;top:4%}
+/* ゆったりテンポ(えーん→不安→寄り添い→ベネフィット→着地) */
+.hero-intro__moyan{animation:hi-in 1.2s ease .5s forwards,hi-out 1.8s ease-in-out 21.8s forwards}
+.hero-intro__sunny{animation:hi-in 1.2s ease 9.6s forwards,hi-out 1.8s ease-in-out 21.8s forwards}
+.hero-say-0{animation:pic-say 3.4s ease 1.4s both;max-width:150px}
+.hero-say-1{animation:pic-say 4.8s ease 4.9s both}
+.hero-say-2{animation:pic-say 5.2s ease 10.6s both}
+.hero-say-3{animation:pic-say 5.6s ease 16s both}
+.hero-intro__skip{animation:hi-in .8s ease 2s forwards,hi-out .5s ease 21.4s forwards}
+.picnic-hero--note .picnic-stage{animation:pic-step 1.4s ease 22.8s forwards}
+.picnic-hero--note .hero-note .step-1{animation-delay:23.6s}
+.picnic-hero--note .hero-note .step-2{animation-delay:24.2s}
+.picnic-hero--note .hero-note .step-3{animation-delay:24.8s}
+.hero-say--moyan{top:11%}
+.hero-say--sunny{top:6%}
+
+/* ---- v2.6 劇の立ち位置(2026-07-20 ちゃん指示:左右入替+向かい合わせ) ---- */
+.hero-intro__moyan{left:23%;top:25%;animation:hi-in-flip 1.2s ease .5s forwards,hi-out-flip 1.8s ease-in-out 21.8s forwards}
+.hero-intro__sunny{left:62%;top:19%;animation:hi-in-flip 1.2s ease 9.6s forwards,hi-out-flip 1.8s ease-in-out 21.8s forwards}
+@keyframes hi-in-flip{from{opacity:0;transform:translateY(14px) scale(.94) scaleX(-1)}to{opacity:1;transform:scaleX(-1)}}
+@keyframes hi-out-flip{to{opacity:0;transform:translateY(300px) scale(.4) scaleX(-1)}}
+/* 吹き出しも相手の方を向く(モヤン=左で右向きに、サニー=右で左向きに話す) */
+.hero-say--moyan{left:10%;right:auto;top:10%;border-radius:24px 24px 8px 24px}
+.hero-say--moyan:after{left:auto;right:56px}
+.hero-say--sunny{left:auto;right:8%;top:5%;border-radius:24px 24px 24px 8px}
+.hero-say--sunny:after{right:auto;left:48px}
+@media(max-width:640px){
+  .hero-intro__moyan{left:12%;top:27%;width:110px}
+  .hero-intro__sunny{left:56%;top:23%;width:140px}
+  .hero-say--moyan{left:4%;right:auto;top:8%}
+  .hero-say--sunny{left:auto;right:4%;top:4%}
+}
+
+/* ---- v2.6b 空の明け(2026-07-20 ちゃん指示:劇=緑→タイトル出現時に空が白へ) ---- */
+.picnic-hero--note{animation:hero-sky 1.8s ease 22.2s forwards}
+@keyframes hero-sky{to{background:#fffdf8}}
+.picnic-hero--note .picnic-stage:before{background:#eef4dd}
+.picnic-hero--note.is-done{animation:none;background:#fffdf8}
+@media(prefers-reduced-motion:reduce){.picnic-hero--note{animation:none;background:#fffdf8}}

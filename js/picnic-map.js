@@ -62,5 +62,5 @@
   if (!hero) return;
   hero.addEventListener("click", function () { hero.classList.add("is-done"); }, { once: true });
   /* 劇が終わったら舞台を素通しに */
-  window.setTimeout(function () { hero.classList.add("is-done"); }, 12500);
+  window.setTimeout(function () { hero.classList.add("is-done"); }, 27500);
 })();
