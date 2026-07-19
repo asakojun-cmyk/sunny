@@ -1,0 +1,118 @@
+[
+  {
+    "number": 1,
+    "file": "01_sky_cloud_left.png"
+  },
+  {
+    "number": 2,
+    "file": "02_sky_cloud_center.png"
+  },
+  {
+    "number": 3,
+    "file": "03_sky_cloud_right.png"
+  },
+  {
+    "number": 4,
+    "file": "04_book_wagon.png"
+  },
+  {
+    "number": 5,
+    "file": "05_pinwheel.png"
+  },
+  {
+    "number": 6,
+    "file": "06_sun_character.png"
+  },
+  {
+    "number": 7,
+    "file": "07_moyan_school_hat_crying.png"
+  },
+  {
+    "number": 8,
+    "file": "08_blue_backpack.png"
+  },
+  {
+    "number": 9,
+    "file": "09_blue_notebook.png"
+  },
+  {
+    "number": 10,
+    "file": "10_yellow_pencil.png"
+  },
+  {
+    "number": 11,
+    "file": "11_lunchbox.png"
+  },
+  {
+    "number": 12,
+    "file": "12_beach_ball.png"
+  },
+  {
+    "number": 13,
+    "file": "13_blue_yellow_tent.png"
+  },
+  {
+    "number": 14,
+    "file": "14_tree_center.png"
+  },
+  {
+    "number": 15,
+    "file": "15_tree_hammock_left.png"
+  },
+  {
+    "number": 16,
+    "file": "16_hammock.png"
+  },
+  {
+    "number": 17,
+    "file": "17_tree_hammock_right.png"
+  },
+  {
+    "number": 18,
+    "file": "18_bulletin_board.png"
+  },
+  {
+    "number": 19,
+    "file": "19_market_stall.png"
+  },
+  {
+    "number": 20,
+    "file": "20_bush_cart_right.png"
+  },
+  {
+    "number": 21,
+    "file": "21_bush_left_middle.png"
+  },
+  {
+    "number": 22,
+    "file": "22_bush_left_small.png"
+  },
+  {
+    "number": 23,
+    "file": "23_flowers_left_group.png"
+  },
+  {
+    "number": 24,
+    "file": "24_bush_lower_left.png"
+  },
+  {
+    "number": 25,
+    "file": "25_flowers_right_group.png"
+  },
+  {
+    "number": 26,
+    "file": "26_bush_lower_right.png"
+  },
+  {
+    "number": 27,
+    "file": "27_picnic_mat.png"
+  },
+  {
+    "number": 28,
+    "file": "28_small_cloud_motif.png"
+  },
+  {
+    "number": 29,
+    "file": "29_potted_plant.png"
+  }
+]
