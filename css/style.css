@@ -4989,3 +4989,8 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 .picnic-meadow:before{display:none}
 .picnic-meadow__wave{position:absolute;left:0;right:0;bottom:-27px;top:auto;width:100%;height:150px;display:block}
 .pm{z-index:1}
+
+/* ---- v2.9 見出しの緩急(2026-07-20 ちゃん指示:各章見出しを中央揃え+後半サイズに統一。主役はサイトタイトルだけ) ---- */
+.section-header{text-align:center}
+.section-header__lede{margin-left:auto;margin-right:auto}
+.section-header__title::after{margin-left:auto;margin-right:auto}
