@@ -55,3 +55,12 @@
   stage.addEventListener("mousemove", onMove);
   stage.addEventListener("mouseleave", function () { active = false; });
 })();
+
+/* はじまりの劇:クリックでスキップ */
+(function () {
+  var hero = document.querySelector(".picnic-hero--note");
+  if (!hero) return;
+  hero.addEventListener("click", function () { hero.classList.add("is-done"); }, { once: true });
+  /* 劇が終わったら舞台を素通しに */
+  window.setTimeout(function () { hero.classList.add("is-done"); }, 12500);
+})();
