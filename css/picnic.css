@@ -504,3 +504,23 @@
 .picnic-hero--lockup h1{white-space:nowrap}
 @media(max-width:640px){.picnic-hero--lockup h1{white-space:normal}}
 @media(max-width:640px){.picnic-hero--lockup h1{font-size:1.72rem;white-space:nowrap}}
+
+/* ---- v2.1 ランチハブにピクニックシーン(2026-07-20 ちゃん指示) ---- */
+.obento-hero__bento{display:none}
+.obento-hero__scene{position:relative;width:min(560px,90vw);height:170px;margin:18px auto -20px}
+.ob{position:absolute;bottom:0;height:auto}
+.ob-mat{left:50%;transform:translateX(-50%);bottom:-4px;width:340px}
+.ob-sunny{left:24%;bottom:12px;width:110px}
+.ob-moyan{left:46%;bottom:14px;width:86px}
+.ob-lunch{left:38%;bottom:2px;width:64px}
+.ob-ball{left:62%;bottom:4px;width:44px}
+.ob-flowerl{left:0;bottom:0;width:74px}
+.ob-flowerr{right:0;bottom:0;width:72px}
+@media(max-width:640px){
+  .obento-hero__scene{height:140px}
+  .ob-mat{width:270px}
+  .ob-sunny{left:20%;width:92px}
+  .ob-moyan{left:45%;width:70px}
+  .ob-lunch{left:36%;width:52px}
+  .ob-ball{left:63%;width:36px}
+}

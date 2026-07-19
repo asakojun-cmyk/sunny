@@ -4952,3 +4952,40 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 .site-main:before{left:2%;background-image:url("../img/parts/01_sky_cloud_left.png")}
 .site-main:after{right:2.5%;background-image:url("../img/parts/03_sky_cloud_right.png")}
 @media(max-width:760px){.site-main:before,.site-main:after{display:none}}
+
+/* ---- v2.1 理論家ページのピクニックのはじまり(2026-07-20 ちゃん指示) ---- */
+.picnic-intro{margin:26px 0 36px;display:grid;gap:12px}
+.picnic-intro__line{display:flex;gap:12px;align-items:flex-end;max-width:660px}
+.picnic-intro__line--guest{margin-left:auto;flex-direction:row-reverse}
+.picnic-intro__avatar{width:52px;height:52px;flex:none;border-radius:50%;background:#fffdf8;display:grid;place-items:center;box-shadow:0 4px 10px rgba(41,67,94,.1);overflow:hidden;font-size:1.5rem}
+.picnic-intro__avatar img{width:112%;height:112%;object-fit:contain}
+.picnic-intro__line p{margin:0;padding:14px 18px;border-radius:22px 22px 22px 8px;background:#fff7dd;line-height:1.95;font-size:.95rem}
+.picnic-intro__line--guest p{background:#eef4fa;border-radius:22px 22px 8px 22px}
+.picnic-intro__line b{display:block;font-size:.72rem;color:#8a7a3a;margin-bottom:2px}
+.picnic-intro__line--guest b{color:#5a7a92}
+.picnic-intro a{color:#b0693f;font-weight:700}
+@media(max-width:640px){.picnic-intro__line{max-width:100%}.picnic-intro__avatar{width:44px;height:44px}}
+
+/* ---- v2.2 時代プロフィール+吹き出しゆったり+草原の波(2026-07-20 ちゃん指示) ---- */
+.theorist-era{margin:22px 0 8px;padding:22px 26px;border-radius:22px;background:#f5f9ee}
+.theorist-era__years{margin:0 0 8px;font-size:1.05rem;font-weight:700;color:#3f5b46;letter-spacing:.05em}
+.theorist-era__years span{font-size:.82rem;font-weight:500;color:#71817b;letter-spacing:.02em}
+.theorist-era__text{margin:0;line-height:2.05}
+.theorist-era__influence{margin:12px 0 0;padding-top:12px;border-top:1.5px dashed #d5e3c8;line-height:2;font-size:.92rem}
+.theorist-era__influence b{display:inline-block;margin-right:8px;padding:2px 10px;border-radius:999px;background:#fff;color:#6b8455;font-size:.72rem;vertical-align:2px}
+.theorist-era__note{margin:10px 0 0;font-size:.7rem;color:#9aa79b}
+/* 吹き出しをゆったり(スッと頭に入るリズム) */
+.picnic-intro{gap:20px;margin:30px 0 42px}
+.picnic-intro__line{gap:14px;max-width:600px}
+.picnic-intro__line p{padding:20px 26px;line-height:2.15;font-size:.93rem;letter-spacing:.015em}
+.picnic-intro__line b{margin-bottom:6px}
+/* 草原のしめくくり:上端をなめらかな波形に */
+.picnic-meadow:before{border-radius:0;width:100%;left:0;transform:none;height:88px}
+.picnic-meadow__wave{position:absolute;left:0;right:0;bottom:87px;width:100%;height:34px;display:block}
+/* 草原とフッターのすき間を埋める */
+.picnic-meadow{overflow:visible}
+.picnic-meadow:before{bottom:-27px;height:116px}
+/* 波+緑の帯を1枚のSVGに統合(塗り漏れ防止) */
+.picnic-meadow:before{display:none}
+.picnic-meadow__wave{position:absolute;left:0;right:0;bottom:-27px;top:auto;width:100%;height:150px;display:block}
+.pm{z-index:1}
