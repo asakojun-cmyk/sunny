@@ -1,0 +1,157 @@
+:root{--ink:#29435e;--coral:#f28d72;--yellow:#f8e45c;--blue:#e7f4fa;--grass:#f1f6e5;--cream:#fffdf8;--sage:#718467}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;line-height:1.9}
+button{font:inherit;color:inherit}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:20}
+.nav{height:64px;padding:0 max(20px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:#687d68}
+.nav a{text-decoration:none;font-weight:700}
+.opening{height:min(790px,calc(100vh - 64px));min-height:610px;position:relative;overflow:hidden}
+.opening>img{width:100%;height:100%;object-fit:cover;object-position:center}
+.opening__title{position:absolute;left:max(5vw,calc((100vw - 1460px)/2));top:8%;width:min(440px,38vw);text-align:center}
+.opening__title p,.chapter{margin:0 0 9px;color:var(--sage);font-size:.76rem;font-weight:700;letter-spacing:.14em}
+.opening__title h1{margin:0;font-size:clamp(2.5rem,5vw,5rem);line-height:1.35}
+.opening__title span{display:block;margin-top:12px}
+.opening__start{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);text-decoration:none;color:#657b65;font-size:.8rem}
+.weather{text-align:center;padding:110px 20px;background:var(--blue)}
+.weather p{font-size:clamp(1.35rem,3vw,2rem);font-weight:700;margin:0}
+.weather h2{font-size:clamp(1.8rem,4vw,3.2rem);margin:4px 0 14px}
+.weather span{color:#6d8190}
+.episode{padding:115px max(24px,calc((100% - 860px)/2));position:relative}
+.episode h2,.rainbow h2,.game h2,.basket h2{font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.5;margin:0 0 34px}
+.lines{display:grid;gap:20px}
+.lines p{width:82%;margin:0;padding:20px 24px;border-radius:28px;background:#f4f8ed}
+.lines p:nth-child(even){margin-left:auto;background:#fff1c8}
+.lines b{display:block;font-size:.76rem;color:#6c8265;margin-bottom:4px}
+.lines .moyan{border-radius:28px 28px 28px 8px}
+.lines .super,.lines .sunny{border-radius:28px 28px 8px 28px}
+.find{text-align:center;margin:55px 0 18px;color:#718079;font-size:.88rem}
+.term-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.term{border:0;cursor:pointer}
+.term-row .term{padding:22px;border-radius:46% 54% 48% 52%;background:#e8f3f8;font-weight:700}
+.term-row .term:nth-child(2){background:#fff0c7}
+.term-row .term span{display:block;font-size:.72rem;font-weight:500;margin-bottom:3px}
+.inline-term{display:inline;padding:1px 5px;background:#fff0a9;border-bottom:3px dotted #e7995d;font-weight:700}
+.rainbow{padding:110px max(24px,calc((100% - 1040px)/2));display:grid;grid-template-columns:42% 1fr;gap:75px;align-items:center;background:#fff7e8}
+.rainbow__art{height:360px;position:relative}
+.rainbow__art i{position:absolute;inset:auto 0 0;margin:auto;border-radius:50% 50% 0 0;border:22px solid var(--c);border-bottom:0;width:var(--w);height:calc(var(--w)/2)}
+.rainbow__art i:nth-child(1){--w:380px;--c:#ef9782}
+.rainbow__art i:nth-child(2){--w:330px;--c:#f5d66d}
+.rainbow__art i:nth-child(3){--w:280px;--c:#bcd99c}
+.rainbow__art i:nth-child(4){--w:230px;--c:#93c9dc}
+.rainbow__art i:nth-child(5){--w:180px;--c:#aeb7de}
+.rainbow__art i:nth-child(6){--w:130px;--c:#d8b8db}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+.roles span{padding:7px 12px;border-radius:999px;background:#fff;font-size:.82rem}
+.episode--last{background:#f5f9ed}
+.game{padding:115px max(24px,calc((100% - 860px)/2));text-align:center;background:#eef7fa}
+.game__path{display:flex;justify-content:center;gap:55px;margin:35px 0;position:relative}
+.game__path:before{content:"";position:absolute;left:22%;right:22%;top:12px;border-top:2px dashed #bacdac}
+.game__path i{width:25px;height:25px;border-radius:50%;background:var(--yellow);position:relative}
+.game__path i:nth-child(even){background:#ef9d89}
+.primary{border:0;border-radius:999px;background:var(--coral);color:#fff;padding:13px 24px;font-weight:700;cursor:pointer}
+.quiz{display:none;text-align:left;margin-top:38px;padding:32px;background:#fff;border-radius:30px}
+.quiz.active{display:block}
+.progress{height:8px;background:#edf0e8;border-radius:999px;overflow:hidden}
+.progress span{display:block;height:100%;width:0;background:var(--yellow);transition:.25s}
+.small{font-size:.78rem;color:#73817c}
+.choices{display:grid;gap:10px}
+.choice{border:0;text-align:left;padding:14px 16px;border-radius:16px;background:#f6f8f2;cursor:pointer}
+.choice.correct{background:#e5f3d9}
+.choice.wrong{background:#fbe3dd}
+.feedback{min-height:58px;font-weight:700}
+.basket{padding:100px max(24px,calc((100% - 900px)/2));display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:center}
+.basket__shape{width:190px;height:130px;border-radius:20px 20px 55px 55px;background:#efc28f;position:relative}
+.basket__shape:before{content:"";position:absolute;left:28px;right:28px;top:-55px;height:100px;border:13px solid #ddae77;border-bottom:0;border-radius:70px 70px 0 0}
+.basket li{margin:8px 0}
+.text-button{border:0;background:transparent;text-decoration:underline;cursor:pointer}
+.library{display:none;position:fixed;inset:0;background:#29435e66;z-index:10;padding:20px;place-items:center}
+.library.open{display:grid}
+.library__cart{width:min(650px,100%);max-height:90vh;overflow:auto;background:#fffdf8;border-radius:38px;padding:35px;position:relative}
+.close{position:absolute;right:22px;top:18px;border:0;background:#e8f3f8;width:40px;height:40px;border-radius:50%;cursor:pointer}
+.library dl{display:grid;gap:12px}
+.library dl div{background:#eef7fa;border-radius:20px;padding:15px 18px}
+.library dl div:nth-child(2){background:#fff7e6}
+.library dl div:nth-child(3){background:#f1f6e5}
+.library dt{font-size:.75rem;font-weight:700;color:#6e8268}
+.library dd{margin:3px 0 0}
+footer{text-align:center;padding:60px 20px;background:#e9f3f7;color:#526f81}
+footer small{display:block;margin-top:14px;color:#71838e}
+
+@media(max-width:760px){.opening{height:700px}
+.opening>img{object-position:62% center}
+.opening__title{left:18px;right:18px;top:25px;width:auto;padding:18px;background:#fffdf8dd;border-radius:35px}
+.opening__title h1{font-size:2.3rem}
+.rainbow{grid-template-columns:1fr;gap:25px}
+.rainbow__art{transform:scale(.8);height:270px}
+.lines p{width:94%}
+.basket{grid-template-columns:1fr;text-align:center}
+.basket__shape{margin:auto}
+.term-row{grid-template-columns:1fr}
+}
+@media(max-width:480px){.nav span{display:none}
+.opening{height:620px;min-height:620px}
+.opening>img{object-position:61% center}
+.weather,.episode,.rainbow,.game,.basket{padding-top:75px;padding-bottom:75px}
+.rainbow__art{transform:scale(.62);margin-left:-18%;margin-right:-18%;height:220px}
+.quiz{padding:24px 16px}
+}
+
+/* ---- TypeScript移植で追加(2026-07-19) ---- */
+.lines .guest{border-radius:28px 28px 8px 28px}
+.library__more{display:inline-block;margin-top:14px}
+a{color:inherit}
+
+/* ---- 会話アニメーション(2026-07-19) ----
+ * JSなしでも全文が読める(据え置き表示)。JSが有効なときだけ
+ * .lines に data-animate が付き、1言ずつ「話しているように」現れる。 */
+.line{display:flex;gap:12px;align-items:flex-end;width:88%}
+.line--sunny,.line--guest{margin-left:auto;flex-direction:row-reverse}
+.line__avatar{width:48px;height:48px;flex:none;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(41,67,94,.10);display:grid;place-items:center;overflow:hidden}
+.line__avatar img{width:118%;height:118%;object-fit:contain}
+.line__avatar--guest{background:#f4d998;font-weight:700;font-size:1.05rem;color:#6b5836}
+.line__bubble{padding:16px 22px;border-radius:26px;background:#f4f8ed;min-width:64px}
+.line--moyan .line__bubble{border-radius:26px 26px 26px 8px}
+.line--sunny .line__bubble,.line--guest .line__bubble{background:#fff1c8;border-radius:26px 26px 8px 26px}
+.line__msg b{display:block;font-size:.74rem;color:#6c8265;margin-bottom:4px}
+.line__dots{display:none;gap:6px;padding:4px 2px}
+.line__dots i{width:8px;height:8px;border-radius:50%;background:#9db392;animation:picnic-dot 1s infinite ease-in-out}
+.line__dots i:nth-child(2){animation-delay:.15s}
+.line__dots i:nth-child(3){animation-delay:.3s}
+@keyframes picnic-dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+/* アニメーション有効時 */
+.lines[data-animate] .line{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.lines[data-animate] .line.is-visible{opacity:1;transform:none}
+.lines[data-animate] .line.is-typing .line__dots{display:inline-flex}
+.lines[data-animate] .line.is-typing .line__msg{display:none}
+.dialogue-after{transition:opacity .6s ease .1s}
+.dialogue-after.is-waiting{opacity:0}
+@media (prefers-reduced-motion: reduce){
+  .lines[data-animate] .line{opacity:1;transform:none;transition:none}
+  .line__dots{display:none!important}
+  .lines[data-animate] .line .line__msg{display:inline!important}
+  .dialogue-after.is-waiting{opacity:1}
+}
+@media(max-width:560px){.line{width:96%}.line__avatar{width:40px;height:40px}}
+
+.line__avatar img{width:86%;height:86%;object-fit:contain}
+
+/* ---- エピソードv2(2026-07-19) ---- */
+.disclaimer{margin:26px auto 0;max-width:560px;font-size:.76rem;color:#7d8fa0;line-height:1.9}
+.opening__title{width:min(500px,46vw)}
+.opening__title h1{font-size:clamp(2.2rem,4.2vw,3.9rem)}
+.weather{padding:72px 20px}
+.line__avatar--motif{font-size:1.5rem;background:#fff}
+.okawari{padding:95px max(24px,calc((100% - 780px)/2));text-align:center;background:#fff7e8}
+.okawari h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:0 0 26px}
+.okawari__card{text-align:left;background:#fffdf8;border-radius:30px;padding:28px 32px;box-shadow:0 10px 26px rgba(41,67,94,.07)}
+.okawari__card p{margin:0;line-height:2.1}
+.okawari__card small{display:block;margin-top:14px;color:#8a97a4;font-size:.74rem}
+.farewell{padding:95px max(24px,calc((100% - 760px)/2));text-align:center}
+.farewell__line{display:flex;gap:12px;align-items:flex-end;justify-content:center;text-align:left;max-width:560px;margin:0 auto}
+.farewell__line .line__bubble{background:#fff1c8;border-radius:26px 26px 8px 26px;padding:18px 24px}
+.farewell__line .line__msg b{display:block;font-size:.74rem;color:#6c8265;margin-bottom:4px}
+.farewell__next{margin-top:34px}
+.farewell__button{display:inline-block;text-decoration:none;padding:13px 26px;border-radius:999px;background:#ef8064;color:#fff;font-weight:700}
+.farewell__next small{display:inline-block;margin-top:12px;color:#71817b}
