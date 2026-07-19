@@ -4994,3 +4994,6 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 .section-header{text-align:center}
 .section-header__lede{margin-left:auto;margin-right:auto}
 .section-header__title::after{margin-left:auto;margin-right:auto}
+
+/* v3.1 各章見出しの挿絵(2026-07-20 ちゃん指示:章ごとにイラストでイメージ) */
+.section-header__img{height:64px;width:auto;display:block;margin:0 auto 12px}
