@@ -5012,3 +5012,31 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   .banner-row .game-banner{flex:0 0 84vw;scroll-snap-align:center;margin:0}
   .banner-row .game-banner + .game-banner{margin-top:0}
 }
+
+/* ---- v3.6 養成講座アフィリエイト導線(2026-07-20 指示書) ---- */
+.ad-disclosure{margin:18px 0 22px;padding:14px 18px;border-radius:16px;background:#f3f1ea;border:1.5px solid #e0dccd;font-size:.86rem;line-height:1.9}
+.ad-disclosure b{display:inline-block;margin-bottom:4px;padding:2px 10px;border-radius:999px;background:#fffdf8;color:#8a7a52;font-size:.74rem;letter-spacing:.08em}
+.ad-disclosure p{margin:6px 0 0}
+.school-exp__title{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.6}
+.school-exp__status-list{padding-left:1.3em;line-height:2.1}
+.school-exp__note{font-size:.82rem;color:#7d8a80;line-height:1.9}
+.school-exp__worries{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;padding:0;list-style:none}
+.school-exp__worries li{background:#eef4fa;border-radius:14px;padding:12px 16px;font-size:.92rem}
+.school-exp__fit{padding-left:1.3em;line-height:2.1}
+.school-exp__fit--check li{color:#6b6255}
+.school-exp__checklist{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px;padding:0;list-style:none}
+.school-exp__checklist li{background:#f5f9ee;border-radius:12px;padding:9px 14px;font-size:.88rem}
+.school-exp__checklist li:before{content:"✓ ";color:#7fa77c;font-weight:700}
+.school-exp__cta{text-align:center;margin:22px 0 6px}
+.school-exp__contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.school-exp__contact-card{background:#fffdf8;border-radius:20px;padding:22px 22px;box-shadow:0 8px 22px rgba(48,74,58,.08)}
+.school-exp__contact-card h3{margin:0 0 10px;font-size:1rem}
+.school-exp__contact-card p{font-size:.9rem;line-height:2}
+.school-story-card{background:#fffdf8;border-radius:24px;padding:28px 30px;box-shadow:0 10px 26px rgba(48,74,58,.09);line-height:2.05}
+.school-story-card__cta{text-align:center;margin:20px 0 6px}
+.school-story-card__pr{text-align:center;font-size:.74rem;color:#8b9788;margin:8px 0 0}
+@media(max-width:640px){
+  .school-exp__contact-grid{grid-template-columns:1fr}
+  .school-story-card{padding:22px 18px}
+  .school-exp__cta .picnic-button,.school-story-card__cta .picnic-button{display:block;text-align:center}
+}
