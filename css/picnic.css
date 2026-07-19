@@ -773,3 +773,11 @@
 }
 .br-sp{display:none}
 @media(max-width:640px){.br-sp{display:inline}.hero-note__sub{word-break:keep-all}}
+
+/* ---- v3.7 景色の交互とトンマナ統一(2026-07-20 相談で決定) ---- */
+/* Aboutは「空」に(草原→空→草原のリズム) */
+.picnic-about{background:#fffdf8}
+/* 施設カードはスマホ専用の確実な導線(デスクトップはマップが担う) */
+@media(min-width:641px){.facility-cards{display:none}}
+/* ロゴのサニー */
+.logo-sun{width:22px;height:22px;object-fit:contain;vertical-align:-4px;margin-right:5px}
