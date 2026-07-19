@@ -155,3 +155,21 @@ a{color:inherit}
 .farewell__next{margin-top:34px}
 .farewell__button{display:inline-block;text-decoration:none;padding:13px 26px;border-radius:999px;background:#ef8064;color:#fff;font-weight:700}
 .farewell__next small{display:inline-block;margin-top:12px;color:#71817b}
+.nav__brand{display:flex;align-items:center;gap:6px;font-size:.82rem;color:#5b7562}
+.nav__brand img{vertical-align:middle}
+@media(max-width:560px){.nav__brand{display:none}}
+
+/* ---- v1.2 バランス調整(2026-07-19 ちゃん指示:余白・こじんまり) ---- */
+.opening{height:min(660px,calc(100vh - 64px));min-height:540px}
+.opening__title{left:50%;transform:translateX(-50%);top:9%;width:min(600px,88vw);text-align:center}
+.opening__title h1{font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.45;letter-spacing:.03em}
+.opening__title h1 br{display:none}
+.weather{padding:60px 20px}
+.weather p{font-size:clamp(1rem,1.8vw,1.25rem)}
+.weather h2{font-size:clamp(1.3rem,2.4vw,1.8rem);margin:6px 0 12px}
+.weather p.disclaimer{font-size:.76rem;font-weight:500;color:#7d8fa0;max-width:520px;margin:28px auto 0;line-height:1.9}
+@media(max-width:760px){
+  .opening{height:560px;min-height:520px}
+  .opening__title{top:22px}
+  .opening__title h1{font-size:1.7rem}
+}

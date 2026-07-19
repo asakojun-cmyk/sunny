@@ -273,3 +273,31 @@
   .map-spot__sign small{display:none}
   .map-stage{border-radius:20px}
 }
+
+/* ---- オリジナルイラスト対応(2026-07-19) ---- */
+.map-spot__sign i img{width:22px;height:22px;object-fit:contain;vertical-align:-5px}
+.facility-card__icon img{width:40px;height:40px;object-fit:contain}
+.obento-card__motif img,.line__avatar--motif img{width:80%;height:80%;object-fit:contain}
+
+/* ---- v1.2 余白とこじんまり調整(2026-07-19 ちゃん指示) ----
+ * タイトル・アイキャッチを控えめに、余白を主役に */
+.picnic-lockup{width:min(560px,92vw);margin:64px auto 0}
+.picnic-arch{width:78%;margin:0 auto -16px}
+.picnic-rainbow{width:118px;height:56px;margin:0 auto 10px}
+.picnic-rainbow i{border-width:6px}
+.picnic-hero--lockup h1{font-size:clamp(1.65rem,2.8vw,2.45rem);letter-spacing:.04em}
+.picnic-hero--lockup .picnic-hero__sub{font-size:clamp(.95rem,1.6vw,1.08rem);margin-bottom:4px}
+.picnic-hero__tag{font-size:.8rem}
+.picnic-button{padding:10px 20px;font-size:.9rem}
+.picnic-hero--lockup .picnic-hero__actions{margin:18px 0 6px}
+.picnic-hero__scene{width:min(840px,88vw);margin:34px auto 0;border-radius:26px;overflow:hidden;box-shadow:0 14px 34px rgba(48,74,58,.10)}
+.picnic-hero__scene .picnic-hero__picture{height:min(34vh,300px);object-position:center 100%}
+.picnic-hero--lockup .say{max-width:250px;font-size:.82rem;padding:10px 15px}
+.picnic-hero--lockup .say b{font-size:.64rem}
+.picnic-hero--lockup .picnic-hero__scroll{position:static;transform:none;display:block;text-align:center;background:transparent;padding:18px 0 26px;color:#8a9a89}
+@media(max-width:560px){
+  .picnic-lockup{margin-top:40px}
+  .picnic-hero--lockup h1{font-size:1.5rem}
+  .picnic-hero__scene{width:94vw;border-radius:18px}
+  .picnic-hero__scene .picnic-hero__picture{height:210px}
+}
