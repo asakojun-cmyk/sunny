@@ -715,3 +715,31 @@
   .about-flow{grid-template-columns:1fr;max-width:520px}
   .about-arrow{transform:rotate(90deg);justify-self:center}
 }
+
+/* ---- v3.3 マップ回遊型+スーパーさん輪郭切り抜き(2026-07-20 ちゃん指示) ---- */
+/* シートを中心に、まわりをぐるっと回遊 */
+.mp-mat{left:39%;top:34%;width:22%}
+.mp-lunch{left:45%;top:43%;width:6.5%}
+.mp-super{left:44.5%;top:15%;width:10.5%;pointer-events:auto;position:absolute}
+.mp-super img{width:100%;height:auto;display:block}
+.mp-super .mp-super__s{position:absolute;inset:0;opacity:0;transition:opacity .25s ease}
+.mp-super:hover .mp-super__s{opacity:1}
+.mp-wagon{left:6%;top:13%;width:13%}
+.mp-pinwheel{left:19.5%;top:24%;width:2.8%}
+.mp-tent1{left:72.5%;top:8%;width:9.5%}
+.mp-tent2{left:80.5%;top:42%;width:8.5%}
+.mp-board{left:5%;top:49%;width:11.5%}
+.mp-stall{left:35%;top:66%;width:11%}
+.mp-tree1{left:63%;top:62%;width:6.5%}
+.mp-hammock{left:67.5%;top:73%;width:10.5%}
+.mp-tree2{left:76.5%;top:62%;width:6.5%}
+#map-sunny{left:30%;top:47%}
+#map-moyan{left:63%;top:50%}
+/* 劇:ふたりの高さを揃える */
+.hero-intro__sunny{top:28.5%}
+@media(max-width:640px){.hero-intro__sunny{top:29%}}
+
+/* ---- v3.4 スーパーさん輪郭精密化+3人でシートに(2026-07-20 ちゃん指示) ---- */
+.mp-super{left:44.8%;top:17.5%;width:10%}
+#map-sunny{left:40%;top:44%}
+#map-moyan{left:57%;top:47%}

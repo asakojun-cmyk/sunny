@@ -4997,3 +4997,11 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 
 /* v3.1 各章見出しの挿絵(2026-07-20 ちゃん指示:章ごとにイラストでイメージ) */
 .section-header__img{height:64px;width:auto;display:block;margin:0 auto 12px}
+
+/* ---- v3.3 ゲームバナーをLP世界観に(2026-07-20 ちゃん指示) ---- */
+.game-banner{border:0;border-radius:22px;background:#fdf6dd;box-shadow:none}
+.game-banner--diagrams{background:#e0edf7}
+.game-banner--omamori{background:#fbe3d8}
+.game-banner__icon{flex:none;width:74px;height:74px;display:grid;place-items:center;background:#fffdf8;border-radius:50%;box-shadow:0 4px 10px rgba(41,67,94,.08)}
+.game-banner__icon img{width:52px;height:auto}
+a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74,58,.12)}

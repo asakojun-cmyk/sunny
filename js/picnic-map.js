@@ -38,7 +38,7 @@
     return c;
   }
 
-  var HOME = { sx: 0.48, sy: 0.46, mx: 0.55, my: 0.52 };
+  var HOME = { sx: 0.425, sy: 0.475, mx: 0.605, my: 0.505 };
 
   function tick() {
     raf = window.requestAnimationFrame(tick);
