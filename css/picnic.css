@@ -781,3 +781,48 @@
 @media(min-width:641px){.facility-cards{display:none}}
 /* ロゴのサニー */
 .logo-sun{width:22px;height:22px;object-fit:contain;vertical-align:-4px;margin-right:5px}
+
+/* ---- v3.8 全着地ページに「ページの情景」(2026-07-20 ちゃん指示) ---- */
+.page-scene{position:relative;height:128px;margin:4px auto 6px;max-width:1120px;overflow:hidden}
+.page-scene:before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:150%;height:64px;background:#eef4dd;border-radius:50% 50% 0 0/100% 100% 0 0}
+.pgs{position:absolute;bottom:10px;height:auto}
+.pgs-a{left:50%;transform:translateX(-170%);width:88px}
+.pgs-chara{left:50%;transform:translateX(-50%);width:66px;bottom:14px;filter:drop-shadow(0 0 1px #cfd8c6)}
+.pgs-b{left:50%;transform:translateX(85%);width:62px;bottom:8px}
+@media(max-width:640px){
+  .page-scene{height:104px}
+  .pgs-a{width:70px;transform:translateX(-160%)}
+  .pgs-chara{width:56px}
+  .pgs-b{width:50px;transform:translateX(80%)}
+}
+.page-scene{max-width:none;margin:4px 0 6px}
+
+/* ---- v3.9 サニー先生の図解案内ステップ(2026-07-20 ちゃん指示:サニーが案内・モヤンがふんふん) ---- */
+.guided-steps{margin:10px 0 30px}
+.guided-steps__opening,.guided-steps__closing{display:flex;gap:14px;align-items:flex-end;margin:18px 0}
+.guided-steps__closing{justify-content:flex-end;flex-direction:row-reverse}
+.guided-steps__sunny,.guided-steps__opening img,.guided-steps__closing img{width:64px;height:auto;flex:none;filter:drop-shadow(0 0 1px #cfd8c6)}
+.guided-steps__say{margin:0;max-width:520px;padding:16px 20px;background:#fff7dd;border-radius:22px 22px 22px 8px;line-height:2}
+.guided-steps__say b{display:block;font-size:.7rem;color:#b08a2e;margin-bottom:3px}
+.guided-steps__say--moyan{background:#f4f8ed;border-radius:22px 22px 8px 22px}
+.guided-steps__say--moyan b{color:#6c8265}
+/* 小道でつながるステップ */
+.gstep-list{list-style:none;margin:8px 0;padding:0 0 0 30px;border-left:4px dotted #d9c9a2}
+.gstep{position:relative;display:flex;gap:16px;align-items:flex-start;background:#fffdf8;border-radius:22px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 22px rgba(48,74,58,.08)}
+.gstep__num{position:absolute;left:-49px;top:26px;width:34px;height:34px;border-radius:50%;background:#f8e45c;display:grid;place-items:center;font-weight:700;color:#5c4d1d;box-shadow:0 3px 8px rgba(41,67,94,.12)}
+.gstep__icon{width:64px;height:auto;flex:none;margin-top:4px}
+.gstep__body h2{margin:0 0 10px;font-size:1.08rem;color:var(--picnic-ink)}
+.gstep__body h2:after{display:none}
+.gstep__sunny{margin:0;line-height:2.05;font-size:.93rem}
+.gstep__sunny b{display:inline-block;margin-right:8px;padding:2px 10px;border-radius:999px;background:#fff7dd;color:#b08a2e;font-size:.7rem;vertical-align:2px}
+/* モヤンの相づち */
+.gstep-aizuchi{display:flex;gap:8px;align-items:center;margin:4px 0 4px 12px;color:#6c8265;font-size:.85rem;font-weight:700}
+.gstep-aizuchi img{width:36px;height:auto}
+.gstep-aizuchi--r{justify-content:flex-end;margin-right:12px}
+@media(max-width:640px){
+  .gstep-list{padding-left:22px}
+  .gstep{padding:18px 16px;gap:12px}
+  .gstep__num{left:-40px;width:30px;height:30px}
+  .gstep__icon{width:48px}
+  .guided-steps__say{max-width:76vw}
+}
