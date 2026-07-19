@@ -28,7 +28,7 @@
         document.querySelector("#term-easy").textContent = item.easy;
         document.querySelector("#term-exam").textContent = item.exam;
         var link = document.querySelector("#term-link");
-        if (link) link.href = item.url;
+        if (link) link.href = item.url.replace(/^\//, "../../");
         modal.classList.add("open");
         document.body.style.overflow = "hidden";
       });

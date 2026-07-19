@@ -53,7 +53,7 @@
       .map(function (doc) {
         return (
           '<li><a href="' +
-          escapeHtml(doc.url) +
+          escapeHtml(doc.url.replace(/^\//, "../")) +
           '"><span class="search-result__type">' +
           escapeHtml(doc.type) +
           '</span><span class="search-result__title">' +

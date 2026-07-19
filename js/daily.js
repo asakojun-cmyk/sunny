@@ -52,7 +52,7 @@
           result.innerHTML =
             escapeHtml(prefix + " " + item.explanation) +
             ' <a href="' +
-            escapeHtml(item.url) +
+            escapeHtml(item.url.replace(/^\//, "")) +
             '">「' +
             escapeHtml(item.termName) +
             "」の解説を読む →</a>";
@@ -62,7 +62,7 @@
     } else {
       body.innerHTML =
         '<p class="daily-card__title"><a href="' +
-        escapeHtml(item.url) +
+        escapeHtml(item.url.replace(/^\//, "")) +
         '">' +
         escapeHtml(item.name) +
         "</a></p>" +
