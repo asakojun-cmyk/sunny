@@ -695,3 +695,23 @@
 .picnic-map__head h2{font-size:26px}
 .picnic-map__head h2:after{content:"";display:block;width:46px;border-bottom:3px dotted #e9785f;margin:12px auto 0;opacity:.75}
 @media(max-width:640px){.picnic-map__head h2{font-size:20px}}
+
+/* ---- v3.0 About刷新+シーン位置(2026-07-20 ちゃん指示:白抜き・ワクワク・レベルアップ式/シーンを上へ/ボタン文言) ---- */
+/* 劇の後はヒーローを自然な高さに(シーンがタイトルのすぐ下に来る) */
+.picnic-hero--note.is-done{min-height:0}
+.picnic-hero--note.is-done .hero-note{margin-top:64px}
+.picnic-hero--note.is-done .picnic-stage{margin-top:30px}
+/* レベルアップ式フロー(白抜きカード) */
+.about-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch;max-width:1030px;margin:40px auto 0}
+.about-step{background:#fffdf8;border-radius:26px;padding:28px 22px 24px;text-align:center;box-shadow:0 10px 26px rgba(48,74,58,.09)}
+.about-step img{height:76px;width:auto;margin:0 auto 12px;display:block}
+.about-step h3{margin:0 0 10px;font-size:1.04rem;color:var(--picnic-ink)}
+.about-step p{margin:0;font-size:.9rem;line-height:2.05;text-align:left;color:#42584a}
+.about-arrow{align-self:center;color:#ef8064;font-size:1.5rem;font-style:normal}
+.about-step--goal{box-shadow:0 10px 26px rgba(239,128,100,.18);position:relative}
+.about-step--goal:before{content:"✨";position:absolute;right:14px;top:10px}
+.about-step--goal:after{content:"✨";position:absolute;left:14px;top:26px;font-size:.8rem}
+@media(max-width:820px){
+  .about-flow{grid-template-columns:1fr;max-width:520px}
+  .about-arrow{transform:rotate(90deg);justify-self:center}
+}
