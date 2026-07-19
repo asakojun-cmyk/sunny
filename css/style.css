@@ -4928,3 +4928,27 @@ a.game-card-link:hover {
 .game-card-link__arrow{margin:6px auto 0;color:#e9785f}
 a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48,74,58,.12)}
 .game-card-link--soon{opacity:.55}
+
+/* ---- v2.0 全ページ絵本化レイヤー(2026-07-19 ちゃん指示:イラストを増やし、絵本の世界に) ---- */
+/* 全ページ共通:フッター前の草原のしめくくり */
+.picnic-meadow{position:relative;height:150px;overflow:hidden;margin-top:56px}
+.picnic-meadow:before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:170%;height:105px;background:#eef4dd;border-radius:50% 50% 0 0/100% 100% 0 0}
+.pm{position:absolute;bottom:8px;height:auto}
+.pm-flowerl{left:3%;width:78px}
+.pm-bush{left:12%;width:58px;bottom:2px}
+.pm-sunny{left:44%;width:84px}
+.pm-moyan{left:52.5%;width:64px;bottom:9px}
+.pm-wagon{right:6%;width:112px;bottom:12px}
+.pm-flowerr{right:0;width:74px}
+@media(max-width:640px){
+  .picnic-meadow{height:120px;margin-top:36px}
+  .pm-wagon{display:none}
+  .pm-sunny{left:36%;width:74px}
+  .pm-moyan{left:52%;width:56px}
+}
+/* 内側ページ:見出しまわりに淡い雲(CSSのurlはこのファイルからの相対なのでどこでも安全) */
+.site-main{position:relative}
+.site-main:before,.site-main:after{content:"";position:absolute;top:16px;width:88px;height:60px;background:no-repeat center/contain;opacity:.5;pointer-events:none}
+.site-main:before{left:2%;background-image:url("../img/parts/01_sky_cloud_left.png")}
+.site-main:after{right:2.5%;background-image:url("../img/parts/03_sky_cloud_right.png")}
+@media(max-width:760px){.site-main:before,.site-main:after{display:none}}
