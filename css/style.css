@@ -4910,3 +4910,21 @@ a.game-card-link:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- v1.8 モヤンLPの世界観に統一(2026-07-19 ちゃん指示:カード・バナー・ボタン) ---- */
+.button{border-radius:999px;border:0;font-weight:700}
+.button--primary{background:#ef8064;color:#fff;box-shadow:0 6px 16px rgba(239,128,100,.28)}
+.button--primary:hover{background:#e97355;transform:translateY(-1px);box-shadow:0 8px 18px rgba(239,128,100,.32)}
+.button--secondary{background:#fffdf8;color:#527057;border:2px solid #dbe7d4}
+.button--secondary:hover{background:#f3f8ee}
+/* ミニゲームのカード:LPの「持ち帰れるもの」風のパステルタイルに */
+.game-list{grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
+.game-card-link{flex-direction:column;align-items:center;text-align:center;gap:10px;border:0;border-radius:22px;padding:28px 18px}
+.game-list .game-card-link:nth-child(4n+1){background:#e9f2e2}
+.game-list .game-card-link:nth-child(4n+2){background:#fdf0d5}
+.game-list .game-card-link:nth-child(4n+3){background:#e0edf7}
+.game-list .game-card-link:nth-child(4n+4){background:#fbe3d8}
+.game-card-link__emoji{font-size:34px;background:#fffdf8;width:66px;height:66px;display:grid;place-items:center;border-radius:50%;box-shadow:0 4px 10px rgba(41,67,94,.08)}
+.game-card-link__arrow{margin:6px auto 0;color:#e9785f}
+a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48,74,58,.12)}
+.game-card-link--soon{opacity:.55}

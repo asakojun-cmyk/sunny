@@ -441,3 +441,58 @@
 .picnic-map{background:linear-gradient(180deg,#f8fbf0 0%,#eef4dc 55%,#e9f1d3 100%)}
 .picnic-map:before,.picnic-map:after{display:block}
 .map-trail{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9}
+
+/* ---- v1.7 一括調整(2026-07-19 ちゃん指示11項目) ---- */
+/* 1) 虹をワンポイントサイズに */
+.picnic-rainbow{width:44px;height:23px;margin:0 auto 8px}
+.picnic-rainbow i{border-width:2.5px}
+.picnic-rainbow i:nth-child(1){--w:40px}
+.picnic-rainbow i:nth-child(2){--w:33px}
+.picnic-rainbow i:nth-child(3){--w:26px}
+.picnic-rainbow i:nth-child(4){--w:19px}
+.picnic-rainbow i:nth-child(5){--w:12px}
+.picnic-rainbow i:nth-child(6){--w:5px}
+/* 2) ボタン撤去後の余白 */
+.picnic-lockup small{display:block;margin-top:12px}
+/* 3) レジャーシートを半分に+ふたりを寄せる */
+.ps-mat{left:50%;transform:translateX(-50%);width:260px}
+.ps-sunny{left:38%;bottom:10%;width:112px}
+.ps-moyan{left:52%;bottom:11%;width:88px}
+.ps-lunch{left:45.5%;bottom:4.5%;width:62px}
+.ps-note{left:39.5%;bottom:2.5%;width:46px}
+.ps-pencil{left:43.5%;bottom:1.5%;width:30px}
+.ps-ball{left:56.5%;bottom:3%;width:40px}
+.ps-bag{left:59.5%;bottom:9%;width:54px}
+/* 5) マップ背景をトップの草原と同じ色に。楕円は撤去 */
+.picnic-map{background:#eef4dd}
+.picnic-map:before,.picnic-map:after{display:none}
+/* 6) 白抜きのモコモコ雲 */
+.map-cloud{position:absolute;z-index:0;width:110px;height:34px;background:#fff;border-radius:999px}
+.map-cloud:before,.map-cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.map-cloud:before{width:46px;height:46px;left:16px;top:-22px}
+.map-cloud:after{width:30px;height:30px;right:18px;top:-13px}
+.map-cloud--a{left:21%;top:2%}
+.map-cloud--b{left:55%;top:0;transform:scale(.8)}
+.map-cloud--c{left:86%;top:6%;transform:scale(.62)}
+/* 8) 広場にスーパーさん */
+.mp-super{left:44%;top:13%;width:5%;border-radius:50%;box-shadow:0 4px 12px rgba(48,74,58,.16)}
+/* 9) ホバー効果の見直し:白かぶせ・白リング・濃紺ヒントを廃止 */
+.map-spot:hover,.map-spot:focus-visible{transform:translateY(-3px);background:transparent;box-shadow:none}
+.map-spot:focus-visible{outline:3px solid #e7995d;outline-offset:2px}
+/* 11) 施設ごとのひとこと(トンマナ吹き出し) */
+.map-spot__note{position:absolute;left:50%;top:-6px;transform:translate(-50%,-100%) scale(.96);padding:8px 14px;border-radius:16px;background:#fffdf8;border:2px solid var(--sign,#e5d9b8);color:#3d4f42;font-size:.78rem;font-weight:700;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s ease;box-shadow:0 6px 16px rgba(48,74,58,.12);z-index:4}
+.map-spot__note:after{content:"";position:absolute;left:calc(50% - 5px);bottom:-7px;width:10px;height:10px;background:#fffdf8;border-right:2px solid var(--sign,#e5d9b8);border-bottom:2px solid var(--sign,#e5d9b8);transform:rotate(45deg)}
+@media(hover:hover){.map-spot:hover .map-spot__note,.map-spot:focus-visible .map-spot__note{opacity:1;transform:translate(-50%,-100%) scale(1)}}
+/* スマホ調整 */
+@media(max-width:640px){
+  .ps-mat{width:210px}
+  .ps-sunny{left:30%;bottom:10%;width:96px}
+  .ps-moyan{left:52%;bottom:11%;width:74px}
+  .ps-lunch{left:44%;bottom:5%;width:52px}
+  .ps-note{left:34%;bottom:3%;width:38px}
+  .ps-pencil{display:none}
+  .ps-ball{left:60%;bottom:3.5%;width:34px}
+  .ps-bag{left:64%;bottom:9%;width:46px}
+  .map-cloud--b,.map-cloud--c{display:none}
+  .mp-super{width:9%;left:43%;top:12%}
+}
