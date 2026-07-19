@@ -5005,3 +5005,10 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 .game-banner__icon{flex:none;width:74px;height:74px;display:grid;place-items:center;background:#fffdf8;border-radius:50%;box-shadow:0 4px 10px rgba(41,67,94,.08)}
 .game-banner__icon img{width:52px;height:auto}
 a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74,58,.12)}
+
+/* ---- v3.5 スマホ: ゲームバナーを横スクロールに ---- */
+@media(max-width:640px){
+  .banner-row{display:flex;overflow-x:auto;gap:12px;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .banner-row .game-banner{flex:0 0 84vw;scroll-snap-align:center;margin:0}
+  .banner-row .game-banner + .game-banner{margin-top:0}
+}

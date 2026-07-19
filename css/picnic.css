@@ -743,3 +743,33 @@
 .mp-super{left:44.8%;top:17.5%;width:10%}
 #map-sunny{left:40%;top:44%}
 #map-moyan{left:57%;top:47%}
+
+/* ---- v3.5 トップページ改善指示書対応(2026-07-20) ---- */
+/* 主要3ボタン(優先順位: 3分学習>はじめて>ことば検索) */
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.picnic-button--line{background:#fffdf8;color:#b3543a;border:2px solid #efb5a2;box-shadow:none}
+.picnic-button--line:hover{background:#fdf1ec}
+.hero-note__sub{word-break:keep-all;overflow-wrap:anywhere}
+/* ヒーロー直後の3分学びは草原の続き */
+.section--grass{background:#eef4dd}
+/* 劇: 吹き出しとキャラの距離を広く(窮屈解消) */
+.hero-say--moyan{top:8%}
+.hero-say--sunny{top:3.5%}
+@media(max-width:640px){
+  .hero-cta{flex-direction:column;align-items:center;gap:10px}
+  .hero-cta .picnic-button{width:min(300px,86vw);text-align:center}
+  .hero-note__sub{font-size:.9rem;padding:0 10px;line-height:1.9}
+  .hero-say--moyan{top:3%}
+  .hero-say--sunny{top:1.5%}
+  .hero-intro__moyan{top:35%}
+  .hero-intro__sunny{top:34%}
+  /* 施設カード・バナーは縦積みをやめて横スクロールに */
+  .facility-grid{display:flex;overflow-x:auto;gap:14px;padding:4px 4px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .facility-grid .facility-card{flex:0 0 78vw;scroll-snap-align:center}
+}
+/* スマホ: タイトルが語の途中で割れないように */
+@media(max-width:640px){
+  .picnic-hero--note h1{font-size:1.29rem;letter-spacing:0;line-height:1.8;white-space:nowrap}
+}
+.br-sp{display:none}
+@media(max-width:640px){.br-sp{display:inline}.hero-note__sub{word-break:keep-all}}
