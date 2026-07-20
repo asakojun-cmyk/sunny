@@ -1,4 +1,4 @@
-/* ○×クイズドリル: 全用語の1問1答を連続出題(範囲絞り込み+シャッフル) */
+/* ○×クイズドリル: 全用語の1問1答を連続出題(プルダウンで範囲・時間を選択+シャッフル) */
 (function () {
   "use strict";
   var dataEl = document.getElementById("quiz-data");
@@ -20,10 +20,12 @@
   var idx = 0;
   var score = 0;
 
-  var startBox = root.querySelector("[data-quiz-start]");
+  var startBox = document.querySelector("[data-quiz-start]");
   var card = root.querySelector("[data-quiz-card]");
   var endBox = root.querySelector("[data-quiz-end]");
-  var poolEl = root.querySelector("[data-quiz-pool]");
+  var poolEl = document.querySelector("[data-quiz-pool]");
+  var genreSel = document.querySelector("[data-quiz-genre]");
+  var timeSelEl = document.querySelector("[data-quiz-timesel]");
 
   function applyFilter() {
     if (filter === "all") pool = ALL.slice();
@@ -35,8 +37,8 @@
       var cat = filter.slice(4);
       pool = ALL.filter(function (x) { return x.c === cat; });
     }
-    poolEl.textContent = String(pool.length);
-    var cEl = root.querySelector("[data-quiz-count]");
+    if (poolEl) poolEl.textContent = String(pool.length);
+    var cEl = document.querySelector("[data-quiz-count]");
     if (cEl) {
       var c = COUNTS[timeSel];
       cEl.textContent = String(c === null ? pool.length : Math.min(c, pool.length));
@@ -54,6 +56,10 @@
 
   function show(el) { el.hidden = false; }
   function hide(el) { el.hidden = true; }
+
+  function backToStart() {
+    hide(card); hide(endBox); hide(root); show(startBox);
+  }
 
   function renderQuestion() {
     var item = order[idx];
@@ -73,7 +79,7 @@
     if (c !== null) order = order.slice(0, Math.min(c, order.length));
     idx = 0;
     score = 0;
-    hide(startBox); hide(endBox); show(card);
+    hide(startBox); hide(endBox); show(root); show(card);
     renderQuestion();
   }
 
@@ -113,39 +119,31 @@
     if (idx >= order.length) finish();
     else renderQuestion();
   });
-  root.querySelector("[data-quiz-begin]").addEventListener("click", begin);
-  var randBtn = root.querySelector("[data-quiz-random]");
+  document.querySelector("[data-quiz-begin]").addEventListener("click", begin);
+  var randBtn = document.querySelector("[data-quiz-random]");
   if (randBtn) {
     randBtn.addEventListener("click", function () {
-      pool = ALL.slice();
-      order = shuffle(pool).slice(0, Math.min(10, pool.length));
+      order = shuffle(ALL.slice()).slice(0, Math.min(10, ALL.length));
       idx = 0; score = 0;
-      hide(startBox); hide(endBox); show(card);
+      hide(startBox); hide(endBox); show(root); show(card);
       renderQuestion();
     });
   }
-  document.querySelectorAll("[data-quiz-time]").forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      timeSel = chip.getAttribute("data-quiz-time");
-      document.querySelectorAll("[data-quiz-time]").forEach(function (c) {
-        c.setAttribute("aria-pressed", c === chip ? "true" : "false");
-      });
+  if (timeSelEl) {
+    timeSelEl.addEventListener("change", function () {
+      timeSel = timeSelEl.value;
       applyFilter();
-      hide(card); hide(endBox); show(startBox);
+      backToStart();
     });
-  });
+  }
+  if (genreSel) {
+    genreSel.addEventListener("change", function () {
+      filter = genreSel.value;
+      applyFilter();
+      backToStart();
+    });
+  }
   root.querySelector("[data-quiz-retry]").addEventListener("click", begin);
-
-  document.querySelectorAll("[data-quiz-filter]").forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      filter = chip.getAttribute("data-quiz-filter");
-      document.querySelectorAll("[data-quiz-filter]").forEach(function (c) {
-        c.setAttribute("aria-pressed", c === chip ? "true" : "false");
-      });
-      applyFilter();
-      hide(card); hide(endBox); show(startBox);
-    });
-  });
 
   applyFilter();
 })();

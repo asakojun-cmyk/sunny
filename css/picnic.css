@@ -932,3 +932,21 @@
 .term-gyo{grid-column:1/-1;list-style:none;margin:14px 0 -6px;padding:0}
 .term-category .term-gyo:first-child{margin-top:2px}
 .term-gyo span{display:inline-block;padding:5px 18px;border-radius:999px;background:#e8f0d8;color:#4f6342;font-weight:700;font-size:.88rem;letter-spacing:.16em}
+/* v4.5 ○×クイズドリル: プルダウン選択+スタートをボックスの外へ */
+.quiz-pickers{display:flex;flex-wrap:wrap;gap:16px 26px;justify-content:center;margin:26px 0 6px}
+.quiz-picker{display:flex;align-items:center;gap:10px}
+.quiz-picker__label{font-weight:700;color:#2f4a2f;font-size:.95rem;letter-spacing:.06em}
+.quiz-picker select{appearance:none;-webkit-appearance:none;padding:11px 44px 11px 18px;border:2px solid #dbe7c9;border-radius:999px;background:#fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235c6e51' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 18px center;font:inherit;font-weight:600;color:#2f4a2f;cursor:pointer}
+.quiz-picker select:focus{outline:none;border-color:#7fa77c;box-shadow:0 0 0 4px rgba(167,201,158,.25)}
+.quiz-drill__start{margin:22px 0 30px}
+.quiz-drill__start .button{transition:transform .25s ease,box-shadow .25s ease}
+.quiz-drill__start .button:hover{transform:translateY(-2px)}
+@media (max-width: 560px){
+  .quiz-pickers{flex-direction:column;align-items:stretch;gap:12px}
+  .quiz-picker{justify-content:space-between}
+  .quiz-picker select{flex:1;margin-left:12px}
+}
+/* v4.6 トップ: プロフィール/ピクニック新聞は白背景。フッターは草原の緑をそのままつなげる */
+.section--white{background:#fff}
+.site-footer{background:#eef4dd;border-top:none;margin-top:0}
+.site-footer::before{content:none}
