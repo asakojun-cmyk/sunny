@@ -845,3 +845,51 @@
 /* 生まれた背景: 箱をなくして文章だけの美しさに */
 .school-story-card{background:transparent;box-shadow:none;padding:0;max-width:620px;margin:0 auto;text-align:left}
 #school-story{background:#fffdf8}
+
+/* ---- v4.1 マップの仕上げ(2026-07-20 ちゃん指示:看板テキスト化・スーパーさん・案内演出) ---- */
+/* 看板: 箱をやめてテキストだけ(白いハローで読みやすく) */
+.map-spot__sign{background:transparent;border:0;box-shadow:none;padding:2px 6px;font-size:.84rem;text-shadow:0 0 8px #fff,0 0 4px #fff,0 1px 0 #fff}
+.map-spot__sign i{display:none}
+.map-spot__sign b{color:#334b5e}
+.map-spot__sign small{text-shadow:0 0 8px #fff,0 0 4px #fff}
+.map-spot:hover .map-spot__sign{transform:scale(1.06)}
+/* スーパーさん: シートの奥にきちんと腰かける */
+.mp-super{left:44.6%;top:16%;width:10.2%}
+/* 案内のふきだし(サニー→モヤンの順にふわっと出て、ゆらゆら) */
+.map-say{position:absolute;z-index:2;margin:0;max-width:250px;padding:12px 16px;background:rgba(255,255,255,.97);border-radius:20px 20px 20px 6px;box-shadow:0 8px 20px rgba(41,67,94,.12);font-size:.85rem;line-height:1.8;opacity:0;color:var(--picnic-ink)}
+.map-say b{display:block;font-size:.66rem;color:#6c8265;margin-bottom:2px;font-weight:700}
+.map-say--sunny{left:13%;top:30%;background:#fff7dd;border-radius:20px 20px 6px 20px}
+.map-say--sunny b{color:#b08a2e}
+.map-say--moyan{left:66%;top:33%}
+@media(prefers-reduced-motion:no-preference){
+  .map-say--sunny{animation:map-say-in 1s ease 1.2s forwards,pic-loop-float 5s ease-in-out 2.2s infinite}
+  .map-say--moyan{animation:map-say-in 1s ease 2.6s forwards,pic-loop-float 5.6s ease-in-out 3.6s infinite}
+  @keyframes map-say-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes pic-loop-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+}
+@media(prefers-reduced-motion:reduce){.map-say{opacity:1}}
+@media(max-width:640px){
+  .map-say{max-width:56vw;font-size:.74rem;padding:9px 12px}
+  .map-say--sunny{left:2%;top:26%}
+  .map-say--moyan{left:auto;right:2%;top:30%}
+}
+/* 案内ふきだしは中央上の空きスペースへ(看板と重ねない) */
+.map-say{max-width:235px}
+.map-say--sunny{left:20%;top:13%}
+.map-say--moyan{left:60%;top:15%;max-width:250px}
+@media(max-width:640px){
+  .map-say--sunny{left:2%;top:8%}
+  .map-say--moyan{left:auto;right:2%;top:12%}
+}
+
+/* ---- v4.2 1問1答チャレンジ(2026-07-20 ちゃん指示:ジャンル×時間×ランダム) ---- */
+.daily-cta-wrap{text-align:center;margin:34px 0 4px}
+.daily-cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;padding:16px 40px;border-radius:999px;background:#ef8064;color:#fff;text-decoration:none;box-shadow:0 10px 24px rgba(239,128,100,.3);transition:transform .2s ease}
+.daily-cta:hover{transform:translateY(-2px)}
+.daily-cta__kicker{font-size:.72rem;letter-spacing:.12em;opacity:.92}
+.daily-cta__label{font-weight:700;font-size:1.05rem}
+.quiz-drill__or{text-align:center;color:#8b9788;font-size:.8rem;margin:10px 0 6px}
+.quiz-drill__start{text-align:center}
+.quiz-drill__count b{color:#e9785f}
+/* プロフィールは背景の直下・やわらかい箱で */
+.author-profile{border-radius:22px;background:#f6f0e3;box-shadow:0 8px 22px rgba(48,74,58,.07);padding:26px 28px}

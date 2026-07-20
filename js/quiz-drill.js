@@ -13,6 +13,8 @@
   }
 
   var filter = "all";
+  var timeSel = "5";
+  var COUNTS = { "1": 3, "5": 10, "10": 20, "30": 50, all: null };
   var pool = ALL.slice();
   var order = [];
   var idx = 0;
@@ -27,11 +29,18 @@
     if (filter === "all") pool = ALL.slice();
     else if (filter === "freq3") {
       pool = ALL.filter(function (x) { return x.f === 3; });
+    } else if (filter === "theorist") {
+      pool = ALL.filter(function (x) { return x.t === 1; });
     } else {
       var cat = filter.slice(4);
       pool = ALL.filter(function (x) { return x.c === cat; });
     }
     poolEl.textContent = String(pool.length);
+    var cEl = root.querySelector("[data-quiz-count]");
+    if (cEl) {
+      var c = COUNTS[timeSel];
+      cEl.textContent = String(c === null ? pool.length : Math.min(c, pool.length));
+    }
   }
 
   function shuffle(arr) {
@@ -59,7 +68,9 @@
 
   function begin() {
     if (pool.length === 0) return;
+    var c = COUNTS[timeSel];
     order = shuffle(pool);
+    if (c !== null) order = order.slice(0, Math.min(c, order.length));
     idx = 0;
     score = 0;
     hide(startBox); hide(endBox); show(card);
@@ -103,6 +114,26 @@
     else renderQuestion();
   });
   root.querySelector("[data-quiz-begin]").addEventListener("click", begin);
+  var randBtn = root.querySelector("[data-quiz-random]");
+  if (randBtn) {
+    randBtn.addEventListener("click", function () {
+      pool = ALL.slice();
+      order = shuffle(pool).slice(0, Math.min(10, pool.length));
+      idx = 0; score = 0;
+      hide(startBox); hide(endBox); show(card);
+      renderQuestion();
+    });
+  }
+  document.querySelectorAll("[data-quiz-time]").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      timeSel = chip.getAttribute("data-quiz-time");
+      document.querySelectorAll("[data-quiz-time]").forEach(function (c) {
+        c.setAttribute("aria-pressed", c === chip ? "true" : "false");
+      });
+      applyFilter();
+      hide(card); hide(endBox); show(startBox);
+    });
+  });
   root.querySelector("[data-quiz-retry]").addEventListener("click", begin);
 
   document.querySelectorAll("[data-quiz-filter]").forEach(function (chip) {
