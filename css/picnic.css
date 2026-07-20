@@ -1127,3 +1127,16 @@
 .cb-scene{color:#8a8371;font-size:.88rem;line-height:1.8;margin:0 0 6px}
 .cb-prompt{font-weight:700;margin:14px 0 4px}
 .cb-feedback__link a{font-size:.9rem}
+/* v5.2 試験対策テント: あそんで対策バナー */
+.exam-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0}
+@media (max-width: 760px){.exam-tools{grid-template-columns:1fr}}
+.exam-tool{position:relative;display:flex;flex-direction:column;gap:8px;padding:22px 20px 18px;border-radius:20px;text-decoration:none;color:#2f3b2f;border:1.5px solid transparent;transition:transform .2s ease,box-shadow .2s ease}
+.exam-tool:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(48,74,58,.14)}
+.exam-tool--gakka{background:#fdf6dd;border-color:#f0dfa4}
+.exam-tool--ronjutsu{background:#e9f1fa;border-color:#c5d9ee}
+.exam-tool--mensetsu{background:#eaf5e2;border-color:#c9dfb4}
+.exam-tool__img{width:64px;height:64px;object-fit:contain;align-self:flex-start}
+.exam-tool__badge{position:absolute;top:16px;right:16px;font-size:.7rem;font-weight:700;letter-spacing:.1em;background:#fff;border-radius:999px;padding:4px 12px;color:#6c8265}
+.exam-tool__title{font-size:1.12rem;font-weight:700;line-height:1.5;font-family:var(--font-serif)}
+.exam-tool__desc{font-size:.85rem;line-height:1.8;color:#5a6455}
+.exam-tool__cta{margin-top:auto;font-size:.88rem;font-weight:700;color:#e9785f}
