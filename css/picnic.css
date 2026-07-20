@@ -1237,3 +1237,8 @@
 @media (max-width: 960px){.header-nav{display:none}}
 /* v5.8b ヘッダーナビをサニーの検索窓のすぐ左に寄せる */
 .header-nav{margin-left:auto;margin-right:26px;gap:4px 18px;justify-content:flex-end}
+/* v5.9 ヘッダーのブランドを中央揃えのサンドイッチに(EN→ロゴ→タグライン) */
+.site-header__brand{text-align:center}
+.site-header__brand .site-logo{display:inline-block}
+.site-header__brand .site-logo__ja{display:flex;align-items:center;justify-content:center}
+.site-header__brand .site-header__tagline{text-align:center}
