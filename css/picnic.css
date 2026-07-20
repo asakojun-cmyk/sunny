@@ -1235,3 +1235,5 @@
 .header-nav .hero-link{font-size:.92rem}
 .header-nav .hero-link:hover{background:linear-gradient(transparent 62%, rgba(239,128,100,.45) 62%)}
 @media (max-width: 960px){.header-nav{display:none}}
+/* v5.8b ヘッダーナビをサニーの検索窓のすぐ左に寄せる */
+.header-nav{margin-left:auto;margin-right:26px;gap:4px 18px;justify-content:flex-end}
