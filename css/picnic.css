@@ -1181,3 +1181,44 @@
 }
 /* v5.5 学校ページの広告注記 */
 .school-header__adnote{font-size:.76rem;color:#8a8371;margin:6px 0 0}
+/* ============================================================
+ * v5.6 改善指示書 第1〜3弾(2026-07-20 承認済み)
+ * ============================================================ */
+/* 用語ページ: 目次チップ */
+.term-toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.term-toc a{padding:7px 14px;border-radius:999px;background:#fff;border:1.5px solid #e4ddca;color:#5c6e51;text-decoration:none;font-size:.82rem;font-weight:600}
+.term-toc a:hover{border-color:#a7c99e;background:#f2f8e6}
+/* 覚え方・間違えやすい */
+.term-oboekata{background:#fdf6dd;border-radius:12px;padding:24px 28px;margin-bottom:28px}
+.term-pitfall{margin-bottom:40px}
+.term-pitfall__box{background:#fbeeea;border:1.5px solid #ecc4b8;border-radius:12px;padding:18px 22px}
+.term-pitfall__box p{margin:0;line-height:2}
+/* つぎに読むなら */
+.term-next{margin:34px 0}
+.term-next__label{font-weight:700;letter-spacing:.08em;color:#6c8265;margin:0 0 10px}
+.term-next__card{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:#eef4dd;border-radius:16px;padding:18px 22px;text-decoration:none;color:#2f3b2f;transition:transform .2s ease}
+.term-next__card:hover{transform:translateY(-2px)}
+.term-next__card b{font-size:1.05rem}
+.term-next__card span{flex:1;min-width:200px;font-size:.86rem;color:#5a6455;line-height:1.8}
+.term-next__card i{font-style:normal;color:#e9785f;font-weight:700}
+/* シェアボタン */
+.term-share{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:26px 0}
+.term-share__label{margin:0;font-size:.85rem;color:#6f6a58}
+.term-share__btn{padding:9px 18px;border-radius:999px;text-decoration:none;font-size:.85rem;font-weight:700}
+.term-share__btn--line{background:#e8f6e0;color:#1e7d32;border:1.5px solid #b9e0aa}
+.term-share__btn--x{background:#eef1f4;color:#31404e;border:1.5px solid #ccd6df}
+.term-share__btn:hover{transform:translateY(-1px)}
+/* 参考文献 */
+.term-refs{margin:34px 0;border-top:1.5px dashed #e0d9c5;padding-top:22px}
+.term-refs__list{margin:0;padding-left:1.3em}
+.term-refs__list li{line-height:1.95;font-size:.9rem}
+.term-refs__note{font-size:.82rem;color:#6f6a58;line-height:1.9;margin-top:12px}
+/* コントラスト改善(注記の文字を一段濃く) */
+.term-category__order{color:#6b7a62}
+.now-item__date,.now-board__updated,.ron-guide__note,.ron-case__note{color:#6f6a58}
+.cb-scene{color:#6f6a58}
+.school-header__adnote{color:#6f6a58}
+/* v5.6b ヒーローCTAの4ボタン+サブ行 */
+.hero-cta__sub{margin:14px 0 0;font-size:.85rem;color:#6f6a58}
+.hero-cta__sub a{color:#e9785f}
+.quiz-share{justify-content:center}

@@ -92,6 +92,12 @@
       : rate >= 50 ? "いい感じ!まちがえた問題の用語ページを読み直すと、ぐんと伸びるよ"
       : "だいじょうぶ、まちがいは伸びしろ。用語ページでゆっくり復習してからまた来てね🌥️";
     root.querySelector("[data-quiz-endnote]").textContent = note;
+    var shareText = "キャリコン\u25cb\u00d7クイズ、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f #キャリコン学びピクニック";
+    var pageUrl = "https://carepicnic.com/games/quiz/";
+    var xBtn = document.querySelector("[data-quiz-share-x]");
+    var lineBtn = document.querySelector("[data-quiz-share-line]");
+    if (xBtn) xBtn.setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareText) + "&url=" + encodeURIComponent(pageUrl));
+    if (lineBtn) lineBtn.setAttribute("href", "https://line.me/R/share?text=" + encodeURIComponent(shareText + " " + pageUrl));
   }
 
   root.querySelectorAll("[data-quiz-ans]").forEach(function (btn) {
