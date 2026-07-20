@@ -1052,3 +1052,78 @@
 .school-exp__fit li,
 .school-exp__checklist li{line-height:1.9;margin-bottom:.35em}
 .article-list-item p{line-height:1.9}
+/* ============================================================
+ * v5.1 論述ボードゲーム & ことばのキャッチボール
+ * ============================================================ */
+.ron-badge{display:inline-block;padding:3px 12px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.08em;vertical-align:middle}
+.ron-badge--cc{background:#e3edf8;color:#2c5a8a;border:1px solid #bcd4ec}
+.ron-badge--jcda{background:#f3e8f4;color:#7a4a80;border:1px solid #dfc6e2}
+.ron-badge--both{background:#e8f0d8;color:#4f6342;border:1px solid #cbdcae}
+
+.ron-guide__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+@media (max-width:640px){.ron-guide__grid{grid-template-columns:1fr}}
+.ron-guide__card{background:#fff;border:1.5px solid #e4ddca;border-radius:16px;padding:18px 20px}
+.ron-guide__card p{margin:6px 0;line-height:1.85}
+.ron-guide__note{font-size:.82rem;color:#8a8371;line-height:1.8}
+
+.ron-case__profile{background:#fdf6e0;border-radius:14px;padding:14px 18px;line-height:1.9}
+.ron-transcript{background:#fff;border:1.5px solid #e4ddca;border-radius:16px;padding:20px 22px;margin:14px 0}
+.ron-line{display:flex;gap:12px;margin:0 0 12px;line-height:1.9}
+.ron-line b{flex:none;width:44px;font-size:.78rem;color:#8a8371;padding-top:3px}
+.ron-line--cl span{background:#f2f6fb;border-radius:12px;padding:8px 14px}
+.ron-line--cc span{background:#fdf9dc;border-radius:12px;padding:8px 14px}
+.ron-case__note{font-size:.78rem;color:#8a8371}
+
+.ron-progress,.cb-score{position:sticky;top:8px;z-index:5;width:fit-content;margin:22px auto;padding:8px 22px;background:#fff;border:1.5px solid #dbe7c9;border-radius:999px;font-size:.9rem;box-shadow:0 6px 16px rgba(48,74,58,.1)}
+.ron-progress b,.cb-score b{color:#e9785f}
+
+.ron-station,.cb-rally{position:relative;background:#fff;border:1.5px solid #e4ddca;border-radius:20px;padding:24px 26px;margin:22px 0}
+.ron-station--write{background:#fdf6e0}
+.ron-station.is-locked,.cb-rally.is-locked{overflow:hidden}
+.ron-station.is-locked>*:not(.ron-lock-note),.cb-rally.is-locked>*{filter:blur(4px);pointer-events:none;user-select:none}
+.ron-lock-note{display:none}
+.ron-station.is-locked .ron-lock-note{display:block;position:absolute;inset:auto 0 auto 0;top:50%;transform:translateY(-50%);text-align:center;font-weight:700;color:#6c8265;filter:none;z-index:2}
+.cb-rally.is-locked::after{content:"🔒 前の球をキャッチすると開くよ";position:absolute;inset:0;display:grid;place-items:center;font-weight:700;color:#6c8265;z-index:2}
+.ron-station__head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.ron-station__no{font-size:.78rem;font-weight:700;letter-spacing:.14em;color:#b0813f;background:#fdf1cf;border-radius:999px;padding:4px 12px}
+.ron-station__title{margin:0;font-size:1.08rem}
+.ron-station__q{font-weight:600;line-height:1.9}
+
+.ron-choices,.cb-choices{display:grid;gap:10px;margin:14px 0}
+.ron-choice,.cb-choice{text-align:left;font:inherit;line-height:1.75;padding:13px 16px;border-radius:14px;border:1.5px solid #d8d2c0;background:#fffdf7;cursor:pointer;transition:transform .15s ease,border-color .15s ease}
+.ron-choice:hover:not(:disabled),.cb-choice:hover:not(:disabled){border-color:#a7c99e;transform:translateY(-1px)}
+.ron-choice:disabled,.cb-choice:disabled{cursor:default;opacity:.75}
+.ron-choice.is-correct,.cb-choice.is-correct{border-color:#7fa77c;background:#eef6e6;opacity:1}
+.ron-choice.is-wrong,.cb-choice.is-wrong{border-color:#dc8b7a;background:#fbeeea}
+
+.ron-feedback,.cb-feedback{border-top:1.5px dashed #e0d9c5;margin-top:14px;padding-top:14px}
+.ron-feedback__verdict.is-ok,.cb-feedback__verdict.is-ok{color:#4f7d4a;font-weight:700}
+.ron-feedback__verdict.is-ng,.cb-feedback__verdict.is-ng{color:#c05f4a;font-weight:700}
+.ron-feedback__why,.cb-feedback__why{line-height:1.9}
+.cb-feedback__giho b{color:#b0813f}
+.ron-next{margin:14px 0 0}
+
+.ron-write__hint{font-size:.88rem;color:#6c8265;line-height:1.85}
+.ron-write__area{width:100%;box-sizing:border-box;font:inherit;line-height:1.9;padding:14px 16px;border:1.5px solid #d8d2c0;border-radius:14px;background:#fff;resize:vertical}
+.ron-write__area:focus{outline:none;border-color:#7fa77c;box-shadow:0 0 0 4px rgba(167,201,158,.2)}
+.ron-model{margin-top:16px}
+.ron-model h4{margin:16px 0 8px}
+.ron-model__text{background:#fff;border:1.5px solid #e4ddca;border-radius:14px;padding:16px 18px;line-height:2}
+.ron-checklist{list-style:none;margin:0;padding:0}
+.ron-checklist li{margin:6px 0;line-height:1.85}
+.ron-checklist label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.ron-checklist input{margin-top:6px}
+.ron-jcda-note{display:flex;gap:12px;align-items:flex-start;background:#f3e8f4;border-radius:14px;padding:14px 16px;margin-top:14px}
+.ron-jcda-note p{margin:0;line-height:1.85;font-size:.92rem}
+
+.ron-goal,.cb-goal{background:#eef4dd;border-radius:20px;padding:26px 28px;margin:26px 0;text-align:center}
+.ron-goal__title{font-size:1.3rem;font-weight:700;margin:0 0 10px}
+.ron-goal p{line-height:1.95}
+.ron-goal__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.ron-goal .chara-guide,.cb-goal .chara-guide{text-align:left}
+.cb-goal__score{font-size:1.15rem;font-weight:700;color:#e9785f}
+
+.cb-rally__no{font-size:.78rem;font-weight:700;letter-spacing:.14em;color:#b0813f;margin:0 0 6px}
+.cb-scene{color:#8a8371;font-size:.88rem;line-height:1.8;margin:0 0 6px}
+.cb-prompt{font-weight:700;margin:14px 0 4px}
+.cb-feedback__link a{font-size:.9rem}
