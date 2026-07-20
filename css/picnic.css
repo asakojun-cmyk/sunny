@@ -1140,3 +1140,29 @@
 .exam-tool__title{font-size:1.12rem;font-weight:700;line-height:1.5;font-family:var(--font-serif)}
 .exam-tool__desc{font-size:.85rem;line-height:1.8;color:#5a6455}
 .exam-tool__cta{margin-top:auto;font-size:.88rem;font-weight:700;color:#e9785f}
+/* ============================================================
+ * v5.3 キャリコンNOW掲示板(/laws/)の読みやすさ改善
+ * ============================================================ */
+.now-board{background:#fdf6e0;border:2px solid #eadfba;border-radius:22px;padding:24px 26px;margin:26px 0 30px;box-shadow:0 10px 24px rgba(120,100,40,.08)}
+.now-board__head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.now-board__head h2{margin:0 0 8px;font-size:1.15rem}
+.now-board__updated{margin:0;font-size:.78rem;color:#8a8371}
+.now-list{list-style:none;margin:8px 0 0;padding:0}
+.now-item{display:grid;grid-template-columns:110px 1fr auto;gap:6px 14px;align-items:baseline;padding:11px 4px;border-bottom:1.5px dashed #eadfba;line-height:1.75}
+.now-item:last-child{border-bottom:none}
+.now-item__date{font-size:.8rem;color:#8a8371;white-space:nowrap}
+.now-item__new{color:#e9785f;font-size:.7rem;letter-spacing:.06em}
+.now-item__title{text-decoration:none;color:#2f3b2f;font-weight:600}
+.now-item__title:hover{text-decoration:underline}
+.now-item__source{font-size:.74rem;color:#a89f89;white-space:nowrap}
+.now-empty{padding:16px 4px;color:#8a8371;line-height:1.9}
+.now-board__more{text-align:center;margin:12px 0 0}
+.now-board__note{font-size:.78rem;color:#8a8371;line-height:1.8;margin:14px 0 0}
+@media (max-width:640px){
+  .now-item{grid-template-columns:1fr;gap:2px}
+  .now-item__source{display:none}
+}
+.law-shelf__note{margin:-6px 0 14px;color:#6c8265;font-size:.9rem}
+.law-sources .ron-guide__card p{margin:4px 0}
+/* v5.3b 掲示板: hidden属性を確実に効かせる */
+.now-board [hidden]{display:none!important}
