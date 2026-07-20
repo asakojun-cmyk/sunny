@@ -1166,3 +1166,16 @@
 .law-sources .ron-guide__card p{margin:4px 0}
 /* v5.3b 掲示板: hidden属性を確実に効かせる */
 .now-board [hidden]{display:none!important}
+/* ============================================================
+ * v5.4 ヒーローの「ガクン」解消(2026-07-20 ちゃん指示)
+ * 劇の間も最初から最終レイアウト(上寄せ)で固定しておき、
+ * is-done では劇の幕(オーバーレイ)を消すだけにする。
+ * タイトルとピクニック広場は、最初から適切な場所にフェードインする。
+ * ============================================================ */
+.picnic-hero--note{justify-content:flex-start;min-height:0}
+.picnic-hero--note .hero-note{margin-top:64px}
+.picnic-hero--note .picnic-stage{margin-top:30px;margin-bottom:0}
+@media (max-width: 640px){
+  .picnic-hero--note{min-height:0}
+  .picnic-hero--note .hero-note{margin-top:48px}
+}
