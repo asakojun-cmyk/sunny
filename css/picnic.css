@@ -928,3 +928,7 @@
   .library-hero__story{padding-bottom:34px}
   .library-search{margin-top:-12px}
 }
+/* v4.4 ことば図鑑: あ行・か行…の電話帳インデックス */
+.term-gyo{grid-column:1/-1;list-style:none;margin:14px 0 -6px;padding:0}
+.term-category .term-gyo:first-child{margin-top:2px}
+.term-gyo span{display:inline-block;padding:5px 18px;border-radius:999px;background:#e8f0d8;color:#4f6342;font-weight:700;font-size:.88rem;letter-spacing:.16em}

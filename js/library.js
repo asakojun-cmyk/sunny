@@ -3,6 +3,7 @@
   if (!input) return;
   const books = [...document.querySelectorAll("[data-library-book]")];
   const empty = document.querySelector("[data-library-empty]");
+  const gyos = [...document.querySelectorAll("[data-library-gyo]")];
 
   input.addEventListener("input", () => {
     const query = input.value.trim().toLowerCase().replace(/\s+/g, "");
@@ -13,6 +14,7 @@
       book.hidden = !matches;
       if (matches) visible += 1;
     });
+    gyos.forEach((g) => { g.hidden = !!query; });
     if (empty) empty.hidden = visible !== 0;
   });
 })();
