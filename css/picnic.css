@@ -893,3 +893,38 @@
 .quiz-drill__count b{color:#e9785f}
 /* プロフィールは背景の直下・やわらかい箱で */
 .author-profile{border-radius:22px;background:#f6f0e3;box-shadow:0 8px 22px rgba(48,74,58,.07);padding:26px 28px}
+
+/* ============================================================
+ * v4.3 ことば図鑑(/terms/)の調整
+ * - ヒーロー絵を切り抜かず、白いグラデーションで隠さず、まるごと見せる
+ * - ジャンルから探すナビ + あいうえお順の表示
+ * ============================================================ */
+.library-hero{min-height:0;background:#fff}
+.library-hero>img{height:auto;object-fit:contain;object-position:center}
+.library-hero::after{content:none}
+.library-hero__story{top:44px;transform:none;width:min(480px,46vw)}
+.library-hero__story h1{text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 30px #fff}
+.library-hero__story p{text-shadow:0 0 8px #fff,0 0 16px #fff}
+@media (max-width: 640px){
+  .library-hero{min-height:0}
+  .library-hero>img{height:auto;object-position:center}
+  .library-hero__story{position:static;padding:26px 22px 6px;width:auto}
+  .library-hero__story h1{font-size:1.55rem}
+}
+
+.term-genre-nav{margin:30px 0 6px;text-align:center}
+.term-genre-nav__label{margin:0 0 12px;font-size:.8rem;font-weight:700;letter-spacing:.18em;color:#7a8a6f}
+.term-genre-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.term-genre-nav li{margin:0}
+.term-genre-nav a{display:inline-block;padding:9px 16px;border-radius:999px;background:#fff;border:1.5px solid #dbe7c9;color:#2f4a2f;text-decoration:none;font-weight:600;font-size:.92rem;line-height:1.4}
+.term-genre-nav a:hover{background:#f2f8e6;border-color:#bcd39a}
+.term-genre-nav a.term-genre-nav__theorists{background:#fdf6e0;border-color:#f0dfa4}
+.term-genre-nav a.term-genre-nav__theorists:hover{background:#faeec6}
+.term-category{scroll-margin-top:84px}
+.term-category__order{margin-left:12px;font-size:.76rem;font-weight:500;letter-spacing:.1em;color:#8a9a80;vertical-align:middle}
+/* v4.3b 見出しの折り返しと検索カードの重なりを調整 */
+.library-hero__story h1{font-size:clamp(1.9rem,3.1vw,2.7rem)}
+@media (max-width: 640px){
+  .library-hero__story{padding-bottom:34px}
+  .library-search{margin-top:-12px}
+}
