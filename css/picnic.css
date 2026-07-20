@@ -1007,3 +1007,48 @@
 @media (max-width: 640px){
   .library-hero__title{font-size:1.55rem}
 }
+/* ============================================================
+ * v5.0 (2026-07-20 ちゃん指示)
+ * 1) マップ: お弁当1つ+チャッピー画の水筒を隣に。帽子なし。
+ *    吹き出しはレジャーシートの上で、サニー⇔モヤンが交互におしゃべり
+ * 2) 全ページの行間をゆったり統一
+ * ============================================================ */
+
+/* 1) シートの上 */
+.mp-lunch--a{left:47%;top:41%;width:6%}
+.mp-suito{left:53.5%;top:38.5%;width:3%}
+@media (max-width: 640px){
+  .mp-lunch--a{left:45%;top:41%;width:8.5%}
+  .mp-suito{left:54%;top:38%;width:4.2%}
+}
+
+/* 吹き出し: シートの真上で交互に表示 */
+.map-say-row{display:none}
+.map-say{position:absolute;opacity:0;max-width:280px;text-align:left}
+.map-say--sunny{left:50%;top:22%;transform:translateX(-50%);border-radius:20px 20px 20px 6px;animation:say-turn-a 11s ease-in-out 1.2s infinite}
+.map-say--moyan{left:50%;right:auto;top:22%;transform:translateX(-50%);border-radius:20px 20px 6px 20px;animation:say-turn-b 11s ease-in-out 1.2s infinite}
+@keyframes say-turn-a{0%{opacity:0;}3%,42%{opacity:1}48%,100%{opacity:0}}
+@keyframes say-turn-b{0%,52%{opacity:0}55%,94%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){
+  .map-say--sunny{opacity:1;animation:none}
+  .map-say--moyan{display:none}
+}
+@media (max-width: 640px){
+  .map-say--sunny,.map-say--moyan{left:50%;right:auto;top:18%;max-width:64vw}
+}
+
+/* 2) 行間ゆったり統一 */
+.container p,
+.container li,
+.container dd{line-height:1.95}
+.container p{margin-bottom:1.15em}
+.chara-guide__bubble{line-height:1.9;padding:15px 20px}
+.term-formal__box p{line-height:2.05}
+.term-list__oneliner{line-height:1.75}
+.theorist-list__oneliner{line-height:1.75}
+.map-say{line-height:1.85}
+.school-exp__status-list li,
+.school-exp__worries li,
+.school-exp__fit li,
+.school-exp__checklist li{line-height:1.9;margin-bottom:.35em}
+.article-list-item p{line-height:1.9}
