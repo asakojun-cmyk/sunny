@@ -79,7 +79,7 @@
             escapeHtml(s.slug) +
             '/">詳細ページ</a> / <a href="' +
             escapeHtml(s.officialUrl) +
-            '" rel="noopener nofollow" target="_blank">公式サイト</a></span></div>'
+            '" rel="' + (s.isPr ? 'sponsored ' : '') + 'noopener nofollow" target="_blank">公式サイト' + (s.isPr ? '(広告)' : '') + '</a></span></div>'
           );
         })
         .join("") +
