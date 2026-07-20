@@ -950,3 +950,30 @@
 .section--white{background:#fff}
 .site-footer{background:#eef4dd;border-top:none;margin-top:0}
 .site-footer::before{content:none}
+/* ============================================================
+ * v4.7 (2026-07-20 ちゃん指示)
+ * 1) マップの案内吹き出しを施設に被らない位置(上の空エリア)へ
+ * 2) 会話の立ち位置を全ページで交換: サニー=左 / モヤン=右(お互いを向く)
+ * 3) 用語ページ「身近なたとえ」「子育て・仕事で考えると」を
+ *    「小学生でもわかる説明」と同じ黄色ボックスに
+ * ============================================================ */
+
+/* 1) マップ吹き出し: 空のエリアへ退避 */
+.map-say--sunny{left:2%;top:1%}
+.map-say--moyan{left:auto;right:3%;top:1%}
+@media (max-width: 640px){
+  .map-say--sunny{left:2%;top:0}
+  .map-say--moyan{left:auto;right:2%;top:1%}
+}
+
+/* 2) サニー=左, モヤン=右 に交換(吹き出しのしっぽも反転) */
+.chara-guide--sunny{flex-direction:row}
+.chara-guide--moyan{flex-direction:row-reverse}
+.chara-guide--sunny .chara-guide__bubble::before{right:auto;left:-12px;border-width:8px 12px 8px 0;border-left-color:transparent;border-right-color:#ded263}
+.chara-guide--sunny .chara-guide__bubble::after{right:auto;left:-9px;border-width:7px 11px 7px 0;border-left-color:transparent;border-right-color:#fdf9dc}
+.chara-guide--moyan .chara-guide__bubble::before{left:auto;right:-12px;border-width:8px 0 8px 12px;border-right-color:transparent;border-left-color:#b6c0cc}
+.chara-guide--moyan .chara-guide__bubble::after{left:auto;right:-9px;border-width:7px 0 7px 11px;border-right-color:transparent;border-left-color:#ffffff}
+
+/* 3) 白ボックスを黄色ボックスに統一 */
+.term-analogy,
+.term-life{background:var(--color-yellow-light);border:none}
