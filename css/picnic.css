@@ -826,3 +826,22 @@
   .gstep__icon{width:48px}
   .guided-steps__say{max-width:76vw}
 }
+
+/* ---- v4.0 ゆとりとシンプルな配色(2026-07-20 ちゃん指示) ---- */
+/* 全体のゆとり */
+.section{padding:88px 0}
+.picnic-about{padding:96px max(24px,calc((100% - 1040px)/2)) 88px}
+.picnic-map{padding-top:88px;padding-bottom:96px}
+.about-flow{gap:22px;margin-top:52px}
+.about-step{padding:34px 28px 30px}
+.daily-grid{gap:20px}
+/* Aboutはベージュに(白カードが浮き立つ) */
+.picnic-about{background:#f6f0e3}
+.picnic-about__lede{max-width:600px;margin:12px auto 0}
+.picnic-about__lede + .picnic-about__lede{margin-top:6px}
+/* コンセプトは黄色マーカーで主役に */
+.marker{background:linear-gradient(transparent 58%, #f8e45c 58%);padding:0 3px}
+.picnic-about__concept{margin-top:48px;font-size:1.05rem}
+/* 生まれた背景: 箱をなくして文章だけの美しさに */
+.school-story-card{background:transparent;box-shadow:none;padding:0;max-width:620px;margin:0 auto;text-align:left}
+#school-story{background:#fffdf8}
