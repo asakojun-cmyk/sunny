@@ -977,3 +977,33 @@
 /* 3) 白ボックスを黄色ボックスに統一 */
 .term-analogy,
 .term-life{background:var(--color-yellow-light);border:none}
+/* ============================================================
+ * v4.8 マップの手直し(2026-07-20 ちゃん指示)
+ * - 吹き出しはマップの上(見出しの下)に固定表示。施設に絶対被らない
+ * - スーパーさん削除。シートの真ん中にお弁当2つ+水筒、モヤンの黄色い帽子
+ * ============================================================ */
+.map-say-row{display:flex;flex-wrap:wrap;gap:14px 20px;justify-content:center;margin:22px auto 4px;padding:0 20px;max-width:880px}
+.map-say-row .map-say{position:static;opacity:1;transform:none;animation:none;max-width:350px;left:auto;right:auto;top:auto}
+@media (max-width: 640px){
+  .map-say-row{gap:10px;margin-top:16px}
+  .map-say-row .map-say{max-width:100%;font-size:.8rem}
+}
+/* シートの上のピクニックセット */
+.mp-lunch--a{left:46.5%;top:40%;width:5.5%}
+.mp-lunch--b{left:53%;top:44.5%;width:5.5%}
+.mp-suito{left:50.5%;top:37%;width:2.7%}
+.mp-hat{left:47.4%;top:50.5%;width:4.4%;transform:rotate(-10deg)}
+@media (max-width: 640px){
+  .mp-lunch--a{left:44%;top:40%;width:8%}
+  .mp-lunch--b{left:53%;top:45%;width:8%}
+  .mp-suito{left:50.5%;top:36%;width:4%}
+  .mp-hat{left:42%;top:50%;width:6.5%}
+}
+/* v4.8b トップ: 草原の上のベージュ帯を消して白に。丘のアーチにあわせる */
+.is-home .picnic-meadow{background:#fff;margin-top:0}
+/* v4.9 理論家図鑑: ランチ風景のヒーロー(チャッピー画像1号) */
+.library-hero__title{margin:.35rem 0 1rem;font-size:clamp(1.9rem,3.1vw,2.7rem);line-height:1.34;letter-spacing:.04em;font-weight:700;font-family:var(--font-serif);color:#17345d;text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 30px #fff}
+.library-hero--lunch>img{background:#f2f2f0}
+@media (max-width: 640px){
+  .library-hero__title{font-size:1.55rem}
+}
