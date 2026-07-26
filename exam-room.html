@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>わたし専用 試験対策室｜キャリコン学びピクニック</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --bg:#FAF8F3; --card:#FFFFFF; --ink:#3B3226; --sub:#8A7F6E;
+    --accent:#B23A0C; --accent-soft:#F3E4D8; --ok:#3E7B4F; --ng:#B23A0C;
+    --line:#EAE3D6;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;}
+
+  #gate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:100;padding:24px;}
+  #gate .box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px 32px;max-width:360px;width:100%;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.06);}
+  #gate h1{font-size:1.1rem;margin:0 0 6px;}
+  #gate p{color:var(--sub);font-size:.85rem;margin:0 0 20px;}
+  #gate input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);font-size:1rem;text-align:center;margin-bottom:12px;}
+  #gate button{width:100%;padding:12px 14px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-size:.95rem;cursor:pointer;}
+  #gate .err{color:var(--accent);font-size:.8rem;margin-top:10px;min-height:1em;}
+
+  #content{display:none;}
+  header{padding:32px 20px 16px;text-align:center;}
+  header .tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.72rem;padding:4px 14px;border-radius:999px;margin-bottom:12px;letter-spacing:.05em;}
+  header h1{font-size:1.4rem;margin:0 0 6px;}
+  header p{color:var(--sub);font-size:.82rem;max-width:560px;margin:0 auto;}
+
+  nav.tabs{
+    position:sticky; top:0; z-index:10;
+    background:var(--bg);
+    display:flex; justify-content:center; gap:6px; flex-wrap:wrap;
+    padding:12px 16px; border-bottom:1px solid var(--line); margin-bottom:20px;
+  }
+  nav.tabs button{border:1px solid var(--line);background:#fff;color:var(--sub);padding:9px 16px;border-radius:999px;font-size:.82rem;cursor:pointer;white-space:nowrap;}
+  nav.tabs button.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700;}
+
+  main{max-width:760px;margin:0 auto;padding:0 20px 100px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  .note{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:.82rem;color:#6B3010;margin:0 0 20px;}
+
+  #scoreBar{position:sticky;top:53px;background:var(--bg);padding:10px 0;z-index:5;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);margin-bottom:16px;font-size:.82rem;color:var(--sub);}
+  #scoreBar .num{color:var(--accent);font-weight:700;}
+
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 22px;margin-bottom:18px;}
+  .qcard .qmeta{font-size:.72rem;color:var(--sub);margin-bottom:6px;}
+  .qcard .qtext{font-size:.98rem;font-weight:600;margin:0 0 16px;white-space:pre-line;}
+  .choice{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:.88rem;cursor:pointer;color:var(--ink);}
+  .choice:hover{border-color:var(--accent);}
+  .choice.correct{background:#EEF5EF;border-color:var(--ok);color:#245C33;font-weight:700;}
+  .choice.wrong{background:#FBEDE7;border-color:var(--ng);color:#8A2A08;font-weight:700;}
+  .choice[disabled]{cursor:default;}
+  .explain{display:none;margin-top:14px;background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:.85rem;color:#6B3010;}
+  .explain.show{display:block;}
+  .resetOne{display:none;margin-top:10px;background:none;border:1px solid var(--line);color:var(--sub);border-radius:999px;padding:5px 14px;font-size:.75rem;cursor:pointer;}
+  .resetOne.show{display:inline-block;}
+  .quizToolbar{display:flex;justify-content:flex-end;gap:8px;margin-bottom:10px;}
+  .quizToolbar button{background:none;border:1px solid var(--line);color:var(--sub);border-radius:999px;padding:6px 14px;font-size:.75rem;cursor:pointer;}
+
+  table{width:100%;border-collapse:collapse;font-size:.85rem;}
+  th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+  th{color:var(--sub);font-weight:600;font-size:.78rem;}
+  td.q{width:36px;color:var(--sub);font-variant-numeric:tabular-nums;}
+  td.a{width:70px;font-weight:700;color:var(--ok);}
+  .pill{display:inline-block;background:#EEF5EF;color:var(--ok);border-radius:8px;padding:2px 8px;font-size:.82rem;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin-bottom:16px;}
+  .card h3{margin:0 0 6px;font-size:1rem;color:var(--accent);}
+  .card .oneline{font-size:.85rem;color:var(--sub);margin:0 0 8px;}
+  .card .point{font-size:.88rem;margin:0;}
+  .catTitle{font-size:.95rem;font-weight:700;color:var(--sub);margin:26px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line);}
+  .catTitle:first-child{margin-top:0;}
+
+  .theoryTable{width:100%;border-collapse:collapse;font-size:.82rem;margin-bottom:20px;}
+  .theoryTable th,.theoryTable td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top;}
+  .theoryTable th{background:var(--accent-soft);color:#6B3010;}
+
+  footer{text-align:center;color:var(--sub);font-size:.75rem;padding:20px;}
+  .toolbar{max-width:760px;margin:0 auto;padding:0 20px 8px;display:flex;justify-content:flex-end;gap:8px;}
+  .toolbar button{background:none;border:1px solid var(--line);color:var(--sub);border-radius:999px;padding:6px 14px;font-size:.75rem;cursor:pointer;}
+  @media print{ #gate{display:none !important;} #content{display:block !important;} .toolbar,nav.tabs,#scoreBar,.quizToolbar{display:none;} .panel{display:block !important;} }
+</style>
+</head>
+<body>
+
+  <div id="gate">
+    <div class="box">
+      <h1>🔒 わたし専用 試験対策室</h1>
+      <p>ここは非公開ページです。合言葉を入れて開けてください。</p>
+      <input type="password" id="pw" placeholder="合言葉">
+      <button onclick="checkPw()">開ける</button>
+      <div class="err" id="err"></div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="toolbar"><button onclick="window.print()">印刷／PDF保存</button></div>
+
+    <header>
+      <div class="tag">PRIVATE STUDY ROOM · 試験まであと少し</div>
+      <h1>わたし専用 試験対策室</h1>
+      <p>2026年4月 養成講習 習得度確認試験をベースにした、繰り返し練習できる対策ページ。<br>練習問題・解答一覧・用語集・理論家ポイントを、このページの中で行き来しながら勉強できます。</p>
+    </header>
+
+    <nav class="tabs">
+      <button class="active" data-tab="checker" onclick="showTab('checker')">🖊 解答チェック（PDF併用）</button>
+      <button data-tab="quiz" onclick="showTab('quiz')">📝 練習問題</button>
+      <button data-tab="answers" onclick="showTab('answers')">✅ 解答一覧</button>
+      <button data-tab="glossary" onclick="showTab('glossary')">📖 用語集</button>
+      <button data-tab="theory" onclick="showTab('theory')">🎓 理論家ポイント</button>
+      <button data-tab="ronbun" onclick="showTab('ronbun')">✍️ 論述</button>
+    </nav>
+
+    <main>
+
+      <!-- ============ 解答チェック（PDF併用）タブ ============ -->
+      <div class="panel active" id="panel-checker">
+        <div class="note">💡 使い方：手元のPDF（学科試験）で問題を読んで解答を決めたら、ここで番号を選んでください。問題文・選択肢の文章はこのページには載せていません（著作権配慮のため）。選ぶとすぐ正誤と、オリジナルの詳しい解説（専門用語・理論家・キャリア理論）が表示されます。<br><br>⚠️ 組み合わせ問題（問5・6・16・28・35・48）は選択肢の番号だけ簡単に添えています。</div>
+        <div class="quizToolbar"><button onclick="resetAllChecker()">全部やり直す</button></div>
+        <div id="scoreBarChecker" style="position:sticky;top:53px;background:var(--bg);padding:10px 0;z-index:5;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);margin-bottom:16px;font-size:.82rem;color:var(--sub);">
+          <span>全50問中 <span class="num" id="answeredCountC">0</span> 問 回答済み</span>
+          <span>正解 <span class="num" id="correctCountC">0</span> 問</span>
+        </div>
+        <div id="checkerArea"></div>
+      </div>
+
+      <!-- ============ 練習問題タブ ============ -->
+      <div class="panel" id="panel-quiz">
+        <div class="note">💡 これは元の試験問題の転載ではなく、出題されていた知識ポイントをもとに書き直した<b>オリジナル問題</b>です。何度解いても大丈夫。「この問題をやり直す」で個別に、「全部やり直す」で全50問リセットできます。</div>
+        <div class="quizToolbar"><button onclick="resetAll()">全部やり直す</button></div>
+        <div id="scoreBar">
+          <span>全50問中 <span class="num" id="answeredCount">0</span> 問 回答済み</span>
+          <span>正解 <span class="num" id="correctCount">0</span> 問</span>
+        </div>
+        <div id="quizArea"></div>
+      </div>
+
+      <!-- ============ 解答一覧タブ ============ -->
+      <div class="panel" id="panel-answers">
+        <div class="note">出典：2026年4月 養成講習 習得度確認試験－1（学科・全50問）／地域連携プラットフォーム作成。番号は元試験の解答番号です。</div>
+        <table>
+          <thead><tr><th>問</th><th>正解</th><th>ワンポイント</th></tr></thead>
+          <tbody id="answerTable"></tbody>
+        </table>
+      </div>
+
+      <!-- ============ 用語集タブ ============ -->
+      <div class="panel" id="panel-glossary"></div>
+
+      <!-- ============ 理論家ポイントタブ ============ -->
+      <div class="panel" id="panel-theory"></div>
+
+      <!-- ============ 論述タブ ============ -->
+      <div class="panel" id="panel-ronbun"></div>
+
+    </main>
+
+    <footer>キャリコン学びピクニック｜非公開ページ（noindex）｜オリジナル練習問題・オリジナル解説</footer>
+  </div>
+
+<script>
+  const PASSWORD = "moyan";
+  function checkPw(){
+    const val = document.getElementById('pw').value;
+    if(val === PASSWORD){
+      document.getElementById('gate').style.display='none';
+      document.getElementById('content').style.display='block';
+      renderChecker();
+      renderQuiz();
+      renderAnswers();
+      renderGlossary();
+      renderTheory();
+      renderRonbun();
+    } else {
+      document.getElementById('err').textContent = '合言葉が違うみたい。もう一度試してね。';
+    }
+  }
+  document.getElementById('pw').addEventListener('keydown', e=>{ if(e.key==='Enter') checkPw(); });
+
+  function showTab(name){
+    document.querySelectorAll('nav.tabs button').forEach(b=> b.classList.toggle('active', b.dataset.tab===name));
+    document.querySelectorAll('.panel').forEach(p=> p.classList.remove('active'));
+    document.getElementById('panel-'+name).classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  // ────────────────────────────────────────────
+  // 1) 練習問題（オリジナル書き下ろし・全50問）
+  // ────────────────────────────────────────────
+  const quiz = [
+    {cat:"職業能力開発の実態", q:"厚生労働省の調査でみられる、企業規模とキャリアコンサルティング導入率の関係として正しいのはどれか。",
+     choices:["企業規模が大きいほど、導入している事業所の割合が高い傾向にある","企業規模が大きいほど、導入している事業所の割合が低い傾向にある","企業規模と導入率にはまったく関係が見られない","非正社員に対する導入率の方が、正社員より高い傾向にある"],
+     correct:0, explain:"導入率は規模が大きい企業ほど高い傾向。「規模が大きいほど低い」に逆転させる出題が定番。"},
+    {cat:"キャリアコンサルティングの意義", q:"キャリアコンサルティングの基本的な考え方について、最も適切なものはどれか。",
+     choices:["相談者一人ひとりを独自でユニークな存在として尊重する人間観に立っている","組織内で行う場合は、常に会社側の立場を優先すべきである","メンタルヘルス支援と復職支援は、完全に別の専門家に任せるべきで関与しない","文化的な多様性は扱うが、個人の個性の違いは対象外である"],
+     correct:0, explain:"「個の尊重」＝一人ひとりを独自な存在として捉える人間観が基本。組織内でも個人の立場を軽視しない。"},
+    {cat:"倫理・多重関係", q:"キャリアコンサルタントの倫理に関する記述のうち、不適切なものはどれか。",
+     choices:["多重関係には、支援を通じて生じた関係だけでなく、支援以前からあった関係も含まれる","多重関係が生じると、守秘義務など他の倫理規定に抵触するおそれが高まる","相談者が未成年であれば、保護者に面接内容を伝えることに特に問題はない","自殺の危険が強く疑われる場合は、本人の意向より安全確保を優先することがある"],
+     correct:2, explain:"未成年でも本人の信頼関係・プライバシーへの配慮が必要で、無条件の開示は不適切。命に関わる緊急時は例外的に安全優先の対応もありうる。"},
+    {cat:"キャリアコンサルティングの定義", q:"キャリアコンサルティングの説明として、最も不適切なものはどれか。",
+     choices:["職業選択、職業生活設計、職業能力の開発・向上に関する相談に応じ、助言・指導を行うことをいう","「仕事」にはボランティア活動や地域活動なども含めて考えることができる","相談者の職業選択と職業生活に関する問題解決の専門的支援に限定される活動である","働き甲斐や生き甲斐まで含めたキャリア形成を支援するものである"],
+     correct:2, explain:"「問題解決に限定」という表現は狭すぎる。実際は問題解決だけでなく支援・促進全般を含む幅広い活動。"},
+    {cat:"理論家の基礎知識①", q:"キャリア理論に関する記述のうち、正しいものの組み合わせはどれか。\nア．シュロスバーグは組織心理学を背景とする理論家である。\nイ．スーパーのライフ・キャリア・レインボーは、人生の様々な役割が年齢とともに変遷する様子を表す。\nウ．ホランドのタイプ理論は、個人の特性に合った職業選択を支援する枠組みである。\nエ．キャリア・アンカーは一度形成されると、その後変化することはない。",
+     choices:["アとイ","イとウ","ウとエ","アとエ"],
+     correct:1, explain:"シュロスバーグは組織心理学ではなく成人発達心理学系。アンカーは経験を通じて自覚・変化しうる。正しいのはイ・ウ。"},
+    {cat:"理論家の基礎知識②（シャイン）", q:"シャインの理論に関する記述のうち、適切なものはいくつあるか。\nア．シャインは個人のキャリア自己概念のパターンを「キャリア・アンカー」と呼んだ\nイ．キャリアは「内的キャリア」と「外的キャリア」の2軸で捉えられるとした\nウ．「キャリア・サバイバル」は個人と組織の役割戦略を見直す手続きで、いくつかのステップから成る\nエ．キャリア開発の本質は、時間の経過に伴う個人と組織の相互作用にある",
+     choices:["1つ","2つ","3つ","4つ"],
+     correct:3, explain:"ア・イ・ウ・エすべて適切な内容。キャリア・アンカーの数（12かどうか等の細部）を問う設問では要注意。"},
+    {cat:"クランボルツ", q:"クランボルツの計画的偶発性理論に関する記述のうち、最も不適切なものはどれか。",
+     choices:["偶然の出来事をチャンスに変えるには、複数のスキルが必要だとした","変化する仕事環境に対応するため、スキル・興味・信念などの学習を促すことを重視する","職業選択に影響する要因として、先天的資質・環境条件・学習経験・課題対応スキルを挙げた","新しい考えや経験に対して、ただオープンであり続けることだけが重要だとした"],
+     correct:3, explain:"オープンさだけでは不十分で、体系的な学習経験の蓄積とスキルの獲得が理論の核。単純化した選択肢が不適切になりやすい。"},
+    {cat:"ギンズバーグ", q:"ギンズバーグの職業発達理論に関する記述のうち、最も適切なものはどれか。",
+     choices:["初期理論では、職業選択のプロセスは不可逆的（後戻りできない）であるとした","後年の修正でも、変化する目標と現実との適合を繰り返し再評価するという発達的観点は一貫している","職業発達を「成長期」「探索期」「確立期」「維持期」「下降期」の5段階とする分類はギンズバーグが提唱した","代表的な著書に『職業の選択』（1909年）がある"],
+     correct:1, explain:"ギンズバーグは当初「不可逆的」としたが後に修正、生涯を通じた再評価という発達的観点は保持された。5段階論はスーパー、『職業の選択』はパーソンズの著書。"},
+    {cat:"認知行動療法", q:"認知行動療法に関する記述のうち、誤っているものはどれか。",
+     choices:["悩みの原因を「〜すべき」といった歪んだ認知に求める考え方をとる","行動療法は行動そのものを、認知療法は思考が行動に及ぼす影響を問題にする","論理療法はエリスが、認知療法はベックが提唱した","セルフ・モニタリングなどの技法が用いられる"],
+     correct:2, explain:"提唱者が入れ替わっている選択肢が誤り。論理療法＝エリス／認知療法＝ベックが正しい対応。"},
+    {cat:"ロジャーズ", q:"ロジャーズに関する記述のうち、誤っているものはどれか。",
+     choices:["「自己成長論」と呼ばれる理論を展開し、クライエント中心療法を提唱した","児童相談の現場で精神分析的な治療を試みたが、うまくいかず指示的でない関わりへと転換した","カウンセリング理論は「非指示療法」→「クライエント中心療法」→「パーソンセンタード・アプローチ」と変遷した","終始一貫して精神分析の立場を保持し、晩年までその手法を変えなかった"],
+     correct:3, explain:"ロジャーズは精神分析の限界を経験し、非指示的アプローチへと理論を発展させた人物。「一貫して精神分析」は誤り。"},
+    {cat:"カウンセリングの基本姿勢", q:"カウンセリングの基本的な関わり方として、最も適切なものはどれか。",
+     choices:["相談者が安心して話せる、穏やかで話しやすい雰囲気をつくることを大切にする","相談者の反応を引き出すため「なぜ」「どうして」を繰り返し問いかける","相談者の家族状況は立ち入るべきでないので、一切質問しない","相談者の話は要点だけ聞き、詳しい感情面には踏み込まない"],
+     correct:0, explain:"安心・信頼できる雰囲気づくりが基礎。「なぜ」の連発は防御的にさせやすく、開かれた質問が望ましい。"},
+    {cat:"検査の活用方針", q:"転職を考えている相談者への対応として、最も適切なものはどれか。",
+     choices:["転職希望者には自己分析が済んでいるはずなので、適性検査や興味検査は原則不要である","適性検査・興味検査は、転職希望者にとっても自己理解を深める有効なツールになりうる","検査結果は絶対的な指標なので、相談者の意向より検査結果を優先すべきである","検査は初回相談時にのみ実施し、その後は活用しない"],
+     correct:1, explain:"検査は転職希望の有無にかかわらず、自己理解を助ける有効な手段として活用できる。"},
+    {cat:"アセスメントツール", q:"職業に関する心理検査についての説明として、適切なものはどれか。",
+     choices:["GATB（厚生労働省編一般職業適性検査）は、9種類の適性能力を測定する標準的な検査である","VRTは職業興味のタイプ（RIASECモデル）を測定するホランド理論ベースの検査である","VPIは職業選択への準備度（進路成熟度）を測定する検査である","キャリア・インサイトは紙筆式のみで実施され、コンピュータでは利用できない"],
+     correct:0, explain:"GATB＝9適性能の標準検査。VRT/VPIの役割が入れ替わったり、キャリア・インサイト（PC利用の総合ツール）の説明を誤らせる選択肢に注意。"},
+    {cat:"検査の信頼性・妥当性", q:"心理検査の「標準化」の説明として、最も適切なものはどれか。",
+     choices:["受検者全員が同じ正答率になるよう問題を調整すること","測定したい内容を実際に正しく測れているかどうかということ","同じ人が繰り返し受けても、結果が安定して一貫していること","多数のデータ（規範集団）と比較して、結果の位置づけを判断できるようにすること"],
+     correct:3, explain:"標準化＝規範集団との比較基準を設定すること。「正答率を一定にする」は誤った説明で、妥当性・信頼性の定義と混同させる出題に注意。"},
+    {cat:"職業情報サイト", q:"job tag（日本版O-NET）に関する説明として、最も適切なものはどれか。",
+     choices:["求人情報を掲載し、応募までできる求人サイトである","職業ごとの仕事内容・必要なスキルなどを調べられる職業情報・自己診断サイトである","ハローワークの求職者専用サイトで、一般公開されていない","主に企業の採用担当者向けに作られた人材データベースである"],
+     correct:1, explain:"job tagは求人応募サイトではなく、職業理解・自己診断のための情報提供サイト。求人サイトと混同させる出題が定番。"},
+    {cat:"ハローワークの活用", q:"ハローワークインターネットサービスに関する記述として、適切なものはどれか。",
+     choices:["求人情報は年に一度だけ更新される","求職申込みをしなくても、一般に公開されている求人情報の閲覧ができる","掲載されている職業分類は、社会的な需給動向とは無関係に固定されている","利用には必ず有料の会員登録が必要である"],
+     correct:1, explain:"求人情報の閲覧自体は求職申込み不要で誰でも可能。更新頻度や利用条件をすり替える選択肢に注意。"},
+    {cat:"職業能力開発計画", q:"事業内職業能力開発計画に関する記述として、正しいものはどれか。",
+     choices:["職業能力開発促進法により、すべての事業所に作成が義務づけられている","作成は努力義務であり、すべての事業所が作成しているわけではない","作成した場合、厚生労働省への提出が法律上必須である","この計画の作成は、正社員以外の労働者には適用されない"],
+     correct:1, explain:"事業内職業能力開発計画の作成は努力義務。「絶対的な義務」とする選択肢は誤り。"},
+    {cat:"第11次職業能力開発基本計画", q:"第11次職業能力開発基本計画に関する記述のうち、最も不適切なものはどれか。",
+     choices:["マザーズハローワークなど、対象者に応じた支援拠点の活用が盛り込まれている","オンラインカウンセリングなど、新しい相談手法の活用が盛り込まれている","セルフ・キャリアドックの普及が重点施策の一つとして位置づけられている","SNSを活用した相談支援を行うには、従来とは全く異なる新しい資格の取得が必須とされている"],
+     correct:3, explain:"SNS活用などの新しい手法は、既存の知識・技能を活かして対応する前提であり、「全く新しい資格が必須」というのは誇張・誤り。"},
+    {cat:"人事評価の誤差", q:"人事考課における評価誤差の説明として、正しいものはどれか。",
+     choices:["ある一つの目立った特徴に引っ張られて、他の項目まで高く（または低く）評価してしまうのは「対比誤差」である","自分自身や他の評価対象と比べることで生じる評価のずれは「ハロー効果」と呼ばれる","評価が「良い」にも「悪い」にも偏らず、無難に真ん中へ寄ってしまうのは「中心化傾向」である","関連のない評価項目を勝手に結びつけて同じような評価をつけてしまうのは「中心化傾向」である"],
+     correct:2, explain:"ハロー効果と対比誤差の説明が入れ替わっている選択肢、論理的誤差と中心化傾向を混同させる選択肢に注意。正しいのは中心化傾向の説明。"},
+    {cat:"労務管理理論", q:"労務管理・動機づけに関する理論家の対応として、正しいものはどれか。",
+     choices:["テイラーは、仕事の手順・時間を科学的に分析し、効率的な管理を追求する立場をとった","ハーズバーグは、欲求を5段階のピラミッドで説明する理論を提唱した","マズローは、満足要因と不満足要因を分ける二要因理論を提唱した","テイラーは、労働者を自己実現欲求で動く存在として捉える人間観に立っていた"],
+     correct:0, explain:"欲求段階説はマズロー、二要因理論はハーズバーグ。テイラーは経済的報酬で動く人間観（科学的管理法）が特徴。"},
+    {cat:"解雇予告", q:"労働基準法における解雇予告に関する記述として、適切なものはどれか。",
+     choices:["解雇予告なしに、いつでも即日解雇することができる","予告期間経過後も労働者が継続して働いている場合、黙示的に労働契約が更新されたとみなされうる","解雇予告手当を支払えば、予告期間を置く必要は一切ない","解雇予告のルールは、正社員にのみ適用される"],
+     correct:1, explain:"原則30日前の予告または予告手当の支払いが必要。予告期間経過後も就労が続く場合は黙示の更新とみなされうる、という発展論点も出題される。"},
+    {cat:"労働市場の動向", q:"近年の労働市場の動向に関する記述として、適切なものはどれか。",
+     choices:["若年層は、他の年齢層に比べて転職による入職率が低い傾向にある","若年層は、他の年齢層に比べて転職による入職率が高い傾向にある","転職入職率は、年齢層によってほとんど差がない","副業・兼業を行う労働者の割合は年々減少している"],
+     correct:1, explain:"若年層ほど転職による入職率が高いという労働市場の特徴が問われやすい。"},
+    {cat:"労働力の構造統計", q:"労働力の構造に関する統計として、適切なものはどれか。",
+     choices:["65歳以上の労働者では、非正規雇用の割合が5割を超えている","M字カーブは近年、より深く落ち込む傾向が強まっている","労働力人口には、完全失業者は含まれない","非正規雇用の割合は、若年層ほど高い傾向にある"],
+     correct:0, explain:"65歳以上では非正規雇用が過半数を占める実態がある。M字カーブは近年浅くなる傾向、完全失業者は労働力人口に含まれる点に注意。"},
+    {cat:"男女雇用機会均等法", q:"男女雇用機会均等法に関する記述として、最も不適切なものはどれか。",
+     choices:["女性が構造的に不利な状況にある場合の優遇措置（ポジティブアクション）は、この法律で禁止されている","採用・配置・昇進における性別を理由とした差別を禁止している","妊娠・出産等を理由とする不利益取扱いも禁止の対象となる","母子保健指導に必要な時間の確保など、母性健康管理の措置も定められている"],
+     correct:0, explain:"ポジティブアクションは法で「禁止」ではなく「認められている」。禁止と許容を逆にする出題に注意。"},
+    {cat:"労働条件の法的効力", q:"労働条件に関する法規制の説明として、正しいものはどれか。",
+     choices:["法定基準を下回る労働条件を契約で定めた場合でも、契約全体がそのまま有効になる","法定基準を下回る部分は無効となり、その部分には法律で定める基準が適用される","労働条件は当事者間の合意があれば、どのような内容でも自由に定められる","パートタイム労働者には労働基準法の最低基準は適用されない"],
+     correct:1, explain:"労働基準法・パートタイム労働法などの最低基準を下回る合意は、その部分が無効となり法定基準に置き換わる。"},
+    {cat:"社会保険各法", q:"労働・社会保険に関する記述として、正しいものはどれか。",
+     choices:["雇用保険の失業給付を受けるには、離職票を持って公共職業安定所に出向く必要がある","労働者災害補償保険法は、アルバイトには適用されない","労働者の安全配慮義務は、労働契約法ではなく労働基準法にのみ定められている","高年齢者雇用安定法により、募集・採用での年齢上限設定は一切認められていない"],
+     correct:0, explain:"労災保険はアルバイトにも適用され、安全配慮義務は労働契約法に明文化されている。年齢上限も一定要件下で認められる場合がある。"},
+    {cat:"社会保障制度", q:"社会保障制度に関する記述のうち、不適切なものはどれか。",
+     choices:["国民年金の被保険者は、第1号・第2号・第3号被保険者の3つに分類される","75歳以上の医療費自己負担割合は、原則として1割（所得に応じて2割・3割）である","介護保険の「要介護者」には、40〜64歳で特定疾病により要介護と認定された人も含まれる","育児休業は、保育所に入れない等の事情があっても、1歳を過ぎたら延長は一切できない"],
+     correct:3, explain:"保育所に入れない等の条件により1歳6か月、さらに2歳まで延長が可能。「延長は一切できない」が誤り。国民年金は3分類が正しい。"},
+    {cat:"キャリア教育", q:"中央教育審議会答申にみるキャリア教育に関する記述のうち、適切なものの組み合わせはどれか。\nア．キャリア教育は特別活動や総合的な学習の時間だけを通じて行うべきものである\nイ．キャリア教育は中学校以降、組織的・体系的に行われるべきである\nウ．キャリア教育は社会的・職業的自立に必要な力を育て、キャリア発達を促す教育である\nエ．基礎的・汎用的能力とは、人間関係形成・社会形成能力、自己理解・自己管理能力、課題対応能力、キャリアプランニング能力の4つである",
+     choices:["アとイ","イとウ","ウとエ","アとエ"],
+     correct:2, explain:"キャリア教育は特別活動等に限定せず、教育活動全体を通じて行うもの。正しいのはウ・エ。"},
+    {cat:"ストレスチェック制度", q:"ストレスチェック制度に関する記述のうち、不適切なものはどれか。",
+     choices:["主な目的は、メンタルヘルス不調を未然に防ぐ一次予防である","事業者はすべての労働者の個人結果を必ず確認しなければならない","実施者は医師・保健師や、所定の研修を修了した看護師・精神保健福祉士・公認心理師等に限られる","高ストレス者本人の希望があれば、医師による面接指導が実施される"],
+     correct:1, explain:"個人結果は労働者本人の同意がなければ事業者に開示されない（労働者に秘密保持権がある）。「必ず確認しなければならない」は誤り。"},
+    {cat:"精神疾患の鑑別", q:"精神疾患の特徴に関する記述として、適切なものはどれか。",
+     choices:["解離性障害では、記憶の一部が抜け落ちたり、自分が自分でない感覚（現実感の喪失）が生じることがある","双極性障害の典型的な症状は、幻覚・妄想などの陽性症状と、意欲低下などの陰性症状である","適応障害では、躁状態とうつ状態を交互に繰り返す症状がみられる","統合失調症は、明確なストレス要因により引き起こされる情緒・行動面の症状と定義される"],
+     correct:0, explain:"陽性・陰性症状は統合失調症の特徴。躁・うつを繰り返すのは双極性障害。明確なストレス因による情緒・行動症状は適応障害の定義に近い。"},
+    {cat:"職場復帰支援", q:"メンタルヘルス不調で休業した労働者の職場復帰支援に関する記述のうち、最も適切なものはどれか。",
+     choices:["最終的な復職の可否は、事業者と主治医だけで決定するのが原則である","復職の際は、原則として必ず配置転換を行うべきである","復職直後は労働負荷を軽減し、段階的に元の業務へ戻していく配慮が必要である","休業中の労働者には、経済的補償や相談先の情報提供を行うべきではない"],
+     correct:2, explain:"復職は本人を含む関係者の協議で判断し、配置転換は状況に応じた選択肢の一つ。経済的支援・相談支援の提供は欠かせない。"},
+    {cat:"スーパーの発達段階", q:"スーパーのキャリア発達段階理論に関する記述のうち、最も不適切なものはどれか。",
+     choices:["各ライフステージの課題は、複数の発達課題が連続したものであるとした","キャリア発達を人間の発達と結びつけ、生涯にわたって変化するものと捉えた","発達段階の間には、暦年齢にゆるやかに関連した移行期があるとした","「探索段階」の課題は、仕事世界への志向性や働く意味の理解を発展させることであるとした"],
+     correct:3, explain:"「志向性・働く意味の理解の発展」は成長期の課題。探索段階の課題は「職業選択を試行してみること」に近い内容で、ここが入れ替えられやすい。"},
+    {cat:"青年期の発達課題", q:"青年期後期の発達に関する記述のうち、最も適切なものはどれか。",
+     choices:["社会的ひきこもりは、明確な精神障害が第一の原因であるものに限定される","アイデンティティを十分に探究している青年ほど、相手への敬意を示しつつ自分の意見も遠慮なく主張できる傾向がある","青年を「大人でも子どもでもない不安定な存在」として捉え、モラトリアムと名づけたのはレヴィンである","各発達段階で社会的に期待される能力・役割を「発達課題」と定義したのはジェラットである"],
+     correct:1, explain:"社会的ひきこもりは多要因的で精神障害だけが原因とは限らない。モラトリアムの概念はエリクソンに近く、発達課題の定義はハビガーストやスーパーの領域。"},
+    {cat:"人生の転機", q:"人生の転機（トランジション）に関する記述のうち、不適切なものはどれか。",
+     choices:["シュロスバーグは、転機を乗り越えるには自己管理の力が大切だとした","レビンソンは、安定期と過渡期を繰り返しながら人は発達するとした","ブリッジズは、転機の最初の段階を「新しい始まり」であるとした","バンデューラは、偶然の出来事も、起きた後は人の選択行動に影響を与えると考えた"],
+     correct:2, explain:"ブリッジズの転機は「終わり→中立地帯→新しい始まり」の順。「新しい始まり」を最初に置く選択肢が誤り。"},
+    {cat:"障害者雇用", q:"障害者雇用に関する記述のうち、適切なものはいくつあるか。\nア．一定規模以上の事業主は、障害者の雇用割合を「法定雇用率」以上にする義務がある\nイ．義務を果たさない事業主には、ハローワークから行政指導が行われうる\nウ．従業員50人以上の企業は、障害者を必ず2人以上雇用しなければならない\nエ．障害者を5人以上雇用する事業所では、障害者職業生活相談員の選任が必要である",
+     choices:["1つ","2つ","3つ","4つ"],
+     correct:2, explain:"ウは「人数固定」ではなく「法定雇用率（％）」で定められている点が誤り。ア・イ・エは適切で、正しいのは3つ。"},
+    {cat:"発達障害者支援", q:"発達障害のある相談者への対応として、最も不適切なものはどれか。",
+     choices:["求人票を一緒に見ながら、仕事内容や必要な技能を具体的に説明するなど、意図的な情報提供を行う","状況に応じて作業の質・量を柔軟に調整することが苦手な場合があると理解して支援する","発達障害は精神障害に含まれ、精神障害者保健福祉手帳の取得や雇用率算定の対象になりうる","特性に配慮した職場での調整は、ジョブコーチが関わらない方が望ましい"],
+     correct:3, explain:"ジョブコーチによる職場内調整は発達障害者支援において重要な役割。「関わらない方がよい」は不適切。"},
+    {cat:"カウンセリングスキル", q:"カウンセリングにおける関わり方として、最も適切なものはどれか。",
+     choices:["過去の原因究明に焦点を当てることが、現在の問題解決より優先される","カウンセラー自身が相談者の感情に巻き込まれる傾向に、自ら気づいておくことが必要である","会話を広げるために「なぜ」「どうして」を繰り返し尋ねる","相談者のプライバシーに配慮し、家族状況は本人が話すまで一切扱わない"],
+     correct:1, explain:"逆転移（自分の感情反応）への気づきは重要な専門性。「なぜ」の連発は防御的にさせやすく、家族状況も丁寧に扱うべき情報。"},
+    {cat:"グループアプローチ", q:"グループアプローチに関する記述のうち、最も適切なものはどれか。",
+     choices:["グループ指導・ガイダンス・カウンセリングなど、目的とニーズに応じて多様な形態から適切なものを選ぶ","メンバーの態度変容を促すため、リーダーは一切介入すべきではない","個人的な特徴の発揮よりも、集団への適応・協調が常に優先される","集団としての合意形成そのものが、グループアプローチの主目的である"],
+     correct:0, explain:"目的・ニーズに応じた柔軟な形態選択が重要。リーダーの適切な介入、個人と集団のバランス、個人の気づき・成長が本来の目的。"},
+    {cat:"構成的エンカウンターグループ", q:"構成的エンカウンターグループ（SGE）に関する記述のうち、最も不適切なものはどれか。",
+     choices:["自己開示や感情交流を通じた自己発見とふれあいを目標とする","あらかじめ用意されたエクササイズに沿って進行が計画されている","対になる「非構成的エンカウンターグループ」は、事前の計画に沿って厳密に進行する","守秘義務・非批判・強要禁止などのルールのもとで実施される"],
+     correct:2, explain:"非構成的エンカウンターグループは、あらかじめプランを立てず自由に展開していく形式。構成的グループとの違いが逆になっている選択肢が誤り。"},
+    {cat:"方策の実行", q:"キャリア相談における「方策の実行」段階の支援として、最も適切なものはどれか。",
+     choices:["いくつかの方策のメリットを比較するだけで十分である","方策の内容・目的・進め方・想定される結果を、相談者にわかりやすく説明する","相談者の価値観との適合よりも、実現可能性の高さを最優先する","方策を選んだ後は、実行と結果の検証はすべて相談者に任せてよい"],
+     correct:1, explain:"方策の内容・目的・プロセス・結果の丁寧な説明が必要。価値観との適合確認や、実行後のフォローアップへの関与も重要。"},
+    {cat:"自己理解支援", q:"検査を活用した自己理解支援に関する記述のうち、最も適切なものはどれか。",
+     choices:["検査結果は相談者自身の主観的な理解よりも常に優先されるべきである","検査結果のフィードバックは簡潔に留め、深入りしないほうがよい","相談者のニーズに関わらず、同じ検査を一律に実施するのが望ましい","検査結果は自己理解の一側面に過ぎず、拡大解釈しないよう注意する"],
+     correct:3, explain:"検査結果は一つの手がかりであり、絶対視や拡大解釈は避ける。丁寧なフィードバックと相談者のニーズに応じた検査選択が重要。"},
+    {cat:"初期段階の面談", q:"相談の初期段階における対応として、最も適切なものはどれか。",
+     choices:["信頼関係ができる前に、まず詳細な個人情報の開示を求める","相談の進め方（プロセス）を説明し、相談者の理解を確認する","効率を優先し、物理的な環境設定にはあまり時間をかけない","ラポール形成より先に、具体的な助言を行うことを優先する"],
+     correct:1, explain:"初期段階ではラポール形成が最優先。信頼関係構築前の情報開示要求や、助言を急ぐ対応は非効果的。"},
+    {cat:"企業内キャリア支援の普及", q:"女性活躍推進法の趣旨も踏まえた企業内キャリア支援として、最も適切なものはどれか。",
+     choices:["女性の職域開発と仕事・家庭の両立支援を組み合わせたキャリアプラン支援を行う","企業内キャリア教育は、新入社員層のみを対象とすればよい","キャリアコンサルタントが求人紹介（職業紹介）業務まで直接担う","スペシャリスト育成の道筋だけを整備すれば十分である"],
+     correct:0, explain:"職域開発と両立支援の統合的な支援が推進法の趣旨に合う。キャリア教育は全階層対象、職業紹介業務はキャリアコンサルタントの役割外、多様なキャリアパスの整備も課題。"},
+    {cat:"組織への働きかけ", q:"キャリアコンサルタントが組織（環境）に働きかける対応として、最も適切なものはどれか。",
+     choices:["相談者の転職意思は、組織の都合を優先してできるだけ抑える方向で対応する","社内の相談体制整備として、先輩社員による相談窓口の活用は有効な選択肢の一つである","人事考課に関する相談は、扱うべき対象から除外する","相談内容を集約し、課題を経営層に提案することは避けるべきである"],
+     correct:1, explain:"個別の相談で見えた課題を集約し、組織改善につなげる提案機能が重要。転職意思の抑制や課題の握りつぶしは相談者の利益に反する。"},
+    {cat:"ネットワークの構築", q:"キャリアコンサルタントによるネットワーク構築・連携に関する記述のうち、最も不適切なものはどれか。",
+     choices:["若年者支援では、複数の関係機関と連携することが重要である","企業・経済団体と連携し、職場体験の機会づくりに関わることがある","メンタルヘルスからの復帰支援では、産業医など多職種との連携が重要である","相談者の利益より、常に組織の経営方針を優先して連携先を選ぶべきである"],
+     correct:3, explain:"経営方針を相談者の利益や倫理より常に優先するのは不適切。多機関・多職種との連携が本来の望ましい姿。"},
+    {cat:"自己研鑽・スーパービジョン", q:"キャリアコンサルタントの自己研鑽に関する記述のうち、最も適切なものはどれか。",
+     choices:["第三者から客観的なフィードバックを受けるスーパービジョンは、専門性向上に重要な機会である","経験を積めば、自分の力だけで対応することが望ましい姿である","相談者の課題はすべて自力で解決できるようになるべきで、他機関へのリファーは避けるべきである","スーパービジョンは実務経験の代わりにはならないので、受ける意味は薄い"],
+     correct:0, explain:"スーパービジョンによる客観的フィードバックは自己の盲点への気づきを促す重要な機会。自力対応への固執やリファー回避は望ましくない。"},
+    {cat:"リファーと複合資格", q:"リファーや専門性に関する記述のうち、最も適切なものはどれか。",
+     choices:["専門外の相談は、他機関へリファーした後は関わりを終えるのが原則である","キャリアコンサルタントが他の専門資格も併せ持つことは、視野を広げる点で意義がある","相談者の訴えを十分に受け止めないまま、早期にリファーすることが望ましい","訓練が不十分な検査でも、依頼があれば積極的に実施すべきである"],
+     correct:1, explain:"複合資格の保有は視野拡大につながり推奨される。リファー後も連携を継続する姿勢、丁寧な傾聴を経たリファー、訓練不十分な検査は実施しない判断が重要。"},
+    {cat:"ワークショップ運営", q:"ワークショップ実施の留意点として、最も適切なものはどれか。",
+     choices:["アイスブレイクは緊張緩和と関係構築に有効である","創発性を重視する場では、事前の計画は不要である","座席配置は目的にかかわらず、常に同じ形式を使うべきである","参加者同士の相互作用より、進行の効率を最優先すべきである"],
+     correct:0, explain:"アイスブレイクは有効な手法。創発性を重視する場でも事前の目的設計は必須で、座席配置も目的に応じて柔軟に選ぶべき。"},
+    {cat:"スーパービジョンの機能", q:"スーパービジョンに関する記述のうち、最も適切なものはどれか。",
+     choices:["技法の訓練と理論的な学びを統合して行う学習の場である","スーパーバイザーは、経験の浅い人でも務まる役割である","スーパーバイジー自身のセルフケアには、特に関係のない仕組みである","スーパーバイザーがスーパーバイジーに対してキャリアカウンセリングを行うことは想定されない"],
+     correct:0, explain:"技法訓練と理論学習を統合した学びの場。スーパーバイザーには経験・適格性が求められ、セルフケア機能も含む複数の効果を持つ。"},
+    {cat:"キャリア概念の本質", q:"様々なキャリアの定義に共通してみられる要素として、最も適切なものはどれか。",
+     choices:["個別性・時間的な経過・環境との相互作用という3つの視点","クランボルツの学習理論に固有の要素","ロジャーズが示したカウンセラーの基本的態度","キャリアコンサルティングの実施手順（プロセス）そのもの"],
+     correct:0, explain:"多くのキャリア定義に共通するのは、個別性・時間性・環境との相互作用という3つの視点。他の選択肢は特定理論家や実務プロセスの話にすり替えたもの。"}
+  ];
+
+  let answered = 0, correctNum = 0;
+
+  function renderQuiz(){
+    const area = document.getElementById('quizArea');
+    area.innerHTML = quiz.map((item, idx) => `
+      <div class="qcard" id="card-${idx}">
+        <div class="qmeta">問${idx+1}／${item.cat}</div>
+        <div class="qtext">${item.q}</div>
+        ${item.choices.map((c,ci)=>`<button class="choice" onclick="select(${idx},${ci})" id="c-${idx}-${ci}">${c}</button>`).join('')}
+        <div class="explain" id="ex-${idx}">${item.explain}</div>
+        <button class="resetOne" id="reset-${idx}" onclick="resetOne(${idx})">この問題をやり直す</button>
+      </div>
+    `).join('');
+  }
+
+  function select(qi, ci){
+    const item = quiz[qi];
+    const already = document.getElementById(`c-${qi}-0`).disabled;
+    if(already) return;
+    item.choices.forEach((_, i)=>{
+      const btn = document.getElementById(`c-${qi}-${i}`);
+      btn.disabled = true;
+      if(i === item.correct) btn.classList.add('correct');
+      else if(i === ci) btn.classList.add('wrong');
+    });
+    document.getElementById(`ex-${qi}`).classList.add('show');
+    document.getElementById(`reset-${qi}`).classList.add('show');
+    answered++;
+    if(ci === item.correct) correctNum++;
+    updateScore();
+  }
+
+  function resetOne(qi){
+    let wasAnswered = document.getElementById(`c-${qi}-0`).disabled;
+    const item = quiz[qi];
+    item.choices.forEach((_, i)=>{
+      const btn = document.getElementById(`c-${qi}-${i}`);
+      btn.disabled = false;
+      btn.classList.remove('correct','wrong');
+    });
+    document.getElementById(`ex-${qi}`).classList.remove('show');
+    document.getElementById(`reset-${qi}`).classList.remove('show');
+    if(wasAnswered){ answered--; }
+    updateScore();
+  }
+
+  function resetAll(){
+    quiz.forEach((_, idx)=> resetOne(idx));
+    answered = 0; correctNum = 0;
+    updateScore();
+  }
+
+  function updateScore(){
+    document.getElementById('answeredCount').textContent = answered;
+    document.getElementById('correctCount').textContent = correctNum;
+  }
+
+  // ────────────────────────────────────────────
+  // 1.5) 解答チェック（PDF併用・問題文なし）
+  // ────────────────────────────────────────────
+  // comboLabels: 組み合わせ問題のみ、元の選択肢の記号だけ補足（分かっている回のみ）
+  const comboLabels = {
+    5:  ["①アとイ","②イとウ","③ウとエ","④アとエ"],
+    6:  ["①1つ","②2つ","③3つ","④4つ"],
+    28: ["①アとイ","②イとウ","③アとウ","④ウとエ"],
+    35: ["①1つ","②2つ","③3つ","④4つ"]
+  };
+  let answeredC = 0, correctNumC = 0;
+
+  function renderChecker(){
+    const area = document.getElementById('checkerArea');
+    area.innerHTML = quiz.map((item, idx) => {
+      const qnum = idx + 1;
+      const n = item.choices.length;
+      const labels = comboLabels[qnum] || Array.from({length:n}, (_,i)=>"①②③④⑤"[i] || (i+1));
+      return `
+      <div class="qcard" id="ccard-${idx}">
+        <div class="qmeta">問${qnum}／${item.cat}</div>
+        <div class="qtext" style="font-weight:400;color:var(--sub);font-size:.85rem;">手元のPDFで問${qnum}を読んで、正しいと思う番号を選んでください。</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px;">
+          ${labels.map((lb,ci)=>`<button class="choice" style="width:auto;flex:1;min-width:70px;text-align:center;" onclick="selectC(${idx},${ci})" id="cc-${idx}-${ci}">${lb}</button>`).join('')}
+        </div>
+        <div class="explain" id="cex-${idx}"></div>
+        <button class="resetOne" id="creset-${idx}" onclick="resetOneC(${idx})">この問題をやり直す</button>
+      </div>`;
+    }).join('');
+  }
+
+  function selectC(qi, ci){
+    const item = quiz[qi];
+    const already = document.getElementById(`cc-${qi}-0`).disabled;
+    if(already) return;
+    item.choices.forEach((_, i)=>{
+      const btn = document.getElementById(`cc-${qi}-${i}`);
+      if(!btn) return;
+      btn.disabled = true;
+      if(i === item.correct) btn.classList.add('correct');
+      else if(i === ci) btn.classList.add('wrong');
+    });
+    const isCorrect = ci === item.correct;
+    const ex = document.getElementById(`cex-${qi}`);
+    ex.innerHTML = (isCorrect ? "⭕ 正解！　" : "❌ 不正解。正解は上のハイライトの番号です。　") + item.explain;
+    ex.classList.add('show');
+    document.getElementById(`creset-${qi}`).classList.add('show');
+    answeredC++;
+    if(isCorrect) correctNumC++;
+    updateScoreC();
+  }
+
+  function resetOneC(qi){
+    const item = quiz[qi];
+    let wasAnswered = document.getElementById(`cc-${qi}-0`).disabled;
+    item.choices.forEach((_, i)=>{
+      const btn = document.getElementById(`cc-${qi}-${i}`);
+      if(!btn) return;
+      btn.disabled = false;
+      btn.classList.remove('correct','wrong');
+    });
+    document.getElementById(`cex-${qi}`).classList.remove('show');
+    document.getElementById(`cex-${qi}`).innerHTML = '';
+    document.getElementById(`creset-${qi}`).classList.remove('show');
+    if(wasAnswered){ answeredC--; }
+    updateScoreC();
+  }
+
+  function resetAllChecker(){
+    quiz.forEach((_, idx)=> resetOneC(idx));
+    answeredC = 0; correctNumC = 0;
+    updateScoreC();
+  }
+
+  function updateScoreC(){
+    document.getElementById('answeredCountC').textContent = answeredC;
+    document.getElementById('correctCountC').textContent = correctNumC;
+  }
+
+  // ────────────────────────────────────────────
+  // 2) 解答一覧（元試験の解答番号）
+  // ────────────────────────────────────────────
+  const answers = [
+    [1,"4","企業規模が大きいほど導入率は高い（低くなる、が誤り）"],
+    [2,"1","個の尊重・多様性の両方を扱うのが適切"],
+    [3,"3","未成年でも保護者への無条件開示は不適切"],
+    [4,"3","「職業生活の問題解決」に限定する表現が狭すぎる"],
+    [5,"イ・ウ","シュロスバーグは組織心理学ではない／アンカーは変化しうる"],
+    [6,"ア・イ・ウ・エ（4つ）","キャリア・アンカー／内的外的キャリア／キャリア・サバイバル／相互作用のすべてが適切"],
+    [7,"1","オープンさだけでなく学習経験の蓄積も必要"],
+    [8,"1","ギンズバーグは発達的再評価の観点を一貫して保持"],
+    [9,"3","論理療法＝エリス／認知療法＝ベック（逆にしない）"],
+    [10,"2","精神分析の失敗経験から非指示的アプローチへ転換"],
+    [11,"3","安心・話しやすい雰囲気づくりが基礎"],
+    [12,"2","転職希望でも適性・興味検査は有用"],
+    [13,"1","GATBは9適性能を測る標準検査"],
+    [14,"4","標準化＝規範集団との比較基準（正答率一定ではない）"],
+    [15,"1","job tagは求人サイトではなく職業理解・診断サイト"],
+    [16,"イ・ウ","更新頻度・求職申込要件の記述に誤りあり"],
+    [17,"2","計画作成は努力義務（絶対義務ではない）"],
+    [18,"2","SNS活用は既存知識・技能が前提（新養成要件ではない）"],
+    [19,"2","強い印象による評価上昇は「ハロー効果」（対比誤差ではない）"],
+    [20,"1","テイラーの管理思想の基本原則"],
+    [21,"3","予告期間経過後の継続就労＝黙示的再契約"],
+    [22,"3","若年層の転職入職率が高い"],
+    [23,"2","65歳以上は非正規雇用割合が5割超"],
+    [24,"1","ポジティブアクション（女性優遇措置）は法で認められている"],
+    [25,"4","基準未満の労働条件契約は無効、法定基準が適用"],
+    [26,"1","失業給付受給には離職票持参が必要"],
+    [27,"1","国民年金は第1号・第2号・第3号の3分類（2分類ではない）"],
+    [28,"ウ・エ","ア（特別活動等に限定）が誤り"],
+    [29,"2","労働者には結果の秘密保持権があり、非開示を選べる"],
+    [30,"1","陽性・陰性症状は統合失調症の特徴"],
+    [31,"3","復職初期は負荷軽減・段階的復帰が原則"],
+    [32,"4","「試行する」は探索期の課題（志向性・意味理解は成長期）"],
+    [33,"2","自己主張と敬意のバランスがアイデンティティ探求の特徴"],
+    [34,"3","ブリッジズの順序は「終わり→中立地帯→新しい始まり」"],
+    [35,"ア・イ・エ（3つ）","ウ：50人以上は「率（2.5%）」適用、人数固定ではない"],
+    [36,"4","ジョブコーチによる調整支援は重要（好ましくない、が誤り）"],
+    [37,"2","逆転移など自己の感情反応への気づきが必須"],
+    [38,"1","ニーズに応じた多様な形態選択が重要"],
+    [39,"2","非構成的エンカウンターグループの説明が逆"],
+    [40,"2","方策の内容・目的・プロセス・結果の説明が必要"],
+    [41,"4","検査結果は一側面、拡大解釈は避ける"],
+    [42,"1","信頼関係構築前の情報開示要求は非効果的"],
+    [43,"1","職域開発と両立支援を統合した支援が推進法に適合"],
+    [44,"4","相談課題の集約と経営層への提案が有効"],
+    [45,"4","経営方針を相談者の利益より優先するのは不適切"],
+    [46,"1","第三者評価による客観的フィードバックが成長に必須"],
+    [47,"1","リファー後も連携継続が支援の継続を意味する"],
+    [48,"ア・エ（2つ）","イ（事前計画不要）ウ（座席配置固定）が誤り"],
+    [49,"1","技法訓練と理論学習を統合した学びの場"],
+    [50,"2","個別性・時間性・相互作用が定義の共通要素"]
+  ];
+
+  function renderAnswers(){
+    const tbody = document.getElementById('answerTable');
+    tbody.innerHTML = answers.map(([q,a,note]) =>
+      `<tr><td class="q">${q}</td><td class="a"><span class="pill">${a}</span></td><td>${note}</td></tr>`
+    ).join('');
+  }
+
+  // ────────────────────────────────────────────
+  // 3) 用語集（オリジナル解説）
+  // ────────────────────────────────────────────
+  const glossary = [
+    {cat:"職業能力開発・公的施策", items:[
+      ["OFF-JT","仕事の現場を離れて行う研修（座学・セミナーなど）。現場で覚えるOJT、会社が個人の自主学習を支援する「自己啓発支援」とセットで出やすい。"],
+      ["事業内職業能力開発計画","会社が「うちの社員をこう育てます」と決める育成計画書。作成は努力義務（絶対義務ではない）。"],
+      ["ジョブ・カード制度","自分の職歴・スキル・学びを1冊にまとめる、公的な履歴書兼キャリア記録ツール。"],
+      ["セルフ・キャリアドック","会社が社員に定期的な「キャリアの棚卸し面談」を行う仕組み。"],
+      ["第11次職業能力開発基本計画","国が5年ごとに出す職業能力開発の方針書。マザーズハローワークやオンラインカウンセリングなど新施策のキーワードが頻出。"],
+      ["能力開発基本調査","企業・労働者の学び・研修の実態を厚生労働省が毎年調べる調査。企業規模が大きいほどキャリコン導入率が高い、という傾向がよく問われる。"],
+      ["job tag（日本版O-NET）","国の「仕事図鑑」サイト。求人サイトではなく職業理解・診断のための情報提供サイト。"]
+    ]},
+    {cat:"カウンセリングの基本姿勢・技法", items:[
+      ["ラポール","相談者と支援者の間にできる「安心して話せる信頼関係」。初期段階で最優先すべきもの。"],
+      ["逆転移","カウンセラー自身が相談者との関わりの中で無意識に抱く感情的な反応。自分で気づいていることが専門性として重要。"],
+      ["開かれた質問／閉じた質問","開かれた質問は自由に答えられる質問、閉じた質問ははい/いいえで答えられる質問。「なぜ」の連発は防御的にさせやすい。"],
+      ["非言語コミュニケーション","表情・声のトーン・姿勢など言葉以外で伝わる情報。かかわり行動とセットで安心できる雰囲気づくりの土台。"],
+      ["リファー","専門範囲を超える相談を、より適切な専門家・機関に引き継ぐこと。引き継いだ後も継続的な連携が望ましい。"],
+      ["スーパービジョン","経験豊富な先輩（スーパーバイザー）から相談対応について指導・助言を受ける学びの仕組み。セルフケアにもつながる。"]
+    ]},
+    {cat:"アセスメント・検査", items:[
+      ["GATB","9種類の適性能力を測る標準的な職業適性検査（厚生労働省編一般職業適性検査）。"],
+      ["VRT／VPI","VRTは職業選択への準備度、VPIはホランド理論に基づく職業興味のタイプを測る検査。対応関係が入れ替えられやすい。"],
+      ["キャリア・インサイト","コンピュータを使う厚生労働省開発の総合的な自己理解支援ツール。"],
+      ["信頼性・妥当性・標準化","信頼性＝結果の安定性、妥当性＝測りたいものを測れているか、標準化＝規範集団との比較基準の設定。「標準化＝正答率一定」は誤り。"]
+    ]},
+    {cat:"メンタルヘルス・精神疾患", items:[
+      ["ストレスチェック制度","労働者50人以上の事業場で義務。目的は一次予防。結果は本人同意なしに会社へ開示されない。"],
+      ["統合失調症（陽性・陰性症状）","陽性症状＝幻覚・妄想など本来ないものが出る症状。陰性症状＝意欲低下など本来あるものが失われる症状。"],
+      ["双極性障害","躁状態とうつ状態を波のように繰り返す病気。"],
+      ["適応障害","はっきりしたストレス原因があり、それに対する反応として不調が出る状態。原因が解消されれば回復しやすい。"],
+      ["解離性障害","強いストレスから心を守るため、記憶・意識・自己同一性の一部が切り離される障害。"],
+      ["職場復帰支援","段階的な復帰・負荷軽減が原則。最終判断は本人を含む関係者の協議で行う。"]
+    ]},
+    {cat:"グループアプローチ", items:[
+      ["グループ指導／グループワーク／グループカウンセリング","目的・ニーズに応じて使い分けるグループ支援の総称。"],
+      ["構成的エンカウンターグループ（SGE）","あらかじめ用意されたプログラムに沿って自己開示・感情交流を体験する形式。対になる非構成的グループは自由に展開する形式（ここが逆にされやすい）。"],
+      ["アイスブレイク","冒頭で緊張をほぐし関係づくりを促す活動。事前の目的設計とセットで行うことが重要。"]
+    ]},
+    {cat:"組織・人事・労務管理", items:[
+      ["ハロー効果","一つの目立った特徴に引っ張られて他の面まで評価が歪む心理的偏り。"],
+      ["対比誤差","自分自身や他者と比較することで評価がずれること。"],
+      ["中心化傾向","評価が極端に振れず真ん中に寄ってしまう癖。"],
+      ["論理的誤差","関連のない項目を勝手に結びつけて同じような評価をつけてしまう誤り。"],
+      ["ハーズバーグの二要因理論","満足に関わる動機づけ要因と、不満に関わる衛生要因は別物という考え方。"],
+      ["マズローの欲求段階説","生理的欲求→安全→社会的欲求→承認→自己実現の5段階ピラミッド。"],
+      ["テイラー（科学的管理法）","仕事の手順・時間を科学的に分析する管理法。人を経済的報酬で動く存在として捉える人間観。"]
+    ]},
+    {cat:"労働法規・社会保障", items:[
+      ["解雇予告","原則30日前予告または予告手当が必要。予告期間経過後も継続就労した場合は黙示の再契約とみなされうる。"],
+      ["男女雇用機会均等法","性別による差別を禁止。女性優遇のポジティブアクションは法で認められている。"],
+      ["パートタイム労働法","正社員との不合理な待遇差を禁止。基準未満の労働条件は無効になり法定基準が適用される。"],
+      ["高年齢者雇用安定法","65歳（将来的に70歳）までの雇用機会確保を企業に求める法律。"],
+      ["国民年金の被保険者区分","第1号（自営業・学生等）・第2号（会社員等）・第3号（第2号の被扶養配偶者）の3分類。"],
+      ["育児・介護休業法","育児休業は保育所に入れない等の事情で1歳6か月、さらに2歳まで延長可能。"]
+    ]},
+    {cat:"障害者雇用・キャリア教育", items:[
+      ["法定雇用率","企業が雇用すべき障害者の割合を定めた基準（人数固定ではなく率）。"],
+      ["障害者職業生活相談員","障害者5人以上雇用の事業所で選任が義務づけられる相談員。"],
+      ["ジョブコーチ","障害のある人が職場に適応できるよう支援する専門職。発達障害・精神障害の支援で重要な役割。"],
+      ["基礎的・汎用的能力","人間関係形成・社会形成能力／自己理解・自己管理能力／課題対応能力／キャリアプランニング能力の4つ。キャリア教育は特別活動等に限定せず教育活動全体で行う。"]
+    ]}
+  ];
+
+  function renderGlossary(){
+    const panel = document.getElementById('panel-glossary');
+    panel.innerHTML = glossary.map(group => `
+      <div class="catTitle">${group.cat}</div>
+      ${group.items.map(([term, desc]) => `
+        <div class="card">
+          <h3>${term}</h3>
+          <p class="point">${desc}</p>
+        </div>
+      `).join('')}
+    `).join('');
+  }
+
+  // ────────────────────────────────────────────
+  // 4) 理論家ポイント（混同ペア中心）
+  // ────────────────────────────────────────────
+  // ────────────────────────────────────────────
+  // 5) 論述タブ（事例分析・解答例・解説）
+  // ────────────────────────────────────────────
+  function renderRonbun(){
+    const panel = document.getElementById('panel-ronbun');
+    panel.innerHTML = `
+      <div class="note">出典：2026年4月 養成講習 習得度確認試験（論述／35分）の事例をもとにしたオリジナル分析・解答例。逐語録の原文は保有していないため、事例プロフィールから論理的に組み立てています。本番では実際の逐語録から具体的な発言を引用して根拠を補強してください。</div>
+
+      <div class="catTitle">事例プロフィール</div>
+      <div class="card">
+        <p class="point">58歳・男性、工学部出身、大手電機メーカーの研究開発職で36年間勤務。家族構成：妻（パート勤務）、子ども2人（大学生・高校生）。相談の背景：2年後に定年を控えているが、その後のキャリアの見通しが立っていない。</p>
+      </div>
+      <div class="card">
+        <h3>事例パターン分類</h3>
+        <p class="point">「シニア層のキャリア（定年再雇用・セカンドキャリア）」という、繰り返し出題される王道パターンの一つ。他によくある事例パターン：育児と仕事の両立に悩む女性／転職を考える20〜30代／非正規雇用の不安定さに悩む中年層など。</p>
+      </div>
+
+      <div class="catTitle">設問構成の型（毎回ほぼ同じ骨格）</div>
+      <div class="flow">
+        <div class="step"><div class="pt">設問1（10点）</div><h3>相談者が明示的に訴えている問題</h3><p>相談者自身が「言葉にして」語っている内容をそのまま拾う。傾聴・要約力を見る設問。</p></div>
+        <div class="step"><div class="pt">設問2（20点）</div><h3>根拠にもとづく潜在的な問題</h3><p>逐語の根拠から、本人がまだ言語化できていない本質的な課題を分析する。</p></div>
+        <div class="step"><div class="pt">設問3（20点）</div><h3>介入・支援方策の設計</h3><p>分析にもとづいた、具体的で相談者主体の支援計画を組み立てる。</p></div>
+      </div>
+      <div class="note">論述は「①相談者の言葉（表面）→②その奥にある本質（潜在）→③それに対する具体的な関わり方（介入）」という3段階構造。事例が変わってもこの骨格は崩れない。</div>
+
+      <div class="catTitle">設問1：解答例</div>
+      <div class="card"><p class="point">相談者は、2年後に定年を迎えるにあたり、①定年後のキャリアについて具体的な見通しが立っていないこと、②36年間同じ会社・同じ職種（研究開発）のみを経験してきたため、他社で通用するかどうかへの不安、③社内の再雇用制度を利用した場合の給与低下という経済的な問題、を明確に言葉にして訴えている。</p></div>
+      <div class="card">
+        <h3>解説（なぜこう書くか）</h3>
+        <p class="point">配点は10点と低めだが、ここでズレると設問2・3も芋づる式に減点されやすい土台の設問。「相談者が自分の言葉で語った内容だけ」を拾うのがポイントで、カウンセラー側の推測・解釈（「本当は寂しいのだと思う」等）を書くのはNG——それは設問2の役割。</p>
+        <p class="point"><b>書き方のコツ：</b>逐語録の中で一人称の訴え（「〜が不安です」「〜がわからない」）を優先的に拾う／複数ある場合は①②③で整理する／単なる要約ではなく、ロジャーズの「共感的理解」の土台が試されている設問だと意識する。</p>
+        <p class="point"><b>採点チェック：</b>□相談者自身の言葉だけを拾えているか　□解釈・推測が混ざっていないか　□複数ある場合、漏れなく整理できているか</p>
+      </div>
+
+      <div class="catTitle">設問2：解答例</div>
+      <div class="card"><p class="point">
+      相談者の語りの背景には、本人がまだ十分に言語化できていない、いくつかの深い課題があると考えられる。<br><br>
+      第一に、<b>職業的アイデンティティの揺らぎ</b>である。36年間、一つの会社・一つの専門性で築いてきた自己概念（シャインの言う内的キャリア）が、定年という制度上の区切りによって強制的に揺さぶられている。「他社で通用するか分からない」という言葉の奥には、これまでの自分の専門性・存在価値そのものへの不安があると読み取れる。<br><br>
+      第二に、<b>経済的な現実と心理的な葛藤の板挟み</b>である。子ども2人の教育費、妻のパート収入という家計状況を踏まえると、再雇用による収入減少は「家族を支え続けられるか」という役割意識に直結する不安として体験されている可能性が高い。<br><br>
+      第三に、<b>加齢に伴う身体機能の変化を直視する不安</b>（視力低下など）である。これまで意識してこなかった「老い」という現実に向き合わざるを得なくなったタイミング。<br><br>
+      第四に、<b>社会的居場所の喪失に対する漠然とした不安</b>である。会社の肩書きや役割を失うことが、社会とのつながりそのものを失うことと重なって感じられている可能性があり、シュロスバーグの4S点検でいう「自己」「支援」の再構築が必要な転機に差し掛かっていると考えられる。
+      </p></div>
+      <div class="card">
+        <h3>解説（理論的な裏付け）</h3>
+        <p class="point">配点20点の最重要設問の一つ。単に「不安がある」で終わらせず、<b>「事実（発言・状況）→そこから読み取れる感情・価値観→まだ言葉になっていない核心」</b>という論理の連鎖を、問題ごとに作ることが必要。</p>
+        <p class="point">
+        ・職業的アイデンティティの揺らぎ＝シャインの「内的キャリア」（長期間一つの組織にいた人ほど自己概念が組織と一体化しやすい）<br>
+        ・経済的制約と役割意識の板挟み＝スーパーの「役割理論」（人は複数の役割＝ワーカー・親・配偶者を同時に担う）<br>
+        ・加齢への向き合い＝レビンソンの発達段階論（人生の過渡期には前提の見直しが迫られる）<br>
+        ・社会的居場所の喪失＝シュロスバーグの4S点検（「自己」「支援」の資源が揺らぐ転機）
+        </p>
+        <p class="point"><b>書き方のコツ：</b>4つの視点を並べるだけでなく、それぞれ三段構成（事実→感情・価値観→核心）で書く／本番では①の部分に逐語録の具体的な発言を引用する（引用がないと減点対象）／理論家名は必ず事例の内容と結びつけて使う（説明だけで終わると知識のひけらかしになる）。</p>
+        <p class="point"><b>採点チェック：</b>□複数の視点（心理・経済・身体・社会）から挙げられているか　□論理の飛躍がない三段構成になっているか　□逐語録の発言を根拠として引用しているか　□理論を事例と結びつけて使えているか</p>
+      </div>
+
+      <div class="catTitle">設問3：解答例</div>
+      <div class="card"><p class="point">
+      まず、相談者が安心して気持ちを言語化できるよう、ラポール形成を最優先し、「見通しが立たない」という言葉の背後にある感情（不安・焦り・寂しさなど）を丁寧に反映しながら聴くことから始める。<br><br>
+      次に、これまでの36年間のキャリアを、単なる職歴としてではなく「相談者自身の物語」として一緒に振り返り（ナラティブ・アプローチ）、その中で相談者が大切にしてきた価値観や強みを言語化する支援を行う。これは、他社で通用するかという不安に対して、根拠のある自己理解を取り戻す助けになる。<br><br>
+      そのうえで、4S点検の視点（状況・自己・支援・戦略）を用いて、現在の状況を一緒に整理する。具体的には、①再雇用制度の詳細条件や他の選択肢（転職・独立・地域活動等）に関する情報提供、②家族と経済状況を共有し話し合う機会の後押し、③スキル・経験の棚卸しを行い、社外でも通用する強みを可視化する、といった具体的な方策を、相談者のペースに合わせて無理なく提案する。<br><br>
+      最後に、いきなり大きな決断を迫るのではなく、情報収集や小さな行動から始める「小さな一歩」を後押しし、相談者自身が主体的に納得のいく選択にたどり着けるよう継続的に伴走する。
+      </p></div>
+      <div class="card">
+        <h3>解説（理論的な裏付け）</h3>
+        <p class="point">配点20点。一番よくある失点パターンは「いきなり具体策（転職支援・求人紹介など）を並べてしまう」こと。評価されるのは<b>設問2で分析した問題に、順序立てて対応できているか</b>という一貫性。</p>
+        <p class="point">
+        1. ラポール形成・感情の反映（ロジャーズ／マイクロカウンセリング）＝どんな事例でも最初に来るべき土台<br>
+        2. ナラティブ・アプローチによる自己理解の再構築（サビカスのキャリア構成理論）＝アイデンティティの揺らぎへの対応<br>
+        3. 4S点検による状況整理（シュロスバーグ）＝複数の不安を一気に解決せず、枠組みで整理して優先順位をつけられるようにする<br>
+        4. 小さな一歩・行動支援（クランボルツの計画的偶発性理論に近い考え方）＝大きな決断を急がせず、動くことで新しい情報・機会に出会う
+        </p>
+        <p class="point"><b>書き方のコツ：</b>設問2で挙げた潜在的問題それぞれに対応する介入が書けているか、書きながら都度チェックする／「〜すべきである」という断定・押しつけではなく「〜を一緒に整理する」「〜を提案する」など相談者の主体性を尊重する書き方にする／最後に「継続的な支援」「フォローアップ」に触れて締める。</p>
+        <p class="point"><b>採点チェック：</b>□いきなり具体策に飛びつかず、ラポール形成から始まっているか　□設問2の潜在的問題に対応する介入が用意されているか　□相談者の主体性を尊重する書き方か　□心理的支援（自己理解・意味づけ）も含まれているか　□フォローアップへの言及があるか</p>
+      </div>
+
+      <div class="catTitle">論述試験 全体の減点されやすいパターン</div>
+      <div class="card">
+        <p class="point">
+        ・設問1で「解釈」を書いてしまう（本来は設問2の役割）<br>
+        ・設問2で理論家の名前だけ出して、事例との結びつけが薄い（知識のひけらかしで終わる）<br>
+        ・設問2で「根拠」となる逐語録の引用が抜けている<br>
+        ・設問3でいきなり具体策から書き始め、ラポール形成や心理的支援が抜けている<br>
+        ・設問3が「〜すべき」という指示的な文体になり、相談者の主体性の尊重が感じられない<br>
+        ・設問2と設問3の対応関係が取れていない（分析した問題に、それに応じた介入が用意されていない）
+        </p>
+      </div>
+    `;
+  }
+
+  function renderTheory(){
+    const panel = document.getElementById('panel-theory');
+    panel.innerHTML = `
+      <div class="note">過去問で狙われやすい「理論家どうしの取り違え」に焦点を当てた整理。名前＋キーワード＋「よく間違えられる相手」をセットで覚えると効果的。</div>
+
+      <div class="catTitle">① スーパー vs シャイン</div>
+      <table class="theoryTable">
+        <tr><th></th><th>D.E.スーパー</th><th>E.H.シャイン</th></tr>
+        <tr><td>キーワード</td><td>ライフ・キャリア・レインボー／発達段階／発達課題</td><td>キャリア・アンカー／内的・外的キャリア／キャリア・サバイバル</td></tr>
+        <tr><td>軸</td><td>時間軸での役割の積み重ね（発達）</td><td>自己概念（能力・動機・価値観）という内面の軸</td></tr>
+        <tr><td>ひっかけ</td><td>探索期と成長期の課題を入れ替える</td><td>「アンカーは一生不変」という誤り（実際は変化しうる）</td></tr>
+      </table>
+
+      <div class="catTitle">② クランボルツ vs ギンズバーグ</div>
+      <div class="card"><h3>クランボルツ（計画的偶発性理論）</h3><p class="point">偶然をどう活かすかでキャリアが形づくられる。「オープンでいるだけでよい」への単純化に注意。5つの姿勢（好奇心・持続性・柔軟性・楽観性・冒険心）とスキル・学習経験の蓄積が必要。</p></div>
+      <div class="card"><h3>ギンズバーグ（職業発達理論）</h3><p class="point">空想期→試行期→現実期。当初「不可逆的」としたが、後に発達的再評価のプロセスへと考えを修正。</p></div>
+
+      <div class="catTitle">③ カウンセリング理論の祖たち</div>
+      <div class="card"><h3>ロジャーズ（来談者中心療法）</h3><p class="point">精神分析の限界経験から非指示的療法へ発展、のちパーソンセンタード・アプローチへ。“成立過程”が問われやすい。</p></div>
+      <div class="card"><h3>エリス（論理療法）vs ベック（認知療法）</h3><p class="point">エリス→論理（Rational）、ベック→認知（Cognitive）。頭文字とセットで固定して覚えると取り違えにくい。</p></div>
+
+      <div class="catTitle">④ 人生の転機（トランジション）の理論家</div>
+      <table class="theoryTable">
+        <tr><th>理論家</th><th>キーワード</th><th>要点</th></tr>
+        <tr><td>シュロスバーグ</td><td>4S点検（状況・自己・支援・戦略）</td><td>成人発達心理学系（組織心理学ではない）。自己管理的な視点が重要。</td></tr>
+        <tr><td>レビンソン</td><td>安定期と過渡期の交互発達</td><td>安定した時期と変化・移行の時期を繰り返す。</td></tr>
+        <tr><td>ブリッジズ</td><td>終わり→中立地帯→新しい始まり</td><td>「終わり」が最初の段階。順序の入れ替えに注意。</td></tr>
+        <tr><td>バンデューラ</td><td>自己効力感／偶然との相互作用</td><td>偶然と主体的行動が相互に影響してキャリアが形づくられる。</td></tr>
+      </table>
+
+      <div class="catTitle">⑤ ジェラット（意思決定理論）</div>
+      <div class="card"><h3>ジェラット（積極的不確実性）</h3><p class="point">将来は開かれたもので、直感や柔軟性も大切にしながら意思決定する。発達課題を定義した人（ハビガースト・スーパー）と混同させる出題に注意。</p></div>
+
+      <div class="catTitle">早見表（理論家×キーワード）</div>
+      <div class="card">
+        <p class="point">
+        スーパー：ライフ・キャリア・レインボー／発達段階<br>
+        シャイン：キャリア・アンカー／内的・外的キャリア／キャリア・サバイバル<br>
+        ホランド：職業興味の6タイプ（RIASEC）／VPI検査<br>
+        クランボルツ：計画的偶発性／学習経験<br>
+        ギンズバーグ：空想期・試行期・現実期／発達的再評価<br>
+        ロジャーズ：来談者中心療法／非指示的療法／パーソンセンタード・アプローチ<br>
+        シュロスバーグ：4S点検<br>
+        レビンソン：安定期と過渡期<br>
+        ブリッジズ：終わり→中立地帯→新しい始まり<br>
+        バンデューラ：自己効力感<br>
+        エリス：論理療法（イラショナル・ビリーフ）<br>
+        ベック：認知療法（認知の歪み）<br>
+        ジェラット：意思決定理論（積極的不確実性）
+        </p>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>
