@@ -1242,3 +1242,45 @@
 .site-header__brand .site-logo{display:inline-block}
 .site-header__brand .site-logo__ja{display:flex;align-items:center;justify-content:center}
 .site-header__brand .site-header__tagline{text-align:center}
+
+/* ============================================================
+ * v6.0 大人リニューアル: 「上質な絵本・雑誌」路線
+ * - 学習ページはキャラを要所だけに。本文は静かな組版で読ませる
+ * - 装飾・彩度・密度を一段落として、余白と行間で品を出す
+ * ============================================================ */
+
+/* 本文プロース(旧・吹き出し説明の置き換え) */
+.term-prose{max-width:44em}
+.term-prose p{margin:0;line-height:2.1;letter-spacing:.015em;font-size:.98rem}
+.term-prose p + p{margin-top:1em}
+.term-prose--hint{background:#fdf9e3;border:1px solid #eee3ae;border-radius:12px;padding:18px 22px}
+.term-section-note{margin:0 0 14px;color:#8a8274;font-size:.86rem;line-height:1.9}
+
+/* セクション見出し: 静かな英字+罫線のエディトリアル調 */
+.term-section-title{font-size:.82rem;letter-spacing:.14em;color:#9a917f;padding-bottom:8px;border-bottom:1px solid #e9e2d2;margin-bottom:16px}
+.term-kids,.term-analogy,.term-life{padding:26px 30px;margin-bottom:34px}
+.term-oneliner,.term-theorists,.term-similar,.term-exam-points,.term-quiz{margin-bottom:48px}
+
+/* キャラ吹き出し: 残る場所でも一段おとなしく */
+.chara-guide{gap:10px;margin:16px 0}
+.chara-guide svg,.chara-guide img.chara{width:52px;height:auto}
+.chara-guide__name{font-size:10px;letter-spacing:.06em}
+.chara-guide__bubble{font-size:.9rem;line-height:1.9;padding:12px 16px;border-radius:14px}
+.chara-guide--sunny .chara-guide__bubble{border-color:#e7dd9a;background:#fdfaea}
+.chara-guide--moyan .chara-guide__bubble{border-color:#ccd3db;background:#fff}
+.chara{animation:none}
+
+/* セクションヘッダーの挿絵と英字: 控えめに */
+.section-header__img{height:44px;opacity:.85}
+.section-header__en{letter-spacing:.22em;font-size:.7rem;color:#a89f8c}
+
+/* 記事系の余白を広く */
+.container--article{padding-top:8px}
+.guide-section{margin-bottom:52px}
+.guide-article p,.guide-section p{line-height:2.05;letter-spacing:.012em}
+
+/* ボタン・リンク: 彩度そのまま、主張だけ控えめに */
+.picnic-button{padding:11px 20px;font-weight:600}
+
+/* トップの吹き出し密度を微調整(世界観は維持) */
+.picnic-about__concept{line-height:2.1}
