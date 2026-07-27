@@ -1284,3 +1284,13 @@
 
 /* トップの吹き出し密度を微調整(世界観は維持) */
 .picnic-about__concept{line-height:2.1}
+
+/* v6.1 深掘り表(種類・一覧・例) */
+.term-deepdive{margin-bottom:48px}
+.deepdive-table{width:100%;border-collapse:collapse;font-size:.92rem;background:#fff;border:1px solid #e9e2d2;border-radius:12px;overflow:hidden}
+.deepdive-table th,.deepdive-table td{padding:12px 14px;border-bottom:1px solid #efe9db;text-align:left;vertical-align:top;line-height:1.9}
+.deepdive-table thead th{background:#faf6ea;color:#8a8274;font-size:.8rem;letter-spacing:.08em}
+.deepdive-table tbody th{width:11em;font-weight:700;color:#5c5344;background:#fdfbf4}
+.deepdive-table tr:last-child th,.deepdive-table tr:last-child td{border-bottom:none}
+.deepdive-note{margin:12px 0 0;color:#8a8274;font-size:.86rem;line-height:1.9}
+@media(max-width:560px){.deepdive-table tbody th{width:7.5em;font-size:.86rem}}
