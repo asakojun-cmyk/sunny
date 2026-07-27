@@ -1305,3 +1305,9 @@
 .exam-table thead th{background:#faf6ea;color:#8a8274;font-size:.8rem;letter-spacing:.06em}
 .exam-table tr:last-child td{border-bottom:none}
 .exam-guide__source{margin:28px 0 8px;color:#9a917f;font-size:.82rem;line-height:1.9}
+
+/* v6.3 運営者プロフィール: 表示名ちゃん+アイコン */
+.author-profile__avatar{overflow:hidden;border-radius:50%;background:#fdf9e3;display:grid;place-items:center}
+.author-profile__avatar img{width:100%;height:100%;object-fit:cover}
+.author-profile__icon{width:34px;height:34px;border-radius:50%;vertical-align:middle;margin-right:8px;object-fit:cover;background:#fdf9e3}
+.author-profile--compact .author-profile__name{display:flex;align-items:center;font-weight:700}
