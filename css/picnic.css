@@ -1326,3 +1326,16 @@
 
 /* v6.6 アンカーカードのプレビュー */
 .fill-step__preview{display:block;width:100%;max-width:340px;margin:12px auto;border-radius:16px;border:1px solid #e9e2d2;box-shadow:0 6px 18px rgba(90,80,60,.08)}
+
+/* v6.7 書き込み式ちいさな一歩: 入れ子解消・『』ブランク・ボタン簡素化 */
+.fill-step{margin:14px 0 4px;padding:0;background:transparent;border:none;border-radius:0}
+.fill-step__sentence{margin:0 0 16px;line-height:2.4;font-size:.98rem;font-weight:600;color:#5c5344;text-align:center}
+.fill-step__blank{white-space:nowrap;color:#5c5344}
+.fill-step__input{display:inline-block;width:min(11em,52vw);margin:0 2px;padding:4px 6px;border:none;border-bottom:2px solid #b9ae90;background:transparent;border-radius:0;font-size:1.05rem;font-weight:700;color:#5c5344;text-align:center}
+.fill-step__input:focus{outline:none;background:transparent;border-bottom-color:#d95f3b}
+.fill-step__actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:0 0 12px}
+.fill-step__btn{display:inline-block;padding:9px 22px;border:1.5px solid #cfc6ab;border-radius:999px;background:#fff;color:#5c5344;font-size:.88rem;font-weight:600;font-family:inherit;line-height:1.4;cursor:pointer;text-decoration:none;transition:border-color .15s,background .15s}
+.fill-step__btn:hover{border-color:#d95f3b;background:#fffdf8;color:#5c5344;text-decoration:none}
+.fill-step__btn:disabled{opacity:.6;cursor:default}
+.fill-step__privacy{text-align:center}
+.fill-step__preview[hidden]{display:none}

@@ -49,16 +49,6 @@
     return loaded;
   }
 
-  function roundRect(ctx, x, y, w, h, r) {
-    ctx.beginPath();
-    ctx.moveTo(x + r, y);
-    ctx.arcTo(x + w, y, x + w, y + h, r);
-    ctx.arcTo(x + w, y + h, x, y + h, r);
-    ctx.arcTo(x, y + h, x, y, r);
-    ctx.arcTo(x, y, x + w, y, r);
-    ctx.closePath();
-  }
-
   function wrapText(ctx, text, maxWidth) {
     var lines = [], line = "";
     for (var i = 0; i < text.length; i++) {
@@ -75,6 +65,17 @@
     if (!im) return;
     var h = im.height * (w / im.width);
     ctx.drawImage(im, x, y, w, h);
+  }
+
+  /* 左右反転して描く(サニー先生の視線をカードの内側へ) */
+  function drawImageFlipped(ctx, im, x, y, w) {
+    if (!im) return;
+    var h = im.height * (w / im.width);
+    ctx.save();
+    ctx.translate(x + w, y);
+    ctx.scale(-1, 1);
+    ctx.drawImage(im, 0, 0, w, h);
+    ctx.restore();
   }
 
   function drawCard(word) {
@@ -98,23 +99,9 @@
     ctx.ellipse(W / 2, H + 130, 900, 330, 0, 0, Math.PI * 2);
     ctx.fill();
 
-    /* 白いカード面 */
-    ctx.save();
-    ctx.shadowColor = "rgba(90,80,60,0.10)";
-    ctx.shadowBlur = 30;
-    ctx.shadowOffsetY = 10;
-    ctx.fillStyle = "#ffffff";
-    roundRect(ctx, 90, 200, W - 180, 640, 36);
-    ctx.fill();
-    ctx.restore();
-    ctx.strokeStyle = "#efe8d8";
-    ctx.lineWidth = 3;
-    roundRect(ctx, 90, 200, W - 180, 640, 36);
-    ctx.stroke();
-
-    /* パーツ: 雲(左上)・太陽(右上)・花(下両脇) */
+    /* パーツ: 雲(左上)・太陽(右上・反転して内側を向かせる)・花(下両脇) */
     drawImageScaled(ctx, imgs.cloud, 96, 84, 190);
-    drawImageScaled(ctx, imgs.sun, W - 300, 44, 220);
+    drawImageFlipped(ctx, imgs.sun, W - 300, 44, 220);
     drawImageScaled(ctx, imgs.flowersL, 60, H - 250, 250);
     drawImageScaled(ctx, imgs.flowersR, W - 310, H - 240, 250);
 
@@ -147,28 +134,26 @@
       y += 56;
     });
 
-    /* ことばのリボン(テラコッタ) */
+    /* だいじな言葉(テラコッタの文字で、そのまま) */
     var display = "「" + word + "」";
-    var size = 62;
+    var size = 72;
     ctx.font = "700 " + size + "px " + FONT;
-    while (ctx.measureText(display).width > W - 330 && size > 34) {
+    while (ctx.measureText(display).width > W - 260 && size > 36) {
       size -= 4;
       ctx.font = "700 " + size + "px " + FONT;
     }
-    var tw = ctx.measureText(display).width;
-    var rw = Math.min(W - 280, tw + 90);
-    var rh = size + 58;
-    var ry = y + 8;
-    ctx.save();
-    ctx.shadowColor = "rgba(217,95,59,0.28)";
-    ctx.shadowBlur = 18;
-    ctx.shadowOffsetY = 6;
-    ctx.fillStyle = "#e2694a";
-    roundRect(ctx, W / 2 - rw / 2, ry, rw, rh, rh / 2);
-    ctx.fill();
-    ctx.restore();
-    ctx.fillStyle = "#ffffff";
-    ctx.fillText(display, W / 2, ry + rh / 2 + size * 0.35);
+    var wy = y + size * 0.9 + 18;
+    ctx.fillStyle = "#d95f3b";
+    ctx.fillText(display, W / 2, wy);
+    /* やわらかい下線 */
+    var uw = Math.min(ctx.measureText(display).width - 40, W - 340);
+    ctx.strokeStyle = "rgba(217,95,59,0.35)";
+    ctx.lineWidth = 6;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(W / 2 - uw / 2, wy + 34);
+    ctx.lineTo(W / 2 + uw / 2, wy + 34);
+    ctx.stroke();
 
     /* クレジット */
     ctx.fillStyle = "#8f8672";
@@ -199,7 +184,7 @@
       a.click();
       a.remove();
       saveBtn.disabled = false;
-      saveBtn.textContent = "書き直して、もう一度保存";
+      saveBtn.textContent = "もう一度保存";
     });
   });
 })();
