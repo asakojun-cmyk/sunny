@@ -1314,3 +1314,12 @@
 
 /* v6.4 トップのコラム棚 */
 .column-list--home{display:grid;gap:14px;margin-top:10px}
+
+/* v6.5 書き込み式「きょうの、ちいさな一歩」 */
+.fill-step{margin:16px 0 6px;padding:18px 20px;background:#fff;border:1.5px dashed #dcc94e;border-radius:14px}
+.fill-step__sentence{margin:0 0 14px;line-height:2.3;font-size:.98rem;font-weight:600;color:#5c5344}
+.fill-step__input{display:inline-block;width:min(15em,60vw);margin:0 4px;padding:6px 10px;border:none;border-bottom:2.5px solid #d95f3b;background:#fdf9e3;border-radius:8px 8px 0 0;font-size:1.05rem;font-weight:700;color:#b0431f;text-align:center}
+.fill-step__input:focus{outline:none;background:#fdf3c9}
+.fill-step__input::placeholder{color:#c9b995;font-weight:400;font-size:.85rem}
+.fill-step__actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 10px}
+.fill-step__privacy{margin:0;color:#9a917f;font-size:.78rem}
