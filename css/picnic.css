@@ -1323,3 +1323,6 @@
 .fill-step__input::placeholder{color:#c9b995;font-weight:400;font-size:.85rem}
 .fill-step__actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 10px}
 .fill-step__privacy{margin:0;color:#9a917f;font-size:.78rem}
+
+/* v6.6 アンカーカードのプレビュー */
+.fill-step__preview{display:block;width:100%;max-width:340px;margin:12px auto;border-radius:16px;border:1px solid #e9e2d2;box-shadow:0 6px 18px rgba(90,80,60,.08)}
