@@ -32,6 +32,21 @@
   .keifu-hero__lead { max-width:520px; margin:12px auto 0; color:var(--color-text-subtle); font-size:.92rem; line-height:1.9; }
   .keifu-hint { text-align:center; color:var(--color-text-subtle); font-size:.8rem; margin:0 0 30px; }
 
+  .keifu-explain { max-width:520px; margin:0 auto 30px; }
+  .keifu-explain .term-section-title { text-align:center; }
+  .keifu-explain > p { font-size:.88rem; line-height:1.9; color:var(--color-text-subtle); }
+  .keifu-compare { display:flex; gap:12px; margin:16px 0; flex-wrap:wrap; }
+  .keifu-compare__card { flex:1 1 220px; border-radius:16px; padding:16px 15px; border:2px solid; }
+  .keifu-compare__card--career { background:var(--color-yellow-light); border-color:#d9c48c; }
+  .keifu-compare__card--coun { background:#f3ecf3; border-color:#c3a9c3; }
+  .keifu-compare__label { font-size:.78rem; font-weight:700; display:inline-block; padding:3px 12px; border-radius:999px; background:#fff; margin-bottom:8px; }
+  .keifu-compare__card--career .keifu-compare__label { color:#8a6d1a; }
+  .keifu-compare__card--coun .keifu-compare__label { color:#7a557a; }
+  .keifu-compare__q { font-size:.95rem; font-weight:700; color:var(--color-text); margin-bottom:8px; line-height:1.6; }
+  .keifu-compare__desc { font-size:.83rem; line-height:1.85; color:var(--color-text); margin-bottom:8px; }
+  .keifu-compare__people { font-size:.72rem; line-height:1.7; color:var(--color-text-subtle); }
+  .keifu-explain__note { font-size:.85rem; line-height:1.9; color:var(--color-text-subtle); background:var(--color-background); border-radius:12px; padding:12px 14px; }
+
   .keifu-flow { margin:0 auto 40px; max-width:460px; }
   .keifu-step { margin:0; }
 
@@ -46,7 +61,8 @@
   .keifu-stage__bg b,
   .keifu-stage__desc b { color:var(--stage-tc2); }
 
-  .keifu-branch { position:relative; padding-top:22px; }
+  .keifu-branch { position:relative; padding-top:22px; width:min(660px, 96vw); margin-left:50%; transform:translateX(-50%); }
+  .keifu-relation { max-width:420px; }
   .keifu-branch__stem { position:absolute; top:0; left:50%; width:3px; height:22px; margin-left:-1.5px; background:var(--stage-c); }
   .keifu-people { display:flex; justify-content:center; align-items:flex-start; gap:10px; position:relative; padding-top:20px; width:fit-content; margin:0 auto; }
   .keifu-people::before { content:''; position:absolute; top:0; left:58px; right:58px; height:3px; background:var(--stage-c); border-radius:2px; }
@@ -143,6 +159,30 @@
   </div>
 
   <p class="keifu-hint">🖐️ 名前をタップすると、その理論家の解説ページに飛べます</p>
+
+  <aside class="notice-box">
+    <p>このページは<strong>キャリアの見方</strong>がどう広がってきたかの系譜です。相談の技法そのものの流れは<a href="../keifu-counseling/index.html">カウンセリング理論の系譜</a>にまとめています。エリクソンとバンデューラは、両方の系譜に登場します。</p>
+  </aside>
+
+  <section class="keifu-explain">
+    <h2 class="term-section-title">そもそも、この2つは何が違うの?</h2>
+    <p>キャリアコンサルタントの勉強では、性質の違う2種類の理論が出てきます。試験でも「キャリアに関する理論」と「カウンセリングに関する理論」は、別々の項目として定められています。</p>
+    <div class="keifu-compare">
+      <div class="keifu-compare__card keifu-compare__card--career">
+        <p class="keifu-compare__label">キャリア理論</p>
+        <p class="keifu-compare__q">「その人に、何が起きているのか」</p>
+        <p class="keifu-compare__desc">人はどうやって職業を選び、人生の中でどう変化していくのかを説明する理論です。相談者を<strong>理解するための地図</strong>にあたります。</p>
+        <p class="keifu-compare__people">パーソンズ / ホランド / スーパー / クランボルツ / シュロスバーグ / サビカス など</p>
+      </div>
+      <div class="keifu-compare__card keifu-compare__card--coun">
+        <p class="keifu-compare__label">カウンセリング理論</p>
+        <p class="keifu-compare__q">「その人と、どう関わるのか」</p>
+        <p class="keifu-compare__desc">相談の場で、どう聴き、どう言葉を返すかという関わり方と技法の理論です。実際に<strong>相談をするための道具</strong>にあたります。</p>
+        <p class="keifu-compare__people">フロイト / ロジャーズ / エリス / ベック / アイビイ など</p>
+      </div>
+    </div>
+    <p class="keifu-explain__note">キャリアコンサルタントは、この両方を使います。キャリア理論で相談者の状況を理解し、カウンセリング理論でその人と向き合う、という組み合わせです。だから2つの系譜を分けて、それぞれたどっていきます。</p>
+  </section>
 
   <div class="keifu-flow">
   <section class="keifu-step" style="--stage-c:#e7d49a; --stage-tc:#5c4a1a; --stage-tc2:#8a6d1a; --stage-dark:#8a7a20; --stage-soft:#f5efd9;">
