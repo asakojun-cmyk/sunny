@@ -41,11 +41,11 @@
       <p class="site-header__tagline">「わからない」を持ち寄って、「わかった！」に変える場所</p>
     </div>
     <nav class="header-nav" aria-label="主要メニュー">
+      <a class="hero-link" href="../../shikaku-guide/index.html">資格を知る</a>
+      <a class="hero-link" href="../../schools/index.html">養成講座をえらぶ</a>
       <a class="hero-link" href="../../terms/index.html">ことばを調べる</a>
       <a class="hero-link" href="../../theorists/index.html">理論家とランチ</a>
       <a class="hero-link" href="../../exam/index.html">試験対策</a>
-      <a class="hero-link" href="../../start/index.html">はじめての方へ</a>
-      <a class="hero-link" href="../../schools/compare/index.html">養成講座を比較する</a>
     </nav>
     <div class="header-search" id="search-fab">
       <a class="search-fab__toggle" href="../../search/index.html" aria-expanded="false" aria-controls="search-fab-panel">
@@ -153,6 +153,23 @@
     <p class="more-links__note">外部サイト(Wikipedia・YouTube)が開きます。写真・動画の内容は各サイトの提供者に権利があります。当サイトは内容を保証するものではありません。</p>
   </section>
 
+  <section class="term-quiz" id="sec-quiz">
+    <h2 class="term-section-title">1問1答(当サイトオリジナル)</h2>
+    <div class="quiz-box" data-quiz data-answer="false">
+      <p class="quiz-box__question">「系統的脱感作法」を提唱したのはビンスワンガーである。○か×か。</p>
+      <div class="quiz-box__actions">
+        <button type="button" class="button button--ghost" data-quiz-answer="true">○</button>
+        <button type="button" class="button button--ghost" data-quiz-answer="false">×</button>
+      </div>
+      <p class="quiz-box__result" data-quiz-result aria-live="polite" hidden>正解は × — ×。「系統的脱感作法」はウォルピです。ビンスワンガーは「現存在分析」などで知られます。</p>
+    </div>
+    <div class="quiz-box quiz-box--choice" data-quiz data-correct="0">
+      <p class="quiz-box__question">ビンスワンガーを代表するキーワードはどれ?</p>
+      <div class="quiz-box__choices"><button type="button" class="button button--ghost quiz-box__choice" data-quiz-choice>1. 現存在分析</button><button type="button" class="button button--ghost quiz-box__choice" data-quiz-choice>2. トランジションの3段階</button><button type="button" class="button button--ghost quiz-box__choice" data-quiz-choice>3. イラショナル・ビリーフ</button><button type="button" class="button button--ghost quiz-box__choice" data-quiz-choice>4. 特性因子理論(3要素)</button></div>
+      <p class="quiz-box__result" data-quiz-result aria-live="polite" hidden>正解は「現存在分析」。ハイデガーの哲学をもとに、人を「世界の中に存在するもの」として理解する方法。(「トランジションの3段階」はブリッジス／「特性因子理論(3要素)」はパーソンズ／「イラショナル・ビリーフ」はエリス)</p>
+    </div>
+  </section>
+
   <section class="past-questions">
     <h2 class="term-section-title">🌈 過去問で確認する</h2>
     <p>国家資格キャリアコンサルタント試験の過去問題は、2つの試験機関の公式サイトで公開されています(学科試験は両機関共通)。公式ページの過去問PDFで「<strong>ビンスワンガー</strong>」が出てくる問題を探して、実際の問われ方を確認してみましょう。</p>
@@ -191,7 +208,7 @@
       <p class="drawer__label">MENU</p>
       <ul class="drawer__list drawer__list--main">
         <li><a href="../../index.html">ホーム</a></li>
-        <li><a href="../../terms/index.html">ことば図鑑</a></li><li><a href="../../theorists/index.html" aria-current="page">理論家</a></li><li><a href="../../start/index.html">試験対策</a></li><li><a href="../../schools/index.html">養成講座</a></li><li><a href="../../careers/index.html">資格取得後</a></li>
+        <li><a href="../../terms/index.html">ことば図鑑</a></li><li><a href="../../theorists/index.html" aria-current="page">理論家</a></li><li><a href="../../start/index.html">初学者の学習ルート</a></li><li><a href="../../schools/index.html">養成講座</a></li><li><a href="../../careers/index.html">資格取得後</a></li>
         <li><a href="../../search/index.html">サイト内検索</a></li>
       </ul>
       <p class="drawer__label">ALL PAGES</p>
@@ -200,7 +217,7 @@
         <li><a href="../../theorists/index.html">理論家図鑑</a></li>
         <li><a href="../../laws/index.html">労働法・統計・制度</a></li>
         <li><a href="../../exam/index.html">学科・論述・面接(過去問リンク)</a></li>
-        <li><a href="../../start/index.html">はじめての学習ルート</a></li>
+        <li><a href="../../start/index.html">初学者の学習ルート</a></li>
         <li><a href="../../shikaku-guide/index.html">資格まるわかりガイド(検討中の方へ)</a></li>
         <li><a href="../../schools/index.html">養成学校一覧</a></li>
         <li><a href="../../schools/compare/index.html">養成学校を比較する</a></li>
@@ -244,6 +261,7 @@
       <span class="bottom-nav__icon bottom-nav__icon--menu" aria-hidden="true"></span>
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
+<script src="../../js/quiz.js" defer></script>
 <script src="../../js/reveal.js?v=v2026.0728.1616" defer></script>
 <script src="../../js/search-fab.js?v=v2026.0728.1616" defer></script>
 

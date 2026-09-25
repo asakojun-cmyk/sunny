@@ -33,6 +33,8 @@
       pool = ALL.filter(function (x) { return x.f === 3; });
     } else if (filter === "theorist") {
       pool = ALL.filter(function (x) { return x.t === 1; });
+    } else if (filter === "choice") {
+      pool = ALL.filter(function (x) { return !!(x.o && x.o.length); });
     } else {
       var cat = filter.slice(4);
       pool = ALL.filter(function (x) { return x.c === cat; });
@@ -61,6 +63,30 @@
     hide(card); hide(endBox); hide(root); show(startBox);
   }
 
+  var oxBox = root.querySelector("[data-quiz-ox]");
+  var choiceBox = root.querySelector("[data-quiz-choices]");
+
+  function isChoice(item) { return !!(item && item.o && item.o.length); }
+
+  function judge(item, correct, btn) {
+    if (correct) score++;
+    var label = isChoice(item) ? "「" + item.o[item.ai] + "」" : "「" + (item.a ? "○" : "×") + "」";
+    btn.classList.add(correct ? "is-correct" : "is-wrong");
+    if (!correct && isChoice(item)) {
+      var right = choiceBox.querySelectorAll("button")[item.ai];
+      if (right) right.classList.add("is-correct");
+    }
+    var v = root.querySelector("[data-quiz-verdict]");
+    v.textContent = correct ? "🌞 正解!" : "🌥️ おしい!正解は" + label;
+    v.className = "quiz-drill__verdict " + (correct ? "is-ok" : "is-ng");
+    root.querySelector("[data-quiz-exp]").textContent = item.e;
+    var link = root.querySelector("[data-quiz-link]");
+    link.setAttribute("href", item.u);
+    link.textContent = "「" + item.n + "」のページで復習する →";
+    root.querySelector("[data-quiz-score]").textContent = String(score);
+    show(root.querySelector("[data-quiz-result]"));
+  }
+
   function renderQuestion() {
     var item = order[idx];
     root.querySelector("[data-quiz-no]").textContent = String(idx + 1);
@@ -70,6 +96,24 @@
     root.querySelector("[data-quiz-q]").textContent = item.q;
     hide(root.querySelector("[data-quiz-result]"));
     root.querySelectorAll("[data-quiz-ans]").forEach(function (b) { b.disabled = false; b.classList.remove("is-correct", "is-wrong"); });
+    if (isChoice(item)) {
+      hide(oxBox); show(choiceBox);
+      choiceBox.textContent = "";
+      item.o.forEach(function (text, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "button button--ghost quiz-drill__choice";
+        b.textContent = String(i + 1) + ". " + text;
+        b.addEventListener("click", function () {
+          choiceBox.querySelectorAll("button").forEach(function (x) { x.disabled = true; });
+          judge(item, i === item.ai, b);
+        });
+        choiceBox.appendChild(b);
+      });
+    } else {
+      show(oxBox); hide(choiceBox);
+      choiceBox.textContent = "";
+    }
   }
 
   function begin() {
@@ -103,20 +147,8 @@
   root.querySelectorAll("[data-quiz-ans]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var item = order[idx];
-      var chosen = btn.getAttribute("data-quiz-ans") === "true";
-      var correct = chosen === item.a;
-      if (correct) score++;
       root.querySelectorAll("[data-quiz-ans]").forEach(function (b) { b.disabled = true; });
-      btn.classList.add(correct ? "is-correct" : "is-wrong");
-      var v = root.querySelector("[data-quiz-verdict]");
-      v.textContent = correct ? "🌞 正解!" : "🌥️ おしい!正解は「" + (item.a ? "○" : "×") + "」";
-      v.className = "quiz-drill__verdict " + (correct ? "is-ok" : "is-ng");
-      root.querySelector("[data-quiz-exp]").textContent = item.e;
-      var link = root.querySelector("[data-quiz-link]");
-      link.setAttribute("href", item.u);
-      link.textContent = "「" + item.n + "」のページで復習する →";
-      root.querySelector("[data-quiz-score]").textContent = String(score);
-      show(root.querySelector("[data-quiz-result]"));
+      judge(item, (btn.getAttribute("data-quiz-ans") === "true") === item.a, btn);
     });
   });
 
