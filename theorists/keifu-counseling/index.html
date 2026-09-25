@@ -29,34 +29,34 @@
 <style>
   /* このページ専用:系譜フロー(サイト共通の色変数を使用) */
   .keifu-hero { text-align:center; padding:4px 8px 6px; }
-  .keifu-hero__lead { max-width:520px; margin:12px auto 0; color:var(--color-text-subtle); font-size:.92rem; line-height:1.9; }
-  .keifu-hint { text-align:center; color:var(--color-text-subtle); font-size:.8rem; margin:0 0 30px; }
+  .keifu-hero__lead { max-width:520px; margin:12px auto 0; color:var(--color-text-subtle); font-size:1.09rem; line-height:1.9; }
+  .keifu-hint { text-align:center; color:var(--color-text-subtle); font-size:0.97rem; margin:0 0 30px; }
 
   .keifu-explain { max-width:520px; margin:0 auto 30px; }
   .keifu-explain .term-section-title { text-align:center; }
-  .keifu-explain > p { font-size:.88rem; line-height:1.9; color:var(--color-text-subtle); }
+  .keifu-explain > p { font-size:1.05rem; line-height:1.9; color:var(--color-text-subtle); }
   .keifu-compare { display:flex; gap:12px; margin:16px 0; flex-wrap:wrap; }
   .keifu-compare__card { flex:1 1 220px; border-radius:16px; padding:16px 15px; border:2px solid; }
   .keifu-compare__card--career { background:var(--color-yellow-light); border-color:#d9c48c; }
   .keifu-compare__card--coun { background:#f3ecf3; border-color:#c3a9c3; }
-  .keifu-compare__label { font-size:.78rem; font-weight:700; display:inline-block; padding:3px 12px; border-radius:999px; background:#fff; margin-bottom:8px; }
+  .keifu-compare__label { font-size:0.95rem; font-weight:700; display:inline-block; padding:3px 12px; border-radius:999px; background:#fff; margin-bottom:8px; }
   .keifu-compare__card--career .keifu-compare__label { color:#8a6d1a; }
   .keifu-compare__card--coun .keifu-compare__label { color:#7a557a; }
-  .keifu-compare__q { font-size:.95rem; font-weight:700; color:var(--color-text); margin-bottom:8px; line-height:1.6; }
-  .keifu-compare__desc { font-size:.83rem; line-height:1.85; color:var(--color-text); margin-bottom:8px; }
-  .keifu-compare__people { font-size:.72rem; line-height:1.7; color:var(--color-text-subtle); }
-  .keifu-explain__note { font-size:.85rem; line-height:1.9; color:var(--color-text-subtle); background:var(--color-background); border-radius:12px; padding:12px 14px; }
+  .keifu-compare__q { font-size:1.12rem; font-weight:700; color:var(--color-text); margin-bottom:8px; line-height:1.6; }
+  .keifu-compare__desc { font-size:1.0rem; line-height:1.85; color:var(--color-text); margin-bottom:8px; }
+  .keifu-compare__people { font-size:0.89rem; line-height:1.7; color:var(--color-text-subtle); }
+  .keifu-explain__note { font-size:1.02rem; line-height:1.9; color:var(--color-text-subtle); background:var(--color-background); border-radius:12px; padding:12px 14px; }
 
   .keifu-flow { margin:0 auto 40px; max-width:460px; }
   .keifu-step { margin:0; }
 
   .keifu-stage { background:var(--color-surface); border:2px solid var(--stage-c); border-radius:22px; padding:26px 22px 24px; text-align:center; box-shadow:0 6px 18px rgba(39,39,34,.06); }
-  .keifu-stage__era { display:inline-block; background:var(--stage-c); color:var(--stage-tc); font-size:.72rem; font-weight:700; padding:5px 14px; border-radius:999px; letter-spacing:.02em; }
-  .keifu-stage__title { font-size:1.22rem; font-weight:700; color:var(--color-text); margin:16px 0 4px; line-height:1.5; }
-  .keifu-stage__keyword { font-size:.84rem; color:var(--stage-tc2); font-weight:700; margin:0 0 16px; }
-  .keifu-stage__q { font-size:.9rem; font-weight:500; color:var(--color-text); background:var(--stage-soft); border-radius:12px; padding:11px 14px; margin:0 0 16px; line-height:1.7; }
+  .keifu-stage__era { display:inline-block; background:var(--stage-c); color:var(--stage-tc); font-size:0.89rem; font-weight:700; padding:5px 14px; border-radius:999px; letter-spacing:.02em; }
+  .keifu-stage__title { font-size:1.39rem; font-weight:700; color:var(--color-text); margin:16px 0 4px; line-height:1.5; }
+  .keifu-stage__keyword { font-size:1.01rem; color:var(--stage-tc2); font-weight:700; margin:0 0 16px; }
+  .keifu-stage__q { font-size:1.07rem; font-weight:500; color:var(--color-text); background:var(--stage-soft); border-radius:12px; padding:11px 14px; margin:0 0 16px; line-height:1.7; }
   .keifu-stage__bg,
-  .keifu-stage__desc { font-size:.84rem; color:var(--color-text-subtle); text-align:left; line-height:1.9; margin:0; }
+  .keifu-stage__desc { font-size:1.01rem; color:var(--color-text-subtle); text-align:left; line-height:1.9; margin:0; }
   .keifu-stage__bg { margin-bottom:10px; }
   .keifu-stage__bg b,
   .keifu-stage__desc b { color:var(--stage-tc2); }
@@ -67,45 +67,50 @@
   .keifu-people { display:flex; justify-content:center; align-items:flex-start; gap:10px; position:relative; padding-top:20px; width:fit-content; margin:0 auto; }
   .keifu-people::before { content:''; position:absolute; top:0; left:58px; right:58px; height:3px; background:var(--stage-c); border-radius:2px; }
 
-  .keifu-person { position:relative; width:116px; padding-top:18px; text-align:center; text-decoration:none; }
+  .keifu-person { position:relative; width:130px; padding-top:18px; text-align:center; text-decoration:none; }
   .keifu-person::before { content:''; position:absolute; top:0; left:50%; width:3px; height:18px; margin-left:-1.5px; background:var(--stage-c); }
   .keifu-person__face { display:block; width:66px; height:66px; margin:0 auto 7px; border-radius:50%; overflow:hidden; background:#fff; box-shadow:0 2px 8px rgba(39,39,34,.10); transition:transform .18s ease; }
   .keifu-person__face svg { display:block; width:100%; height:100%; }
   .keifu-person:hover .keifu-person__face { transform:translateY(-3px); }
-  .keifu-person__name { display:inline-block; background:var(--stage-dark); color:#fff; font-size:.8rem; font-weight:700; padding:5px 12px; border-radius:999px; line-height:1.4; }
-  .keifu-person__tag { display:block; font-size:.68rem; color:var(--color-text-subtle); margin-top:6px; line-height:1.5; }
+  .keifu-person__name { display:inline-block; background:var(--stage-dark); color:#fff; font-size:0.97rem; font-weight:700; padding:5px 12px; border-radius:999px; line-height:1.4; }
+  .keifu-person__tag { display:block; font-size:0.85rem; color:var(--color-text-subtle); margin-top:6px; line-height:1.5; }
 
-  .keifu-relation { max-width:420px; margin:16px auto 0; font-size:.78rem; line-height:1.8; color:var(--color-text-subtle); background:var(--stage-soft); border-radius:12px; padding:10px 14px; text-align:left; }
+  .keifu-relation { max-width:420px; margin:16px auto 0; font-size:0.95rem; line-height:1.8; color:var(--color-text-subtle); background:var(--stage-soft); border-radius:12px; padding:10px 14px; text-align:left; }
   .keifu-relation b { color:var(--stage-tc2); }
 
   .keifu-people--source::before { display:none; }
   .keifu-people--source .keifu-person::before { display:none; }
   .keifu-people--source .keifu-person { width:132px; }
   .keifu-people--source .keifu-person__face { width:84px; height:84px; box-shadow:0 4px 14px rgba(39,39,34,.16); }
-  .keifu-people--source .keifu-person__name { font-size:.9rem; padding:6px 16px; }
-  .keifu-source-label { text-align:center; font-size:.72rem; font-weight:700; color:var(--stage-tc2); margin:0 0 -6px; letter-spacing:.04em; }
+  .keifu-people--source .keifu-person__name { font-size:1.07rem; padding:6px 16px; }
+  .keifu-source-label { text-align:center; font-size:0.89rem; font-weight:700; color:var(--stage-tc2); margin:0 0 -6px; letter-spacing:.04em; }
   .keifu-branch--sub { padding-top:4px; }
 
   .keifu-connect { display:block; width:80px; height:90px; margin:2px auto; }
 
   .keifu-summary { margin-top:10px; background:var(--color-background); border-radius:20px; padding:24px 20px; border:1px solid var(--color-border); }
-  .keifu-summary h2 { text-align:center; font-size:1.1rem; margin:0 0 6px; }
-  .keifu-summary__lead { text-align:center; color:var(--color-text-subtle); font-size:.84rem; margin:0 0 18px; }
+  .keifu-summary h2 { text-align:center; font-size:1.27rem; margin:0 0 6px; }
+  .keifu-summary__lead { text-align:center; color:var(--color-text-subtle); font-size:1.01rem; margin:0 0 18px; }
   .keifu-table-wrap { overflow-x:auto; }
-  .keifu-table { width:100%; border-collapse:collapse; font-size:.82rem; min-width:480px; background:var(--color-surface); }
+  .keifu-table { width:100%; border-collapse:collapse; font-size:0.99rem; min-width:480px; background:var(--color-surface); }
   .keifu-table th { background:var(--color-yellow-light); padding:10px; text-align:left; font-weight:700; white-space:nowrap; }
   .keifu-table td { padding:10px; border-bottom:1px solid var(--color-border); vertical-align:top; line-height:1.7; }
 
   body, .site-main, .container--article { overflow-x:hidden; }
 
+  @media (max-width:720px) {
+    /* 狭い画面では折り返しを許可し、横一直線のつなぎ線は隠す */
+    .keifu-people { flex-wrap:wrap; max-width:100%; row-gap:18px; }
+    .keifu-people::before { display:none; }
+    .keifu-person { width:116px; }
+  }
   @media (max-width:430px) {
     .keifu-stage { padding:22px 16px 20px; }
-    .keifu-people { gap:6px; }
-    .keifu-people::before { left:49px; right:49px; }
-    .keifu-person { width:98px; }
+    .keifu-people { gap:6px; row-gap:16px; }
+    .keifu-person { width:104px; }
     .keifu-person__face { width:58px; height:58px; }
-    .keifu-person__name { font-size:.74rem; padding:4px 9px; }
-    .keifu-person__tag { font-size:.63rem; }
+    .keifu-person__name { font-size:0.91rem; padding:4px 9px; }
+    .keifu-person__tag { font-size:0.8rem; }
   }
 </style>
 </head>
@@ -217,7 +222,7 @@
           <span class="keifu-person__tag">交流分析(TA)</span>
         </a>
       </div>
-      <p class="keifu-relation">🔗 フロイトの流れからは、<b>エリクソン(キャリア系譜②)</b>も生まれています。アンナ・フロイトに学び、精神分析を生涯発達の理論へ広げました。</p>
+      <p class="keifu-relation">🔗 フロイトの流れからは、<b>エリクソン(キャリア理論の系譜「発達論」タブ)</b>も生まれています。アンナ・フロイトに学び、精神分析を生涯発達の理論へ広げました。</p>
     </div>
   </section>
     <svg class="keifu-connect" viewBox="0 0 84 96" role="img" aria-label="次へ続く">
@@ -248,7 +253,7 @@
           <span class="keifu-person__tag">系統的脱感作法</span>
         </a>
       </div>
-      <p class="keifu-relation">🔗 この流れを発展的に乗りこえたのが<b>バンデューラ(キャリア系譜③)</b>です。自己効力感の考えは、クランボルツのキャリア理論の土台になりました。</p>
+      <p class="keifu-relation">🔗 この流れを発展的に乗りこえたのが<b>バンデューラ(キャリア理論の系譜「認知行動論」タブ)</b>です。自己効力感の考えは、クランボルツのキャリア理論の土台になりました。</p>
     </div>
   </section>
     <svg class="keifu-connect" viewBox="0 0 84 96" role="img" aria-label="次へ続く">
