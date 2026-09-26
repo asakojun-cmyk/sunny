@@ -600,11 +600,12 @@
 .hero-say--sunny{left:11%;top:4%}
 /* ゆったりテンポ(えーん→不安→寄り添い→ベネフィット→着地) */
 .hero-intro__moyan{animation:hi-in 1.2s ease .5s forwards,hi-out 1.8s ease-in-out 21.8s forwards}
-.hero-intro__sunny{animation:hi-in 1.2s ease 9.6s forwards,hi-out 1.8s ease-in-out 21.8s forwards}
-.hero-say-0{animation:pic-say 3.4s ease 1.4s both;max-width:150px}
-.hero-say-1{animation:pic-say 4.8s ease 4.9s both}
-.hero-say-2{animation:pic-say 5.2s ease 10.6s both}
-.hero-say-3{animation:pic-say 5.6s ease 16s both}
+.hero-intro__sunny{animation:hi-in 1.2s ease 1.2s forwards,hi-out 1.8s ease-in-out 21.8s forwards}
+.hero-say-0{animation:pic-say 3.6s ease 1.4s both}
+.hero-say-1{animation:pic-say 2.6s ease 4.6s both}
+.hero-say-2{animation:pic-say 5s ease 7s both}
+.hero-say-3{animation:pic-say 6s ease 11.6s both}
+.hero-say-4{animation:pic-say 3.4s ease 17.2s both}
 .hero-intro__skip{animation:hi-in .8s ease 2s forwards,hi-out .5s ease 21.4s forwards}
 .picnic-hero--note .picnic-stage{animation:pic-step 1.4s ease 22.8s forwards}
 .picnic-hero--note .hero-note .step-1{animation-delay:23.6s}
@@ -615,7 +616,7 @@
 
 /* ---- v2.6 劇の立ち位置(2026-07-20 ちゃん指示:左右入替+向かい合わせ) ---- */
 .hero-intro__moyan{left:23%;top:25%;animation:hi-in-flip 1.2s ease .5s forwards,hi-out-flip 1.8s ease-in-out 21.8s forwards}
-.hero-intro__sunny{left:62%;top:19%;animation:hi-in-flip 1.2s ease 9.6s forwards,hi-out-flip 1.8s ease-in-out 21.8s forwards}
+.hero-intro__sunny{left:62%;top:19%;animation:hi-in-flip 1.2s ease 1.2s forwards,hi-out-flip 1.8s ease-in-out 21.8s forwards}
 @keyframes hi-in-flip{from{opacity:0;transform:translateY(14px) scale(.94) scaleX(-1)}to{opacity:1;transform:scaleX(-1)}}
 @keyframes hi-out-flip{to{opacity:0;transform:translateY(300px) scale(.4) scaleX(-1)}}
 /* 吹き出しも相手の方を向く(モヤン=左で右向きに、サニー=右で左向きに話す) */

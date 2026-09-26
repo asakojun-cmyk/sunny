@@ -33,6 +33,8 @@
       pool = ALL.filter(function (x) { return x.f === 3; });
     } else if (filter === "theorist") {
       pool = ALL.filter(function (x) { return x.t === 1; });
+    } else if (filter === "theory") {
+      pool = ALL.filter(function (x) { return x.c === "キャリア理論" || x.c === "カウンセリング理論"; });
     } else if (filter === "choice") {
       pool = ALL.filter(function (x) { return !!(x.o && x.o.length); });
     } else {
@@ -136,7 +138,7 @@
       : rate >= 50 ? "いい感じ!まちがえた問題の用語ページを読み直すと、ぐんと伸びるよ"
       : "だいじょうぶ、まちがいは伸びしろ。用語ページでゆっくり復習してからまた来てね🌥️";
     root.querySelector("[data-quiz-endnote]").textContent = note;
-    var shareText = "キャリコン\u25cb\u00d7クイズ、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f #キャリコン学びピクニック";
+    var shareText = "キャリコン1問1答ドリル、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f #キャリコン学びピクニック";
     var pageUrl = "https://carepicnic.com/games/quiz/";
     var xBtn = document.querySelector("[data-quiz-share-x]");
     var lineBtn = document.querySelector("[data-quiz-share-line]");
