@@ -248,7 +248,7 @@
 /* 施設カード(絵本風) */
 .facility-cards{padding:85px max(24px,calc((100% - 1120px)/2));background:linear-gradient(#fffdf8,#fbf7ea)}
 .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
-.facility-grid.gateway__cards{grid-template-columns:repeat(2,1fr)}
+.facility-grid.gateway__cards{grid-template-columns:repeat(3,1fr)}
 .gateway__lead{max-width:640px;margin:0 auto 8px;text-align:center;font-size:.95rem;line-height:1.9;color:var(--picnic-ink)}
 .facility-card{position:relative;display:flex;gap:14px;align-items:flex-start;padding:22px 20px;border-radius:26px 30px 26px 30px;background:var(--card,#fffdf8);border:2px solid var(--edge,#eadfc2);text-decoration:none;color:var(--picnic-ink);transition:transform .2s ease,box-shadow .2s ease;overflow:hidden}
 .facility-card:before{content:"❀";position:absolute;right:14px;bottom:8px;color:rgba(255,255,255,.8);font-size:1.1rem}
@@ -270,6 +270,9 @@
 .facility-card--cream{--card:#faf6ec;--edge:#e5dcc2}
 .facility-card--amber{--card:#fef3e6;--edge:#f2d9ae}
 @media(max-width:980px){.facility-grid{grid-template-columns:1fr 1fr}}
+/* 入口カードは3枚。狭い画面では3列だと窮屈なので段を落とす */
+@media(max-width:1080px){.facility-grid.gateway__cards{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.facility-grid.gateway__cards{grid-template-columns:1fr}}
 @media(max-width:640px){
   .facility-grid{grid-template-columns:1fr}
   .map-spot__sign{font-size:.68rem;padding:5px 8px;gap:4px}
