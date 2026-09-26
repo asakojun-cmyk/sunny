@@ -5412,3 +5412,68 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   .lp-after__stat strong { font-size: 30px; }
   .about-body__concept { padding: 20px 18px; }
 }
+
+/* ---------- 運営者が目指した理由・メリット ---------- */
+.lp-why { padding: 96px 0; }
+.lp-why .chara-guide { max-width: 620px; margin: 0 auto 44px; }
+.lp-why .picnic-map__head { margin-bottom: 44px; }
+.lp-why__me {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 30px;
+  background: var(--color-surface);
+  border-radius: 20px;
+  border: 2px solid var(--color-border);
+}
+.lp-why__icon { flex: none; border-radius: 50%; margin-top: 4px; }
+.lp-why__mebody { flex: 1 1 auto; min-width: 0; }
+.lp-why__mebody p { line-height: 2.15; margin: 0 0 1.6em; }
+.lp-why__mebody p:last-child { margin-bottom: 0; }
+.lp-why__lead { font-size: 17px; }
+.lp-why__subtitle {
+  max-width: 640px;
+  margin: 64px auto 28px;
+  font-size: 19px;
+  text-align: center;
+  line-height: 1.7;
+}
+.lp-merit {
+  list-style: none;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.lp-merit__item {
+  padding: 26px 24px;
+  background: var(--color-surface);
+  border-radius: 18px;
+  border: 2px solid var(--color-yellow);
+}
+.lp-merit__label {
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-green);
+  line-height: 1.7;
+}
+.lp-merit__body { margin: 0; line-height: 2.05; font-size: 15px; }
+.lp-why__close {
+  max-width: 620px;
+  margin: 56px auto 0;
+  text-align: center;
+  line-height: 2.15;
+}
+@media (max-width: 680px) {
+  .lp-why { padding: 64px 0; }
+  .lp-why__me { flex-direction: column; gap: 14px; padding: 24px 20px; }
+  .lp-why__subtitle { margin: 48px auto 22px; font-size: 17px; }
+  .lp-merit { grid-template-columns: 1fr; gap: 16px; }
+  .lp-merit__item { padding: 22px 18px; }
+  .lp-why__close { margin-top: 40px; }
+}
