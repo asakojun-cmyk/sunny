@@ -5122,3 +5122,174 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   line-height: 1.8;
 }
 .guide-nextlink a { color: var(--color-terracotta); }
+
+/* ---------- ガイド記事の行間・余白をゆるめる ---------- */
+.container--article .guide-section {
+  margin-bottom: 64px;
+}
+.container--article .guide-section h2 {
+  padding-bottom: 14px;
+  margin-bottom: 26px;
+  line-height: 1.6;
+}
+.container--article .guide-section p {
+  line-height: 2.05;
+  margin: 0 0 1.6em;
+}
+.container--article .guide-section ul,
+.container--article .guide-section ol {
+  line-height: 2.05;
+  margin: 0 0 1.6em;
+  padding-left: 1.5em;
+}
+.container--article .guide-section li {
+  margin-bottom: 0.9em;
+}
+.container--article .guide-section li:last-child {
+  margin-bottom: 0;
+}
+.container--article .fact-table {
+  margin: 4px 0 1.8em;
+}
+.container--article .fact-row {
+  padding: 18px 6px;
+  gap: 22px;
+  line-height: 1.95;
+}
+.container--article .fact-row dt {
+  line-height: 1.8;
+}
+.container--article .term-section-note {
+  line-height: 1.95;
+  margin: 0 0 1.6em;
+}
+.container--article .guide-nextlink {
+  margin: 2em 0;
+  padding: 16px 20px;
+  line-height: 2;
+}
+.container--article .article-header__lede {
+  line-height: 2.05;
+}
+@media (max-width: 680px) {
+  .container--article .fact-row { padding: 15px 4px; gap: 6px; }
+}
+
+/* ---------- セルフチェック診断 ---------- */
+.shindan {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 18px;
+  padding: 26px 24px;
+  margin: 1.8em 0;
+}
+.shindan__q {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.shindan__q + .shindan__q {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px dashed var(--color-border);
+}
+/* legend は既定で枠線に重なるため、float させて通常のブロックとして扱う */
+.shindan__qtitle {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 14px;
+  font-weight: 700;
+  line-height: 1.85;
+}
+.shindan__opts {
+  clear: both;
+}
+.shindan__no {
+  display: inline-block;
+  background: var(--color-green);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 999px;
+  padding: 2px 11px;
+  margin-right: 10px;
+}
+.shindan__opts {
+  display: grid;
+  gap: 10px;
+}
+.shindan__opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 15px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-background);
+  cursor: pointer;
+  line-height: 1.85;
+  font-size: 15px;
+}
+.shindan__opt:hover {
+  border-color: var(--color-green);
+}
+.shindan__opt input {
+  margin-top: 6px;
+  flex: none;
+  accent-color: var(--color-green);
+}
+.shindan__opt:has(input:checked) {
+  border-color: var(--color-green);
+  background: rgba(117, 134, 121, 0.08);
+}
+.shindan__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--color-border);
+}
+.shindan__progress {
+  margin: 0;
+  color: var(--color-text-subtle);
+  font-size: 15px;
+}
+.shindan__actions .button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.shindan__result {
+  margin-top: 24px;
+  padding: 22px 20px;
+  border-radius: 14px;
+  border: 2px solid var(--color-border);
+  background: var(--color-background);
+  outline: none;
+}
+.shindan__result.is-go { border-color: var(--color-green); }
+.shindan__result.is-hold { border-color: var(--color-yellow); }
+.shindan__result.is-stop { border-color: var(--color-terracotta); }
+.shindan__label {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.7;
+}
+.shindan__body {
+  margin: 0 0 14px;
+  line-height: 2.05;
+}
+.shindan__note {
+  font-size: 13.5px;
+  color: var(--color-text-subtle);
+  line-height: 1.9;
+  margin: 0 0 16px;
+}
+@media (max-width: 680px) {
+  .shindan { padding: 20px 16px; }
+  .shindan__actions { flex-direction: column; align-items: stretch; }
+  .shindan__actions .button { width: 100%; }
+}
