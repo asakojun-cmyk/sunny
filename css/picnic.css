@@ -1240,7 +1240,8 @@
 .header-nav .hero-link:hover{background:linear-gradient(transparent 62%, rgba(239,128,100,.45) 62%)}
 @media (max-width: 960px){.header-nav{display:none}}
 /* v5.8b ヘッダーナビをサニーの検索窓のすぐ左に寄せる */
-.header-nav{margin-left:auto;margin-right:26px;gap:4px 18px;justify-content:flex-end}
+.header-nav{margin-left:auto;margin-right:26px;gap:4px 14px;justify-content:flex-end}
+@media (min-width:1180px){.header-nav{flex-wrap:nowrap;white-space:nowrap}.header-nav .hero-link{font-size:.87rem}}
 /* v5.9 ヘッダーのブランドを中央揃えのサンドイッチに(EN→ロゴ→タグライン) */
 .site-header__brand{text-align:center}
 .site-header__brand .site-logo{display:inline-block}
