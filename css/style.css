@@ -5477,3 +5477,13 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   .lp-merit__item { padding: 22px 18px; }
   .lp-why__close { margin-top: 40px; }
 }
+
+.lp-cta__body--me {
+  margin-top: -6px;
+  padding: 18px 20px;
+  background: var(--color-background);
+  border-radius: 14px;
+  font-size: 15px;
+}
+.lp-cta__sub { margin: 18px 0 0; font-size: 14.5px; line-height: 1.9; }
+.lp-cta__sub a { color: var(--color-text-subtle); }
