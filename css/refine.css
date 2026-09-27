@@ -412,3 +412,20 @@ main[data-lb] :is(p, li, h1, h2, h3, h4, dt, dd, td, th, figcaption, blockquote,
 .container--article :is(.guide-section, .school-section) > .guide-nextlink:first-child {
   margin: 0 0 48px;
 }
+
+/* ---------- トップ:挿絵の草原を、次のセクションまでつなげる ----------
+   波線の区切りが挿絵の下(花・ボール・茂み)に重なって、ぶつ切りに見えていたため
+   - 挿絵の下にはみ出す花や茂みを切らない(横だけ切って、縦ははみ出してOK)
+   - 「キャリアコンサルタントって、どんな仕事?」の背景を草原と同じ緑に
+   - その境目の波線はなくす */
+.picnic-hero--note {
+  overflow-x: clip;
+  overflow-y: visible;
+  z-index: 1;
+}
+.picnic-hero--note + .lp {
+  background: #eef4dd;
+}
+.picnic-hero--note + .lp::before {
+  display: none;
+}

@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css?v=v2026.0728.1616">
 <link rel="stylesheet" href="../../css/picnic.css?v=v2026.0728.1616">
-<link rel="stylesheet" href="../../css/refine.css?v=2026.0928">
+<link rel="stylesheet" href="../../css/refine.css?v=2026.0928b">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"3分ミニゲーム","item":"https://carepicnic.com/games/"},{"@type":"ListItem","position":3,"name":"1問1答ドリル"}]}</script>
 </head>
 <body>
@@ -68,7 +68,7 @@
   </div>
 </header>
 <main data-lb="1" id="main" class="site-main">
-<nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><wbr><a href="../../">ホーム</a><wbr></li><li><wbr><a href="../../games/">3分ミニゲーム</a><wbr></li><li aria-current="page">1問1答ドリル</li></ol></nav>
+<nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../games/">3分ミニゲーム</a></li><li aria-current="page">1問1答ドリル</li></ol></nav>
 <div class="page-scene" aria-hidden="true">
   <img class="pgs pgs-a" src="../../img/parts/12_beach_ball.png" alt="" loading="lazy">
   <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.png" alt="" loading="lazy">
@@ -85,36 +85,36 @@
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
       <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
-      <wbr><span class="chara-guide__name">サニー先生</span><wbr>
+      <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">ジャンルと<wbr>時間を<wbr>選んで<wbr>スタート!順番は<wbr>毎回シャッフルされるよ。<wbr>まちが<wbr>えても<wbr>大丈夫、<wbr>まちがいの<wbr>数だけ<wbr>強くなるからね。</p>
   </div>
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
       <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <wbr><span class="chara-guide__name">モヤン</span><wbr>
+      <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">1分だけでも<wbr>いいの?<wbr> …<wbr>それなら<wbr>スキマ時間に<wbr>できそう! ふん<wbr>ふん。</p>
   </div>
   <div class="quiz-pickers">
     <label class="quiz-picker">
-      <wbr><span class="quiz-picker__label">ジャンル</span><wbr>
+      <span class="quiz-picker__label">ジャンル</span>
       <select data-quiz-genre aria-label="ジャンルを選ぶ"><option value="all" selected>ぜんぶ(859問)</option><option value="theory">理論ぜんぶ(キャリア+カウンセリング 545問)</option><option value="cat:制度・支援">法規・市場・制度(221問)</option><option value="freq3">よく出るだけ(263問)</option><option value="theorist">理論家(410問)</option><option value="choice">4択だけ(540問)</option><option value="cat:キャリア理論">キャリア理論(457問)</option><option value="cat:カウンセリング理論">カウンセリング理論(88問)</option><option value="cat:カウンセリング技法">カウンセリング技法(93問)</option></select>
     </label>
     <label class="quiz-picker">
-      <wbr><span class="quiz-picker__label">学習時間</span><wbr>
+      <span class="quiz-picker__label">学習時間</span>
       <select data-quiz-timesel aria-label="学習時間を選ぶ"><option value="1">1分(3問)</option><option value="5" selected>5分(10問)</option><option value="10">10分(20問)</option><option value="30">30分(50問)</option><option value="all">ぜんぶ</option></select>
     </label>
   </div>
   <div class="quiz-drill__start" data-quiz-start>
-    <p class="quiz-drill__count"><wbr><span data-quiz-pool>162</span><wbr>問の<wbr>中から、<wbr><b><wbr><span data-quiz-count>10</span><wbr>問</b><wbr>出題されます</p>
+    <p class="quiz-drill__count"><span data-quiz-pool>162</span><wbr>問の<wbr>中から、<wbr><b><span data-quiz-count>10</span><wbr>問</b><wbr>出題されます</p>
     <button type="button" class="button button--primary" data-quiz-begin>スタート!</button>
     <p class="quiz-drill__or">または</p>
     <button type="button" class="button button--secondary" data-quiz-random>おまかせランダム10問(ジャンル・時間不問)</button>
   </div>
   <div class="quiz-drill quiz-drill--stage" data-quiz-drill hidden>
     <div class="quiz-drill__card" data-quiz-card hidden>
-      <p class="quiz-drill__progress"><wbr><span data-quiz-no>1</span><wbr> / <wbr><span data-quiz-total>0</span><wbr>問 <wbr><span class="quiz-drill__score">正解 <wbr><span data-quiz-score>0</span><wbr></span><wbr></p>
+      <p class="quiz-drill__progress"><span data-quiz-no>1</span><wbr> / <wbr><span data-quiz-total>0</span><wbr>問 <wbr><span class="quiz-drill__score">正解 <wbr><span data-quiz-score>0</span></span></p>
       <p class="quiz-drill__cat" data-quiz-cat></p>
       <p class="quiz-drill__q" data-quiz-q></p>
       <div class="quiz-drill__actions" data-quiz-ox>
@@ -125,18 +125,18 @@
       <div class="quiz-drill__result" data-quiz-result aria-live="polite" hidden>
         <p class="quiz-drill__verdict" data-quiz-verdict></p>
         <p class="quiz-drill__exp" data-quiz-exp></p>
-        <p class="quiz-drill__link"><wbr><a data-quiz-link href="#">用語ページで<wbr>復習する<wbr> →</a><wbr></p>
+        <p class="quiz-drill__link"><a data-quiz-link href="#">用語ページで<wbr>復習する<wbr> →</a></p>
         <button type="button" class="button button--primary" data-quiz-next>次の問題へ</button>
       </div>
     </div>
     <div class="quiz-drill__end" data-quiz-end aria-live="polite" hidden>
       <p class="quiz-drill__endtitle">おつかれさま!</p>
-      <p class="quiz-drill__endscore"><wbr><span data-quiz-final></span><wbr></p>
+      <p class="quiz-drill__endscore"><span data-quiz-final></span></p>
       <p class="quiz-drill__endnote" data-quiz-endnote></p>
       <div class="term-share quiz-share">
         <p class="term-share__label">きょうの<wbr>成果を<wbr>シェア:</p>
-        <wbr><a class="term-share__btn term-share__btn--x" data-quiz-share-x href="#" target="_blank" rel="noopener">Xで<wbr>報告</a><wbr>
-        <wbr><a class="term-share__btn term-share__btn--line" data-quiz-share-line href="#" target="_blank" rel="noopener">LINEで<wbr>報告</a><wbr>
+        <a class="term-share__btn term-share__btn--x" data-quiz-share-x href="#" target="_blank" rel="noopener">Xで<wbr>報告</a>
+        <a class="term-share__btn term-share__btn--line" data-quiz-share-line href="#" target="_blank" rel="noopener">LINEで<wbr>報告</a>
       </div>
       <button type="button" class="button button--primary" data-quiz-retry>もう一回(シャッフル)</button>
     </div>
