@@ -442,3 +442,159 @@ strong.mk {
 .lp-merit__label {
   margin-bottom: 10px;
 }
+
+/* ---------- 養成学校の比較表 ----------
+   学校=列、項目=行。スマホでは横スクロール、項目名と学校名は固定 */
+.cmp__pickhint,
+.cmp__hint {
+  font-size: 13px;
+  color: var(--rf-subtle);
+  margin: 0 0 12px;
+}
+.cmp__status {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.cmp__reset {
+  margin-left: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1.5px solid #d8d2c7;
+  background: #fffdf8;
+  cursor: pointer;
+}
+.cmp-scroll {
+  overflow: auto;
+  max-height: 78vh;
+  border: 1px solid #e3dccb;
+  border-radius: 14px;
+  background: #fffdf8;
+  -webkit-overflow-scrolling: touch;
+}
+.cmp-scroll:focus-visible {
+  outline: 2px solid #a7c99e;
+  outline-offset: 2px;
+}
+.cmp {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 100%;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.cmp th,
+.cmp td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee6d6;
+  vertical-align: top;
+  text-align: left;
+  min-width: 190px;
+}
+.cmp td + td,
+.cmp th + th,
+.cmp th[scope="row"] + td {
+  border-left: 1px solid #f1eadb;
+}
+/* 学校名の行(上に固定) */
+.cmp thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f6efdc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cmp__name {
+  display: block;
+  font-weight: 700;
+}
+.cmp__name .pr-label {
+  margin-right: 6px;
+}
+.cmp__links {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.cmp__links a {
+  color: #8a4e3a;
+}
+/* 項目名の列(左に固定) */
+.cmp tbody th[scope="row"],
+.cmp__corner {
+  position: sticky;
+  left: 0;
+  min-width: 118px;
+  width: 118px;
+  background: #fffdf8;
+  font-weight: 700;
+  font-size: 13px;
+  color: #4b463d;
+  z-index: 1;
+  box-shadow: 1px 0 0 #eee6d6;
+}
+.cmp__corner {
+  z-index: 3;
+  background: #f6efdc;
+}
+/* まとまりの見出し(費用・受け方・授業の中身…) */
+.cmp__group th {
+  background: #eef4dd;
+  color: #4f6e43;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  padding: 8px 14px;
+}
+.cmp__group th span {
+  position: sticky;
+  left: 14px;
+}
+/* 料金・給付金・オンライン・振替は、うすい黄色で目立たせる */
+.cmp__row--key th[scope="row"],
+.cmp__row--key td {
+  background: #fbf3d6;
+}
+.cmp__na {
+  color: #8a857a;
+}
+@media (max-width: 600px) {
+  .cmp th,
+  .cmp td {
+    min-width: 168px;
+    padding: 10px 12px;
+  }
+  .cmp tbody th[scope="row"],
+  .cmp__corner {
+    min-width: 96px;
+    width: 96px;
+  }
+}
+.cmp thead .cmp__corner {
+  z-index: 3;
+}
+/* 学校の選択は、小さなボタンを並べる形に */
+.compare-picker__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.compare-picker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1.4;
+  width: auto;
+}
+.compare-picker__item:has(input:checked) {
+  border-color: #a7c99e;
+  background: #eef4dd;
+  font-weight: 700;
+}
