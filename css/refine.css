@@ -398,11 +398,9 @@ main[data-lb] :is(p, li, h1, h2, h3, h4, dt, dd, td, th, figcaption, blockquote,
   padding: 4px 16px;
 }
 
-/* ---------- 大事なところに黄色いマーカー ---------- */
-.container--article :is(.guide-section, .review-section, .school-section, .column-section) :is(p, li):not(.guide-nextlink) strong,
-.lp-why__mebody strong,
-.lp-merit__body strong,
-.term-prose strong {
+/* ---------- 黄色いマーカーは、本当に大事な一言だけ ----------
+   太字はふつうの太字のまま。HTMLで class="mk" をつけた所にだけ線を引く */
+strong.mk {
   background: linear-gradient(transparent 58%, #fbe3a0 58%);
   padding: 0 0.1em;
   border-radius: 2px;
