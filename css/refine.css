@@ -427,3 +427,18 @@ strong.mk {
 .picnic-hero--note + .lp::before {
   display: none;
 }
+
+/* ---------- トップ:「この資格なら、こんな働き方ができる」の4枚は中央そろえ ----------
+   上からアイコン → 項目 → 説明文の順に、まん中にそろえる */
+.lp-merit__item {
+  text-align: center;
+}
+.lp-merit__item::before {
+  width: 64px;
+  height: 56px;
+  margin: 0 auto 14px;
+  background-position: center bottom;
+}
+.lp-merit__label {
+  margin-bottom: 10px;
+}
