@@ -25,6 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/style.css?v=v2026.0728.1616">
 <link rel="stylesheet" href="../../css/picnic.css?v=v2026.0728.1616">
+<link rel="stylesheet" href="../../css/refine.css?v=2026.0928">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"ミニゲーム","item":"https://carepicnic.com/games/"},{"@type":"ListItem","position":3,"name":"傾聴のつみきブロック"}]}</script>
 </head>
 <body>
@@ -66,8 +67,8 @@
     </div>
   </div>
 </header>
-<main id="main" class="site-main">
-<nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../games/">ミニゲーム</a></li><li aria-current="page">傾聴のつみきブロック</li></ol></nav>
+<main data-lb="1" id="main" class="site-main">
+<nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><wbr><a href="../../">ホーム</a><wbr></li><li><wbr><a href="../../games/">ミニゲーム</a><wbr></li><li aria-current="page">傾聴の<wbr>つみきブロック</li></ol></nav>
 <div class="page-scene" aria-hidden="true">
   <img class="pgs pgs-a" src="../../img/parts/12_beach_ball.png" alt="" loading="lazy">
   <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.png" alt="" loading="lazy">
@@ -79,22 +80,22 @@
     <header class="section-header">
     
     <p class="section-header__en" aria-hidden="true">MINI GAME 02</p>
-    <h1 class="section-header__title">🧱 傾聴のつみきブロック</h1>
-    <p class="section-header__lede">カウンセリングは「積む順番」が命。正しい順番でつみきを積んで、崩れないカウンセリングタワーを建てよう。</p>
+    <h1 class="section-header__title">🧱 <wbr>傾聴のつみきブロック</h1>
+    <p class="section-header__lede">カウンセリングは<wbr>「積む順番」が<wbr>命。<wbr>正しい<wbr>順番で<wbr>つみきを<wbr>積んで、<wbr>崩れない<wbr>カウンセリングタワーを<wbr>建てよう。</p>
   </header>
     <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
       <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
+      <wbr><span class="chara-guide__name">モヤン</span><wbr>
     </div>
-    <p class="chara-guide__bubble">技法をいっぱい覚えたから、まず技法から使えばいいんだよね?</p>
+    <p class="chara-guide__bubble">技法を<wbr>いっぱい<wbr>覚えたから、<wbr>まず<wbr>技法から<wbr>使えば<wbr>いいんだよね?</p>
   </div>
     <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
       <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">サニー先生</span>
+      <wbr><span class="chara-guide__name">サニー先生</span><wbr>
     </div>
-    <p class="chara-guide__bubble">ふふ、ほんとにそうかな? 積んでみればわかるよ。下から順番にタップしてね。</p>
+    <p class="chara-guide__bubble">ふふ、<wbr>ほんとに<wbr>そうかな?<wbr> 積んで<wbr>みれば<wbr>わかるよ。<wbr>下から<wbr>順番に<wbr>タップしてね。</p>
   </div>
 
     <div class="tsumiki" id="tsumiki-game">
@@ -102,23 +103,23 @@
         <div class="tsumiki__stack" data-stack aria-live="polite"></div>
         <div class="tsumiki__ground"></div>
       </div>
-      <p class="tsumiki__feedback" data-feedback>👇 土台にするブロックからタップしてね</p>
+      <p class="tsumiki__feedback" data-feedback>👇 土台に<wbr>する<wbr>ブロックから<wbr>タップしてね</p>
       <div class="tsumiki__bank" data-bank>
         <button type="button" class="tsumiki-block tsumiki-block--giho" data-block="giho">技法<span>質問・感情の反映・要約…</span></button>
         <button type="button" class="tsumiki-block tsumiki-block--ningen" data-block="ningen">人間観<span>人は自ら成長する力を持つ</span></button>
         <button type="button" class="tsumiki-block tsumiki-block--taido" data-block="taido">基本的態度<span>受容・共感・自己一致</span></button>
       </div>
       <div class="tsumiki__clear" data-clear hidden>
-        <p class="tsumiki__clear-title">🎉 崩れないタワーが建ったね!</p>
+        <p class="tsumiki__clear-title">🎉 崩れない<wbr>タワーが<wbr>建ったね!</p>
         <dl class="tsumiki__lesson">
-          <div><dt>🟫 土台: 人間観</dt><dd>「人は自ら成長する力(実現傾向)を持つ」という信頼。ここが無いと、どんな技法も相手を操作する道具になってしまう。</dd></div>
-          <div><dt>🟨 2段目: 基本的態度</dt><dd>受容(無条件の肯定的配慮)・共感的理解・自己一致。ロジャーズの3条件。人間観の上にはじめて成り立つ。</dd></div>
-          <div><dt>🟦 3段目: 技法</dt><dd>質問技法・感情の反映・要約など。態度という土台の上で使うから効果が出る。順番を逆にすると「技法だけの冷たい面接」に。</dd></div>
+          <div><dt>🟫 土台: 人間観</dt><dd>「人は<wbr>自ら成長する<wbr>力(実現傾向)を<wbr>持つ」と<wbr>いう<wbr>信頼。<wbr>ここが<wbr>無いと、<wbr>どんな<wbr>技法も<wbr>相手を<wbr>操作する<wbr>道具に<wbr>なってしまう。</dd></div>
+          <div><dt>🟨 2段目: 基本的態度</dt><dd>受容(無条件の<wbr>肯定的配慮)・共感的理解・<wbr>自己一致。<wbr>ロジャーズの<wbr>3条件。<wbr>人間観の<wbr>上に<wbr>はじめて<wbr>成り<wbr>立つ。</dd></div>
+          <div><dt>🟦 3段目: 技法</dt><dd>質問技法・<wbr>感情の<wbr>反映・要約など。<wbr>態度と<wbr>いう<wbr>土台の<wbr>上で<wbr>使うから<wbr>効果が<wbr>出る。<wbr>順番を<wbr>逆に<wbr>すると<wbr>「技法だけの<wbr>冷たい<wbr>面接」に。</dd></div>
         </dl>
-        <p class="tsumiki__exam">✏️ 試験では「技法が土台」とする記述は×。<strong>人間観・態度が先、技法があと</strong>だよ。</p>
+        <p class="tsumiki__exam">✏️ 試験では<wbr>「技法が<wbr>土台」と<wbr>する<wbr>記述は<wbr>×。<wbr><strong>人間観・<wbr>態度が<wbr>先、<wbr>技法が<wbr>あと</strong><wbr>だよ。</p>
         <div class="match-game__clear-actions">
           <button type="button" class="button button--primary" data-retry>もう一回つむ</button>
-          <a class="button button--secondary" href="../../terms/keicho/">傾聴のページでおさらい</a>
+          <wbr><a class="button button--secondary" href="../../terms/keicho/">傾聴の<wbr>ページで<wbr>おさらい</a><wbr>
         </div>
       </div>
     </div>

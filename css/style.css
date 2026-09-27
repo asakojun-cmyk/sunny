@@ -217,7 +217,7 @@ button {
 }
 .site-logo__en {
   display: block;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   color: var(--color-text-subtle);
 }
@@ -580,12 +580,12 @@ button {
   font-size: 17px;
   font-weight: 700;
   color: var(--color-terracotta);
-  line-height: 2.2;
+  line-height: 1.95;
   margin: 0 0 32px;
 }
 .hero__lede {
   max-width: 560px;
-  line-height: 2.1;
+  line-height: 1.95;
   margin-bottom: 20px;
 }
 .hero__note {
@@ -824,7 +824,7 @@ button {
   font-weight: 700;
 }
 .pillar__text {
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.9;
   color: var(--color-text-subtle);
 }
@@ -886,7 +886,7 @@ button {
   margin-bottom: 8px;
 }
 .category-item__name {
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 .category-item__name a {
@@ -1684,7 +1684,7 @@ button {
 .theorist-list__name {
   grid-area: name;
   font-family: var(--font-serif);
-  font-size: 19px;
+  font-size: 20px;
 }
 .term-list__reading,
 .theorist-list__en,
@@ -1720,7 +1720,7 @@ button {
   margin: 44px 0;
 }
 .school-section__title {
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 16px;
 }
 .school-section__note {
@@ -2069,7 +2069,7 @@ button {
     line-height: 1.9;
   }
   .section-header__en {
-    font-size: 10px;
+    font-size: 11px;
   }
   .section__more {
     margin-top: 16px;
@@ -2236,7 +2236,7 @@ button {
     align-items: center;
     gap: 3px;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 11px;
     color: var(--color-text-subtle);
     padding: 4px 0;
   }
@@ -2426,7 +2426,7 @@ button {
   font-size: 18px;
   font-weight: 700;
   color: var(--color-terracotta);
-  line-height: 2.1;
+  line-height: 1.95;
 }
 .wv-line {
   display: block;
@@ -2678,7 +2678,7 @@ button {
   cursor: pointer;
 }
 .header-search__label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--color-text-subtle);
@@ -2806,7 +2806,7 @@ button {
     min-width: 0;
   }
   .site-header__tagline {
-    font-size: 10px;
+    font-size: 11px;
   }
   .header-search {
     position: absolute;
@@ -2886,7 +2886,7 @@ button {
   border: 1.5px solid #ecc9ae;
   border-radius: 14px;
   padding: 14px 18px;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 2;
   text-align: left;
 }
@@ -2946,7 +2946,7 @@ button {
 }
 .shikaku-steps {
   padding-left: 1.4em;
-  line-height: 2.1;
+  line-height: 1.95;
 }
 .shikaku-steps li {
   margin-bottom: 8px;
@@ -3001,7 +3001,7 @@ button {
   font-weight: 700;
 }
 .kyufu-calc__note {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   line-height: 1.9;
   margin: 10px 0 0;
@@ -3067,14 +3067,14 @@ button {
 }
 .column-card__lede {
   display: block;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
   line-height: 1.9;
   margin-bottom: 10px;
 }
 .column-card__tags span {
   display: inline-block;
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-terracotta);
   font-weight: 700;
   margin-right: 10px;
@@ -3082,7 +3082,7 @@ button {
 .column-hub__note {
   margin-top: 26px;
   text-align: center;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
 }
 .column-tag {
@@ -3095,11 +3095,11 @@ button {
   margin-top: 36px;
 }
 .column-article .column-section h2 {
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 14px;
 }
 .column-article .column-section p {
-  line-height: 2.2;
+  line-height: 1.95;
   margin-bottom: 16px;
 }
 .column-personal {
@@ -3115,7 +3115,7 @@ button {
 }
 .column-personal p {
   margin: 0;
-  line-height: 2.1;
+  line-height: 1.95;
 }
 .column-step {
   margin-top: 36px;
@@ -3131,7 +3131,7 @@ button {
   margin: 0 0 10px;
 }
 .column-step__body {
-  line-height: 2.1;
+  line-height: 1.95;
   margin: 0 0 10px;
 }
 .column-step__note {
@@ -3210,7 +3210,7 @@ button {
   transition: transform 0.15s ease;
 }
 .tsumiki-block span {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 500;
   color: #6f6b63;
 }
@@ -3242,7 +3242,7 @@ button {
   padding: 22px;
 }
 .tsumiki__clear-title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
   margin: 0 0 12px;
@@ -3254,7 +3254,7 @@ button {
   background: #fff;
   border-radius: 10px;
   padding: 10px 14px;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.9;
 }
 
@@ -3302,7 +3302,7 @@ button {
   background: var(--color-surface);
   font-family: inherit;
   font-weight: 700;
-  font-size: 12.5px;
+  font-size: 13px;
   padding: 12px 4px;
   cursor: pointer;
   transition: transform 0.15s ease, border-color 0.15s ease;
@@ -3326,7 +3326,7 @@ button {
   margin-bottom: 10px;
 }
 .ryuha-summary__item h3 { margin: 0 0 6px; font-size: 15px; }
-.ryuha-summary__item p { margin: 0 0 4px; font-size: 13.5px; line-height: 1.9; }
+.ryuha-summary__item p { margin: 0 0 4px; font-size: 14px; line-height: 1.9; }
 .ryuha-summary__derived { color: var(--color-terracotta); font-weight: 700; }
 @media (max-width: 680px) {
   .ryuha__buckets { grid-template-columns: repeat(2, 1fr); }
@@ -3345,7 +3345,7 @@ button {
   border-radius: 999px;
   background: #fff;
   font-family: inherit;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   padding: 8px 14px;
   cursor: pointer;
@@ -3383,7 +3383,7 @@ button {
   max-width: 420px;
 }
 .anaume-slot__q { font-size: 15px; font-weight: 700; color: #8a7a20; }
-.anaume-slot__note { font-size: 10.5px; color: #6f6b63; }
+.anaume-slot__note { font-size: 11px; color: #6f6b63; }
 .anaume-slot.is-active { border-color: var(--color-terracotta); background: #fef4ec; }
 .anaume-slot.is-filled { border-style: solid; border-color: #ded263; background: #fdf9dc; cursor: default; }
 .anaume-slot.is-filled .anaume-slot__q { color: #3f4652; }
@@ -3428,7 +3428,7 @@ button {
   font-weight: 700;
   min-height: 2em;
   margin: 14px 0 0;
-  font-size: 13.5px;
+  font-size: 14px;
 }
 .anaume-board__usage {
   margin-top: 14px;
@@ -3492,12 +3492,12 @@ button {
   place-items: center;
 }
 .flow-step__title {
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--color-text);
 }
 .flow-step__short {
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--color-text-subtle);
 }
 .flow-arrow {
@@ -3524,14 +3524,14 @@ button {
 .flow-panel__desc {
   margin: 0 0 10px;
   line-height: 2;
-  font-size: 14.5px;
+  font-size: 15px;
 }
 .flow-panel__sunny {
   margin: 0 0 10px;
   background: #fdf9dc;
   border-radius: 10px;
   padding: 8px 12px;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.9;
 }
@@ -3551,7 +3551,7 @@ button {
 }
 .flowchart__hint {
   margin: 12px 0 0;
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
   text-align: center;
 }
@@ -3559,7 +3559,7 @@ button {
   margin-top: 44px;
 }
 .diagram-shelf__note {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
   margin: 0 0 16px;
 }
@@ -3588,7 +3588,7 @@ button {
 }
 .diagram-lib__note {
   margin-top: 36px;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
   text-align: center;
   line-height: 2;
@@ -3614,7 +3614,7 @@ button {
 .omamori-link-row {
   margin: 14px 0 0;
   text-align: center;
-  font-size: 13.5px;
+  font-size: 14px;
 }
 .omamori-link-row a {
   color: var(--color-terracotta);
@@ -3629,10 +3629,10 @@ button {
 }
 .omamori-card__title {
   margin: 0 0 10px;
-  font-size: 19px;
+  font-size: 20px;
 }
 .omamori-card__note {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
   line-height: 1.9;
   margin: 0 0 14px;
@@ -3680,7 +3680,7 @@ button {
 .omamori-focus__title {
   margin: 0 0 8px;
   font-weight: 700;
-  font-size: 14.5px;
+  font-size: 15px;
 }
 .omamori-focus ul {
   margin: 0;
@@ -3734,7 +3734,7 @@ button {
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  font-size: 14.5px;
+  font-size: 15px;
   line-height: 1.8;
 }
 .omamori-checklist input[type="checkbox"] {
@@ -3745,7 +3745,7 @@ button {
 }
 .omamori-checklist__link {
   flex: none;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--color-terracotta);
   white-space: nowrap;
@@ -3773,7 +3773,7 @@ button {
 }
 .omamori-note {
   margin-top: 18px;
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   text-align: center;
 }
@@ -3830,7 +3830,7 @@ button {
   display: inline-block;
   background: var(--color-terracotta);
   color: #fff;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
   border-radius: 999px;
@@ -3932,7 +3932,7 @@ button {
   margin-bottom: 14px;
 }
 .quiz-drill__progress {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   margin-bottom: 10px;
   display: flex;
@@ -3944,7 +3944,7 @@ button {
   color: var(--color-terracotta);
 }
 .quiz-drill__cat {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
   margin-bottom: 6px;
 }
@@ -4009,7 +4009,7 @@ button {
   margin-bottom: 14px;
 }
 .quiz-drill__foot {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
 }
 
@@ -4086,7 +4086,7 @@ button {
   align-items: center;
 }
 .book-card__audience {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--label-official-text);
@@ -4095,7 +4095,7 @@ button {
   padding: 2px 9px;
 }
 .book-card__pr {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: #fff;
   background: var(--color-pr);
@@ -4108,7 +4108,7 @@ button {
   margin: 0 0 2px;
 }
 .book-card__author {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   margin: 0 0 8px;
 }
@@ -4119,11 +4119,11 @@ button {
 }
 .book-card__link {
   margin: 0;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
 }
 .book-shelf__note {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
 }
 
@@ -4159,7 +4159,7 @@ button {
   font-size: 15px;
 }
 .future-work__desc {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   line-height: 1.8;
 }
@@ -4185,7 +4185,7 @@ button {
   vertical-align: 1px;
 }
 .freq-legend {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   margin: 10px 0 26px;
   line-height: 2;
@@ -4213,7 +4213,7 @@ button {
   margin-bottom: 14px;
 }
 .quiz-drill__progress {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   margin-bottom: 10px;
   display: flex;
@@ -4225,7 +4225,7 @@ button {
   color: var(--color-terracotta);
 }
 .quiz-drill__cat {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
   margin-bottom: 6px;
 }
@@ -4290,7 +4290,7 @@ button {
   margin-bottom: 14px;
 }
 .quiz-drill__foot {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
 }
 
@@ -4367,7 +4367,7 @@ button {
   align-items: center;
 }
 .book-card__audience {
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--label-official-text);
@@ -4376,7 +4376,7 @@ button {
   padding: 2px 9px;
 }
 .book-card__pr {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: #fff;
   background: var(--color-pr);
@@ -4389,7 +4389,7 @@ button {
   margin: 0 0 2px;
 }
 .book-card__author {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   margin: 0 0 8px;
 }
@@ -4400,11 +4400,11 @@ button {
 }
 .book-card__link {
   margin: 0;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
 }
 .book-shelf__note {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
 }
 
@@ -4440,7 +4440,7 @@ button {
   font-size: 15px;
 }
 .future-work__desc {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--color-text-subtle);
   line-height: 1.8;
 }
@@ -4508,7 +4508,7 @@ button {
   margin: 0 0 8px;
 }
 .freq-box__note {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-subtle);
   margin: 0;
 }
@@ -4550,7 +4550,7 @@ a.game-card-link:hover {
 }
 .game-card-link__desc {
   display: block;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
   line-height: 1.8;
 }
@@ -4694,7 +4694,7 @@ a.game-card-link:hover {
   }
   .match-card {
     padding: 8px 9px;
-    font-size: 12.5px;
+    font-size: 13px;
     border-radius: 12px;
     gap: 7px;
   }
@@ -4714,7 +4714,7 @@ a.game-card-link:hover {
   border: 1.5px solid #ecc9ae;
   border-radius: 14px;
   padding: 14px 18px;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .law-notice__lead {
@@ -4771,7 +4771,7 @@ a.game-card-link:hover {
   padding-left: 22px;
   margin-bottom: 10px;
   line-height: 1.9;
-  font-size: 14.5px;
+  font-size: 15px;
 }
 .exam-advice__list li:last-child {
   margin-bottom: 0;
@@ -4825,7 +4825,7 @@ a.game-card-link:hover {
 }
 .term-list__name {
   display: block;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
 }
 .term-list__reading {
@@ -4963,25 +4963,25 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 .picnic-intro__line--guest{margin-left:auto;flex-direction:row-reverse}
 .picnic-intro__avatar{width:52px;height:52px;flex:none;border-radius:50%;background:#fffdf8;display:grid;place-items:center;box-shadow:0 4px 10px rgba(41,67,94,.1);overflow:hidden;font-size:1.5rem}
 .picnic-intro__avatar img{width:112%;height:112%;object-fit:contain}
-.picnic-intro__line p{margin:0;padding:14px 18px;border-radius:22px 22px 22px 8px;background:#fff7dd;line-height:1.95;font-size:.95rem}
+.picnic-intro__line p{margin:0;padding:14px 18px;border-radius:22px 22px 22px 8px;background:#fff7dd;line-height:1.95;font-size:.9375rem}
 .picnic-intro__line--guest p{background:#eef4fa;border-radius:22px 22px 8px 22px}
-.picnic-intro__line b{display:block;font-size:.72rem;color:#8a7a3a;margin-bottom:2px}
+.picnic-intro__line b{display:block;font-size:.75rem;color:#8a7a3a;margin-bottom:2px}
 .picnic-intro__line--guest b{color:#5a7a92}
 .picnic-intro a{color:#b0693f;font-weight:700}
 @media(max-width:640px){.picnic-intro__line{max-width:100%}.picnic-intro__avatar{width:44px;height:44px}}
 
 /* ---- v2.2 時代プロフィール+吹き出しゆったり+草原の波(2026-07-20 ちゃん指示) ---- */
 .theorist-era{margin:22px 0 8px;padding:22px 26px;border-radius:22px;background:#f5f9ee}
-.theorist-era__years{margin:0 0 8px;font-size:1.05rem;font-weight:700;color:#3f5b46;letter-spacing:.05em}
-.theorist-era__years span{font-size:.82rem;font-weight:500;color:#71817b;letter-spacing:.02em}
-.theorist-era__text{margin:0;line-height:2.05}
-.theorist-era__influence{margin:12px 0 0;padding-top:12px;border-top:1.5px dashed #d5e3c8;line-height:2;font-size:.92rem}
-.theorist-era__influence b{display:inline-block;margin-right:8px;padding:2px 10px;border-radius:999px;background:#fff;color:#6b8455;font-size:.72rem;vertical-align:2px}
-.theorist-era__note{margin:10px 0 0;font-size:.7rem;color:#9aa79b}
+.theorist-era__years{margin:0 0 8px;font-size:1.0625rem;font-weight:700;color:#3f5b46;letter-spacing:.05em}
+.theorist-era__years span{font-size:.8125rem;font-weight:500;color:#71817b;letter-spacing:.02em}
+.theorist-era__text{margin:0;line-height:1.95}
+.theorist-era__influence{margin:12px 0 0;padding-top:12px;border-top:1.5px dashed #d5e3c8;line-height:2;font-size:.9375rem}
+.theorist-era__influence b{display:inline-block;margin-right:8px;padding:2px 10px;border-radius:999px;background:#fff;color:#6b8455;font-size:.75rem;vertical-align:2px}
+.theorist-era__note{margin:10px 0 0;font-size:.6875rem;color:#9aa79b}
 /* 吹き出しをゆったり(スッと頭に入るリズム) */
 .picnic-intro{gap:20px;margin:30px 0 42px}
 .picnic-intro__line{gap:14px;max-width:600px}
-.picnic-intro__line p{padding:20px 26px;line-height:2.15;font-size:.93rem;letter-spacing:.015em}
+.picnic-intro__line p{padding:20px 26px;line-height:1.95;font-size:.9375rem;letter-spacing:.015em}
 .picnic-intro__line b{margin-bottom:6px}
 /* 草原のしめくくり:上端をなめらかな波形に */
 .picnic-meadow:before{border-radius:0;width:100%;left:0;transform:none;height:88px}
@@ -5018,27 +5018,27 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 }
 
 /* ---- v3.6 養成講座アフィリエイト導線(2026-07-20 指示書) ---- */
-.ad-disclosure{margin:18px 0 22px;padding:14px 18px;border-radius:16px;background:#f3f1ea;border:1.5px solid #e0dccd;font-size:.86rem;line-height:1.9}
-.ad-disclosure b{display:inline-block;margin-bottom:4px;padding:2px 10px;border-radius:999px;background:#fffdf8;color:#8a7a52;font-size:.74rem;letter-spacing:.08em}
+.ad-disclosure{margin:18px 0 22px;padding:14px 18px;border-radius:16px;background:#f3f1ea;border:1.5px solid #e0dccd;font-size:.875rem;line-height:1.9}
+.ad-disclosure b{display:inline-block;margin-bottom:4px;padding:2px 10px;border-radius:999px;background:#fffdf8;color:#8a7a52;font-size:.75rem;letter-spacing:.08em}
 .ad-disclosure p{margin:6px 0 0}
 .school-exp__title{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.6}
-.school-exp__status-list{padding-left:1.3em;line-height:2.1}
-.school-exp__note{font-size:.82rem;color:#7d8a80;line-height:1.9}
+.school-exp__status-list{padding-left:1.3em;line-height:1.95}
+.school-exp__note{font-size:.8125rem;color:#7d8a80;line-height:1.9}
 .school-exp__worries{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;padding:0;list-style:none}
-.school-exp__worries li{background:#eef4fa;border-radius:14px;padding:12px 16px;font-size:.92rem}
-.school-exp__fit{padding-left:1.3em;line-height:2.1}
+.school-exp__worries li{background:#eef4fa;border-radius:14px;padding:12px 16px;font-size:.9375rem}
+.school-exp__fit{padding-left:1.3em;line-height:1.95}
 .school-exp__fit--check li{color:#6b6255}
 .school-exp__checklist{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px;padding:0;list-style:none}
-.school-exp__checklist li{background:#f5f9ee;border-radius:12px;padding:9px 14px;font-size:.88rem}
+.school-exp__checklist li{background:#f5f9ee;border-radius:12px;padding:9px 14px;font-size:.875rem}
 .school-exp__checklist li:before{content:"✓ ";color:#7fa77c;font-weight:700}
 .school-exp__cta{text-align:center;margin:22px 0 6px}
 .school-exp__contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .school-exp__contact-card{background:#fffdf8;border-radius:20px;padding:22px 22px;box-shadow:0 8px 22px rgba(48,74,58,.08)}
 .school-exp__contact-card h3{margin:0 0 10px;font-size:1rem}
-.school-exp__contact-card p{font-size:.9rem;line-height:2}
-.school-story-card{background:#fffdf8;border-radius:24px;padding:28px 30px;box-shadow:0 10px 26px rgba(48,74,58,.09);line-height:2.05}
+.school-exp__contact-card p{font-size:.875rem;line-height:2}
+.school-story-card{background:#fffdf8;border-radius:24px;padding:28px 30px;box-shadow:0 10px 26px rgba(48,74,58,.09);line-height:1.95}
 .school-story-card__cta{text-align:center;margin:20px 0 6px}
-.school-story-card__pr{text-align:center;font-size:.74rem;color:#8b9788;margin:8px 0 0}
+.school-story-card__pr{text-align:center;font-size:.75rem;color:#8b9788;margin:8px 0 0}
 @media(max-width:640px){
   .school-exp__contact-grid{grid-template-columns:1fr}
   .school-story-card{padding:22px 18px}
@@ -5137,12 +5137,12 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   line-height: 1.6;
 }
 .container--article .guide-section p {
-  line-height: 2.05;
+  line-height: 1.95;
   margin: 0 0 1.6em;
 }
 .container--article .guide-section ul,
 .container--article .guide-section ol {
-  line-height: 2.05;
+  line-height: 1.95;
   margin: 0 0 1.6em;
   padding-left: 1.5em;
 }
@@ -5173,7 +5173,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   line-height: 2;
 }
 .container--article .article-header__lede {
-  line-height: 2.05;
+  line-height: 1.95;
 }
 @media (max-width: 680px) {
   .container--article .fact-row { padding: 15px 4px; gap: 6px; }
@@ -5284,10 +5284,10 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 }
 .shindan__body {
   margin: 0 0 14px;
-  line-height: 2.05;
+  line-height: 1.95;
 }
 .shindan__note {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--color-text-subtle);
   line-height: 1.9;
   margin: 0 0 16px;
@@ -5304,7 +5304,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 
 /* 導入(仕事の説明) */
 .lp-intro { max-width: 620px; margin: 0 auto; }
-.lp-intro p { line-height: 2.15; margin: 0 0 1.9em; }
+.lp-intro p { line-height: 1.95; margin: 0 0 1.9em; }
 .lp-intro__link { margin: 0; }
 .lp-intro__link a { font-weight: 700; color: var(--color-terracotta); }
 
@@ -5312,7 +5312,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 .lp-river__lead {
   max-width: 620px;
   margin: 18px auto 0;
-  line-height: 2.1;
+  line-height: 1.95;
   color: var(--color-text-subtle);
 }
 .lp-river__list { list-style: none; margin: 0; padding: 0; }
@@ -5348,7 +5348,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   background: var(--color-green);
   color: #fff;
   font-weight: 700;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1;
 }
 .lp-river__item--caution .lp-river__no { background: var(--color-terracotta); }
@@ -5356,7 +5356,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 .lp-river__item--money .lp-river__no { background: #b0893f; }
 .lp-river__body { flex: 1 1 auto; min-width: 0; padding-top: 6px; }
 .lp-river__body h3 { font-size: 21px; margin: 0 0 18px; line-height: 1.6; }
-.lp-river__body p { line-height: 2.15; margin: 0 0 1.4em; }
+.lp-river__body p { line-height: 1.95; margin: 0 0 1.4em; }
 .lp-river__link { margin: 0; }
 .lp-river__link a { font-weight: 700; color: var(--color-terracotta); }
 
@@ -5372,14 +5372,14 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 }
 .lp-cta__kicker { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .12em; color: var(--color-text-subtle); }
 .lp-cta__title { margin: 0 0 22px; font-size: 23px; line-height: 1.6; }
-.lp-cta__body { max-width: 520px; margin: 0 auto 28px; text-align: left; line-height: 2.15; }
+.lp-cta__body { max-width: 520px; margin: 0 auto 28px; text-align: left; line-height: 1.95; }
 .lp-cta__note { margin: 22px 0 0; font-size: 13px; line-height: 1.95; color: var(--color-text-subtle); }
 
 /* 勉強コンテンツへの橋渡し */
 .lp-after__lead, .lp-after__note {
   max-width: 620px;
   margin: 0 auto;
-  line-height: 2.15;
+  line-height: 1.95;
 }
 .lp-after__note { margin-top: 36px; color: var(--color-text-subtle); font-size: 15px; }
 .lp-after__stats {
@@ -5395,7 +5395,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 
 /* 「はじめまして」 */
 .about-body { max-width: 620px; margin: 0 auto; }
-.about-body p { line-height: 2.15; margin: 0 0 1.9em; }
+.about-body p { line-height: 1.95; margin: 0 0 1.9em; }
 .about-body__concept {
   margin: 0;
   padding: 24px 26px;
@@ -5412,7 +5412,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   .lp-river__no { width: 42px; height: 42px; font-size: 17px; }
   .lp-river__body h3 { font-size: 18px; margin-bottom: 14px; }
   .lp-cta { padding: 30px 20px; margin-top: 44px; }
-  .lp-cta__title { font-size: 19px; }
+  .lp-cta__title { font-size: 20px; }
   .lp-after__stat strong { font-size: 30px; }
   .about-body__concept { padding: 20px 18px; }
 }
@@ -5434,13 +5434,13 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 }
 .lp-why__icon { flex: none; border-radius: 50%; margin-top: 4px; }
 .lp-why__mebody { flex: 1 1 auto; min-width: 0; }
-.lp-why__mebody p { line-height: 2.15; margin: 0 0 1.6em; }
+.lp-why__mebody p { line-height: 1.95; margin: 0 0 1.6em; }
 .lp-why__mebody p:last-child { margin-bottom: 0; }
 .lp-why__lead { font-size: 17px; }
 .lp-why__subtitle {
   max-width: 640px;
   margin: 64px auto 28px;
-  font-size: 19px;
+  font-size: 20px;
   text-align: center;
   line-height: 1.7;
 }
@@ -5466,12 +5466,12 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   color: var(--color-green);
   line-height: 1.7;
 }
-.lp-merit__body { margin: 0; line-height: 2.05; font-size: 15px; }
+.lp-merit__body { margin: 0; line-height: 1.95; font-size: 15px; }
 .lp-why__close {
   max-width: 620px;
   margin: 56px auto 0;
   text-align: center;
-  line-height: 2.15;
+  line-height: 1.95;
 }
 @media (max-width: 680px) {
   .lp-why { padding: 64px 0; }
@@ -5489,5 +5489,5 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
   border-radius: 14px;
   font-size: 15px;
 }
-.lp-cta__sub { margin: 18px 0 0; font-size: 14.5px; line-height: 1.9; }
+.lp-cta__sub { margin: 18px 0 0; font-size: 15px; line-height: 1.9; }
 .lp-cta__sub a { color: var(--color-text-subtle); }

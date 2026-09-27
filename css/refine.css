@@ -1,0 +1,414 @@
+/* ============================================================
+   refine.css — 読みやすさの整え(2026-09-28)
+   すべてのページで style.css / picnic.css のあとに読み込む。
+
+   ものさし
+   - 文字サイズ: 12 / 13 / 14 / 15 / 16(スマホ本文) / 17(PC本文) / 18 / 20 / 22 / 24〜32(h1)
+   - 行間: 本文 2.0 / 見出し 1.45〜1.55 / 囲みの中 1.9
+   - 余白: 8の倍数。ブロックの間はたっぷり(スマホ72px・PC96px)
+   - スマホの1画面(約680px)ぶん、文字だけが続かないようにする
+   ============================================================ */
+
+:root {
+  --rf-body: 16px;
+  --rf-lh: 2;
+  --rf-para: 1.5em;
+  --rf-section: 72px;
+  --rf-box-gap: 32px;
+  --rf-box-pad: 20px 20px;
+  --rf-subtle: #625e56; /* 薄すぎた補足文字の色(背景とのコントラスト4.5以上) */
+}
+@media (min-width: 768px) {
+  :root {
+    --rf-body: 17px;
+    --rf-section: 96px;
+    --rf-box-pad: 24px 28px;
+  }
+}
+
+/* ---------- 文字の組み ---------- */
+h1,
+h2,
+h3 {
+  /* 見出しは約物(、。「」)の余白を詰めて、行の頭がそろって見えるように */
+  font-feature-settings: "palt";
+  letter-spacing: 0.04em;
+  /* 「やめたほうがい/い人」のような変な位置で折り返さないよう、文節で改行する */
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+/* 本文だけ、ほんの少し字間をあける */
+.container--article .guide-section p,
+.container--article .guide-section li,
+.container--article .review-section p,
+.container--article .review-section li,
+.container--article .school-section p,
+.container--article .column-section p,
+.term-prose p {
+  letter-spacing: 0.03em;
+}
+
+/* ---------- 記事の上部(タイトルまわり) ---------- */
+.article-header,
+.term-header {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .article-header,
+  .term-header {
+    padding-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+.article-header h1 {
+  font-size: clamp(24px, 6.2vw, 32px);
+  line-height: 1.45;
+  margin-bottom: 20px;
+}
+.article-header__lede,
+.container--article .article-header__lede {
+  font-size: 15px;
+  line-height: 1.95;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .article-header__lede,
+  .container--article .article-header__lede {
+    font-size: 16px;
+  }
+}
+
+/* ---------- 本文 ---------- */
+.container--article .guide-section p,
+.container--article .review-section p,
+.container--article .school-section p,
+.container--article .column-section p {
+  font-size: var(--rf-body);
+  line-height: var(--rf-lh);
+  margin: 0 0 var(--rf-para);
+}
+.container--article .guide-section ul,
+.container--article .guide-section ol,
+.container--article .review-section ul,
+.container--article .review-section ol,
+.container--article .column-section ul,
+.container--article .column-section ol {
+  font-size: var(--rf-body);
+  line-height: var(--rf-lh);
+  margin: 0 0 var(--rf-para);
+}
+.container--article .guide-section li,
+.container--article .review-section li,
+.container--article .column-section li {
+  margin-bottom: 0.8em;
+}
+
+/* 見出しと区切りのリズム */
+.container--article .guide-section,
+.container--article .review-section,
+.container--article .school-section,
+.container--article .column-section {
+  margin-bottom: var(--rf-section);
+}
+.container--article .guide-section h2,
+.container--article .review-section h2,
+.container--article .school-section h2,
+.container--article .column-section h2 {
+  font-size: 20px;
+  line-height: 1.5;
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+}
+@media (min-width: 768px) {
+  .container--article .guide-section h2,
+  .container--article .review-section h2,
+  .container--article .school-section h2,
+  .container--article .column-section h2 {
+    font-size: 22px;
+  }
+}
+.container--article .guide-section h3,
+.container--article .review-section h3,
+.container--article .column-section h3 {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 48px 0 16px;
+}
+.container--article .guide-section h2 + h3,
+.container--article .review-section h2 + h3 {
+  margin-top: 0;
+}
+
+/* ---------- 見出しごとの小さなイラスト ----------
+   スマホで文字だけが何画面も続かないよう、読み物ページの大見出しの上に
+   ピクニックの小物を1つずつ置く(順番に入れ替わる) */
+.container--article:not(.privacy-page) .guide-section > h2::before,
+.container--article .review-section > h2::before,
+.container--article .school-section > h2::before,
+.container--article .column-section > h2::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 56px;
+  margin-bottom: 12px;
+  background: url("../img/parts/s/13_blue_yellow_tent.webp") left bottom / contain no-repeat;
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 2) > h2::before { background-image: url("../img/parts/s/04_book_wagon.webp"); }
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 3) > h2::before { background-image: url("../img/parts/s/05_pinwheel.webp"); }
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 4) > h2::before { background-image: url("../img/parts/s/11_lunchbox.webp"); }
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 5) > h2::before { background-image: url("../img/parts/s/09_blue_notebook.webp"); }
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 6) > h2::before { background-image: url("../img/parts/s/29_potted_plant.webp"); }
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 7) > h2::before { background-image: url("../img/parts/s/10_yellow_pencil.webp"); }
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(8n + 8) > h2::before { background-image: url("../img/parts/s/12_beach_ball.webp"); }
+
+/* 小見出しには小さな葉っぱの印をつけて、段落の切れ目を見つけやすく */
+.container--article .guide-section > h3,
+.container--article .review-section > h3,
+.container--article .column-section > h3 {
+  padding-left: 1.4em;
+  position: relative;
+}
+.container--article .guide-section > h3::before,
+.container--article .review-section > h3::before,
+.container--article .column-section > h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 0 60% 0 60%;
+  background: #a7c99e;
+}
+
+/* ---------- 囲み(広告表記・注意・次に読む) ---------- */
+.container--article .ad-disclosure,
+.container--article .disclosure,
+.container--article .notice-box,
+.container--article .law-notice {
+  margin: var(--rf-box-gap) 0;
+  padding: var(--rf-box-pad);
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.container--article .guide-nextlink {
+  margin: var(--rf-box-gap) 0 40px;
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* ---------- 用語・理論家ページ ---------- */
+.term-toc {
+  margin: 24px 0 40px;
+}
+.term-prose p {
+  font-size: var(--rf-body);
+  line-height: var(--rf-lh);
+}
+.term-prose p + p {
+  margin-top: 1.2em;
+}
+.term-oneliner,
+.term-theorists,
+.term-similar,
+.term-exam-points,
+.term-quiz {
+  margin-bottom: 56px;
+}
+.term-kids,
+.term-analogy,
+.term-life {
+  margin-bottom: 40px;
+}
+@media (max-width: 600px) {
+  /* スマホでは囲みの内側を少し詰めて、1行の文字数を確保する */
+  .term-kids,
+  .term-analogy,
+  .term-life,
+  .term-formal {
+    padding: 24px 20px;
+    margin-bottom: 32px;
+  }
+}
+/* 「ひとことでいうと」などのラベルが薄くて読めなかったのを濃く */
+.term-section-title {
+  color: var(--rf-subtle);
+}
+.term-header__portrait-cta a {
+  color: #8a4e3a;
+}
+/* キャラクター名・似顔絵の注記が10〜11pxで小さすぎたのを12pxに */
+.chara-guide__name,
+.term-header__portrait-note,
+.theorist-era__note {
+  font-size: 12px;
+}
+
+/* ---------- トップページ ---------- */
+.lp-why__mebody p {
+  line-height: var(--rf-lh);
+  margin-bottom: var(--rf-para);
+}
+.lp-merit__body {
+  line-height: 1.9;
+}
+.lp-why__close {
+  line-height: var(--rf-lh);
+}
+@media (max-width: 680px) {
+  .lp-why__me {
+    padding: 28px 22px;
+  }
+  .lp-merit__item {
+    padding: 22px 20px;
+  }
+}
+
+/* ---------- ヘッダー(スマホ) ---------- */
+@media (max-width: 680px) {
+  /* 1行に収めるため、キャッチコピーだけは小さいままにする */
+  .site-header__tagline {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+
+/* ---------- トップ:メリット4つと「この順番で」にもイラスト ---------- */
+.lp-merit__item::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 44px;
+  margin-bottom: 10px;
+  background: url("../img/parts/s/29_potted_plant.webp") left bottom / contain no-repeat;
+}
+.lp-merit__item:nth-child(2)::before { background-image: url("../img/parts/s/08_blue_backpack.webp"); }
+.lp-merit__item:nth-child(3)::before { background-image: url("../img/parts/s/09_blue_notebook.webp"); }
+.lp-merit__item:nth-child(4)::before { background-image: url("../img/parts/s/05_pinwheel.webp"); }
+.lp-river .picnic-map__head::before {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 72px;
+  margin: 0 auto 12px;
+  background: url("../img/parts/s/19_market_stall.webp") center bottom / contain no-repeat;
+}
+
+/* ---------- 薄すぎた・小さすぎたラベル ---------- */
+.term-next__label,
+.theorist-era__years span {
+  color: var(--rf-subtle);
+}
+.term-header__number {
+  color: #9d5a43; /* 同じテラコッタの濃い方 */
+}
+.related__type {
+  font-size: 12px;
+}
+
+/* ---------- 用語・理論家ページのラベルにも小物イラスト ----------
+   下半分(正式な説明〜1問1答)が文字だけで何画面も続いていたため */
+:is(.term-kids, .term-analogy, .term-life, .term-formal, .term-exam-advice, .term-similar, .term-theorists, .term-quiz, .term-exam-points) > .term-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+:is(.term-kids, .term-analogy, .term-life, .term-formal, .term-exam-advice, .term-similar, .term-theorists, .term-quiz, .term-exam-points) > .term-section-title::before {
+  content: "";
+  flex: none;
+  width: 36px;
+  height: 32px;
+  background: url("../img/parts/s/05_pinwheel.webp") center / contain no-repeat;
+}
+.term-analogy > .term-section-title::before { background-image: url("../img/parts/s/11_lunchbox.webp"); }
+.term-life > .term-section-title::before { background-image: url("../img/parts/s/08_blue_backpack.webp"); }
+.term-formal > .term-section-title::before { background-image: url("../img/parts/s/09_blue_notebook.webp"); }
+.term-exam-advice > .term-section-title::before { background-image: url("../img/parts/s/10_yellow_pencil.webp"); }
+.term-similar > .term-section-title::before { background-image: url("../img/parts/s/29_potted_plant.webp"); }
+.term-theorists > .term-section-title::before { background-image: url("../img/parts/s/04_book_wagon.webp"); }
+.term-quiz > .term-section-title::before { background-image: url("../img/parts/s/12_beach_ball.webp"); }
+.term-exam-points > .term-section-title::before { background-image: url("../img/parts/s/13_blue_yellow_tent.webp"); }
+
+/* ============================================================
+   2026-09-28 追加: 文字ばかりに見えないための「色・絵・線」
+   ============================================================ */
+
+/* ---------- 言葉の途中で改行しない ----------
+   HTML側で文節ごとに <wbr> を入れてあるので、その位置でだけ折り返す */
+main[data-lb] :is(p, li, h1, h2, h3, h4, dt, dd, td, th, figcaption, blockquote, a, span, strong) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+/* ---------- 大見出し:イラストを中央に、見出しも中央に ---------- */
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) > h2 {
+  text-align: center;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 32px;
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) > h2::before {
+  width: 76px;
+  height: 64px;
+  margin: 0 auto 14px;
+  background-position: center bottom;
+}
+/* 見出しの下に、トップページと同じテラコッタの点線 */
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) > h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin: 16px auto 0;
+  background: radial-gradient(circle, #d98f76 1.6px, transparent 2px) 0 0 / 8px 4px repeat-x;
+}
+
+/* ---------- セクションごとに背景の色を変える ----------
+   2つ目ごとに、空色・若草色の帯を画面の端まで敷く */
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) {
+  --band: transparent;
+  margin-bottom: 0;
+  padding-block: 56px;
+  background: var(--band);
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
+}
+@media (min-width: 768px) {
+  .container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) {
+    padding-block: 80px;
+  }
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(4n + 2) {
+  --band: #eaf2f3;
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):nth-of-type(4n + 4) {
+  --band: #eef4dd;
+}
+/* 帯の上に乗る白い囲みは、少し浮かせて見やすく */
+.container--article :is(.guide-section, .school-section):nth-of-type(even) :is(.fact-table, .info-block, .guide-nextlink) {
+  background: #fffdf8;
+  border-radius: 14px;
+}
+.container--article :is(.guide-section, .school-section):nth-of-type(even) .fact-table {
+  padding: 4px 16px;
+}
+
+/* ---------- 大事なところに黄色いマーカー ---------- */
+.container--article :is(.guide-section, .review-section, .school-section, .column-section) :is(p, li):not(.guide-nextlink) strong,
+.lp-why__mebody strong,
+.lp-merit__body strong,
+.term-prose strong {
+  background: linear-gradient(transparent 58%, #fbe3a0 58%);
+  padding: 0 0.1em;
+  border-radius: 2px;
+}
+
+/* セクションの頭にある「次に読む」リンクは、イラストの上に少し間をあけて置く */
+.container--article :is(.guide-section, .school-section) > .guide-nextlink:first-child {
+  margin: 0 0 48px;
+}
