@@ -598,3 +598,96 @@ strong.mk {
   background: #eef4dd;
   font-weight: 700;
 }
+
+/* ---------- 比較表:見やすい配色と◎△ (2026-09-28 改) ---------- */
+.cmp-scroll {
+  border: 1px solid #d9d3c4;
+  background: #ffffff;
+}
+.cmp {
+  color: #2b2a26;
+}
+.cmp th,
+.cmp td {
+  border-bottom: 1px solid #e6e0d2;
+  background: #ffffff;
+}
+.cmp td + td,
+.cmp th[scope="row"] + td {
+  border-left: 1px solid #e6e0d2;
+}
+/* 学校名の行:濃い緑に白い文字 */
+.cmp thead th {
+  background: #4f6e43;
+  color: #ffffff;
+  border-bottom: 0;
+}
+.cmp thead th + th {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+.cmp__links a {
+  color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+.cmp__corner {
+  background: #3f5b35 !important;
+}
+.cmp thead .pr-label {
+  background: #ffffff;
+  color: #4f6e43;
+}
+/* 項目名の列 */
+.cmp tbody th[scope="row"] {
+  background: #f7f5ef;
+  color: #3a372f;
+}
+/* まとまりの見出し */
+.cmp__group th {
+  background: #e9efe2;
+  color: #3f5b35;
+  font-weight: 700;
+  font-size: 13px;
+}
+/* 前回の黄色い行は使わない */
+.cmp__row--key th[scope="row"],
+.cmp__row--key td {
+  background: inherit;
+}
+/* ◎:うすい緑のセル  △:うすい赤のセル */
+.cmp td.cmp__good {
+  background: #e8f4e3;
+}
+.cmp td.cmp__bad {
+  background: #fcebea;
+}
+.cmp__mark {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.cmp__mark--good {
+  color: #2f7d3a;
+}
+.cmp__mark--bad {
+  color: #c0392b;
+}
+.cmp__na {
+  color: #8f8a7f;
+}
+.cmp__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.cmp__legend li {
+  display: flex;
+  align-items: center;
+}
