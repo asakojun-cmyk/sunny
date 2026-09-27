@@ -2213,6 +2213,10 @@ button {
     bottom: 84px;
   }
 
+}
+
+/* 下部ナビ: ヘッダーメニューが消える幅から出す(681〜960pxの無ナビ状態を解消) */
+@media (max-width: 960px) {
   /* 下部ナビ表示 */
   .bottom-nav {
     display: flex;

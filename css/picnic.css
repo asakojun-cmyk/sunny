@@ -1364,3 +1364,30 @@
 .colcard__title{color:#3f3a30;font-size:.95rem;font-weight:700;line-height:1.75}
 .colcard__no{margin-top:auto;color:#b3a98f;font-size:.68rem;letter-spacing:.16em}
 @media(max-width:640px){.colcard__media{flex-basis:104px;min-height:104px}.colcard__body{padding:13px 14px 12px}.colcard__title{font-size:.9rem}}
+
+/* ============================================================
+   メニュー整理(2026-09-27)
+   ヘッダー=「道順」(検討フェーズ順) / 下部バー=「道具」+ゴール
+   ============================================================ */
+
+/* 検討フェーズと学習フェーズのあいだの区切り */
+.header-nav__sep{display:inline-block;width:1px;height:16px;background:var(--color-border);flex:none}
+.header-nav .hero-link--study{color:var(--color-text-subtle)}
+.header-nav .hero-link--study:hover{color:var(--color-text)}
+@media (min-width:1180px){.header-nav .hero-link{font-size:.9rem}}
+
+/* 下部バーのゴール(無料説明会) */
+@media (max-width:960px){
+  .bottom-nav__item--cta{color:var(--color-terracotta);font-weight:700}
+  .bottom-nav__icon--talk{border-radius:6px 6px 6px 2px}
+  .bottom-nav__icon--talk::before{content:"";position:absolute;top:6px;left:5px;right:5px;height:1.5px;background:currentColor;box-shadow:0 4px 0 currentColor}
+  .bottom-nav__icon--talk::after{content:"";position:absolute;left:2px;bottom:-4px;width:0;height:0;border:3px solid transparent;border-top-color:currentColor;border-right-color:currentColor}
+}
+
+/* 961〜1180px: タグラインを隠してメニューを1行に収める */
+@media (min-width:961px) and (max-width:1180px){
+  .site-header__tagline{display:none}
+  .header-nav{gap:4px 13px;margin-right:18px}
+  .header-nav .hero-link{font-size:.85rem}
+}
+@media (min-width:961px){.header-nav{flex-wrap:nowrap;white-space:nowrap}}
