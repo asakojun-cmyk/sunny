@@ -691,3 +691,30 @@ strong.mk {
   display: flex;
   align-items: center;
 }
+
+/* ---------- 比較表:学校名の行はサイトの草原の色に (2026-09-28 改2) ---------- */
+.cmp thead th {
+  background: #eef4dd;
+  color: #3a372f;
+  border-bottom: 2px solid #cfdcb5;
+}
+.cmp thead th + th {
+  border-left: 1px solid #dbe6c6;
+}
+.cmp__corner {
+  background: #e3ecce !important;
+  color: #4f6e43 !important;
+}
+.cmp__links a {
+  color: #8a4e3a;
+  text-decoration-color: rgba(138, 78, 58, 0.5);
+}
+.cmp thead .pr-label {
+  background: #72584d;
+  color: #ffffff;
+}
+/* まとまりの見出しは、ピクニックシートのようなあたたかいクリーム色に */
+.cmp__group th {
+  background: #f6f1e2;
+  color: #5c6e51;
+}
