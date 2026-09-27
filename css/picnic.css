@@ -1401,3 +1401,27 @@
 .honest-link__act{margin:15px 0 0}
 .honest-link__act a{font-weight:700;font-size:.95rem;line-height:1.7}
 @media(max-width:640px){.honest-link{margin:34px auto;padding:17px 17px 15px;border-radius:0 12px 12px 0}.honest-link__body,.honest-link__act a{font-size:.9rem}}
+
+/* ============================================================
+   LP: CTA手前の「信頼の担保」ブロック
+   ============================================================ */
+.lp-proof{max-width:640px;margin:0 auto;padding:28px 26px 26px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:20px;text-align:center}
+.lp-proof__lead{margin:0;font-size:1.02rem;line-height:2.05}
+.lp-proof .lp-after__stats{margin:26px 0 0;gap:16px 40px}
+.lp-proof .lp-after__stat strong{font-size:34px}
+.lp-proof__note{max-width:520px;margin:26px auto 0;font-size:.88rem;line-height:2.05;color:var(--color-text-subtle);text-align:left}
+.lp-river .lp-proof{margin-top:56px}
+.lp-river .lp-proof + .lp-cta{margin-top:20px}
+@media(max-width:640px){
+  .lp-proof{padding:22px 18px;border-radius:16px}
+  .lp-proof__lead{font-size:.95rem}
+  .lp-proof .lp-after__stat strong{font-size:28px}
+  .lp-proof__note{font-size:.84rem}
+  .lp-river .lp-proof{margin-top:38px}
+}
+
+/* 試験対策ページに移した「今日の3分学びタイム」 */
+.exam-daily{width:min(940px,94vw);margin:8px 0 44px;margin-left:50%;transform:translateX(-50%);padding:30px 30px 26px;background:#eef4dd;border-radius:22px}
+.exam-daily .section-header{margin-bottom:18px}
+.exam-daily .section-header__title{margin:0}
+@media(max-width:640px){.exam-daily{width:100%;margin:6px 0 32px;margin-left:0;transform:none;padding:22px 16px 18px;border-radius:16px}}
