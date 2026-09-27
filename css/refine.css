@@ -726,3 +726,44 @@ strong.mk {
 .cmp td.cmp__bad {
   background: #fdf4f3;
 }
+
+/* ---------- 比較表:しぼり込みの案内と、選んでいない学校を暗く ---------- */
+.cmp__pickhint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 16px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: #fdf9e3;
+  border: 1px solid #eee3ae;
+  color: #3a372f;
+  font-size: 14px;
+  font-weight: 700;
+}
+.cmp__pickhint img {
+  flex: none;
+  width: 40px;
+  height: auto;
+}
+.compare-picker__item {
+  transition: opacity 0.2s, filter 0.2s;
+}
+/* 1校でも選んだら、選んでいない学校のボタンはうすく */
+.compare-picker__list:has(input:checked) .compare-picker__item:not(:has(input:checked)) {
+  opacity: 0.45;
+  filter: grayscale(0.6);
+}
+.compare-picker__list:has(input:checked) .compare-picker__item:not(:has(input:checked)):hover {
+  opacity: 0.8;
+}
+.compare-picker__item:has(input:disabled) {
+  cursor: not-allowed;
+}
+@media (prefers-reduced-motion: reduce) {
+  .compare-picker__item {
+    transition: none;
+  }
+}
