@@ -718,3 +718,11 @@ strong.mk {
   background: #f6f1e2;
   color: #5c6e51;
 }
+
+/* ---------- 比較表:◎・△のセルは草原の色よりさらに薄く ---------- */
+.cmp td.cmp__good {
+  background: #f5faf0;
+}
+.cmp td.cmp__bad {
+  background: #fdf4f3;
+}
