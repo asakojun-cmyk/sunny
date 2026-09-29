@@ -777,3 +777,25 @@ strong.mk {
 .review-plan li.is-done a{font-weight:600}
 .review-plan__soon{font-size:.85em;margin-left:.4em}
 .container--article .review-section p.review-note{font-size:.92em;background:#f6f1e2;border-radius:10px;padding:.8em 1em;color:#5b5a52}
+
+/* 学科試験の勉強法: 番号別の表 */
+.gk-table th[scope="row"]{white-space:nowrap;font-weight:700;vertical-align:top}
+.gk-table td{vertical-align:top}
+.gk-table .gk-field{display:block;font-weight:700;margin-bottom:.3em}
+.gk-table .gk-themes{display:block;font-size:.88em;color:#5b5a52;line-height:1.75}
+.gk-table tr.gk-big > *{background:#fdf6e3}
+.exam-guide-article .guide-section h3{font-size:1.02em;margin:1.6em 0 .5em}
+.gk-table .gk-nw{white-space:nowrap}
+@media (max-width:640px){
+  .gk-table thead{display:none}
+  .gk-table,.gk-table tbody,.gk-table tr,.gk-table th,.gk-table td{display:block;width:auto;min-width:0}
+  .gk-table{border:0;background:none}
+  .gk-table tr{border:1px solid #e6e1d3;border-radius:14px;margin:0 0 1em;padding:.9em 1.1em;background:#fffdf8}
+  .gk-table tr.gk-big{background:#fdf6e3}
+  .gk-table tr.gk-big > *{background:none}
+  .gk-table th[scope="row"],.gk-table td{border:0;padding:.2em 0}
+  .gk-table th[scope="row"]{color:#7fae5a}
+  .gk-table td:last-child{margin-top:.5em;padding-top:.6em;border-top:1px dashed #e6e1d3}
+  .gk-table td:last-child::before{content:"対策";display:inline-block;font-size:.8em;font-weight:700;color:#fff;background:#7fae5a;border-radius:99px;padding:.05em .7em;margin-right:.5em}
+}
+.gk-table thead th:first-child{white-space:nowrap}
