@@ -1,0 +1,527 @@
+/* ============================================================
+   yomiyasu.css — 読みやすさの見直し(2026-10-01)
+   すべてのページで refine.css のあとに読み込む。
+
+   ねらい
+   1. 文字を大きく: 本文 17px(スマホ)/ 18px(PC)。補足も14px未満にしない
+   2. 行間をゆったり: 本文 2.0、カードや表の中も 1.8 以上
+   3. 見出しの大きさに段差をつける: h1 > h2 > h3 がひと目でわかる
+   4. 囲み(ボックス)を減らす: 1つの画面に囲みが並ばないように、
+      ふつうの説明は囲まず「見出し+文章」にする。
+      囲むのは「試験の正式な説明」「まちがえやすい」など、本当に目立たせたいものだけ
+   ============================================================ */
+
+:root {
+  --yy-body: 17px;
+  --yy-lh: 2;
+  --yy-ink: #2f3440;
+  --yy-sub: #5d5850;
+  --yy-line: #e6dfd1;
+  --yy-accent: #e07a5f;
+  --yy-h1: 28px;
+  --yy-h2: 22px;
+  --yy-h3: 19px;
+  --rf-body: 17px;
+}
+@media (min-width: 768px) {
+  :root {
+    --yy-body: 18px;
+    --yy-h1: 34px;
+    --yy-h2: 26px;
+    --yy-h3: 21px;
+    --rf-body: 18px;
+  }
+}
+
+/* ---------- 本文 ---------- */
+body {
+  font-size: var(--yy-body);
+  line-height: var(--yy-lh);
+  color: var(--yy-ink);
+}
+main p,
+main li,
+main dd {
+  line-height: var(--yy-lh);
+}
+.term-prose p,
+.container--article :is(.guide-section, .review-section, .school-section, .column-section) > :is(p, ul > li, ol > li) {
+  font-size: var(--yy-body);
+  line-height: var(--yy-lh);
+}
+main p + p {
+  margin-top: 1.2em;
+}
+
+/* 文章は自然な位置で折り返す。
+   (文節ごとの改行は見出しだけにして、本文は行の右端がガタガタにならないように) */
+.term-prose,
+.term-prose p,
+.term-formal__box,
+.term-formal__box p,
+.term-pitfall__box p,
+.exam-advice__list li,
+.container--article p,
+.container--article li,
+.term-similar dd,
+.related__desc,
+.diagram__caption {
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+/* ---------- 見出し ---------- */
+main h1 {
+  font-size: var(--yy-h1);
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+}
+main h2 {
+  font-size: var(--yy-h2);
+  line-height: 1.5;
+}
+main h3 {
+  font-size: var(--yy-h3);
+  line-height: 1.55;
+}
+
+/* 用語・理論家ページの見出し(以前は13pxの薄いラベルだったもの)を、本物の見出しに */
+.term-section-title {
+  font-size: var(--yy-h2);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--yy-ink);
+  line-height: 1.5;
+  padding: 0 0 12px;
+  margin: 0 0 20px;
+  border-bottom: 2px solid var(--yy-line);
+  position: relative;
+}
+.term-section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 64px;
+  height: 2px;
+  background: var(--yy-accent);
+}
+:is(.term-kids, .term-analogy, .term-life, .term-formal, .term-exam-advice, .term-similar, .term-theorists, .term-quiz, .term-exam-points) > .term-section-title::before {
+  width: 40px;
+  height: 36px;
+}
+
+/* ---------- 用語・理論家ページ: 囲みを減らす ---------- */
+/* ふつうの説明(ざっくり・たとえ・子育てと仕事・覚え方)は囲まない */
+.term-kids,
+.term-analogy,
+.term-life,
+.term-oboekata,
+.term-formal,
+.past-questions {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0 64px !important;
+}
+.term-oneliner,
+.term-diagram-section,
+.term-exam-advice,
+.term-pitfall,
+.term-similar,
+.term-theorists,
+.term-exam-points,
+.term-quiz,
+.related {
+  margin-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .term-kids,
+  .term-analogy,
+  .term-life,
+  .term-oboekata,
+  .term-formal,
+  .past-questions {
+    margin-bottom: 80px !important;
+  }
+}
+
+/* 覚え方のヒント: 囲みをやめて、左の線だけで「ポイント」とわかるように */
+.term-prose--hint {
+  background: none !important;
+  border: none !important;
+  border-left: 4px solid #e8c95a !important;
+  border-radius: 0 !important;
+  padding: 4px 0 4px 18px !important;
+}
+
+/* 試験の正式な説明: このページでいちばん大事な文章なので、ここだけは囲む(1重だけ) */
+.term-formal__box {
+  background: #fffdf8;
+  border: 1.5px solid #d9cdb4;
+  border-radius: 14px;
+  padding: 22px 22px;
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .term-formal__box {
+    padding: 28px 32px;
+  }
+}
+
+/* まちがえやすい: 囲みではなく、左の赤い線+うすい色 */
+.term-pitfall__box {
+  background: #fdf1ed;
+  border: none;
+  border-left: 4px solid #e07a5f;
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+}
+
+/* サニー先生の試験アドバイス: 囲みをやめて、リストだけに */
+.exam-advice__box {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.exam-advice__lead {
+  font-size: var(--yy-h3);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.exam-advice__list li {
+  font-size: var(--yy-body);
+  line-height: var(--yy-lh);
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--yy-line);
+}
+.exam-advice__list li:last-child {
+  border-bottom: none;
+}
+
+/* 似た言葉: 線で区切るだけ */
+.term-similar dt {
+  font-size: var(--yy-h3);
+}
+.term-similar dd {
+  font-size: var(--yy-body);
+  line-height: var(--yy-lh);
+}
+
+/* 1問1答: 問題文を大きく */
+.quiz-box__question {
+  font-size: var(--yy-body);
+  line-height: 1.9;
+}
+
+/* 図の説明文 */
+.diagram__caption {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.diagram__source {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 関連用語 */
+.related__item-title {
+  font-size: var(--yy-h3);
+}
+.related__desc {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+/* 吹き出しの文字も本文と同じ大きさに */
+.chara-guide__bubble {
+  font-size: var(--yy-body);
+  line-height: 1.85;
+}
+
+/* 自動でつけたことばのリンク(本文中の用語・理論家名) */
+a.kw-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #e5b9a8;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+a.kw-link:hover {
+  color: #b5533a;
+  text-decoration-color: currentColor;
+}
+
+/* ---------- 一覧ページ(ことば図鑑・理論家図鑑など) ---------- */
+.library-item__desc,
+.term-card__desc,
+.theorist-card__desc {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ---------- 表 ---------- */
+main table {
+  font-size: 15px;
+  line-height: 1.8;
+}
+main th,
+main td {
+  line-height: 1.8;
+}
+
+/* ---------- トップページ ---------- */
+.is-home main h1 {
+  font-size: clamp(27px, 6.2vw, 40px);
+  line-height: 1.5;
+}
+.is-home .hero-note__kicker,
+.is-home .picnic-hero__kicker {
+  font-size: 15px;
+}
+.hero-note__desc {
+  font-size: var(--yy-body) !important;
+  line-height: 1.9 !important;
+}
+
+/* 「このサイトでできること」: 10個のカードの囲みをやめて、線で区切った一覧に */
+.can-list {
+  gap: 0 40px !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  border-top: 1px solid var(--yy-line);
+}
+.can-list > li {
+  border-bottom: 1px solid var(--yy-line);
+}
+.can-card {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 18px 4px !important;
+  gap: 16px !important;
+}
+.can-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+.can-card:hover .can-card__body b {
+  color: #b5533a;
+}
+.can-card img {
+  width: 52px !important;
+  height: 52px !important;
+}
+.can-card__body {
+  line-height: 1.7 !important;
+}
+.can-card__body b {
+  font-size: 18px !important;
+}
+.can-card__body small {
+  font-size: 15px !important;
+  line-height: 1.75;
+  color: var(--yy-sub) !important;
+}
+.can-card__pr,
+.can-card__soon {
+  font-size: 12px !important;
+}
+.can-group {
+  font-size: var(--yy-h3) !important;
+  margin-top: 2.4rem !important;
+}
+/* 説明会だけは目立たせる(ここだけ色をしく) */
+.can-card--cta {
+  background: #fff4ef !important;
+  border-radius: 12px !important;
+  padding: 18px 14px !important;
+  margin: 8px 0;
+}
+.can-card--soon {
+  opacity: 0.85;
+}
+
+/* マップの看板・吹き出し */
+.map-guide__sign {
+  font-size: 16px;
+}
+.map-guide__say b {
+  font-size: 13px !important;
+}
+
+/* 「この順番でどうぞ」 */
+.lp-river p,
+.lp p {
+  font-size: var(--yy-body);
+  line-height: var(--yy-lh);
+}
+
+/* ---------- 本文の折り返し ----------
+   以前は「文節(<wbr>)の位置でしか折り返さない」設定で、
+   行の右端がガタガタになり、短い行が続いて読みにくかった。
+   本文は自然に折り返し、見出し・ボタンだけ文節で折り返す */
+main[data-lb] :is(p, li, dd, td, figcaption, blockquote),
+main[data-lb] :is(p, li, dd, td, figcaption, blockquote) :is(a, span, strong, b, em, small) {
+  word-break: normal;
+}
+
+/* ---------- ヘッダーは今までの大きさのまま ---------- */
+.site-header,
+.bottom-nav {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------- 試験アドバイスの鉛筆アイコンの位置 ---------- */
+.exam-advice__list li {
+  position: relative;
+  padding-left: 1.7em;
+}
+.exam-advice__list li::before {
+  top: 10px;
+}
+
+/* ---------- 関連用語・つぎに読むなら も見出しの大きさをそろえる ---------- */
+.related__title {
+  font-size: var(--yy-h2);
+  line-height: 1.5;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--yy-line);
+}
+.term-next__label {
+  font-size: var(--yy-h3);
+  font-weight: 700;
+}
+/* ヘッダーのロゴ横の小さな文字は、1行に収めるため元の大きさに戻す */
+.site-logo__en { font-size: 11px; }
+.header-search__label,
+.header-search__click { font-size: 9px; }
+
+/* 用語・理論家ページの名前は大きく */
+.term-header__name { font-size: 30px; line-height: 1.4; }
+@media (min-width: 768px) { .term-header__name { font-size: 40px; } }
+
+/* ---------- h1の上の小さなキーワード行(検索で見つけてもらうための言葉) ---------- */
+.h1-kw {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #6f8a62;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .h1-kw { font-size: 16px; }
+}
+.picnic-hero h1 .picnic-kicker {
+  display: block;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  margin: 0 0 12px;
+}
+
+/* ---------- ことば図鑑・理論家図鑑の一覧: カードの囲みをやめて、線で区切る ---------- */
+.term-list,
+.theorist-list {
+  gap: 0 40px !important;
+  border-top: 1px solid var(--yy-line);
+}
+.term-list__item a,
+.theorist-list__item a {
+  background: none !important;
+  border: none !important;
+  border-bottom: 1px solid var(--yy-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  padding: 20px 4px !important;
+  height: auto !important;
+}
+.term-list__item a:hover .term-list__name,
+.theorist-list__item a:hover .theorist-list__name {
+  color: #b5533a;
+}
+.term-list__number,
+.theorist-list__number {
+  background: none !important;
+  padding: 0 !important;
+  font-size: 13px;
+}
+.term-list__name,
+.theorist-list__name {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.term-list__reading {
+  font-size: 14px;
+  margin-left: 0;
+}
+.term-list__oneliner,
+.theorist-list__oneliner {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--yy-sub);
+}
+/* 理論家: 似顔絵の右に、番号・名前・英語名・分野・ひとことを縦に並べる */
+.theorist-list__item a {
+  display: grid !important;
+  grid-template-columns: 64px 1fr !important;
+  grid-template-areas:
+    "avatar num"
+    "avatar name"
+    "avatar en"
+    "avatar field"
+    "avatar oneliner" !important;
+  align-items: start !important;
+  gap: 2px 16px !important;
+}
+.theorist-list__en { grid-area: en; margin-left: 0 !important; font-size: 14px; }
+.theorist-list__field { grid-area: field; margin-left: 0 !important; font-size: 14px; color: #6f8a62; font-weight: 700; }
+.theorist-list__oneliner { grid-area: oneliner; margin-top: 4px; }
+
+/* 中央ぞろえの短い文は、文節で折り返す(「気/軽に」のような切れ方を防ぐ) */
+main[data-lb] :is(.hero-note, .picnic-map__head, .section-header, .can) p,
+main[data-lb] :is([class*="lede"], [class*="__lead"], .hero-note__desc, .hero-cta__sub),
+.hero-note p {
+  word-break: keep-all !important;
+}
+
+/* 理論家ページ: おもな理論・試験でのポイントも本文の大きさに */
+.term-formal__box dt {
+  font-size: var(--yy-h3);
+  line-height: 1.6;
+}
+.term-formal__box dd,
+.term-exam-points li,
+.term-episode li,
+.term-episode p {
+  font-size: var(--yy-body);
+  line-height: var(--yy-lh);
+}
+.term-section-note {
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* ---------- リンクの矢印(▶︎) ---------- */
+.arw {
+  display: inline-block;
+  font-size: 0.72em;
+  margin-left: 0.25em;
+  vertical-align: 0.08em;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+}
+.can-card__go {
+  font-size: 13px;
+  font-family: system-ui, sans-serif;
+  color: #c2502f !important;
+}

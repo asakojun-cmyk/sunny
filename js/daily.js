@@ -55,7 +55,7 @@
             escapeHtml(item.url.replace(/^\//, "")) +
             '">「' +
             escapeHtml(item.termName) +
-            "」の解説を読む →</a>";
+            "」の解説を読む ▶︎</a>";
           result.hidden = false;
         });
       });

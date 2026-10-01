@@ -191,7 +191,7 @@ h3 {
   margin: var(--rf-box-gap) 0;
   padding: var(--rf-box-pad);
   border-radius: 14px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.9;
 }
 .container--article .guide-nextlink {
@@ -307,7 +307,7 @@ h3 {
   color: #9d5a43; /* 同じテラコッタの濃い方 */
 }
 .related__type {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* ---------- 用語・理論家ページのラベルにも小物イラスト ----------
@@ -447,19 +447,19 @@ strong.mk {
    学校=列、項目=行。スマホでは横スクロール、項目名と学校名は固定 */
 .cmp__pickhint,
 .cmp__hint {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--rf-subtle);
   margin: 0 0 12px;
 }
 .cmp__status {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0 0 8px;
 }
 .cmp__reset {
   margin-left: 8px;
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   padding: 4px 12px;
   border-radius: 999px;
@@ -483,7 +483,7 @@ strong.mk {
   border-collapse: separate;
   border-spacing: 0;
   min-width: 100%;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
 }
 .cmp th,
@@ -505,7 +505,7 @@ strong.mk {
   top: 0;
   z-index: 2;
   background: #f6efdc;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .cmp__name {
@@ -518,7 +518,7 @@ strong.mk {
 .cmp__links {
   display: block;
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 .cmp__links a {
@@ -533,7 +533,7 @@ strong.mk {
   width: 118px;
   background: #fffdf8;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   color: #4b463d;
   z-index: 1;
   box-shadow: 1px 0 0 #eee6d6;
@@ -546,7 +546,7 @@ strong.mk {
 .cmp__group th {
   background: #eef4dd;
   color: #4f6e43;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   padding: 8px 14px;
 }
@@ -589,7 +589,7 @@ strong.mk {
   gap: 8px;
   padding: 8px 14px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   width: auto;
 }
@@ -646,7 +646,7 @@ strong.mk {
   background: #e9efe2;
   color: #3f5b35;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
 }
 /* 前回の黄色い行は使わない */
 .cmp__row--key th[scope="row"],
@@ -684,7 +684,7 @@ strong.mk {
   list-style: none;
   padding: 0;
   margin: 0 0 8px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 .cmp__legend li {
@@ -740,7 +740,7 @@ strong.mk {
   background: #fdf9e3;
   border: 1px solid #eee3ae;
   color: #3a372f;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 .cmp__pickhint img {

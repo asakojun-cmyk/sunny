@@ -84,7 +84,7 @@
     root.querySelector("[data-quiz-exp]").textContent = item.e;
     var link = root.querySelector("[data-quiz-link]");
     link.setAttribute("href", item.u);
-    link.textContent = "「" + item.n + "」のページで復習する →";
+    link.textContent = "「" + item.n + "」のページで復習する ▶︎";
     root.querySelector("[data-quiz-score]").textContent = String(score);
     show(root.querySelector("[data-quiz-result]"));
   }
