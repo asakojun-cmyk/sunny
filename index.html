@@ -53,6 +53,14 @@
 .map-guide__sign--yt{background:#ffd9d2;color:#8a2a1a;box-shadow:0 3px 0 #e8a194}
 .map-guide__sign--note{background:#d8ecf6;color:#24527a;box-shadow:0 3px 0 #9cc4dc}
 .map-guide__sign:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.picnic-hero--note .picnic-stage,.picnic-hero--note.is-done .picnic-stage{margin-bottom:84px}
+.picnic-hero--note .picnic-stage:before{bottom:-92px;height:300px}
+.picnic-hero--note:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:56px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 34 C 180 8 360 8 540 30 C 720 52 900 54 1080 32 C 1260 10 1360 14 1440 26 L1440 60 L0 60 Z' fill='%23fffdf8'/%3E%3C/svg%3E") no-repeat bottom/100% 100%;z-index:4;pointer-events:none}
+@media (max-width:640px){.picnic-hero--note .picnic-stage,.picnic-hero--note.is-done .picnic-stage{margin-bottom:56px}.picnic-hero--note .picnic-stage:before{bottom:-64px;height:230px}.picnic-hero--note:after{height:34px}}
+.is-home .can:before{display:none}
+.is-home .picnic-hero--note{overflow:clip}
+.is-home .picnic-meadow{background:#f5f2eb}
+.is-home .lp-river{padding-bottom:16px}
 @media (max-width:600px){.map-guide__list{flex-direction:column;align-items:center}.map-guide__sign{min-width:220px;justify-content:center}}
 </style>
 </head>
