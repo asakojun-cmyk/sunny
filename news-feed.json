@@ -1,6 +1,18 @@
 {
- "updated": "2026-09-30",
+ "updated": "2026-10-01",
  "items": [
+  {
+   "title": "令和７（2025）年　人口動態統計（確定数）の概況",
+   "url": "https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei25/index.html",
+   "date": "2026-09-30",
+   "source": "厚生労働省"
+  },
+  {
+   "title": "令和７（2025）年度　介護給付費等実態統計の概況(令和７（2025）年5月審査分～令和８（2026）年4月審査分）",
+   "url": "https://www.mhlw.go.jp/toukei/saikin/hw/kaigo/kyufu/25/index.html",
+   "date": "2026-09-30",
+   "source": "厚生労働省"
+  },
   {
    "title": "介護給付費等実態統計月報（令和８（2026）年６月審査分）",
    "url": "https://www.mhlw.go.jp/toukei/saikin/hw/kaigo/kyufu/2026/06.html",
