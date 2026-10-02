@@ -650,3 +650,61 @@ main[data-lb] :is([class*="lede"], [class*="__lead"], .hero-note__desc, .hero-ct
   .study-panel ul{columns:1}
 }
 .study-nav__all{margin:10px 0 0;text-align:center;font-size:0.875rem;font-weight:700}
+
+/* 2026-10-03 1問1答: ジャンル・学習時間の選択。項目名は横書きのまま、プルダウンは画面からはみ出さない */
+.quiz-picker{min-width:0;max-width:100%}
+.quiz-picker__label{white-space:nowrap;flex:none}
+.quiz-picker select{min-width:0;max-width:100%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+@media (max-width:640px){
+  .quiz-pickers{flex-direction:column;align-items:stretch;gap:14px}
+  .quiz-picker{flex-direction:column;align-items:stretch;gap:6px}
+  .quiz-picker select{flex:none;width:100%;margin-left:0;box-sizing:border-box;font-size:1rem}
+}
+
+/* 2026-10-03 ページ下の草原: スマホではサニー先生とモヤンが重なるので、サニー先生だけにする */
+@media (max-width:640px){
+  .picnic-meadow .pm-moyan{display:none}
+  .picnic-meadow .pm-sunny{left:50%;transform:translateX(-50%)}
+}
+
+/* 2026-10-03 ページ下の案内: 「試験対策マップにもどる」「ぜんぶのページを見る」の2行だけ。箱はなし */
+.study-nav--foot{border:0;background:none;padding:0;margin:30px auto 18px;text-align:center}
+.study-nav--foot .study-nav__label{margin:0 0 8px}
+.study-nav--foot .study-nav__all{margin:0;font-size:0.9375rem}
+
+/* 2026-10-03 地図(トップ・試験対策)のスマホ表示: 絵のすぐ下に、その場所の名前がくるように並べ直す */
+@media (max-width:640px){
+  .map-stage{aspect-ratio:5/6}
+  /* 1段目: 図書館(左) / テント(右) */
+  .map-stage .mp-wagon{left:6%;top:7%;width:24%}
+  .map-stage .mp-pinwheel{display:none}
+  .map-stage .mp-tent1{left:71%;top:6%;width:20%}
+  /* 2段目: 掲示板(左) / シートとふたり(中央) / 赤いテント(右) */
+  .map-stage .mp-board{left:4%;top:36%;width:21%}
+  .map-stage .mp-mat{left:32%;top:37%;width:36%}
+  .map-stage .mp-lunch--a{left:41%;top:38%;width:10%}
+  .map-stage .mp-suito{left:55%;top:36.5%;width:4.5%}
+  .map-stage .mp-tent2{left:77%;top:35%;width:17%}
+  .map-stage #map-sunny{left:34%;top:43%;width:13%}
+  .map-stage #map-moyan{left:55%;top:45%;width:11%}
+  /* 3段目: 屋台(左) / 森とハンモック(右) */
+  .map-stage .mp-stall{left:12%;top:68%;width:22%}
+  .map-stage .mp-tree1{left:57%;top:66%;width:12%}
+  .map-stage .mp-hammock{left:63%;top:76%;width:26%}
+  .map-stage .mp-tree2{left:83%;top:66%;width:12%}
+  .map-stage .mp-flowerl,.map-stage .mp-flowerr,.map-stage .mp-bushl,.map-stage .mp-bushr{display:none}
+  /* 名前の札: 絵の箱の下端に置く。長い名前は2行に折り返して中央揃え */
+  .map-stage .map-spot{align-items:flex-end;border-radius:14px}
+  .map-stage .map-spot--blue{left:0!important;top:7%!important;width:36%!important;height:26%!important}
+  .map-stage .map-spot--yellow{left:62%!important;top:6%!important;width:38%!important;height:26%!important}
+  .map-stage .map-spot--green{left:0!important;top:36%!important;width:30%!important;height:23%!important}
+  .map-stage .map-spot--coral{left:27%!important;top:37%!important;width:46%!important;height:25%!important}
+  .map-stage .map-spot--pink{left:70%!important;top:35%!important;width:30%!important;height:24%!important}
+  .map-stage .map-spot--lavender{left:3%!important;top:68%!important;width:40%!important;height:26%!important}
+  .map-stage .map-spot--cream{left:54%!important;top:66%!important;width:44%!important;height:24%!important}
+  .map-stage .map-spot__sign{margin-bottom:0;padding:1px 4px;font-size:0.75rem;line-height:1.35;white-space:normal;text-align:center;max-width:100%}
+  .map-stage .map-spot__sign b{display:block;word-break:keep-all;overflow-wrap:anywhere}
+  .map-stage .map-spot__note{display:none}
+  /* 吹き出しは、上の真ん中の空きに収める */
+  .map-stage .map-say--sunny,.map-stage .map-say--moyan,.exam-map .map-say--sunny,.exam-map .map-say--moyan{top:auto;bottom:76%;max-width:40vw;font-size:0.75rem;padding:7px 10px;line-height:1.6}
+}
