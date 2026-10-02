@@ -534,3 +534,15 @@ main[data-lb] :is([class*="lede"], [class*="__lead"], .hero-note__desc, .hero-ct
 .shindan__next a{display:block;padding:11px 14px;border-radius:10px;background:#fff;border:1.5px solid var(--color-border);font-weight:700;text-decoration:none;line-height:1.6}
 .shindan__next a:hover{border-color:var(--color-green)}
 .shindan__next[hidden]{display:none}
+
+/* 2026-10-02 学科勉強法の表: 分野ごとのドリルへのリンク */
+.domain-drill{display:inline-block;margin-top:8px;font-weight:700;font-size:0.875rem}
+
+/* 2026-10-02 用語ページ「最近の動き」と、掲示板の法改正・時事チェック */
+.term-update{margin-top:16px;padding-top:14px;border-top:1px dashed var(--color-border)}
+.term-update__label{display:block;font-weight:700;font-size:0.875rem;color:var(--color-terracotta);margin-bottom:4px}
+.jiji{max-width:760px;margin:28px auto;padding:22px 22px 14px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:16px}
+.jiji h2{font-size:1.2rem;margin:0 0 12px}
+.jiji h3{font-size:1rem;margin:18px 0 8px}
+.jiji ul{margin:0 0 8px;padding-left:1.2em}
+.jiji li{margin-bottom:6px;line-height:1.8}

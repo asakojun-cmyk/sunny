@@ -35,6 +35,9 @@
       pool = ALL.filter(function (x) { return x.t === 1; });
     } else if (filter === "theory") {
       pool = ALL.filter(function (x) { return x.c === "キャリア理論" || x.c === "カウンセリング理論"; });
+    } else if (filter.indexOf("dom:") === 0) {
+      var dom = Number(filter.slice(4));
+      pool = ALL.filter(function (x) { return x.d === dom; });
     } else if (filter === "honban") {
       pool = ALL.filter(function (x) { return x.h === 1; });
     } else if (filter === "choice") {
@@ -186,6 +189,14 @@
     });
   }
   root.querySelector("[data-quiz-retry]").addEventListener("click", begin);
+
+  // ほかのページから「この分野を解く」で来たとき(?g=dom:9 など)は、その範囲を最初から選んでおく
+  var m = /[?&]g=([^&]+)/.exec(window.location.search);
+  if (m && genreSel) {
+    var want = decodeURIComponent(m[1]);
+    var has = [].some.call(genreSel.options, function (o) { return o.value === want; });
+    if (has) { genreSel.value = want; filter = want; }
+  }
 
   applyFilter();
 })();
