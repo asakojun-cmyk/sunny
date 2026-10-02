@@ -15,7 +15,7 @@
           choices.forEach(function (b) { b.disabled = true; });
           btn.classList.add(ok ? "is-correct" : "is-wrong");
           if (!ok && choices[correctIdx]) choices[correctIdx].classList.add("is-correct");
-          result.textContent = (ok ? "正解です。" : "おしい!") + " " + original;
+          result.textContent = (ok ? "正解です。" : "おしい！") + " " + original;
           result.hidden = false;
         });
       });
@@ -26,7 +26,7 @@
     box.querySelectorAll("[data-quiz-answer]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var chosen = btn.getAttribute("data-quiz-answer") === "true";
-        var prefix = chosen === answer ? "正解です。" : "おしい!";
+        var prefix = chosen === answer ? "正解です。" : "おしい！";
         result.textContent = prefix + " " + original;
         result.hidden = false;
       });

@@ -26,8 +26,8 @@
         var ok = btn.getAttribute("data-ok") === "true";
         var fb = st.querySelector("[data-ron-feedback]");
         st.querySelector("[data-ron-verdict]").textContent = ok
-          ? "🌞 ナイス! その読み方でOK!"
-          : "🌥️ おしい! もう一度考えてみよう";
+          ? "🌞 ナイス！ その読み方でOK!"
+          : "🌥️ おしい！ もう一度考えてみよう";
         st.querySelector("[data-ron-verdict]").className =
           "ron-feedback__verdict " + (ok ? "is-ok" : "is-ng");
         st.querySelector("[data-ron-why]").textContent = btn.getAttribute("data-why") || "";

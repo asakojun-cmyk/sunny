@@ -1,4 +1,4 @@
-/* 「あなたは目指すべき?」診断 — 記事内の判定軸をそのまま使う簡易セルフチェック */
+/* 「あなたは目指すべき？」診断 — 記事内の判定軸をそのまま使う簡易セルフチェック */
 (function () {
   "use strict";
   var root = document.querySelector("[data-shindan]");
@@ -66,6 +66,10 @@
       resultBox.className = "shindan__result " + r.cls;
       resultBox.querySelector("[data-shindan-label]").textContent = r.label;
       resultBox.querySelector("[data-shindan-body]").textContent = r.body;
+      // 結果ごとの「次の一歩」。c(いまはやめておいたほうがいい)には何も出さない
+      [].forEach.call(resultBox.querySelectorAll("[data-shindan-next]"), function (el) {
+        el.hidden = el.getAttribute("data-shindan-next") !== key;
+      });
       resultBox.hidden = false;
       resultBox.setAttribute("tabindex", "-1");
       resultBox.focus({ preventScroll: true });

@@ -54,11 +54,11 @@
             usage.hidden = false;
             usage.scrollIntoView({ behavior: "smooth", block: "nearest" });
           } else {
-            feedback.textContent = "☀️ 正解! つぎの「?」をタップしてね";
+            feedback.textContent = "☀️ 正解！ つぎの「？」をタップしてね";
           }
         } else {
           chip.classList.add("is-wrong");
-          feedback.textContent = "🌥️ そこじゃないみたい。ヒントの小さな文字を見てみて!";
+          feedback.textContent = "🌥️ そこじゃないみたい。ヒントの小さな文字を見てみて！";
           setTimeout(function () { chip.classList.remove("is-wrong"); }, 500);
         }
       });

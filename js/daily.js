@@ -48,7 +48,7 @@
       body.querySelectorAll("[data-quiz-answer]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var chosen = btn.getAttribute("data-quiz-answer") === "true";
-          var prefix = chosen === item.answer ? "正解です。" : "おしい!";
+          var prefix = chosen === item.answer ? "正解です。" : "おしい！";
           result.innerHTML =
             escapeHtml(prefix + " " + item.explanation) +
             ' <a href="' +
@@ -89,7 +89,7 @@
     today.setHours(0, 0, 0, 0);
     var days = Math.round((exam - today) / 86400000);
     if (days < 0) return;
-    badge.textContent = days === 0 ? "きょうが試験日!" : "あと" + days + "日";
+    badge.textContent = days === 0 ? "きょうが試験日！" : "あと" + days + "日";
     badge.hidden = false;
   })();
 })();

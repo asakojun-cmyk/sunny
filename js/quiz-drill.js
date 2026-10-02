@@ -1,4 +1,4 @@
-/* ○×クイズドリル: 全用語の1問1答を連続出題(プルダウンで範囲・時間を選択+シャッフル) */
+/* ○×クイズドリル: 全用語の1問1答を連続出題(プルダウンで範囲・時間を選択+シャッフル)。h=1 は本番形式(4つの文から選ぶ) */
 (function () {
   "use strict";
   var dataEl = document.getElementById("quiz-data");
@@ -35,6 +35,8 @@
       pool = ALL.filter(function (x) { return x.t === 1; });
     } else if (filter === "theory") {
       pool = ALL.filter(function (x) { return x.c === "キャリア理論" || x.c === "カウンセリング理論"; });
+    } else if (filter === "honban") {
+      pool = ALL.filter(function (x) { return x.h === 1; });
     } else if (filter === "choice") {
       pool = ALL.filter(function (x) { return !!(x.o && x.o.length); });
     } else {
@@ -79,7 +81,7 @@
       if (right) right.classList.add("is-correct");
     }
     var v = root.querySelector("[data-quiz-verdict]");
-    v.textContent = correct ? "🌞 正解!" : "🌥️ おしい!正解は" + label;
+    v.textContent = correct ? "🌞 正解！" : "🌥️ おしい！正解は" + label;
     v.className = "quiz-drill__verdict " + (correct ? "is-ok" : "is-ng");
     root.querySelector("[data-quiz-exp]").textContent = item.e;
     var link = root.querySelector("[data-quiz-link]");
@@ -133,9 +135,9 @@
     hide(card); show(endBox);
     var rate = Math.round((score / order.length) * 100);
     root.querySelector("[data-quiz-final]").textContent = order.length + "問中 " + score + "問正解(" + rate + "%)";
-    var note = rate === 100 ? "完璧!サニー先生もびっくりの仕上がりだよ☀️"
-      : rate >= 80 ? "合格ライン越え!この調子で他の範囲もいってみよう😊"
-      : rate >= 50 ? "いい感じ!まちがえた問題の用語ページを読み直すと、ぐんと伸びるよ"
+    var note = rate === 100 ? "完璧！サニー先生もびっくりの仕上がりだよ☀️"
+      : rate >= 80 ? "合格ライン越え！この調子で他の範囲もいってみよう😊"
+      : rate >= 50 ? "いい感じ！まちがえた問題の用語ページを読み直すと、ぐんと伸びるよ"
       : "だいじょうぶ、まちがいは伸びしろ。用語ページでゆっくり復習してからまた来てね🌥️";
     root.querySelector("[data-quiz-endnote]").textContent = note;
     var shareText = "キャリコン1問1答ドリル、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f #キャリコン学びピクニック";

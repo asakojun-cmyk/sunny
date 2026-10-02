@@ -20,10 +20,10 @@
       document.querySelector("[data-cb-final]").textContent =
         rallies.length + "球中 " + score + "球ナイスキャッチ(" + rate + "%)";
       document.querySelector("[data-cb-note]").textContent =
-        rate === 100 ? "パーフェクト! 面接対策の土台はバッチリだよ。"
-        : rate >= 75 ? "いい調子! まちがえた球の技法名だけ、用語ページで復習しておこう。"
+        rate === 100 ? "パーフェクト！ 面接対策の土台はバッチリだよ。"
+        : rate >= 75 ? "いい調子！ まちがえた球の技法名だけ、用語ページで復習しておこう。"
         : rate >= 50 ? "半分キャッチできたね。「まず受けとめる」を合言葉に、もう一回投げ合ってみよう。"
-        : "だいじょうぶ、最初はみんなアドバイスしたくなるもの。「受けとめてから質問」を意識してもう一回!";
+        : "だいじょうぶ、最初はみんなアドバイスしたくなるもの。「受けとめてから質問」を意識してもう一回！";
       goal.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
@@ -45,8 +45,8 @@
         });
         if (!ok) btn.classList.add("is-wrong");
         r.querySelector("[data-cb-verdict]").textContent = ok
-          ? "⚾ ナイスキャッチ!"
-          : "🌥️ あっ、そらしちゃった! 正解の返し方は色がついているよ";
+          ? "⚾ ナイスキャッチ！"
+          : "🌥️ あっ、そらしちゃった！ 正解の返し方は色がついているよ";
         r.querySelector("[data-cb-verdict]").className =
           "cb-feedback__verdict " + (ok ? "is-ok" : "is-ng");
         r.querySelector("[data-cb-giho]").textContent = btn.getAttribute("data-giho") || "";

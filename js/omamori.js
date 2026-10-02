@@ -46,22 +46,22 @@
     if (days > 1) {
       daysNum.textContent = "あと " + days + " 日";
     } else if (days === 1) {
-      daysNum.textContent = "あした!";
+      daysNum.textContent = "あした！";
     } else if (days === 0) {
-      daysNum.textContent = "きょう!";
+      daysNum.textContent = "きょう！";
     } else {
-      daysNum.textContent = "おつかれさま!";
+      daysNum.textContent = "おつかれさま！";
     }
 
     if (days < 0) {
       cheer.textContent = "☀️ 試験、本当におつかれさま。どんな結果でも、ここまでの学びはぜんぶあなたの力になっているよ。";
     } else if (days === 0) {
-      cheer.textContent = "☀️ いってらっしゃい!深呼吸して、いつものあなたで大丈夫。";
+      cheer.textContent = "☀️ いってらっしゃい！深呼吸して、いつものあなたで大丈夫。";
     } else if (days <= 21) {
       cheer.textContent = "☀️ ここまできたら、あとは、うかるだけ。新しいことより「見直し」の時期だよ。";
       focus.hidden = false;
     } else if (days <= 60) {
-      cheer.textContent = "🌤️ いいペース。過去問と用語の行き来をくり返そう。わからない言葉はすぐ検索!";
+      cheer.textContent = "🌤️ いいペース。過去問と用語の行き来をくり返そう。わからない言葉はすぐ検索！";
     } else {
       cheer.textContent = "⛅ まだ時間はたっぷり。1日ひとつ、ことばと仲良くなるところから始めよう。";
     }

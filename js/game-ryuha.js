@@ -25,7 +25,7 @@
   function finish() {
     clearBox.hidden = false;
     var text = miss === 0
-      ? "ノーミス! 流派マスターだよ、すごい!"
+      ? "ノーミス！ 流派マスターだよ、すごい！"
       : "ミス" + miss + "回。まちがえた流派の説明を下で読み直そうね。";
     resultEl.textContent = "☀️ " + text;
     feedback.textContent = "";
@@ -48,7 +48,7 @@
     locked = false;
     clearBox.hidden = true;
     buckets.forEach(function (b) { b.disabled = false; });
-    feedback.textContent = "この理論家は、どの流派の棚に入る?";
+    feedback.textContent = "この理論家は、どの流派の棚に入る？";
     show();
   }
 
@@ -58,20 +58,20 @@
       var card = order[pos];
       if (b.getAttribute("data-bucket") === card.getAttribute("data-school")) {
         locked = true;
-        feedback.textContent = "☀️ 正解! " + card.querySelector("[data-fact]").textContent;
+        feedback.textContent = "☀️ 正解！ " + card.querySelector("[data-fact]").textContent;
         b.classList.add("is-correct");
         setTimeout(function () {
           b.classList.remove("is-correct");
           pos++;
           locked = false;
-          if (pos < order.length) feedback.textContent = "つぎ! この理論家はどの棚?";
+          if (pos < order.length) feedback.textContent = "つぎ！ この理論家はどの棚？";
           show();
         }, 1400);
       } else {
         miss++;
         missEl.textContent = "ミス: " + miss;
         card.classList.add("is-wrong");
-        feedback.textContent = "🌥️ おしい! べつの棚みたい。ヒント: " + card.querySelector("[data-fact]").textContent;
+        feedback.textContent = "🌥️ おしい！ べつの棚みたい。ヒント: " + card.querySelector("[data-fact]").textContent;
         setTimeout(function () { card.classList.remove("is-wrong"); }, 500);
       }
     });

@@ -36,8 +36,8 @@
       btn.disabled = true;
       btn.style.visibility = "hidden";
       placed++;
-      if (placed === 1) feedback.textContent = "☀️ そのとおり! 土台は「人は成長する」という信頼から。次は?";
-      if (placed === 2) feedback.textContent = "☀️ いいね! 態度がのった。最後の仕上げは?";
+      if (placed === 1) feedback.textContent = "☀️ そのとおり！ 土台は「人は成長する」という信頼から。次は？";
+      if (placed === 2) feedback.textContent = "☀️ いいね！ 態度がのった。最後の仕上げは？";
       if (placed === ORDER.length) {
         feedback.textContent = "";
         bank.hidden = true;
@@ -50,7 +50,7 @@
       wrong.textContent = LABEL[kind];
       stack.appendChild(wrong);
       stack.classList.add("is-collapse");
-      feedback.textContent = "🌥️ わ〜! " + LABEL[kind] + "を先に積んだら、グラグラ…くずれちゃった! カウンセリング失敗〜。";
+      feedback.textContent = "🌥️ わ〜! " + LABEL[kind] + "を先に積んだら、グラグラ…くずれちゃった！ カウンセリング失敗〜。";
       setTimeout(function () {
         stack.classList.remove("is-collapse");
         stack.innerHTML = "";
@@ -61,7 +61,7 @@
           b.style.visibility = "visible";
         });
         setTimeout(function () {
-          feedback.textContent = "もう一回! いちばん下に置くべきものはどれかな?";
+          feedback.textContent = "もう一回！ いちばん下に置くべきものはどれかな？";
         }, 200);
       }, 1400);
     }

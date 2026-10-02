@@ -525,3 +525,12 @@ main[data-lb] :is([class*="lede"], [class*="__lead"], .hero-note__desc, .hero-ct
   font-family: system-ui, sans-serif;
   color: #c2502f !important;
 }
+
+/* 2026-10-02 学習ページの末尾: まだ養成講習を受けていない人への小さな案内 */
+.pre-enroll{max-width:640px;margin:28px auto 20px;padding:12px 16px;border:1px dashed var(--color-border);border-radius:12px;font-size:0.875rem;line-height:1.8;color:var(--color-text-subtle);text-align:center}
+.pre-enroll a{font-weight:700;white-space:normal}
+/* 2026-10-02 30秒チェックの結果のあとに出す「次の一歩」 */
+.shindan__next{margin:0 0 16px;padding:0;list-style:none;display:grid;gap:8px}
+.shindan__next a{display:block;padding:11px 14px;border-radius:10px;background:#fff;border:1.5px solid var(--color-border);font-weight:700;text-decoration:none;line-height:1.6}
+.shindan__next a:hover{border-color:var(--color-green)}
+.shindan__next[hidden]{display:none}
