@@ -546,3 +546,69 @@ main[data-lb] :is([class*="lede"], [class*="__lead"], .hero-note__desc, .hero-ct
 .jiji h3{font-size:1rem;margin:18px 0 8px}
 .jiji ul{margin:0 0 8px;padding-left:1.2em}
 .jiji li{margin-bottom:6px;line-height:1.8}
+
+/* 2026-10-02 出題範囲と対応表 */
+.hani__item{margin:18px 0;padding:16px 18px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:14px}
+.hani__item h3{margin:0 0 8px;font-size:1.05rem;line-height:1.6}
+.hani__level{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;background:#eef4dd;font-size:0.75rem;font-weight:700;white-space:nowrap;vertical-align:2px}
+.hani__pages b,.hani__missing b{display:block;font-size:0.8125rem;margin-bottom:2px}
+.hani__pages a{white-space:normal}
+.hani__missing{color:var(--color-text-subtle);font-size:0.9375rem}
+.hani__missing ul{margin:4px 0 0;padding-left:1.2em}
+.hani__missing li{margin-bottom:4px;line-height:1.8}
+.hani__missing li strong{display:block;color:var(--color-text)}
+.hani__missing li{margin-bottom:10px}
+
+/* 2026-10-02 出題範囲と対応表:理解度(1問1答の結果から自動表示) */
+.hani-progress{margin:18px 0;padding:18px;border-radius:14px;background:var(--color-surface);border:1px solid var(--color-border)}
+.hani-progress__title{margin:0 0 12px;font-size:1.05rem}
+.hani-progress__note{margin:10px 0 0;font-size:0.8125rem;color:var(--color-text-subtle);line-height:1.8}
+.hani-progress__reset{border:0;background:none;padding:0;color:inherit;text-decoration:underline;font:inherit;cursor:pointer}
+.rikaido-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rikaido{display:grid;grid-template-columns:minmax(0,15em) minmax(60px,1fr);gap:4px 12px;align-items:center;margin:0}
+.rikaido__name{font-weight:700;font-size:0.9375rem}
+.rikaido__label{font-weight:700;font-size:0.8125rem}
+.rikaido__track{display:block;height:12px;border-radius:999px;background:#e9e4d6;overflow:hidden}
+.rikaido__bar{display:block;height:100%;width:0;border-radius:999px;background:var(--color-green);transition:width .3s ease}
+.rikaido__text{grid-column:2;font-size:0.8125rem;color:var(--color-text-subtle)}
+.rikaido.has-data .rikaido__text{color:var(--color-text);font-weight:700}
+.rikaido--inline{grid-template-columns:auto minmax(60px,1fr);margin-top:6px}
+@media (max-width:640px){.rikaido{grid-template-columns:1fr}.rikaido__text{grid-column:1}}
+
+/* 2026-10-02 出題範囲と対応表:絵と吹き出し */
+.hani h2{display:flex;align-items:center;gap:12px}
+.hani__icon{width:56px;height:56px;object-fit:contain;flex:none}
+.hani-scene{margin:14px 0 20px}
+.hani-scene img{display:block;width:100%;height:auto;border-radius:18px}
+.guest-say{display:flex;align-items:flex-start;gap:10px;margin:12px 0}
+.guest-say__avatar{flex:none;width:48px;height:48px;border-radius:50%;background:#fdf1ee;display:flex;align-items:center;justify-content:center;font-size:1.5rem;overflow:hidden;box-shadow:0 4px 10px rgba(60,80,110,.1)}
+.guest-say__avatar img{width:100%;height:100%;object-fit:cover}
+.guest-say__bubble{margin:0;padding:12px 16px;border-radius:6px 20px 20px 20px;background:#f4f8ed;font-size:0.9375rem;line-height:1.8}
+.guest-say__bubble b{display:block;font-size:0.8125rem;color:#6c8265;margin-bottom:2px}
+.guest-say__bubble a{white-space:nowrap;font-weight:700;font-size:0.8125rem}
+
+/* 2026-10-02 出題範囲と対応表:項目ごとの絵と、小さな吹き出し */
+.hani__item{position:relative}
+.hani__item-icon{float:right;width:64px;height:64px;object-fit:contain;margin:0 0 6px 12px}
+.mini-say{display:flex;align-items:flex-start;gap:10px;margin:10px 0;clear:both}
+.mini-say--moyan{flex-direction:row-reverse}
+.mini-say__avatar{flex:none;width:44px;height:44px}
+.mini-say__avatar img{width:100%;height:100%;object-fit:contain}
+.mini-say__bubble{margin:0;padding:10px 14px;border-radius:6px 18px 18px 18px;background:#fdfaea;border:1px solid #e7dd9a;font-size:0.9375rem;line-height:1.8;max-width:34em}
+.mini-say--moyan .mini-say__bubble{border-radius:18px 6px 18px 18px;background:#fff;border-color:#ccd3db}
+.mini-say__bubble b{display:block;font-size:0.75rem;color:#8b6a2b;margin-bottom:1px}
+.mini-say--moyan .mini-say__bubble b{color:#6a7686}
+.guest-say{clear:both}
+@media (max-width:640px){.hani__item-icon{width:48px;height:48px}}
+
+/* 2026-10-02 用語ページ「試験で問われたポイント」/ ドリルの案内 */
+.term-kakomon{margin-top:16px;padding-top:14px;border-top:1px dashed var(--color-border)}
+.term-kakomon ul{margin:4px 0 0;padding-left:1.2em}
+.term-kakomon li{margin-bottom:6px;line-height:1.85}
+.quiz-drill__zero{margin:10px 0 0;font-size:0.9375rem;color:var(--color-terracotta);font-weight:700}
+
+/* 2026-10-02 試験に出る白書・調査・報告書の要点 */
+.shiryo h2{display:flex;align-items:center;gap:12px}
+.shiryo__list{margin:8px 0 12px;padding-left:1.2em}
+.shiryo__list li{margin-bottom:10px;line-height:1.9}
+.shiryo__trap{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:var(--color-terracotta);color:#fff;font-size:0.75rem;font-weight:700;vertical-align:2px;white-space:nowrap}

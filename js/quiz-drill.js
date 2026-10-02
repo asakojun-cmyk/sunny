@@ -27,8 +27,34 @@
   var genreSel = document.querySelector("[data-quiz-genre]");
   var timeSelEl = document.querySelector("[data-quiz-timesel]");
 
+  // これまでの記録(0=まだ / 1=まちがえた / 2=正解した)を読む
+  function readLog() {
+    try { return window.localStorage.getItem("carepicnic-quiz-log-v1") || ""; } catch (_e) { return ""; }
+  }
+  // 模擬試験: 本番の学科50問に近い配分で、分野ごとに問題を選ぶ
+  var MOCK_PLAN = { 1: 3, 2: 8, 3: 6, 4: 3, 5: 6, 6: 3, 7: 3, 8: 5, 9: 9, 10: 4 };
+  function buildMock() {
+    var out = [];
+    Object.keys(MOCK_PLAN).forEach(function (d) {
+      var inDom = shuffle(ALL.filter(function (x) { return x.d === Number(d); }));
+      out = out.concat(inDom.slice(0, MOCK_PLAN[d]));
+    });
+    return out;
+  }
+
   function applyFilter() {
     if (filter === "all") pool = ALL.slice();
+    else if (filter === "wrong" || filter === "unseen") {
+      var log = readLog();
+      pool = ALL.filter(function (x, k) {
+        var c = log.charAt(k);
+        return filter === "wrong" ? c === "1" : (c !== "1" && c !== "2");
+      });
+    } else if (filter === "mock") {
+      pool = buildMock();
+    } else if (filter === "shiryo") {
+      pool = ALL.filter(function (x) { return x.s === 1; });
+    }
     else if (filter === "freq3") {
       pool = ALL.filter(function (x) { return x.f === 3; });
     } else if (filter === "theorist") {
@@ -49,7 +75,7 @@
     if (poolEl) poolEl.textContent = String(pool.length);
     var cEl = document.querySelector("[data-quiz-count]");
     if (cEl) {
-      var c = COUNTS[timeSel];
+      var c = filter === "mock" ? null : COUNTS[timeSel];
       cEl.textContent = String(c === null ? pool.length : Math.min(c, pool.length));
     }
   }
@@ -75,7 +101,31 @@
 
   function isChoice(item) { return !!(item && item.o && item.o.length); }
 
+  // 理解度の記録: 1問ごとに「まだ=0 / まちがえた=1 / 正解した=2」を、この端末のブラウザにだけ保存する
+  var LOG_KEY = "carepicnic-quiz-log-v1";
+  var DOM_KEY = "carepicnic-quiz-domains-v1";
+  function recordResult(item, correct) {
+    try {
+      var i = ALL.indexOf(item);
+      if (i < 0) return;
+      var log = window.localStorage.getItem(LOG_KEY) || "";
+      while (log.length < ALL.length) log += "0";
+      log = log.slice(0, i) + (correct ? "2" : "1") + log.slice(i + 1);
+      window.localStorage.setItem(LOG_KEY, log);
+      var doms = {};
+      ALL.forEach(function (x, k) {
+        var d = x.d || 0;
+        if (!doms[d]) doms[d] = { total: 0, ok: 0, ng: 0 };
+        doms[d].total++;
+        if (log.charAt(k) === "2") doms[d].ok++;
+        else if (log.charAt(k) === "1") doms[d].ng++;
+      });
+      window.localStorage.setItem(DOM_KEY, JSON.stringify(doms));
+    } catch (_e) { /* 保存できない環境でも、ドリルはそのまま動かす */ }
+  }
+
   function judge(item, correct, btn) {
+    recordResult(item, correct);
     if (correct) score++;
     var label = isChoice(item) ? "「" + item.o[item.ai] + "」" : "「" + (item.a ? "○" : "×") + "」";
     btn.classList.add(correct ? "is-correct" : "is-wrong");
@@ -124,8 +174,15 @@
   }
 
   function begin() {
-    if (pool.length === 0) return;
-    var c = COUNTS[timeSel];
+    if (filter === "mock" || filter === "wrong" || filter === "unseen") applyFilter();
+    if (pool.length === 0) {
+      var zero = document.querySelector("[data-quiz-zero]");
+      if (zero) { zero.hidden = false; zero.textContent = filter === "wrong" ? "まちがえたままの問題は、いまはありません。" : "この範囲に、出せる問題がありません。"; }
+      return;
+    }
+    var zeroEl = document.querySelector("[data-quiz-zero]");
+    if (zeroEl) zeroEl.hidden = true;
+    var c = filter === "mock" ? null : COUNTS[timeSel];
     order = shuffle(pool);
     if (c !== null) order = order.slice(0, Math.min(c, order.length));
     idx = 0;
@@ -142,6 +199,11 @@
       : rate >= 80 ? "合格ライン越え！この調子で他の範囲もいってみよう😊"
       : rate >= 50 ? "いい感じ！まちがえた問題の用語ページを読み直すと、ぐんと伸びるよ"
       : "だいじょうぶ、まちがいは伸びしろ。用語ページでゆっくり復習してからまた来てね🌥️";
+    if (filter === "mock") {
+      note = rate >= 70
+        ? "模擬試験の合格ライン(70%)を越えたよ☀️ 本番は公式の過去問でも確かめてね。"
+        : "模擬試験の合格ライン(70%)まで、あと少し。まちがえた問題は「まちがえた問題だけ」でもう一度解けるよ。";
+    }
     root.querySelector("[data-quiz-endnote]").textContent = note;
     var shareText = "キャリコン1問1答ドリル、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f #キャリコン学びピクニック";
     var pageUrl = "https://carepicnic.com/games/quiz/";
