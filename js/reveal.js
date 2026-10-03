@@ -1,3 +1,35 @@
+/* 広告リンク(A8)が押された場所をGA4に記録する。イベント名: aff_<学校>_<場所> */
+(function () {
+  "use strict";
+  var SCHOOLS = {
+    "459JRK+G3ASDU": "chiiki",
+    "4B7XX4+BD0U56": "pasona",
+    "45BQMV+6WV8EY": "manpower"
+  };
+  document.addEventListener(
+    "click",
+    function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href*="px.a8.net"]') : null;
+      if (!a || typeof window.gtag !== "function") return;
+      var m = a.href.match(/a8mat=([A-Z0-9]+\+[A-Z0-9]+)/);
+      var school = (m && SCHOOLS[m[1]]) || "other";
+      var pos = a.closest(".school-header")
+        ? "top"
+        : a.closest("table")
+        ? "table"
+        : a.classList.contains("button")
+        ? "button"
+        : "text";
+      window.gtag("event", "aff_" + school + "_" + pos, {
+        school: school,
+        link_position: pos,
+        link_text: (a.textContent || "").replace(/\s+/g, "").slice(0, 40)
+      });
+    },
+    true
+  );
+})();
+
 /* スクロールで要素がふわっと現れる演出(reduced-motion 設定時は無効) */
 (function () {
   "use strict";
