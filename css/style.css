@@ -5491,3 +5491,7 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 }
 .lp-cta__sub { margin: 18px 0 0; font-size: 15px; line-height: 1.9; }
 .lp-cta__sub a { color: var(--color-text-subtle); }
+
+/* フッターのメニュー: 読者別の見出し */
+.drawer__label--who{font-size:1.05rem;font-weight:700;letter-spacing:.04em;color:#2f4a3a;margin:30px 0 10px;padding:0 0 6px;border-bottom:2px solid #3f6b4a}
+.drawer__label--who:first-child{margin-top:0}
