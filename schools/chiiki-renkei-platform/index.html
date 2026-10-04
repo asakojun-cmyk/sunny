@@ -45,6 +45,65 @@
 .school-ask__list{margin:0 0 12px;padding-left:1.4em;line-height:1.9}
 .school-ask__list li{margin-bottom:8px}
 .school-ask__note{font-size:.92rem;color:#5d7263}
+.school-kai__list{list-style:none;margin:0 0 14px;padding:0}
+.school-kai__list li{padding:14px 0;border-bottom:1px dashed #e3dcc6;line-height:1.9}
+.school-kai__k{display:inline-block;font-size:.82rem;font-weight:700;color:#fff;background:#5f913c;border-radius:999px;padding:1px 12px;margin-bottom:6px;line-height:1.7}
+.school-kai__c{display:block;font-size:1.08rem;line-height:1.7;margin-bottom:4px}
+.school-kai__d{display:block;color:#4a5a50}
+.school-kai__ask{display:flex;align-items:center;gap:14px;margin:22px 0 12px}
+.school-section__title + .school-kai__ask{margin-top:6px}
+.school-kai__ask + .school-kai__ask{margin-top:0}
+.school-kai__ask--sunny{margin-bottom:22px}
+.school-last .school-eyebrow{display:block;font-size:.86rem;font-weight:700;color:#5f913c;letter-spacing:.04em;margin-bottom:6px}
+.school-why__list li{padding:20px 0}
+.school-why__list b{display:block;min-width:0;margin:0 0 14px;text-align:center;font-size:1.05rem}
+.school-why__list li span{display:block}
+.school-kai__list li{padding:20px 0;text-align:center}
+.school-kai__k{margin-bottom:12px}
+.school-kai__c{margin-bottom:14px}
+.school-kai__d{text-align:left}
+.school-section__title .school-eyebrow{display:block;font-size:.86rem;font-weight:700;color:#5f913c;letter-spacing:.04em;margin-bottom:4px}
+.school-eyebrow:before{content:"＼ "}
+.school-eyebrow:after{content:" ／"}
+.school-why__h{margin:0 0 14px;text-align:center;font-size:1.05rem;color:#5f913c;line-height:1.7}
+.school-why__list li p{margin:0}
+h3.school-kai__c{margin:0 0 14px;font-size:1.08rem;line-height:1.7}
+h2.school-kai__voicelabel,h3.school-kai__voicelabel{margin:0 0 10px;font-size:1rem;line-height:1.8;color:#3f6b4a}
+h2.school-kai__voicelabel:before{content:none}
+.kc{background:#fff;border:2px solid #dfe8d2;border-radius:18px;padding:18px 16px;margin:20px 0 16px;line-height:1.9}
+.kc__title{margin:0 0 8px;font-size:1.05rem;line-height:1.7;color:#3f6b4a;text-align:center}
+.kc__label{display:block;font-weight:700;margin:14px 0 6px}
+.kc__select{width:100%;font:inherit;font-size:1rem;padding:11px 12px;border:2px solid #cfd8c4;border-radius:12px;background:#fff;color:inherit}
+.kc__go{display:block;width:100%;margin:18px 0 0;padding:13px;border:0;border-radius:999px;background:#3f6b4a;color:#fff;font:inherit;font-weight:700;font-size:1rem;cursor:pointer}
+.kc-out{margin:16px 0 0;padding:14px;border-radius:14px;background:#f3f6ee}
+.kc-out p{margin:0 0 8px}
+.kc-out__title{font-weight:700;font-size:1.05rem}
+.kc-out--yes{background:#e9f4df}
+.kc-out--no{background:#fff1e6}
+.kc-out--maybe{background:#fff7e3}
+.kc-out__note{font-size:.92rem;color:#5d7263;margin:0!important}
+.kc .school-ask__note{margin:14px 0 0}
+.school-kai__voice{margin-top:0}
+.school-kai__ask img{flex:none;width:64px;height:64px;object-fit:contain}
+.school-kai__ask p{position:relative;margin:0;background:#fff;border:2px solid #cfe0ee;border-radius:18px;padding:10px 14px;line-height:1.8;font-weight:700}
+.school-kai__ask p:before{content:"";position:absolute;left:-9px;top:50%;width:14px;height:14px;background:#fff;border-left:2px solid #cfe0ee;border-bottom:2px solid #cfe0ee;transform:translateY(-50%) rotate(45deg)}
+.school-kai__ask--sunny p{border-color:#f3dc8a}
+.school-kai__ask--sunny p:before{border-color:#f3dc8a}
+.school-kai__ans p{margin:0 0 10px}
+.school-kai__ans p:last-child{margin:0}
+.school-kai__last p:last-child{font-weight:700;color:#3f6b4a}
+.school-kai__voice{background:#fff;border:2px solid #e3dcc6;border-radius:18px;padding:16px 16px 6px;margin:18px 0 14px;line-height:1.95}
+.school-kai__voice p{margin:0 0 10px}
+.school-kai__voicelabel{font-weight:700;color:#3f6b4a}
+.school-qa__list{margin:14px 0 18px}
+.school-qa__item{padding:14px 0;border-bottom:1px dashed #e3dcc6}
+.school-qa__item dt,.school-qa__item dd{position:relative;margin:0;padding-left:2.1em;line-height:1.9}
+.school-qa__item dt{font-weight:700;margin-bottom:6px}
+.school-qa__item dt span,.school-qa__item dd span{position:absolute;left:0;top:.2em;width:1.6em;height:1.6em;border-radius:50%;display:grid;place-items:center;font-size:.85rem;font-weight:700;line-height:1}
+.school-qa__item dt span{background:#3f6b4a;color:#fff}
+.school-qa__item dd span{background:#fde9a8;color:#6b5514}
+.school-qa__sub{font-size:1.05rem;margin:22px 0 4px;color:#3f6b4a}
+.school-qa__cta{text-align:center;margin:18px 0 0}
 </style>
 </head>
 <body>
@@ -99,7 +158,7 @@
     <p class="school-header__status">
       <span class="updated-date__checked">情報確認日: 2026年10月4日</span>
     </p>
-    <h1 class="school-header__name">一般社団法人<wbr>地域連携プラットフォーム</h1>
+    <h1 class="school-header__name">地域連携プラットフォームの<wbr>キャリアコンサルタント養成講習</h1>
     <p class="school-header__operator">運営: 一般社団法人<wbr>地域連携プラットフォーム</p>
     <p class="updated-date"><span>更新日: 2026年10月4日</span><span class="updated-date__checked">情報確認日: 2026年10月4日(講習時間と振替の時間数は7月11日に確認)</span></p>
     <p class="school-header__official"><a class="button button--primary" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" rel="sponsored noopener noreferrer" target="_blank">無料の<wbr>説明会・<wbr>質問会を<wbr>見てみる</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=459JRK+G3ASDU+59PG+60OXE" alt="" style="position:absolute"></p>
@@ -108,27 +167,155 @@
 
 
   <section class="school-section school-why">
-    <h2 class="school-section__title"><span class="info-label info-label--experience">受講者本人</span><wbr> 運営者が<wbr>この<wbr>学校を<wbr>選んだ<wbr>理由</h2>
+    <h2 class="school-section__title"><span class="school-eyebrow">受講者の<wbr>体験談</span> 地域連携プラットフォームを<wbr>選んだ<wbr>理由</h2>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>養成学校って、<wbr>たくさん<wbr>あって<wbr>選べないよ…。<wbr>運営者さんは、<wbr>どうして<wbr>ここに<wbr>したの？</p>
+    </div>
+    <div class="school-kai__ask school-kai__ask--sunny">
+      <img src="../../img/parts/06_sun_character.png" width="64" height="64" alt="サニー先生" loading="lazy" decoding="async">
+      <p>運営者が<wbr>選んだ<wbr>理由は<wbr>4つ<wbr>あるよ。<wbr>気に<wbr>なった<wbr>点も、<wbr>かく<wbr>さずに<wbr>書いてあるんだ。</p>
+    </div>
     <ul class="school-why__list">
-      <li><b>費用</b>わたしが<wbr>調べた<wbr>中では、<wbr>金額が<wbr>いちばん安い<wbr>学校でした。</li>
-      <li><b>オンライン</b>オンラインで<wbr>修了まで<wbr>完了できるので、<wbr>子育て<wbr>中の<wbr>家庭でも<wbr>通いやすそうだと<wbr>思いました。</li>
-      <li><b>日程</b>授業の<wbr>日程は<wbr>選択肢が<wbr>豊富で、<wbr>曜日や<wbr>時間帯を<wbr>たくさんの<wbr>パターンから<wbr>選べます。</li>
-      <li><b>説明会</b>説明会が<wbr>あったので、<wbr>安心して<wbr>申し込めました。</li>
+      <li><h3 class="school-why__h">費用について</h3><p>わたしが<wbr>調べた<wbr>中では、<wbr>金額が<wbr>いちばん安い<wbr>学校でした。</p></li>
+      <li><h3 class="school-why__h">オンラインについて</h3><p>オンラインで<wbr>修了まで<wbr>完了できるので、<wbr>子育て<wbr>中の<wbr>家庭でも<wbr>通いやすそうだと<wbr>思いました。</p></li>
+      <li><h3 class="school-why__h">日程について</h3><p>授業の<wbr>日程は<wbr>選択肢が<wbr>豊富で、<wbr>曜日や<wbr>時間帯を<wbr>たくさんの<wbr>パターンから<wbr>選べます。</p></li>
+      <li><h3 class="school-why__h">説明会について</h3><p>説明会が<wbr>あったので、<wbr>安心して<wbr>申し込めました。</p></li>
     </ul>
-    <p class="school-why__caution">気に<wbr>なった<wbr>点も<wbr>あります。<wbr>子どもが<wbr>画面に<wbr>映ってはいけない<wbr>ことを、<wbr>受講前に<wbr>知りませんでした。<wbr>卒業後の<wbr>サポートは<wbr>別料金です。</p>
+    <p class="school-why__caution">気に<wbr>なった<wbr>点も<wbr>あります。<wbr>卒業後の<wbr>サポートは<wbr>別料金です。</p>
     <p class="lp-intro__link"><a href="../../school-reviews/chiiki-renkei-platform/">受講体験記を<wbr>読む<wbr>(よかった<wbr>点も、<wbr>困った<wbr>点も<wbr>) <span class="arw" aria-hidden="true">▶︎</span></a></p>
+  </section>
+
+  <section class="school-section school-kai">
+    <h2 class="school-section__title"><span class="school-eyebrow">受講者の<wbr>体験談</span> 地域連携プラットフォームの<wbr>説明会って、<wbr>どんな<wbr>感じ？</h2>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>説明会って、<wbr>どんな<wbr>雰囲気なんだろう。<wbr>ドキドキするなあ…。</p>
+    </div>
+    <div class="school-kai__ask school-kai__ask--sunny">
+      <img src="../../img/parts/06_sun_character.png" width="64" height="64" alt="サニー先生" loading="lazy" decoding="async">
+      <p>はじめては、<wbr>だれでも<wbr>緊張するよね。<wbr>運営者が<wbr>参加した<wbr>ときの<wbr>様子を、<wbr>順番に<wbr>見てみよう。</p>
+    </div>
+    <ul class="school-kai__list">
+      <li><span class="school-kai__k">人数について</span><h3 class="school-kai__c">3人の<wbr>少人数でした</h3><span class="school-kai__d">運営者が<wbr>参加した回は、<wbr>わたしを<wbr>入れて<wbr>3人でした。</span></li>
+      <li><span class="school-kai__k">前半について</span><h3 class="school-kai__c">動画と<wbr>スライドで<wbr>説明を<wbr>聞きます</h3><span class="school-kai__d">代表の<wbr>方の<wbr>動画と、<wbr>スライドを<wbr>使った<wbr>説明です。<wbr>講習の<wbr>流れ、<wbr>修了の<wbr>条件、<wbr>試験、<wbr>費用と<wbr>特典の<wbr>話が<wbr>ありました。</span></li>
+      <li><span class="school-kai__k">注意点について</span><h3 class="school-kai__c">大変な<wbr>ところも<wbr>正直に<wbr>話してくれます</h3><span class="school-kai__d">「16時間<wbr>休むと、<wbr>その<wbr>ぶん<wbr>課題が<wbr>16問増えて<wbr>大変ですよ」<wbr>「給付金で<wbr>80%戻るまでの<wbr>道のりは、<wbr>なかなか<wbr>厳しいです」と<wbr>いう<wbr>説明も<wbr>ありました。</span></li>
+      <li><span class="school-kai__k">後半について</span><h3 class="school-kai__c">声を<wbr>出して<wbr>質問できます</h3><span class="school-kai__d">質問の<wbr>時間です。<wbr>「対策講座に<wbr>みんないくら<wbr>使っているか」のような<wbr>聞きに<wbr>くいことにも、<wbr>金額を<wbr>出して<wbr>答えて<wbr>もらえました。</span></li>
+      <li><span class="school-kai__k">終わったあとについて</span><h3 class="school-kai__c">聞き忘れは、<wbr>あとから<wbr>でも<wbr>聞けます</h3><span class="school-kai__d">電話や<wbr>フォームで<wbr>聞けると<wbr>案内が<wbr>ありました。</span></li>
+    </ul>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>運営者さんも、<wbr>参加する<wbr>前は<wbr>不安だったの？</p>
+    </div>
+    <div class="school-kai__voice">
+      <h3 class="school-kai__voicelabel">運営者の<wbr>ひとこと</h3>
+      <p>めちゃくちゃ<wbr>不安でしたが、<wbr>少人数で、<wbr>基本的には<wbr>お話を<wbr>説明してくださり、<wbr>「不安な<wbr>点は<wbr>ないですか？」と<wbr>温かく<wbr>聞いてくださいました。</p>
+      <p>Zoomの<wbr>操作に<wbr>慣れていなくて、<wbr>本当に<wbr>あわあわしました。<wbr>でも、<wbr>挙手でも<wbr>声出しでも、<wbr>こちらの<wbr>「質問したい！」と<wbr>いう<wbr>気持ちを<wbr>くみ取ってくださいました。</p>
+      <p>わたし以外の<wbr>人は、<wbr>あまり<wbr>質問が<wbr>なかったように<wbr>思います。<wbr>せっかくなら、<wbr>質問を<wbr>考えてから<wbr>臨んでも<wbr>いいのかなと<wbr>思います。</p>
+      <p>聞いて<wbr>おくべきは、<wbr>子どもの<wbr>ことですね。<wbr>子どもが<wbr>画面に<wbr>映ってはいけない<wbr>ことを、<wbr>わたしは<wbr>受講前に<wbr>知りませんでした。</p>
+    </div>
   </section>
 
   <section class="school-section school-ask">
     <h2 class="school-section__title">説明会で<wbr>聞いて<wbr>おくと<wbr>いいこと</h2>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>何を<wbr>聞いたら<wbr>いいのか、<wbr>わからないよ…。</p>
+    </div>
+    <div class="school-kai__ask school-kai__ask--sunny">
+      <img src="../../img/parts/06_sun_character.png" width="64" height="64" alt="サニー先生" loading="lazy" decoding="async">
+      <p>聞きたい<wbr>ことを<wbr>メモしてから<wbr>行くと、<wbr>あわてずに<wbr>すむよ。<wbr>まずは、<wbr>この<wbr>3つが<wbr>おすすめ。</p>
+    </div>
     <ol class="school-ask__list">
-      <li>自分は<wbr>給付金の<wbr>対象に<wbr>なるか<wbr>(雇用保険に<wbr>入っていた<wbr>期間で<wbr>決まります)</li>
+      <li>子どもが<wbr>家に<wbr>いる<wbr>時間に<wbr>受ける<wbr>場合、<wbr>カメラの<wbr>ルールは<wbr>どうなっているか</li>
       <li>休んだ<wbr>ときの<wbr>振替は、<wbr>何時間まで<wbr>・どの<wbr>日に<wbr>できるか</li>
       <li>試験対策の<wbr>講座は<wbr>別料金か。<wbr>受けるなら<wbr>全部で<wbr>いくらか</li>
-      <li>子どもが<wbr>家に<wbr>いる<wbr>時間に<wbr>受ける<wbr>場合、<wbr>カメラの<wbr>ルールは<wbr>どうなっているか</li>
     </ol>
+    <div class="kc" id="kyufu-check" data-tokuten="この学校には、給付金の対象にならない人向けの特典(受講料の割引)があります。くわしい条件は説明会で聞いてみてください。">
+      <h3 class="kc__title">給付金の<wbr>対象に<wbr>なるかは、<wbr>ハローワークで<wbr>確認します</h3>
+      <p>自分が<wbr>給付金の<wbr>対象か<wbr>どうかは、<wbr>学校ではなく<wbr>ハローワークが<wbr>決めます。<wbr>その前に、<wbr>下の<wbr>3つを<wbr>選ぶと<wbr>目安が<wbr>わかります。</p>
+      <label class="kc__label" for="kc-period">雇用保険に<wbr>入っていた<wbr>期間(合計)</label>
+      <select id="kc-period" class="kc__select"><option value="">えらんでください</option><option value="none">入っていたことがない</option><option value="lt2">2年より短い</option><option value="y2">2年以上3年未満</option><option value="y3">3年以上</option></select>
+      <label class="kc__label" for="kc-status">いまの<wbr>働き方</label>
+      <select id="kc-status" class="kc__select"><option value="">えらんでください</option><option value="in">雇用保険に入って働いている</option><option value="in1">仕事を辞めて1年以内</option><option value="over1">仕事を辞めて1年より長い</option></select>
+      <label class="kc__label" for="kc-used">教育訓練給付金を<wbr>使った<wbr>こと</label>
+      <select id="kc-used" class="kc__select"><option value="">えらんでください</option><option value="never">使ったことがない</option><option value="in3">使ってから3年たっていない</option><option value="over3">使ってから3年以上たった</option></select>
+      <button type="button" class="kc__go" id="kc-go">この<wbr>内容で<wbr>調べる</button>
+      <div class="kc-out" id="kc-out" hidden aria-live="polite"></div>
+      <p class="school-ask__note">条件のもとになる<wbr>情報:<a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_education.html" rel="noopener nofollow" target="_blank">ハローワークインターネットサービス「教育訓練給付金」</a>(2026年10月4日に<wbr>確認)。<a href="../../school-guides/kyufukin/">給付金の<wbr>くわしい<wbr>説明は<wbr>こちら</a></p>
+    </div>
     <p class="school-ask__note">説明会・<wbr>質問会は<wbr>無料で、<wbr>申し込むと<wbr>決めていなくても<wbr>参加できます。</p>
   </section>
+
+  <section class="school-section school-qa">
+    <h2 class="school-section__title"><span class="school-eyebrow">受講者の<wbr>体験談</span> 説明会の<wbr>前に、<wbr>メールで<wbr>聞いた<wbr>質問と<wbr>答え</h2>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>こんな<wbr>こと<wbr>聞いたら、<wbr>失礼じゃないかな…。</p>
+    </div>
+    <div class="school-kai__ask school-kai__ask--sunny">
+      <img src="../../img/parts/06_sun_character.png" width="64" height="64" alt="サニー先生" loading="lazy" decoding="async">
+      <p>だいじょうぶ。<wbr>運営者は、<wbr>説明会の<wbr>前に<wbr>メールで<wbr>こんなに<wbr>聞いていたんだよ。</p>
+    </div>
+    <p>運営者は、<wbr>説明会に<wbr>申し込む<wbr>ときに<wbr>気に<wbr>なる<wbr>ことを<wbr>メールで<wbr>送りました。<wbr>説明会の<wbr>前に、<wbr>事務局から<wbr>ひと<wbr>つ<wbr>ずつ<wbr>返事が<wbr>届きました<wbr>(2026年5月の<wbr>回答です)。</p>
+    <dl class="school-qa__list">
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>合格率の<wbr>分母は<wbr>「受験した<wbr>人」か<wbr>「受講生全体」か</dt><dd><span aria-hidden="true">A</span>その<wbr>試験回に<wbr>当たる<wbr>受講生が<wbr>分母です。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>受講を<wbr>始めてから<wbr>修了までに、<wbr>やめる<wbr>人の<wbr>割合は</dt><dd><span aria-hidden="true">A</span>おおよそ1%未満です。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>給付金の<wbr>申請を、<wbr>学校は<wbr>どこまで<wbr>手伝ってくれるか</dt><dd><span aria-hidden="true">A</span>制度の<wbr>説明は<wbr>ハローワークでていねいに<wbr>して<wbr>もらえます。<wbr>学校は、<wbr>手続きに<wbr>必要な<wbr>書類を<wbr>用意してくれます。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>オンラインだけで<wbr>実習まで<wbr>終わるか。<wbr>対面の<wbr>日は<wbr>あるか</dt><dd><span aria-hidden="true">A</span>すべて<wbr>オンラインで<wbr>完結します。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>卒業した<wbr>人の<wbr>進路の<wbr>割合(独立・企業内・副業・<wbr>活動していない<wbr>)</dt><dd><span aria-hidden="true">A</span>学校が<wbr>公開している<wbr>「明示書」に<wbr>書いてあります<wbr>(この<wbr>ページの<wbr>下の<wbr>「参考・出典」からも<wbr>見られます)。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>この<wbr>学校ならではの、<wbr>卒業生どうしの<wbr>つながりや<wbr>継続サポートは</dt><dd><span aria-hidden="true">A</span>学校と<wbr>しては<wbr>特別には<wbr>行っていません。<wbr>親会社が<wbr>運営する<wbr>「キャリア・オアシス」で、<wbr>つながりづくりと<wbr>継続学習が<wbr>できます。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>卒業後に、<wbr>活動の<wbr>場に<wbr>登録して<wbr>動けるか</dt><dd><span aria-hidden="true">A</span>「キャリア・オアシス」で<wbr>活動できます。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>主婦・ママ・転勤族の<wbr>妻の<wbr>受講生の<wbr>割合や、<wbr>活動している<wbr>卒業生の<wbr>事例</dt><dd><span aria-hidden="true">A</span>集計していないので、<wbr>答えは<wbr>控えるとの<wbr>ことでした。</dd></div>
+    </dl>
+    <h3 class="school-qa__sub">説明会の<wbr>中で<wbr>出た<wbr>質問と<wbr>答え</h3>
+    <dl class="school-qa__list">
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>本番<wbr>そっくりの<wbr>試験対策講座は<wbr>あるか。<wbr>費用は</dt><dd><span aria-hidden="true">A</span>「キャリア・オアシス」などで<wbr>試験の<wbr>直前に<wbr>開かれます。<wbr>試験官役2人を<wbr>置いた<wbr>ロールプレイの<wbr>練習が<wbr>あり、<wbr>教室(埼玉・志木)なら<wbr>5,000ポイント(5,000円)、<wbr>外部の<wbr>会場なら<wbr>13,800ポイント前後と<wbr>いう<wbr>説明でした。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>受講生は、<wbr>試験対策に<wbr>どの<wbr>くらい<wbr>お金を<wbr>かけているか</dt><dd><span aria-hidden="true">A</span>平均で<wbr>3万円〜5万円ぶんの<wbr>対策講座や<wbr>レッスンを<wbr>使う<wbr>人が<wbr>多いそうです。<wbr>まったく<wbr>使わない<wbr>人も<wbr>います。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>資格を<wbr>取った<wbr>あとの<wbr>仕事の<wbr>相談は<wbr>できるか</dt><dd><span aria-hidden="true">A</span>講義の<wbr>中や、<wbr>対策講座・面談練習会で<wbr>講師に<wbr>質問できます。<wbr>合格後に<wbr>講習の<wbr>アシスタント(報酬あり)を<wbr>して、<wbr>横の<wbr>つながりを<wbr>作る<wbr>こともできる<wbr>そうです。</dd></div>
+      <div class="school-qa__item"><dt><span aria-hidden="true">Q</span>休んだ<wbr>ときの<wbr>振替は</dt><dd><span aria-hidden="true">A</span>合計16時間まで<wbr>できます。<wbr>2時間単位で、<wbr>同じ期の<wbr>ほかの<wbr>曜日の<wbr>コースに<wbr>振り替えられます。</dd></div>
+    </dl>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>聞きにくい<wbr>お金の<wbr>話も、<wbr>ちゃんと<wbr>答えて<wbr>もらえるんだね。<wbr>ちょっと<wbr>安心した！</p>
+    </div>
+    <div class="school-kai__ask school-kai__ask--sunny">
+      <img src="../../img/parts/06_sun_character.png" width="64" height="64" alt="サニー先生" loading="lazy" decoding="async">
+      <p>気に<wbr>なる<wbr>ことは、<wbr>そのままに<wbr>しないのが<wbr>いちばん。<wbr>説明会は<wbr>無料だから、<wbr>自分の<wbr>耳で<wbr>たしかめてみよう。</p>
+    </div>
+    <p class="school-ask__note">どれも<wbr>運営者が<wbr>参加した<wbr>ときの<wbr>回答です。<wbr>金額や<wbr>ルールは<wbr>変わる<wbr>ことが<wbr>あるので、<wbr>いまの<wbr>内容は<wbr>説明会で<wbr>聞いてみてください。</p>
+    <p class="school-qa__cta"><a class="button button--primary" data-ev="school_chiiki_qa_setsumeikai" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" rel="sponsored noopener noreferrer" target="_blank">無料の<wbr>説明会・<wbr>質問会を<wbr>見てみる</a></p>
+  </section>
+
+  <section class="school-section school-after">
+    <h2 class="school-section__title"><span class="school-eyebrow">受講者の<wbr>体験談</span> 受けてみて、<wbr>どうだった？</h2>
+    <div class="school-kai__ask">
+      <img src="../../img/parts/07_moyan_school_hat_crying.png" width="64" height="64" alt="モヤン" loading="lazy" decoding="async">
+      <p>運営者の<wbr>ちゃんさん、<wbr>結局、<wbr>受けてみて、<wbr>無料説明会と<wbr>授業に<wbr>ギャップは<wbr>あった？</p>
+    </div>
+    <p class="school-why__caution">ふり<wbr>返ってみると、<wbr>「組織と<wbr>人を<wbr>元気に<wbr>する」と<wbr>いう<wbr>点に<wbr>ついては、<wbr>授業の<wbr>内容は<wbr>薄いように<wbr>感じました。<wbr>ファシリテーションなど、<wbr>組織の<wbr>中で<wbr>どう<wbr>活躍するかと<wbr>いう<wbr>具体的な<wbr>お話を、もっと<wbr>聞きたかったです。<wbr>受講中に<wbr>先生と<wbr>連絡先を<wbr>交換する<wbr>こともできますし、<wbr>卒業後に<wbr>「キャリア・オアシス」で<wbr>相談する、と<wbr>いう<wbr>想定なのかもしれません。</p>
+    <div class="school-kai__ask school-kai__ask--sunny">
+      <img src="../../img/parts/06_sun_character.png" width="64" height="64" alt="サニー先生" loading="lazy" decoding="async">
+      <p>じゃあ、<wbr>どうしたら<wbr>よかったと<wbr>思う？</p>
+    </div>
+    <div class="school-why__caution school-kai__ans">
+      <p>やっぱり<wbr>この<wbr>点は、<wbr>授業中に<wbr>先生に<wbr>聞く。<wbr>それこそ<wbr>無料説明会の<wbr>ときに、<wbr>「具体的に、<wbr>どうやって<wbr>組織と<wbr>人を<wbr>元気に<wbr>していけばいいか、<wbr>学べるのでしょうか？」と、<wbr>突っ込んだ<wbr>質問を<wbr>するなどが<wbr>あった<wbr>ほうが<wbr>いいと<wbr>思います。</p>
+      <p>受講料も<wbr>時間も<wbr>タダではなく、<wbr>あなたの<wbr>人生の<wbr>投資です。<wbr>自分の<wbr>目的を<wbr>明確に<wbr>して、<wbr>学校に<wbr>お任せではなく、<wbr>自分が<wbr>ほしい<wbr>情報や<wbr>知識を<wbr>つかみに<wbr>行ってほしいと<wbr>思います。</p>
+    </div>
+    <p class="lp-intro__link"><a href="../../school-reviews/chiiki-renkei-platform/">授業で<wbr>よかった<wbr>点は、<wbr>受講体験記に<wbr>書いています <span class="arw" aria-hidden="true">▶︎</span></a></p>
+  </section>
+
+  <section class="school-section school-last">
+    <div class="school-kai__voice school-kai__last">
+      <h2 class="school-kai__voicelabel">最後に、<wbr>これから<wbr>挑戦する<wbr>人へ</h2>
+      <p>養成学校を<wbr>卒業した<wbr>あと、<wbr>わたしは<wbr>無料の<wbr>キャリア相談に<wbr>チャレンジしています。<wbr>キャリアコンサルタントに<wbr>なる<wbr>ために、<wbr>実績を<wbr>積みたいからです。</p>
+      <p>これまでに<wbr>10人ほどと<wbr>面談しました。<wbr>ひとつ<wbr>言えるのは、<wbr>キャリアコンサルタントは、<wbr>キャリアで<wbr>悩んでいる<wbr>人を<wbr>元気に<wbr>できる<wbr>仕事だと<wbr>いう<wbr>こと。<wbr>その<wbr>手応えを<wbr>感じています。</p>
+      <p>自分の<wbr>不安な<wbr>点を<wbr>きちんと<wbr>整理して、<wbr>「自分に<wbr>プラスに<wbr>なる」と<wbr>思えるのなら、<wbr>ぜひ挑戦してほしいです。</p>
+      <p>わたしは、<wbr>心から<wbr>あなたの<wbr>挑戦を<wbr>応援しています。<wbr>一緒に<wbr>がんばりましょう！</p>
+    </div>
+    <p class="school-qa__cta"><a class="button button--primary" data-ev="school_chiiki_kai_setsumeikai" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" rel="sponsored noopener noreferrer" target="_blank">無料の<wbr>説明会・<wbr>質問会を<wbr>見てみる</a></p>
+  </section>
+
 
   <aside class="notice-box">
     <p>料金・期間・給付金・日程・振替などの<wbr>情報は<wbr>変わる<wbr>ことがあります。<wbr>申し込む前に、<wbr>必ず<a href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" rel="sponsored noopener noreferrer" target="_blank">公式サイト</a>で<wbr>最新の<wbr>情報を<wbr>確認してください。<wbr>確かめられなかった<wbr>項目は<wbr>「未確認」と<wbr>書いています。</p>
@@ -310,6 +497,10 @@
         <a href="https://careerjp.work/cc1/" rel="noopener nofollow" target="_blank">地域連携プラットフォーム キャリアコンサルタント養成講習(公式サイト)</a>
         <span class="source-list__checked">(確認日: 2026年10月4日)</span>
       </li>
+      <li>
+        <span class="source-list__type">学校公式</span>
+        <a href="https://careerjp.work/cc1/pdf/meijisho_r7.pdf" rel="noopener nofollow" target="_blank">明示書(修了者の進路などの公開資料・PDF)</a>
+      </li>
     </ul>
   </section>
 
@@ -427,6 +618,7 @@
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
 <script src="../../js/reveal.js?v=v2026.0728.1616" defer></script>
+<script src="../../js/kyufu-check.js?v=1" defer></script>
 <script src="../../js/search-fab.js?v=v2026.0728.1616" defer></script>
 
 </body>
