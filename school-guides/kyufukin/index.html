@@ -37,6 +37,21 @@
 <link rel="stylesheet" href="../../css/yomiyasu.css?v=2026.1003m">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"キャリアコンサルタント養成講座の給付金 — 実質いくらになるか","description":"キャリアコンサルタント養成学校の選び方を初学者向けに解説。学校を比べる前に決めておきたい条件と、公式サイトで確認すべき項目を整理します。","dateModified":"2026-09-24","author":{"@type":"Person","name":"岩脇 朝子"},"mainEntityOfPage":"https://carepicnic.com/school-guides/kyufukin/"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"養成学校一覧","item":"https://carepicnic.com/schools/"},{"@type":"ListItem","position":3,"name":"給付金で実質いくら?"}]}</script>
+<style>
+.kc{background:#fff;border:2px solid #dfe8d2;border-radius:18px;padding:18px 16px;margin:20px 0 16px;line-height:1.9}
+.kc__title{margin:0 0 8px;font-size:1.05rem;line-height:1.7;color:#3f6b4a;text-align:center}
+.kc__label{display:block;font-weight:700;margin:14px 0 6px}
+.kc__select{width:100%;font:inherit;font-size:1rem;padding:11px 12px;border:2px solid #cfd8c4;border-radius:12px;background:#fff;color:inherit}
+.kc__go{display:block;width:100%;margin:18px 0 0;padding:13px;border:0;border-radius:999px;background:#3f6b4a;color:#fff;font:inherit;font-weight:700;font-size:1rem;cursor:pointer}
+.kc-out{margin:16px 0 0;padding:14px;border-radius:14px;background:#f3f6ee}
+.kc-out p{margin:0 0 8px}
+.kc-out__title{font-weight:700;font-size:1.05rem}
+.kc-out--yes{background:#e9f4df}
+.kc-out--no{background:#fff1e6}
+.kc-out--maybe{background:#fff7e3}
+.kc-out__note{font-size:.92rem;color:#5d7263;margin:0!important}
+.kc__src{font-size:.92rem;color:#5d7263;margin:14px 0 0}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -90,7 +105,7 @@
     <p class="article-header__meta"><span class="article-card__category">養成講座ガイド</span></p>
     <h1>養成講座の給付金 <wbr>—<wbr> <wbr>「最大80%」<wbr>で実質いくらになるのか</h1>
     <p class="article-header__lede">養成講習で<wbr>いちばん<wbr>悩むのは、<wbr>やっぱり<wbr>費用ですよね。<wbr>給付金を<wbr>使うと<wbr>実質いくらに<wbr>なるのか、<wbr>条件に<wbr>当ては<wbr>まらないと<wbr>どうなるのかを、<wbr>厚生労働省の<wbr>情報を<wbr>もとに<wbr>まとめました。</p>
-    <p class="updated-date"><span>更新日: 2026年9月24日</span><span class="updated-date__checked">情報確認日: 2026年9月24日</span></p>
+    <p class="updated-date"><span>更新日: 2026年10月4日</span><span class="updated-date__checked">情報確認日: 2026年9月24日</span></p>
   </header>
 
   <aside class="disclosure" aria-label="広告・提供関係の開示">
@@ -143,6 +158,19 @@
     </ul>
     <p>反対に、<strong class="mk">雇用保険に<wbr>入っていた<wbr>期間が<wbr>ない<wbr>方(専業主婦・専業主夫の<wbr>方など)は、<wbr>給付金の<wbr>対象に<wbr>なりません</strong>。<wbr>その<wbr>場合、<wbr>費用は<wbr>全額<wbr>自分で<wbr>払うことになります。<wbr>上の<wbr>例なら、<wbr>297,000円が<wbr>そのまま<wbr>かかります。</p>
     <p>「最大80%戻るなら<wbr>安い」と<wbr>申し込む前に、<wbr>まず<wbr>自分が<wbr>対象に<wbr>なるかどうかを<wbr>確かめてください。</p>
+    <div class="kc" id="kyufu-check">
+      <h3 class="kc__title">自分が<wbr>対象に<wbr>なりそうか、<wbr>3つ<wbr>選んで<wbr>調べる</h3>
+      <p>対象か<wbr>どうかを<wbr>決めるのは<wbr>ハローワークです。<wbr>その前に、<wbr>下の<wbr>3つを<wbr>選ぶと<wbr>目安が<wbr>わかります。</p>
+      <label class="kc__label" for="kc-period">雇用保険に<wbr>入っていた<wbr>期間(合計)</label>
+      <select id="kc-period" class="kc__select"><option value="">えらんでください</option><option value="none">入っていたことがない</option><option value="lt2">2年より短い</option><option value="y2">2年以上3年未満</option><option value="y3">3年以上</option></select>
+      <label class="kc__label" for="kc-status">いまの<wbr>働き方</label>
+      <select id="kc-status" class="kc__select"><option value="">えらんでください</option><option value="in">雇用保険に入って働いている</option><option value="in1">仕事を辞めて1年以内</option><option value="over1">仕事を辞めて1年より長い</option></select>
+      <label class="kc__label" for="kc-used">教育訓練給付金を<wbr>使った<wbr>こと</label>
+      <select id="kc-used" class="kc__select"><option value="">えらんでください</option><option value="never">使ったことがない</option><option value="in3">使ってから3年たっていない</option><option value="over3">使ってから3年以上たった</option></select>
+      <button type="button" class="kc__go" id="kc-go">この<wbr>内容で<wbr>調べる</button>
+      <div class="kc-out" id="kc-out" hidden aria-live="polite"></div>
+      <p class="kc__src">条件のもとになる<wbr>情報:<a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_education.html" rel="noopener nofollow" target="_blank">ハローワークインターネットサービス「教育訓練給付金」</a>(2026年10月4日に<wbr>確認)</p>
+    </div>
     <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>ここが<wbr>ポイントだよ。<wbr>「雇用保険に<wbr>入っていた<wbr>期間」</p></div>
   </section>
 
@@ -286,6 +314,7 @@
       <span class="bottom-nav__label">メニュー</span>
     </a></nav>
 <script src="../../js/reveal.js?v=v2026.0728.1616" defer></script>
+<script src="../../js/kyufu-check.js?v=1" defer></script>
 <script src="../../js/search-fab.js?v=v2026.0728.1616" defer></script>
 
 </body>
