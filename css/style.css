@@ -5498,3 +5498,13 @@ a.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(48,74
 
 /* モヤン(白い雲)の輪郭: 白い背景でも見えるように、淡いブルーの影 */
 img[src*="moyan"]{filter:drop-shadow(0 0 1.2px rgba(96,156,214,.6)) drop-shadow(0 1px 3px rgba(96,156,214,.22))}
+
+/* トップページだけ: フッターはベージュ。丘の上は芝生の色でつなぐ(上のセクションが緑のため) */
+body.is-home footer.site-footer{background:#f5f2eb}
+body.is-home .picnic-meadow{background:#eef4dd}
+body.is-home .picnic-meadow .picnic-meadow__wave path{fill:#f5f2eb}
+/* 丘の上のキャラクター: ベージュの丘(トップ)はモヤン、グリーンの丘(ほかのページ)はサニー先生 */
+body.is-home .picnic-meadow .pm-sunny{display:none}
+body.is-home .picnic-meadow .pm-moyan{display:block;left:50%;transform:translateX(-50%);width:72px}
+body:not(.is-home) .picnic-meadow .pm-moyan{display:none}
+body:not(.is-home) .picnic-meadow .pm-sunny{left:50%;transform:translateX(-50%)}
