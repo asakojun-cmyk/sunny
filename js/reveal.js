@@ -30,6 +30,22 @@
   );
 })();
 
+/* data-ev="名前" のついたリンクやボタンが押されたら、その名前でGA4に記録する */
+(function () {
+  "use strict";
+  document.addEventListener(
+    "click",
+    function (e) {
+      var el = e.target && e.target.closest ? e.target.closest("[data-ev]") : null;
+      if (!el || typeof window.gtag !== "function") return;
+      window.gtag("event", el.getAttribute("data-ev"), {
+        link_text: (el.textContent || "").replace(/\s+/g, "").slice(0, 40)
+      });
+    },
+    true
+  );
+})();
+
 /* スクロールで要素がふわっと現れる演出(reduced-motion 設定時は無効) */
 (function () {
   "use strict";
