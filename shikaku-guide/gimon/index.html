@@ -40,7 +40,7 @@
 .kwbox{background:#fff;border-radius:24px;padding:20px 18px 18px;margin:22px 0;box-shadow:0 4px 0 #ece0c4}
 .kwbox h2{margin:0 0 4px;font-size:1.2rem}
 .kwfind__label{display:block;font-weight:700;font-size:.95rem;margin:14px 0 6px}
-.kwfind input,.kwfind select{width:100%;box-sizing:border-box;font:inherit;font-size:1.05rem;padding:13px 14px;border:2px solid #cfe2b4;border-radius:14px;background:#fbfdf6;color:#3e3830}
+.kwfind input,.kwfind select{width:100%;box-sizing:border-box;font:inherit;font-size:1rem;text-overflow:ellipsis;padding:13px 14px;border:2px solid #cfe2b4;border-radius:14px;background:#fbfdf6;color:#3e3830}
 .kwfind input:focus,.kwfind select:focus{outline:3px solid #f0c95a;border-color:#6ea050}
 .kwfind__count{margin:12px 0 0 !important;font-weight:700;color:#5f913c;min-height:1.4em}
 .gimon-none{margin:18px 0}
@@ -195,8 +195,8 @@ mark.mk{background:linear-gradient(transparent 58%,#ffe58a 58%);color:inherit;fo
       <label class="kwfind__label" for="pw">いまの<wbr>働き方</label>
       <select id="pw">
         <option value="">えらばない</option>
-        <option value="emp">会社員・公務員など(フルタイム)</option>
-        <option value="part">パート・扶養の範囲で働いている</option>
+        <option value="emp">会社員・公務員(フルタイム)</option>
+        <option value="part">パート・扶養内で働いている</option>
         <option value="free">個人事業主・フリーランス</option>
         <option value="none">いまは働いていない・求職中</option>
       </select>
@@ -237,7 +237,7 @@ mark.mk{background:linear-gradient(transparent 58%,#ffe58a 58%);color:inherit;fo
         <option value="k-kasegu">稼げる？(3問)</option>
         <option value="k-naru">どうやってなれる？(4問)</option>
         <option value="k-okane">いくらかかる？(4問)</option>
-        <option value="k-ryoritsu">働きながら・子育てしながら(5問)</option>
+        <option value="k-ryoritsu">仕事・子育てと両立(5問)</option>
         <option value="k-koshu">講習ってどんな感じ？(6問)</option>
         <option value="k-erabu">学校はどう選ぶ？(2問)</option>
         <option value="k-shiken">試験はむずかしい？(6問)</option>
