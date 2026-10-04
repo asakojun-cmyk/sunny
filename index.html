@@ -133,7 +133,29 @@
   .lp-last .lp-cta{margin-top:48px}
 }
 </style>
-<style>.hero-cta__qa{margin-top:10px}.hero-cta__qa a{font-weight:700;color:#4a7430;text-decoration:underline;text-underline-offset:3px}</style>
+<style>
+.hero-ask{width:min(520px,100%);margin:30px auto 0;text-align:left}
+.hero-ask__main{display:flex;align-items:center;gap:14px;padding:16px 16px 16px 14px;border-radius:22px;background:#5f913c;color:#fff;text-decoration:none;box-shadow:0 4px 0 #4a7430}
+.hero-ask__main:hover,.hero-ask__main:focus{background:#547f35}
+.hero-ask__main img{flex:none;width:clamp(44px,13vw,60px);height:auto;background:#fff;border-radius:50%;padding:6px;box-sizing:content-box}
+.hero-ask__txt{flex:1;min-width:0;display:block}
+.hero-ask__txt b{display:block;font-size:clamp(1.1rem,5.4vw,1.3rem);line-height:1.4}
+.hero-ask__txt small{display:block;font-size:clamp(.8rem,3.7vw,.95rem);line-height:1.5;opacity:.95}
+.hero-ask__go{flex:none;font-size:.9rem}
+.hero-ask__list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hero-ask__list a{display:block;height:100%;box-sizing:border-box;padding:12px 6px;border-radius:16px;background:#fff;border:2px solid #d3e0ba;text-align:center;text-decoration:none;color:#29435e}
+.hero-ask__list a:hover,.hero-ask__list a:focus{background:#f1f6e7}
+.hero-ask__list b{display:block;font-size:clamp(.82rem,3.9vw,1rem);line-height:1.45;white-space:nowrap}
+.hero-ask__list small{white-space:nowrap}
+.nb{white-space:nowrap}
+.hero-ask__txt b,.hero-ask__txt small{white-space:nowrap}
+.hero-ask__list small{display:block;margin-top:4px;font-size:.78rem;color:#5d7263;line-height:1.4}
+.hero-ask__list em{font-style:normal;font-size:.68rem;border:1px solid #b9c2b4;border-radius:4px;padding:0 3px;color:#6b7a6c}
+.picnic-hero--note .say.intro{animation:pic-say var(--d) ease both;animation-delay:var(--t)}
+.picnic-hero--note .loop-1{animation-delay:22s}.picnic-hero--note .loop-2{animation-delay:26.8s}.picnic-hero--note .loop-3{animation-delay:31.6s}.picnic-hero--note .loop-4{animation-delay:36.4s}.picnic-hero--note .loop-5{animation-delay:41.2s}.picnic-hero--note .loop-6{animation-delay:46s}
+@media(max-width:640px){.picnic-stage .ps-note,.picnic-stage .ps-ball,.picnic-stage .ps-bag,.picnic-stage .ps-tent,.picnic-stage .ps-bushl,.picnic-stage .ps-bushr{display:none}}
+@media(max-width:640px){.picnic-hero--note .picnic-stage:before{width:165%;bottom:-96px}}
+</style>
 </head>
 <body class="is-home">
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -179,7 +201,7 @@
 
 
 
-<section class="picnic-hero picnic-hero--lockup picnic-hero--note" aria-labelledby="picnic-title">
+<section class="picnic-hero picnic-hero--lockup picnic-hero--note is-done" aria-labelledby="picnic-title">
   <div class="hero-intro" aria-hidden="true">
     <img class="hero-intro__cloud hero-intro__cloud--l" src="./img/parts/01_sky_cloud_left.png" alt="">
     <img class="hero-intro__cloud hero-intro__cloud--r" src="./img/parts/03_sky_cloud_right.png" alt="">
@@ -193,15 +215,14 @@
     <p class="hero-intro__skip">画面の<wbr>どこかを<wbr>押すと、<wbr>はじまりの<wbr>劇を<wbr>とばせるよ</p>
   </div>
   <div class="hero-note">
-    <h1 id="picnic-title" class="step step-2"><span class="picnic-kicker hero-note__hook">＼キャリアコンサルタントが<wbr>気になったら、<wbr>最初に<wbr>読むサイト<wbr>／</span>キャリコンの<wbr>「わからない」を、<br><em>わかった！</em><wbr>にかえる<wbr>学び場</h1>
-    <p class="hero-note__desc step step-2">どんな仕事か、<wbr>いくらかかるか、<wbr>自分に<wbr>向いているか。<wbr>決めたあとの<wbr>試験対策まで、<wbr>ぜんぶ無料で<wbr>そろっています。</p>
+    <h1 id="picnic-title" class="step step-2"><span class="picnic-kicker hero-note__hook">キャリアコンサルタントが<wbr>気になったら</span>キャリコンの<wbr>「わからない」を、<br><em>わかった！</em><wbr>にかえる<wbr>学び場</h1>
     <div class="hero-cta step step-3">
-      <a class="picnic-button" href="#can-title">この<wbr>サイトで<wbr>できること<wbr> ↓</a>
+      <a class="picnic-button" href="./shikaku-guide/gimon/">キャリコンって何？</a>
     </div>
-    <p class="hero-cta__sub step step-3">サイトは<wbr>ぜんぶ<wbr>無料・<wbr>登録不要</p>
-    <p class="hero-cta__sub hero-cta__qa step step-3"><a href="./shikaku-guide/gimon/">動画の<wbr>「資格の<wbr>ギモン」<wbr>くわしい<wbr>答えは<wbr>こちら<wbr> ▶︎</a></p>
+    <p class="hero-cta__sub step step-3">よくある<wbr>質問の<wbr>回答は<wbr>こちら</p>
   </div>
-  <div class="picnic-stage" role="img" aria-label="レモンイエローのサニー先生と、黄色い帽子の雲・モヤンが、草原のピクニックシートで一緒に勉強を始める場面">
+  
+<div class="picnic-stage" role="img" aria-label="レモンイエローのサニー先生と、黄色い帽子の雲・モヤンが、草原のピクニックシートで一緒に勉強を始める場面">
     <img class="ps ps-cloud1" src="./img/parts/01_sky_cloud_left.png" alt="">
     <img class="ps ps-cloud2" src="./img/parts/03_sky_cloud_right.png" alt="">
     <img class="ps ps-wagon" src="./img/parts/04_book_wagon.png" alt="">
@@ -223,6 +244,11 @@
     <img class="ps ps-flowerr" src="./img/parts/25_flowers_right_group.png" alt="">
     <img class="ps ps-bushr" src="./img/parts/26_bush_lower_right.png" alt="">
     <div class="stage-balloons" aria-hidden="true">
+      <p class="say say--moyan intro" style="--t:.8s;--d:3.6s"><b>モヤン</b><wbr>仕事、<wbr>辞めたいなぁ。<wbr>このままで<wbr>いいのかなぁ？</p>
+      <p class="say say--sunny intro" style="--t:4.6s;--d:3s"><b>サニー先生</b><wbr>どうしたの？<wbr>　も<wbr>やん？</p>
+      <p class="say say--moyan intro" style="--t:7.8s;--d:4.6s"><b>モヤン</b><wbr>仕事に<wbr>不満は<wbr>ないんだけど、<wbr>何だか<wbr>このままで<wbr>いいのかなって<wbr>悩み始めたの……。</p>
+      <p class="say say--sunny intro" style="--t:12.6s;--d:5s"><b>サニー先生</b><wbr>そうなんだね。<wbr>キャリアコンサルタントに<wbr>相談してみた？</p>
+      <p class="say say--moyan intro" style="--t:17.8s;--d:3.4s"><b>モヤン</b><wbr>キャリアコンサルタント？<wbr>　何それ？</p>
       <p class="say say--moyan say-m1"><b>モヤン</b><wbr>キャリアコンサルタントって、<wbr>どんな<wbr>仕事なの？</p>
       <p class="say say--moyan say-m2"><b>モヤン</b><wbr>わたしにも、<wbr>できるのかなぁ……。</p>
       <p class="say say--sunny say-s1"><b>サニー先生</b><wbr>大丈夫。</p>
@@ -248,7 +274,7 @@
     <div class="picnic-map__head can-head"><p class="picnic-kicker">BEFORE YOU START</p><h3 class="can-group">これから資格を考えている方</h3></div>
     <ul class="can-list">
       <li><a class="can-card" href="#lp-title"><img src="./img/parts/14_tree_center.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>キャリアコンサルタントってなに？</b><small>どんな仕事かを1分で</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./shikaku-guide/gimon/"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>よくある質問40問で調べる</b><small>稼げる？費用は？やめとけは本当？あなたの立場に合わせて答えます</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
+      <li><a class="can-card" href="./shikaku-guide/gimon/"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>キャリコンって何？</b><small>よくある質問の回答はこちら</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
       <li><a class="can-card" href="./shikaku-guide/"><img src="./img/parts/18_bulletin_board.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>資格のとり方を知る</b><small>養成講習→試験→登録の流れと費用</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
       <li><a class="can-card" href="./schools/compare/"><img src="./img/parts/19_market_stall.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>養成学校を比較する<em class="can-card__pr">PR</em></b><small>主要6校を24項目で比べました</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
       <li><a class="can-card can-card--cta" href="./schools/chiiki-renkei-platform/"><img src="./img/parts/06_sun_character.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>無料説明会はこちら<em class="can-card__pr">PR</em></b><small>わたしが受講した講座の説明会。申し込まなくても参加できます</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
