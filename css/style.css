@@ -5508,3 +5508,10 @@ body.is-home .picnic-meadow .pm-sunny{display:none}
 body.is-home .picnic-meadow .pm-moyan{display:block;left:50%;transform:translateX(-50%);width:72px}
 body:not(.is-home) .picnic-meadow .pm-moyan{display:none}
 body:not(.is-home) .picnic-meadow .pm-sunny{left:50%;transform:translateX(-50%)}
+
+/* 丘の上: キャラクターを少し下げ、左右に小さなイラストを寄せて並べる */
+.picnic-meadow .pm-sunny,.picnic-meadow .pm-moyan{bottom:-6px}
+.picnic-meadow .pm-flowerl{left:calc(50% - 150px);right:auto;width:50px;bottom:-2px}
+.picnic-meadow .pm-bush{left:calc(50% - 96px);right:auto;width:42px;bottom:-4px}
+.picnic-meadow .pm-flowerr{left:calc(50% + 58px);right:auto;width:50px;bottom:-2px}
+.picnic-meadow .pm-wagon{left:calc(50% + 122px);right:auto;width:80px;bottom:0}
