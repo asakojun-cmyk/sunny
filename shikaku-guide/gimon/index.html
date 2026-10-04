@@ -85,8 +85,9 @@
 .pdrop[open] summary{border-color:#6ea050;border-radius:14px 14px 0 0}
 .pdrop__panel{border:2px solid #6ea050;border-top:0;border-radius:0 0 14px 14px;background:#fff;padding:6px 14px 14px}
 label.pcheck{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px dashed #e3dcc6;font-size:1.02rem;cursor:pointer}
-.pgo{margin-top:20px;width:100%;font:inherit;font-size:1.08rem;font-weight:700;padding:15px;border:0;border-radius:999px;background:#e88a2a;color:#fff;cursor:pointer;box-shadow:0 4px 0 #c96f17}
-.pgo:active{transform:translateY(2px);box-shadow:0 2px 0 #c96f17}
+.pgo{margin-top:20px;width:100%;font:inherit;font-size:1.05rem;font-weight:700;padding:14px;border:2px solid #f0cf73;border-radius:999px;background:#fff3c9;color:#5a4a1a;cursor:pointer;box-shadow:0 3px 0 #ecd9a0}
+.pgo:hover,.pgo:focus{background:#ffecaa}
+.pgo:active{transform:translateY(2px);box-shadow:0 1px 0 #ecd9a0}
 .pmsg{margin:12px 0 0 !important;min-height:1.5em;font-weight:700;color:#7a7266;text-align:center}
 .pmsg.is-ok{color:#5f913c}
 .pdrop__ok{background:#fff !important;color:#5f913c !important;border:2px solid #6ea050 !important;margin-top:12px;width:100%;font:inherit;font-weight:700;padding:11px;border:0;border-radius:999px;background:#6ea050;color:#fff;cursor:pointer}
@@ -212,7 +213,7 @@ mark.mk{background:linear-gradient(transparent 58%,#ffe58a 58%);color:inherit;fo
         </div>
       </details>
     </div>
-    <button type="button" class="pgo" id="pgo">この内容で決める</button>
+    <button type="button" class="pgo" id="pgo">この内容で調べる</button>
     <p class="pmsg" id="pmsg" aria-live="polite"></p>
     <div class="prec" id="prec" hidden>
       <p class="prec__title">あなたに<wbr>おすすめの<wbr>質問</p>
@@ -738,7 +739,7 @@ mark.mk{background:linear-gradient(transparent 58%,#ffe58a 58%);color:inherit;fo
     document.addEventListener('click',function(e){if(pd&&pd.open&&!pd.contains(e.target)){pd.open=false;}});
     var go=document.getElementById('pgo'),msg=document.getElementById('pmsg');
     function label(){var lb=cks.filter(function(c){return c.checked;}).map(function(c){return c.getAttribute('data-l');});var pt=document.getElementById('pdt');if(pt){pt.textContent=lb.length?lb.join('、'):'えらぶ';}}
-    function dirty(){label();if(msg){msg.textContent='「この内容で決める」をおしてね。';msg.className='pmsg';}}
+    function dirty(){label();if(msg){msg.textContent='「この内容で調べる」をおしてね。';msg.className='pmsg';}}
     pw.addEventListener('change',dirty);cks.forEach(function(c){c.addEventListener('change',dirty);});
     if(go){go.addEventListener('click',function(){if(pd){pd.open=false;}apply();var n=sel().length;msg.className='pmsg is-ok';msg.textContent=n?'✓ あなた向けの表示にしました。':'✓ えらばずに読みます。全部の答えが出ます。';if(n){box.scrollIntoView({behavior:'smooth',block:'nearest'});}});}
     apply();if(sel().length&&msg){msg.className='pmsg is-ok';msg.textContent='✓ 前にえらんだ内容で表示しています。';}
