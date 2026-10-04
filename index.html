@@ -132,6 +132,16 @@
   .lp-last .lp-after__stat span{font-size:11px}
   .lp-last .lp-cta{margin-top:48px}
 }
+.lp-bridge{max-width:560px;margin:28px auto 0}
+.lp-last .lp-bridge{margin:0 auto 18px}
+.lp-last .lp-proof{margin-top:40px}
+.hero-two{display:flex;flex-direction:column;align-items:center;gap:16px}
+.hero-two__col{text-align:center}
+.hero-two__mc{margin:0 0 3px;font-size:.84rem;font-weight:700;color:#6f6a58;letter-spacing:.04em;line-height:1.4}
+.hero-two__mc:before{content:"＼ "}
+.hero-two__mc:after{content:" ／"}
+.hero-two .picnic-button{display:inline-block;width:min(280px,82vw);text-align:center;box-sizing:border-box}
+.picnic-hero--note .picnic-button--study{background:#fff;color:#3f6b4a;border:2px solid #3f6b4a;box-shadow:none}
 </style>
 <style>
 .hero-ask{width:min(520px,100%);margin:30px auto 0;text-align:left}
@@ -224,11 +234,18 @@
     <p class="hero-intro__skip">画面の<wbr>どこかを<wbr>押すと、<wbr>はじまりの<wbr>劇を<wbr>とばせるよ</p>
   </div>
   <div class="hero-note">
-    <h1 id="picnic-title" class="step step-2"><span class="picnic-kicker hero-note__hook">キャリアコンサルタントが<wbr>気になったら</span>キャリコンの<wbr>「わからない」を、<br><em>わかった！</em><wbr>にかえる<wbr>学び場</h1>
-    <div class="hero-cta step step-3">
-      <a class="picnic-button" href="./shikaku-guide/gimon/" data-ev="top_hero_qa">キャリコンって何？</a>
+    <h1 id="picnic-title" class="step step-2"><span class="picnic-kicker hero-note__hook">キャリアコンサルタントが<wbr>気になったら</span>キャリコンの<wbr>「わからない」を<br>「<em>わかった！</em>」に<wbr>かえる<wbr>場所</h1>
+    <div class="hero-two step step-3">
+      <div class="hero-two__col">
+        <p class="hero-two__mc">よく<wbr>ある<wbr>質問は<wbr>こちら</p>
+        <a class="picnic-button" href="./shikaku-guide/gimon/" data-ev="top_hero_qa">キャリコンって何？</a>
+      </div>
+      <div class="hero-two__col">
+        <p class="hero-two__mc">勉強中・試験前の<wbr>方へ</p>
+        <a class="picnic-button picnic-button--study" href="./exam/" data-ev="top_hero_exam">試験対策は<wbr>こちら</a>
+      </div>
     </div>
-    <p class="hero-cta__sub step step-3">よくある<wbr>質問の<wbr>回答は<wbr>こちら</p>
+    </div>
   </div>
   
 <div class="picnic-stage" role="img" aria-label="レモンイエローのサニー先生と、黄色い帽子の雲・モヤンが、草原のピクニックシートで一緒に勉強を始める場面">
@@ -259,7 +276,7 @@
       <p class="say say--sunny intro" style="--t:12.6s;--d:5s"><b>サニー先生</b><wbr>そうなんだね。<wbr>キャリアコンサルタントに<wbr>相談してみた？</p>
       <p class="say say--moyan intro" style="--t:17.8s;--d:3.4s"><b>モヤン</b><wbr>キャリアコンサルタント？<wbr>　何それ？</p>
       <p class="say say--moyan say-m1"><b>モヤン</b><wbr>キャリアコンサルタントって、<wbr>どんな<wbr>仕事なの？</p>
-      <p class="say say--moyan say-m2"><b>モヤン</b><wbr>わたしにも、<wbr>できるのかなぁ……。</p>
+      <p class="say say--moyan say-m2"><b>モヤン</b><wbr>ボクにも、<wbr>できるのかなぁ……。</p>
       <p class="say say--sunny say-s1"><b>サニー先生</b><wbr>大丈夫。</p>
       <p class="say say--sunny say-s2"><b>サニー先生</b><wbr>知らないまま、<wbr>来ていいよ。</p>
       <p class="say say--sunny say-s3"><b>サニー先生</b><wbr>いいところも、<wbr>よくない<wbr>ところも、<wbr>正直に<wbr>話すね。</p>
@@ -285,6 +302,10 @@
       <p>中心は<wbr><strong>面談</strong>です。<wbr>1回45〜90分ほど<wbr>(長さは<wbr>相談先に<wbr>よって<wbr>違います)、<wbr>相手の<wbr>話を<wbr>じっくり<wbr>聴きます。<wbr>「こうした<wbr>方が<wbr>いいよ」と<wbr>アドバイスを<wbr>する<wbr>仕事ではなく、<wbr>相談者の<wbr>中に<wbr>ある<wbr>答えを<wbr>一緒に<wbr>見つけていく<wbr>お仕事です。</p>
       <p class="lp-intro__link lp-intro__link--one"><a href="./careers/">キャリコンの仕事内容とやらないことは？ <span class="arw" aria-hidden="true">▶︎</span></a></p>
     </div>
+      <div class="lp-bridge">
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>相談にのってくれる<wbr>人なんだね。<wbr>ボクも、<wbr>だれかの<wbr>力に<wbr>なれるかな……？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>気に<wbr>なったら、<wbr>ひと<wbr>つずつ<wbr>見ていこう。<wbr>いいところも、<wbr>よくない<wbr>ところも、<wbr>正直に<wbr>話すね。</p></div>
+    </div>
   </div>
 </section>
 
@@ -300,71 +321,68 @@
       <li class="lp-river__item">
         <p class="lp-river__no">1</p>
         <div class="lp-river__body">
-          <h3>わたしにも、<wbr>できる？</h3>
-          <p>受験資格に、<wbr>年齢の<wbr>条件は<wbr>ありません。<wbr>登録している<wbr>人は<strong class="mk">50代が<wbr>いちばん<wbr>多く</strong>、<wbr>受験する<wbr>人の<wbr>約9割は、<wbr>養成講習から<wbr>始めています。<wbr>相談の<wbr>仕事の<wbr>経験が<wbr>なくても<wbr>大丈夫です。</p>
-          <p class="lp-river__src">出典: 労働政策研究・研修機構の<wbr>2022年の<wbr>調査、<wbr>厚生労働省<wbr>「第31回試験結果の概要」</p>
-          <p class="lp-river__link"><a data-ev="top_step_1" href="./shikaku-guide/gimon/#k-muki">向いている<wbr>人・年齢の<wbr>ギモンを<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        </div>
-      </li>
-
-      <li class="lp-river__item">
-        <p class="lp-river__no">2</p>
-        <div class="lp-river__body">
-          <h3>どうやって<wbr>取るの？</h3>
-          <p><strong>養成講習(150時間)→ 国家試験 → 登録</strong>の<wbr>3ステップです。<wbr>働きながら、<wbr>子育てしながらでも<wbr>取れるのかも<wbr>まとめました。</p>
-          <p class="lp-river__link"><a data-ev="top_step_2" href="./shikaku-guide/">資格まる<wbr>わかりガイド <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        </div>
-      </li>
-
-      <li class="lp-river__item lp-river__item--money">
-        <p class="lp-river__no">3</p>
-        <div class="lp-river__body">
-          <h3>お金は、<wbr>いくらかかる？</h3>
-          <p>給付金を<wbr>使えば、<strong class="mk">297,000円の<wbr>講座が<wbr>実質59,400円</strong>まで<wbr>下がることもあります。<wbr>使わない<wbr>場合の<wbr>初期費用は<wbr>35〜50万円前後です。<wbr>対象に<wbr>なるかどうかは、<wbr>人に<wbr>よって<wbr>違います。</p>
-          <p class="lp-river__link"><a data-ev="top_step_3" href="./school-guides/kyufukin/">給付金を<wbr>使うと<wbr>実質いくら？ <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>取ったら<wbr>どんな<wbr>働き方が<wbr>できる？</h3>
+          <p>働く<wbr>場所は、<wbr>おもに<wbr>5つです。<wbr>企業の<wbr>中、<wbr>学校、<wbr>公的機関(ハローワークなど)、<wbr>人材会社、<wbr>独立・副業。<wbr>2022年の<wbr>調査では、<strong class="mk">企業の<wbr>中で<wbr>活動している<wbr>人が<wbr>41.7%で<wbr>いちばん<wbr>多い</strong>結果でした。</p>
+          <p class="lp-river__src">出典: 労働政策研究・研修機構<wbr>「第2回キャリアコンサルタント登録者の<wbr>活動状況等に<wbr>関する<wbr>調査」<wbr>(2022年)</p>
+          <p class="lp-river__link"><a data-ev="top_step_1" href="./shikaku-guide/gimon/#k-kasegu">働き方・収入の<wbr>ギモンを<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item lp-river__item--caution">
-        <p class="lp-river__no">4</p>
+        <p class="lp-river__no">2</p>
         <div class="lp-river__body">
-          <h3>正直な話。<wbr>「最悪の国家資格」って<wbr>本当？</h3>
+          <h3>正直な<wbr>話<br>「最悪の<wbr>国家資格」って<wbr>本当？</h3>
           <p>ネットで<wbr>そう<wbr>言われる<wbr>理由を<wbr>調べてみたら、<strong>3つとも<wbr>事実</strong>でした。<wbr>独占業務が<wbr>ない<wbr>こと、<wbr>費用が<wbr>かかる<wbr>こと、<wbr>収入の<wbr>実態です。<wbr>やめた<wbr>ほうが<wbr>いい<wbr>人も<wbr>います。<wbr>30秒の<wbr>診断も<wbr>あります。</p>
-          <p class="lp-river__link"><a data-ev="top_step_4" href="./school-guides/merit-demerit/">やめた<wbr>ほうが<wbr>いい人・向いている<wbr>人 <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <p class="lp-river__link"><a data-ev="top_step_2" href="./school-guides/merit-demerit/">やめた<wbr>ほうが<wbr>いい人・向いている<wbr>人 <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item">
+        <p class="lp-river__no">3</p>
+        <div class="lp-river__body">
+          <h3>わたしにも<wbr>できる？</h3>
+          <p>受験資格に、<wbr>年齢の<wbr>条件は<wbr>ありません。<wbr>登録している<wbr>人は<strong class="mk">50代が<wbr>いちばん<wbr>多く</strong>、<wbr>受験する<wbr>人の<wbr>約9割は、<wbr>養成講習から<wbr>始めています。<wbr>相談の<wbr>仕事の<wbr>経験が<wbr>なくても<wbr>大丈夫です。</p>
+          <p class="lp-river__src">出典: 労働政策研究・研修機構の<wbr>2022年の<wbr>調査、<wbr>厚生労働省<wbr>「第31回試験結果の概要」</p>
+          <p class="lp-river__link"><a data-ev="top_step_3" href="./shikaku-guide/gimon/#k-muki">向いている<wbr>人・年齢の<wbr>ギモンを<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
+        </div>
+      </li>
+
+      <li class="lp-river__item">
+        <p class="lp-river__no">4</p>
+        <div class="lp-river__body">
+          <h3>どうやって<wbr>取るの？</h3>
+          <p><strong>養成講習(150時間)→ 国家試験 → 登録</strong>の<wbr>3ステップです。<wbr>働きながら、<wbr>子育てしながらでも<wbr>取れるのかも<wbr>まとめました。</p>
+          <p class="lp-river__link"><a data-ev="top_step_4" href="./shikaku-guide/">資格まる<wbr>わかりガイド <span class="arw" aria-hidden="true">▶︎</span></a></p>
+        </div>
+      </li>
+
+      <li class="lp-river__item lp-river__item--money">
         <p class="lp-river__no">5</p>
         <div class="lp-river__body">
-          <h3>講習って、<wbr>どんな<wbr>感じ？</h3>
-          <p>わたしが<wbr>受けた<wbr>講習の、<wbr>1日の<wbr>流れ、<wbr>ロールプレイ、<wbr>課題の<wbr>量を、<wbr>そのまま<wbr>書きました。<strong>子育てとの<wbr>両立で<wbr>困った<wbr>こと</strong>も、<wbr>かく<wbr>さずに<wbr>載せています。</p>
-          <p class="lp-river__link"><a data-ev="top_step_5" href="./school-reviews/chiiki-renkei-platform/">受講体験記を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>お金は<wbr>いくらかかる？</h3>
+          <p>給付金を<wbr>使えば、<strong class="mk">297,000円の<wbr>講座が<wbr>実質59,400円</strong>まで<wbr>下がることもあります。<wbr>使わない<wbr>場合の<wbr>初期費用は<wbr>35〜50万円前後です。<wbr>対象に<wbr>なるかどうかは、<wbr>人に<wbr>よって<wbr>違います。</p>
+          <p class="lp-river__link"><a data-ev="top_step_5" href="./school-guides/kyufukin/">給付金を<wbr>使うと<wbr>実質いくら？ <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item">
         <p class="lp-river__no">6</p>
         <div class="lp-river__body">
-          <h3>自分に<wbr>合う<wbr>養成学校を<wbr>調べよう</h3>
-          <p>どの<wbr>学校で<wbr>学んでも、<wbr>受験資格は<wbr>同じように<wbr>得られます。<wbr>違うのは<strong>通いやすさ・<wbr>費用・サポート</strong>です。<wbr>主要6校を、<wbr>公式サイトで<wbr>確認した<wbr>情報だけで<wbr>比べました。</p>
-          <p class="lp-river__link"><a data-ev="top_step_6" href="./schools/compare/">養成学校を<wbr>比較する <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>講習って<wbr>どんな<wbr>感じ？</h3>
+          <p>わたしが<wbr>受けた<wbr>講習の、<wbr>1日の<wbr>流れ、<wbr>ロールプレイ、<wbr>課題の<wbr>量を、<wbr>そのまま<wbr>書きました。<strong>子育てとの<wbr>両立で<wbr>困った<wbr>こと</strong>も、<wbr>かく<wbr>さずに<wbr>載せています。</p>
+          <p class="lp-river__link"><a data-ev="top_step_6" href="./school-reviews/chiiki-renkei-platform/">受講体験記を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
+
     </ol>
   </div>
 </section>
 
 <section class="section lp-last" aria-label="このサイトについて、最後にひとつだけ">
   <div class="container container--article">
-    <div class="lp-proof">
-      <p class="lp-proof__lead">最後に<wbr>ひとつだけ。<br><strong>この<wbr>サイトでは、<wbr>試験で<wbr>学ぶ内容を<wbr>すべて<wbr>無料で<wbr>公開しています。</strong></p>
-      <div class="lp-after__stats">
-        <p class="lp-after__stat"><strong>162<i>の</i></strong><span>ことば図鑑</span></p>
-        <p class="lp-after__stat"><strong>66<i>人の</i></strong><span>理論家</span></p>
-        <p class="lp-after__stat"><strong>1152<i>の</i></strong><span>1問1答</span></p>
-      </div>
-      <p class="lp-proof__note">わたしが<wbr>受講中に<wbr>「分からなかった<wbr>言葉」を、<wbr>そのつど<wbr>調べて<wbr>書きためた<wbr>ものです。<wbr>登録も<wbr>メールアドレスも<wbr>いりません。<strong>そのうえで、<wbr>わたしが<wbr>自分で<wbr>比べて<wbr>選んだ<wbr>講座を<wbr>紹介します。</strong></p>
+    <div class="lp-bridge">
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>いろいろ<wbr>分かってきたよ。<wbr>でも、<wbr>まだ<wbr>決められないなぁ……。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>決めなくて<wbr>大丈夫。<wbr>まずは、<wbr>話を<wbr>聞くだけで<wbr>いいんだよ。</p></div>
     </div>
     <div class="lp-cta">
       <p class="lp-cta__kicker">まずは</p>
@@ -374,6 +392,15 @@
       <p><a class="button button--primary" href="./schools/chiiki-renkei-platform/" data-ev="top_cta_setsumeikai">わたしが<wbr>受講した<wbr>講座の<wbr>無料説明会を<wbr>見る<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="lp-cta__sub"><a href="./schools/compare/" data-ev="top_cta_compare">ほかの<wbr>学校とも<wbr>比べたい方は<wbr>こちら<wbr>(6校・24項目の<wbr>比較) <span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="lp-cta__note">※ この<wbr>サイトは<wbr>養成学校の<wbr>紹介に<wbr>よる<wbr>収益で<wbr>運営しています。<wbr>紹介リンクを<wbr>含むページには、<wbr>そのつど<wbr>広告である<wbr>旨を<wbr>明記しています。</p>
+    </div>
+    <div class="lp-proof">
+      <p class="lp-proof__lead">この<wbr>サイトに<wbr>ついて、<wbr>ひとつだけ。<br><strong>この<wbr>サイトでは、<wbr>試験で<wbr>学ぶ内容を<wbr>すべて<wbr>無料で<wbr>公開しています。</strong></p>
+      <div class="lp-after__stats">
+        <p class="lp-after__stat"><strong>162<i>の</i></strong><span>ことば図鑑</span></p>
+        <p class="lp-after__stat"><strong>66<i>人の</i></strong><span>理論家</span></p>
+        <p class="lp-after__stat"><strong>1152<i>の</i></strong><span>1問1答</span></p>
+      </div>
+      <p class="lp-proof__note">わたしが<wbr>受講中に<wbr>「分からなかった<wbr>言葉」を、<wbr>そのつど<wbr>調べて<wbr>書きためた<wbr>ものです。<wbr>登録も<wbr>メールアドレスも<wbr>いりません。</p>
     </div>
   </div>
 </section>
