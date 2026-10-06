@@ -764,3 +764,37 @@ h2:has(> .sec-illust){overflow:hidden}
 .article-header .updated-date{justify-content:center}
 @media (max-width:640px){.article-header h1{font-size:23px}}
 .article-header__meta{display:flex;justify-content:center}
+
+/* 枠なしでページになじませる絵(白っぽい背景の絵用) */
+.exam-figure--plain{border:none;border-radius:0;background:none;overflow:visible}
+
+/* トップ STEP: よかったことの箇条書き */
+.lp-river__good{list-style:none;margin:0 0 1.6em;padding:0;display:grid;gap:12px}
+.lp-river__good li{position:relative;margin:0;padding:14px 16px 14px 44px;background:#fffdf6;border:1px solid #efe6cf;border-radius:14px;line-height:1.85}
+.lp-river__good li::before{content:"";position:absolute;left:16px;top:1.25em;width:14px;height:8px;border-left:3px solid #e9785f;border-bottom:3px solid #e9785f;transform:rotate(-45deg);border-radius:1px}
+
+/* 右下にいつも出ている「説明会は無料」の雲のボタン */
+.cta-fab{position:fixed;right:14px;bottom:20px;z-index:45;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .28s ease,transform .28s ease}
+.cta-fab.is-show{opacity:1;transform:none;pointer-events:auto}
+.cta-fab__link{position:relative;display:flex;flex-direction:column;align-items:center;padding:6px 6px 0;border-radius:22px;text-decoration:none;color:#3d4f42;transition:transform .22s ease}
+.cta-fab__sunny{position:absolute;z-index:0;left:42px;top:62px;width:60px;height:60px;object-fit:contain;transform:translate(0,0) rotate(0);transition:transform .38s cubic-bezier(.34,1.56,.64,1)}
+.cta-fab__sign{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:196px;height:145px;padding:36px 16px 0;box-sizing:border-box;background:url("../img/parts/cloud-cta.png?v=2") center / 100% 100% no-repeat;filter:drop-shadow(0 10px 14px rgba(41,67,94,.22)) drop-shadow(0 2px 3px rgba(41,67,94,.14));line-height:1.4;transition:transform .22s ease,filter .22s ease}
+.cta-fab__sign small{font-size:11px;font-weight:700;color:#29435e;letter-spacing:.03em}
+.cta-fab__sign b{font-size:16px;font-weight:700;color:#29435e;letter-spacing:.06em;white-space:nowrap}
+.cta-fab__pr{font-style:normal;font-size:9.5px;font-weight:500;margin-left:5px;padding:0 4px;border:1px solid rgba(41,67,94,.55);border-radius:4px;color:#29435e;background:rgba(255,253,248,.5)}
+.cta-fab__note{position:absolute;z-index:2;left:50%;top:-6px;transform:translate(-50%,-60%);font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#b3543a;white-space:nowrap;text-shadow:0 0 6px #fffdf8,0 0 3px #fffdf8,0 1px 0 #fffdf8,0 -1px 0 #fffdf8;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .22s ease}
+@media (hover:hover){
+  .cta-fab__link:hover{transform:translateY(-4px)}
+  .cta-fab__link:hover .cta-fab__sign{transform:scale(1.04);filter:drop-shadow(0 16px 20px rgba(41,67,94,.26)) drop-shadow(0 3px 4px rgba(41,67,94,.16))}
+  .cta-fab__link:hover .cta-fab__sunny{transform:translate(-34px,-58px) rotate(-12deg)}
+  .cta-fab__link:hover .cta-fab__note{opacity:1;transform:translate(-50%,-100%)}
+}
+.cta-fab__link:focus-visible{outline:3px solid #2f4a63;outline-offset:4px}
+.cta-fab__link:focus-visible .cta-fab__sunny{transform:translate(-34px,-58px) rotate(-12deg)}
+.cta-fab__link:focus-visible .cta-fab__note{opacity:1;transform:translate(-50%,-100%)}
+.cta-fab__link:active .cta-fab__sign{transform:scale(.97);filter:drop-shadow(0 4px 6px rgba(41,67,94,.2))}
+.cta-fab__close{position:absolute;top:22px;right:4px;width:24px;height:24px;border-radius:50%;border:1px solid #e3dccb;background:#fffdf6;color:#6a7686;font-size:14px;line-height:1;cursor:pointer;padding:0;box-shadow:0 2px 6px rgba(48,74,58,.12)}
+.cta-fab__close:hover{color:#2f4a63;border-color:#c9ced6}
+@media (max-width:960px){.cta-fab{right:8px;bottom:calc(70px + env(safe-area-inset-bottom))}}
+@media (max-width:640px){.cta-fab__sunny{width:48px;height:48px;left:34px;top:50px}.cta-fab__sign{width:156px;height:116px;padding:28px 12px 0}.cta-fab__sign b{font-size:13.5px}.cta-fab__sign small{font-size:10px}.cta-fab__close{top:12px;right:2px}}
+@media (prefers-reduced-motion:reduce){.cta-fab,.cta-fab__link,.cta-fab__sign,.cta-fab__note,.cta-fab__sunny{transition:none}}
