@@ -755,3 +755,12 @@ h2:has(> .sec-illust){overflow:hidden}
   .lp-profile__img{width:140px;height:140px}
   .lp-profile__name{text-align:center}
 }
+
+/* 読み物ページ: タイトルまわりをトップページの見出しと同じ中央ぞろえに */
+.article-header{text-align:center}
+.article-header h1{font-size:30px;line-height:1.5;color:var(--picnic-ink)}
+.article-header h1::after{content:"";display:block;width:46px;border-bottom:3px dotted #e9785f;margin:14px auto 0;opacity:.75}
+.article-header__lede{margin-left:auto;margin-right:auto;text-align:center}
+.article-header .updated-date{justify-content:center}
+@media (max-width:640px){.article-header h1{font-size:23px}}
+.article-header__meta{display:flex;justify-content:center}
