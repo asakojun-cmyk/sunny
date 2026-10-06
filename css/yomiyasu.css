@@ -739,3 +739,19 @@ h2:has(> .sec-illust){overflow:hidden}
 .plan-banner{max-width:640px;margin:14px auto;text-align:center}
 .plan-banner a{display:block;padding:12px 16px;border-radius:12px;background:#fff7dd;text-decoration:none;font-weight:700;line-height:1.7}
 .plan-banner b{display:block;font-size:0.8125rem;color:var(--color-terracotta)}
+
+/* トップ: このサイトを書いている人(プロフィール) */
+.lp-profile{padding:72px 0;background:#eaf4fa}
+.lp-profile .picnic-map__head{margin-bottom:32px}
+.lp-profile__card{display:flex;align-items:center;gap:32px;max-width:680px;margin:0 auto;background:#fff;border-radius:24px;padding:32px 36px;box-shadow:0 8px 22px rgba(48,74,58,.07);text-align:left}
+.lp-profile__img{flex:none;width:160px;height:160px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 2px #cfe6f5;object-fit:cover}
+.lp-profile__name{font-weight:700;font-size:1.25rem;margin:0 0 8px}
+.lp-profile__text{margin:0 0 12px;line-height:1.95}
+.lp-profile__link{margin:0}
+.lp-profile__link a{font-weight:700;color:var(--color-terracotta)}
+@media (max-width:640px){
+  .lp-profile{padding:56px 0}
+  .lp-profile__card{flex-direction:column;padding:28px 22px;gap:18px}
+  .lp-profile__img{width:140px;height:140px}
+  .lp-profile__name{text-align:center}
+}
