@@ -808,3 +808,32 @@ h2:has(> .sec-illust){overflow:hidden}
 .container--article .disclosure__list dt::after{content:":"}
 .container--article .disclosure__list dd{display:inline;margin:0 0 0 2px}
 .cta-fab__sign b span{font-size:.72em;margin-left:1px}
+
+/* 用語ページ: 「試験では、こう問われる」(正式な説明の箱の先頭に入れる一文。箱は増やさない) */
+.term-bridge{margin:0 0 16px;padding:0 0 16px;border-bottom:1px dashed #d9d2bf;font-size:.9375rem;line-height:1.85}
+.term-bridge b{display:block;font-size:.8125rem;color:#b3543a;letter-spacing:.04em;margin-bottom:2px}
+/* 用語ページ: 似た言葉を「ひと目でくらべる」表(囲みにせず、細い線だけ) */
+.term-compare{margin:0 0 26px}
+.term-compare__title{margin:0 0 4px;font-size:.8125rem;font-weight:700;color:#4f6b45;letter-spacing:.06em}
+.term-compare table{width:100%;border-collapse:collapse;font-size:.9375rem;line-height:1.75}
+.term-compare th,.term-compare td{padding:11px 10px 11px 0;text-align:left;vertical-align:top;border-bottom:1px solid #e3dccb}
+.term-compare thead th{padding-top:6px;padding-bottom:6px;font-size:.75rem;color:#8a8576;font-weight:500;white-space:nowrap}
+.term-compare tbody th{width:34%;font-weight:700;color:#29435e}
+.term-compare tbody th a{color:#29435e;text-decoration:underline;text-underline-offset:3px}
+.term-compare__here{display:inline-block;margin-left:6px;padding:0 6px;border-radius:999px;background:#ef8064;color:#fff;font-size:.6875rem;font-weight:700;vertical-align:1px;white-space:nowrap}
+@media (max-width:640px){.term-compare tbody th{width:38%}.term-compare table{font-size:.875rem}}
+
+/* 用語・理論家ページの1問1答: 何問か続くので、箱を重ねず、線で区切った一覧にする */
+.term-quiz .quiz-box{background:none;border:0;border-radius:0;padding:20px 0;border-top:1px solid #e3dccb}
+.term-quiz .quiz-box + .quiz-box{margin-top:0}
+.term-quiz .quiz-box:last-of-type{border-bottom:1px solid #e3dccb}
+.quiz-box__no{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:#29435e;color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em;vertical-align:2px}
+.quiz-box.is-ok .quiz-box__no{background:#5d9a53}
+.quiz-box.is-ng .quiz-box__no{background:#ef8064}
+.quiz-box__actions .button.is-correct{background:#eef6e6;border-color:#5d9a53;color:#2f5a2a}
+.quiz-box__actions .button.is-wrong{background:#fdeee9;border-color:#ef8064;color:#b3543a}
+.quiz-box__actions .button:disabled{opacity:1;cursor:default}
+.quiz-score{margin:18px 0 0;font-size:.9375rem;line-height:1.8;color:#3d4f42}
+.quiz-score b{color:#29435e;font-size:1.0625rem;margin-right:4px}
+.quiz-score__retry{margin-left:10px;padding:4px 14px;border-radius:999px;border:2px solid #29435e;background:#fff;color:#29435e;font-weight:700;font-size:.875rem;cursor:pointer}
+.quiz-score__retry:hover{background:#29435e;color:#fff}
