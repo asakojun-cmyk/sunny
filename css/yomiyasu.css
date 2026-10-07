@@ -843,20 +843,28 @@ h2:has(> .sec-illust){overflow:hidden}
 .quiz-saimoku b{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:#eef4dd;color:#4f6b45;font-size:.75rem;letter-spacing:.04em}
 .quiz-saimoku a{margin-left:6px;color:#29435e;white-space:nowrap}
 
-/* 模擬試験への案内カード(1問1答ページなど) */
-.moshi-cta{max-width:640px;margin:8px auto 34px;padding:0 22px 26px;border-radius:24px;background:#fff7dd;border:2px solid #f0dc94;text-align:center;box-shadow:0 10px 24px rgba(48,74,58,.10);overflow:hidden}
-.moshi-cta__days{margin:0 -22px 20px;padding:12px 16px;background:var(--color-green);color:#fff;font-weight:700;font-size:1.0625rem;letter-spacing:.06em;line-height:1.5}
-.moshi-cta__days b{font-size:2.1rem;margin:0 6px;vertical-align:-3px;color:#ffe9a6}
-.moshi-cta__body{display:flex;align-items:center;justify-content:center;gap:16px;text-align:left;margin:0 0 20px}
-.moshi-cta__img{flex:none;width:72px;height:72px;object-fit:contain}
-.moshi-cta__title{margin:0 0 6px;font-weight:700;font-size:1.3125rem;line-height:1.5;color:var(--color-navy,#29435e)}
-.moshi-cta__text{margin:0;line-height:1.85;font-size:0.9375rem}
-.moshi-cta__btn{display:inline-block;min-width:min(100%,320px);padding:17px 30px;font-size:1.1875rem;letter-spacing:.06em;box-shadow:0 6px 0 rgba(176,87,61,.28)}
+/* 模擬試験への案内カード(1問1答ページなど)。ベージュの地に埋もれないよう、白い面+紺の帯+空色の吹き出し */
+.moshi-cta{max-width:640px;margin:8px auto 36px;padding:0 24px 28px;border-radius:24px;background:#fff;border:2px solid #29435e;text-align:center;box-shadow:0 12px 26px rgba(41,67,94,.16);overflow:hidden}
+.moshi-cta__days{margin:0 -24px 22px;padding:13px 16px;background:#29435e;color:#fff;font-weight:700;font-size:1.0625rem;letter-spacing:.06em;line-height:1.5}
+.moshi-cta__days b{font-size:2.2rem;margin:0 6px;vertical-align:-3px;color:#ffd75e}
+.moshi-cta__talk{display:flex;align-items:flex-start;gap:16px;text-align:left;margin:0 0 16px}
+.moshi-cta__who{flex:none;width:76px;text-align:center;font-size:0.75rem;font-weight:700;line-height:1.4;color:#5b6470}
+.moshi-cta__who img{display:block;width:72px;height:72px;margin:0 auto 6px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 0 0 2px #bcd9ec}
+.moshi-cta__bubble{position:relative;flex:1;margin:0;padding:16px 18px;border-radius:18px;background:#e3f1fa;border:1.5px solid #bcd9ec;line-height:1.85;font-size:1rem;color:#2f3440}
+.moshi-cta__bubble::before{content:"";position:absolute;left:-9px;top:28px;width:16px;height:16px;background:#e3f1fa;border-left:1.5px solid #bcd9ec;border-bottom:1.5px solid #bcd9ec;transform:rotate(45deg)}
+.moshi-cta__bubble strong{font-size:1.25rem;color:#29435e;letter-spacing:.04em}
+.moshi-cta__spec{margin:0 0 18px;font-size:0.875rem;font-weight:700;color:#3f6247}
+.moshi-cta__spec span{margin:0 8px;color:#b9c4b4;font-weight:400}
+.moshi-cta__btn{display:inline-block;min-width:min(100%,340px);padding:17px 30px;font-size:1.1875rem;letter-spacing:.06em;box-shadow:0 6px 0 rgba(176,87,61,.30)}
 @media (max-width:640px){
-  .moshi-cta{padding:0 16px 22px;margin-bottom:28px}
-  .moshi-cta__days{margin:0 -16px 16px;font-size:1rem}
-  .moshi-cta__body{gap:12px}
-  .moshi-cta__img{width:56px;height:56px}
-  .moshi-cta__title{font-size:1.125rem}
+  .moshi-cta{padding:0 16px 24px;margin-bottom:30px}
+  .moshi-cta__days{margin:0 -16px 18px;font-size:1rem}
+  .moshi-cta__talk{gap:12px}
+  .moshi-cta__who{width:60px}
+  .moshi-cta__who img{width:56px;height:56px}
+  .moshi-cta__bubble{padding:14px 14px;font-size:0.9375rem}
+  .moshi-cta__bubble::before{top:20px}
+  .moshi-cta__bubble strong{font-size:1.125rem}
+  .moshi-cta__spec span{margin:0 4px}
   .moshi-cta__btn{display:block;padding:16px 18px}
 }
