@@ -837,3 +837,8 @@ h2:has(> .sec-illust){overflow:hidden}
 .quiz-score b{color:#29435e;font-size:1.0625rem;margin-right:4px}
 .quiz-score__retry{margin-left:10px;padding:4px 14px;border-radius:999px;border:2px solid #29435e;background:#fff;color:#29435e;font-weight:700;font-size:.875rem;cursor:pointer}
 .quiz-score__retry:hover{background:#29435e;color:#fff}
+
+/* 用語ページの1問1答: この用語が、公式の出題範囲(細目)のどこにあたるか */
+.quiz-saimoku{margin:0 0 14px;font-size:.8125rem;line-height:1.8;color:#5c6470}
+.quiz-saimoku b{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:#eef4dd;color:#4f6b45;font-size:.75rem;letter-spacing:.04em}
+.quiz-saimoku a{margin-left:6px;color:#29435e;white-space:nowrap}
