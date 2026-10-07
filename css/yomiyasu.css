@@ -798,3 +798,13 @@ h2:has(> .sec-illust){overflow:hidden}
 @media (max-width:960px){.cta-fab{right:8px;bottom:calc(70px + env(safe-area-inset-bottom))}}
 @media (max-width:640px){.cta-fab__sunny{width:48px;height:48px;left:34px;top:38px}.cta-fab__sign{width:156px;height:100px;padding:17px 12px 0}.cta-fab__sign b{font-size:13.5px}.cta-fab__sign small{font-size:10px}.cta-fab__close{top:4px;right:2px}}
 @media (prefers-reduced-motion:reduce){.cta-fab,.cta-fab__link,.cta-fab__sign,.cta-fab__note,.cta-fab__sunny{transition:none}}
+
+/* 記事の冒頭の「広告・提供関係について」: 場所を取らないよう、小さくまとめる */
+.container--article .disclosure{margin:18px 0 22px;padding:12px 16px;border-radius:12px;font-size:12.5px;line-height:1.7;background:transparent}
+.container--article .disclosure__title{font-size:12px;font-weight:700;margin:0 0 4px;color:var(--color-text-subtle)}
+.container--article .disclosure__list{display:flex;flex-wrap:wrap;gap:2px 16px}
+.container--article .disclosure__list > div{display:block;padding:0}
+.container--article .disclosure__list dt{display:inline;width:auto;color:var(--color-text-subtle)}
+.container--article .disclosure__list dt::after{content:":"}
+.container--article .disclosure__list dd{display:inline;margin:0 0 0 2px}
+.cta-fab__sign b span{font-size:.72em;margin-left:1px}
