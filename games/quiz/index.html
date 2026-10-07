@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="../../css/style.css?v=2026.1001">
 <link rel="stylesheet" href="../../css/picnic.css?v=2026.1001">
 <link rel="stylesheet" href="../../css/refine.css?v=2026.1001">
-<link rel="stylesheet" href="../../css/yomiyasu.css?v=2026.1007a">
+<link rel="stylesheet" href="../../css/yomiyasu.css?v=2026.1008m">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"3分ミニゲーム","item":"https://carepicnic.com/games/"},{"@type":"ListItem","position":3,"name":"1問1答ドリル"}]}</script>
 </head>
 <body>
@@ -91,6 +91,17 @@
     <h1 class="section-header__title">キャリコン1問1答ドリル</h1>
     <p class="section-header__lede">用語ページと<wbr>理論家ページの<wbr>1問1答(当サイトオリジナル)を<wbr>集めました。<wbr>○×と<wbr>4択が<wbr>あります。<wbr>「模擬試験」<wbr>「まちがえた<wbr>問題だけ」<wbr>「まだ<wbr>解いていない<wbr>問題」も<wbr>選べるので、<wbr>くり返すほど<wbr>穴が<wbr>なくなります。<wbr>ジャンルで<wbr>「本番形式」を<wbr>選ぶと、<wbr>本番と<wbr>同じ<wbr>「4つの<wbr>文から<wbr>適切・不適切を<wbr>選ぶ」<wbr>問題に<wbr>挑戦できます。<wbr>すきま時間に、<wbr>テンポよく。<wbr>まちが<wbr>えた<wbr>問題は<wbr>解説から<wbr>そのまま<wbr>ページへ<wbr>飛べます。</p>
   </header>
+  <aside class="moshi-cta" aria-label="模擬試験のご案内">
+    <p class="moshi-cta__days" data-exam-countdown>第33回の<wbr>試験まで、<wbr>あと<b data-exam-days>24</b>日！</p>
+    <div class="moshi-cta__body">
+      <img class="moshi-cta__img" src="../../img/parts/10_yellow_pencil.png" alt="" width="72" height="72" loading="lazy">
+      <div>
+        <p class="moshi-cta__title">ラストスパートは、<wbr>本番と<wbr>同じ形で</p>
+        <p class="moshi-cta__text">四肢択一の<wbr>50問を、<wbr>100分で。<wbr>無料・<wbr>登録なしで、<wbr>自動採点と<wbr>全問の<wbr>解説が<wbr>つきます。</p>
+      </div>
+    </div>
+    <a class="button button--primary moshi-cta__btn" href="../../exam-guide/moshi/">模擬試験に<wbr>挑戦する <span class="arw" aria-hidden="true">▶︎</span></a>
+  </aside>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
       <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
@@ -121,8 +132,6 @@
     <p class="quiz-drill__zero" data-quiz-zero hidden></p>
     <p class="quiz-drill__or">または</p>
     <button type="button" class="button button--secondary" data-quiz-random>おまかせランダム10問(ジャンル・時間不問)</button>
-    <p class="quiz-drill__or">本番の<wbr>形で、<wbr>通して<wbr>解くなら</p>
-    <a class="button button--secondary" href="../../exam-guide/moshi/">模擬試験に<wbr>挑戦する(50問・<wbr>100分・無料)</a>
   </div>
   <div class="quiz-drill quiz-drill--stage" data-quiz-drill hidden>
     <div class="quiz-drill__card" data-quiz-card hidden>
@@ -166,6 +175,7 @@
   </nav>
 </div>
 
+<script src="../../js/plan-check.js?v=2026.1008" defer></script>
 <script src="../../js/quiz-drill.js?v=2026.1002f" defer></script>
 </main>
 
