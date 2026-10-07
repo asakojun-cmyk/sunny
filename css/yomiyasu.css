@@ -845,8 +845,8 @@ h2:has(> .sec-illust){overflow:hidden}
 
 /* 模擬試験への案内(1問1答ページなど)。箱で囲まず、日数・ちゃんの吹き出し・ボタンだけを並べる */
 .moshi-cta{max-width:600px;margin:4px auto 40px;text-align:center}
-.moshi-cta__days{margin:0 0 16px;font-weight:700;font-size:1.125rem;letter-spacing:.06em;line-height:1.5;color:#29435e}
-.moshi-cta__days b{font-size:2.4rem;margin:0 6px;vertical-align:-4px;color:#ef8064}
+.moshi-cta__days{margin:0 0 18px;font-size:1.1875rem;letter-spacing:.04em;line-height:1.9}
+.moshi-cta__days b{font-size:1.5em;margin:0 4px;vertical-align:-2px}
 .moshi-cta__talk{display:flex;align-items:flex-start;gap:16px;text-align:left;margin:0 0 14px}
 .moshi-cta__who{flex:none;width:76px;text-align:center;font-size:0.75rem;font-weight:700;line-height:1.4;color:#5b6470}
 .moshi-cta__who img{display:block;width:72px;height:72px;margin:0 auto 6px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 0 0 2px #bcd9ec}
