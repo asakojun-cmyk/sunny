@@ -35,6 +35,7 @@
 <link rel="stylesheet" href="./css/picnic.css?v=2026.1001">
 <link rel="stylesheet" href="./css/refine.css?v=2026.1001">
 <link rel="stylesheet" href="./css/yomiyasu.css?v=2026.1007a">
+<link rel="stylesheet" href="./css/award.css?v=2026.1009">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"キャリコン学びピクニック","alternateName":"SUNNY & MOYAN CAREER PICNIC","url":"https://carepicnic.com","description":"キャリアコンサルタント試験の「ことば」から学べる試験対策サイト。むずかしい専門用語を、暮らしの中の身近なたとえと、試験に必要な正式な説明の両方から学べます。"}</script>
 <style id="top-2026-10">
 .hero-note__desc{margin:.6em auto 1.1em;max-width:30em;font-size:1rem;line-height:1.8;color:#3b342c}
@@ -414,24 +415,45 @@
       <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>いろいろ<wbr>わかってきたよ。<wbr>でも、<wbr>まだ<wbr>決められないなぁ……。</p></div>
       <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>決めなくて<wbr>大丈夫。<wbr>まずは、<wbr>無料の<wbr>説明会で<wbr>話を<wbr>聞いてみたら？</p></div>
     </div>
-    <div class="lp-cta">
-      <p class="lp-cta__kicker">まずは</p>
-      <h3 class="lp-cta__title">話を聞いてみよう！</h3>
-      <p class="lp-cta__body">いきなり申し込む<wbr>必要は<wbr>ありません。<wbr>ほとんどの<wbr>学校が<strong>無料の<wbr>説明会・<wbr>質問会</strong>を<wbr>開いていて、<strong class="mk">申し込むと<wbr>決めていなくても<wbr>参加できます</strong>。<wbr>ここまで<wbr>読んで<wbr>残った<wbr>疑問は、<wbr>その<wbr>場で<wbr>聞いてみるのが<wbr>いちばん<wbr>早いです。</p>
-      <p class="lp-cta__body lp-cta__body--me">運営者が<wbr>受講した<wbr>講座の<wbr>説明会は、<wbr><strong>約60分・無料・Zoom</strong><wbr>で、<wbr>自宅から<wbr>参加できます<wbr>(カメラは<wbr>原則ON)。<wbr>フォームで<wbr>日時を<wbr>選ぶと、<wbr>参加用の<wbr>URLが<wbr>メールで<wbr>届きます。<wbr>運営者の<wbr>ときは、<wbr>説明会の<wbr>あとの<wbr>勧誘は<wbr>ありませんでした。</p>
-      <p class="lp-cta__body lp-cta__body--me">運営者が<wbr>実際に<wbr>受講したのは、<strong>一般社団法人<wbr>地域連携プラットフォーム</strong>です。<wbr>説明会から<wbr>修了まで、<wbr>すべて<wbr>オンラインなので、<wbr>子育てを<wbr>しながらでも<wbr>最後まで<wbr>続けられました。<wbr>まずは<wbr>ここの<wbr>説明会を<wbr>のぞいてみるのが<wbr>おすすめです。</p>
-            <p class="lp-cta__body lp-cta__body--me">運営者が<wbr>参加した<wbr>説明会は、<wbr>3人の<wbr>少人数でした。<wbr>声を<wbr>出して<wbr>質問できて、<wbr>聞きにくい<wbr>お金の<wbr>ことにも<wbr>答えて<wbr>もらえました。<a href="./schools/chiiki-renkei-platform/#kai" data-ev="top_cta_kai">説明会の<wbr>様子を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
-      <p><a class="button button--primary" href="./schools/chiiki-renkei-platform/" data-ev="top_cta_setsumeikai">運営者が<wbr>受講した<wbr>講座の<wbr>無料説明会を<wbr>見る<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-      <p class="lp-cta__sub"><a href="./schools/compare/" data-ev="top_cta_compare">ほかの<wbr>学校とも<wbr>比べたい方は<wbr>こちら<wbr>(6校・24項目の<wbr>比較) <span class="arw" aria-hidden="true">▶︎</span></a></p>
-      <p class="lp-cta__note">※ この<wbr>サイトは<wbr>養成学校の<wbr>紹介に<wbr>よる<wbr>収益で<wbr>運営しています。<wbr>紹介リンクを<wbr>含むページには、<wbr>そのつど<wbr>広告である<wbr>旨を<wbr>明記しています。</p>
+    <div class="lp-cta invite" id="setsumeikai">
+      <div class="invite__head">
+        <img class="invite__chara invite__chara--sunny" src="./img/parts/06_sun_character.png" alt="" width="88" height="79" loading="lazy">
+        <div class="invite__titles">
+          <p class="lp-cta__kicker">まずは</p>
+          <h3 class="lp-cta__title">話を<wbr>聞いてみよう！</h3>
+        </div>
+        <img class="invite__chara invite__chara--moyan" src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="88" height="82" loading="lazy">
+      </div>
+      <p class="lp-cta__body invite__lead">いきなり申し込む<wbr>必要は<wbr>ありません。<wbr>ほとんどの<wbr>学校が<strong>無料の<wbr>説明会・<wbr>質問会</strong>を<wbr>開いていて、<strong class="mk">申し込むと<wbr>決めていなくても<wbr>参加できます</strong>。<wbr>ここまで<wbr>読んで<wbr>残った<wbr>疑問は、<wbr>その<wbr>場で<wbr>聞いてみるのが<wbr>いちばん<wbr>早いです。</p>
+      <div class="invite__ticket">
+        <div class="invite__main">
+          <p class="invite__label">運営者が<wbr>実際に<wbr>受講した<wbr>講座</p>
+          <p class="invite__school">一般社団法人<wbr><span class="nb">地域連携プラットフォーム</span></p>
+          <ul class="invite__facts" aria-label="説明会のようす">
+            <li><b>約60分</b><span>質問もできる</span></li>
+            <li><b>無料</b><span>申し込まなくてOK</span></li>
+            <li><b>Zoom</b><span>自宅から参加</span></li>
+          </ul>
+          <p class="lp-cta__body lp-cta__body--me">フォームで<wbr>日時を<wbr>選ぶと、<wbr>参加用の<wbr>URLが<wbr>メールで<wbr>届きます<wbr>(カメラは<wbr>原則ON)。<wbr>説明会から<wbr>修了まで、<wbr>すべて<wbr>オンラインなので、<wbr>子育てを<wbr>しながらでも<wbr>最後まで<wbr>続けられました。</p>
+          <blockquote class="invite__voice">
+            <p>参加した<wbr>説明会は、<wbr>3人の<wbr>少人数でした。<wbr>声を<wbr>出して<wbr>質問できて、<wbr>聞きにくい<wbr>お金の<wbr>ことにも<wbr>答えて<wbr>もらえました。<wbr>説明会の<wbr>あとの<wbr>勧誘は<wbr>ありませんでした。</p>
+            <footer>運営者 ちゃん ・ <a href="./schools/chiiki-renkei-platform/#kai" data-ev="top_cta_kai">説明会の<wbr>様子を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></footer>
+          </blockquote>
+          <p class="invite__action"><a class="button button--primary invite__button" href="./schools/chiiki-renkei-platform/" data-ev="top_cta_setsumeikai">無料説明会の<wbr>日程を<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p>
+        </div>
+        <div class="invite__stub">
+          <p class="lp-cta__sub"><a href="./schools/compare/" data-ev="top_cta_compare">ほかの<wbr>学校とも<wbr>比べたい方は<wbr>こちら<wbr>(6校・24項目の<wbr>比較) <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <p class="lp-cta__note">PR ・ この<wbr>サイトは<wbr>養成学校の<wbr>紹介に<wbr>よる<wbr>収益で<wbr>運営しています。<wbr>紹介リンクを<wbr>含むページには、<wbr>そのつど<wbr>広告である<wbr>旨を<wbr>明記しています。</p>
+        </div>
+      </div>
     </div>
     <div class="lp-proof">
       <p class="lp-proof__lead">この<wbr>サイトに<wbr>ついて、<wbr>ひとつだけ。<br><strong>この<wbr>サイトでは、<wbr>試験で<wbr>学ぶ内容を<wbr>すべて<wbr>無料で<wbr>公開しています。</strong></p>
-      <div class="lp-after__stats">
-        <p class="lp-after__stat"><strong>162<i>の</i></strong><span>ことば図鑑</span></p>
-        <p class="lp-after__stat"><strong>66<i>人の</i></strong><span>理論家</span></p>
-        <p class="lp-after__stat"><strong>1152<i>の</i></strong><span>1問1答</span></p>
-      </div>
+      <ul class="lp-after__stats proof-shelf">
+        <li><a class="lp-after__stat" href="./terms/"><img src="./img/parts/04_book_wagon.png" alt="" width="64" height="64" loading="lazy"><strong data-count="162">162<i>の</i></strong><span>ことば図鑑</span></a></li>
+        <li><a class="lp-after__stat" href="./theorists/"><img src="./img/parts/11_lunchbox.png" alt="" width="64" height="64" loading="lazy"><strong data-count="66">66<i>人の</i></strong><span>理論家</span></a></li>
+        <li><a class="lp-after__stat" href="./games/quiz/"><img src="./img/parts/13_blue_yellow_tent.png" alt="" width="64" height="64" loading="lazy"><strong data-count="1152">1152<i>の</i></strong><span>1問1答</span></a></li>
+      </ul>
       <p class="lp-proof__note">運営者が<wbr>受講中に<wbr>「わからなかった<wbr>言葉」を、<wbr>そのつど<wbr>調べて<wbr>書きためた<wbr>ものです。<wbr>登録も<wbr>メールアドレスも<wbr>いりません。</p>
     </div>
   </div>

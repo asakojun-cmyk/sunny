@@ -1,0 +1,299 @@
+/* ==========================================================================
+   award.css — 2026-10-09 トップページの仕上げ
+   ・PCで「細い1本の列」だったところを、読みやすい2段組みに
+   ・見出しと本文のそろえ方を統一(見出しも左)
+   ・説明会への案内を「ピクニックの招待状」に(サニー先生とモヤンは向き合う)
+   ・数字の丸を、押せる「本棚」に
+   ・キーボード操作の見やすさ、動きを減らす設定への配慮
+   ほかのページには影響しないよう、すべて .is-home の中だけで効かせる
+   ========================================================================== */
+
+.is-home {
+  --aw-ink: #29435e;
+  --aw-coral: #ef7d5f;
+  --aw-coral-deep: #d9603f;
+  --aw-leaf: #3f6b4a;
+  --aw-paper: #fffdf7;
+  --aw-butter: #fff6d8;
+  --aw-line: #e7dcc4;
+}
+
+/* ---------- キーボード操作の見やすさ ---------- */
+.is-home a:focus-visible,
+.is-home button:focus-visible {
+  outline: 3px solid var(--aw-coral);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ---------- ABOUT THE JOB:PCでは文章と絵を横並びに ---------- */
+@media (min-width: 960px) {
+  .is-home .lp > .container--article { max-width: 1040px; }
+  .is-home .lp-intro {
+    display: grid;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) 400px;
+    column-gap: 72px;
+    align-items: start;
+  }
+  .is-home .lp-intro > p { grid-column: 1; max-width: 34em; }
+  .is-home .lp-intro > p:first-child { margin-top: 8px; }
+  .is-home .lp-intro > .exam-figure {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin: 0 !important;
+    max-width: none !important;
+    align-self: center;
+  }
+  .is-home .lp-intro p { font-size: 17px; }
+  .is-home .lp > .container--article > .lp-bridge { max-width: 640px; margin-top: 40px; }
+}
+
+/* ---------- STEP BY STEP:見出しは左、本文と同じ線にそろえる ---------- */
+.is-home .lp-river .lp-river__body h3 { text-align: left; }
+
+@media (min-width: 960px) {
+  .is-home .lp-river > .container--article { max-width: 1080px; }
+  .is-home .lp-river__item {
+    max-width: none;
+    gap: 36px;
+    padding: 52px 0 60px;
+  }
+  /* 本文を2段に:左に見出し(読み進めても見えたまま)、右に中身 */
+  .is-home .lp-river__body {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    column-gap: 56px;
+    padding-top: 4px;
+  }
+  .is-home .lp-river__body > * { grid-column: 2; }
+  .is-home .lp-river__body > h3 {
+    grid-column: 1;
+    grid-row: 1 / span 12;
+    align-self: start;
+    position: sticky;
+    top: 104px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.55;
+    letter-spacing: .02em;
+    color: var(--aw-ink);
+    text-wrap: balance;
+  }
+  .is-home .lp-river__body > p:first-of-type { margin-top: 2px; }
+  .is-home .lp-river__item:not(:last-child) .lp-river__body {
+    border-bottom: 2px dotted var(--aw-line);
+    padding-bottom: 52px;
+    margin-bottom: -52px;
+  }
+}
+
+/* ---------- 招待状(無料説明会の案内) ---------- */
+.is-home .lp-last .invite {
+  max-width: 760px;
+  margin: 72px auto 0;
+  text-align: center;
+}
+.invite__head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto 18px;
+}
+.invite__chara { width: clamp(64px, 16vw, 92px); height: auto; }
+/* 向き合う:サニー先生は右へ、モヤンは左へ、少しだけ身をのり出す */
+.invite__chara--sunny { transform: rotate(-6deg); transform-origin: bottom center; }
+.invite__chara--moyan { transform: rotate(6deg); transform-origin: bottom center; }
+.is-home .invite .lp-cta__kicker {
+  margin: 0 0 2px;
+  font-size: 15px;
+  letter-spacing: .14em;
+  color: var(--aw-leaf);
+}
+.is-home .invite .lp-cta__title {
+  margin: 0;
+  font-size: clamp(26px, 6vw, 38px);
+  line-height: 1.35;
+  letter-spacing: .04em;
+  color: var(--aw-ink);
+  white-space: nowrap;
+}
+@media (max-width: 420px) { .is-home .invite .lp-cta__title { white-space: normal; } }
+.is-home .invite__lead { max-width: 560px; margin: 0 auto 32px; }
+@media (max-width: 640px) { .is-home .invite__lead { margin-top: 20px; } }
+.invite__school .nb { white-space: nowrap; }
+
+.invite__ticket {
+  position: relative;
+  text-align: left;
+  background: var(--aw-paper);
+  border-radius: 28px;
+  box-shadow: 0 0 0 2px var(--aw-line), 0 10px 0 -2px #efe4c9;
+  overflow: hidden;
+}
+/* ピクニックシートの縁どり(ギンガム) */
+.invite__ticket::before {
+  content: "";
+  display: block;
+  height: 14px;
+  background:
+    repeating-linear-gradient(90deg, rgba(239,125,95,.55) 0 14px, transparent 14px 28px),
+    repeating-linear-gradient(0deg, rgba(239,125,95,.35) 0 7px, transparent 7px 14px),
+    #fff;
+}
+.invite__main { padding: 30px clamp(20px, 5vw, 44px) 34px; }
+.invite__label {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: #e8f1dc;
+  color: var(--aw-leaf);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.invite__school {
+  margin: 0 0 20px;
+  font-size: clamp(19px, 4.6vw, 24px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--aw-ink);
+}
+.invite__facts {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 0;
+}
+.invite__facts li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 14px 6px 12px;
+  border-radius: 18px;
+  background: var(--aw-butter);
+  text-align: center;
+}
+.invite__facts b { font-size: clamp(18px, 4.8vw, 24px); line-height: 1.3; color: var(--aw-ink); }
+.invite__facts span { font-size: 12px; line-height: 1.5; color: #6b6352; }
+@media (max-width: 400px) { .invite__facts span { font-size: 11px; letter-spacing: -.02em; } .invite__facts li { padding: 12px 4px 10px; } }
+.is-home .invite .lp-cta__body--me {
+  max-width: none;
+  margin: 0 0 22px;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 15.5px;
+}
+.invite__voice {
+  margin: 0 0 26px;
+  padding: 18px 20px 16px 22px;
+  border-left: 4px solid #f3c64f;
+  border-radius: 4px 16px 16px 4px;
+  background: #fffaf0;
+}
+.invite__voice p { margin: 0 0 8px; line-height: 1.9; font-size: 15.5px; }
+.invite__voice footer { font-size: 13px; color: #6f6a58; }
+.invite__voice footer a { color: var(--aw-coral-deep); font-weight: 700; }
+
+.invite__action { margin: 0; }
+.is-home .invite__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4em;
+  width: 100%;
+  min-height: 64px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: var(--aw-coral);
+  border: 0;
+  color: #fff;
+  font-size: clamp(16px, 4.4vw, 19px);
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: normal;
+  box-shadow: 0 6px 0 var(--aw-coral-deep);
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.is-home .invite__button:hover { background: #f28a6d; transform: translateY(-2px); box-shadow: 0 8px 0 var(--aw-coral-deep); }
+.is-home .invite__button:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--aw-coral-deep); }
+
+/* 切り取り線の下:ほかの学校と、広告の表示 */
+.invite__stub {
+  position: relative;
+  padding: 20px clamp(20px, 5vw, 44px) 22px;
+  background: #faf5e8;
+  border-top: 2px dashed var(--aw-line);
+  text-align: center;
+}
+.invite__stub::before,
+.invite__stub::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 0 2px var(--aw-line);
+}
+.invite__stub::before { left: -12px; }
+.invite__stub::after { right: -12px; }
+.is-home .invite .lp-cta__sub { margin: 0; }
+.is-home .invite .lp-cta__note { margin: 8px 0 0; font-size: 12.5px; line-height: 1.8; }
+
+/* ---------- 無料で公開しているもの:押せる本棚 ---------- */
+.is-home .lp-last .lp-proof { margin-top: 72px; }
+.is-home .lp-last .proof-shelf {
+  list-style: none;
+  padding: 0;
+  max-width: 640px;
+  gap: 14px;
+}
+.is-home .lp-last .proof-shelf li { width: 100%; }
+.is-home .lp-last .proof-shelf .lp-after__stat {
+  width: 100%;
+  aspect-ratio: auto;
+  border-radius: 22px;
+  background: #f4f8ec;
+  padding: 18px 8px 16px;
+  gap: 2px;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 2px #dfe9cc;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.is-home .lp-last .proof-shelf .lp-after__stat:hover { transform: translateY(-3px); box-shadow: inset 0 0 0 2px #b9d29a; }
+.is-home .lp-last .proof-shelf img { width: 56px; height: 56px; object-fit: contain; margin-bottom: 4px; }
+.is-home .lp-last .proof-shelf strong { color: var(--aw-ink); font-size: 34px; font-variant-numeric: tabular-nums; }
+.is-home .lp-last .proof-shelf strong i { color: var(--aw-ink); }
+.is-home .lp-last .proof-shelf span { color: var(--aw-leaf); font-size: 14px; }
+@media (max-width: 640px) {
+  .is-home .lp-last .proof-shelf { gap: 8px; }
+  .is-home .lp-last .proof-shelf .lp-after__stat { padding: 14px 4px 12px; border-radius: 18px; }
+  .is-home .lp-last .proof-shelf img { width: 40px; height: 40px; }
+  .is-home .lp-last .proof-shelf strong { font-size: 24px; }
+  .is-home .lp-last .proof-shelf span { font-size: 11.5px; }
+}
+
+/* ---------- このサイトでできること:PCで少しゆったり ---------- */
+@media (min-width: 960px) {
+  .is-home .can > .container--article { max-width: 960px; }
+}
+
+/* ---------- 動きを減らす設定の人には、動かさない ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .is-home *, .is-home *::before, .is-home *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

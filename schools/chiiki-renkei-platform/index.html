@@ -54,6 +54,13 @@
 .school-section__title + .school-kai__ask{margin-top:6px}
 .school-kai__ask + .school-kai__ask{margin-top:0}
 .school-kai__ask--sunny{margin-bottom:22px}
+/* 2026-10-09 モヤンとサニー先生が向き合うように:モヤンは右、サニー先生は左 */
+.school-kai__ask:not(.school-kai__ask--sunny){flex-direction:row-reverse}
+.school-kai__ask:not(.school-kai__ask--sunny) p:before{left:auto;right:-9px;border-left:0;border-bottom:0;border-right:2px solid #cfe0ee;border-top:2px solid #cfe0ee}
+.school-header__name .nb{white-space:nowrap}
+.school-header__official .button--primary{min-height:56px;padding:14px 32px;font-size:1.05rem;box-shadow:0 5px 0 #d9603f}
+@media(max-width:640px){.school-header__official .button--primary{display:flex;justify-content:center;width:100%;box-sizing:border-box}}
+.school-header__official .button--primary:focus-visible{outline:3px solid #ef7d5f;outline-offset:3px}
 .school-last .school-eyebrow{display:block;font-size:.86rem;font-weight:700;color:#5f913c;letter-spacing:.04em;margin-bottom:6px}
 .school-why__list li{padding:20px 0}
 .school-why__list b{display:block;min-width:0;margin:0 0 14px;text-align:center;font-size:1.05rem}
@@ -155,10 +162,7 @@ h2.school-kai__voicelabel:before{content:none}
 
 <article class="container container--article school-article">
   <header class="school-header">
-    <p class="school-header__status">
-      <span class="updated-date__checked">情報確認日: 2026年10月4日</span>
-    </p>
-    <h1 class="school-header__name">地域連携プラットフォームの<wbr>キャリアコンサルタント養成講習</h1>
+    <h1 class="school-header__name">地域連携プラットフォームの<wbr>キャリアコンサルタント<wbr><span class="nb">養成講習</span></h1>
     <p class="school-header__operator">運営: 一般社団法人<wbr>地域連携プラットフォーム</p>
     <p class="updated-date"><span>更新日: 2026年10月6日</span><span class="updated-date__checked">情報確認日: 2026年10月4日(説明会の参加のしかたは10月6日、講習時間と振替の時間数は7月11日に確認)</span></p>
     <p class="school-header__official"><a class="button button--primary" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" rel="sponsored noopener noreferrer" target="_blank">無料の<wbr>説明会・<wbr>質問会を<wbr>見てみる</a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=459JRK+G3ASDU+59PG+60OXE" alt="" style="position:absolute"></p>
