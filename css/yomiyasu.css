@@ -868,3 +868,11 @@ h2:has(> .sec-illust){overflow:hidden}
   .moshi-cta__spec span{margin:0 4px}
   .moshi-cta__btn{display:block;padding:16px 18px}
 }
+
+/* ---- 2026-10-09 試験対策の入り口カード: PCでは横スクロールで切れて見えないよう、4列×2段で全部見せる ---- */
+@media (min-width:960px){
+  .study-cards{width:min(920px,calc(100vw - 48px));margin-left:50%;transform:translateX(-50%)}
+  .study-cards__row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;overflow:visible;padding:4px 0 12px}
+  .study-card{flex:none}
+}
+.study-card:focus-visible{outline:3px solid #ef7d5f;outline-offset:3px}

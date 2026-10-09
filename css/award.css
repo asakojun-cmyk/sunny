@@ -1,0 +1,299 @@
+/* ==========================================================================
+   award.css — 2026-10-09 トップページの仕上げ(2回目:シンプル・余白・上品)
+   方針
+   ・線や枠で区切らず、余白で区切る(チェック柄の帯・左の線・点線・箱の枠はなし)
+   ・色は少なく、文字はゆったり。イラストは「ここぞ」の場所だけ
+   ・かわいさとユーモアは、サニー先生とモヤンのひとことで(2人は必ず向き合う)
+   ほかのページには影響しないよう、すべて .is-home の中だけで効かせる
+   ========================================================================== */
+
+.is-home {
+  --aw-ink: #2c3e50;
+  --aw-sub: #7a7468;
+  --aw-coral: #ee8466;
+  --aw-coral-deep: #d96a4c;
+  --aw-leaf: #5b7f5f;
+  --aw-cream: #fbf8f1;
+  --aw-lemon: #f4cf57;
+}
+
+/* ---------- 全体:ゆったり読める文字 ---------- */
+.is-home .lp-intro p,
+.is-home .lp-river__body p,
+.is-home .lp-cta__body {
+  letter-spacing: .04em;
+  line-height: 2.05;
+}
+
+/* キーボード操作の見やすさ */
+.is-home a:focus-visible,
+.is-home button:focus-visible {
+  outline: 2px solid var(--aw-coral);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* ---------- ABOUT THE JOB:PCでは文章と絵を横並びに ---------- */
+@media (min-width: 960px) {
+  .is-home .lp { padding: 112px 0 120px; }
+  .is-home .lp > .container--article { max-width: 1000px; }
+  .is-home .lp .picnic-map__head { margin-bottom: 64px; }
+  .is-home .lp-intro {
+    display: grid;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    column-gap: 96px;
+    align-items: start;
+  }
+  .is-home .lp-intro > p { grid-column: 1; max-width: 32em; }
+  .is-home .lp-intro > .exam-figure {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin: 0 !important;
+    max-width: none !important;
+    align-self: center;
+  }
+  .is-home .lp-intro p { font-size: 16.5px; }
+  .is-home .lp > .container--article > .lp-bridge { max-width: 600px; margin-top: 80px; }
+}
+
+/* ---------- STEP BY STEP:線をなくして、余白で区切る ---------- */
+.is-home .lp-river .lp-river__body h3 { text-align: left; }
+.is-home .lp-river__item::after { display: none; }          /* 縦の線をなくす */
+.is-home .lp-river__no {
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.is-home .lp-river__item { gap: 20px; padding: 40px 0 48px; }
+
+/* 「受けてよかったこと」:箱とチェックをなくし、小さな黄色い丸だけ */
+.is-home .lp-river__good { gap: 14px; margin: 4px 0 2em; }
+.is-home .lp-river__good li {
+  padding: 0 0 0 22px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+.is-home .lp-river__good li::before {
+  left: 2px;
+  top: .82em;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--aw-lemon);
+  transform: none;
+}
+
+/* 出典は、さらに小さく静かに */
+.is-home .lp-river__src { font-size: 12.5px; letter-spacing: .02em; color: #9a9385; }
+
+@media (min-width: 960px) {
+  .is-home .lp-river { padding: 120px 0 128px; }
+  .is-home .lp-river > .container--article { max-width: 1040px; }
+  .is-home .lp-river .picnic-map__head { margin-bottom: 40px; }
+  .is-home .lp-river__item {
+    max-width: none;
+    gap: 40px;
+    padding: 64px 0;
+  }
+  /* 左に見出し(読み進めても見えたまま)、右に中身 */
+  .is-home .lp-river__body {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 72px;
+    padding-top: 2px;
+  }
+  .is-home .lp-river__body > * { grid-column: 2; max-width: 34em; }
+  .is-home .lp-river__body > h3 {
+    grid-column: 1;
+    grid-row: 1 / span 12;
+    align-self: start;
+    position: sticky;
+    top: 112px;
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: .06em;
+    color: var(--aw-ink);
+  }
+}
+
+/* ---------- 説明会の案内:余白のある、やわらかい一枚 ---------- */
+.is-home .lp-last .invite {
+  max-width: 680px;
+  margin: 96px auto 0;
+  text-align: center;
+}
+.invite__head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 8px;
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+.invite__chara { width: clamp(56px, 14vw, 76px); height: auto; }
+/* 向き合う:サニー先生は右へ、モヤンは左へ、少しだけ身をのり出す */
+.invite__chara--sunny { transform: rotate(-6deg); transform-origin: bottom center; }
+.invite__chara--moyan { transform: rotate(6deg); transform-origin: bottom center; }
+.is-home .invite .lp-cta__kicker {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .2em;
+  color: var(--aw-sub);
+}
+.is-home .invite .lp-cta__title {
+  margin: 0;
+  font-size: clamp(24px, 5.4vw, 32px);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .08em;
+  color: var(--aw-ink);
+  white-space: nowrap;
+}
+@media (max-width: 420px) { .is-home .invite .lp-cta__title { white-space: normal; } }
+.is-home .invite__lead { max-width: 540px; margin: 0 auto 48px; }
+
+.invite__ticket { text-align: left; }
+.invite__main {
+  background: var(--aw-cream);
+  border-radius: 32px; padding: clamp(36px, 7vw, 56px) clamp(24px, 6vw, 56px) clamp(36px, 6vw, 48px); }
+.invite__label {
+  margin: 0 0 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  color: var(--aw-leaf);
+}
+.invite__school {
+  margin: 0 0 32px;
+  font-size: clamp(18px, 4.4vw, 22px);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: .06em;
+  color: var(--aw-ink);
+}
+.invite__school .nb { white-space: nowrap; }
+
+/* 3つの数字:箱をなくして、文字だけで */
+.invite__facts {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 32px;
+  padding: 0;
+}
+.invite__facts li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.invite__facts b {
+  font-size: clamp(20px, 5.2vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .04em;
+  color: var(--aw-ink);
+}
+.invite__facts span { font-size: 12px; line-height: 1.6; color: var(--aw-sub); letter-spacing: .04em; }
+.is-home .invite .lp-cta__body--me {
+  max-width: none;
+  margin: 0 0 24px;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 15px;
+  color: #4d4a44;
+}
+/* 運営者のひとこと:線や箱はつけず、名前を添えるだけ */
+.invite__voice { margin: 0 0 40px; padding: 0; border: 0; background: none; }
+.invite__voice p { margin: 0 0 8px; font-size: 15px; line-height: 2.05; letter-spacing: .04em; color: #4d4a44; }
+.invite__voice footer { font-size: 12.5px; color: var(--aw-sub); letter-spacing: .04em; }
+.invite__voice footer a { color: var(--aw-coral-deep); }
+
+.invite__action { margin: 0; text-align: center; }
+.is-home .invite__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  width: min(100%, 400px);
+  min-height: 60px;
+  padding: 14px 28px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: var(--aw-coral);
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  white-space: normal;
+  box-shadow: none;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.is-home .invite__button:hover { background: var(--aw-coral-deep); transform: translateY(-1px); }
+.is-home .invite__button:active { transform: translateY(1px); }
+/* ちょっとしたユーモア */
+.invite__aside { margin: 16px 0 0; text-align: center; font-size: 12.5px; color: var(--aw-sub); letter-spacing: .04em; }
+
+/* ほかの学校・広告の表示:枠の外に、静かに */
+.invite__stub { padding: 28px 8px 0; text-align: center; background: none; border: 0; }
+.is-home .invite .lp-cta__sub { margin: 0; font-size: 14px; }
+.is-home .invite .lp-cta__note { margin: 10px auto 0; max-width: 34em; font-size: 12px; line-height: 1.9; color: #9a9385; }
+
+/* ---------- 無料で公開しているもの:枠なし、絵と数字だけ ---------- */
+.is-home .lp-last .lp-proof { margin-top: 112px; }
+.is-home .lp-last .proof-shelf {
+  list-style: none;
+  padding: 0;
+  max-width: 560px;
+  gap: 8px;
+}
+.is-home .lp-last .proof-shelf li { width: 100%; }
+.is-home .lp-last .proof-shelf .lp-after__stat {
+  width: 100%;
+  aspect-ratio: auto;
+  border-radius: 20px;
+  background: none;
+  padding: 12px 4px;
+  gap: 4px;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background-color .2s ease;
+}
+.is-home .lp-last .proof-shelf .lp-after__stat:hover { background: var(--aw-cream); }
+.is-home .lp-last .proof-shelf img { width: 52px; height: 52px; object-fit: contain; margin-bottom: 6px; }
+.is-home .lp-last .proof-shelf strong { color: var(--aw-ink); font-size: 30px; font-weight: 700; letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+.is-home .lp-last .proof-shelf strong i { color: var(--aw-ink); }
+.is-home .lp-last .proof-shelf span { color: var(--aw-sub); font-size: 13px; font-weight: 500; letter-spacing: .06em; }
+@media (max-width: 640px) {
+  .is-home .lp-last .proof-shelf img { width: 40px; height: 40px; }
+  .is-home .lp-last .proof-shelf strong { font-size: 22px; }
+  .is-home .lp-last .proof-shelf span { font-size: 11.5px; }
+}
+
+/* ---------- このサイトでできること:PCで少しゆったり ---------- */
+@media (min-width: 960px) {
+  .is-home .can > .container--article { max-width: 920px; }
+}
+
+/* ---------- 動きを減らす設定の人には、動かさない ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .is-home *, .is-home *::before, .is-home *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.invite__aside .nb { white-space: nowrap; }

@@ -1,0 +1,185 @@
+/* ==========================================================================
+   tone.css — 2026-10-09 サイト全体のトンマナをトップにそろえる
+   方針(トップページと同じ)
+   ・線や枠で区切らず、余白とやわらかい面で区切る
+     (左の線・点線・破線・チェックマーク・見出しの下線・箱の枠はなし)
+   ・文字はゆったり。色は少なく
+   ・キャラクターの吹き出し、表、入力欄、ボタン、クイズ・ゲーム・模擬試験など
+     「操作するもの」「読み取りに線が必要なもの」はそのまま
+   ・各ページの <head> のいちばん最後で読み込む(ページ内の style より後に効かせる)
+   ========================================================================== */
+
+:root {
+  --tone-ink: #2c3e50;
+  --tone-sub: #7a7468;
+  --tone-cream: #fbf8f1;
+  --tone-soft: #f7f3ea;
+  --tone-lemon: #f4cf57;
+  --tone-coral: #ee8466;
+}
+
+/* ---------- 1. 文字:ゆったり読めるように ---------- */
+.site-main p,
+.site-main li,
+.site-main dd {
+  letter-spacing: .035em;
+}
+
+/* キーボード操作の見やすさ(全ページ共通) */
+.site-main a:focus-visible,
+.site-main button:focus-visible,
+.site-header a:focus-visible {
+  outline: 2px solid var(--tone-coral);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* ---------- 2. 左の線をなくす(やわらかい面だけ残す) ---------- */
+.info-block--official,
+.info-block--experience,
+.info-block--editorial,
+.info-block--unverified,
+.info-block,
+.about-body__concept,
+.term-prose--hint,
+.term-pitfall__box,
+.honest-link,
+.guide-nextlink {
+  border: 0 !important;
+  border-radius: 18px !important;
+}
+.term-prose--hint,
+.term-pitfall__box,
+.about-body__concept { background: var(--tone-soft) !important; }
+.guide-nextlink,
+.honest-link { background: var(--tone-cream) !important; padding: 16px 20px !important; }
+.pdrop__panel { border-left: 0 !important; }
+.gimon h4,
+.gimon__body h4,
+.site-main h4 { border-left: 0 !important; padding-left: 0 !important; }
+
+/* 小道のステップ(初学者ルート):左の点線をなくす */
+.gstep-list { border-left: 0 !important; }
+
+/* ---------- 3. 点線・破線の区切りをなくし、余白で区切る ---------- */
+.now-item,
+.term-refs,
+.term-kakomon,
+.term-update,
+.term-bridge,
+.theorist-era__influence,
+.gimon__points,
+.pcheck,
+.exam-advice__list li,
+.omamori-checklist li,
+.ron-feedback,
+.cb-feedback {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.term-refs,
+.term-kakomon,
+.term-update,
+.gimon__points,
+.theorist-era__influence { padding-top: 8px !important; margin-top: 28px !important; }
+.term-bridge { padding-bottom: 4px !important; margin-bottom: 18px !important; }
+.now-item { padding-block: 12px !important; }
+.exam-advice__list li,
+.omamori-checklist li { padding-block: 8px !important; }
+
+/* ---------- 4. 見出しや区切りの下線をなくす ---------- */
+.article-header,
+.term-header,
+.term-header--theorist,
+.term-section-title,
+.related,
+.related__title,
+.guide-section h2,
+.review-section h2,
+.now-board h2,
+.jiji h2 {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.article-header,
+.term-header { padding-bottom: 8px !important; margin-bottom: 40px !important; }
+.related { padding-top: 8px !important; margin-top: 72px !important; }
+.term-section-title { padding-bottom: 0 !important; margin-bottom: 18px !important; }
+
+/* ---------- 5. 箱の枠をなくす(面の色だけで、やさしく) ---------- */
+.setsumei-box,
+.disclosure,
+.ad-disclosure,
+.review-toc,
+.term-formal__box,
+.law-notice,
+.pre-enroll,
+.text-sales__soon,
+.review-section__placeholder,
+.now-board,
+.jiji,
+.colcard,
+.book-card,
+.school-card,
+.obento-card,
+.ron-guide__card,
+.facility-card,
+.schools-entry-link,
+.future-work {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.setsumei-box,
+.disclosure,
+.ad-disclosure,
+.review-toc,
+.law-notice,
+.pre-enroll,
+.text-sales__soon,
+.review-section__placeholder { background: var(--tone-cream) !important; border-radius: 18px !important; }
+.term-formal__box { background: #fff !important; border-radius: 20px !important; }
+.colcard__body,
+.school-card__facts { border-top-color: transparent !important; }
+.colcard__media { border-right-color: transparent !important; }
+
+/* ---------- 6. チェックマークを、小さな黄色い丸に ---------- */
+.school-exp__checklist li:before {
+  content: "" !important;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 10px .18em 2px;
+  border-radius: 50%;
+  background: var(--tone-lemon);
+  vertical-align: middle;
+}
+.lp-river__good li {
+  padding: 0 0 0 22px !important;
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+.lp-river__good li::before {
+  left: 2px !important;
+  top: .82em !important;
+  width: 8px !important;
+  height: 8px !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: var(--tone-lemon) !important;
+  transform: none !important;
+}
+
+/* ---------- 7. ボタン:影のない、平らで上品な形に ---------- */
+.site-main .button--primary,
+.site-main .picnic-button {
+  box-shadow: none !important;
+  letter-spacing: .08em;
+}
+
+/* ---------- 動きを減らす設定の人には、動かさない ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .site-main *, .site-main *::before, .site-main *::after {
+    transition-duration: .001ms !important;
+  }
+}
