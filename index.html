@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="./css/refine.css?v=2026.1001">
 <link rel="stylesheet" href="./css/yomiyasu.css?v=2026.1007a">
 <link rel="stylesheet" href="./css/award.css?v=2026.1009b">
+<link rel="stylesheet" href="./css/school-match.css?v=2026.1010f">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"キャリコン学びピクニック","alternateName":"SUNNY & MOYAN CAREER PICNIC","url":"https://carepicnic.com","description":"キャリアコンサルタント試験の「ことば」から学べる試験対策サイト。むずかしい専門用語を、暮らしの中の身近なたとえと、試験に必要な正式な説明の両方から学べます。"}</script>
 <style id="top-2026-10">
 .hero-note__desc{margin:.6em auto 1.1em;max-width:30em;font-size:1rem;line-height:1.8;color:#3b342c}
@@ -67,6 +68,52 @@
 .picnic-hero--note .picnic-stage:before{bottom:-92px;height:300px}
 .picnic-hero--note:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:56px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 36 C 120 36 120 22 240 22 C 360 22 360 36 480 36 C 600 36 600 22 720 22 C 840 22 840 36 960 36 C 1080 36 1080 22 1200 22 C 1320 22 1320 36 1440 36 L1440 60 L0 60 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat bottom/100% 100%;z-index:4;pointer-events:none}
 @media (max-width:640px){.picnic-hero--note .picnic-stage,.picnic-hero--note.is-done .picnic-stage{margin-bottom:56px}.picnic-hero--note .picnic-stage:before{bottom:-64px;height:230px}.picnic-hero--note:after{height:34px}}
+.map-guide .map-guide__chat{margin:0 auto 16px;max-width:520px;text-align:left}
+@media (max-width:640px){.map-stage .map-spot__sign b{white-space:nowrap;font-size:.6875rem;letter-spacing:0}}
+.map-stage .map-say{word-break:keep-all;overflow-wrap:anywhere}
+.map-guide__chat label{cursor:pointer}
+.map-guide__want{display:flex;gap:8px;align-items:stretch;max-width:520px;margin:0 auto;text-align:left}
+.map-guide__sel{position:relative;flex:1;min-width:0;display:block}
+.map-guide__sel:after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;margin-top:-7px;border:solid #5b7f5f;border-width:0 2px 2px 0;transform:rotate(45deg);pointer-events:none}
+.map-guide__sel select{appearance:none;-webkit-appearance:none;width:100%;height:100%;min-height:52px;padding:10px 38px 10px 16px;border:1.5px solid #e3ddcf;border-radius:16px;background:#fff;font:inherit;font-size:1rem;font-weight:700;letter-spacing:.04em;color:#2c3e50;line-height:1.4;cursor:pointer;text-overflow:ellipsis}
+.map-guide__sel select:focus-visible,.map-guide__go:focus-visible{outline:3px solid #f0b24a;outline-offset:2px}
+.map-guide__go{appearance:none;flex:none;border:0;border-radius:16px;padding:0 16px;min-height:52px;background:#5b7f5f;color:#fff;font:inherit;font-size:.9375rem;font-weight:700;letter-spacing:.08em;white-space:nowrap;cursor:pointer;transition:background-color .2s ease}
+.map-guide__go:hover{background:#4a6b4e}
+.map-guide__go:active{transform:translateY(1px)}
+@media (max-width:440px){.map-guide__want{flex-direction:column}.map-guide__go{width:100%}}
+.is-home .lp-last .lp-bridge+.invite{margin-top:28px}
+@media (max-width:400px){.is-home .picnic-map__head h2{font-size:min(20px,5.1vw);letter-spacing:.02em;white-space:nowrap}}
+.is-home .lp-river .lp-river__body h3{white-space:nowrap;font-size:clamp(1rem,4.5vw,1.125rem)}
+/* 2026-10-10 見出しは真ん中にそろえる: 番号を上、見出しをその下に置き、本文は読みやすい幅で続ける */
+.is-home .lp-river__item{flex-direction:column;align-items:center;gap:12px}
+.is-home .lp-river .lp-river__body{width:100%;padding-top:0}
+.is-home .lp-river .lp-river__body h3{text-align:center;margin:0 0 22px}
+@media (min-width:960px){
+  .is-home .lp-river__item{gap:16px;padding:56px 0}
+  .is-home .lp-river .lp-river__body{display:block;max-width:35em;margin:0 auto}
+  .is-home .lp-river .lp-river__body>*{max-width:none}
+  .is-home .lp-river .lp-river__body>h3{position:static;font-size:22px;margin:0 0 28px}
+}
+/* 番号は見出しと同じ行に(縦の長さを減らす)。番号は見出しの前に丸で出す */
+.is-home .lp-river__list{counter-reset:lpstep}
+.is-home .lp-river__item{counter-increment:lpstep;gap:0}
+.is-home .lp-river__no{display:none}
+.is-home .lp-river .lp-river__body h3{display:flex;align-items:center;justify-content:center;gap:10px}
+.is-home .lp-river .lp-river__body h3::before{content:counter(lpstep);flex:none;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--color-green);color:#fff;font-size:14px;font-weight:500;letter-spacing:0;line-height:1}
+.is-home .lp-river__item--caution .lp-river__body h3::before{background:var(--color-terracotta)}
+.is-home .lp-river__item--money .lp-river__body h3::before{background:#b0893f}
+@media (min-width:960px){.is-home .lp-river .lp-river__body h3::before{width:34px;height:34px;font-size:15px}.is-home .lp-river .lp-river__body h3{gap:12px}}
+/* 本文も真ん中に。文節(<wbr>)でだけ折り返して、行の長さをそろえる */
+.is-home .lp-river .lp-river__body{text-align:center}
+.is-home .lp-river .lp-river__body p,.is-home .lp-river .lp-river__body p *{word-break:keep-all !important;overflow-wrap:anywhere}
+.is-home .lp-river .lp-river__body p{text-wrap:balance}
+.is-home .lp-river .lp-river__good{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;text-align:left}
+/* 説明会の招待状も、名前は真ん中に */
+.is-home .invite__label,.is-home .invite__school{text-align:center}
+.is-home .invite__facts{gap:12px;margin-bottom:36px}
+.is-home .invite__facts li{align-items:center;text-align:center;gap:4px}
+.invite__ico{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin-bottom:8px;border-radius:50%;background:#fff;color:#5b7f5f}
+.is-home .invite__facts span:not(.invite__ico){font-size:12px}
 .is-home .can:before{display:none}
 .is-home .picnic-hero--note{overflow:clip}
 .is-home .picnic-meadow{background:#f5f2eb}
@@ -184,7 +231,7 @@
 .section.section--surface.lp{background:#fff}
 .lp-intro__link--one a{white-space:nowrap;font-size:clamp(.82rem,4.1vw,1rem)}
 </style>
-<link rel="stylesheet" href="./css/tone.css?v=2026.1009">
+<link rel="stylesheet" href="./css/tone.css?v=2026.1010">
 </head>
 <body class="is-home">
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -252,7 +299,7 @@
       </div>
       <div class="hero-two__col">
         <p class="hero-two__mc">学校を<wbr>探している<wbr>方へ</p>
-        <a class="picnic-button picnic-button--line" href="./schools/compare/" data-ev="top_hero_school">養成学校を<wbr>えらぶ</a>
+        <a class="picnic-button picnic-button--line" href="#school-match" data-ev="top_hero_match">30秒で<wbr>合う<wbr>学校を<wbr>さがす</a>
       </div>
       <p class="hero-two__sub"><a href="./exam/" data-ev="top_hero_exam">勉強中・試験前の<wbr>方は、<wbr>試験対策へ <span class="arw" aria-hidden="true">▶︎</span></a></p>
     </div>
@@ -334,56 +381,54 @@
       <li class="lp-river__item">
         <p class="lp-river__no">1</p>
         <div class="lp-river__body">
-          <h3>取ったら<wbr>どんな<wbr>働き方が<wbr>できる？</h3>
-          <p>働く<wbr>場所は、<wbr>おもに<wbr>5つです。<wbr>企業の<wbr>中、<wbr>学校、<wbr>公的機関(ハローワークなど)、<wbr>人材会社、<wbr>独立・副業。<wbr>2022年の<wbr>調査では、<strong class="mk">企業の<wbr>中で<wbr>活動している<wbr>人が<wbr>41.7%で<wbr>いちばん<wbr>多い</strong>結果でした。</p>
-          <p class="lp-river__src">出典: 労働政策研究・研修機構<wbr>「第2回キャリアコンサルタント登録者の<wbr>活動状況等に<wbr>関する<wbr>調査」<wbr>(2022年)</p>
-          <p class="lp-river__link"><a data-ev="top_step_1" href="./shikaku-guide/gimon/#k-kasegu">働き方・収入の<wbr>ギモンを<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>どんな働き方ができる？</h3>
+          <p>働く<wbr>場所は、<wbr>おもに<wbr>5つ。<wbr>企業の<wbr>中、<wbr>学校、<wbr>公的機関、<wbr>人材会社、<wbr>独立・副業です。<strong class="mk">いちばん<wbr>多いのは、<wbr>企業の<wbr>中(41.7%)</strong>でした。</p>
+          <p class="lp-river__src">出典: 労働政策研究・研修機構の<wbr>2022年の<wbr>調査</p>
+          <p class="lp-river__link"><a data-ev="top_step_1" href="./shikaku-guide/gimon/#k-kasegu">働き方・収入の<wbr><span class="nb">ギモンを読む <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item lp-river__item--caution">
         <p class="lp-river__no">2</p>
         <div class="lp-river__body">
-          <h3>正直な<wbr>話<br>「最悪の<wbr>国家資格」って<wbr>本当？</h3>
-          <p>ネットで<wbr>そう<wbr>言われる<wbr>理由を<wbr>調べてみたら、<strong>3つとも<wbr>事実</strong>でした。<wbr>独占業務が<wbr>ない<wbr>こと、<wbr>費用が<wbr>かかる<wbr>こと、<wbr>収入の<wbr>実態です。<wbr>やめた<wbr>ほうが<wbr>いい<wbr>人も<wbr>います。<wbr>30秒の<wbr>診断も<wbr>あります。</p>
-          <p class="lp-river__link"><a data-ev="top_step_2" href="./school-guides/merit-demerit/">やめた<wbr>ほうが<wbr>いい人・向いている<wbr>人 <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>「最悪の国家資格」って本当？</h3>
+          <p>ネットで<wbr>そう<wbr>言われる<wbr>理由を<wbr>調べたら、<strong>3つとも<wbr>事実</strong>でした。<wbr>独占業務が<wbr>ない、<wbr>費用が<wbr>かかる、<wbr>収入の<wbr>実態。<wbr>やめた<wbr>ほうが<wbr>いい<wbr>人も<wbr>います。</p>
+          <p class="lp-river__link"><a data-ev="top_step_2" href="./school-guides/merit-demerit/">やめた<wbr>ほうが<wbr>いい人・<wbr><span class="nb">向いている人 <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item">
         <p class="lp-river__no">3</p>
         <div class="lp-river__body">
-          <h3>それでも、<br>受けてよかったと思うこと</h3>
-          <p>資格は<wbr>まだ<wbr>取っていないので、<wbr>「取って<wbr>よかった」とは<wbr>書けません。<wbr>でも、<wbr><strong class="mk">養成講習を<wbr>受けて<wbr>よかった<wbr>こと</strong><wbr>なら、<wbr>はっきりあります。</p>
+          <h3>受けてよかったと思うこと</h3>
+          <p>資格は<wbr>まだ<wbr>取っていないので、<wbr>「取って<wbr>よかった」とは<wbr>書けません。<wbr>でも、<strong class="mk">養成講習を<wbr>受けて<wbr>よかった<wbr>こと</strong>なら、<wbr>はっきりあります。</p>
           <ul class="lp-river__good">
-            <li><strong>「聴く」<wbr>練習を、<wbr>ほぼ<wbr>毎週できた。</strong><wbr>プライベートでも<wbr>仕事でも、<wbr>活かせるように<wbr>なりました。</li>
-            <li><strong>年齢に<wbr>関係なく、<wbr>仲間が<wbr>できた。</strong><wbr>修了した<wbr>今も、<wbr>毎週<wbr>いっしょに<wbr>練習しています。</li>
-            <li><strong>初回は<wbr>緊張したけれど、<wbr>楽しかった。</strong><wbr>協力的な<wbr>人ばかりでした。</li>
+            <li><strong>「聴く」練習を、<wbr><span class="nb">ほぼ毎週できた。</span></strong></li>
+            <li><strong>年齢に<wbr>関係なく、<wbr><span class="nb">仲間ができた。</span></strong></li>
+            <li><strong>初回は<wbr>緊張したけれど、<wbr><span class="nb">楽しかった。</span></strong></li>
           </ul>
-          <p>資格を<wbr>取った<wbr>7,586人への<wbr>調査でも、<wbr>約7割が<wbr>「資格が<wbr>日々の<wbr>仕事や<wbr>生活に<wbr>役立っている」と<wbr>答えています。<wbr>「自分の<wbr>活動に<wbr>満足している」人は、<wbr>約35%です。</p>
-          <p>もし<wbr>人生が<wbr>100年あるのなら、<wbr><strong>人を<wbr>応援する<wbr><span style="white-space:nowrap">仕事がしたい</span></strong>。<wbr>運営者は<wbr>そう<wbr>思って、<wbr>いま挑戦しています。</p>
-          <p class="lp-river__src">出典: 労働政策研究・研修機構<wbr>「第2回キャリアコンサルタント登録者の<wbr>活動状況等に<wbr>関する<wbr>調査」<wbr>(2022年)</p>
-          <p class="lp-river__link"><a data-ev="top_step_yokatta" href="./school-reviews/chiiki-renkei-platform/#good-points">受けて<wbr>よかった<wbr>点・気に<wbr>なった<wbr>点を<wbr>読む <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <p>人生が<wbr>100年あるのなら、<strong>人を<wbr>応援する<span style="white-space:nowrap">仕事が<wbr>したい</span></strong>。<wbr>運営者は<wbr>そう<wbr>思って、<wbr>いま挑戦しています。</p>
+          <p class="lp-river__link"><a data-ev="top_step_yokatta" href="./school-reviews/chiiki-renkei-platform/#good-points">受けて<wbr>よかった点・<wbr><span class="nb">気になった点を読む <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item">
         <p class="lp-river__no">4</p>
         <div class="lp-river__body">
-          <h3>未経験でも、<wbr>何歳からでも<wbr>できる？</h3>
-          <p>受験資格に、<wbr>年齢の<wbr>条件は<wbr>ありません。<wbr>登録している<wbr>人は<strong class="mk">50代が<wbr>いちばん<wbr>多く</strong>、<wbr>受験する<wbr>人の<wbr>約9割は、<wbr>養成講習から<wbr>始めています。<wbr>相談の<wbr>仕事の<wbr>経験が<wbr>なくても<wbr>大丈夫です。</p>
-          <p class="lp-river__src">出典: 労働政策研究・研修機構の<wbr>2022年の<wbr>調査、<wbr>厚生労働省<wbr>「第31回試験結果の概要」</p>
-          <p class="lp-river__link"><a data-ev="top_step_3" href="./shikaku-guide/gimon/#k-muki">向いている<wbr>人・年齢の<wbr>ギモンを<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>未経験・何歳でもできる？</h3>
+          <p>受験資格に、<wbr>年齢の<wbr>条件は<wbr>ありません。<wbr>登録している<wbr>人は<strong class="mk">50代が<wbr>いちばん<wbr>多く</strong>、<wbr>相談の<wbr>仕事の<wbr>経験が<wbr>なくても<wbr>大丈夫です。</p>
+          <p class="lp-river__src">出典: 労働政策研究・研修機構の<wbr>2022年の<wbr>調査</p>
+          <p class="lp-river__link"><a data-ev="top_step_3" href="./shikaku-guide/gimon/#k-muki">向いている人・<wbr><span class="nb">年齢のギモンを読む <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item">
         <p class="lp-river__no">5</p>
         <div class="lp-river__body">
-          <h3>どうやって<wbr>取るの？</h3>
+          <h3>どうやって取るの？</h3>
           <figure class="exam-figure" style="margin:0 0 20px"><img src="./img/exam-guide/exam-flow.jpg" alt="養成講習、学科・実技、登録の看板が順に立つ道を、リュックを背負った人が歩いていくイラスト" width="1400" height="788" loading="lazy"></figure>
-          <p><strong>養成講習(150時間)→ 国家試験 → 登録</strong><wbr>の<wbr>3ステップです。<wbr>試験に<wbr>合格して、<wbr>名簿に<wbr>登録すると、<wbr>「キャリアコンサルタント」と<wbr>名乗れます。</p>
-          <p>受験する<wbr>人の<wbr>約9割は、<wbr>養成講習から<wbr>始めています<wbr>(相談の<wbr>仕事を<wbr>3年以上<wbr>している<wbr>人などは、<wbr>講習なしで<wbr>受験できる<wbr>道も<wbr>あります)。<wbr>養成講習を<wbr>開いている<wbr>学校は<wbr>ひとつではないので、<wbr><strong class="mk">自分に<wbr>合う<wbr>学校を<wbr>選ぶ<wbr>ところから</strong><wbr>始まります。</p>
+          <p><strong>養成講習(150時間)→ 国家試験 → 登録</strong>の<wbr>3ステップです。<wbr>受験する<wbr>人の<wbr>約9割は、<wbr>養成講習から<wbr>始めています。<wbr>まずは、<strong class="mk">自分に<wbr>合う<wbr>学校を<wbr>選ぶ<wbr>ところから</strong>。</p>
+          <p class="lp-river__src">出典: 厚生労働省<wbr>「第31回試験結果の<wbr>概要」</p>
           <p class="lp-river__link"><a data-ev="top_step_4" href="./shikaku-guide/">資格まる<wbr>わかりガイド <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
@@ -391,17 +436,17 @@
       <li class="lp-river__item lp-river__item--money">
         <p class="lp-river__no">6</p>
         <div class="lp-river__body">
-          <h3>お金は<wbr>いくらかかる？</h3>
-          <p>給付金を<wbr>使えば、<strong class="mk">297,000円の<wbr>講座が<wbr>実質59,400円</strong>まで<wbr>下がることもあります。<wbr>使わない<wbr>場合の<wbr>初期費用は<wbr>35〜50万円前後です。<wbr>対象に<wbr>なるかどうかは、<wbr>人に<wbr>よって<wbr>違います。3つ選ぶだけの<wbr>目安チェックも<wbr>あります。</p>
-          <p class="lp-river__link"><a data-ev="top_step_5" href="./school-guides/kyufukin/">給付金を<wbr>使うと<wbr>実質いくら？ <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <h3>お金はいくらかかる？</h3>
+          <p>給付金を<wbr>使えば、<strong class="mk">297,000円の<wbr>講座が<wbr>実質59,400円</strong>まで<wbr>下がることもあります。<wbr>使わない<wbr>場合は<wbr>35〜50万円前後。<wbr>対象に<wbr>なるかどうかは、<wbr>人に<wbr>よって<wbr>違います。</p>
+          <p class="lp-river__link"><a data-ev="top_step_5" href="./school-guides/kyufukin/">給付金を<wbr>使うと<wbr><span class="nb">実質いくら？ <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
         </div>
       </li>
 
       <li class="lp-river__item">
         <p class="lp-river__no">7</p>
         <div class="lp-river__body">
-          <h3>講習って<wbr>どんな<wbr>感じ？</h3>
-          <p>運営者が<wbr>受けた<wbr>講習の、<wbr>1日の<wbr>流れ、<wbr>ロールプレイ、<wbr>課題の<wbr>量を、<wbr>そのまま<wbr>書きました。<strong>子育てとの<wbr>両立で<wbr>困った<wbr>こと</strong>も、<wbr>かく<wbr>さずに<wbr>載せています。</p>
+          <h3>講習ってどんな感じ？</h3>
+          <p>運営者が<wbr>受けた<wbr>講習の、<wbr>1日の<wbr>流れ、<wbr>ロールプレイ、<wbr>課題の<wbr>量を、<wbr>そのまま<wbr>書きました。<strong>子育てとの<wbr>両立で<wbr>困った<wbr>こと</strong>も<wbr>載せています。</p>
           <p class="lp-river__link"><a data-ev="top_step_6" href="./school-reviews/chiiki-renkei-platform/">受講体験記を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
@@ -410,32 +455,32 @@
   </div>
 </section>
 
-<section class="section lp-last" aria-label="このサイトについて、最後にひとつだけ">
+<section class="section lp-last" aria-label="合う学校をさがす・説明会で話を聞く">
   <div class="container container--article">
+    <div class="lp-match" id="school-match">
+      <div class="picnic-map__head">
+        <p class="picnic-kicker">FIND YOUR SCHOOL</p>
+        <h2 id="match-title">あなたに<wbr>合う<wbr>学校を、<wbr>30秒で</h2>
+      </div>
+      <div class="sm-wrap">
+        <p class="sm-wrap__lead">仕事や<wbr>家の<wbr>ことを<wbr>しながら、<wbr>6校・24項目を<wbr>読みくらべるのは<wbr>大変です。<wbr>4つ<wbr>選ぶと、<wbr><strong class="mk">あなたの<wbr>条件に<wbr>合う<wbr>学校だけ</strong>が<wbr>残ります。</p>
+        <div class="sm" data-school-match><div class="sm__card"><p class="sm__fallback"><a href="./schools/compare/">養成学校の<wbr>比較表を<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p></div></div>
+      </div>
+    </div>
     <div class="lp-bridge">
       <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>いろいろ<wbr>わかってきたよ。<wbr>でも、<wbr>まだ<wbr>決められないなぁ……。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>決めなくて<wbr>大丈夫。<wbr>まずは、<wbr>無料の<wbr>説明会で<wbr>話を<wbr>聞いてみたら？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>決めなくて<wbr>大丈夫。<wbr>まずは、<wbr><span class="nb">話を聞いてみよう！</span></p></div>
     </div>
     <div class="lp-cta invite" id="setsumeikai">
-      <div class="invite__head">
-        <img class="invite__chara invite__chara--sunny" src="./img/parts/06_sun_character.png" alt="" width="88" height="79" loading="lazy">
-        <div class="invite__titles">
-          <p class="lp-cta__kicker">まずは</p>
-          <h3 class="lp-cta__title">話を<wbr>聞いてみよう！</h3>
-        </div>
-        <img class="invite__chara invite__chara--moyan" src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="88" height="82" loading="lazy">
-      </div>
-      <p class="lp-cta__body invite__lead">いきなり申し込む<wbr>必要は<wbr>ありません。<wbr>ほとんどの<wbr>学校が<strong>無料の<wbr>説明会・<wbr>質問会</strong>を<wbr>開いていて、<strong class="mk">申し込むと<wbr>決めていなくても<wbr>参加できます</strong>。<wbr>ここまで<wbr>読んで<wbr>残った<wbr>疑問は、<wbr>その<wbr>場で<wbr>聞いてみるのが<wbr>いちばん<wbr>早いです。</p>
       <div class="invite__ticket">
         <div class="invite__main">
           <p class="invite__label">運営者が<wbr>実際に<wbr>受講した<wbr>講座</p>
           <p class="invite__school">一般社団法人<wbr><span class="nb">地域連携プラットフォーム</span></p>
           <ul class="invite__facts" aria-label="説明会のようす">
-            <li><b>約60分</b><span>質問もできる</span></li>
-            <li><b>無料</b><span>まだ迷い中でOK</span></li>
-            <li><b>Zoom</b><span>自宅から参加</span></li>
+            <li><span class="invite__ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M16 9.5V16l4.5 3"/></svg></span><b>約60分</b><span>質問もできる</span></li>
+            <li><span class="invite__ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="13" width="21" height="13.5" rx="2.5"/><path d="M4 9.5h24V13H4zM16 9.5v17"/><path d="M16 9.5c-2-4.5-7.5-4-6.500-1 .6 1.800 4 1.500 6.500 1zM16 9.5c2-4.500 7.500-4 6.500-1-.600 1.800-4 1.500-6.500 1z"/></svg></span><b>無料</b><span>まだ迷い中でOK</span></li>
+            <li><span class="invite__ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9.500" width="16.500" height="13" rx="3.500"/><path d="M20.500 14.500l7-3.500v10l-7-3.500z"/></svg></span><b>Zoom</b><span>自宅から参加</span></li>
           </ul>
-          <p class="lp-cta__body lp-cta__body--me">フォームで<wbr>日時を<wbr>選ぶと、<wbr>参加用の<wbr>URLが<wbr>メールで<wbr>届きます<wbr>(カメラは<wbr>原則ON)。<wbr>説明会から<wbr>修了まで、<wbr>すべて<wbr>オンラインなので、<wbr>子育てを<wbr>しながらでも<wbr>最後まで<wbr>続けられました。</p>
           <blockquote class="invite__voice">
             <p>参加した<wbr>説明会は、<wbr>3人の<wbr>少人数でした。<wbr>声を<wbr>出して<wbr>質問できて、<wbr>聞きにくい<wbr>お金の<wbr>ことにも<wbr>答えて<wbr>もらえました。<wbr>説明会の<wbr>あとの<wbr>勧誘は<wbr>ありませんでした。</p>
             <footer>運営者 ちゃん ・ <a href="./schools/chiiki-renkei-platform/#kai" data-ev="top_cta_kai">説明会の<wbr>様子を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></footer>
@@ -444,7 +489,7 @@
           <p class="invite__aside">モヤン「ボクも、<wbr>画面の<wbr>すみっこで<wbr><span class="nb">聞いてていい？」</span></p>
         </div>
         <div class="invite__stub">
-          <p class="lp-cta__sub"><a href="./schools/compare/" data-ev="top_cta_compare">ほかの<wbr>学校とも<wbr>比べたい方は<wbr>こちら<wbr>(6校・24項目の<wbr>比較) <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <p class="lp-cta__sub"><a href="./schools/compare/" data-ev="top_cta_compare">ほかの<wbr>学校とも<wbr>比べたい方は<wbr>こちら<wbr><span class="nb">(6校・24項目の比較) <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
           <p class="lp-cta__note">PR ・ この<wbr>サイトは<wbr>養成学校の<wbr>紹介に<wbr>よる<wbr>収益で<wbr>運営しています。<wbr>紹介リンクを<wbr>含むページには、<wbr>そのつど<wbr>広告である<wbr>旨を<wbr>明記しています。</p>
         </div>
       </div>
@@ -463,47 +508,48 @@
 
 
 
-<section class="section section--surface can" aria-labelledby="can-title">
-  <div class="container container--article">
-    <div class="picnic-map__head">
-      <p class="picnic-kicker">WHAT YOU CAN DO</p>
-      <h2 id="can-title">このサイトで<wbr>できること</h2>
-      <p>キャリアコンサルタントが<wbr>気に<wbr>なった<wbr>人が、<wbr>最初に<wbr>読む<wbr>サイトです。<wbr>資格を<wbr>取るか<wbr>迷っている方も、<wbr>試験直前の方も<wbr>使えます。</p>
-    </div>
-    <div class="picnic-map__head can-head"><p class="picnic-kicker">BEFORE YOU START</p><h3 class="can-group">これから資格を考えている方</h3></div>
-    <ul class="can-list">
-      <li><a class="can-card" href="#lp-title"><img src="./img/parts/14_tree_center.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>キャリアコンサルタントってなに？</b><small>どんな仕事かを1分で</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./shikaku-guide/gimon/" data-ev="top_list_qa"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>キャリコンって何？</b><small>よくある質問の回答はこちら</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./shikaku-guide/"><img src="./img/parts/18_bulletin_board.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>資格のとり方を知る</b><small>養成講習→試験→登録の流れと費用</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./schools/compare/"><img src="./img/parts/19_market_stall.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>養成学校を比較する<em class="can-card__pr">PR</em></b><small>主要6校を24項目で比べました</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card can-card--cta" href="./schools/chiiki-renkei-platform/" data-ev="top_list_setsumeikai"><img src="./img/parts/06_sun_character.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>無料説明会はこちら<em class="can-card__pr">PR</em></b><small>運営者が受講した講座の説明会。申し込まなくても参加できます</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-    </ul>
-    <div class="picnic-map__head can-head"><p class="picnic-kicker">FOR LEARNERS</p><h3 class="can-group">いま勉強中・試験前の方</h3></div>
-    <ul class="can-list">
-      <li><a class="can-card" href="./terms/"><img src="./img/parts/04_book_wagon.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>ことばを調べる</b><small>162の用語を、図とたとえ話で</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./theorists/"><img src="./img/parts/11_lunchbox.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>理論家と出会う</b><small>66人の理論家を、人物ごとにやさしく</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./games/quiz/"><img src="./img/parts/13_blue_yellow_tent.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>1問1答で確かめる</b><small>1152問の○×・4択で、すきま時間に</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="./exam-guide/moshi/"><img src="./img/parts/10_yellow_pencil.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>模擬試験で力だめし</b><small>全5回250問と、分野別160問。無料で自動採点</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="https://www.youtube.com/channel/UCpUFUH3VeCqG4cly2HrTZ3w" target="_blank" rel="noopener"><img src="./img/parts/05_pinwheel.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>1分動画で覚える</b><small>YouTubeショートを毎日更新</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><a class="can-card" href="https://note.com/gifted_pansy8788/n/nc7809a9fd224" target="_blank" rel="noopener"><img src="./img/parts/09_blue_notebook.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>直前対策テキスト</b><small>赤シート対応の問題集(note・有料)</small></span><span class="can-card__go" aria-hidden="true">▶︎</span></a></li>
-      <li><div class="can-card can-card--soon" aria-disabled="true"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="56" height="56" loading="lazy"><span class="can-card__body"><b>キャリコン仲間コミュニティ<em class="can-card__soon">準備中</em></b><small>いっしょに学ぶ仲間とつながれる場所を準備しています</small></span></div></li>
-    </ul>
-  </div>
-</section>
-
 <section class="picnic-map" id="picnic-map" aria-labelledby="picnic-map-title">
   <div class="picnic-map__head">
     <p class="picnic-kicker">LEARN ON A PICNIC</p>
     <h2 id="picnic-map-title">ピクニックしながら<wbr>学ぶ</h2>
-    <p>草原の<wbr>あちこちに、<wbr>学べる<wbr>場所が<wbr>あります。<wbr>気に<wbr>なる<wbr>場所を<wbr>押して、<wbr>のぞいてみてね。</p>
+    <p>勉強中・<wbr>試験前の<wbr>方は、<wbr>ここから。<wbr>やりたい<wbr>ことを<wbr>選ぶか、<wbr>地図の<wbr>気に<wbr>なる<wbr>場所を<wbr>押してみてね。</p>
   </div>
   <nav class="map-guide" aria-label="おすすめの入り口">
-    <p class="map-guide__say"><img src="./img/parts/06_sun_character.png" alt="" width="40" height="40"><span><b>サニー先生</b>迷ったら、<wbr>ここから<wbr>どうぞ！</span></p>
-    <ul class="map-guide__list">
-      <li><a class="map-guide__sign map-guide__sign--quiz" href="./games/quiz/">1問1答は<wbr>こちら<i aria-hidden="true"> <span class="arw" aria-hidden="true">▶︎</span></i></a></li>
-      <li><a class="map-guide__sign map-guide__sign--yt" href="https://www.youtube.com/channel/UCpUFUH3VeCqG4cly2HrTZ3w" target="_blank" rel="noopener">YouTubeは<wbr>こちら<i aria-hidden="true"> <span class="arw" aria-hidden="true">▶︎</span></i></a></li>
-      <li><a class="map-guide__sign map-guide__sign--note" href="https://note.com/gifted_pansy8788/n/nc7809a9fd224" target="_blank" rel="noopener">noteの<wbr>問題集は<wbr>こちら<i aria-hidden="true"> <span class="arw" aria-hidden="true">▶︎</span></i></a></li>
-    </ul>
+    <div class="lp-bridge map-guide__chat">
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><span class="nb">どこから行けば</span><wbr><span class="nb">いいのかな……？</span></p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><label for="want-select">いま、<wbr>何が<wbr>したい？</label></p></div>
+    </div>
+    <div class="map-guide__want" data-want>
+      <span class="map-guide__sel"><select id="want-select">
+        <optgroup label="まず知りたい">
+          <option value="./start/">何から始めるか知りたい</option>
+          <option value="./exam/">試験の全体像を知りたい</option>
+          <option value="./exam-guide/goukakuritsu/">合格率・難しさを知りたい</option>
+          <option value="./careers/">働き方を知りたい</option>
+        </optgroup>
+        <optgroup label="調べたい・覚えたい">
+          <option value="./terms/">わからない言葉を調べたい</option>
+          <option value="./theorists/">理論家を覚えたい</option>
+          <option value="./hinshutsu/">よく出る用語だけ見たい</option>
+          <option value="./laws/">法改正・時事ニュースを知りたい</option>
+          <option value="./exam-guide/shiryo/">白書・調査の要点を知りたい</option>
+        </optgroup>
+        <optgroup label="解きたい">
+          <option value="./games/quiz/">1問1答を解きたい</option>
+          <option value="./exam-guide/moshi/">模擬試験で力だめししたい</option>
+          <option value="./exam-guide/bunya/">分野別に解きたい</option>
+          <option value="./games/ronjutsu/">論述の練習をしたい</option>
+          <option value="./games/">ゲームで覚えたい</option>
+        </optgroup>
+        <optgroup label="試験が近い・ひと休み">
+          <option value="./exam-guide/last-30days/">試験まで30日の計画を立てたい</option>
+          <option value="https://www.youtube.com/channel/UCpUFUH3VeCqG4cly2HrTZ3w">1分動画で覚えたい(YouTube)</option>
+          <option value="https://note.com/gifted_pansy8788/n/nc7809a9fd224">直前対策テキストがほしい(note・有料)</option>
+          <option value="./column/">ひと休みしたい(コラム)</option>
+        </optgroup>
+      </select></span>
+      <button type="button" class="map-guide__go" data-ev="top_guide_want">ここへ<wbr>行く <span class="arw" aria-hidden="true">▶︎</span></button>
+    </div>
   </nav>
   <div class="map-stage" role="img" aria-label="キャリコン学びピクニックの草原の地図。図書館、広場、テント、掲示板、マルシェ、森が点々の小道でつながっていて、モヤンとサニー先生が散歩している">
     <svg class="map-trail" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
@@ -668,6 +714,11 @@
 <script src="./js/reveal.js?v=v2026.0728.1616" defer></script>
 <script src="./js/search-fab.js?v=v2026.0728.1616" defer></script>
 
-<script src="./js/cta-fab.js?v=2026.1007a" defer></script>
+<script>
+/* 「いま、何がしたい？」: 選んで「ここへ行く」を押すと、そのページへ進む。外のサイトは別のタブで開く */
+(function(){var w=document.querySelector("[data-want]");if(!w)return;var s=w.querySelector("select");w.querySelector("button").addEventListener("click",function(){var u=s.value;if(/^https?:/.test(u))window.open(u,"_blank","noopener");else location.href=u;});})();
+</script>
+<script src="./js/school-match.js?v=2026.1010e" defer></script>
+<script src="./js/cta-fab.js?v=2026.1010b" defer></script>
 </body>
 </html>

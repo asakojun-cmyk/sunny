@@ -24,6 +24,9 @@ const KEYWORDS = [
   "職業安定", "人材開発", "技能検定", "求職者支援",
 ];
 
+/** 関係のうすいお知らせ(題名にこの言葉があれば採用しない)。js/kyarikon-now.js の EXCLUDE と同じにしておく */
+const EXCLUDE = /記者会見|表彰|採用案内|採用情報|募集|功労者|ねんりんピック|食品|薬事|栄養|人口動態|石綿|医師|看護|薬剤|介護給付|医療/;
+
 function pick(re, s) {
   const m = s.match(re);
   return m ? m[1].trim() : "";
@@ -56,7 +59,10 @@ async function main() {
       decode(pick(/<dc:date>([\s\S]*?)<\/dc:date>/, block)) ||
       decode(pick(/<pubDate>([\s\S]*?)<\/pubDate>/, block));
     if (!title || !link) continue;
-    if (!KEYWORDS.some((k) => title.includes(k))) continue;
+    if (EXCLUDE.test(title)) continue;
+    /* 「厚生労働大臣」「厚生労働省」の「労働」には反応させない */
+    const body = title.replace(/厚生労働(省|大臣)?/g, "");
+    if (!KEYWORDS.some((k) => body.includes(k))) continue;
     items.push({
       title,
       url: link,

@@ -177,6 +177,37 @@
   letter-spacing: .08em;
 }
 
+/* ---------- 8. 見出しは真ん中にそろえる(2026-10-10) ----------
+   :where() で優先度を下げてあるので、ページごとに向きを決めてある見出しはそのまま。
+   カード・目次・手順・計算機・吹き出しなど「箱の中の見出し」は、箱の向きに合わせる */
+:where(.site-main) :is(h1, h2, h3) { text-align: center; }
+:where(.school-card, .omamori-card, .colcard, .book-card, .obento-card, .facility-card,
+       .review-toc, .review-summary, .gstep, .kyufu-calc, .info-block, .school-kai__voice,
+       .library-hero__story, .sm__bubble, .mini-say, details, table, form) :is(h1, h2, h3) { text-align: inherit; }
+/* 絵と文字が横に並ぶ見出し(用語・理論家ページなど)は、並びごと真ん中に */
+.site-main :is(h1, h2, h3):where(.term-section-title, .term-category__title) { justify-content: center; }
+/* 見出しの下に左から伸びていた短い線は、なくす(下線なしの方針に合わせる) */
+.term-section-title::after { display: none !important; }
+/* タイトルまわり(番号・読みがな・分類・日付)も、タイトルと同じ真ん中に */
+.term-header, .school-header { text-align: center; }
+.term-header :is(ul, ol, .term-header__meta, .term-header__category, .term-level) { justify-content: center; }
+:is(.term-header, .school-header) .updated-date { justify-content: center; text-align: center; }
+.term-toc { justify-content: center; }
+/* 大きいタイトルは、行の長さをそろえて折る(「義/務」のように1文字だけ落ちるのを防ぐ) */
+.site-main h1 { text-wrap: balance; }
+
+/* ---------- 9. キャリコンNOW掲示板: 種類の札と、しぼるボタン(2026-10-10) ---------- */
+.now-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 8px; }
+.now-filter__chip { appearance: none; border: 1.5px solid #e3ddcf; background: #fff; border-radius: 99px; padding: 7px 14px; font: inherit; font-size: .875rem; font-weight: 700; letter-spacing: .04em; color: #5b5a52; cursor: pointer; }
+.now-filter__chip[aria-pressed="true"] { background: #5b7f5f; border-color: #5b7f5f; color: #fff; }
+.now-filter__note { margin: 0 0 6px; font-size: .8125rem; line-height: 1.8; color: #7a7468; }
+.now-tag { display: inline-block; margin-left: 8px; padding: 1px 9px; border-radius: 99px; background: #efeadd; color: #5b5a52; font-style: normal; font-size: .75rem; font-weight: 700; letter-spacing: .04em; line-height: 1.7; white-space: nowrap; vertical-align: 1px; }
+.now-tag--career { background: #e6efe4; color: #3f6b4a; }
+.now-tag--stat { background: #e4eef4; color: #2f5265; }
+.now-tag--rule { background: #fbe9e2; color: #a04a30; }
+.now-item { grid-template-columns: 1fr !important; gap: 2px !important; }
+.now-item__source { display: none; }
+
 /* ---------- 動きを減らす設定の人には、動かさない ---------- */
 @media (prefers-reduced-motion: reduce) {
   .site-main *, .site-main *::before, .site-main *::after {

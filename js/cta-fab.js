@@ -1,5 +1,5 @@
 /* 右下にいつも出ている「説明会は無料」の雲のボタン(絵はサイトの水彩の素材)。カーソルを合わせると、雲の後ろからサニー先生がのぞく。
- * 少しスクロールしたら現れ、ページ内の説明会の案内やフッターが見えている間は引っこむ。
+ * 少しスクロールしたら現れ、ページ内の説明会の案内・学校えらびチェック・フッターが見えている間は引っこむ。
  * × で閉じると、そのタブを開いている間は出さない。 */
 (function () {
   var KEY = "cta-fab-closed";
@@ -66,7 +66,7 @@
       });
       update();
     });
-    var hide = document.querySelectorAll(".lp-cta, .site-footer");
+    var hide = document.querySelectorAll(".lp-cta, .site-footer, .sm, .map-guide");
     for (var i = 0; i < hide.length; i++) io.observe(hide[i]);
   }
 
