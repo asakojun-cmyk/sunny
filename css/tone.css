@@ -214,3 +214,8 @@
     transition-duration: .001ms !important;
   }
 }
+
+/* ---------- 理論家ページの見出し: 似顔絵と名前を、たてに並べて真ん中に(横並びだと全体が左に寄って見えた) ---------- */
+.term-header--theorist { flex-direction: column !important; align-items: center !important; gap: 14px; }
+/* ---------- 一覧ページの会話(モヤンとサニー先生): 画面の端と端に離れないよう、真ん中の列にまとめる ---------- */
+.container > .chara-guide { max-width: 720px; margin-left: auto; margin-right: auto; }
