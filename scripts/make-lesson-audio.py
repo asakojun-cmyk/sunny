@@ -40,7 +40,7 @@ SELECTOR = ", ".join([
     ".term-analogy .term-section-title", ".term-analogy .term-prose p",
     ".term-life .term-section-title", ".term-life .term-prose p",
     ".term-formal .term-section-title", ".term-formal__box > p:not(.term-update)", ".term-kakomon li",
-    ".term-formal dl > div", ".term-riasec .term-section-note",
+    ".term-stages .term-section-note:first-of-type", ".term-formal dl > div", ".term-riasec .term-section-note",
     ".term-try .term-section-title", ".term-try .mini-say__bubble",
     ".kw-talk .mini-say__bubble",
     ".term-exam-points .term-section-title", ".term-exam-points li",
@@ -84,6 +84,8 @@ def spoken_text(el, yomi):
         el.b.decompose()
     for label in el.select("dt") + ([el.p.b] if el.p and "term-bridge" in (el.p.get("class") or []) and el.p.b else []):     # 用語名や小見出しのあとで一拍おく
         label.append("。")
+    for br in el.find_all("br"):                        # 行がえの所で一拍おく
+        br.replace_with("、")
     text = el.get_text()
     for src in sorted(yomi, key=len, reverse=True):     # 長い書き方から先に置きかえる
         text = text.replace(src, yomi[src])
@@ -91,8 +93,8 @@ def spoken_text(el, yomi):
     text = re.sub(r"[(（]([A-Z])[)）]", r"\1", text)             # 現実的(R) → 現実的R
     text = re.sub(r"[(（](?=[^)）]*[a-z])(?=[^)）]*[ ,.])[A-Za-z][A-Za-z .,'\-]*[)）]", "", text)  # (Schein, E. H.) は読まない
     # 記号の読み方
-    for i, n in enumerate(["いち", "に", "さん", "よん", "ご", "ろく", "なな"]):
-        text = text.replace("①②③④⑤⑥⑦"[i], "、" + n + "、")
+    for i, n in enumerate(["いち", "に", "さん", "よん", "ご", "ろく", "なな", "はち", "きゅう", "じゅう"]):
+        text = text.replace("①②③④⑤⑥⑦⑧⑨⑩"[i], "、" + n + "、")
     text = re.sub(r"[〇○]×", "まるばつ", text)
     text = re.sub(r"[〇○]{2}", "まるまる", text)
     text = re.sub(r"[〇○]", "マル", text)

@@ -117,7 +117,7 @@
 .lesson-on .picnic-intro__line p,
 .lesson-on :is(.term-oneliner, .term-kids, .term-analogy, .term-life, .term-oboekata) :is(.term-section-title, .term-prose p, .chara-guide__bubble),
 .lesson-on :is(.term-formal, .term-similar) :is(.term-section-title, dl > div),
-.lesson-on :is(.term-formal__box > p:not(.term-update), .term-kakomon li, .term-riasec .term-section-note),
+.lesson-on :is(.term-formal__box > p:not(.term-update), .term-kakomon li, .term-riasec .term-section-note, .term-stages .term-section-note:first-of-type),
 .lesson-on :is(.term-try, .kw-talk) :is(.term-section-title, .mini-say__bubble),
 .lesson-on .term-exam-points :is(.term-section-title, li),
 .lesson-on .term-exam-advice :is(.chara-guide__bubble, .exam-advice__list li),
@@ -127,6 +127,8 @@
 /* ---------- 「やってみよう」の案内(ホランドのページ) ---------- */
 .term-try__go { margin: 18px 0 6px; text-align: center; }
 .term-riasec .term-section-note { margin-top: 16px; }
+.term-stages .term-section-note { margin: 0 0 16px; }
+.term-stages .term-formal__box + .term-section-note { margin: 16px 0 0; }
 .term-try .more-links__note { text-align: center; }
 
 /* ---------- 下に出る小さい操作バー ---------- */

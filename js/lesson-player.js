@@ -16,7 +16,7 @@
     ".term-analogy .term-section-title", ".term-analogy .term-prose p",
     ".term-life .term-section-title", ".term-life .term-prose p",
     ".term-formal .term-section-title", ".term-formal__box > p:not(.term-update)", ".term-kakomon li",
-    ".term-formal dl > div", ".term-riasec .term-section-note",
+    ".term-stages .term-section-note:first-of-type", ".term-formal dl > div", ".term-riasec .term-section-note",
     ".term-try .term-section-title", ".term-try .mini-say__bubble",
     ".kw-talk .mini-say__bubble",
     ".term-exam-points .term-section-title", ".term-exam-points li",
