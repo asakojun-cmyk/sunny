@@ -932,3 +932,11 @@ h2:has(> .sec-illust){overflow:hidden}
 @media (prefers-reduced-motion:reduce){.camp-banner{transition:none}}
 .campaign-now__note{max-width:680px;margin:36px auto 0;font-size:.8125rem;line-height:1.8;color:#7a7468;text-align:left}
 @media (prefers-reduced-motion:reduce){.campaign-now__tag{animation:none}}
+
+/* 2026-10-11 背景の色が変わる境目を、ぜんぶ同じ「なみなみ」にそろえる(トップ)。
+   上の色(--from)の帯に、下の色(--to)の波を重ねる。波の形はトップのほかの境目と同じ */
+.wave-edge{position:relative;height:52px;margin-bottom:-1px;background:var(--from)}
+.wave-edge::before{content:"";position:absolute;inset:0;background:var(--to);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 36 C 120 36 120 22 240 22 C 360 22 360 36 480 36 C 600 36 600 22 720 22 C 840 22 840 36 960 36 C 1080 36 1080 22 1200 22 C 1320 22 1320 36 1440 36 L1440 60 L0 60 Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 36 C 120 36 120 22 240 22 C 360 22 360 36 480 36 C 600 36 600 22 720 22 C 840 22 840 36 960 36 C 1080 36 1080 22 1200 22 C 1320 22 1320 36 1440 36 L1440 60 L0 60 Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+@media (max-width:760px){.wave-edge{height:32px}}
