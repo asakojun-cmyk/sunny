@@ -99,6 +99,22 @@
 }
 .lesson__seek input::-moz-range-thumb { width: 18px; height: 18px; border: 0; border-radius: 50%; background: var(--tone-coral, #ee8466); }
 .lesson__time { flex: none; font-size: .8rem; font-variant-numeric: tabular-nums; color: var(--tone-sub, #7a7468); }
+.lesson__next { margin: 12px 0 0; font-size: .84rem; line-height: 1.9; color: var(--tone-sub, #7a7468); }
+.lesson__next[hidden] { display: none; }
+.lesson__next a { color: var(--tone-ink, #2c3e50); font-weight: 700; }
+.lesson__auto {
+  min-height: 32px;
+  margin-left: 4px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tone-soft, #f7f3ea);
+  color: var(--tone-sub, #7a7468);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.lesson__auto[aria-pressed="true"] { background: var(--tone-lemon, #f4cf57); color: var(--tone-ink, #2c3e50); }
 .lesson__note { margin: 10px 0 0; font-size: .86rem; color: var(--tone-coral, #ee8466); }
 .lesson__note[hidden] { display: none; }
 .lesson__credit { margin: 10px 0 0; font-size: .74rem; color: var(--tone-sub, #7a7468); }
@@ -130,6 +146,7 @@
 .weather .lesson p { font-size: .88rem; font-weight: 400; }
 .weather .lesson .lesson__title { font-size: 1.08rem; font-weight: 700; }
 .weather .lesson .lesson__credit { font-size: .74rem; }
+.weather .lesson .lesson__next { font-size: .84rem; }
 .weather .lesson span { color: inherit; }
 /* 吹き出しは、文字ではなく吹き出しごと色をつける */
 .line__msg.is-speaking { background: none !important; box-shadow: none; }

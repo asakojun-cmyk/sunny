@@ -876,3 +876,6 @@ h2:has(> .sec-illust){overflow:hidden}
   .study-card{flex:none}
 }
 .study-card:focus-visible{outline:3px solid #ef7d5f;outline-offset:3px}
+
+/* 2026-10-11 「あたらしくなりました」のお知らせ: 行の長さをそろえて折る */
+.lesson-news a{text-wrap:balance}
