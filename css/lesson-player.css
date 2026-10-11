@@ -1,0 +1,204 @@
+/* ==========================================================================
+   lesson-player.css — 「授業できく」(js/lesson-player.js)
+   tone.css の方針どおり、枠線と段差の影は使わず、クリーム色の面と余白で区切る
+   ========================================================================== */
+
+.lesson {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 28px 0 36px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: var(--tone-cream, #fbf8f1);
+  color: var(--tone-ink, #2c3e50);
+}
+.lesson__who { display: flex; flex: none; }
+.lesson__who img { width: 56px; height: 56px; object-fit: contain; }
+.lesson__who img + img { margin-left: -10px; }
+.lesson__body { flex: 1; min-width: 0; }
+.lesson__title { margin: 0; font-size: 1.08rem; font-weight: 700; letter-spacing: .04em; }
+.lesson__lead { margin: 4px 0 0; font-size: .88rem; line-height: 1.7; color: var(--tone-sub, #7a7468); }
+.lesson__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; }
+
+.lesson__play {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tone-lemon, #f4cf57);
+  color: var(--tone-ink, #2c3e50);
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.lesson__play:hover { background: #f7d96f; }
+.lesson__play:active { transform: scale(.97); }
+
+/* 再生の三角と、一時停止の二本線 */
+.lesson__icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent currentColor;
+}
+.is-playing > .lesson__icon {
+  width: 13px;
+  height: 16px;
+  border-width: 0 4px;
+  border-color: currentColor;
+}
+
+.lesson__speed {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--tone-sub, #7a7468);
+  font: inherit;
+  font-size: .86rem;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.lesson__speed:hover { background: var(--tone-soft, #f7f3ea); color: var(--tone-ink, #2c3e50); }
+
+.lesson__seek { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+.lesson__seek[hidden] { display: none; }
+.lesson__seek input {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  margin: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.lesson__seek input::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--tone-coral, #ee8466) var(--lesson-done, 0%), #ebe4d3 var(--lesson-done, 0%));
+}
+.lesson__seek input::-moz-range-track { height: 6px; border-radius: 999px; background: #ebe4d3; }
+.lesson__seek input::-moz-range-progress { height: 6px; border-radius: 999px; background: var(--tone-coral, #ee8466); }
+.lesson__seek input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--tone-coral, #ee8466);
+}
+.lesson__seek input::-moz-range-thumb { width: 18px; height: 18px; border: 0; border-radius: 50%; background: var(--tone-coral, #ee8466); }
+.lesson__time { flex: none; font-size: .8rem; font-variant-numeric: tabular-nums; color: var(--tone-sub, #7a7468); }
+.lesson__note { margin: 10px 0 0; font-size: .86rem; color: var(--tone-coral, #ee8466); }
+.lesson__note[hidden] { display: none; }
+.lesson__credit { margin: 10px 0 0; font-size: .74rem; color: var(--tone-sub, #7a7468); }
+
+.lesson :focus-visible,
+.lesson-dock :focus-visible { outline: 2px solid var(--tone-coral, #ee8466); outline-offset: 3px; }
+
+/* ---------- いま読んでいる段落 ---------- */
+.is-speaking {
+  background-color: #fdf3c4 !important;
+  box-shadow: 0 0 0 8px #fdf3c4;
+  border-radius: 6px;
+  transition: background-color .25s ease, box-shadow .25s ease;
+}
+/* 再生をはじめたら、段落を押してそこから聞ける */
+.lesson-on .picnic-intro__line p,
+.lesson-on :is(.term-oneliner, .term-kids, .term-analogy, .term-life, .term-oboekata) :is(.term-section-title, .term-prose p, .chara-guide__bubble),
+.lesson-on :is(.term-formal, .term-similar) :is(.term-section-title, dl > div),
+.lesson-on :is(.term-formal__box > p:not(.term-update), .term-kakomon li, .term-riasec .term-section-note),
+.lesson-on :is(.term-try, .kw-talk) :is(.term-section-title, .mini-say__bubble),
+.lesson-on .term-exam-points :is(.term-section-title, li),
+.lesson-on .term-exam-advice :is(.chara-guide__bubble, .exam-advice__list li),
+.lesson-on .term-pitfall :is(.term-section-title, .term-pitfall__box p),
+.lesson-on .term-episode :is(.term-section-title, .term-section-note, .episode-list li) { cursor: pointer; }
+
+/* ---------- 「やってみよう」の案内(ホランドのページ) ---------- */
+.term-try__go { margin: 18px 0 6px; text-align: center; }
+.term-riasec .term-section-note { margin-top: 16px; }
+.term-try .more-links__note { text-align: center; }
+
+/* ---------- 下に出る小さい操作バー ---------- */
+.lesson-dock {
+  position: fixed;
+  left: 50%;
+  bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100vw - 24px);
+  padding: 7px 8px;
+  border-radius: 999px;
+  background: var(--tone-ink, #2c3e50);
+  color: #fff;
+  transform: translate(-50%, 140%);
+  visibility: hidden;
+  transition: transform .3s ease, visibility 0s .3s;
+}
+.lesson-dock.is-show { transform: translate(-50%, 0); visibility: visible; transition: transform .3s ease; }
+.lesson-dock__play {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--tone-lemon, #f4cf57);
+  color: var(--tone-ink, #2c3e50);
+  cursor: pointer;
+}
+.lesson-dock__play:not(.is-playing) .lesson__icon { margin-left: 3px; }
+.lesson-dock__face[hidden] { display: none; }
+.lesson-dock__face { flex: none; width: 34px; height: 34px; object-fit: contain; border-radius: 50%; background: #fff; }
+.lesson-dock__text { display: flex; flex-direction: column; min-width: 4.6em; line-height: 1.3; }
+.lesson-dock__name { font-size: .84rem; white-space: nowrap; }
+.lesson-dock__time { font-size: .72rem; font-variant-numeric: tabular-nums; opacity: .8; white-space: nowrap; }
+.lesson-dock .lesson__speed { color: #fff; white-space: nowrap; }
+.lesson-dock .lesson__speed:hover { background: rgba(255, 255, 255, .14); color: #fff; }
+.lesson-dock__close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lesson-dock__close:hover { background: rgba(255, 255, 255, .14); }
+
+@media (max-width: 560px) {
+  .lesson { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 18px; }
+  .lesson__who img { width: 48px; height: 48px; }
+  .lesson__play { flex: 1; justify-content: center; }
+  .lesson-dock { gap: 6px; }
+}
+/* スマホは下のメニューの上に出す */
+@media (max-width: 960px) {
+  .lesson-dock { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson__play, .lesson-dock, .is-speaking { transition: none; }
+}
+
+@media print {
+  .lesson, .lesson-dock { display: none; }
+}
