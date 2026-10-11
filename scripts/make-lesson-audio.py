@@ -35,6 +35,7 @@ ENGINE = "http://127.0.0.1:50021"
 # js/lesson-player.js の SELECTOR と同じにする
 SELECTOR = ", ".join([
     ".picnic-intro__line p",
+    ".episode > h2", ".line__msg", ".okawari > h2", ".okawari__card > p",
     ".term-oneliner .term-section-title", ".term-oneliner .chara-guide__bubble", ".term-oneliner .term-prose p",
     ".term-kids .term-section-title", ".term-kids .term-prose p",
     ".term-analogy .term-section-title", ".term-analogy .term-prose p",
@@ -70,18 +71,22 @@ def who(el, page):
     """この段落を読むのはだれか。見出しとモヤンの吹き出しはモヤン、理論家のセリフは理論家、ほかはサニー先生。"""
     cls = el.get("class") or []
     parent = el.parent.get("class") or []
+    guest = "guest_f" if page.split("/")[-1] in FEMALE else "guest_m"
+    if "line__msg" in cls:                               # 「理論家とピクニック」の会話
+        line = el.find_parent(class_=["line", "farewell__line"]).get("class")
+        return "moyan" if "line--moyan" in line else "sunny" if "line--sunny" in line else guest
     if "picnic-intro__line--guest" in parent:
-        return "guest_f" if page.split("/")[-1] in FEMALE else "guest_m"
+        return guest
     if "term-section-title" in cls or "mini-say--moyan" in parent or "chara-guide--moyan" in parent:
         return "moyan"
     return "sunny"
 
 
 def spoken_text(el, yomi):
-    intro = {"picnic-intro__line", "mini-say"} & set(el.parent.get("class") or [])
+    intro = {"picnic-intro__line", "mini-say"} & set(el.parent.get("class") or []) or "line__msg" in (el.get("class") or [])
     el = BeautifulSoup(str(el), "html.parser")
-    if intro and el.b:                                  # 「サニー先生」などの名前の札は読まない
-        el.b.decompose()
+    if intro and el.find("b"):                                  # 「サニー先生」などの名前の札は読まない
+        el.find("b").decompose()
     for label in el.select("dt") + ([el.p.b] if el.p and "term-bridge" in (el.p.get("class") or []) and el.p.b else []):     # 用語名や小見出しのあとで一拍おく
         label.append("。")
     for br in el.find_all("br"):                        # 行がえの所で一拍おく
@@ -162,7 +167,7 @@ def build(page, yomi, ids, dry, force):
     if not soup.select_one("[data-lesson]") and not dry:
         print(f"{page}: ページに data-lesson の置き場所がないので飛ばす")
         return
-    lines = [(who(el, page), spoken_text(el, yomi), "term-section-title" in (el.get("class") or [])) for el in els]
+    lines = [(who(el, page), spoken_text(el, yomi), "term-section-title" in (el.get("class") or []) or el.name == "h2") for el in els]
     digest = hashlib.sha1(json.dumps([lines, VOICES], ensure_ascii=False).encode()).hexdigest()[:12]
 
     out_dir = ROOT / "audio" / page

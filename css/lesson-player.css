@@ -114,6 +114,7 @@
   transition: background-color .25s ease, box-shadow .25s ease;
 }
 /* 再生をはじめたら、段落を押してそこから聞ける */
+.lesson-on :is(.episode > h2, .line__msg, .okawari > h2, .okawari__card > p),
 .lesson-on .picnic-intro__line p,
 .lesson-on :is(.term-oneliner, .term-kids, .term-analogy, .term-life, .term-oboekata) :is(.term-section-title, .term-prose p, .chara-guide__bubble),
 .lesson-on :is(.term-formal, .term-similar) :is(.term-section-title, dl > div),
@@ -123,6 +124,22 @@
 .lesson-on .term-exam-advice :is(.chara-guide__bubble, .exam-advice__list li),
 .lesson-on .term-pitfall :is(.term-section-title, .term-pitfall__box p),
 .lesson-on .term-episode :is(.term-section-title, .term-section-note, .episode-list li) { cursor: pointer; }
+
+/* ---------- 「理論家とピクニック」のページ ---------- */
+.weather .lesson { max-width: 620px; margin: 34px auto 0; text-align: left; background: #fffdf8; }
+.weather .lesson p { font-size: .88rem; font-weight: 400; }
+.weather .lesson .lesson__title { font-size: 1.08rem; font-weight: 700; }
+.weather .lesson .lesson__credit { font-size: .74rem; }
+.weather .lesson span { color: inherit; }
+/* 吹き出しは、文字ではなく吹き出しごと色をつける */
+.line__msg.is-speaking { background: none !important; box-shadow: none; }
+.line__bubble:has(.is-speaking) { background: #fdf3c4 !important; box-shadow: 0 0 0 4px #f4cf57; }
+/* 授業中は、会話を待たずに全部見せる */
+.lesson-on .lines[data-animate] .line { opacity: 1; transform: none; }
+.lesson-on .lines[data-animate] .line .line__dots { display: none; }
+.lesson-on .lines[data-animate] .line .line__msg { display: inline; }
+.lesson-on .dialogue-after.is-waiting { opacity: 1; }
+.lesson .visually-hidden, .lesson-dock .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* ---------- 「やってみよう」の案内(ホランドのページ) ---------- */
 .term-try__go { margin: 18px 0 6px; text-align: center; }

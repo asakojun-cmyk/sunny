@@ -11,6 +11,7 @@
   /* scripts/make-lesson-audio.py の SELECTOR と同じにする */
   var SELECTOR = [
     ".picnic-intro__line p",
+    ".episode > h2", ".line__msg", ".okawari > h2", ".okawari__card > p",
     ".term-oneliner .term-section-title", ".term-oneliner .chara-guide__bubble", ".term-oneliner .term-prose p",
     ".term-kids .term-section-title", ".term-kids .term-prose p",
     ".term-analogy .term-section-title", ".term-analogy .term-prose p",
@@ -65,7 +66,7 @@
     if (resumeAt < 5 || resumeAt > data.total - 5) resumeAt = 0;
     var handScrollAt = 0;
     /* 理論家本人のセリフ(segs の s が "guest")を読んでいるあいだ、下のバーに出す名前 */
-    var guestLabel = document.querySelector(".picnic-intro__line--guest b");
+    var guestLabel = document.querySelector(".picnic-intro__line--guest b, .line--guest .line__msg b");
     var guestName = guestLabel ? guestLabel.textContent.trim() : "ゲスト";
     var minutes = Math.max(1, Math.round(data.total / 60));
 
