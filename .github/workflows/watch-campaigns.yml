@@ -1,0 +1,33 @@
+# 学校のキャンペーン見はり番: 各校の公式ページを毎日見て、
+# キャンペーン・割引・特典の文に変化があったら Issue で運営者に知らせる(サイトには自動で載せない)
+name: campaign-watch
+on:
+  schedule:
+    - cron: "10 22 * * *" # 毎日 7:10 (日本時間)
+  workflow_dispatch: {}   # 手動実行も可能
+permissions:
+  contents: write
+  issues: write
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 各校の公式ページを見て、前回とくらべる
+        run: node scripts/watch-campaigns.mjs
+      - name: くらべるための控えをコミット
+        run: |
+          git config user.name "campaign-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/campaign-watch.json
+          git diff --cached --quiet || (git commit -m "キャンペーン見はり番: 控えを更新" && git pull --rebase -q && git push)
+      - name: 変化があれば Issue で知らせる
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f campaign-notice.md ] || exit 0
+          printf '\n@%s 確認をお願いします。\n' "${{ github.repository_owner }}" >> campaign-notice.md
+          gh issue create --title "学校のキャンペーンに変化がありました($(TZ=Asia/Tokyo date +%-m月%-d日))" --body-file campaign-notice.md --assignee "${{ github.repository_owner }}"
