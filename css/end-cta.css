@@ -1,0 +1,17 @@
+/* 読み終わりの案内(学校の個別ページ・受講体験記)。
+ * 箱にしない。サニー先生とモヤンが向き合い、そのあいだに一言。下にボタンひとつ。
+ * 改行は .nb のかたまりの切れ目でしか起きないようにしてある。 */
+.end-cta{margin:44px auto 36px;max-width:520px;padding:0 4px;text-align:center}
+.end-cta .nb{display:inline-block;white-space:nowrap}
+.end-cta__talk{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 16px}
+.end-cta__talk img{flex:0 0 auto;width:52px;height:auto}
+.end-cta .end-cta__talk .end-cta__say{margin:0;font-size:1.0625rem;font-weight:700;line-height:1.6;letter-spacing:.02em;color:var(--color-text,#2f3440)}
+.end-cta__facts{display:flex;justify-content:center;gap:8px;margin:0 0 16px;padding:0;list-style:none}
+.end-cta__facts li{display:flex;align-items:center;gap:5px;margin:0;padding:6px 11px;border-radius:999px;background:#f5eedb;font-size:.8125rem;font-weight:700;line-height:1.3;white-space:nowrap;color:#5b5648}
+.end-cta__facts li::before{content:none}
+.end-cta__facts svg{flex:0 0 auto;width:16px;height:16px;color:#c26f52}
+.end-cta__act{margin:0}
+.end-cta__act .button--primary{white-space:nowrap;font-size:clamp(.875rem,4vw,1rem);padding-left:1.4em;padding-right:1.4em}
+.end-cta__note{margin:12px 0 0;font-size:.75rem;line-height:1.7;color:#8a8371}
+.end-cta__note .nb + .nb{margin-left:.6em}
+@media(max-width:359px){.end-cta__talk{gap:8px}.end-cta__talk img{width:42px}.end-cta__say{font-size:1rem}.end-cta__facts li{padding:5px 8px;font-size:.75rem}}
