@@ -903,6 +903,7 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-banner__stub{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:18px 14px;text-align:center;background:var(--camp,#f4cf57)}
 .camp-banner--sky{--camp:#cfe3ea}
 .camp-banner--leaf{--camp:#dfe9c8}
+.camp-banner--peach{--camp:#f8dccb}
 /* 半券の切り取り線(まるい切り欠きと点線) */
 .camp-banner__stub::before,.camp-banner__stub::after{content:"";position:absolute;right:-11px;width:22px;height:22px;border-radius:50%;background:#f5f2eb;z-index:1}
 .camp-banner__stub::before{top:-11px}

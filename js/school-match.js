@@ -157,6 +157,7 @@
     "notStated": "比較表に<wbr>記載が<wbr>ありません",
     "notStatedTail": "(この条件の記載なし)",
     "more": "くわしく見る",
+    "site": "公式サイトを見る",
     "checked": "情報を<wbr>確かめた<wbr>日",
     "rest": "ほかの{n}校も<wbr>見る<wbr>(合わない・未確認の<wbr>条件あり)",
     "nextK": "NEXT STEP",
@@ -254,6 +255,8 @@
       var pr = n.querySelector(".pr-label");
       if (pr) pr.remove();
       var s = { slug: th.getAttribute("data-school"), name: n.textContent.trim(), pr: !!pr, cells: {}, go: null };
+      /* 当サイトに紹介ページがある学校だけ「くわしく見る」を出す(ない学校は公式サイトへ) */
+      s.page = !!th.querySelector('.cmp__links a:not([target])');
       var site = th.querySelector('.cmp__links a[target="_blank"]');
       if (site) s.go = linkOf(site, "");
       arr.push(s);
@@ -509,14 +512,11 @@
       rows +
       (prep ? "<div><dt>" + T.prep + "</dt><dd>" + prep.html + "</dd></div>" : "") +
       "</dl></div>" +
-      '<div class="sm-school__foot"><a class="sm-school__go" href="/schools/' +
-      s.slug +
-      '/" data-ev="match_school_' +
-      s.slug +
-      '">' +
-      T.more +
-      ARW +
-      "</a>" +
+      '<div class="sm-school__foot">' +
+      (s.page || !s.go
+        ? '<a class="sm-school__go" href="/schools/' + s.slug + '/" data-ev="match_school_' + s.slug + '">' + T.more + ARW + "</a>"
+        : '<a class="sm-school__go" href="' + esc(s.go.href) + '" rel="' + esc(s.go.rel) + '" target="_blank" data-ev="match_site_' + s.slug + '">' +
+          T.site + (s.go.ad ? "<small> " + T.ad + "</small>" : "") + ARW + "</a>") +
       (date ? '<p class="sm-school__date">' + T.checked + " " + date.html + "</p>" : "") +
       "</div></li>"
     );

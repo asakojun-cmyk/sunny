@@ -20,6 +20,7 @@ const SCHOOLS = [
   { id: "manpower", name: "日本マンパワー", pages: ["https://www.nipponmanpower.co.jp/cc/", "https://www.nipponmanpower.co.jp/cc/briefing_session/setsumei"] },
   { id: "pasona", name: "パソナ", pages: ["https://100-year-career.net/"] },
   { id: "recurrent", name: "リカレント", pages: ["https://www.recurrent.co.jp/cc/", "https://www.recurrent.co.jp/cc/course/"] },
+  { id: "cmca", name: "CMCA", pages: ["https://cmcajapan.com/lp/setsumeikai", "https://cmcajapan.net/"] },
 ];
 
 /** この言葉を含む文だけを拾う */
