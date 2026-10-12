@@ -392,9 +392,10 @@ html { overflow-x: clip; }
 .library-hero > picture > img { display: block; width: 100%; height: auto; background: #f2f2f0; }
 @media (min-width: 641px) { .library-hero--lunch .library-hero__story { top: 30px; } }
 
-/* ---------- 20. スマホの波は、ゆるやかに(2026-10-12) ----------
-   画面がせまいと、同じ波でも山が急に見える。スマホでは波を横に2倍にのばして、山を1つ半だけ見せる */
-@media (max-width: 760px) {
-  :root { --wave-w: 200%; }
-  .wave-edge::before { -webkit-mask-size: 200% 100%; mask-size: 200% 100%; }
+/* ---------- 20. スマホ: 波の形はパソコンと同じまま、波のまわりの余白を広げる(2026-10-12) ---------- */
+@media (max-width: 640px) {
+  .library-hero .library-hero__story { padding: 52px 24px 64px !important; }
+  .library-counter { padding-top: 36px; }
+  .wave-edge { margin-bottom: 35px; }
+  .wave-edge::after { height: 36px; }
 }
