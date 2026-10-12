@@ -315,3 +315,8 @@ html { overflow-x: clip; }
   .site-main :is(.guide-section, .review-section, .column-section) > h3 { font-size: 1.125rem !important; }
   .newsflash__body b { font-size: 1rem !important; }
 }
+
+/* ---------- 13. ゲームのカード: 絵はカードの上・真ん中に、小さめに(2026-10-12) ---------- */
+.exam-tool__badge { position: static; order: -1; align-self: center; margin: 0 0 2px; }
+.exam-tool__img { width: 44px; height: 44px; align-self: center; }
+.game-card-link__emoji { width: 52px; height: 52px; font-size: 26px; }
