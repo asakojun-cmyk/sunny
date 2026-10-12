@@ -402,3 +402,10 @@ html { overflow-x: clip; }
 
 /* ---------- 21. ヘッダーのすぐ下(図鑑の挿絵の上)の波は、なくす(2026-10-12) ---------- */
 .library-hero::after { content: none !important; }
+
+/* ---------- 22. 図鑑の入口の文: 1行ずつ、途中で折れないように(2026-10-12) ---------- */
+.library-hero__story .nb { display: inline-block; white-space: nowrap; }
+@media (max-width: 640px) {
+  .library-hero .library-hero__story { text-align: center; }
+  .library-hero__story p:last-child { font-size: clamp(.875rem, 4.3vw, 1.0625rem); }
+}
