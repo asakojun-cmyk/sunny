@@ -1029,6 +1029,13 @@ h2:has(> .sec-illust){overflow:hidden}
 .tool-try__list .arw{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:#b3543a;font-size:.75rem}
 .tool-try__list a:focus-visible{outline:3px solid #ee8466;outline-offset:3px}
 .tool-try .more-links__note{margin-top:14px}
+/* 2026-10-12 「どうやって取るの？」の中の、つまずきやすい2つの疑問 */
+.lp-river__qa{display:grid;gap:10px;margin:0 0 20px;text-align:center}
+.lp-river__qa>div{padding:16px 18px;border-radius:16px;background:#fffdf8}
+.lp-river__qa dt{font-weight:700;font-size:.9375rem;line-height:1.6;color:#2c3e50;letter-spacing:.03em}
+.lp-river__qa dt::before{content:"Q";margin-right:8px;color:#ee8466;font-weight:700}
+.lp-river__qa dd{margin:6px 0 0;font-size:.875rem;line-height:1.9;color:#4f5a55}
+@media (max-width:760px){.lp-river__qa{margin:4px 0 14px}.lp-river__qa>div{padding:14px 10px;background:#f7f3ea}.lp-river__qa dd{font-size:.8125rem}}
 /* スマホのセンターぞろえ用の改行(.sp-br): 文の切れ目で行を変える。PCと、ごく狭い画面(360px未満)では効かせない */
 .sp-br{display:none}
 @media (min-width:360px) and (max-width:760px){body.is-home .lp-river .sp-br{display:inline}}

@@ -435,3 +435,17 @@ html { overflow-x: clip; }
 @media (max-width: 640px) {
   .library-hero__story::before, .library-counter::before { top: -33px; height: 34px; }
 }
+
+/* 2026-10-12 広告の説明(.disclosure)を、1行にたたむ。「PR」と「広告があります」はいつも見える。くわしい内訳は押すと開く。
+   本文に早く入れるように、冒頭で場所を取らない形にした */
+details.disclosure { margin: 14px 0 22px !important; padding: 0 !important; background: none !important; border-radius: 14px !important; font-size: .8125rem; }
+details.disclosure > summary { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; width: fit-content; max-width: 100%; margin: 0; padding: 6px 0; color: #6b665c; font-weight: 500; line-height: 1.6; cursor: pointer; list-style: none; }
+details.disclosure > summary::-webkit-details-marker { display: none; }
+details.disclosure .disclosure__tag { flex: none; padding: 1px 7px; border-radius: 4px; background: #efeadd; color: #6b665c; font-size: .6875rem; font-weight: 700; letter-spacing: .06em; }
+details.disclosure .disclosure__more { color: #b3543a; font-weight: 700; }
+details.disclosure .disclosure__more::after { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 0 3px 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); }
+details.disclosure[open] .disclosure__more::after { transform: rotate(-135deg); margin-bottom: -1px; }
+details.disclosure > summary:focus-visible { outline: 3px solid #ee8466; outline-offset: 3px; border-radius: 8px; }
+details.disclosure[open] { padding: 8px 18px 14px !important; background: var(--tone-cream) !important; }
+details.disclosure[open] > summary { margin-bottom: 6px; }
+@media (max-width: 640px) { details.disclosure .disclosure__list > div { flex-direction: column; gap: 0; padding: 6px 0; } details.disclosure .disclosure__list dt { width: auto; } }
