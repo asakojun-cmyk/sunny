@@ -283,3 +283,35 @@ html { overflow-x: clip; }
 /* 箱の中のタイトル・見出しも、箱の真ん中にそろえる */
 :where(.school-card, .omamori-card, .colcard, .book-card, .obento-card, .facility-card,
        .review-toc, .review-summary, .gstep, .kyufu-calc, .info-block, .school-kai__voice) :is(h1, h2, h3) { text-align: center; }
+
+/* ---------- 11. 箱の中の「ひとこと説明+項目名 ▶」も、箱の真ん中にそろえる(2026-10-12) ---------- */
+.guide-chips a { text-align: center; padding: 18px 22px; }
+.guide-chips b { display: inline; }
+.guide-chips .arw { position: static; transform: none; margin-left: .35em; }
+@media (max-width: 760px) { .guide-chips a { padding: 14px 18px; } }
+.related__list a { text-align: center; }
+.related__type { margin-right: 0; }
+.related__item-title { display: block; margin-top: 6px; }
+.term-next__card { flex-direction: column; text-align: center; gap: 6px; }
+.term-next__card span { flex: none; min-width: 0; }
+.sm-entry { flex-direction: column; text-align: center; gap: 6px; }
+.sm-entry span { flex: none; }
+.exam-tool { text-align: center; align-items: center; }
+.guide-nextlink, .honest-link { text-align: center; }
+
+/* ---------- 12. 文字の大きさの段を、はっきり分ける(2026-10-12) ----------
+   ページのタイトル(h1) > 大見出し(h2) > 小見出し(h3) > お知らせ・本文 の順に、ひと目で差がわかるように。
+   これまでは h1 が 26px・h2 が 22〜26px・お知らせが 21px と、ほとんど同じ大きさだった */
+.site-main h1:not(.term-header__name):not(.step):not(.obento-hero *):not(.library-hero *) { font-size: 2.125rem !important; line-height: 1.45; }
+.site-main :is(.guide-section, .review-section, .school-section, .column-section, .kwsec) > h2,
+.site-main h2:is(.section-header__title, .term-section-title, .related__title, .school-section__title) { font-size: 1.625rem !important; line-height: 1.5; }
+.site-main :is(.guide-section, .review-section, .column-section) > h3 { font-size: 1.1875rem !important; line-height: 1.6; }
+.newsflash__body b { font-size: 1.0625rem !important; }
+.newsflash__tag { font-size: .875rem; }
+@media (max-width: 760px) {
+  .site-main h1:not(.term-header__name):not(.step):not(.obento-hero *):not(.library-hero *) { font-size: 1.5rem !important; }
+  .site-main :is(.guide-section, .review-section, .school-section, .column-section, .kwsec) > h2,
+  .site-main h2:is(.section-header__title, .term-section-title, .related__title, .school-section__title) { font-size: 1.3125rem !important; }
+  .site-main :is(.guide-section, .review-section, .column-section) > h3 { font-size: 1.125rem !important; }
+  .newsflash__body b { font-size: 1rem !important; }
+}
