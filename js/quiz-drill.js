@@ -127,7 +127,10 @@
   function judge(item, correct, btn) {
     recordResult(item, correct);
     if (correct) score++;
-    var label = isChoice(item) ? "「" + item.o[item.ai] + "」" : "「" + (item.a ? "○" : "×") + "」";
+    /* 4択は番号も出す。「不適切なもの」を選ぶ問題では、正解の文が「まちがった文」なので、そう書き添える */
+    var label = isChoice(item)
+      ? " " + (item.ai + 1) + ".「" + item.o[item.ai] + "」" + (/不適切/.test(item.q) ? "(これがまちがっている文)" : "")
+      : "「" + (item.a ? "○" : "×") + "」";
     btn.classList.add(correct ? "is-correct" : "is-wrong");
     if (!correct && isChoice(item)) {
       var right = choiceBox.querySelectorAll("button")[item.ai];
