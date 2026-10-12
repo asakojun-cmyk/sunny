@@ -366,3 +366,23 @@ html { overflow-x: clip; }
   -webkit-mask: var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat, linear-gradient(#000, #000) center top / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
           mask: var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat, linear-gradient(#000, #000) center top / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
 }
+
+/* ---------- 18. なみなみと、その次の中身のあいだを広げる(2026-10-12) ----------
+   波を大きくしたぶん、波のすぐ下の絵や見出しが近く見えていた */
+/* 記事の色の帯: 帯の中の上下の余白を広げる */
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-block: 128px; }
+/* 体験記(まとまりごとの帯): まとまりの最初の上と、最後の下だけ広げる */
+.container--article:not(.privacy-page) .review-section[data-band]:nth-of-type(n) { padding-block: 80px; }
+.container--article:not(.privacy-page) .review-section:is([data-band="sky"], [data-band="green"]):is([data-band-pos="start"], [data-band-pos="only"]):nth-of-type(n) { padding-top: 128px; }
+.container--article:not(.privacy-page) .review-section:is([data-band="sky"], [data-band="green"]):is([data-band-pos="end"], [data-band-pos="only"]):nth-of-type(n) { padding-bottom: 128px; }
+/* 区切りの波(トップ・図鑑・お弁当など): 波の下に、次の色のまま余白を足す */
+.wave-edge { margin-bottom: 31px; }
+.wave-edge::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 32px; background: var(--to); }
+@media (max-width: 760px) {
+  .container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-block: 88px; }
+  .container--article:not(.privacy-page) .review-section[data-band]:nth-of-type(n) { padding-block: 56px; }
+  .container--article:not(.privacy-page) .review-section:is([data-band="sky"], [data-band="green"]):is([data-band-pos="start"], [data-band-pos="only"]):nth-of-type(n) { padding-top: 88px; }
+  .container--article:not(.privacy-page) .review-section:is([data-band="sky"], [data-band="green"]):is([data-band-pos="end"], [data-band-pos="only"]):nth-of-type(n) { padding-bottom: 88px; }
+  .wave-edge { margin-bottom: 19px; }
+  .wave-edge::after { height: 20px; }
+}
