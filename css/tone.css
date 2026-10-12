@@ -348,3 +348,5 @@ html { overflow-x: clip; }
 .daily-card { text-align: center; }
 .daily-card__quiz-actions { justify-content: center; }
 .daily-card__result { text-align: center; }
+/* 札(今日の1問 など)は、下のボタンと同じテラコッタ色に */
+.daily-card__label { color: #ef8064; font-weight: 700; }
