@@ -225,8 +225,8 @@
    帯は ::before で画面の端まで敷き、上と下の端だけ波の形にくりぬく */
 html { overflow-x: clip; }
 :root {
-  --wave-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 44 C 90 44 90 16 180 16 C 270 16 270 44 360 44 C 450 44 450 16 540 16 C 630 16 630 44 720 44 C 810 44 810 16 900 16 C 990 16 990 44 1080 44 C 1170 44 1170 16 1260 16 C 1350 16 1350 44 1440 44 L1440 60 L0 60 Z'/%3E%3C/svg%3E");
-  --wave-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 16 C 90 16 90 44 180 44 C 270 44 270 16 360 16 C 450 16 450 44 540 44 C 630 44 630 16 720 16 C 810 16 810 44 900 44 C 990 44 990 16 1080 16 C 1170 16 1170 44 1260 44 C 1350 44 1350 16 1440 16 L1440 0 L0 0 Z'/%3E%3C/svg%3E");
+  --wave-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 41 C 120 41 120 19 240 19 C 360 19 360 41 480 41 C 600 41 600 19 720 19 C 840 19 840 41 960 41 C 1080 41 1080 19 1200 19 C 1320 19 1320 41 1440 41 L1440 60 L0 60 Z'/%3E%3C/svg%3E");
+  --wave-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 19 C 120 19 120 41 240 41 C 360 41 360 19 480 19 C 600 19 600 41 720 41 C 840 41 840 19 960 19 C 1080 19 1080 41 1200 41 C 1320 41 1320 19 1440 19 L1440 0 L0 0 Z'/%3E%3C/svg%3E");
 }
 .container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) {
   position: relative; z-index: 0;
@@ -386,3 +386,8 @@ html { overflow-x: clip; }
   .wave-edge { margin-bottom: 19px; }
   .wave-edge::after { height: 20px; }
 }
+
+/* ---------- 19. 理論家図鑑の挿絵: 広い画面では、まわりの芝生を広げた絵を使う(2026-10-12) ---------- */
+.library-hero > picture { display: block; }
+.library-hero > picture > img { display: block; width: 100%; height: auto; background: #f2f2f0; }
+@media (min-width: 641px) { .library-hero--lunch .library-hero__story { top: 30px; } }
