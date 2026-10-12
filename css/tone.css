@@ -267,3 +267,19 @@ html { overflow-x: clip; }
   .library-counter { position: relative; }
   .library-counter::before { background: #edf4dd; }
 }
+
+/* ---------- 10. 見出しの絵は、文字の横ではなく「上」に置く(2026-10-12) ----------
+   絵が文字の左や右につくと、真ん中にそろえた見出しがずれて見えるため。絵は見出しの上に1つだけ */
+.site-main h2 > .sec-illust { float: none; display: block; margin: 0 auto 12px; }
+.site-main h2:has(> .sec-illust)::before { display: none !important; }
+.container--article :is(.guide-section, .review-section, .column-section) > h3 { padding-left: 0; }
+.container--article :is(.guide-section, .review-section, .column-section) > h3::before {
+  position: static; display: block; margin: 0 auto 10px;
+}
+:is(.term-kids, .term-analogy, .term-life, .term-formal, .term-exam-advice, .term-similar, .term-theorists, .term-quiz, .term-exam-points) > .term-section-title {
+  flex-direction: column; gap: 8px;
+}
+.newsflash__body b::before { content: "🎧"; display: block; margin-bottom: 2px; }
+/* 箱の中のタイトル・見出しも、箱の真ん中にそろえる */
+:where(.school-card, .omamori-card, .colcard, .book-card, .obento-card, .facility-card,
+       .review-toc, .review-summary, .gstep, .kyufu-calc, .info-block, .school-kai__voice) :is(h1, h2, h3) { text-align: center; }
