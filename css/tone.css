@@ -343,3 +343,8 @@ html { overflow-x: clip; }
   .exam-tools::-webkit-scrollbar { display: none; }
   .exam-tool { flex: 0 0 76%; scroll-snap-align: start; }
 }
+
+/* ---------- 16. 今日の1問・今日の用語・今日の理論家: 箱の真ん中にそろえる(2026-10-12) ---------- */
+.daily-card { text-align: center; }
+.daily-card__quiz-actions { justify-content: center; }
+.daily-card__result { text-align: center; }
