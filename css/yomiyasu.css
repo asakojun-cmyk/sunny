@@ -1018,3 +1018,21 @@ h2:has(> .sec-illust){overflow:hidden}
 /* スマホのセンターぞろえ用の改行(.sp-br): 文の切れ目で行を変える。PCと、ごく狭い画面(360px未満)では効かせない */
 .sp-br{display:none}
 @media (min-width:360px) and (max-width:760px){body.is-home .lp-river .sp-br{display:inline}}
+
+/* 2026-10-12 比較ページ「学校をしぼり込む」「見たい項目をしぼる」: ボタンの形をやめて、チェックボックスと文字だけに。
+   チェックを入れたら、文字が太い濃いテラコッタになる(緑の札・ほかを薄くする演出はなし) */
+.compare-picker .compare-picker__list{gap:4px 26px}
+.compare-picker .compare-picker__item{min-height:40px;padding:4px 2px;gap:10px;border:0;border-radius:0;background:none;color:#2c3e50;font-weight:500;opacity:1!important;filter:none!important}
+.compare-picker .compare-picker__item input{flex:none;width:20px;height:20px;margin:0;accent-color:#b3543a}
+.compare-picker .compare-picker__item:has(input:checked){border:0;background:none;color:#9d4a32;font-weight:700}
+.compare-picker .compare-picker__item:has(input:disabled){color:#b5ad9d}
+.compare-picker .compare-picker__item:has(input:focus-visible){outline:2px solid #ee8466;outline-offset:2px;border-radius:6px}
+/* サニー先生のひとことは、箱ではなく吹き出しで、真ん中に */
+.cmp__say{justify-content:center;margin:0 auto 20px}
+.cmp__say .mini-say__bubble{text-align:left}
+.compare-picker .cmp__hint{text-align:center;text-wrap:balance}
+/* チェック欄は、かたまりごと真ん中へ。スマホは1列にして、左端をそろえる */
+.compare-picker .compare-picker__list{justify-content:center}
+@media (max-width:640px){
+  .compare-picker .compare-picker__list{display:grid;grid-template-columns:1fr;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;gap:2px}
+}
