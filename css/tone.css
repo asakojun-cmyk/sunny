@@ -449,3 +449,21 @@ details.disclosure > summary:focus-visible { outline: 3px solid #ee8466; outline
 details.disclosure[open] { padding: 8px 18px 14px !important; background: var(--tone-cream) !important; }
 details.disclosure[open] > summary { margin-bottom: 6px; }
 @media (max-width: 640px) { details.disclosure .disclosure__list > div { flex-direction: column; gap: 0; padding: 6px 0; } details.disclosure .disclosure__list dt { width: auto; } }
+
+/* ---------- 24. 白書・調査のページ: ○(正しい文)と×(不適切とされた文→正しい内容)を分けて見せる(2026-10-13) ---------- */
+.shiryo__list { list-style: none; padding-left: 0; }
+.shiryo__item { position: relative; padding-left: 2em; }
+.shiryo__mark { position: absolute; left: 0; top: .15em; display: inline-grid; place-items: center; width: 1.45em; height: 1.45em; border-radius: 50%; background: #eaf2f3; color: #33506b; font-size: .875rem; font-weight: 700; line-height: 1; }
+.shiryo__mark--ng { background: #fbe6de; color: #b3543a; }
+li > .shiryo__mark { position: static; margin-right: .4em; }
+.shiryo__item > .shiryo__mark { position: absolute; margin: 0; }
+.shiryo__ng { display: block; color: #6f6a58; text-decoration: line-through; text-decoration-color: rgba(179,84,58,.55); }
+.shiryo__fix { display: block; margin-top: 6px; padding: 8px 12px; border-radius: 10px; background: #fffdf8; }
+.shiryo__fix b { margin-right: .5em; color: #b3543a; font-size: .8125rem; }
+.shiryo__mark { width: 1.7em; height: 1.7em; font-size: .9375rem; top: .1em; }
+.shiryo__item { padding-left: 2.3em; }
+.container--article .shiryo__list { padding-left: 0 !important; margin-left: 0 !important; }
+/* 見出しの横についていた小さな絵(.hani__icon)も、ほかの見出しと同じく上に1つだけ */
+.site-main h2 > .hani__icon { display: block; margin: 0 auto 12px; }
+.site-main h2:has(> .hani__icon) { display: block; text-align: center; }
+.site-main h2:has(> .hani__icon)::before { display: none !important; }
