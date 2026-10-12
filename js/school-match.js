@@ -166,7 +166,7 @@
     "nextBtn": "公式サイトを開く",
     "ad": "広告",
     "kindDefault": "説明会・<wbr>資料請求は<wbr>公式サイトで<wbr>確認",
-    "nextAd": "「広告」と<wbr>付いた<wbr>ボタンは<wbr>紹介リンクです。<wbr>申込みが<wbr>あると、<wbr>運営者が<wbr>報酬を<wbr>受け取ることがあります。<wbr>学校の<wbr>並び順や<wbr>内容は、<wbr>広告の<wbr>有無で<wbr>変えていません。",
+    "nextAd": "学校の<wbr>公式サイトへの<wbr>ボタンは<wbr>紹介リンク(広告)です。<wbr>申込みが<wbr>あると、<wbr>運営者が<wbr>報酬を<wbr>受け取ることがあります。<wbr>学校の<wbr>並び順や<wbr>内容は、<wbr>広告の<wbr>有無で<wbr>変えていません。",
     "nextAll": "{all}校すべての<wbr>申込み先を<wbr>見る",
     "nextTable": "この{n}校だけを<wbr>比較表で<wbr>見る",
     "nextKai": "運営者が<wbr>参加した<wbr>説明会の<wbr>様子を<wbr>読む",
@@ -516,7 +516,7 @@
       (s.page || !s.go
         ? '<a class="sm-school__go" href="/schools/' + s.slug + '/" data-ev="match_school_' + s.slug + '">' + T.more + ARW + "</a>"
         : '<a class="sm-school__go" href="' + esc(s.go.href) + '" rel="' + esc(s.go.rel) + '" target="_blank" data-ev="match_site_' + s.slug + '">' +
-          T.site + (s.go.ad ? "<small> " + T.ad + "</small>" : "") + ARW + "</a>") +
+          T.site + "" + ARW + "</a>") +
       (date ? '<p class="sm-school__date">' + T.checked + " " + date.html + "</p>" : "") +
       "</div></li>"
     );
@@ -538,7 +538,7 @@
       s.slug +
       '">' +
       T.nextBtn +
-      (g.ad ? "<small>" + T.ad + "</small>" : "") +
+      "" +
       "</a>" +
       (g.px ? '<img src="' + esc(g.px) + '" width="1" height="1" alt="" style="position:absolute;border:0">' : "") +
       "</li>"
