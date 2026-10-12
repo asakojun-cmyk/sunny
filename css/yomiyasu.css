@@ -965,6 +965,21 @@ h2:has(> .sec-illust){overflow:hidden}
   body.is-home .lp-river .lp-river__src{font-size:.75rem;line-height:1.7;margin:0 0 10px}
   body.is-home .lp-river .lp-river__link{margin:14px 0 0}
   body.is-home .lp-river .lp-river__body img,body.is-home .lp-river .lp-river__body figure{margin-left:0;margin-right:0}
+  /* ---- 2026-10-12 スマホだけ: 1つずつ白いカードに。番号は出さず、点線で次のカードへつなぐ。中はセンターぞろえ ---- */
+  body.is-home .lp-river .lp-river__item{position:relative;display:block;margin:0 0 40px;padding:28px 20px 20px;background:#fff;border-radius:22px}
+  body.is-home .lp-river .lp-river__body h3{display:block;margin:0 0 14px;font-size:1.1875rem;line-height:1.55;letter-spacing:.03em;text-align:center;text-wrap:balance}
+  body.is-home .lp-river .lp-river__body h3::before{display:none}
+  body.is-home .lp-river .lp-river__item:not(:last-child)::after{content:"";display:block;position:absolute;left:calc(50% - 2px);top:calc(100% + 9px);width:4px;height:22px;background:radial-gradient(circle,#b9c2b6 1.6px,transparent 2px) center top/4px 8px repeat-y}
+  body.is-home .lp-river .lp-river__body p{font-size:.9375rem;line-height:1.95;text-align:center;text-wrap:balance}
+  body.is-home .lp-river .lp-river__body .lp-river__src{font-size:.75rem;line-height:1.7;margin:0;text-align:center}
+  body.is-home .lp-river .lp-river__good{width:fit-content;max-width:100%;margin:4px auto 14px;gap:8px;text-align:left}
+  body.is-home .lp-river .lp-river__good li{font-size:.9375rem;letter-spacing:.02em;line-height:1.8}
+  body.is-home .lp-river .lp-river__body figure{margin:0 0 14px !important}
+  body.is-home .lp-river .lp-river__body figure img{border-radius:14px}
+  body.is-home .lp-river .lp-river__body .lp-river__link{margin:16px 0 0}
+  body.is-home .lp-river .lp-river__link a{position:relative;display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 36px;text-align:center;border:0;border-radius:16px;background:#f7f3ea;font-size:.875rem;letter-spacing:.02em;line-height:1.55;text-decoration:none !important}
+  body.is-home .lp-river .lp-river__link a>.nb{display:contents}
+  body.is-home .lp-river .lp-river__link .arw{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:.6875rem}
 
   /* ---- 理論家図鑑: 一覧までを短く、そろえ方を1つに ---- */
   .library-hero--lunch .library-hero__story{padding:22px 22px 26px;text-align:center}
@@ -999,3 +1014,6 @@ h2:has(> .sec-illust){overflow:hidden}
 .tool-try__list .arw{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:#b3543a;font-size:.75rem}
 .tool-try__list a:focus-visible{outline:3px solid #ee8466;outline-offset:3px}
 .tool-try .more-links__note{margin-top:14px}
+/* スマホのセンターぞろえ用の改行(.sp-br): 文の切れ目で行を変える。PCと、ごく狭い画面(360px未満)では効かせない */
+.sp-br{display:none}
+@media (min-width:360px) and (max-width:760px){body.is-home .lp-river .sp-br{display:inline}}
