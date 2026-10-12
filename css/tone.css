@@ -350,3 +350,19 @@ html { overflow-x: clip; }
 .daily-card__result { text-align: center; }
 /* 札(今日の1問 など)は、下のボタンと同じテラコッタ色に */
 .daily-card__label { color: #ef8064; font-weight: 700; }
+
+/* ---------- 17. 体験記: 背景の色は、見出しごとではなく「話のまとまり」ごとに(2026-10-12) ----------
+   見出し1つごとに色が変わると細切れに見えるため。data-band(色)と data-band-pos(まとまりの最初・途中・最後)で指定する。
+   波の境目は、まとまりの最初の上と、最後の下にだけつく */
+.container--article:not(.privacy-page) .review-section[data-band]:nth-of-type(n) { --band: transparent; }
+.container--article:not(.privacy-page) .review-section[data-band="sky"]:nth-of-type(n) { --band: #eaf2f3; }
+.container--article:not(.privacy-page) .review-section[data-band="green"]:nth-of-type(n) { --band: #eef4dd; }
+.container--article:not(.privacy-page) .review-section[data-band-pos="mid"]::before { -webkit-mask: none; mask: none; }
+.container--article:not(.privacy-page) .review-section[data-band-pos="start"]::before {
+  -webkit-mask: var(--wave-top) center top / 100% var(--wave-h) no-repeat, linear-gradient(#000, #000) center bottom / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
+          mask: var(--wave-top) center top / 100% var(--wave-h) no-repeat, linear-gradient(#000, #000) center bottom / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
+}
+.container--article:not(.privacy-page) .review-section[data-band-pos="end"]::before {
+  -webkit-mask: var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat, linear-gradient(#000, #000) center top / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
+          mask: var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat, linear-gradient(#000, #000) center top / 100% calc(100% - var(--wave-h) + 1px) no-repeat;
+}
