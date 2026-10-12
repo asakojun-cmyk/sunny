@@ -330,3 +330,16 @@ html { overflow-x: clip; }
 .exam-tool__badge { background: #f5f2eb; }
 .game-card-link__emoji { background: #f5f2eb; box-shadow: none; }
 .keifu-compare__label { background: #f5f2eb !important; }
+
+/* ---------- 15. スマホ: 試験対策のゲームカード3枚は、横にスクロール(2026-10-12) ----------
+   たてに3枚並ぶと長いので横に並べる。次のカードが少し見えるようにして、続きがあると分かるようにする */
+@media (max-width: 760px) {
+  .exam-tools {
+    display: flex; grid-template-columns: none; gap: 12px;
+    margin-inline: calc(50% - 50vw); padding: 4px 20px 14px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .exam-tools::-webkit-scrollbar { display: none; }
+  .exam-tool { flex: 0 0 76%; scroll-snap-align: start; }
+}
