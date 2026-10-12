@@ -219,3 +219,51 @@
 .term-header--theorist { flex-direction: column !important; align-items: center !important; gap: 14px; }
 /* ---------- 一覧ページの会話(モヤンとサニー先生): 画面の端と端に離れないよう、真ん中の列にまとめる ---------- */
 .container > .chara-guide { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+/* ---------- 2026-10-12 記事の中の色の帯(空色・若草色)も、境目を「なみなみ」に ----------
+   これまでは帯の上下がまっすぐだった。トップなどの境目(.wave-edge)と同じ波の形にそろえる。
+   帯は ::before で画面の端まで敷き、上と下の端だけ波の形にくりぬく */
+html { overflow-x: clip; }
+:root {
+  --wave-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 36 C 120 36 120 22 240 22 C 360 22 360 36 480 36 C 600 36 600 22 720 22 C 840 22 840 36 960 36 C 1080 36 1080 22 1200 22 C 1320 22 1320 36 1440 36 L1440 60 L0 60 Z'/%3E%3C/svg%3E");
+  --wave-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 24 C 120 24 120 38 240 38 C 360 38 360 24 480 24 C 600 24 600 38 720 38 C 840 38 840 24 960 24 C 1080 24 1080 38 1200 38 C 1320 38 1320 24 1440 24 L1440 0 L0 0 Z'/%3E%3C/svg%3E");
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) {
+  position: relative; z-index: 0;
+  background: transparent; box-shadow: none; clip-path: none;
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section)::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw;
+  background: var(--band);
+  --wave-h: 52px;
+  -webkit-mask: var(--wave-top) center top / 100% var(--wave-h) no-repeat,
+                var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat,
+                linear-gradient(#000, #000) center / 100% calc(100% - var(--wave-h) * 2 + 2px) no-repeat;
+          mask: var(--wave-top) center top / 100% var(--wave-h) no-repeat,
+                var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat,
+                linear-gradient(#000, #000) center / 100% calc(100% - var(--wave-h) * 2 + 2px) no-repeat;
+}
+@media (max-width: 760px) {
+  .container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section)::before { --wave-h: 32px; }
+}
+
+/* ---------- 図鑑の入口(ことば図鑑・理論家図鑑)の挿絵も、上と下の境目を「なみなみ」に ---------- */
+.library-hero { position: relative; }
+.library-hero::after {
+  content: ""; position: absolute; z-index: 2; pointer-events: none;
+  top: -1px; left: 0; right: 0; height: 52px; inset-block-end: auto; background: #f5f2eb;
+  -webkit-mask: var(--wave-bottom) center / 100% 100% no-repeat; mask: var(--wave-bottom) center / 100% 100% no-repeat;
+}
+@media (max-width: 760px) { .library-hero::after { height: 32px; } }
+@media (max-width: 640px) {
+  /* スマホ: 挿絵の下の白い文章の箱と、その下の検索の箱の境目 */
+  .library-hero__story { position: relative; top: auto; left: auto; right: auto; }
+  .library-hero__story::before, .library-counter::before {
+    content: ""; position: absolute; left: 0; right: 0; top: -31px; height: 32px; pointer-events: none;
+    -webkit-mask: var(--wave-top) center / 100% 100% no-repeat; mask: var(--wave-top) center / 100% 100% no-repeat;
+  }
+  .library-hero__story::before { background: #fff; }
+  .library-counter { position: relative; }
+  .library-counter::before { background: #edf4dd; }
+}

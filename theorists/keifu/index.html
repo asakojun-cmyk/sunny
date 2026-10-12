@@ -138,6 +138,36 @@
 
   body { overflow-x:clip; }
 
+  /* ---------- 2026-10-12 ほかのページと見た目をそろえる ----------
+     幅: ばらばらだった幅(500/520/620/780)を、記事の幅ひとつにそろえる
+     色: 大枠ごとに6色あった色を、サイトの色(紺・空色・若草)にまとめる。枠線・左の線・点線はなくす */
+  .keifu-hero__lead, .keifu-explain, .ftpanel__lead, .ft-bg, .ft-memo, .ft-arrow__text { max-width:none; }
+  .keifu-hero__lead { max-width:34em; font-size:1rem; }
+  .ftwrap { width:auto; margin-left:0; transform:none; }
+  .keifu-hint { font-size:.875rem; }
+  .keifu-explain > p, .keifu-explain__note { font-size:1rem; line-height:2; }
+  .keifu-compare__q { font-size:1.05rem; }
+  .keifu-compare__desc { font-size:.95rem; }
+  .keifu-compare__people { font-size:.82rem; }
+  .keifu-compare__label { font-size:.82rem; }
+  .keifu-compare__card { border:0; padding:22px 20px; }
+  .keifu-compare__card--career { background:#eef4dd; }
+  .keifu-compare__card--coun { background:#eaf2f3; }
+  .keifu-compare__card--career .keifu-compare__label, .keifu-compare__card--coun .keifu-compare__label { color:#33506b; }
+  .keifu-explain__note { background:transparent; padding:0; }
+  .ftab, .ftpanel { --c:#a9c0cf !important; --d:#33506b !important; --s:#eaf2f3 !important; }
+  .ftab { border:0; background:#fffdf8; }
+  .ftab:hover { background:#eaf2f3; }
+  .ftab[aria-selected="true"], .ftab[aria-selected="true"]:hover { background:var(--d); color:#fff; }
+  .ft-tree { border:0; padding:28px 10px 24px; }
+  .ft-level { gap:8px; }
+  .ft-bg { border-left:0; border-radius:16px; background:#fffdf8; padding:20px 22px; }
+  .ft-memo { border:0; background:#fffdf8; }
+  .ft-arrow__text { border:0; }
+  .ft-note { border-radius:14px; }
+  .keifu-summary { border:0; background:#fffdf8; }
+
+
   @media (max-width:430px) {
     .keifu-stage { padding:22px 16px 20px; }
     .keifu-people { gap:6px; }
