@@ -5515,3 +5515,16 @@ body:not(.is-home) .picnic-meadow .pm-sunny{left:50%;transform:translateX(-50%)}
 .picnic-meadow .pm-bush{left:calc(50% - 96px);right:auto;width:42px;bottom:-4px}
 .picnic-meadow .pm-flowerr{left:calc(50% + 58px);right:auto;width:50px;bottom:-2px}
 .picnic-meadow .pm-wagon{left:calc(50% + 122px);right:auto;width:80px;bottom:0}
+
+/* 2026-10-12 文の中のリンク(.txt-link): 色と太字で、リンクだとすぐわかるように。
+   つけるのは scripts/mark-text-links.py(本文にリンクを足したら、もう一度実行する) */
+.site-main a.txt-link, main a.txt-link,
+.site-main :is(.gk-themes, .hani__pages) a {
+  color: #b3543a !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 4px !important;
+}
+.site-main a.txt-link:hover, main a.txt-link:hover { color: #ee8466 !important; }
+.site-main a.txt-link .arw, main a.txt-link .arw { color: inherit; }

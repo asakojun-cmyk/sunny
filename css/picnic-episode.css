@@ -183,3 +183,16 @@ main~footer{--bg:#e9f3f7}
 .episode::before,.okawari::before,.rainbow::before,.game::before,.basket::before,.farewell::before,main~footer::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:32px;background:var(--bg);
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 37 C 180 37 180 23 360 23 C 540 23 540 37 720 37 C 900 37 900 23 1080 23 C 1260 23 1260 37 1440 37 L1440 60 L0 60 Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 37 C 180 37 180 23 360 23 C 540 23 540 37 720 37 C 900 37 900 23 1080 23 C 1260 23 1260 37 1440 37 L1440 60 L0 60 Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
 @media (min-width:761px){.episode::before,.okawari::before,.rainbow::before,.game::before,.basket::before,.farewell::before,main~footer::before{height:52px}}
+
+/* 2026-10-12 文の中のリンク(.txt-link): 色と太字で、リンクだとすぐわかるように。
+   つけるのは scripts/mark-text-links.py(本文にリンクを足したら、もう一度実行する) */
+.site-main a.txt-link, main a.txt-link,
+.site-main :is(.gk-themes, .hani__pages) a {
+  color: #b3543a !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 4px !important;
+}
+.site-main a.txt-link:hover, main a.txt-link:hover { color: #ee8466 !important; }
+.site-main a.txt-link .arw, main a.txt-link .arw { color: inherit; }

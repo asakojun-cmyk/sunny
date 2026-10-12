@@ -409,3 +409,15 @@ html { overflow-x: clip; }
   .library-hero .library-hero__story { text-align: center; }
   .library-hero__story p:last-child { font-size: clamp(.875rem, 4.3vw, 1.0625rem); }
 }
+/* 2026-10-12 文の中のリンク(.txt-link): 色と太字で、リンクだとすぐわかるように。
+   つけるのは scripts/mark-text-links.py(本文にリンクを足したら、もう一度実行する) */
+.site-main a.txt-link, main a.txt-link,
+.site-main :is(.gk-themes, .hani__pages) a {
+  color: #b3543a !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 4px !important;
+}
+.site-main a.txt-link:hover, main a.txt-link:hover { color: #ee8466 !important; }
+.site-main a.txt-link .arw, main a.txt-link .arw { color: inherit; }
