@@ -320,3 +320,13 @@ html { overflow-x: clip; }
 .exam-tool__badge { position: static; order: -1; align-self: center; margin: 0 0 2px; }
 .exam-tool__img { width: 44px; height: 44px; align-self: center; }
 .game-card-link__emoji { width: 52px; height: 52px; font-size: 26px; }
+
+/* ---------- 14. カードの色は、ぜんぶ白に(2026-10-12) ----------
+   黄・青・緑・ピンクと色が分かれていたカードを、サイトの白(#fffdf8)にそろえる。色つきの枠線もなくす */
+.exam-tool, .exam-tool--gakka, .exam-tool--ronjutsu, .exam-tool--mensetsu,
+.game-list .game-card-link:nth-child(n), .game-card-link,
+.note-dl, .term-next__card,
+.keifu-compare__card--career, .keifu-compare__card--coun { background: #fffdf8 !important; border-color: transparent !important; }
+.exam-tool__badge { background: #f5f2eb; }
+.game-card-link__emoji { background: #f5f2eb; box-shadow: none; }
+.keifu-compare__label { background: #f5f2eb !important; }
