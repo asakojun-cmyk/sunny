@@ -214,3 +214,132 @@
     transition-duration: .001ms !important;
   }
 }
+
+/* ---------- 理論家ページの見出し: 似顔絵と名前を、たてに並べて真ん中に(横並びだと全体が左に寄って見えた) ---------- */
+.term-header--theorist { flex-direction: column !important; align-items: center !important; gap: 14px; }
+/* ---------- 一覧ページの会話(モヤンとサニー先生): 画面の端と端に離れないよう、真ん中の列にまとめる ---------- */
+.container > .chara-guide { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+/* ---------- 2026-10-12 記事の中の色の帯(空色・若草色)も、境目を「なみなみ」に ----------
+   これまでは帯の上下がまっすぐだった。トップなどの境目(.wave-edge)と同じ波の形にそろえる。
+   帯は ::before で画面の端まで敷き、上と下の端だけ波の形にくりぬく */
+html { overflow-x: clip; }
+:root {
+  --wave-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 36 C 120 36 120 22 240 22 C 360 22 360 36 480 36 C 600 36 600 22 720 22 C 840 22 840 36 960 36 C 1080 36 1080 22 1200 22 C 1320 22 1320 36 1440 36 L1440 60 L0 60 Z'/%3E%3C/svg%3E");
+  --wave-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 24 C 120 24 120 38 240 38 C 360 38 360 24 480 24 C 600 24 600 38 720 38 C 840 38 840 24 960 24 C 1080 24 1080 38 1200 38 C 1320 38 1320 24 1440 24 L1440 0 L0 0 Z'/%3E%3C/svg%3E");
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) {
+  position: relative; z-index: 0;
+  background: transparent; box-shadow: none; clip-path: none;
+}
+.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section)::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw;
+  background: var(--band);
+  --wave-h: 52px;
+  -webkit-mask: var(--wave-top) center top / 100% var(--wave-h) no-repeat,
+                var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat,
+                linear-gradient(#000, #000) center / 100% calc(100% - var(--wave-h) * 2 + 2px) no-repeat;
+          mask: var(--wave-top) center top / 100% var(--wave-h) no-repeat,
+                var(--wave-bottom) center bottom / 100% var(--wave-h) no-repeat,
+                linear-gradient(#000, #000) center / 100% calc(100% - var(--wave-h) * 2 + 2px) no-repeat;
+}
+@media (max-width: 760px) {
+  .container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section)::before { --wave-h: 32px; }
+}
+
+/* ---------- 図鑑の入口(ことば図鑑・理論家図鑑)の挿絵も、上と下の境目を「なみなみ」に ---------- */
+.library-hero { position: relative; }
+.library-hero::after {
+  content: ""; position: absolute; z-index: 2; pointer-events: none;
+  top: -1px; left: 0; right: 0; height: 52px; inset-block-end: auto; background: #f5f2eb;
+  -webkit-mask: var(--wave-bottom) center / 100% 100% no-repeat; mask: var(--wave-bottom) center / 100% 100% no-repeat;
+}
+@media (max-width: 760px) { .library-hero::after { height: 32px; } }
+@media (max-width: 640px) {
+  /* スマホ: 挿絵の下の白い文章の箱と、その下の検索の箱の境目 */
+  .library-hero__story { position: relative; top: auto; left: auto; right: auto; }
+  .library-hero__story::before, .library-counter::before {
+    content: ""; position: absolute; left: 0; right: 0; top: -31px; height: 32px; pointer-events: none;
+    -webkit-mask: var(--wave-top) center / 100% 100% no-repeat; mask: var(--wave-top) center / 100% 100% no-repeat;
+  }
+  .library-hero__story::before { background: #fff; }
+  .library-counter { position: relative; }
+  .library-counter::before { background: #edf4dd; }
+}
+
+/* ---------- 10. 見出しの絵は、文字の横ではなく「上」に置く(2026-10-12) ----------
+   絵が文字の左や右につくと、真ん中にそろえた見出しがずれて見えるため。絵は見出しの上に1つだけ */
+.site-main h2 > .sec-illust { float: none; display: block; margin: 0 auto 12px; }
+.site-main h2:has(> .sec-illust)::before { display: none !important; }
+.container--article :is(.guide-section, .review-section, .column-section) > h3 { padding-left: 0; }
+.container--article :is(.guide-section, .review-section, .column-section) > h3::before {
+  position: static; display: block; margin: 0 auto 10px;
+}
+:is(.term-kids, .term-analogy, .term-life, .term-formal, .term-exam-advice, .term-similar, .term-theorists, .term-quiz, .term-exam-points) > .term-section-title {
+  flex-direction: column; gap: 8px;
+}
+.newsflash__body b::before { content: "🎧"; display: block; margin-bottom: 2px; }
+/* 箱の中のタイトル・見出しも、箱の真ん中にそろえる */
+:where(.school-card, .omamori-card, .colcard, .book-card, .obento-card, .facility-card,
+       .review-toc, .review-summary, .gstep, .kyufu-calc, .info-block, .school-kai__voice) :is(h1, h2, h3) { text-align: center; }
+
+/* ---------- 11. 箱の中の「ひとこと説明+項目名 ▶」も、箱の真ん中にそろえる(2026-10-12) ---------- */
+.guide-chips a { text-align: center; padding: 18px 22px; }
+.guide-chips b { display: inline; }
+.guide-chips .arw { position: static; transform: none; margin-left: .35em; }
+@media (max-width: 760px) { .guide-chips a { padding: 14px 18px; } }
+.related__list a { text-align: center; }
+.related__type { margin-right: 0; }
+.related__item-title { display: block; margin-top: 6px; }
+.term-next__card { flex-direction: column; text-align: center; gap: 6px; }
+.term-next__card span { flex: none; min-width: 0; }
+.sm-entry { flex-direction: column; text-align: center; gap: 6px; }
+.sm-entry span { flex: none; }
+.exam-tool { text-align: center; align-items: center; }
+.guide-nextlink, .honest-link { text-align: center; }
+
+/* ---------- 12. 文字の大きさの段を、はっきり分ける(2026-10-12) ----------
+   ページのタイトル(h1) > 大見出し(h2) > 小見出し(h3) > お知らせ・本文 の順に、ひと目で差がわかるように。
+   これまでは h1 が 26px・h2 が 22〜26px・お知らせが 21px と、ほとんど同じ大きさだった */
+.site-main h1:not(.term-header__name):not(.step):not(.obento-hero *):not(.library-hero *) { font-size: 2.125rem !important; line-height: 1.45; }
+.site-main :is(.guide-section, .review-section, .school-section, .column-section, .kwsec) > h2,
+.site-main h2:is(.section-header__title, .term-section-title, .related__title, .school-section__title) { font-size: 1.625rem !important; line-height: 1.5; }
+.site-main :is(.guide-section, .review-section, .column-section) > h3 { font-size: 1.1875rem !important; line-height: 1.6; }
+.newsflash__body b { font-size: 1.0625rem !important; }
+.newsflash__tag { font-size: .875rem; }
+@media (max-width: 760px) {
+  .site-main h1:not(.term-header__name):not(.step):not(.obento-hero *):not(.library-hero *) { font-size: 1.5rem !important; }
+  .site-main :is(.guide-section, .review-section, .school-section, .column-section, .kwsec) > h2,
+  .site-main h2:is(.section-header__title, .term-section-title, .related__title, .school-section__title) { font-size: 1.3125rem !important; }
+  .site-main :is(.guide-section, .review-section, .column-section) > h3 { font-size: 1.125rem !important; }
+  .newsflash__body b { font-size: 1rem !important; }
+}
+
+/* ---------- 13. ゲームのカード: 絵はカードの上・真ん中に、小さめに(2026-10-12) ---------- */
+.exam-tool__badge { position: static; order: -1; align-self: center; margin: 0 0 2px; }
+.exam-tool__img { width: 44px; height: 44px; align-self: center; }
+.game-card-link__emoji { width: 52px; height: 52px; font-size: 26px; }
+
+/* ---------- 14. カードの色は、ぜんぶ白に(2026-10-12) ----------
+   黄・青・緑・ピンクと色が分かれていたカードを、サイトの白(#fffdf8)にそろえる。色つきの枠線もなくす */
+.exam-tool, .exam-tool--gakka, .exam-tool--ronjutsu, .exam-tool--mensetsu,
+.game-list .game-card-link:nth-child(n), .game-card-link,
+.note-dl, .term-next__card,
+.keifu-compare__card--career, .keifu-compare__card--coun { background: #fffdf8 !important; border-color: transparent !important; }
+.exam-tool__badge { background: #f5f2eb; }
+.game-card-link__emoji { background: #f5f2eb; box-shadow: none; }
+.keifu-compare__label { background: #f5f2eb !important; }
+
+/* ---------- 15. スマホ: 試験対策のゲームカード3枚は、横にスクロール(2026-10-12) ----------
+   たてに3枚並ぶと長いので横に並べる。次のカードが少し見えるようにして、続きがあると分かるようにする */
+@media (max-width: 760px) {
+  .exam-tools {
+    display: flex; grid-template-columns: none; gap: 12px;
+    margin-inline: calc(50% - 50vw); padding: 4px 20px 14px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .exam-tools::-webkit-scrollbar { display: none; }
+  .exam-tool { flex: 0 0 76%; scroll-snap-align: start; }
+}

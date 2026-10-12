@@ -106,7 +106,21 @@
   .keifu-table th { background:var(--color-yellow-light); padding:10px; text-align:left; font-weight:700; white-space:nowrap; }
   .keifu-table td { padding:10px; border-bottom:1px solid var(--color-border); vertical-align:top; line-height:1.7; }
 
-  body, .site-main, .container--article { overflow-x:hidden; }
+  body { overflow-x:clip; }
+
+  /* ---------- 2026-10-12 ほかのページと見た目をそろえる(キャリア理論の系譜と同じ方針) ----------
+     幅: 記事の幅ひとつにそろえる / 色: 4色あった色をサイトの色(紺・空色)にまとめ、枠線はなくす */
+  [style*="--stage-c"] { --stage-c:#a9c0cf !important; --stage-tc:#fff !important; --stage-tc2:#33506b !important; --stage-dark:#33506b !important; --stage-soft:#eaf2f3 !important; }
+  .keifu-hero__lead { max-width:34em; font-size:1rem; }
+  .keifu-hint { font-size:.875rem; }
+  .keifu-flow { max-width:none; }
+  .keifu-branch { width:auto; margin-left:0; transform:none; }
+  .keifu-relation { max-width:34em; font-size:.95rem; line-height:1.9; padding:14px 18px; }
+  .keifu-stage { border:0; background:#fffdf8; box-shadow:none; padding:30px 28px 28px; }
+  .keifu-stage__era { background:#33506b; color:#fff; }
+  .keifu-stage__bg, .keifu-stage__desc { font-size:1rem; line-height:2; }
+  .keifu-summary { border:0; background:#fffdf8; }
+
 
   @media (max-width:720px) {
     /* 狭い画面では折り返しを許可し、横一直線のつなぎ線は隠す */
