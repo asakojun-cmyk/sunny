@@ -884,6 +884,8 @@ h2:has(> .sec-illust){overflow:hidden}
 .newsflash__icon{display:none}
 .newsflash__body b{display:block;font-size:1.3125rem;line-height:1.55;letter-spacing:.04em;text-wrap:balance}
 .newsflash__body b::before{content:"🎧 "}
+.newsflash--pen .newsflash__body b::before{content:"✏️ "}
+.newsflash__date{display:block;font-size:.8125rem;font-weight:700;letter-spacing:.08em;color:#7a7468}
 .newsflash__body small{display:block;margin-top:4px;font-size:.875rem;font-weight:500;line-height:1.8;color:#7a7468;text-wrap:balance}
 .newsflash__go{margin-top:6px;color:#b3543a;font-size:.9375rem;font-weight:700;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
 .newsflash:hover .newsflash__go{color:#ee8466}

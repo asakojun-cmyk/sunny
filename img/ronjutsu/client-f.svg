@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Fさん">
+<defs><clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath>
+<filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 -.1" result="w"/><feComposite in="w" in2="SourceGraphic" operator="in" result="t"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="t"/></feMerge></filter></defs>
+<g clip-path="url(#c)" filter="url(#g)">
+<circle cx="100" cy="100" r="96" fill="#ece8f6"/>
+
+<path d="M28 206 Q30 152 72 146 L128 146 Q170 152 172 206Z" fill="#3a4256"/>
+<path d="M84 146 L100 168 L116 146 L108 144 L92 144Z" fill="#fffdf8"/><path d="M96 152 L104 152 L106 180 L100 187 L94 180Z" fill="#6f7fa3"/>
+<rect x="88" y="126" width="24" height="26" rx="10" fill="#f1d2b8"/>
+<ellipse cx="57" cy="96" rx="7" ry="9" fill="#f8dfc8"/><ellipse cx="143" cy="96" rx="7" ry="9" fill="#f8dfc8"/>
+<ellipse cx="100" cy="92" rx="43" ry="47" fill="#f8dfc8"/>
+<path d="M52 94 Q44 40 100 36 Q156 40 148 94 Q146 76 134 70 Q126 78 112 68 Q102 80 88 68 Q76 80 66 70 Q56 78 52 94Z" fill="#5a4636"/>
+<circle cx="76" cy="108" r="8" fill="#ef8064" opacity=".22"/><circle cx="124" cy="108" r="8" fill="#ef8064" opacity=".22"/>
+<path d="M69 80 L87 73" stroke="#5a4636" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M113 73 L131 80" stroke="#5a4636" stroke-width="4" stroke-linecap="round" fill="none"/>
+<circle cx="80" cy="93" r="4.2" fill="#2d3a5c"/><circle cx="120" cy="93" r="4.2" fill="#2d3a5c"/>
+<path d="M91 119 Q100 112 109 119" stroke="#b9715c" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+<path d="M150 62 Q157 74 150 79 Q143 74 150 62Z" fill="#8fc3e6"/>
+
+</g></svg>
