@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-12",
+ "checked": "2026-10-13",
  "schools": {
   "chiiki": {
    "name": "地域連携プラットフォーム",
@@ -228,6 +228,26 @@
     "https://www.recurrent.co.jp/cc/course/": {
      "snippets": [
       "合格保証制度&trade;のついた教科（学科理論マスターが対象）を受講し、万一本試験に不合格の場合は翌期に開講される対象教科の受講料を免除いたします。"
+     ],
+     "fails": 0
+    }
+   }
+  },
+  "cmca": {
+   "name": "CMCA",
+   "pages": {
+    "https://cmcajapan.com/lp/setsumeikai": {
+     "snippets": [
+      "※早期割引キャンペーンを適用するには、無料説明会のご参加が条件となります。",
+      "割引キャンペーン実施中！",
+      "日まで早期割引",
+      "金利手数料無料キャンペーン"
+     ],
+     "fails": 0
+    },
+    "https://cmcajapan.net/": {
+     "snippets": [
+      "早期にお申し込みの方には割引制度もあります（詳しくは説明会でご説明いたします）。"
      ],
      "fails": 0
     }
