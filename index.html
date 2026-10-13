@@ -221,6 +221,9 @@
 .picnic-hero--note .loop-1{animation-delay:22s}.picnic-hero--note .loop-2{animation-delay:26.8s}.picnic-hero--note .loop-3{animation-delay:31.6s}.picnic-hero--note .loop-4{animation-delay:36.4s}.picnic-hero--note .loop-5{animation-delay:41.2s}.picnic-hero--note .loop-6{animation-delay:46s}
 @media(max-width:640px){.picnic-stage .ps-note,.picnic-stage .ps-ball,.picnic-stage .ps-bag,.picnic-stage .ps-tent,.picnic-stage .ps-bushl,.picnic-stage .ps-bushr{display:none}}
 @media(max-width:640px){.picnic-hero--note .picnic-stage:before{width:165%;bottom:-96px}}
+/* 2026-10-13 吹き出しをなくしたので、ピクニックの絵を上に寄せる(吹き出し用に空けていた空を詰める) */
+.picnic-hero--note.is-done .picnic-stage{margin-top:-44px}
+@media(max-width:640px){.picnic-hero--note.is-done .picnic-stage{margin-top:-14px}}
 .lp-me__card{background:#fff;border-radius:22px;padding:22px 20px;margin:0 auto 16px;max-width:680px;box-shadow:0 4px 0 #ece0c4;text-align:left}
 .lp-me__card--sub{background:#f6f9ee;box-shadow:none}
 .lp-me__q{margin:0 0 12px;line-height:2}
@@ -301,7 +304,10 @@
         <p class="hero-two__mc">学校を<wbr>探している<wbr>方へ</p>
         <a class="picnic-button picnic-button--line" href="#school-match" data-ev="top_hero_match">30秒で<wbr>合う<wbr>学校を<wbr>さがす</a>
       </div>
-      <p class="hero-two__sub"><a href="./exam/" data-ev="top_hero_exam">勉強中・試験前の<wbr>方は、<wbr>試験対策へ <span class="arw" aria-hidden="true">▶︎</span></a></p>
+      <div class="hero-two__col">
+        <p class="hero-two__mc">勉強中・<wbr>試験前の<wbr>方へ</p>
+        <a class="picnic-button picnic-button--line" href="./exam/" data-ev="top_hero_exam">試験対策を<wbr>する</a>
+      </div>
     </div>
     </div>
   </div>
@@ -327,24 +333,6 @@
     <img class="ps ps-bushl" src="./img/parts/24_bush_lower_left.png" alt="">
     <img class="ps ps-flowerr" src="./img/parts/25_flowers_right_group.png" alt="">
     <img class="ps ps-bushr" src="./img/parts/26_bush_lower_right.png" alt="">
-    <div class="stage-balloons" aria-hidden="true">
-      <p class="say say--moyan intro" style="--t:.8s;--d:3.6s"><b>モヤン</b><wbr>仕事、<wbr>辞めたいなぁ。<wbr>このままで<wbr>いいのかなぁ？</p>
-      <p class="say say--sunny intro" style="--t:4.6s;--d:3s"><b>サニー先生</b><wbr>どうしたの？<wbr>　も<wbr>やん？</p>
-      <p class="say say--moyan intro" style="--t:7.8s;--d:4.6s"><b>モヤン</b><wbr>仕事に<wbr>不満は<wbr>ないんだけど、<wbr>何だか<wbr>このままで<wbr>いいのかなって<wbr>悩み始めたの……。</p>
-      <p class="say say--sunny intro" style="--t:12.6s;--d:5s"><b>サニー先生</b><wbr>そうなんだね。<wbr>キャリアコンサルタントに<wbr>相談してみた？</p>
-      <p class="say say--moyan intro" style="--t:17.8s;--d:3.4s"><b>モヤン</b><wbr>キャリアコンサルタント？<wbr>　何それ？</p>
-      <p class="say say--moyan say-m1"><b>モヤン</b><wbr>キャリアコンサルタントって、<wbr>どんな<wbr>仕事なの？</p>
-      <p class="say say--moyan say-m2"><b>モヤン</b><wbr>ボクにも、<wbr>できるのかなぁ……。</p>
-      <p class="say say--sunny say-s1"><b>サニー先生</b><wbr>大丈夫。</p>
-      <p class="say say--sunny say-s2"><b>サニー先生</b><wbr>知らないまま、<wbr>来ていいよ。</p>
-      <p class="say say--sunny say-s3"><b>サニー先生</b><wbr>いいところも、<wbr>よくない<wbr>ところも、<wbr>正直に<wbr>話すね。</p>
-      <p class="say say--moyan loop loop-1"><b>モヤン</b><wbr>シャインと<wbr>スーパーって、<wbr>何を<wbr>した<wbr>人……？</p>
-      <p class="say say--sunny loop loop-2"><b>サニー先生</b><wbr>大丈夫。<wbr>お弁当を<wbr>食べながら、<wbr>本人に<wbr>聞いてみよう。</p>
-      <p class="say say--moyan loop loop-3"><b>モヤン</b><wbr>過去問を<wbr>読んでいたら、<wbr>眠くなってきた……。</p>
-      <p class="say say--sunny loop loop-4"><b>サニー先生</b><wbr>そんな<wbr>日は、<wbr>図書館で<wbr>「ことば」から<wbr>調べてみよう。</p>
-      <p class="say say--moyan loop loop-5"><b>モヤン</b><wbr>労働法や<wbr>統計も、<wbr>覚えるの……？</p>
-      <p class="say say--sunny loop loop-6"><b>サニー先生</b><wbr>今日の<wbr>ぶんだけで<wbr>大丈夫。<wbr>少し<wbr>ずつ<wbr>持ち帰ろう。</p>
-    </div>
   </div>
 </section>
 
