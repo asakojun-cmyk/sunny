@@ -1,234 +1,2196 @@
 {
-  "itemOrder": [
+ "version": 2,
+ "updatedAt": "2026-10-13",
+ "about": "養成講習7校の、公式情報だけを集めたデータ。口コミや推測は入れない。statusは verified(公式で確認) / partial(一部だけ確認) / unverified(未確認) / not_stated(公式に記載なし)。originが「比較表」の項目は schools/compare/ から写したもので、出典URLは記録が残っていない。recheck は、後日の読み直しで比較表と食いちがった所。",
+ "itemGroups": [
+  {
+   "name": "費用",
+   "items": [
+    "受講料金",
+    "入学金",
+    "教材費",
+    "割引・特典",
+    "給付金対象の有無",
+    "給付金の指定番号",
+    "ほかに使える補助",
+    "試験対策が料金に含まれるか"
+   ]
+  },
+  {
+   "name": "支払いとキャンセル",
+   "items": [
+    "支払い方法",
+    "分割払い・教育ローン",
+    "キャンセル・返金"
+   ]
+  },
+  {
+   "name": "受け方・日程",
+   "items": [
     "受講形式",
     "オンライン完結の可否",
     "通学拠点",
     "受講期間",
     "総学習時間",
-    "受講料金",
-    "入学金",
-    "教材費",
-    "給付金対象の有無",
     "平日・土日・夜間コース",
+    "直近の開講",
+    "申込みの締切",
+    "受講に必要な環境"
+   ]
+  },
+  {
+   "name": "休んだとき",
+   "items": [
     "振替制度",
+    "欠席の上限と扱い",
+    "遅刻・早退・中座の扱い",
+    "子育て中の通いやすさ"
+   ]
+  },
+  {
+   "name": "授業の中身",
+   "items": [
     "クラス規模",
+    "定員・最少開講人数",
     "グループワーク",
     "ロールプレイ",
     "課題の提出方法",
     "修了条件",
-    "試験対策(学科・論述・面接)",
-    "試験対策が料金に含まれるか",
+    "試験対策(学科・論述・面接)"
+   ]
+  },
+  {
+   "name": "資格を取ったあと",
+   "items": [
     "資格取得後の支援",
     "卒業生コミュニティ",
     "就職支援",
-    "独立・副業支援",
-    "子育て中の通いやすさ(振替・録画など)",
-    "情報確認日"
-  ],
-  "schools": [
-    {
-      "slug": "chiiki-renkei-platform",
-      "name": "一般社団法人地域連携プラットフォーム",
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE",
-      "informationStatus": "partially_verified",
-      "checkedAt": "2026-07-11",
-      "isPr": true,
-      "items": {
-        "受講形式": "オンライン(ライブ) / 通学+オンライン",
-        "オンライン完結の可否": "可(コースによる。要確認)",
-        "通学拠点": "あり(場所は公式サイトで確認)",
-        "受講期間": "約0.5〜3ヶ月(コースにより異なる)",
-        "総学習時間": "ライブ講習80時間(総時間は未確認)",
-        "受講料金": "297,000円",
-        "入学金": "なし",
-        "教材費": "受講料に込み",
-        "給付金対象の有無": "対象講座あり(自己負担額は個人の条件により異なる)",
-        "平日・土日・夜間コース": "土曜・日曜・祝日コース / 平日コース / 午前・午後・夜間コース",
-        "振替制度": "Zoom講習80時間のうち16時間まで無料で振替可(公式サイト記載)",
-        "クラス規模": "1コース20名(公式サイト記載)",
-        "グループワーク": "講習内で実施(形式は公式サイトで確認)",
-        "ロールプレイ": "Zoomでのライブ講習内で実施(詳細な時間配分は未確認)",
-        "課題の提出方法": "通信添削課題(すべて提出・合格が修了要件)",
-        "修了条件": "習得度確認試験に合格すること / 出席時間が規定を満たしていること / 通信添削課題をすべて提出し合格すること",
-        "試験対策(学科・論述・面接)": "国家試験対策講座は養成講習とは別講座。受講生・卒業生価格で受講できる(公式サイト記載)。",
-        "試験対策が料金に含まれるか": "別講座・別料金",
-        "資格取得後の支援": "懇親会・情報交換会 / 就業支援 / 独立開業支援 / 上位資格講座 / アシスタント参加の機会",
-        "卒業生コミュニティ": "懇親会・情報交換会",
-        "就職支援": "就業支援",
-        "独立・副業支援": "独立開業支援",
-        "子育て中の通いやすさ(振替・録画など)": "Zoom講習80時間のうち16時間まで無料で振替可(公式サイト記載) / 土曜・日曜・祝日コース・平日コース・午前・午後・夜間コース",
-        "情報確認日": "2026-07-11"
-      }
+    "独立・副業支援"
+   ]
+  },
+  {
+   "name": "申込みの前に",
+   "items": [
+    "説明会",
+    "説明会の申込みページ",
+    "公式が出している実績"
+   ]
+  }
+ ],
+ "schools": [
+  {
+   "slug": "chiiki-renkei-platform",
+   "name": "一般社団法人地域連携プラットフォーム",
+   "shortName": "地域連携プラットフォーム",
+   "officialUrl": "https://careerjp.work/cc1/",
+   "affiliateUrl": "https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE",
+   "isPr": true,
+   "experienced": true,
+   "hasSchoolPage": true,
+   "items": {
+    "受講料金": {
+     "value": "297,000円",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表",
+     "mark": "good"
     },
-    {
-      "slug": "nippon-manpower",
-      "name": "日本マンパワー キャリアコンサルタント養成講座",
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV8EY+5MF8+5YJRM",
-      "informationStatus": "partially_verified",
-      "checkedAt": "2026-09-28",
-      "isPr": true,
-      "items": {
-        "受講形式": "通信(eラーニング)+スクーリング。スクーリングは通学・オンラインから選べる",
-        "オンライン完結の可否": "スクーリングはオンラインでも受講できる(通学との行き来も可)",
-        "通学拠点": "全国20か所以上の都市",
-        "受講期間": "未確認・調査中",
-        "総学習時間": "未確認・調査中",
-        "受講料金": "396,000円(税込・一般受講料)",
-        "入学金": "未確認・調査中",
-        "教材費": "未確認・調査中",
-        "給付金対象の有無": "対象(専門実践教育訓練給付制度。最大80%・約31万円との記載)",
-        "平日・土日・夜間コース": "未確認・調査中",
-        "振替制度": "あり(全国どのクラスにも無料で振替可。通学とオンラインの行き来も可)",
-        "クラス規模": "未確認・調査中",
-        "グループワーク": "あり",
-        "ロールプレイ": "あり",
-        "課題の提出方法": "同社のWebシステム「Web Course-s」で提出",
-        "修了条件": "通信教育とスクーリングの両方を受講・修了",
-        "試験対策(学科・論述・面接)": "あり(オプション講座)",
-        "試験対策が料金に含まれるか": "含まれない(オプション)",
-        "資格取得後の支援": "CDA資格取得が可能。更新講習、コミュニティあり",
-        "卒業生コミュニティ": "あり(CDA資格取得者2万人のネットワーク)",
-        "就職支援": "未確認・調査中",
-        "独立・副業支援": "未確認・調査中",
-        "子育て中の通いやすさ(振替・録画など)": "未確認・調査中",
-        "情報確認日": "2026-09-28"
-      }
+    "入学金": {
+     "value": "なし",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表",
+     "mark": "good"
     },
-    {
-      "slug": "lec",
-      "name": "LEC東京リーガルマインド キャリアコンサルタント養成講座",
-      "officialUrl": "https://www.lec-jp.com/caricon/",
-      "informationStatus": "partially_verified",
-      "checkedAt": "2026-09-28",
-      "isPr": false,
-      "items": {
-        "受講形式": "通学 / オンライン(Zoom)。どちらも通信(Web)と組み合わせ",
-        "オンライン完結の可否": "未確認・調査中",
-        "通学拠点": "あり(駅前のLEC各本校)",
-        "受講期間": "5か月(給付金の案内ページ記載)",
-        "総学習時間": "合計150時間(通信70時間+通学80時間)",
-        "受講料金": "330,000円(税込・標準価格。早期申込割引で最大20,000円引)",
-        "入学金": "未確認・調査中",
-        "教材費": "未確認・調査中",
-        "給付金対象の有無": "対象(雇用保険加入者・最大80%との記載。給付区分は要確認)",
-        "平日・土日・夜間コース": "土曜・日曜・祝日・平日夜間・半日クラスなど",
-        "振替制度": "あり(同じ回で定員未満なら他クラスに振替可。Zoomは原則4日前までに申請)",
-        "クラス規模": "各クラス最大20名",
-        "グループワーク": "未確認・調査中",
-        "ロールプレイ": "未確認・調査中",
-        "課題の提出方法": "論述の添削問題あり",
-        "修了条件": "未確認・調査中",
-        "試験対策(学科・論述・面接)": "あり(学科・論述・面接の対策Web講座3点セットが受講者に進呈される)",
-        "試験対策が料金に含まれるか": "含まれる(対策Web講座3点セットの進呈)",
-        "資格取得後の支援": "未確認・調査中",
-        "卒業生コミュニティ": "未確認・調査中",
-        "就職支援": "未確認・調査中",
-        "独立・副業支援": "未確認・調査中",
-        "子育て中の通いやすさ(振替・録画など)": "未確認・調査中",
-        "情報確認日": "2026-09-28"
-      }
+    "教材費": {
+     "value": "受講料に込み",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表",
+     "mark": "good"
     },
-    {
-      "slug": "recurrent",
-      "name": "リカレント キャリアコンサルタント養成講座",
-      "officialUrl": "https://www.recurrent.co.jp/",
-      "informationStatus": "partially_verified",
-      "checkedAt": "2026-09-28",
-      "isPr": false,
-      "items": {
-        "受講形式": "通学 / オンライン",
-        "オンライン完結の可否": "可(ライブ通信講座あり)",
-        "通学拠点": "東京・横浜・大宮・札幌・仙台・名古屋・大阪・福岡",
-        "受講期間": "6か月(全60回)",
-        "総学習時間": "150時間",
-        "受講料金": "437,800円(税込)",
-        "入学金": "33,000円(税込)",
-        "教材費": "28,600円(税込)",
-        "給付金対象の有無": "対象(専門実践教育訓練給付金。最大80%・最大39〜48万円との記載)",
-        "平日・土日・夜間コース": "平日午前・午後、夜間8時開講クラスあり",
-        "振替制度": "未確認・調査中",
-        "クラス規模": "少人数制(具体的な人数の記載なし)",
-        "グループワーク": "あり",
-        "ロールプレイ": "あり(ロールプレイング・ケーススタディなどの実践授業)",
-        "課題の提出方法": "未確認・調査中",
-        "修了条件": "出席率80%以上(合格保証制度の条件)",
-        "試験対策(学科・論述・面接)": "あり(実技試験面接対策コース)",
-        "試験対策が料金に含まれるか": "含まれる(学科・論述の対策授業がコース内にある)",
-        "資格取得後の支援": "未確認・調査中",
-        "卒業生コミュニティ": "未確認・調査中",
-        "就職支援": "あり(就・転職サポートの記載)",
-        "独立・副業支援": "未確認・調査中",
-        "子育て中の通いやすさ(振替・録画など)": "コース終了後、映像授業を試験日まで何度でも視聴できる",
-        "情報確認日": "2026-09-28"
-      }
+    "割引・特典": {
+     "value": "条件を満たすと受講料の割引あり(各種特典制度)。月ごとのキャンペーンあり",
+     "status": "partial",
+     "sources": [
+      "https://careerjp.work/cc1/tokuten",
+      "https://careerjp.work/cc1/%e8%ac%9b%e7%bf%92%e6%a6%82%e8%a6%81"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "割引の条件と金額は、サイト内の「キャンペーン見はり番」の記録を参照"
     },
-    {
-      "slug": "human-academy",
-      "name": "ヒューマンアカデミー キャリアコンサルタント養成講座",
-      "officialUrl": "https://haa.athuman.com/",
-      "informationStatus": "partially_verified",
-      "checkedAt": "2026-09-28",
-      "isPr": false,
-      "items": {
-        "受講形式": "通学 / オンラインライブ。どちらも通信学習と組み合わせ",
-        "オンライン完結の可否": "オンラインライブ+通信で受講できる",
-        "通学拠点": "札幌・仙台・東京・金沢・名古屋・大阪・広島・高松・愛媛・福岡・沖縄",
-        "受講期間": "最短3ヶ月",
-        "総学習時間": "通学80時間、通信78.5時間",
-        "受講料金": "355,300円(税込)",
-        "入学金": "55,000円(税込)",
-        "教材費": "別途必要(金額の記載なし)",
-        "給付金対象の有無": "対象(専門実践教育訓練給付制度の指定講座。最大80%との記載)",
-        "平日・土日・夜間コース": "未確認・調査中",
-        "振替制度": "あり(無料振替制度。1日単位、一定の基準あり)",
-        "クラス規模": "少人数制(具体的な人数の記載なし)",
-        "グループワーク": "未確認・調査中",
-        "ロールプレイ": "あり(面接対策、オンライン面談トレーニング)",
-        "課題の提出方法": "未確認・調査中",
-        "修了条件": "通信課程の講義・課題と、通学またはオンラインライブの履修を修了すること",
-        "試験対策(学科・論述・面接)": "あり(学科・論述・面接の各対策。AI搭載ドリル1,800問以上)",
-        "試験対策が料金に含まれるか": "未確認・調査中",
-        "資格取得後の支援": "受講生専用コミュニティ、ヒューマンリソシアとの連携、修了後も無料のセミナー受講制度",
-        "卒業生コミュニティ": "あり(受講生専用コミュニティ)",
-        "就職支援": "あり(人材サービス「ヒューマンリソシア」と連携)",
-        "独立・副業支援": "未確認・調査中",
-        "子育て中の通いやすさ(振替・録画など)": "18歳以下の子を持つ母親は受講料が最大5%オフ(イキイキママ応援制度)",
-        "情報確認日": "2026-09-28"
-      }
+    "給付金対象の有無": {
+     "value": "対象講座あり(自己負担額は個人の条件により異なる)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
     },
-    {
-      "slug": "pasona",
-      "name": "パソナ キャリアコンサルタント養成講座",
-      "officialUrl": "https://px.a8.net/svt/ejp?a8mat=4B7XX4+BD0U56+5TT2+5YJRM",
-      "informationStatus": "partially_verified",
-      "checkedAt": "2026-09-28",
-      "isPr": true,
-      "items": {
-        "受講形式": "フルオンライン",
-        "オンライン完結の可否": "可(フルオンライン)",
-        "通学拠点": "未確認・調査中",
-        "受講期間": "5.5か月(「5.5か月で国家試験合格」との記載)",
-        "総学習時間": "150時間(オンライン76時間+通信74時間)",
-        "受講料金": "385,000円(税込・入学金、テキスト代込)",
-        "入学金": "受講料に含む",
-        "教材費": "受講料に含む",
-        "給付金対象の有無": "対象(専門実践教育訓練給付金。最大80%=50%+20%+10%との記載)",
-        "平日・土日・夜間コース": "土曜コース・日曜コース",
-        "振替制度": "未確認・調査中",
-        "クラス規模": "未確認・調査中",
-        "グループワーク": "未確認・調査中",
-        "ロールプレイ": "あり(30回以上のロールプレイ実践)",
-        "課題の提出方法": "論述の個別添削あり",
-        "修了条件": "未確認・調査中",
-        "試験対策(学科・論述・面接)": "あり(別途「試験対策講座」。最大110,000円税込)",
-        "試験対策が料金に含まれるか": "含まれない(別途講座)",
-        "資格取得後の支援": "「100年キャリア会」会員加入(無料)、ウェビナー招待、求人紹介",
-        "卒業生コミュニティ": "あり(100年キャリア会)",
-        "就職支援": "あり(求人紹介)",
-        "独立・副業支援": "未確認・調査中",
-        "子育て中の通いやすさ(振替・録画など)": "欠席しても、面接トレーニング以外の講習は後から録画で見られる",
-        "情報確認日": "2026-09-28"
-      }
+    "給付金の指定番号": {
+     "value": "1110055-2010011-0(専門実践教育訓練給付金)",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/",
+      "https://careerjp.work/cc1/qa"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "リスキリングを通じたキャリアアップ支援事業(条件により最大70%補助)、大阪府スキルアップ支援金(大阪府民)",
+     "status": "partial",
+     "sources": [
+      "https://careerjp.work/cc1/schedule-2-2",
+      "https://careerjp.work/cc1/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "条件・金額のくわしい中身は今回読んでいない"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "別講座・別料金",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "支払い方法": {
+     "value": "銀行振込 / PayPal(クレジットカード可) / 来社して現金。申込みから1週間以内に支払う。振込手数料は受講者の負担",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/%e8%ac%9b%e7%bf%92%e6%a6%82%e8%a6%81",
+      "https://careerjp.work/cc1/commerce"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "分割払い・教育ローン": {
+     "value": "学校独自の分割・ローンはなし。PayPalでカード払いにし、カード会社の分割・リボ払いに変える方法か、金融機関の教育ローンを使う",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/qa"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "開催初日の21日前までに連絡すればキャンセル料なし(テキスト発送後は事務手数料3,800円(税別)を引いて返金、テキストは返送)。20〜7日前は支払額の65%、それ以降は100%",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/commerce"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "オンライン(ライブ) / 通学+オンライン",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "可(コースによる。要確認)",
+     "status": "partial",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "通学拠点": {
+     "value": "あり(場所は公式サイトで確認)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "約0.5〜3ヶ月(コースにより異なる)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "総学習時間": {
+     "value": "150時間(講習80時間+通信課題70時間。明示書記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "土曜・日曜・祝日コース / 平日コース / 午前・午後・夜間コース",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "2026年11月開講の1.5か月コース(土日・A/B)、12月開講の夜間コース(月水金・火木土)、2027年1月開講の午前・午後・土曜コースを募集中。11月開講までは2027年3月の試験、12月開講からは2027年7月の試験が目標",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/schedule-2-2"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "申込みの締切": {
+     "value": "コースごとに案内(例: 10月開講コースは10月2日13時締切とのお知らせ)。満席になると申込みできない。仮申込みの場合は開講1か月前までに入金",
+     "status": "partial",
+     "sources": [
+      "https://careerjp.work/cc1/",
+      "https://careerjp.work/cc1/qa"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "すべてのコースの締切日は載っていない"
+    },
+    "受講に必要な環境": {
+     "value": "パソコン推奨。Webカメラ・マイク・スピーカー(イヤホン可)が必須。通信環境は自分で用意。習得度確認試験などの提出に、画像(できればPDF)をメールで送る",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/%e8%ac%9b%e7%bf%92%e6%a6%82%e8%a6%81",
+      "https://careerjp.work/cc1/qa"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "Zoom講習80時間のうち16時間まで無料で振替可(公式サイト記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "欠席は16時間まで(超えると原則修了できない)。8時間までは修了に影響なし。8時間を超え16時間までは欠席課題レポートを出せば出席に代えられる。これとは別に、振替が16時間まで無料",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/qa"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "中座は時間によって欠席とみなされる。カメラONが必須(国の基準)",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/qa",
+      "https://careerjp.work/cc1/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "Zoom講習80時間のうち16時間まで無料で振替可(公式サイト記載) / 土曜・日曜・祝日コース・平日コース・午前・午後・夜間コース",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "クラス規模": {
+     "value": "1コース20名(公式サイト記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "1コース20名。最少開講人数の記載なし",
+     "status": "partial",
+     "sources": [
+      "https://careerjp.work/cc1/%e8%ac%9b%e7%bf%92%e6%a6%82%e8%a6%81"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "講習内で実施(形式は公式サイトで確認)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "Zoomでのライブ講習内で実施。習得度確認試験の面接は15分間のロールプレイ(明示書記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "課題の提出方法": {
+     "value": "通信添削課題(すべて提出・合格が修了要件)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "習得度確認試験に合格すること / 出席時間が規定を満たしていること / 通信添削課題をすべて提出し合格すること",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "国家試験対策講座は養成講習とは別講座。受講生・卒業生価格で受講できる(公式サイト記載)。",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "懇親会・情報交換会 / 就業支援 / 独立開業支援 / 上位資格講座 / アシスタント参加の機会",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "懇親会・情報交換会",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "就業支援",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "独立開業支援",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-07-11",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料・オンライン(Zoom)。講座説明会(約60分)、質問受付会(約30〜40分)、無料講座体験会(約90分)の3種類。原則カメラON。途中参加・途中退出も可",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://careerjp.work/cc1/setsumeikai",
+     "status": "verified",
+     "sources": [
+      "https://careerjp.work/cc1/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "公式が出している実績": {
+     "value": "学校としての合格率の記載なし(よくある質問では全国平均の合格率を答えている)",
+     "status": "not_stated",
+     "sources": [
+      "https://careerjp.work/cc1/qa"
+     ],
+     "checkedAt": "2026-10-13"
     }
-  ]
+   }
+  },
+  {
+   "slug": "nippon-manpower",
+   "name": "株式会社日本マンパワー",
+   "shortName": "日本マンパワー",
+   "officialUrl": "https://www.nipponmanpower.co.jp/cc/",
+   "affiliateUrl": "https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV8EY+5MF8+5YJRM",
+   "isPr": true,
+   "experienced": false,
+   "hasSchoolPage": true,
+   "items": {
+    "受講料金": {
+     "value": "396,000円(税込・一般受講料)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "bad"
+    },
+    "入学金": {
+     "value": "なし(公式サイトに「入学金無し」)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "教材費": {
+     "value": "受講料に込み(公式サイトに「教材費込み」)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "割引・特典": {
+     "value": "説明会参加特典の割引受講料385,000円(税込)、学生割引341,000円(税込)。一般は396,000円(税込)",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/training_course/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "給付金対象の有無": {
+     "value": "対象(専門実践教育訓練給付制度。最大80%・約31万円との記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "給付金の指定番号": {
+     "value": "1310168-1720011-9(講座名: キャリアコンサルタント養成講座(総合))",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/faq/",
+      "https://www.nipponmanpower.co.jp/cc/information/kyufu/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "含まれない(オプション)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "支払い方法": {
+     "value": "オンラインショッピングでは、クレジットカード(一括)・Pay-easy・代金引換・分割クレジット。商品によって使える方法がちがう",
+     "status": "partial",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/info/law/",
+      "https://www.nipponmanpower.co.jp/guide/faq/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "養成講座でどれが使えるかは未確認"
+    },
+    "分割払い・教育ローン": {
+     "value": "分割クレジットあり(同社が契約する信販会社。合計3万円以上・月々3,000円以上のとき)。養成講座で使えるかは未確認",
+     "status": "partial",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/guide/faq/",
+      "https://www.nipponmanpower.co.jp/info/law/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "養成講座は「各回の受講規約に定める通り」(規約の中身は未確認)。申込みが7名以下で開講を見合わせる場合は、クラス変更か全額返金",
+     "status": "partial",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/info/law/",
+      "https://www.nipponmanpower.co.jp/cc/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "通信(eラーニング)+スクーリング。スクーリングは通学・オンラインから選べる",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "スクーリングはオンラインでも受講できる(通学との行き来も可)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "通学拠点": {
+     "value": "全国20か所以上の都市",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "通信教育は学習の目安3か月(スクーリングの日程は公式サイトで確認)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "recheck": {
+      "finding": "第35回は2026年11月17日開始〜2027年4月16日修了(約5か月)",
+      "sources": [
+       "https://www.nipponmanpower.co.jp/cc/training_course/schedule/"
+      ],
+      "checkedAt": "2026-10-13"
+     }
+    },
+    "総学習時間": {
+     "value": "スクーリングは12日間・96時間の実習(公式サイト記載)。通信教育をふくむ合計は未確認",
+     "status": "partial",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "第35回養成講座:2026年11月17日(火)に受講開始、2027年4月16日(金)に修了。全国15都市とオンラインで開講",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/training_course/schedule/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "申込みの締切": {
+     "value": "2026年11月9日(月)(法人は11月6日(金))。仮予約もできる",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/training_course/schedule/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講に必要な環境": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "あり(全国どのクラスにも無料で振替可。通学とオンラインの行き来も可)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "修了にはスクーリング96時間のうち76時間以上の出席が必要。振替しないで休んだ時間は受講時間から引かれる。欠席者フォロー映像で内容は学べる。振替は無料で、同じ開講月のコース内にかぎる",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/training_course/transfer/",
+      "https://www.nipponmanpower.co.jp/cc/faq/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "「76時間以上」は比較表(2026-09-28確認)の修了条件から"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "無料・回数の制限なしの振替制度あり(公式サイトに「仕事や育児、介護などと両立しながら学ぶ社会人のため」と記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "クラス規模": {
+     "value": "最大20名(クラスにより異なる)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "1クラス最大20名(クラスにより異なる)。申込みが7名以下のクラスは開講を見合わせることがある(受講開始1週間前までに連絡)",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "あり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "あり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "課題の提出方法": {
+     "value": "同社のWebシステム「Web Course-s」で提出",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "通信:添削問題3回を提出し平均60点以上 / スクーリング:出席76時間以上、修了認定試験60点以上",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "あり(オプション講座)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "CDA資格取得が可能。更新講習、コミュニティあり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "あり(CDA資格取得者2万人のネットワーク)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "CDA会員になると、求人情報などをメールで受け取れる(公式サイト記載)。個別の就職支援の記載はなし",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料。説明会・講座体験会(現地・オンライン、約120分、体験グループワークつき)、ミニ説明会(オンライン)、テーマ別説明会(オンライン)、個別相談会(オンライン、最大45分)、ランチタイムセミナー(30分)。参加特典として受講料11,000円(税込)引きクーポン",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/briefing_session/setsumei",
+      "https://www.nipponmanpower.co.jp/cc/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://www.nipponmanpower.co.jp/cc/briefing_session/setsumei",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/briefing_session/setsumei"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "公式が出している実績": {
+     "value": "累計受講者5万人以上(公式トップ。講座紹介ページでは4.5万人以上)。合格率の記載なし",
+     "status": "partial",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/",
+      "https://www.nipponmanpower.co.jp/cc/training_course/"
+     ],
+     "checkedAt": "2026-10-13"
+    }
+   }
+  },
+  {
+   "slug": "lec",
+   "name": "株式会社東京リーガルマインド(LEC)",
+   "shortName": "LEC東京リーガルマインド",
+   "officialUrl": "https://www.lec-jp.com/caricon/kouza/yousei/",
+   "affiliateUrl": "https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&a8ejpredirect=https%3A%2F%2Fonline.lec-jp.com%2Fdisp%2FNSfKeywordSearch.jsp%3FdispNo%3D%26selkwd%3D%2583L%2583%2583%2583%258A%2583A%2583R%2583%2593%2583T%2583%258B%2583%255E%2583%2593%2583g%26isSearchBar%3D1%26cpp%3D%26srt%3D",
+   "isPr": true,
+   "experienced": false,
+   "hasSchoolPage": true,
+   "items": {
+    "受講料金": {
+     "value": "330,000円(税込・一般価格。早めに申し込むと割引あり。金額は時期で変わる)",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/kouza/yousei/"
+     ],
+     "checkedAt": "2026-10-13",
+     "origin": "比較表",
+     "previous": {
+      "value": "330,000円(税込・標準価格。早期申込割引で最大20,000円引)",
+      "checkedAt": "2026-09-28"
+     }
+    },
+    "入学金": {
+     "value": "なし(明示書で入学料0円)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "教材費": {
+     "value": "受講料に込み(明示書で教材費0円)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "割引・特典": {
+     "value": "2026年12月〜2027年3月開講は、10月31日(土)までの申込みで10,000円割引(320,000円)。11月1日からは一般価格330,000円。申込者全員に試験対策Web講座3点セット(参考価格33,000円)。法人提携割引などもあり(併用に制限)",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/kouza/yousei/",
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "給付金対象の有無": {
+     "value": "対象(雇用保険加入者・最大80%との記載。給付区分は要確認)",
+     "status": "partial",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "給付金の指定番号": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "含まれる(対策Web講座3点セットの進呈)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "支払い方法": {
+     "value": "未確認(よくある質問に、クレジットカード・PayPayのオンライン決済は本校からメールで案内との記載があるが、更新講習の項目)",
+     "status": "unverified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "分割払い・教育ローン": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "返金の規定あり(中身は未確認)",
+     "status": "partial",
+     "sources": [
+      "https://www.lec-jp.com/caricon/kouza/yousei/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "通学 / オンライン(Zoom)。どちらも通信(Web)と組み合わせ",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "「オンライン(Zoom)+通信講座」のコースあり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "通学拠点": {
+     "value": "あり(駅前のLEC各本校)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "5か月(給付金の案内ページ記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "総学習時間": {
+     "value": "合計150時間(通信70時間+通学80時間)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "土曜・日曜・祝日・平日夜間・半日クラスなど",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "2026年10月・11月・12月、2027年1月・2月・3月開講のクラスを掲載(土日祝、平日夜間、半日クラスなど)。通学とZoomから選ぶ",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/kouza/yousei/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "申込みの締切": {
+     "value": "専門実践教育訓練給付制度を使う人は、各クラスの受講開始日前日(各月1日)の2週間前まで。それ以外の締切は未確認",
+     "status": "partial",
+     "sources": [
+      "https://www.lec-jp.com/caricon/kouza/yousei/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講に必要な環境": {
+     "value": "Zoomクラスは、安定した通信環境と静かな部屋。事前にパソコンでZoomの接続を確かめる",
+     "status": "partial",
+     "sources": [
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "あり(同じ回で定員未満なら他クラスに振替可。Zoomは原則4日前までに申請)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "スクーリング10日間のうち8日間(80%)以上の出席が修了要件。休んだ回は別クラスの同じ回へ振替できる(回数の制限なし。定員を超えるクラスへは不可)",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "遅刻・早退・中抜けは30分まで。30分以上は欠席扱い(交通の遅れもふくむ)。Zoomは映像・音声の不良や離席の合計が30分以上で欠席扱いになり退出、別クラスへ振替",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "オンラインの半日クラスあり(公式サイトに「子育て世代の方や、終日仕事を空けられない方に好評」と記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "クラス規模": {
+     "value": "各クラス最大20名",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "各クラス原則20名。最少開講人数の記載なし",
+     "status": "partial",
+     "sources": [
+      "https://www.lec-jp.com/caricon/kouza/yousei/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "あり(オンラインクラスで少人数のグループワーク。公式サイト記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "あり(スクーリング内で実施。明示書記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "課題の提出方法": {
+     "value": "論述の添削問題あり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "スクーリング10日間のうち8日以上出席 / 添削課題3回の正解率60%以上 / 知識確認テストの正解率70%以上",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13",
+     "origin": "比較表",
+     "previous": {
+      "value": "スクーリングの出席80%以上 / 添削課題の80%以上を提出 / 確認テスト70%以上",
+      "checkedAt": "2026-09-28"
+     }
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "あり(学科・論述・面接の対策Web講座3点セットが受講者に進呈される)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "資格取得者へ、自治体からの受託事業の紹介(明示書記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "あり(養成講座の修了生などを対象にした「キャリアコンサルタント交流会」。公式サイト記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "自治体などから受託した事業の仕事を、資格取得者に紹介(明示書記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料。講座説明会・個別相談会を、本校(対面)またはオンラインで開催。オンラインは予約が必要。所要時間の記載なし",
+     "status": "partial",
+     "sources": [
+      "https://www.lec-jp.com/caricon/event/guidance/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://www.lec-jp.com/caricon/event/guidance/",
+     "status": "verified",
+     "sources": [
+      "https://www.lec-jp.com/caricon/event/guidance/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "公式が出している実績": {
+     "value": "学校としての合格率の数字は記載なし(全国平均の合格率を紹介)。講師は全国で約70名",
+     "status": "not_stated",
+     "sources": [
+      "https://www.lec-jp.com/caricon/info/faq/"
+     ],
+     "checkedAt": "2026-10-13"
+    }
+   }
+  },
+  {
+   "slug": "recurrent",
+   "name": "リカレント株式会社",
+   "shortName": "リカレント",
+   "officialUrl": "https://www.recurrent.co.jp/cc/",
+   "affiliateUrl": "https://px.a8.net/svt/ejp?a8mat=4BE7SX+HV1P6+5BEA+BWVTE",
+   "isPr": true,
+   "experienced": false,
+   "hasSchoolPage": true,
+   "items": {
+    "受講料金": {
+     "value": "437,800円(税込)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "bad"
+    },
+    "入学金": {
+     "value": "33,000円(税込)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "bad"
+    },
+    "教材費": {
+     "value": "28,600円(税込)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "bad"
+    },
+    "割引・特典": {
+     "value": "遠方の地域の人は受講料5%OFF(交通費支援)、学生割引5%、他講座割引、支払額の最大5%をポイント還元。合格保証制度(学科理論マスターが対象。不合格のとき翌期の対象教科の受講料を免除。合格そのものを保証する制度ではない)",
+     "status": "verified",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/school/support.html",
+      "https://www.recurrent.co.jp/cc/kcc/course/attendance.html"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "給付金対象の有無": {
+     "value": "対象(専門実践教育訓練給付金。最大80%・最大39〜48万円との記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "給付金の指定番号": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "含まれる(学科・論述の対策授業がコース内にある)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "支払い方法": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "分割払い・教育ローン": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "中途退学保証制度あり(受講開始後に続けられなくなったとき中途解約できる。未開講・未受講分の80%を返金。取消手数料が別に必要)",
+     "status": "verified",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/school/support.html"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "通学 / オンライン",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "可(ライブ通信講座あり)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "通学拠点": {
+     "value": "東京・横浜・大宮・札幌・仙台・名古屋・大阪・福岡",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "6か月(全60回)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "総学習時間": {
+     "value": "150時間",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "平日午前・午後、夜間8時開講クラスあり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "2026年10月・11月開講を募集中(10月1日のお知らせ)。教室受講クラスとオンライン受講クラス。オンラインの夜間8時開講クラスあり",
+     "status": "partial",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "クラスごとの開講日は載っていない"
+    },
+    "申込みの締切": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "受講に必要な環境": {
+     "value": "未確認(修了後に見られる映像授業は、パソコン・スマホ・タブレットで視聴できる)",
+     "status": "unverified",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/course/attendance.html"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "あり(欠席時に同じ内容の授業を他クラスへ振替可。回数・費用の記載なし)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "休んだ回は、同じ内容の授業を他クラスへ振替できる(振替でも出席扱い)。欠席できる上限の記載はなし。合格保証制度の条件は出席率80%以上",
+     "status": "partial",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/school/support.html",
+      "https://www.recurrent.co.jp/cc/kcc/course/list.html"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "コース終了後、映像授業を試験日まで何度でも視聴できる",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "クラス規模": {
+     "value": "少人数制(具体的な人数の記載なし)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "少人数クラス担任制(人数の記載なし)",
+     "status": "partial",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/school/support.html"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "あり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "あり(ロールプレイング・ケーススタディなどの実践授業)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "課題の提出方法": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "出席率80%以上(合格保証制度の条件)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "あり(実技試験面接対策コース)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "個別キャリアカウンセリング(修了後も何度でも) / 実務ブラッシュアップ講座 / インターン制度(リカレントキャリアセンターなどで実務を経験)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "あり(卒業生のサポート組織「EMCAキャリア部会」。研修会・会員の交流・求人情報の提供)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "あり(就・転職サポートの記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料体験セミナー(少人数。各地の校舎とオンラインで開催。掲載例は2時間〜2時間半)と、個別ガイダンス(来校・オンライン・電話)",
+     "status": "verified",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/seminar/list.php",
+      "https://www.recurrent.co.jp/cc/kcc/guidance/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://www.recurrent.co.jp/cc/kcc/seminar/list.php",
+     "status": "verified",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/kcc/seminar/list.php"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "公式が出している実績": {
+     "value": "「合格者数No.1」の画像表示あり(根拠となる数字・時期はページ本文で確認できず)。合格率の数字は記載なし",
+     "status": "not_stated",
+     "sources": [
+      "https://www.recurrent.co.jp/cc/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "サイトに載せるときは、この表示をそのまま使わない"
+    }
+   }
+  },
+  {
+   "slug": "human-academy",
+   "name": "ヒューマンアカデミー株式会社",
+   "shortName": "ヒューマンアカデミー",
+   "officialUrl": "https://haa.athuman.com/academy/career/",
+   "affiliateUrl": null,
+   "isPr": false,
+   "experienced": false,
+   "hasSchoolPage": true,
+   "items": {
+    "受講料金": {
+     "value": "322,300円(税込)",
+     "status": "verified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13",
+     "origin": "比較表",
+     "previous": {
+      "value": "355,300円(税込)",
+      "checkedAt": "2026-09-28"
+     }
+    },
+    "入学金": {
+     "value": "55,000円(税込)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "bad"
+    },
+    "教材費": {
+     "value": "別途必要(金額の記載なし)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "bad"
+    },
+    "割引・特典": {
+     "value": "ペア割・お友達紹介(入学金が半額)、子育て支援制度(18歳以下の子がいる母親・父親は受講料5%OFF)、学割5%OFF。条件あり",
+     "status": "verified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "給付金対象の有無": {
+     "value": "対象(専門実践教育訓練給付制度の指定講座。最大80%との記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "給付金の指定番号": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "支払い方法": {
+     "value": "カード払い(VISA・MASTER・銀聯。1回払いのみ) / 教育ローン / 現金(校舎の受付、または銀行振込)",
+     "status": "verified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "分割払い・教育ローン": {
+     "value": "提携の信販会社の教育ローンあり(1〜84回。オリコのリボ払いも可)。60回払いの例: 月々6,900円(2回目以降)",
+     "status": "verified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "通学 / オンラインライブ。どちらも通信学習と組み合わせ",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "オンラインライブ+通信で受講できる",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "通学拠点": {
+     "value": "札幌・仙台・東京・金沢・名古屋・大阪・広島・高松・愛媛・福岡・沖縄",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "最短3ヶ月",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "総学習時間": {
+     "value": "通学80時間、通信78.5時間",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "「土曜日・日曜日・平日集中」「平日朝」クラス(夜間の記載なし)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "未確認(校舎ごとにスケジュールページで案内)",
+     "status": "unverified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "申込みの締切": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "受講に必要な環境": {
+     "value": "オンラインクラスはZoomを使う。そのほかの条件は未確認",
+     "status": "partial",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "あり(無料振替制度。1日単位、一定の基準あり)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "無料の振替制度あり(1日単位、受講の順番が前後しないことなどの基準あり)。欠席できる上限の記載はなし。受講できなくなった場合は最長1年まで休学でき、転勤・引っ越しのときは転校もできる",
+     "status": "partial",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "18歳以下の子がいる母親・父親は受講料が5%オフ(子育て支援制度。条件あり)",
+     "status": "verified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13",
+     "origin": "比較表",
+     "previous": {
+      "value": "18歳以下の子を持つ母親は受講料が最大5%オフ(イキイキママ応援制度)",
+      "checkedAt": "2026-09-28"
+     }
+    },
+    "クラス規模": {
+     "value": "少人数制(具体的な人数の記載なし)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "未確認(少人数制との記載)",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "あり(面接対策、オンライン面談トレーニング)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "課題の提出方法": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "通信課程の講義・課題と、通学またはオンラインライブの履修を修了すること",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "あり(学科・論述・面接の各対策。AI搭載ドリル1,800問以上)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "受講生専用コミュニティ、ヒューマンリソシアとの連携、修了後も無料のセミナー受講制度",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "あり(受講生専用コミュニティ)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "あり(人材サービス「ヒューマンリソシア」と連携)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料。オンライン説明会・電話説明会。「30分で解説」のオンライン講座説明会の案内あり",
+     "status": "partial",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://www.athuman.com/sysform/haa-guidance/?kozcd=59035",
+     "status": "verified",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "公式が出している実績": {
+     "value": "合格率・受講者数の記載なし",
+     "status": "not_stated",
+     "sources": [
+      "https://haa.athuman.com/academy/career/"
+     ],
+     "checkedAt": "2026-10-13"
+    }
+   }
+  },
+  {
+   "slug": "pasona",
+   "name": "株式会社パソナ",
+   "shortName": "パソナ",
+   "officialUrl": "https://100-year-career.net/",
+   "affiliateUrl": "https://px.a8.net/svt/ejp?a8mat=4B7XX4+BD0U56+5TT2+5YJRM",
+   "isPr": true,
+   "experienced": false,
+   "hasSchoolPage": true,
+   "items": {
+    "受講料金": {
+     "value": "385,000円(税込・入学金、テキスト代込)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "入学金": {
+     "value": "受講料に含む",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "教材費": {
+     "value": "受講料に含む",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "割引・特典": {
+     "value": "養成講習の修了者は、試験対策講座が55,000円(税込)(一般は110,000円)。養成講習そのものの割引の記載なし",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/training/apply/pre_apply_info"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "給付金対象の有無": {
+     "value": "対象(専門実践教育訓練給付金。最大80%=50%+20%+10%との記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "recheck": {
+      "finding": "公式トップには「最大70%」、申込み前の確認ページには「最大80%」と、2つの書き方がある",
+      "sources": [
+       "https://100-year-career.net/",
+       "https://100-year-career.net/training/apply/pre_apply_info"
+      ],
+      "checkedAt": "2026-10-13"
+     }
+    },
+    "給付金の指定番号": {
+     "value": "未確認(専門実践教育訓練明示書のPDFに記載がある見込み)",
+     "status": "unverified",
+     "sources": [
+      "https://100-year-career.net/training_statement_2026.pdf"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "含まれない(別途講座)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "支払い方法": {
+     "value": "クレジットカード(Visa・Master・JCB) / コンビニ支払い / 銀行振込(ATM)。申込み後に入金案内のメールが届く",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/faq",
+      "https://100-year-career.net/tokusyouhou"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "分割払い・教育ローン": {
+     "value": "養成講習は、クレジットカード会社経由の分割払いが使える。教育ローンの記載なし",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/faq"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "初回開講日の14日前(土日祝を除く)17時30分までならキャンセル料なし。それ以降は受講料の100%",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/tokusyouhou"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "フルオンライン",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "可(フルオンライン)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "通学拠点": {
+     "value": "なし(すべてオンラインで実施)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "5.5か月(「5.5か月で国家試験合格」との記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "総学習時間": {
+     "value": "150時間(オンライン76時間+通信74時間)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "土曜コース・日曜コース",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "2027年2月開講コース: 1月17日(日)ガイダンス、2月6日(土)〜4月18日(日)にオンライン課程76時間(11日間。土曜コース・日曜コース)。試験対策は4月24日〜7月3日。第35回試験が目標。年3回開講",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/training",
+      "https://100-year-career.net/training/apply/pre_apply_info"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "申込みの締切": {
+     "value": "申込み・キャンセル・入金の期限は2027年1月14日(木)17時30分。定員に達したら期限前でも締め切る",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/training/apply/pre_apply_info"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講に必要な環境": {
+     "value": "パソコンが必要(エクセル・ワードなどで資料を提出)。Zoomのカメラ・マイクが使えること。講習に集中できる環境",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/training/apply/pre_apply_info",
+      "https://100-year-career.net/faq"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "振替の記載なし。面接トレーニング以外の講習は録画を配信(欠席したときや復習に使える。公式サイト記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "欠席の上限と扱い": {
+     "value": "オンライン講習11日間のうち9日以上の出席が修了要件。振替の記載はなし。オンライン講習は録画での履修ができない(リアルタイム参加が必須)。録画は欠席時や復習の参考用(面接トレーニングを除く)",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/training/apply/pre_apply_info",
+      "https://100-year-career.net/faq",
+      "https://100-year-career.net/training"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "15分以上の遅刻・早退・中抜け・カメラオフは欠席扱い。カメラは常時オン。子どもを膝にのせたり、授乳しながらの参加はできない。家事や仕事をしながらの受講も不可",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/faq",
+      "https://100-year-career.net/training/apply/pre_apply_info"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "欠席しても、面接トレーニング以外の講習は後から録画で見られる",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "クラス規模": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "定員の人数は未確認。申込みが開講1か月前までに3名に満たないと、開講を中止することがある",
+     "status": "partial",
+     "sources": [
+      "https://100-year-career.net/tokusyouhou"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "あり(オンラインでグループ演習)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "あり(30回以上のロールプレイ実践)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "課題の提出方法": {
+     "value": "論述の個別添削あり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "通信74時間をすべて受講し修了判定テスト60%以上 / オンライン76時間に8割以上出席し習得度確認試験60%以上",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表",
+     "recheck": {
+      "finding": "申込み前の確認ページでは「11日間のうち9日以上出席」「通信課題(20課題)を最終日までにすべて提出」「最終日の修了テストに合格」",
+      "sources": [
+       "https://100-year-career.net/training/apply/pre_apply_info"
+      ],
+      "checkedAt": "2026-10-13"
+     }
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "あり(別途「試験対策講座」。最大110,000円税込)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "「100年キャリア会」会員加入(無料)、ウェビナー招待、求人紹介",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "あり(100年キャリア会)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "あり(求人紹介)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "兼業・副業をふくむキャリアコンサルタント求人の案内あり(国や自治体から受託した案件が中心。公式サイト記載)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-09-28",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料のオンラインガイダンス(個別・公開)。電話・Zoomでの相談も可。時間は30分〜1時間ほど",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://100-year-career.net/",
+     "status": "partial",
+     "sources": [
+      "https://100-year-career.net/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "予約は外部の予約サービス(Reserva)。ページ内のボタンから進む"
+    },
+    "公式が出している実績": {
+     "value": "「年間合格率93.9%の実績」(養成講習受講者 2023年2月〜2025年6月)との表示",
+     "status": "verified",
+     "sources": [
+      "https://100-year-career.net/"
+     ],
+     "checkedAt": "2026-10-13",
+     "note": "画像での表示。何の試験の、どの計算かはページ本文で確認できず"
+    }
+   }
+  },
+  {
+   "slug": "cmca",
+   "name": "特定非営利活動法人 日本キャリア・マネージメント・カウンセラー協会(CMCA)",
+   "shortName": "CMCA",
+   "officialUrl": "https://cmcajapan.net/",
+   "affiliateUrl": "https://px.a8.net/svt/ejp?a8mat=4BE7SX+DP0GQ+5UHI+BW8O2&a8ejpredirect=https%3A%2F%2Fcmcajapan.com%2Flp%2Fsetsumeikai",
+   "isPr": true,
+   "experienced": false,
+   "hasSchoolPage": false,
+   "items": {
+    "受講料金": {
+     "value": "352,000円(税込。早期申込の割引あり)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "入学金": {
+     "value": "なし(公式サイトに「入学金・テキスト代等一切なし」)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "教材費": {
+     "value": "受講料に込み",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表",
+     "mark": "good"
+    },
+    "割引・特典": {
+     "value": "早期割引(10月31日まで。無料説明会への参加が条件。公式に「3.3万円」と「3万円」の2つの書き方がある)",
+     "status": "partial",
+     "sources": [
+      "https://cmcajapan.com/lp/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "給付金対象の有無": {
+     "value": "対象(専門実践教育訓練給付金。最大80%・最大約28万円との記載。給付には条件あり)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "給付金の指定番号": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "ほかに使える補助": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "支払い方法": {
+     "value": "全額一括、または金利なしの3回分割。支払いの手段(振込・カードなど)は未確認",
+     "status": "partial",
+     "sources": [
+      "https://cmcajapan.net/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "分割払い・教育ローン": {
+     "value": "金利・手数料なしの3回分割ができる(受講開始前に3分の1、開始の翌月末と翌々月末に3分の1ずつ)",
+     "status": "verified",
+     "sources": [
+      "https://cmcajapan.net/",
+      "https://cmcajapan.com/lp/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "キャンセル・返金": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "受講形式": {
+     "value": "通学が基本 / オンラインでも受けられるハイブリッド形式",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "オンライン完結の可否": {
+     "value": "オンラインでも受講できる(通学をすすめている。全日程オンラインでよいかは未確認)",
+     "status": "partial",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "通学拠点": {
+     "value": "東京(西新宿)・札幌・山形・福岡・沖縄",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "受講期間": {
+     "value": "約3か月半(例: 2026年11月29日〜2027年3月14日)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "総学習時間": {
+     "value": "150時間(通学15日・110時間+自宅学習40時間)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "平日・土日・夜間コース": {
+     "value": "毎週土曜、または毎週日曜の9:30〜17:30(東京の例)。平日・夜間は記載なし",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "直近の開講": {
+     "value": "2026年11月29日(日)〜2027年3月14日。毎週日曜9:30〜17:30。東京のCMCA事務所教室(オンラインも可)",
+     "status": "verified",
+     "sources": [
+      "https://cmcajapan.net/",
+      "https://cmcajapan.net/briefing-form/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "申込みの締切": {
+     "value": "未確認(早期割引は10月31日まで)",
+     "status": "unverified",
+     "sources": [
+      "https://cmcajapan.com/lp/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "受講に必要な環境": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "振替制度": {
+     "value": "振替はなし。欠席した回は録画で学ぶ。実技の回は別日程で補講(Zoom可)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "欠席の上限と扱い": {
+     "value": "通学形式の110時間は、原則8割以上の出席。振替はなし。休んだ回は、講習を撮影したビデオで学ぶか、別に行う補講を受ける",
+     "status": "verified",
+     "sources": [
+      "https://cmcajapan.net/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "未確認",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-13"
+    },
+    "子育て中の通いやすさ": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "クラス規模": {
+     "value": "少人数制(人数の記載なし)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "定員・最少開講人数": {
+     "value": "少人数制(人数の記載なし)",
+     "status": "partial",
+     "sources": [
+      "https://cmcajapan.com/lp/setsumeikai"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "グループワーク": {
+     "value": "あり",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "ロールプレイ": {
+     "value": "あり(実技・演習を重視)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "課題の提出方法": {
+     "value": "自宅学習40時間あり(提出のしかたは未確認)",
+     "status": "partial",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "修了条件": {
+     "value": "通学110時間は原則8割以上の出席 / 到達度テストあり(合格の基準は未確認)",
+     "status": "partial",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "修了後に「CMCAキャリアカウンセラー認定講習」(学科1日・実技1日) / 卒業生も加わる自主勉強会",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "資格取得後の支援": {
+     "value": "勉強会・セミナー / ボランティア登録制度 / 異業種交流会 / 三鷹ネットワーク大学でのカウンセリング実習",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "卒業生コミュニティ": {
+     "value": "あり(会員同士の勉強会・交流会)",
+     "status": "verified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "就職支援": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "独立・副業支援": {
+     "value": "未確認・調査中",
+     "status": "unverified",
+     "sources": [],
+     "checkedAt": "2026-10-12",
+     "origin": "比較表"
+    },
+    "説明会": {
+     "value": "無料・オンライン(Zoom)。所要時間は1時間〜1.5時間。個別の説明会はオンラインまたは各会場。動画の説明会もあり",
+     "status": "verified",
+     "sources": [
+      "https://cmcajapan.net/briefing-form/",
+      "https://cmcajapan.net/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "説明会の申込みページ": {
+     "value": "https://cmcajapan.net/briefing-form/",
+     "status": "verified",
+     "sources": [
+      "https://cmcajapan.net/briefing-form/"
+     ],
+     "checkedAt": "2026-10-13"
+    },
+    "公式が出している実績": {
+     "value": "1998年に養成講座を始め、のべ2,000名以上の卒業生。「国家試験の高い合格率」との記載はあるが、数字はなし",
+     "status": "partial",
+     "sources": [
+      "https://cmcajapan.com/lp/setsumeikai",
+      "https://cmcajapan.net/"
+     ],
+     "checkedAt": "2026-10-13"
+    }
+   }
+  }
+ ]
 }

@@ -254,7 +254,7 @@
       var n = name.cloneNode(true);
       var pr = n.querySelector(".pr-label");
       if (pr) pr.remove();
-      var s = { slug: th.getAttribute("data-school"), name: n.textContent.trim(), pr: !!pr, cells: {}, go: null };
+      var s = { slug: th.getAttribute("data-school"), name: n.textContent.trim(), pr: !!pr || th.hasAttribute("data-pr"), cells: {}, go: null };
       /* 当サイトに紹介ページがある学校だけ「くわしく見る」を出す(ない学校は公式サイトへ) */
       s.page = !!th.querySelector('.cmp__links a:not([target])');
       var site = th.querySelector('.cmp__links a[target="_blank"]');
