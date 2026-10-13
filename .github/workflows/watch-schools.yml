@@ -1,0 +1,33 @@
+# 学校の情報の見はり番: 元データ(data/schools.json)の事実が、いまも各校の公式ページに
+# 書かれているかを毎日たしかめる。見つからなくなったら Issue で運営者に知らせる(サイトは自動で変えない)
+name: school-watch
+on:
+  schedule:
+    - cron: "25 22 * * *" # 毎日 7:25 (日本時間)
+  workflow_dispatch: {}   # 手動実行も可能
+permissions:
+  contents: write
+  issues: write
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 各校の公式ページを見て、元データとくらべる
+        run: node scripts/watch-schools.mjs
+      - name: 確認できた日の記録をコミット
+        run: |
+          git config user.name "school-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/schools-watch.json
+          git diff --cached --quiet || (git commit -m "学校の情報の見はり番: 確認できた日を更新" && git pull --rebase -q && git push)
+      - name: 見つからなくなった事実があれば Issue で知らせる
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f schools-notice.md ] || exit 0
+          printf '\n@%s 確認をお願いします。\n' "${{ github.repository_owner }}" >> schools-notice.md
+          gh issue create --title "学校の情報が変わったかもしれません($(TZ=Asia/Tokyo date +%-m月%-d日))" --body-file schools-notice.md --assignee "${{ github.repository_owner }}"

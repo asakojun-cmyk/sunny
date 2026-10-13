@@ -2,3 +2,4 @@ _to_delete/
 .DS_Store
 audio/**/* [0-9].*
 campaign-notice.md
+schools-notice.md
