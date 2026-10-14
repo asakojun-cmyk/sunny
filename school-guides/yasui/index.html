@@ -68,6 +68,13 @@ main[data-lb] .yasui .ys-who__q{word-break:keep-all}
 .ys-tile__note:empty{display:none}
 .ys-tile__go{margin-top:6px;font-size:.6875rem;font-weight:700;color:#b4573a}
 @media(max-width:480px){.ys-tile{flex-basis:calc(50% - 5px)}.ys-tile--pick{flex-basis:100%}.ys-tile__big{font-size:1.3rem}}
+.ys-bn{display:inline-flex;align-items:center;gap:10px;justify-content:center;min-width:min(280px,100%);max-width:100%;margin:0 auto 14px;padding:14px 26px;background:#fffdf8;border:2px solid #e9dfc9;border-radius:999px;text-decoration:none;color:#29435e;box-shadow:0 4px 12px rgba(41,67,94,.08);transition:transform .15s}
+.ys-bn:hover{transform:translateY(-2px)}
+.ys-bn b{font-family:"Zen Maru Gothic",sans-serif;font-size:1.1875rem;line-height:1.4}
+.ys-bn span{color:#b4573a;font-size:.875rem}
+.ys-bn--pick{background:#ee8466;border-color:#ee8466;color:#fff}
+.ys-bn--pick span{color:#fff}
+.ys-who__desc{text-align:left;max-width:600px;margin:0 auto 8px!important}
 .ys-list{margin:12px 0 16px;padding-left:1.4em;line-height:1.9}
 .ys-list li{margin:0 0 6px}
 .ys-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0}
@@ -173,45 +180,27 @@ main[data-lb] .yasui .ys-who__q{word-break:keep-all}
     <div class="ys-who">
       <div class="ys-who__item">
         <p class="ys-who__q">給付金を<wbr>使わない・<wbr>使えない人</p>
-        <div class="ys-tiles">
-          <a class="ys-tile" href="https://www.tokyo-ac.jp/career-consultant/" target="_blank" rel="nofollow noopener" data-ev="yasui_t_tokyoac"><span class="ys-tile__top">受講料</span><b class="ys-tile__big">12万円〜</b><span class="ys-tile__name">東京アカデミー</span><span class="ys-tile__note">先着5名・別に入会金3万円</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://career-chosakai.jp/" target="_blank" rel="nofollow noopener" data-ev="yasui_t_chosakai"><span class="ys-tile__top">受講料</span><b class="ys-tile__big">19.8万円</b><span class="ys-tile__name">労働調査会</span><span class="ys-tile__note">入会金・教材費なし</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://caricon.co/yousei/" target="_blank" rel="nofollow noopener" data-ev="yasui_t_caricon"><span class="ys-tile__top">受講料</span><b class="ys-tile__big">19.8万円</b><span class="ys-tile__name">キャリコンシーオー</span><span class="ys-tile__note">キャンペーン価格(通常29.8万円)</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-        </div>
-        <p class="ys-who__note">労働調査会は給付金の対象外。東京アカデミーは公式サイトに給付金の記載なし。東京アカデミーは2027年1月開講の回の金額です。</p>
+        <a class="ys-bn" href="https://www.tokyo-ac.jp/career-consultant/" target="_blank" rel="nofollow noopener" data-ev="yasui_b_tokyoac"><b>東京アカデミー</b><span aria-hidden="true">▶︎</span></a>
+        <p class="ys-who__desc">2027年1月開講の回は、先着5名なら受講料12万円＋入会金3万円で、合計15万円。22講習の中でいちばん安くなります。6人目からは合計20万円なので、そのときは入会金・教材費のかからない労働調査会(19.8万円)のほうが少し安くなります。</p>
+        <p class="ys-who__note">東京アカデミーは公式サイトに給付金の記載がありません。労働調査会は給付金の対象外です。</p>
       </div>
       <div class="ys-who__item">
         <p class="ys-who__q">給付金が<wbr>使える人</p>
-        <div class="ys-tiles">
-          <a class="ys-tile" href="https://caricon.co/yousei/" target="_blank" rel="nofollow noopener" data-ev="yasui_t_caricon2"><span class="ys-tile__top">最大80%のとき実質</span><b class="ys-tile__big">39,600円</b><span class="ys-tile__name">キャリコンシーオー</span><span class="ys-tile__note">受講料19.8万円(キャンペーン)</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_chiiki1"><span class="ys-tile__top">最大80%のとき実質</span><b class="ys-tile__big">59,400円</b><span class="ys-tile__name">地域連携<wbr>プラットフォーム</span><span class="ys-tile__note">受講料29.7万円</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://www.o-hara.jp/course/career_consultant/con_feature_03" target="_blank" rel="nofollow noopener" data-ev="yasui_t_ohara"><span class="ys-tile__top">最大80%のとき実質</span><b class="ys-tile__big">60,000円</b><span class="ys-tile__name">大原学園</span><span class="ys-tile__note">受講料29.4万円＋入学金6,000円</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-        </div>
-        <p class="ys-who__note">ICDS・テクノファ(29.7万円)も実質59,400円です。80%には資格を取って働くなどの条件があります。<a class="txt-link" href="../kyufukin/">給付金の条件を見る</a></p>
+        <a class="ys-bn" href="https://caricon.co/yousei/" target="_blank" rel="nofollow noopener" data-ev="yasui_b_caricon"><b>キャリコンシーオー</b><span aria-hidden="true">▶︎</span></a>
+        <p class="ys-who__desc">給付金の対象の講座で、受講料がいちばん安いのはキャリコンシーオー(キャンペーン価格19.8万円)です。給付金を最大の80%まで受け取れれば、実質39,600円。完全オンラインで、土曜か日曜のコースです。</p>
+        <p class="ys-who__note">キャンペーンが終わると通常29.8万円で、29.7万円の講座(地域連携プラットフォーム・ICDS・テクノファ)とほぼ同じになります。80%には資格を取って働くなどの条件があります。<a class="txt-link" href="../kyufukin/">給付金の条件を見る</a></p>
       </div>
       <div class="ys-who__item ys-who__item--pick">
         <p class="ys-who__q">休むかもしれない・<wbr>夜や土日に<wbr>受けたい人</p>
-        <div class="ys-tiles">
-          <a class="ys-tile ys-tile--pick" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_chiiki2"><span class="ys-tile__top">受講料</span><b class="ys-tile__big">29.7万円</b><span class="ys-tile__name">地域連携<wbr>プラットフォーム</span><span class="ys-tile__note">16時間まで無料で振替・平日の昼／夜／土日</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-        </div>
-        <p class="ys-who__note">入学金・教材費こみ。給付金の対象。運営者が受けた学校です。</p>
-      </div>
-      <div class="ys-who__item">
-        <p class="ys-who__q">割引や<wbr>クーポンを<wbr>使いたい人</p>
-        <div class="ys-tiles">
-          <a class="ys-tile" href="https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fwww.lec-jp.com%2Fcaricon%2Fkouza%2Fyousei%2F" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_lec"><span class="ys-tile__top">早割</span><b class="ys-tile__big">1万円引き</b><span class="ys-tile__name">LEC東京<wbr>リーガルマインド</span><span class="ys-tile__note">10月31日までの申込み</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV8EY+5MF8+5YJRM" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_manpower"><span class="ys-tile__top">説明会の参加特典</span><b class="ys-tile__big">1.1万円引き</b><span class="ys-tile__name">日本マンパワー</span><span class="ys-tile__note">受講料に使えるクーポン</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://px.a8.net/svt/ejp?a8mat=4BE7SX+DP0GQ+5UHI+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fcmcajapan.com%2Flp%2Fsetsumeikai" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_cmca"><span class="ys-tile__top">早期割引</span><b class="ys-tile__big">10月31日まで</b><span class="ys-tile__name">CMCA</span><span class="ys-tile__note">無料説明会への参加が条件</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-        </div>
-        <p class="ys-who__note">10月14日に確かめた内容です。日本カウンセリングカレッジにも早期割引(2万円引き)があります。</p>
+        <a class="ys-bn ys-bn--pick" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_b_chiiki"><b>地域連携<wbr>プラットフォーム</b><span aria-hidden="true">▶︎</span></a>
+        <p class="ys-who__desc">オンライン講習は16時間まで無料で振替でき、平日の昼・夜・土日のコースから選べます。29.7万円で入学金・教材費こみ、給付金の対象です。受講料が30万円以下の講習で、振替ができて平日の昼・夜・土日から選べると公式サイトで確かめられたのは、ここだけでした。</p>
+        <p class="ys-who__note">運営者が受けた学校です。試験対策は別料金です。</p>
       </div>
       <div class="ys-who__item">
         <p class="ys-who__q">試験対策も<wbr>受講料に<wbr>まとめたい人</p>
-        <div class="ys-tiles">
-          <a class="ys-tile" href="https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fwww.lec-jp.com%2Fcaricon%2Fkouza%2Fyousei%2F" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_lec2"><span class="ys-tile__top">試験対策こみ</span><b class="ys-tile__big">33万円</b><span class="ys-tile__name">LEC東京<wbr>リーガルマインド</span><span class="ys-tile__note"></span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-          <a class="ys-tile" href="https://px.a8.net/svt/ejp?a8mat=4BE7SX+HV1P6+5BEA+BWVTE" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_t_recurrent"><span class="ys-tile__top">試験対策こみ</span><b class="ys-tile__big">36.08万円〜</b><span class="ys-tile__name">リカレント</span><span class="ys-tile__note">ライブ通信講座の金額</span><span class="ys-tile__go">公式サイト <span aria-hidden="true">▶︎</span></span></a>
-        </div>
-        <p class="ys-who__note"><a class="txt-link" href="../../schools/compare/">7校の比較表で、ほかの項目も見る</a></p>
+        <a class="ys-bn" href="https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fwww.lec-jp.com%2Fcaricon%2Fkouza%2Fyousei%2F" target="_blank" rel="sponsored nofollow noopener noreferrer" data-ev="yasui_b_lec"><b>LEC東京<wbr>リーガルマインド</b><span aria-hidden="true">▶︎</span></a>
+        <p class="ys-who__desc">比較表の7校で、試験対策が受講料に入っているのはLECとリカレント。受講料が安いのはLEC(33万円)です。10月31日までの申込みなら、早割で1万円引きになります(12月〜3月開講のクラス)。</p>
+        <p class="ys-who__note">リカレントは36.08万円〜です。<a class="txt-link" href="../../schools/compare/">7校の比較表で見る</a></p>
       </div>
     </div>
   </section>
