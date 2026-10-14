@@ -1143,27 +1143,23 @@ body.is-home main .campaign-now > .container > h2{font-size:1.3125rem!important}
   .hitome .hq__group--yes{margin:0!important}
   .hitome .mini-say__bubble{line-break:strict!important}
 }
-/* 2026-10-14 比較表「項目タブ＋答えを大きく」 */
-.hitome .ctab{max-width:560px!important;margin:8px auto 28px!important}
-.ctab__tabs{display:flex;flex-wrap:wrap;gap:6px;padding:2px 0 12px;justify-content:center}
-.ctab__tabs::-webkit-scrollbar{display:none}
-@media(max-width:380px){.ctab__tabs button{padding:5px 12px;font-size:.8125rem}}
-.ctab__tabs button{flex:0 0 auto;border:1.5px solid #b4573a;background:#fff;color:#b4573a;border-radius:999px;padding:7px 16px;font:inherit;font-size:.9375rem;font-weight:700;cursor:pointer;white-space:nowrap}
+/* 2026-10-14 比較表「項目タブ＋いちばんを色で」 */
+.hitome .ctab{max-width:520px!important;margin:8px auto 28px!important}
+.ctab__tabs{display:flex;gap:0;margin:0 0 12px;background:#fff;border-radius:999px;padding:4px;box-shadow:0 2px 8px rgba(41,67,94,.06)}
+.ctab__tabs button{flex:1 1 0;min-width:0;border:0;background:none;color:#6f6a58;border-radius:999px;padding:8px 2px;font:inherit;font-size:.875rem;font-weight:700;cursor:pointer;white-space:nowrap}
 .ctab__tabs button[aria-selected="true"]{background:#b4573a;color:#fff}
-.ctab__win{background:#fff;border-radius:20px;padding:22px 18px 18px;text-align:center;box-shadow:0 4px 14px rgba(41,67,94,.06)}
-.ctab__win p{margin:0}
-main[data-lb] .ctab__win p{word-break:keep-all;overflow-wrap:anywhere}
-.ctab__q{font-size:.875rem;font-weight:700;color:#6c8265}
-.ctab__q::before{content:"＼ ";}.ctab__q::after{content:" ／"}
-.ctab__who{margin-top:6px!important;font-family:"Zen Maru Gothic",sans-serif;font-size:1.375rem;font-weight:700;color:#29435e;line-height:1.5}
-.ctab__val{margin-top:2px!important;font-family:"Zen Maru Gothic",sans-serif;font-size:1.75rem;font-weight:700;color:#b4573a;line-height:1.4}
-.ctab__note{margin-top:8px!important;font-size:.875rem;color:#6f6a58;line-height:1.8}
-.ctab__more{margin-top:10px;background:#fff;border-radius:16px;padding:4px 16px}
-.ctab__more summary{cursor:pointer;text-align:center;font-weight:700;color:#b4573a;padding:10px 0;list-style:none}
-.ctab__more summary::-webkit-details-marker{display:none}
-.ctab__more summary::after{content:" ▼";font-size:.75em}
-.ctab__more[open] summary::after{content:" ▲"}
-.ctab__more ul{list-style:none;margin:0;padding:0 0 8px}
-.ctab__more li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;padding:10px 0;border-top:1px solid #efe8d8;font-size:.9375rem}
-.ctab__n{color:#29435e}.ctab__v{font-weight:700;color:#3f4652}
-.ctab__more li small{flex-basis:100%;font-size:.75rem;color:#6f6a58}
+@media(max-width:340px){.ctab__tabs{display:grid;grid-template-columns:repeat(3,1fr);border-radius:16px;gap:2px}.ctab__tabs button{font-size:.8125rem;padding:7px 0;border-radius:12px}}
+.ctab__list{list-style:none;margin:0;padding:6px 14px;background:#fff;border-radius:18px;box-shadow:0 4px 14px rgba(41,67,94,.06)}
+.ctab__list li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 10px;padding:11px 2px;border-top:1px solid #efe8d8;font-size:.9375rem;line-height:1.5}
+.ctab__list li:first-child{border-top:0}
+.ctab__list li.is-best{background:#fdf6d8;border-top-color:transparent;margin:0 -8px;padding:11px 10px;border-radius:12px}
+.ctab__list li.is-best + li.is-best{margin-top:4px}
+.ctab__list li.is-best + li:not(.is-best){border-top-color:transparent}
+.ctab__n{color:#29435e;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ctab__list li.is-best .ctab__n,.ctab__list li.is-best .ctab__v{font-weight:700}
+.ctab__list li.is-best .ctab__v{color:#b4573a}
+.ctab__v{color:#3f4652;text-align:right;margin-left:auto}
+.ctab__badge{font-size:.6875rem;font-weight:700;color:#fff;background:#6c8265;border-radius:999px;padding:1px 8px;line-height:1.6}
+.ctab__list li small{flex-basis:100%;font-size:.75rem;color:#6f6a58}
+.ctab__cap{margin:0 0 8px;text-align:center;font-size:.8125rem;font-weight:700;color:#6c8265}
+.ctab__cap::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;background:#fdf6d8;border:1px solid #efd98c;margin-right:6px;vertical-align:-1px}
