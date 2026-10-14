@@ -1063,11 +1063,11 @@ h2:has(> .sec-illust){overflow:hidden}
 }
 
 /* リード文(一次情報の記事の導入) */
-.lead-intro{word-break:keep-all;overflow-wrap:anywhere;max-width:720px;margin:28px auto 8px;padding:24px 26px;background:#fffdf8;border-radius:22px;line-height:2;color:#2f3440}
-.lead-intro p,article .lead-intro p{margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.lead-intro{max-width:720px;margin:28px auto 8px;padding:24px 26px;background:#fffdf8;border-radius:22px;line-height:2;color:#2f3440}
+.lead-intro p,article .lead-intro p{margin:0;word-break:normal;overflow-wrap:normal;line-break:strict;text-align:left}
 .lead-intro p+p{margin-top:12px}
 .lead-intro strong{background:linear-gradient(transparent 58%,#fbe3a0 58%)}
-@media (max-width:640px){.lead-intro{padding:20px 18px;border-radius:18px;font-size:.96rem}}
+@media (max-width:640px){.lead-intro{padding:18px 16px;border-radius:18px;font-size:.96rem;line-height:1.9}}
 
 .camp-scroll-hint{display:none}
 @media (max-width:700px){.camp-scroll-hint{display:block;margin:10px 0 0;text-align:right;font-size:.8125rem;color:#6f6b63}}
