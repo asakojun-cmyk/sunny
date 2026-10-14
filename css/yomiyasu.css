@@ -1096,3 +1096,4 @@ h2:has(> .sec-illust){overflow:hidden}
 .cmp-cheap strong{font-size:1.125rem;color:#b4573a;font-family:"Zen Maru Gothic",sans-serif}
 .cmp-cheap small{font-size:.75rem;color:#6f6a58}
 .cmp-cheap .nb{display:inline-block;white-space:nowrap}
+.cmp-cheap-more{margin:10px 0 0;text-align:center;font-size:.8125rem}
