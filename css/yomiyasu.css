@@ -1083,3 +1083,10 @@ h2:has(> .sec-illust){overflow:hidden}
   .cta-fab__sign b{font-size:14px;color:#b4573a}
   .cta-fab__close{z-index:3;top:50%;right:8px;margin-top:-12px;box-shadow:none}
 }
+/* 2026-10-14 トップ: 「はじめての方へ」の1行リンク */
+.lp-river__more{margin:48px auto 0;max-width:480px;padding:24px 20px;background:#fffdf8;border-radius:16px;text-align:center}
+.lp-river__more-title{margin:0 0 12px;font-weight:700;color:#29435e;font-family:"Zen Maru Gothic",sans-serif}
+.lp-river__more ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lp-river__more a{color:#b4573a;font-weight:700;font-size:.9375rem;text-decoration:underline;text-decoration-color:#e7c9b8;text-underline-offset:5px}
+.lp-river__ans{margin:0 0 .5em;font-size:1.125rem;font-weight:700;color:#29435e;font-family:"Zen Maru Gothic",sans-serif;line-height:1.6}
+.lp-river__ans::before{content:"A. ";color:#ef8064}
