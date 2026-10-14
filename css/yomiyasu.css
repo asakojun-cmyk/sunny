@@ -1074,5 +1074,7 @@ h2:has(> .sec-illust){overflow:hidden}
 @media (max-width:700px){.camp-scroll-hint{display:block;margin:10px 0 0;text-align:right;font-size:.8125rem;color:#6f6b63}}
 
 /* 2026-10-14 トップ: 「はじめての方へ」の1行リンク */
-.lp-river__first{margin:40px 0 0;text-align:center;font-size:.9375rem}
-.lp-river__first a{color:#29435e;font-weight:700;text-decoration:underline;text-decoration-color:#e7c9b8;text-underline-offset:5px}
+.lp-river__more{margin:48px auto 0;max-width:480px;padding:24px 20px;background:#fffdf8;border-radius:16px;text-align:center}
+.lp-river__more-title{margin:0 0 12px;font-weight:700;color:#29435e;font-family:"Zen Maru Gothic",sans-serif}
+.lp-river__more ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lp-river__more a{color:#b4573a;font-weight:700;font-size:.9375rem;text-decoration:underline;text-decoration-color:#e7c9b8;text-underline-offset:5px}
