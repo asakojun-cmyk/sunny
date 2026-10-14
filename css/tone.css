@@ -486,3 +486,13 @@ li > .shiryo__mark { position: static; margin-right: .4em; }
   .newsflash__go { grid-row: 1 / span 2; font-size: 0; text-decoration: none; }
   .newsflash__go .arw { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #ef8064; color: #fff; font-size: .75rem; }
 }
+
+/* ---------- 2026-10-15 「あわせて読みたい」を小さく(大きすぎて、本文より目立っていた) ----------
+   見出しは小見出しくらいに。1件を「種類の札＋題名 ▶」の1行にして、細い線で区切る */
+.related { max-width: 600px; margin-left: auto !important; margin-right: auto !important; margin-top: 56px !important; }
+.site-main h2.related__title.related__title { font-size: 1.125rem !important; margin: 0 0 6px !important; padding: 0 !important; border: 0 !important; }
+.related__list a { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 10px; padding: 11px 4px !important; }
+.related__list a::after { content: "▶"; font-size: .625rem; color: #b4573a; }
+.related__type { flex: none; font-size: 11px !important; padding: 1px 9px !important; line-height: 1.7; }
+.related__item-title { margin-top: 0 !important; font-size: 15px !important; line-height: 1.6; }
+.related__desc { flex-basis: 100%; text-align: center; font-size: 13px !important; line-height: 1.7 !important; margin-top: 0 !important; }
