@@ -1,0 +1,43 @@
+# キャリコン学びピクニック
+
+> 国家資格キャリアコンサルタントが気になった人が、最初に読むサイトです。資格の取り方、養成講習(養成講座)の選び方、学科・論述・面接の試験対策を、小学生でもわかることばで説明しています。運営者は、養成講習を修了して試験に向けて勉強中の本人です。
+
+- 運営者: 岩脇 朝子(サイト内での名前は「ちゃん」)。3児の母。2026年8月に養成講習を修了。
+- 学校の情報は「公式の情報」「受講した本人の体験」「運営者の考え」を分けて書いています。確かめられなかった項目は「未確認」と書き、推測では埋めていません。
+- 体験談はAIで作っていません。受講していない学校について「受講体験」とは書いていません。
+- 学校へのリンクの一部は広告(紹介リンク)です。広告のあるページには、その旨を書いています。並び順や内容は、広告の有無で変えていません。
+- 養成講習7校の料金・期間などの数字は、各校の公式サイトと毎日照らし合わせています。
+
+## 資格を知る
+
+- [キャリアコンサルタントとは](https://carepicnic.com/careers/): 仕事の内容、やること・やらないこと、資格を活かせる場所
+- [資格の取り方と費用](https://carepicnic.com/shikaku-guide/): 受験資格、養成講習、試験、登録までの流れ
+- [資格は無駄？やめとけと言われる3つの理由](https://carepicnic.com/school-guides/merit-demerit/): 独占業務がないこと・費用・収入の実態と、向く人・向かない人
+- [在宅や副業で活かせるか](https://carepicnic.com/school-guides/zaitaku-fukugyo/): わかっていること・まだわからないこと
+
+## 養成講習をえらぶ
+
+- [養成講習7校の比較](https://carepicnic.com/schools/compare/): 費用・期間・受講時間・欠席時の扱い・試験対策でくらべた表と、運営者が選んだ学校
+- [養成学校の一覧](https://carepicnic.com/schools/): 各校の公式情報(出典と確認日つき)
+- [給付金で実質いくらになるか](https://carepicnic.com/school-guides/kyufukin/): 専門実践教育訓練給付金の「最大80%」の条件
+- [養成学校の選び方](https://carepicnic.com/school-guides/how-to-choose/)
+- [地域連携プラットフォームの受講体験記](https://carepicnic.com/school-reviews/chiiki-renkei-platform/): 運営者本人の体験。良かった点・気になった点・合わない可能性がある人
+
+## 試験対策
+
+- [試験対策の入口](https://carepicnic.com/exam/): 学科・論述・面接
+- [ことば図鑑](https://carepicnic.com/text/): 試験に出る用語を「ひとこと」「身近なたとえ」「正式な説明」の3段階で
+- [理論家図鑑](https://carepicnic.com/theorists/): キャリア理論の理論家
+- [試験ガイド](https://carepicnic.com/exam-guide/shutsudai-hani/): 出題範囲
+
+## データ
+
+- [養成講習7校の元データ(JSON)](https://carepicnic.com/data/schools.json): 項目ごとに、内容・確かさ(確認済み/一部/未確認/公式に記載なし)・出典URL・確認日
+- [公式サイトと照らし合わせた日の記録(JSON)](https://carepicnic.com/data/schools-watch.json)
+
+## このサイトについて
+
+- [運営者と編集方針](https://carepicnic.com/about/)
+- [プライバシーポリシー・広告について](https://carepicnic.com/privacy/)
+- [お問い合わせ](https://carepicnic.com/contact/)
+- [YouTube](https://www.youtube.com/channel/UCpUFUH3VeCqG4cly2HrTZ3w)・[note](https://note.com/gifted_pansy8788): 同じ運営者の発信

@@ -324,3 +324,4 @@ details.cmp-disclosure[open] { background: #fbf8f1 !important; }
 .osusume__card .osusume__cols li { font-size: 13px; letter-spacing: .01em; }
 .osusume__name, .osusume__lede, .hitome .mini-say__bubble, .hq__ask { word-break: keep-all; overflow-wrap: anywhere; }
 @media (max-width: 640px) { .osusume__card .osusume__cols > div, .osusume__card .osusume__cols > div:first-child { padding: 0 6px; } }
+.hitome__fresh { margin: 14px auto 0; font-size: 11.5px; color: var(--h-sub); line-height: 1.85; }
