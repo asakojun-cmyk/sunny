@@ -818,7 +818,7 @@
 .gstep{position:relative;display:flex;gap:16px;align-items:flex-start;background:#fffdf8;border-radius:22px;padding:22px 24px;margin:18px 0;box-shadow:0 8px 22px rgba(48,74,58,.08)}
 .gstep__num{position:absolute;left:-49px;top:26px;width:34px;height:34px;border-radius:50%;background:#f8e45c;display:grid;place-items:center;font-weight:700;color:#5c4d1d;box-shadow:0 3px 8px rgba(41,67,94,.12)}
 .gstep__icon{width:64px;height:auto;flex:none;margin-top:4px}
-.gstep__body h2{margin:0 0 10px;font-size:1.0625rem;color:var(--picnic-ink)}
+.gstep__body h2,.gstep__body h3{margin:0 0 10px;font-size:1.0625rem;color:var(--picnic-ink)}
 .gstep__body h2:after{display:none}
 .gstep__sunny{margin:0;line-height:1.95;font-size:.9375rem}
 .gstep__sunny b{display:inline-block;margin-right:8px;padding:2px 10px;border-radius:999px;background:#fff7dd;color:#b08a2e;font-size:0.8125rem;vertical-align:2px}

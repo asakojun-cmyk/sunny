@@ -1097,3 +1097,16 @@ h2:has(> .sec-illust){overflow:hidden}
 .cmp-cheap small{font-size:.75rem;color:#6f6a58}
 .cmp-cheap .nb{display:inline-block;white-space:nowrap}
 .cmp-cheap-more{margin:10px 0 0;text-align:center;font-size:.8125rem}
+/* 2026-10-14 見出しの大きさを全ページでそろえる(h2 21/26px・h3 19/21px) */
+main[data-lb] :is(.shikaku-next, .picnic-map__head) > h2{font-size:1.3125rem!important;line-height:1.5}
+main[data-lb] .container--article :is(.guide-section, .review-section, .review-summary, .school-section, .column-section) h3,
+main[data-lb] .gstep__body h3,
+body.is-home main .lp-river .lp-river__body h3{font-size:1.1875rem!important;line-height:1.55}
+body.is-home main .campaign-now > .container > h2{font-size:1.3125rem!important}
+@media (min-width:768px){
+  main[data-lb] :is(.shikaku-next, .picnic-map__head) > h2{font-size:1.625rem!important}
+  main[data-lb] .container--article :is(.guide-section, .review-section, .review-summary, .school-section, .column-section) h3,
+  main[data-lb] .gstep__body h3,
+  body.is-home main .lp-river .lp-river__body h3{font-size:1.3125rem!important}
+  body.is-home main .campaign-now > .container > h2{font-size:1.625rem!important}
+}
