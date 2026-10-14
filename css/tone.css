@@ -420,7 +420,6 @@ html { overflow-x: clip; }
 }
 .site-main a.txt-link:hover, main a.txt-link:hover { color: #ee8466 !important; }
 .site-main a.txt-link .arw, main a.txt-link .arw { color: inherit; }
-=======
 
 /* ---------- 23. 波の形は「B ふつうの波(山3つ)」に決定(2026-10-12) ----------
    高さはパソコン56px・スマホ34px。ほかの所もこの高さにそろえる */

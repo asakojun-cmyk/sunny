@@ -48,7 +48,7 @@
 /* 安い養成講座ページ(2026-10-15 作り直し)
    ほかのページと同じ部品(review-toc・fact-table・button--primary・txt-link・setsumei-box)を使い、
    このページだけの部品は、比較ページと同じ「白い角丸の面＋細い線」の調子にそろえる */
-.yasui { --ys-ink: #29435e; --ys-sub: #7a7468; --ys-line: #ece7da; --ys-coral: #b4573a; --ys-lemon: #f9e79a; --ys-green: #3f6b4a; }
+.yasui { --ys-ink: #2c3e50; --ys-sub: #7a7468; --ys-line: #ece7da; --ys-coral: #b3543a; --ys-lemon: #f9e79a; --ys-green: #5d7f56; }
 .yasui .num { font-variant-numeric: tabular-nums; }
 
 /* 冒頭の「答え」: 2つの白い丸 */
@@ -59,7 +59,7 @@
 .ys-circles { display: flex; justify-content: center; gap: 24px; }
 .ys-circle { flex: 0 0 236px; aspect-ratio: 1; border-radius: 50%; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 18px 26px; text-decoration: none !important; color: var(--ys-ink); transition: transform .2s; }
 .ys-circle:hover { transform: translateY(-3px); }
-.ys-circle__when { padding: 1px 12px; border-radius: 99px; background: #7d8f80; color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+.ys-circle__when { padding: 1px 12px; border-radius: 99px; background: #7c9a72; color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
 .ys-circle__name { margin-top: 6px; font-weight: 700; font-size: 1rem; white-space: nowrap; }
 .ys-circle__yen { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 2.125rem; line-height: 1.2; color: var(--ys-coral); white-space: nowrap; }
 .ys-circle__yen small { font-size: .9375rem; }
@@ -98,13 +98,13 @@
 /* あなたの場合(4つの答えを、同じ形でならべる) */
 .ys-picks { display: grid; gap: 20px; margin: 24px 0 8px; }
 .ys-pick { position: relative; margin: 0; padding: 26px 22px 22px; background: #fff; border-radius: 20px; text-align: center; }
-.ys-pick--mine { padding-top: 36px; box-shadow: 0 0 0 2px #f3c9ba inset; }
+.ys-pick--mine { padding-top: 36px; box-shadow: 0 0 0 2px #fbe3da inset; }
 .yasui .ys-picks h3.ys-pick__who { margin: 0 0 6px !important; padding: 0 !important; font-size: 1.0625rem !important; line-height: 1.6; color: var(--ys-ink); }
 .ys-pick__who::before { content: none !important; }
 .yasui .ys-pick__mc { margin: 0 0 2px !important; font-size: .75rem !important; font-weight: 700; color: var(--ys-sub); letter-spacing: .04em; }
 .yasui .ys-pick__name { margin: 0 0 16px !important; font-family: "Zen Maru Gothic", sans-serif; font-size: 1.5rem !important; font-weight: 700; line-height: 1.5; }
 .ys-pick__name span { background: linear-gradient(transparent 62%, var(--ys-lemon) 62%); padding: 0 3px; }
-.yasui .ys-pick__tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); margin: 0 !important; padding: 2px 14px; border-radius: 99px; background: #f3c9ba; color: #7a3a26; font-size: .75rem !important; line-height: 1.8; font-weight: 700; white-space: nowrap; letter-spacing: .04em; }
+.yasui .ys-pick__tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); margin: 0 !important; padding: 2px 14px; border-radius: 99px; background: #fbe3da; color: var(--ys-coral); font-size: .75rem !important; line-height: 1.8; font-weight: 700; white-space: nowrap; letter-spacing: .04em; }
 .ys-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 16px; padding: 12px 0; border-top: 1px solid var(--ys-line); border-bottom: 1px solid var(--ys-line); }
 .ys-nums > div { padding: 0 6px; }
 .ys-nums > div + div { border-left: 1px solid var(--ys-line); }
@@ -116,7 +116,7 @@
 .ys-nums .is-key dd { color: var(--ys-coral); font-size: 1.5rem; }
 .yasui .ys-why { display: inline-block; margin: 0 0 18px; padding: 0; list-style: none; text-align: left; font-size: .9375rem; line-height: 1.8; }
 .ys-why li { position: relative; margin: 0 0 4px; padding-left: 20px; }
-.ys-why li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 8px; height: 8px; border-radius: 50%; background: #f2c12e; }
+.ys-why li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 8px; height: 8px; border-radius: 50%; background: #f4cf57; }
 .ys-pick__go { margin: 0 0 10px; }
 .ys-pick__go .button { min-width: min(260px, 100%); }
 .ys-pick__note { max-width: 520px; margin: 0 auto !important; font-size: .75rem !important; line-height: 1.8; color: var(--ys-sub); }
@@ -143,8 +143,8 @@
 .ys-table .ys-school { font-weight: 700; }
 .ys-table .ys-sub { display: block; font-size: .75rem; color: var(--ys-sub); font-weight: 500; }
 .ys-tag { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 99px; font-size: .625rem; font-weight: 700; line-height: 1.7; vertical-align: 2px; white-space: nowrap; }
-.ys-tag--pr { background: #efeadd; color: #6f6a58; }
-.ys-tag--cmp { background: none; padding: 0; color: #5d8a57; font-size: .6875rem; letter-spacing: .02em; }
+.ys-tag--pr { background: #f1eee6; color: var(--ys-sub); }
+.ys-tag--cmp { background: none; padding: 0; color: #7c9a72; font-size: .6875rem; letter-spacing: .02em; }
 .ys-more { margin: 0; }
 .ys-more > summary { list-style: none; cursor: pointer; padding: 14px 8px; text-align: center; color: var(--ys-coral); font-weight: 700; font-size: .9375rem; }
 .ys-more > summary::-webkit-details-marker { display: none; }
@@ -162,11 +162,11 @@
 
 /* 30万円以下の講習のちがい */
 .ys-cards { display: grid; gap: 14px; margin: 18px 0 14px; }
-.ys-card__why { margin: 0 0 12px; padding: 12px 14px; background: #fffbea; border-radius: 12px; }
-.yasui .ys-card__why-t { margin: 0 0 4px !important; font-size: .75rem !important; font-weight: 700; color: #8a6d12; letter-spacing: .06em; }
+.ys-card__why { margin: 0 0 12px; padding: 12px 14px; background: #fdf6d8; border-radius: 12px; }
+.yasui .ys-card__why-t { margin: 0 0 4px !important; font-size: .75rem !important; font-weight: 700; color: var(--ys-ink); letter-spacing: .06em; }
 .ys-card__why ul { margin: 0; padding: 0; list-style: none; }
 .ys-card__why li { position: relative; margin: 0 0 2px; padding-left: 16px; font-size: .9375rem; line-height: 1.8; }
-.ys-card__why li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 7px; height: 7px; border-radius: 50%; background: #f2c12e; }
+.ys-card__why li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 7px; height: 7px; border-radius: 50%; background: #f4cf57; }
 .ys-card dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
 @media (max-width: 560px) { .ys-card dl { grid-template-columns: 1fr; } }
 .ys-card { margin: 0; padding: 16px 18px 14px; background: #fff; border-radius: 16px; font-size: .875rem; line-height: 1.7; }
@@ -180,9 +180,9 @@
 .ys-card dt { color: var(--ys-sub); font-size: .75rem; font-weight: 700; padding-top: .2em; }
 .ys-card dd { margin: 0; }
 .ys-chip { display: inline-block; padding: 0 9px; border-radius: 99px; font-size: .75rem; font-weight: 700; line-height: 1.8; }
-.ys-chip--ok { background: #e6efe4; color: var(--ys-green); }
+.ys-chip--ok { background: #eef4dd; color: var(--ys-green); }
 .ys-chip--ng { background: #fbe9e2; color: #a04a30; }
-.ys-chip--na { background: #f1eee6; color: #6f6a58; }
+.ys-chip--na { background: #f1eee6; color: var(--ys-sub); }
 
 /* 給付金の表(.fact-table を使う)の大事な数字 */
 .yasui .fact-table strong.ys-big { color: var(--ys-coral); font-size: 1.0625rem; }
@@ -198,8 +198,8 @@
 .ys-kyu__row span small { display: block; font-size: .75rem; color: var(--ys-sub); }
 .ys-kyu__row .num { font-size: 1.0625rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .ys-kyu__row .is-key { font-family: "Zen Maru Gothic", sans-serif; font-size: 1.5rem; color: var(--ys-coral); }
-.ys-kyu__row.is-off { background: #faf8f3; }
-.ys-kyu__row.is-off .num { color: #8a8577; }
+.ys-kyu__row.is-off { background: #fbf8f1; }
+.ys-kyu__row.is-off .num { color: var(--ys-sub); }
 @media (max-width: 480px) {
   .ys-kyu__row { padding: 12px 12px; }
   .ys-kyu__row .num { font-size: .9375rem; }
@@ -214,7 +214,7 @@
 .ys-qa > summary::after { content: "＋"; color: var(--ys-coral); font-weight: 700; text-align: center; }
 .ys-qa[open] > summary::after { content: "－"; }
 .ys-qa__q, .ys-qa__mark { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: .9375rem; }
-.ys-qa__q { background: #29435e; color: #fff; }
+.ys-qa__q { background: var(--ys-ink); color: #fff; }
 .ys-qa__a { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; padding: 0 18px 18px; }
 .ys-qa__mark { background: #f9e79a; color: var(--ys-ink); }
 .yasui .ys-qa__a p { margin: 2px 0 0 !important; line-height: 1.9; }
