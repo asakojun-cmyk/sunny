@@ -1072,3 +1072,7 @@ h2:has(> .sec-illust){overflow:hidden}
 
 .camp-scroll-hint{display:none}
 @media (max-width:700px){.camp-scroll-hint{display:block;margin:10px 0 0;text-align:right;font-size:.8125rem;color:#6f6b63}}
+
+/* 2026-10-14 トップ: 「はじめての方へ」の1行リンク */
+.lp-river__first{margin:40px 0 0;text-align:center;font-size:.9375rem}
+.lp-river__first a{color:#29435e;font-weight:700;text-decoration:underline;text-decoration-color:#e7c9b8;text-underline-offset:5px}
