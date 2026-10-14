@@ -938,7 +938,9 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-details dt{font-size:.875rem;font-weight:700;color:#2c3e50;letter-spacing:.03em}
 .camp-details dd{margin:4px 0 0;font-size:.8125rem;line-height:1.85;color:#5f5a50}
 @media (max-width:700px){
-  .camp-banners{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+  .camp-banners{display:flex;grid-template-columns:none;gap:12px;margin:26px -16px 0;padding:4px 16px 14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:none}
+  .camp-banners::-webkit-scrollbar{display:none}
+  .camp-banners>li{flex:0 0 62%;scroll-snap-align:start}
   .camp-banner{border-radius:18px}
   .camp-banner__stub{min-height:122px;padding:20px 6px 14px}
   .camp-banner__stub strong{font-size:1.9375rem}
@@ -1059,3 +1061,13 @@ h2:has(> .sec-illust){overflow:hidden}
 @media (max-width:640px){
   .compare-picker .compare-picker__list{display:grid;grid-template-columns:1fr;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;gap:2px}
 }
+
+/* リード文(一次情報の記事の導入) */
+.lead-intro{word-break:keep-all;overflow-wrap:anywhere;max-width:720px;margin:28px auto 8px;padding:24px 26px;background:#fffdf8;border-radius:22px;line-height:2;color:#2f3440}
+.lead-intro p,article .lead-intro p{margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.lead-intro p+p{margin-top:12px}
+.lead-intro strong{background:linear-gradient(transparent 58%,#fbe3a0 58%)}
+@media (max-width:640px){.lead-intro{padding:20px 18px;border-radius:18px;font-size:.96rem}}
+
+.camp-scroll-hint{display:none}
+@media (max-width:700px){.camp-scroll-hint{display:block;margin:10px 0 0;text-align:right;font-size:.8125rem;color:#6f6b63}}
