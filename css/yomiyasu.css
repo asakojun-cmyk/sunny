@@ -904,17 +904,17 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-banners>li{display:flex;min-width:0}
 .camp-banner{position:relative;display:flex;flex-direction:column;flex:1;min-width:0;border-radius:20px;overflow:hidden;background:#fffdf8;color:#2c3e50;text-align:center;text-decoration:none;transition:transform .18s ease}
 .camp-banner:hover{transform:translateY(-3px)}
-.camp-banner--sky{--camp:#cfe3ea}
-.camp-banner--leaf{--camp:#dfe9c8}
-.camp-banner--peach{--camp:#f8dccb}
-.camp-banner__stub{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:132px;padding:20px 8px 16px;background:var(--camp,#f4cf57)}
+.camp-banner--sky{--camp:#e8f1f4}
+.camp-banner--leaf{--camp:#eff4e3}
+.camp-banner--peach{--camp:#fcefe6}
+.camp-banner__stub{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:132px;padding:20px 8px 16px;background:var(--camp,#fcf1cc)}
 /* 券の切り取り線(左右のまるい切り欠きと点線) */
 .camp-banner__stub::before,.camp-banner__stub::after{content:"";position:absolute;bottom:-9px;width:18px;height:18px;border-radius:50%;background:#f5f2eb;z-index:1}
 .camp-banner__stub::before{left:-9px}
 .camp-banner__stub::after{right:-9px}
 .camp-banner__body::before{content:"";position:absolute;left:14px;right:14px;top:0;border-top:2px dashed rgba(44,62,80,.16)}
 .camp-banner__stub small{font-size:.75rem;font-weight:700;letter-spacing:.06em;line-height:1.5}
-.camp-banner__stub strong{font-size:2.125rem;line-height:1.15;font-weight:700;letter-spacing:0;font-feature-settings:"palt";white-space:nowrap}
+.camp-banner__stub strong{color:#b4573a;font-size:2.25rem;line-height:1.15;font-weight:700;letter-spacing:0;font-feature-settings:"palt";white-space:nowrap}
 .camp-banner__stub strong i{font-style:normal;font-size:.8125rem;margin-left:2px;letter-spacing:.02em}
 .camp-banner__stub em{font-style:normal;font-size:.875rem;font-weight:700;letter-spacing:.08em;line-height:1.5}
 .camp-banner__pr{position:absolute;top:8px;right:8px;z-index:2;font-style:normal;font-size:.625rem;font-weight:500;line-height:1.4;padding:1px 6px;border-radius:4px;background:rgba(255,255,255,.7);color:#6b665c;letter-spacing:.04em}
@@ -923,7 +923,8 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-banner__cond{font-size:.75rem;line-height:1.6;color:#6b665c}
 .camp-banner .nb{display:inline-block;white-space:nowrap}
 .camp-banner__until{margin-top:auto;padding:3px 12px;border-radius:999px;background:#f1ede3;color:#6b665c;font-size:.6875rem;font-weight:700;letter-spacing:.04em;line-height:1.6}
-.camp-banner__until--date{background:#ee8466;color:#fff}
+.camp-banner__until--date{background:#ee8466;color:#fff;animation:camp-blink 1.8s ease-in-out infinite}
+@keyframes camp-blink{0%,100%{opacity:1}50%{opacity:.45}}
 .camp-banner:focus-visible{outline:3px solid #ee8466;outline-offset:4px}
 /* くわしい条件(たたんでおく) */
 .camp-details{max-width:680px;margin:22px auto 0;text-align:left}
@@ -950,7 +951,7 @@ h2:has(> .sec-illust){overflow:hidden}
 }
 @media (prefers-reduced-motion:reduce){.camp-banner,.camp-details summary::after{transition:none}}
 .campaign-now__note{max-width:680px;margin:36px auto 0;font-size:.8125rem;line-height:1.8;color:#7a7468;text-align:left}
-@media (prefers-reduced-motion:reduce){.campaign-now__tag{animation:none}}
+@media (prefers-reduced-motion:reduce){.campaign-now__tag,.camp-banner__until--date{animation:none}}
 
 /* 2026-10-11 背景の色が変わる境目を、ぜんぶ同じ「なみなみ」にそろえる(トップ)。
    上の色(--from)の帯に、下の色(--to)の波を重ねる。波の形はトップのほかの境目と同じ */
