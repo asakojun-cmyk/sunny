@@ -1073,6 +1073,16 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-scroll-hint{display:none}
 @media (max-width:700px){.camp-scroll-hint{display:block;margin:10px 0 0;text-align:right;font-size:.8125rem;color:#6f6b63}}
 
+/* 2026-10-14 スマホ: 雲の説明会ボタンが本文を隠すので、下のタブのすぐ上に細い帯にする */
+@media (max-width:640px){
+  .cta-fab{left:12px;right:12px;bottom:calc(66px + env(safe-area-inset-bottom))}
+  .cta-fab__link{padding:0;border-radius:999px}
+  .cta-fab__sunny,.cta-fab__note{display:none}
+  .cta-fab__sign{flex-direction:row;justify-content:center;gap:10px;width:100%;height:auto;padding:9px 44px 9px 16px;background:#fffdf8;border:1.5px solid #e9dfc9;border-radius:999px;filter:none;box-shadow:0 4px 14px rgba(41,67,94,.14)}
+  .cta-fab__sign small{font-size:11px}
+  .cta-fab__sign b{font-size:14px;color:#b4573a}
+  .cta-fab__close{z-index:3;top:50%;right:8px;margin-top:-12px;box-shadow:none}
+}
 /* 2026-10-14 トップ: 「はじめての方へ」の1行リンク */
 .lp-river__more{margin:48px auto 0;max-width:480px;padding:24px 20px;background:#fffdf8;border-radius:16px;text-align:center}
 .lp-river__more-title{margin:0 0 12px;font-weight:700;color:#29435e;font-family:"Zen Maru Gothic",sans-serif}
