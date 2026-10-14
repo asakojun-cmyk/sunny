@@ -467,3 +467,22 @@ li > .shiryo__mark { position: static; margin-right: .4em; }
 .site-main h2 > .hani__icon { display: block; margin: 0 auto 12px; }
 .site-main h2:has(> .hani__icon) { display: block; text-align: center; }
 .site-main h2:has(> .hani__icon)::before { display: none !important; }
+
+/* ---------- 2026-10-13 お知らせ(＼NEW／)を、横1行に ----------
+   縦に積むと長くなるので、題のすぐ右にリンクを置く。絵と、説明の小さい文は出さない(スマホは ▶︎ だけ)。 */
+.newsflash { display: grid; grid-template-columns: minmax(0, auto) auto; grid-template-rows: auto auto; justify-content: start; align-items: center; column-gap: 16px; row-gap: 0; width: min(100%, 400px); max-width: none; margin: 18px auto 0; text-align: left; }
+.newsflash + .newsflash { margin-top: 12px; }
+.newsflash:last-of-type { margin-bottom: 22px; }
+.newsflash__tag { grid-column: 1; grid-row: 1; justify-self: start; font-size: .75rem; letter-spacing: .12em; line-height: 1.5; }
+.newsflash__body { grid-column: 1; grid-row: 2; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; }
+.newsflash__body b { display: inline; line-height: 1.5; text-wrap: wrap; }
+.newsflash__body b::before { content: none !important; display: none; }
+.newsflash__body small { display: none; }
+.newsflash__date { order: 2; display: inline; font-size: .75rem; font-weight: 500; letter-spacing: .04em; white-space: nowrap; }
+.newsflash__go { grid-column: 2; grid-row: 2; margin: 0; white-space: nowrap; font-size: .875rem; }
+@media (max-width: 640px) {
+  .newsflash { width: min(100% - 16px, 320px); column-gap: 12px; margin: 16px auto 0; }
+  .newsflash__body { flex-direction: column; align-items: flex-start; gap: 0; }
+  .newsflash__go { grid-row: 1 / span 2; font-size: 0; text-decoration: none; }
+  .newsflash__go .arw { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #ef8064; color: #fff; font-size: .75rem; }
+}
