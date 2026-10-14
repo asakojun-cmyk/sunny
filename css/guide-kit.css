@@ -1,0 +1,107 @@
+/* guide-kit.css — 養成講座ガイドの共通部品(2026-10-15)
+   「安い養成講座」ページで決まった形を、ほかのガイドでも同じ見た目で使うためのもの。
+   ・結論の白い丸(.gk-answer)
+   ・問いかけの目次(.gk-toc)
+   ・サニー先生・モヤン・ちゃんの掛け合い(.gk-talk と .mini-say--chan)
+   ・よくある質問の開閉(.gk-qa)
+   色は tone.css の決まり(紺・レモン・コーラル・やわらかい緑)だけを使う。tone.css の後に読み込む */
+
+.gk { --gk-ink: #2c3e50; --gk-sub: #7a7468; --gk-line: #ece7da; --gk-coral: #b3543a; --gk-lemon: #f9e79a; --gk-green: #7c9a72; }
+.gk .num { font-variant-numeric: tabular-nums; }
+
+/* ---------- 結論: 白い丸 ---------- */
+.gk-answer { max-width: 640px; margin: 8px auto 36px; text-align: center; }
+.gk .gk-answer__k, .gk .gk-toc__k { margin: 0 0 4px !important; color: var(--gk-green); font-size: .75rem !important; font-weight: 700; letter-spacing: .15em; text-align: center; }
+.gk .gk-answer__t { margin: 0 0 18px !important; font-family: "Zen Maru Gothic", sans-serif; font-size: 1.125rem !important; font-weight: 700; color: var(--gk-ink); }
+.gk-answer__t::after, .gk-toc__t::after { content: ""; display: block; width: 46px; margin: 10px auto 0; border-bottom: 3px dotted #e9785f; opacity: .75; }
+.gk-circles { display: flex; justify-content: center; gap: 24px; }
+.gk-circle { flex: 0 0 236px; aspect-ratio: 1; border-radius: 50%; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 18px 26px; text-decoration: none !important; color: var(--gk-ink); transition: transform .2s; }
+a.gk-circle:hover { transform: translateY(-3px); }
+.gk-circle__when { padding: 1px 12px; border-radius: 99px; background: var(--gk-green); color: #fff; font-size: .75rem; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+.gk-circle__name { margin-top: 6px; font-weight: 700; font-size: 1rem; white-space: nowrap; }
+.gk-circle__yen { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 2.125rem; line-height: 1.2; color: var(--gk-coral); white-space: nowrap; }
+.gk-circle__yen small { font-size: .9375rem; }
+.gk-circle__memo { font-size: .75rem; line-height: 1.6; color: var(--gk-sub); word-break: keep-all; }
+.gk-circle__go { margin-top: 2px; font-size: .6875rem; font-weight: 700; color: var(--gk-coral); }
+.gk .gk-answer__note { margin: 18px auto 0 !important; max-width: 520px; font-size: .9375rem !important; line-height: 1.9; text-align: center; }
+.gk-answer__note b { background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); padding: 0 2px; }
+@media (max-width: 480px) {
+  .gk-circles { gap: 10px; }
+  .gk-circle { flex: 0 0 calc(50% - 5px); max-width: 172px; padding: 12px; gap: 1px; }
+  .gk-circle__when { font-size: .625rem; padding: 1px 8px; }
+  .gk-circle__name { font-size: .8125rem; margin-top: 4px; }
+  .gk-circle__yen { font-size: 1.5rem; }
+  .gk-circle__yen small { font-size: .75rem; }
+  .gk-circle__memo { font-size: .625rem; line-height: 1.5; }
+  .gk-circle__go { font-size: .625rem; }
+}
+
+/* ---------- 目次: 問いかけ＋ひとことの予告 ---------- */
+.gk-toc { max-width: 600px; margin: 8px auto 40px; }
+.gk .gk-toc__t { margin: 0 !important; font-size: 1.125rem !important; color: var(--gk-ink); text-align: center; }
+.gk .gk-toc__lede { margin: 12px 0 10px !important; font-size: .8125rem !important; color: var(--gk-sub); text-align: center; }
+.gk-toc ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--gk-line); }
+.gk-toc li { margin: 0; padding: 0; border-bottom: 1px solid var(--gk-line); }
+.gk-toc li::before { content: none !important; }
+.gk-toc a { display: grid; grid-template-columns: 28px minmax(0, 1fr) 16px; align-items: center; gap: 14px; padding: 14px 6px; text-decoration: none !important; color: var(--gk-ink); border-radius: 10px; transition: background-color .2s; }
+.gk-toc a:hover { background: #fffdf8; }
+.gk-toc__no { width: 28px; height: 28px; border-radius: 50%; background: var(--gk-lemon); color: var(--gk-ink); font-size: .8125rem; font-weight: 700; display: grid; place-items: center; }
+.gk-toc__body b { display: block; font-size: 1rem; line-height: 1.6; }
+.gk-toc__body small { display: block; margin-top: 2px; font-size: .8125rem; line-height: 1.7; color: var(--gk-sub); }
+.gk-toc__arw { color: var(--gk-coral); font-size: .75rem; }
+@media (max-width: 480px) {
+  .gk-toc a { gap: 10px; padding: 12px 2px; grid-template-columns: 26px minmax(0, 1fr) 12px; }
+  .gk-toc__no { width: 26px; height: 26px; }
+  .gk-toc__body b { font-size: .9375rem; }
+}
+
+/* ---------- 掛け合い: サニー先生・モヤン・ちゃん ---------- */
+.gk-talk { display: grid; gap: 12px; margin: 24px 0; }
+.gk-talk .mini-say { margin: 0 !important; }
+.gk-talk .mini-say__bubble { word-break: keep-all; overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  /* スマホ: 吹き出しの文字を少しだけ小さく、字間をつめて、1行に入る文字を増やす(行の切れ目がばらつかないように) */
+  .gk-talk .mini-say__bubble { font-size: .9375rem !important; letter-spacing: .02em !important; line-height: 1.8 !important; padding: 10px 12px !important; }
+  .gk-talk .mini-say { gap: 8px; }
+  .gk-talk .mini-say__avatar { width: 38px; height: 38px; }
+  .gk-talk__src { margin-left: 46px !important; }
+}
+/* ちゃん(運営者・受講した本人): 地図を持った写真を丸く。白いふち＋水色の細い輪(トップのプロフィールと同じ) */
+.mini-say--chan .mini-say__avatar img { border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 2px #cfe6f5; }
+.mini-say--chan .mini-say__bubble { background: #f2f8fc; border-color: #cfe6f5; }
+.mini-say--chan .mini-say__bubble b { color: #3f6b8a; }
+.mini-say__tag { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 99px; background: #fff; color: #3f6b8a; font-size: .625rem; font-weight: 700; line-height: 1.7; vertical-align: 1px; }
+.gk-talk__src { margin: -4px 0 0 54px !important; font-size: .75rem !important; line-height: 1.7; color: var(--gk-sub); }
+
+/* ---------- よくある質問: Q&A の開閉 ---------- */
+.gk-faq { display: grid; gap: 10px; }
+.gk-qa { background: #fff; border-radius: 16px; }
+.gk-qa > summary { list-style: none; display: grid; grid-template-columns: 30px minmax(0, 1fr) 16px; align-items: center; gap: 12px; padding: 16px 18px; cursor: pointer; font-weight: 700; color: var(--gk-ink); line-height: 1.6; }
+.gk-qa > summary::-webkit-details-marker { display: none; }
+.gk-qa > summary::after { content: "＋"; color: var(--gk-coral); font-weight: 700; text-align: center; }
+.gk-qa[open] > summary::after { content: "－"; }
+.gk-qa__q, .gk-qa__mark { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: .9375rem; }
+.gk-qa__q { background: var(--gk-ink); color: #fff; }
+.gk-qa__a { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; padding: 0 18px 18px; }
+.gk-qa__mark { background: var(--gk-lemon); color: var(--gk-ink); }
+.gk .gk-qa__a p { margin: 2px 0 0 !important; line-height: 1.9; }
+@media (max-width: 480px) { .gk-qa > summary { padding: 14px; gap: 10px; } .gk-qa__a { padding: 0 14px 16px; gap: 10px; } }
+
+/* ---------- 数字の表(濃い文字で、大事な額を大きく) ---------- */
+.gk-nums { margin: 18px 0 16px; background: #fff; border-radius: 16px; overflow: hidden; }
+.gk-nums__row { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 8px; padding: 14px 16px; border-top: 1px solid var(--gk-line); color: var(--gk-ink); }
+.gk-nums__row > span:not(:first-child) { text-align: right; }
+.gk-nums__row--head { border-top: 0; background: #f7f3ea; padding: 10px 16px; font-size: .8125rem; font-weight: 700; }
+.gk-nums__row b { display: block; font-size: 1rem; line-height: 1.5; }
+.gk-nums__row span small { display: block; font-size: .75rem; color: var(--gk-sub); font-weight: 500; }
+.gk-nums__row .num { font-size: 1.0625rem; font-weight: 700; }
+.gk-nums__row .is-key { font-family: "Zen Maru Gothic", sans-serif; font-size: 1.5rem; color: var(--gk-coral); }
+@media (max-width: 480px) {
+  .gk-nums__row { padding: 12px; }
+  .gk-nums__row .num { font-size: .9375rem; }
+  .gk-nums__row .is-key { font-size: 1.25rem; }
+}
+
+/* ---------- 既存の .fact-table も、ガイドでは濃い文字に(薄くて読みにくかった) ---------- */
+.gk .fact-table dt { color: var(--gk-ink) !important; font-weight: 700; }
+.gk .fact-table dd { color: var(--gk-ink) !important; }
