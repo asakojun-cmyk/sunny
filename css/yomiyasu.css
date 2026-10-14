@@ -1177,3 +1177,20 @@ body.is-home main .campaign-now > .container > h2{font-size:1.3125rem!important}
   .sm__optc{font-size:.75rem!important}
   .sm__card{padding-left:12px!important;padding-right:12px!important}
 }
+
+/* 2026-10-14 学校ページの冒頭をコンパクトに。リード文を濃く、広告・注意書きは1行にたたむ */
+.school-header__lead{max-width:34em;margin:18px auto 10px;text-align:left;font-size:1rem;line-height:1.95;color:#3d3a33;word-break:keep-all;overflow-wrap:anywhere}
+.school-header__lead strong.mk,.school-header__lead .mk{font-weight:700;background:linear-gradient(transparent 60%,#fbe3a0 60%)}
+.school-header__operator{margin-top:4px!important;font-size:.8125rem!important}
+.school-header .updated-date{margin-top:2px!important}
+.school-header__micro{margin:8px auto 0;font-size:.8125rem;color:#6f6a58;line-height:1.7}
+details.school-disclosure{margin:6px auto 18px!important}
+details.school-disclosure>summary{margin:0 auto}
+main .school-header{padding-top:28px!important}
+main .school-header__operator{margin-bottom:2px!important}
+main .school-header .updated-date{margin-bottom:0!important}
+main .school-header__official{margin-top:16px!important;margin-bottom:0!important}
+main details.disclosure.school-disclosure{margin:10px auto 0!important}
+main details.school-disclosure+.school-section{margin-top:0!important;padding-top:32px!important}
+main .school-header .nb{display:inline-block;white-space:nowrap}
+@media (max-width:380px){main.site-main[data-lb] .school-header.school-header h1.school-header__name.school-header__name{font-size:1.125rem!important;letter-spacing:.02em!important;line-height:1.55}}
