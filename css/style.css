@@ -370,12 +370,12 @@ button {
   overflow: hidden;
 }
 
-/* 空の背景(img/hero-sky.jpg を置くと表示される。ゆっくり流れる=早送りの空) */
+/* 空の背景(img/hero-sky.webp を置くと表示される。ゆっくり流れる=早送りの空) */
 .hero__bg {
   position: absolute;
   inset: -6%;
   /* CSSからの相対パス(サブパス配信でも動く) */
-  background-image: url("../img/hero-sky.jpg");
+  background-image: url("../img/hero-sky.webp");
   background-size: cover;
   background-position: center;
   animation: sky-drift 46s ease-in-out infinite alternate;
@@ -4953,8 +4953,8 @@ a.game-card-link:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(48
 /* 内側ページ:見出しまわりに淡い雲(CSSのurlはこのファイルからの相対なのでどこでも安全) */
 .site-main{position:relative}
 .site-main:before,.site-main:after{content:"";position:absolute;top:16px;width:88px;height:60px;background:no-repeat center/contain;opacity:.5;pointer-events:none}
-.site-main:before{left:2%;background-image:url("../img/parts/01_sky_cloud_left.png")}
-.site-main:after{right:2.5%;background-image:url("../img/parts/03_sky_cloud_right.png")}
+.site-main:before{left:2%;background-image:url("../img/parts/01_sky_cloud_left.webp")}
+.site-main:after{right:2.5%;background-image:url("../img/parts/03_sky_cloud_right.webp")}
 @media(max-width:760px){.site-main:before,.site-main:after{display:none}}
 
 /* ---- v2.1 理論家ページのピクニックのはじまり(2026-07-20 ちゃん指示) ---- */

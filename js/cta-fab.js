@@ -10,7 +10,7 @@
   wrap.innerHTML =
     '<a class="cta-fab__link" href="/schools/chiiki-renkei-platform/" data-ev="fab_setsumeikai" aria-label="養成学校の無料説明会を見てみる。オンラインで参加できます(広告を含むページへ)">' +
       '<span class="cta-fab__note" aria-hidden="true">＼ オンラインでOK！ ／</span>' +
-      '<img class="cta-fab__sunny" src="/img/parts/06_sun_character.png" alt="" width="66" height="66">' +
+      '<img class="cta-fab__sunny" src="/img/parts/06_sun_character.webp" alt="" width="66" height="66">' +
       '<span class="cta-fab__sign"><small>おすすめの養成学校<i class="cta-fab__pr">PR</i></small><b>無料説明会を見る <span aria-hidden="true">▶︎</span></b></span>' +
     '</a>' +
     '<button class="cta-fab__close" type="button" aria-label="このボタンを閉じる">×</button>';

@@ -778,7 +778,7 @@ h2:has(> .sec-illust){overflow:hidden}
 .cta-fab.is-show{opacity:1;transform:none;pointer-events:auto}
 .cta-fab__link{position:relative;display:flex;flex-direction:column;align-items:center;padding:6px 6px 0;border-radius:22px;text-decoration:none;color:#3d4f42;transition:transform .22s ease}
 .cta-fab__sunny{position:absolute;z-index:0;left:42px;top:46px;width:60px;height:60px;object-fit:contain;transform:translate(0,0) rotate(0);transition:transform .38s cubic-bezier(.34,1.56,.64,1)}
-.cta-fab__sign{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:196px;height:125px;padding:22px 16px 0;box-sizing:border-box;background:url("../img/parts/cloud-cta.png?v=4") center / 100% 100% no-repeat;filter:drop-shadow(0 10px 14px rgba(41,67,94,.22)) drop-shadow(0 2px 3px rgba(41,67,94,.14));line-height:1.4;transition:transform .22s ease,filter .22s ease}
+.cta-fab__sign{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;width:196px;height:125px;padding:22px 16px 0;box-sizing:border-box;background:url("../img/parts/cloud-cta.webp?v=4") center / 100% 100% no-repeat;filter:drop-shadow(0 10px 14px rgba(41,67,94,.22)) drop-shadow(0 2px 3px rgba(41,67,94,.14));line-height:1.4;transition:transform .22s ease,filter .22s ease}
 .cta-fab__sign small{font-size:11px;font-weight:700;color:#29435e;letter-spacing:.03em}
 .cta-fab__sign b{font-size:16px;font-weight:700;color:#29435e;letter-spacing:.06em;white-space:nowrap}
 .cta-fab__pr{font-style:normal;font-size:9.5px;font-weight:500;margin-left:5px;padding:0 4px;border:1px solid rgba(41,67,94,.55);border-radius:4px;color:#29435e;background:rgba(255,253,248,.5)}
@@ -896,7 +896,7 @@ h2:has(> .sec-illust){overflow:hidden}
 /* 2026-10-11 いまのキャンペーン(トップ)。運営者が公式ページで確かめたものだけを、チケット形のバナーで出す */
 .campaign-now{text-align:center}
 .campaign-now__tag{margin:0 0 6px;color:#ee8466;font-size:1.0625rem;font-weight:700;letter-spacing:.14em;animation:newsflash-hop 2.6s ease-in-out infinite}
-.campaign-now__lead{max-width:36em;margin:14px auto 0;font-size:.9375rem;line-height:1.9;color:#7a7468}
+.campaign-now__lead{max-width:36em;margin:14px auto 0;font-size:.9375rem;line-height:1.9;color:#635e53}
 /* バナー(2026-10-12 作り直し): 小さなクーポン券を横にならべる。上の色の面に「何が・いくら」を大きく、下に学校名と期限。
    くわしい条件は、下の「条件をくわしく見る」にまとめた。スマホは2列、広い画面は4列 */
 .camp-banners [hidden],.camp-details [hidden]{display:none}
@@ -915,7 +915,7 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-banner__body::before{content:"";position:absolute;left:14px;right:14px;top:0;border-top:2px dashed rgba(44,62,80,.16)}
 .camp-banner__stub small{font-size:.75rem;font-weight:700;letter-spacing:.06em;line-height:1.5}
 .camp-banner__stub strong{color:#b4573a;font-size:2.25rem;line-height:1.15;font-weight:700;letter-spacing:0;font-feature-settings:"palt";white-space:nowrap}
-.camp-banner__stub strong i{font-style:normal;font-size:.8125rem;margin-left:2px;letter-spacing:.02em}
+.camp-banner__stub strong i{font-style:normal;color:#a24c31;font-size:.8125rem;margin-left:2px;letter-spacing:.02em}
 .camp-banner__stub em{font-style:normal;font-size:.875rem;font-weight:700;letter-spacing:.08em;line-height:1.5}
 .camp-banner__pr{position:absolute;top:8px;right:8px;z-index:2;font-style:normal;font-size:.625rem;font-weight:500;line-height:1.4;padding:1px 6px;border-radius:4px;background:rgba(255,255,255,.7);color:#6b665c;letter-spacing:.04em}
 .camp-banner__body{position:relative;display:flex;flex-direction:column;align-items:center;flex:1;gap:6px;padding:16px 10px 16px}
@@ -923,12 +923,12 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-banner__cond{font-size:.75rem;line-height:1.6;color:#6b665c}
 .camp-banner .nb{display:inline-block;white-space:nowrap}
 .camp-banner__until{margin-top:auto;padding:3px 12px;border-radius:999px;background:#f1ede3;color:#6b665c;font-size:.6875rem;font-weight:700;letter-spacing:.04em;line-height:1.6}
-.camp-banner__until--date{background:#ee8466;color:#fff;animation:camp-blink 1.8s ease-in-out infinite}
-@keyframes camp-blink{0%,100%{opacity:1}50%{opacity:.45}}
+.camp-banner__until--date{background:#b4573a;color:#fff;animation:camp-blink 1.8s ease-in-out infinite}
+@keyframes camp-blink{0%,100%{opacity:1}50%{opacity:.8}}
 .camp-banner:focus-visible{outline:3px solid #ee8466;outline-offset:4px}
 /* くわしい条件(たたんでおく) */
 .camp-details{max-width:680px;margin:22px auto 0;text-align:left}
-.camp-details summary{width:fit-content;margin:0 auto;padding:8px 6px;color:#b3543a;font-size:.875rem;font-weight:700;letter-spacing:.04em;cursor:pointer;list-style:none}
+.camp-details summary{width:fit-content;margin:0 auto;padding:8px 6px;color:#9c472d;font-size:.875rem;font-weight:700;letter-spacing:.04em;cursor:pointer;list-style:none}
 .camp-details summary::-webkit-details-marker{display:none}
 .camp-details summary::after{content:"";display:inline-block;width:7px;height:7px;margin:0 0 3px 10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .2s ease}
 .camp-details[open] summary::after{transform:rotate(-135deg);margin-bottom:-2px}
@@ -950,7 +950,7 @@ h2:has(> .sec-illust){overflow:hidden}
   .campaign-now__lead{font-size:.8125rem;line-height:1.8}
 }
 @media (prefers-reduced-motion:reduce){.camp-banner,.camp-details summary::after{transition:none}}
-.campaign-now__note{max-width:680px;margin:36px auto 0;font-size:.8125rem;line-height:1.8;color:#7a7468;text-align:left}
+.campaign-now__note{max-width:680px;margin:36px auto 0;font-size:.8125rem;line-height:1.8;color:#635e53;text-align:left}
 @media (prefers-reduced-motion:reduce){.campaign-now__tag,.camp-banner__until--date{animation:none}}
 
 /* 2026-10-11 背景の色が変わる境目を、ぜんぶ同じ「なみなみ」にそろえる(トップ)。
@@ -1194,3 +1194,6 @@ main details.disclosure.school-disclosure{margin:10px auto 0!important}
 main details.school-disclosure+.school-section{margin-top:0!important;padding-top:32px!important}
 main .school-header .nb{display:inline-block;white-space:nowrap}
 @media (max-width:380px){main.site-main[data-lb] .school-header.school-header h1.school-header__name.school-header__name{font-size:1.125rem!important;letter-spacing:.02em!important;line-height:1.55}}
+
+/* 2026-10-16 PageSpeedのコントラスト指摘に合わせて、小さい文字の色を少し濃く */
+.site-header .header-search__click{color:#9a5038}

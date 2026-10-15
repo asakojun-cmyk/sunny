@@ -9,7 +9,7 @@
   if (!game || !dataEl) return;
   var BALLS = JSON.parse(dataEl.textContent);
   var WEATHER = [["🌧️", "雨"], ["☁️", "くもり"], ["🌥️", "うす日"], ["🌤️", "晴れ間"], ["☀️", "晴れ"]];
-  var FACE = "../../img/parts/07_moyan_school_hat_crying.png";
+  var FACE = "../../img/parts/07_moyan_school_hat_crying.webp";
   var BEST_KEY = "carepicnic-catchball-best";
 
   var $ = function (s) { return game.querySelector(s); };

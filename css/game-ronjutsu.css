@@ -14,7 +14,7 @@
 .rb__sq.is-now .rb__no { background: #33506b; color: #fff; transform: translateY(-2px); }
 .rb__sq.is-now .rb__name { color: #33506b; }
 /* こま(モヤン)が、いまのマスの上に乗る */
-.rb__sq.is-now .rb__no::before { content: ""; position: absolute; left: 50%; top: -24px; width: 26px; height: 26px; margin-left: -13px; background: url(../img/parts/07_moyan_school_hat_crying.png) center / contain no-repeat; animation: rb-hop .6s ease; }
+.rb__sq.is-now .rb__no::before { content: ""; position: absolute; left: 50%; top: -24px; width: 26px; height: 26px; margin-left: -13px; background: url(../img/parts/07_moyan_school_hat_crying.webp) center / contain no-repeat; animation: rb-hop .6s ease; }
 @keyframes rb-hop { 0% { transform: translateY(-14px); opacity: 0; } 60% { transform: translateY(2px); opacity: 1; } 100% { transform: none; } }
 .rb__sq--goal.is-now .rb__no { background: #f8e7a6; }
 .rb { padding-top: 26px; }
