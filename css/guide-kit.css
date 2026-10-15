@@ -61,7 +61,7 @@ a.gk-circle:hover { transform: translateY(-3px); }
 .gk-talk .mini-say__bubble { word-break: keep-all; overflow-wrap: anywhere; }
 @media (max-width: 480px) {
   /* スマホ: 吹き出しの文字を少しだけ小さく、字間をつめて、1行に入る文字を増やす(行の切れ目がばらつかないように) */
-  .gk-talk .mini-say__bubble { font-size: .9375rem !important; letter-spacing: .02em !important; line-height: 1.8 !important; padding: 10px 12px !important; }
+  .gk-talk .mini-say__bubble { font-size: .9375rem !important; letter-spacing: .02em !important; line-height: 1.85 !important; padding: 14px 16px 15px !important; }
   .gk-talk .mini-say { gap: 8px; }
   .gk-talk .mini-say__avatar { width: 38px; height: 38px; }
   .gk-talk__src { margin-left: 46px !important; }
@@ -151,3 +151,9 @@ a.gk-circle:hover { transform: translateY(-3px); }
 .gk .ys-answer { margin: 64px auto 56px; }
 .gk .ys-toc { margin: 56px auto 24px; }
 @media (max-width: 480px) { .gk .ys-answer { margin: 48px auto 44px; } .gk .ys-toc { margin: 44px auto 16px; } }
+
+/* ---------- 2026-10-15 吹き出しの中に、上下左右のゆとりを(つまって見えたため) ---------- */
+.gk-talk .mini-say__bubble { padding: 18px 24px 19px; line-height: 1.95; }
+.gk-talk .mini-say__bubble b { margin-bottom: 6px; }
+.gk-talk { gap: 20px; }
+@media (max-width: 480px) { .gk-talk { gap: 16px; } .gk-talk .mini-say__bubble b { margin-bottom: 4px; } }
