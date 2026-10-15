@@ -23,7 +23,7 @@ a.gk-circle:hover { transform: translateY(-3px); }
 .gk-circle__yen small { font-size: .9375rem; }
 .gk-circle__memo { font-size: .75rem; line-height: 1.6; color: var(--gk-sub); word-break: keep-all; }
 .gk-circle__go { margin-top: 2px; font-size: .6875rem; font-weight: 700; color: var(--gk-coral); }
-.gk .gk-answer__note { margin: 18px auto 0 !important; max-width: 520px; font-size: .9375rem !important; line-height: 1.9; text-align: center; }
+.gk .gk-answer__note { text-wrap: balance; margin: 18px auto 0 !important; max-width: 520px; font-size: .9375rem !important; line-height: 1.9; text-align: center; }
 .gk-answer__note b { background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); padding: 0 2px; }
 @media (max-width: 480px) {
   .gk-circles { gap: 10px; }
@@ -105,3 +105,17 @@ a.gk-circle:hover { transform: translateY(-3px); }
 /* ---------- 既存の .fact-table も、ガイドでは濃い文字に(薄くて読みにくかった) ---------- */
 .gk .fact-table dt { color: var(--gk-ink) !important; font-weight: 700; }
 .gk .fact-table dd { color: var(--gk-ink) !important; }
+
+/* ---------- 丸が3つのとき・丸の中が数字でなく言葉のとき ---------- */
+.gk-circle__yen--word { font-size: 1.625rem; }
+.gk-circles--3 { gap: 16px; }
+.gk-circles--3 .gk-circle { flex-basis: 200px; padding: 16px 20px; }
+@media (max-width: 480px) {
+  .gk-circle__yen--word { font-size: 1.25rem; }
+  .gk-circles--3 { flex-wrap: wrap; gap: 10px; }
+  .gk-circles--3 .gk-circle { flex: 0 0 calc(50% - 5px); padding: 12px; }
+}
+
+/* ---------- 語の途中で折れないように(<wbr> の位置でだけ折る)・行の長さをそろえる ---------- */
+.gk :is(.gk-answer__t, .gk-answer__note, .gk-toc__body b, .gk-toc__body small, .gk-circle__memo, .gk-qa summary span, .gk-qa__a p) { word-break: keep-all; overflow-wrap: anywhere; }
+.gk :is(.gk-answer__t, .gk-answer__note, .gk-circle__memo) { text-wrap: balance; }
