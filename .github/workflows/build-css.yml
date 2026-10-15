@@ -1,4 +1,4 @@
-# CSSのまとめ直し: css/ やHTMLを直してpushしたら、ページごとのCSSまとめ(css/_b-*.css)を自動で作り直す
+# CSSのまとめ直し: css/ やHTMLを直してpushしたら、ページごとのCSSまとめ(css/cb-*.css)を自動で作り直す
 name: build-css
 on:
   push:

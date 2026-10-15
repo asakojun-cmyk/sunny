@@ -3,7 +3,7 @@
 
 しくみ
 - 各HTMLの <link rel="stylesheet" href="…css/○○.css?v=…"> を、上から順に集める。
-- あいだに <style> がない連続したまとまりごとに、1本の css/_b-<ハッシュ>.css にまとめる
+- あいだに <style> がない連続したまとまりごとに、1本の css/cb-<ハッシュ>.css にまとめる
   (順番はそのまま。だから見た目は変わらない)。
 - まとめたリンクには data-src="元のファイル一覧" を残す。次に実行したときは、ここから作り直す。
 - 元の css/○○.css は、これまでどおり手で直してよい。直したら、このスクリプトを実行する
@@ -72,7 +72,7 @@ def build_bundle(files):
             parts.append(minify(fh.read()))
     body = '\n'.join(p for p in parts if p)
     h = hashlib.sha1(body.encode()).hexdigest()[:10]
-    out = f'css/_b-{h}.css'
+    out = f'css/cb-{h}.css'
     if not os.path.exists(out):
         with open(out, 'w', encoding='utf-8') as fh:
             fh.write(body + '\n')
@@ -99,7 +99,7 @@ def process(html_path, used):
         files = []
         for m in g:
             for f in expand(m):
-                if f[0].startswith('_b-'):
+                if f[0].startswith('cb-'):
                     continue
                 files.append(f)
         if not files:
@@ -141,7 +141,7 @@ def main():
         if process(f, used):
             changed += 1
     removed = 0
-    for old in glob.glob('css/_b-*.css'):
+    for old in glob.glob('css/cb-*.css'):
         if old not in used:
             os.remove(old)
             removed += 1
