@@ -2,7 +2,7 @@
 .picnic-hero{height:min(800px,calc(100vh - 80px));min-height:650px;position:relative;overflow:hidden;background:var(--picnic-paper)}
 .picnic-hero__picture{width:100%;height:100%;object-fit:cover;object-position:center}
 .picnic-hero__story{position:absolute;left:max(5vw,calc((100vw - 1460px)/2));top:9%;width:min(560px,43vw);padding:34px 38px;text-align:center;background:rgba(255,253,248,.86);border-radius:48% 52% 45% 55%/46% 43% 57% 54%;backdrop-filter:blur(5px)}
-.picnic-kicker{margin:0 0 8px;color:var(--picnic-sage);font-size:0.875rem;font-weight:700;letter-spacing:.15em}
+.picnic-kicker{margin:0 0 8px;color:#5a6d52;font-size:0.875rem;font-weight:700;letter-spacing:.15em}
 .picnic-hero h1{margin:0 0 18px;font-size:clamp(2.15rem,3.8vw,3.85rem);line-height:1.45;color:var(--picnic-ink)}
 .picnic-hero h1 em{color:var(--picnic-coral);font-style:normal}
 .picnic-hero__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 8px}
