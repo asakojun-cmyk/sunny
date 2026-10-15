@@ -175,3 +175,28 @@ a.gk-circle:hover { transform: translateY(-3px); }
 .gk .gk-check__count.is-done { color: var(--gk-green); }
 @media (max-width: 480px) { .gk-check label { padding: 12px 14px; gap: 12px; } }
 @media (prefers-reduced-motion: reduce) { .gk-check input, .gk-check input::after { transition: none; } }
+
+/* ---------- 2026-10-15 箱が続かないように ----------
+   箱のまま残すのは「説明会の案内(.setsumei-box)」と結論の丸・学校のカードだけ。
+   チェックリスト・よくある質問・注意書き・「正直な話」は、箱をやめて細い線と余白で区切る */
+.gk-check { background: none; border-radius: 0; border-top: 1px solid var(--gk-line); border-bottom: 1px solid var(--gk-line); }
+.gk-check label { padding: 14px 4px; }
+.gk-check label:hover { background: none; }
+.gk-faq { gap: 0; border-top: 1px solid var(--gk-line); }
+.gk-qa, .gk .ys-qa { background: none !important; border-radius: 0 !important; border-bottom: 1px solid var(--gk-line); }
+.gk-qa > summary { padding: 18px 4px; }
+.gk-qa__a { padding: 0 4px 20px; }
+.gk .ys-faq { gap: 0 !important; border-top: 1px solid var(--gk-line); }
+.gk .ys-qa > summary { padding: 18px 4px !important; }
+.gk .ys-qa__a { padding: 0 4px 20px !important; }
+/* 注意書き: 箱ではなく、小さな文字の一行に */
+.gk .notice-box { max-width: 600px; margin: 56px auto 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; text-align: center; }
+.gk .notice-box p { margin: 0 !important; font-size: .8125rem !important; line-height: 1.9; color: var(--gk-sub); }
+/* 正直な話: 箱ではなく、真ん中にそろえた短い読みもの */
+.gk .honest-link { max-width: 600px; margin: 48px auto !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; text-align: center; }
+.gk .honest-link__label { color: var(--gk-coral); }
+.gk .honest-link__body { text-align: left; }
+@media (max-width: 480px) {
+  .gk-check label, .gk-qa > summary { padding-left: 2px; padding-right: 2px; }
+  .gk .notice-box { margin-top: 44px !important; }
+}
