@@ -2,11 +2,10 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- 表示を速くするため、アクセス解析(Googleアナリティクス・Clarity)と丸い文字は、最初のタップ・スクロール、または表示の3.5秒後に読む -->
+<!-- 表示を速くするため、アクセス解析(Googleアナリティクス・Clarity)は、最初のタップ・スクロール、または表示の3.5秒後に読む -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-09GCDPKMKD');
 (function(w,d){var done=false;function go(){if(done)return;done=true;
-var l=d.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap";d.head.appendChild(l);
 var g=d.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-09GCDPKMKD";d.head.appendChild(g);
 w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var c=d.createElement("script");c.async=true;c.src="https://www.clarity.ms/tag/yxefgkb9kq";d.head.appendChild(c);}
 ["pointerdown","keydown","scroll","touchstart"].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});
@@ -30,9 +29,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <meta name="twitter:image" content="https://carepicnic.com/img/ogp.png">
 <link rel="icon" type="image/png" href="../../img/favicon.png">
 <link rel="apple-touch-icon" href="../../img/sunny-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"></noscript>
+
 <link rel="stylesheet" href="../../css/cb-e44735b61a.css" data-src="style.css?v=2026.1001,picnic.css?v=2026.1014,refine.css?v=2026.1001,yomiyasu.css?v=2026.1014s">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"一般社団法人地域連携プラットフォーム","description":"一般社団法人地域連携プラットフォームが運営するキャリアコンサルタント養成講座の情報ページ。","provider":{"@type":"Organization","name":"一般社団法人地域連携プラットフォーム","url":"https://careerjp.work/cc1/"},"offers":{"@type":"Offer","category":"受講料(税込)","price":297000,"priceCurrency":"JPY"},"inLanguage":"ja"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"養成学校一覧","item":"https://carepicnic.com/schools/"},{"@type":"ListItem","position":3,"name":"一般社団法人地域連携プラットフォーム"}]}</script>
@@ -113,6 +110,12 @@ h2.school-kai__voicelabel:before{content:none}
 </style>
 <link rel="stylesheet" href="../../css/cb-d3b76cf5b4.css" data-src="tone.css?v=2026.1015s,guide-kit.css?v=2026.1015i">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "地域連携プラットフォームの受講料は、いくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "297,000円(税込)です。入学金はなく、テキスト代もこみです。キャンペーンや特典で変わることがあります。"}}, {"@type": "Question", "name": "オンラインだけで修了できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。運営者が説明会の前にメールで聞いたところ、「すべてオンラインで完結します」という答えでした。通学5日間＋オンライン5日間のハイブリッドコースもあります。"}}, {"@type": "Question", "name": "休んだときは、振替できますか？", "acceptedAnswer": {"@type": "Answer", "text": "Zoom講習80時間のうち16時間まで、無料で振り替えられます。説明会では、2時間単位で、同じ期のほかの曜日のコースに振り替えられると説明がありました。"}}, {"@type": "Question", "name": "試験対策講座は、受講料に入っていますか？", "acceptedAnswer": {"@type": "Answer", "text": "入っていません。国家試験の対策講座は養成講習とは別の講座で、受講生・卒業生価格で受けられます。"}}, {"@type": "Question", "name": "説明会のあとに、勧誘はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "運営者が参加したときは、ありませんでした。電話もメールも来ていません。"}}]}</script>
+<link rel="preload" href="/fonts/maru-h.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* 丸い文字は見出し・ボタンだけ。サイトで使う字だけに絞った軽いファイルを最初から読む。本文は端末の文字 */
+@font-face{font-family:"Zen Maru Gothic";src:url(/fonts/maru-h.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--font-sans:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;--font:var(--font-sans)}
+body{font-family:var(--font-sans)}
+h1,h2,h3,h4,h5,a.button{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif}</style>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>

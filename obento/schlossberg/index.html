@@ -2,11 +2,10 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- 表示を速くするため、アクセス解析(Googleアナリティクス・Clarity)と丸い文字は、最初のタップ・スクロール、または表示の3.5秒後に読む -->
+<!-- 表示を速くするため、アクセス解析(Googleアナリティクス・Clarity)は、最初のタップ・スクロール、または表示の3.5秒後に読む -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-09GCDPKMKD');
 (function(w,d){var done=false;function go(){if(done)return;done=true;
-var l=d.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap";d.head.appendChild(l);
 var g=d.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-09GCDPKMKD";d.head.appendChild(g);
 w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var c=d.createElement("script");c.async=true;c.src="https://www.clarity.ms/tag/yxefgkb9kq";d.head.appendChild(c);}
 ["pointerdown","keydown","scroll","touchstart"].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});
@@ -16,10 +15,14 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <meta name="description" content="モヤンと、シュロスバーグさんの理論をお弁当の会話から学びます。転機が来たら、どうしたらいい？">
 <title>シュロスバーグさんとお弁当｜サニー＆モヤンの キャリコン学びピクニック</title>
 <link rel="canonical" href="https://carepicnic.com/obento/schlossberg/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"></noscript>
+
 <link rel="stylesheet" href="../../css/cb-6960fbd8ca.css" data-src="picnic-episode.css,lesson-player.css?v=2026.1011k">
+<link rel="preload" href="/fonts/maru-h.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* 丸い文字は見出し・ボタンだけ。サイトで使う字だけに絞った軽いファイルを最初から読む。本文は端末の文字 */
+@font-face{font-family:"Zen Maru Gothic";src:url(/fonts/maru-h.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--font-sans:"Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;--font:var(--font-sans)}
+body{font-family:var(--font-sans)}
+h1,h2,h3,h4,h5,a.button{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN",sans-serif}</style>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
