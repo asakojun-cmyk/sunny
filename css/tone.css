@@ -495,3 +495,7 @@ li > .shiryo__mark { position: static; margin-right: .4em; }
 .related__type { flex: none; font-size: 11px !important; padding: 1px 9px !important; line-height: 1.7; }
 .related__item-title { margin-top: 0 !important; font-size: 15px !important; line-height: 1.6; }
 .related__desc { flex-basis: 100%; text-align: center; font-size: 13px !important; line-height: 1.7 !important; margin-top: 0 !important; }
+
+/* ---------- 2026-10-15 「このページには広告があります」のたたみ表示は、ページの真ん中にそろえる(見出しやタイトルと同じ向き) ---------- */
+.site-main details.disclosure > summary { margin-left: auto !important; margin-right: auto !important; justify-content: center; }
+.site-main details.disclosure[open] .disclosure__list { max-width: 560px; margin-left: auto; margin-right: auto; }

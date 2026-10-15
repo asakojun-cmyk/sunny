@@ -119,3 +119,35 @@ a.gk-circle:hover { transform: translateY(-3px); }
 /* ---------- 語の途中で折れないように(<wbr> の位置でだけ折る)・行の長さをそろえる ---------- */
 .gk :is(.gk-answer__t, .gk-answer__note, .gk-toc__body b, .gk-toc__body small, .gk-circle__memo, .gk-qa summary span, .gk-qa__a p) { word-break: keep-all; overflow-wrap: anywhere; }
 .gk :is(.gk-answer__t, .gk-answer__note, .gk-circle__memo) { text-wrap: balance; }
+
+/* ---------- 2026-10-15 余白をゆったり・まとまりがわかるように ----------
+   ページのはじめ(タイトル → 結論 → 広告の表示 → 目次)を、ひとつずつ間をあけて置く。
+   章の中は「本文のまとまり」と「掛け合いのまとまり」の間を広くとる */
+.gk .lead-intro { max-width: none; margin: 8px 0 0; padding: 0; background: none; border-radius: 0; }
+.gk .lead-intro p + p { margin-top: 14px; }
+.gk-answer { margin: 64px auto 56px; }
+.gk-toc { margin: 56px auto 24px; }
+.gk details.disclosure { margin: 0 0 8px !important; }
+.gk .guide-section > p, .gk .guide-section > ul, .gk .guide-section > ol, .gk .guide-section > .fact-table, .gk .guide-section > .gk-nums { margin-bottom: 1.4em; }
+.gk .guide-section > h3 { margin-top: 2.2em !important; }
+.gk-talk { margin: 44px 0 8px; gap: 16px; }
+.gk .guide-section > .term-section-note + .gk-talk, .gk .guide-section > p + .gk-talk { margin-top: 44px; }
+@media (max-width: 480px) {
+  .gk-answer { margin: 48px auto 44px; }
+  .gk-toc { margin: 44px auto 16px; }
+  .gk-talk { margin-top: 36px; gap: 14px; }
+}
+/* 丸の中: 札・言葉・説明の行間を、つまりすぎないように */
+.gk-circle { gap: 6px; }
+.gk-circle__when { line-height: 1.8; }
+.gk-circle__yen { line-height: 1.3; margin: 2px 0; }
+.gk-circle__memo { line-height: 1.7; }
+.gk-circle__go { margin-top: 4px; }
+@media (max-width: 480px) {
+  .gk-circle { gap: 4px; }
+  .gk-circle__memo { line-height: 1.65; }
+}
+/* 安い養成講座ページ(ys-)の結論と目次も、同じ余白に */
+.gk .ys-answer { margin: 64px auto 56px; }
+.gk .ys-toc { margin: 56px auto 24px; }
+@media (max-width: 480px) { .gk .ys-answer { margin: 48px auto 44px; } .gk .ys-toc { margin: 44px auto 16px; } }
