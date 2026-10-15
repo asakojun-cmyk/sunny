@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" href="../../img/sunny-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"></noscript></noscript>
 <link rel="stylesheet" href="../../css/style.css?v=2026.1001">
 <link rel="stylesheet" href="../../css/picnic.css?v=2026.1014">
 <link rel="stylesheet" href="../../css/refine.css?v=2026.1001">
@@ -55,7 +55,7 @@
     <div class="site-header__brand">
       <a href="../../" class="site-logo">
         <span class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</span>
-        <span class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.png" alt="">キャリコン学びピクニック</span>
+        <span class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.webp" alt="">キャリコン学びピクニック</span>
       </a>
       <p class="site-header__tagline">「わからない」を持ち寄って、「わかった！」に変える場所</p>
     </div>
@@ -70,7 +70,7 @@
     <div class="header-search" id="search-fab">
       <a class="search-fab__toggle" href="../../search/" aria-expanded="false" aria-controls="search-fab-panel">
         <span class="header-search__label" aria-hidden="true">＼ 用語検索 ／</span>
-        <span class="header-search__chara"><img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="42" height="42" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async"></span>
+        <span class="header-search__chara"><img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="42" height="42" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" decoding="async"></span>
         <span class="header-search__click" aria-hidden="true">⇑クリック⇑</span>
         <span class="visually-hidden">わからない言葉を検索する</span>
       </a>
@@ -90,9 +90,9 @@
 <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../exam/">試験対策</a></li><li aria-current="page">出題範囲と<wbr>対応表</li></ol></nav>
 
 <div class="page-scene" aria-hidden="true">
-  <img class="pgs pgs-a" src="../../img/parts/04_book_wagon.png" alt="" loading="lazy">
-  <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.png" alt="" loading="lazy">
-  <img class="pgs pgs-b" src="../../img/parts/13_blue_yellow_tent.png" alt="" loading="lazy">
+  <img class="pgs pgs-a" src="../../img/parts/04_book_wagon.webp" alt="">
+  <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.webp" alt="">
+  <img class="pgs pgs-b" src="../../img/parts/13_blue_yellow_tent.webp" alt="">
 </div>
 
 <article class="container container--article guide-article exam-guide-article">
@@ -105,14 +105,14 @@
 
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">出題範囲って、<wbr>どこから<wbr>どこまでなの……？<wbr>ぜんぶ<wbr>覚えられるかな。</p>
   </div>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">だいじょうぶ。<wbr>地図が<wbr>あれば<wbr>迷わないよ。<wbr>4つの<wbr>エリアを、<wbr>順番に<wbr>歩いてみよう。</p>
@@ -129,7 +129,7 @@
     <p>「詳細」と<wbr>書かれた<wbr>項目から<wbr>先に<wbr>固めるのが<wbr>おすすめです。<wbr>過去問で<wbr>間違えた<wbr>問題が<wbr>どの<wbr>項目に<wbr>あたるかは、<wbr><a class="txt-link" href="../gakka-benkyoho/">問題番号で<wbr>わかる<wbr>出題傾向と<wbr>対策</a><wbr>で<wbr>確かめられます。</p>
     <div class="chara-guide chara-guide--sunny">
       <div class="chara-guide__figure">
-        <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+        <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
         <span class="chara-guide__name">サニー先生</span>
       </div>
       <p class="chara-guide__bubble">1問1答を<wbr>解くと、<wbr>下の<wbr>バーがの<wbr>びていくよ。<wbr>どの<wbr>分野が<wbr>弱いか、<wbr>ひと目で<wbr>わかるんだ。</p>
@@ -162,24 +162,24 @@
   </section>
 
   <section class="guide-section hani" id="area-1">
-    <h2><img class="hani__icon" src="../../img/parts/18_bulletin_board.png" alt="" width="56" height="56" loading="lazy">Ⅰ <wbr>キャリアコンサルティングの<wbr>社会的意義</h2>
+    <h2><img class="hani__icon" src="../../img/parts/18_bulletin_board.webp" alt="" width="56" height="56" loading="lazy">Ⅰ <wbr>キャリアコンサルティングの<wbr>社会的意義</h2>
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">「社会的意義」って、<wbr>かたい<wbr>言葉だなぁ……。</p>
   </div>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">「な<wbr>ぜいま、<wbr>キャリアの<wbr>相談が<wbr>必要と<wbr>されているのか」と<wbr>いう<wbr>ことだよ。<wbr>白書や<wbr>調査の<wbr>話も、<wbr>ここで<wbr>出てくるんだ。</p>
   </div>
 
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/18_bulletin_board.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/18_bulletin_board.webp" alt="" width="64" height="64" loading="lazy">
       <h3>1 <wbr>社会・経済の動向と、<wbr>キャリア形成支援の必要性<wbr><span class="hani__level">求められる知識:<wbr>詳細</span></h3>
       <p>技術革新などの<wbr>変化の<wbr>中で、<wbr>個人が<wbr>主体的に<wbr>キャリアを<wbr>つくる<wbr>大切さと、<wbr>それを<wbr>支える<wbr>必要性。<wbr>白書や<wbr>調査の<wbr>動向も<wbr>ここで<wbr>問われます。</p>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/rodo-keizai-no-bunseki/">労働経済の<wbr>分析(労働経済白書)</a>、<wbr><a href="../../terms/noryoku-kaihatsu-kihon-chosa/">能力開発基本調査</a>、<wbr><a href="../../terms/nouryoku-kaihatsu-kihon-keikaku/">職業能力開発基本計画</a>、<wbr><a href="../../terms/recurrent-reskilling/">リカレント教育と<wbr>リスキリング</a></p>
@@ -187,11 +187,11 @@
       <p class="rikaido rikaido--inline" data-rikaido="1"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/moyan-idea-badge.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/moyan-idea-badge.webp" alt="" width="64" height="64" loading="lazy">
       <h3>2 <wbr>キャリアコンサルティングの役割<wbr><span class="hani__level">求められる知識:<wbr>詳細</span></h3>
       <p>職業だけでなく<wbr>生きが<wbr>い・<wbr>働きが<wbr>いまで<wbr>含めて<wbr>支える<wbr>こと、<wbr>個人の<wbr>自立・<wbr>自律を<wbr>支える<wbr>こと、<wbr>組織や<wbr>環境への<wbr>働きかけも<wbr>含むこと。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>相談にのるだけが<wbr>お仕事じゃないの？</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>そう。<wbr>職場や<wbr>学校への<wbr>働きかけや、<wbr>キャリアの<wbr>大切さを<wbr>広める<wbr>活動も、<wbr>役割に<wbr>入っているんだよ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>相談にのるだけが<wbr>お仕事じゃないの？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>そう。<wbr>職場や<wbr>学校への<wbr>働きかけや、<wbr>キャリアの<wbr>大切さを<wbr>広める<wbr>活動も、<wbr>役割に<wbr>入っているんだよ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/shokugyo-nouryoku-kaihatsu-sokushin-ho/">職業能力開発促進法</a>、<wbr><a href="../../terms/self-career-dock/">セルフ・キャリアドック</a>、<wbr><a href="../../terms/rinri-koryo/">キャリアコンサルタントの<wbr>倫理と<wbr>義務</a></p>
       <p><a class="domain-drill" href="../../games/quiz/?g=dom:1">「社会的意義・役割」の<wbr>1問1答を<wbr>解く <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="rikaido rikaido--inline" data-rikaido="1"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
@@ -199,31 +199,31 @@
   </section>
 
   <section class="guide-section hani" id="area-2">
-    <h2><img class="hani__icon" src="../../img/parts/04_book_wagon.png" alt="" width="56" height="56" loading="lazy">Ⅱ <wbr>キャリアコンサルティングを<wbr>行う<wbr>ために<wbr>必要な<wbr>知識</h2>
-    <figure class="hani-scene"><img src="../../img/mobile-library-scene.png" alt="草原にとまった移動図書館の前で、サニー先生とモヤンが本をひらいている絵" width="1672" height="941" loading="lazy"></figure>
+    <h2><img class="hani__icon" src="../../img/parts/04_book_wagon.webp" alt="" width="56" height="56" loading="lazy">Ⅱ <wbr>キャリアコンサルティングを<wbr>行う<wbr>ために<wbr>必要な<wbr>知識</h2>
+    <figure class="hani-scene"><img src="../../img/mobile-library-scene.webp" alt="草原にとまった移動図書館の前で、サニー先生とモヤンが本をひらいている絵" width="1672" height="941" loading="lazy"></figure>
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">ここが<wbr>いちばん長いね。<wbr>理論に、<wbr>法律に、<wbr>統計に……。</p>
   </div>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">問題数も<wbr>いちばん<wbr>多い<wbr>エリアだよ。<wbr>いっぺんに<wbr>やらなくて<wbr>大丈夫。<wbr>今日は<wbr>ひとつだけ、の<wbr>ぞいてみよう。</p>
   </div>
 
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/11_lunchbox.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/11_lunchbox.webp" alt="" width="64" height="64" loading="lazy">
       <h3>1 <wbr>キャリアに関する理論<wbr><span class="hani__level">求められる知識:<wbr>詳細</span></h3>
       <p>特性因子論、<wbr>発達論・トランジション、<wbr>社会的学習理論、<wbr>意思決定論、<wbr>精神分析的理論、<wbr>動機づけ理論など。</p>
       <div class="guest-say"><span class="guest-say__avatar" aria-hidden="true" style="background:#eef3fa">⬡</span><p class="guest-say__bubble"><b>ホランドさん</b><wbr>「すき(興味)」は<wbr>立派な<wbr>羅針盤だよ。<wbr>人の<wbr>興味は<wbr>6つの<wbr>タイプに<wbr>分けられるんだ。 <wbr><a class="txt-link" href="../../obento/holland/">お話を<wbr>聞きに<wbr>いく <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p></div>
       <div class="guest-say"><span class="guest-say__avatar" aria-hidden="true" style="background:#f0eef9">🌠</span><p class="guest-say__bubble"><b>クランボルツさん</b><wbr>キャリアは、<wbr>思いがけない<wbr>偶然にも<wbr>大きく<wbr>動かされる。<wbr>だから、<wbr>偶然を<wbr>味方に<wbr>つける<wbr>行動を<wbr>しておこう。 <wbr><a class="txt-link" href="../../obento/krumboltz/">お話を<wbr>聞きに<wbr>いく <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p></div>
       <div class="guest-say">
-        <span class="guest-say__avatar" aria-hidden="true"><img src="../../img/parts/super-badge.png" alt="" width="48" height="48" loading="lazy"></span>
+        <span class="guest-say__avatar" aria-hidden="true"><img src="../../img/parts/super-badge.webp" alt="" width="48" height="48" loading="lazy"></span>
         <p class="guest-say__bubble"><b>スーパーさん</b><wbr>人にはね、<wbr>働く<wbr>人だけでなく、<wbr>親、<wbr>学ぶ人、<wbr>地域の<wbr>一員<wbr>——いくつもの<wbr>役割が<wbr>あるんだ。<wbr>虹のように<wbr>重ねて、<wbr>人生を<wbr>見て<wbr>ごらん。 <wbr><a class="txt-link" href="../../obento/super/">お話を<wbr>聞きに<wbr>いく <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       </div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/tokusei-inshi/">特性因子理論</a>、<wbr><a href="../../terms/riasec/">六角形モデル(RIASEC)</a>、<wbr><a href="../../terms/shokugyoteki-hattatsu-dankai/">職業的発達段階(スーパーの<wbr>ライフステージ)</a>、<wbr><a href="../../terms/life-career-rainbow/">ライフ・キャリア・レインボー</a>、<wbr><a href="../../terms/career-anchor/">キャリア・アンカー</a>、<wbr><a href="../../terms/planned-happenstance/">プランド・ハップンスタンス</a>、<wbr><a href="../../terms/shakai-ninchiteki-career-riron/">社会認知的キャリア理論(SCCT)</a>、<wbr><a href="../../terms/renzokuteki-ishikettei/">連続的意思決定プロセス(ジェラット)</a>、<wbr><a href="../../terms/ishikettei-riron-keifu/">意思決定論の<wbr>系譜(ティードマン・ヒルトン)</a>、<wbr><a href="../../terms/roe-riron/">ローの<wbr>理論(早期経験と<wbr>職業選択)</a>、<wbr><a href="../../terms/maslow/">マズローの<wbr>欲求階層説</a>、<wbr><a href="../../terms/herzberg/">動機づけ・衛生理論(ハーズバーグ)</a>、<wbr><a href="../../terms/career-kochiku-riron/">キャリア構築理論</a>、<wbr><a href="../../terms/protean-career/">プロティアン・キャリア</a></p>
@@ -231,11 +231,11 @@
       <p class="rikaido rikaido--inline" data-rikaido="2"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/moyan-book-badge.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/moyan-book-badge.webp" alt="" width="64" height="64" loading="lazy">
       <h3>2 <wbr>カウンセリングに関する理論<wbr><span class="hani__level">求められる知識:<wbr>一般的(役割は詳細)</span></h3>
       <p>来談者中心、<wbr>精神分析、<wbr>論理療法、<wbr>行動療法、<wbr>ゲシュタルト療法、<wbr>交流分析、<wbr>包括的・折衷的アプローチ、<wbr>家族療法・<wbr>実存療法、<wbr>アサーション。<wbr>グループの<wbr>活用も<wbr>ここに<wbr>入ります。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>療法の<wbr>名前が<wbr>たくさん<wbr>あって、<wbr>ごちゃ<wbr>ごちゃに<wbr>なる……。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>「だれが・何を<wbr>大事に<wbr>したか」を<wbr>セットで<wbr>覚えると<wbr>いいよ。<wbr>たとえば、<wbr>ロジャーズは<wbr>「聴く<wbr>こと」、<wbr>エリスは<wbr>「受け取り方」、<wbr>パールズは<wbr>「今ここ」。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>療法の<wbr>名前が<wbr>たくさん<wbr>あって、<wbr>ごちゃ<wbr>ごちゃに<wbr>なる……。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>「だれが・何を<wbr>大事に<wbr>したか」を<wbr>セットで<wbr>覚えると<wbr>いいよ。<wbr>たとえば、<wbr>ロジャーズは<wbr>「聴く<wbr>こと」、<wbr>エリスは<wbr>「受け取り方」、<wbr>パールズは<wbr>「今ここ」。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/raidansha-chushin-ryoho/">来談者中心療法</a>、<wbr><a href="../../terms/seishin-bunseki/">精神分析</a>、<wbr><a href="../../terms/abc-riron/">論理療法(ABC理論)</a>、<wbr><a href="../../terms/ninchi-ryoho/">認知療法(ベック)</a>、<wbr><a href="../../terms/kodo-ryoho/">行動療法(系統的脱感作)</a>、<wbr><a href="../../terms/gestalt-ryoho/">ゲシュタルト療法(パールズ)</a>、<wbr><a href="../../terms/koryu-bunseki/">交流分析(バーン・<wbr>エゴグラム)</a>、<wbr><a href="../../terms/kazoku-ryoho/">家族療法</a>、<wbr><a href="../../terms/logotherapy/">実存療法・<wbr>ロゴセラピー(フランクル)</a>、<wbr><a href="../../terms/assertion/">アサーション</a>、<wbr><a href="../../terms/microcounseling/">マイクロカウンセリング</a>、<wbr><a href="../../terms/helping/">ヘルピング</a>、<wbr><a href="../../terms/group-shurui/">グループアプローチの<wbr>種類</a>、<wbr><a href="../../terms/kosei-teki-group-encounter/">構成的グループエンカウンター</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -246,17 +246,17 @@
       <p class="rikaido rikaido--inline" data-rikaido="2"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/10_yellow_pencil.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/10_yellow_pencil.webp" alt="" width="64" height="64" loading="lazy">
       <h3>3 <wbr>職業能力開発(リカレント教育を<wbr>含む)<wbr>の知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>学び直しを<wbr>含む職業能力開発の<wbr>しくみ、<wbr>教育訓練、<wbr>能力評価、<wbr>ジョブ・カード制度。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>学び直しって、<wbr>大人に<wbr>なってからも<wbr>するの？</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>するよ。<wbr>学ぶことと<wbr>働く<wbr>ことを<wbr>行き来する<wbr>考え方を、<wbr>リカレント教育と<wbr>いうんだ。<wbr>ジョブ・カードは、<wbr>その<wbr>学びや<wbr>経験を<wbr>書きとめて<wbr>おく<wbr>道具だよ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>学び直しって、<wbr>大人に<wbr>なってからも<wbr>するの？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>するよ。<wbr>学ぶことと<wbr>働く<wbr>ことを<wbr>行き来する<wbr>考え方を、<wbr>リカレント教育と<wbr>いうんだ。<wbr>ジョブ・カードは、<wbr>その<wbr>学びや<wbr>経験を<wbr>書きとめて<wbr>おく<wbr>道具だよ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/recurrent-reskilling/">リカレント教育と<wbr>リスキリング</a>、<wbr><a href="../../terms/ojt-offjt/">OJTと<wbr>Off-JT</a>、<wbr><a href="../../terms/kyoiku-kunren-kyufu/">教育訓練給付制度</a>、<wbr><a href="../../terms/hello-training/">公共職業訓練(ハロートレーニング)</a>、<wbr><a href="../../terms/kyushokusha-shien/">求職者支援制度</a>、<wbr><a href="../../terms/job-card/">ジョブ・カード</a>、<wbr><a href="../../terms/ginou-kentei/">技能検定</a>、<wbr><a href="../../terms/shokugyo-nouryoku-hyoka-kijun/">職業能力評価基準</a>、<wbr><a href="../../terms/jinzai-kaihatsu-josei/">人材開発支援助成金・キャリアアップ助成金</a></p>
       <p><a class="domain-drill" href="../../games/quiz/?g=dom:3">「職業能力開発・企業の<wbr>支援」の<wbr>1問1答を<wbr>解く <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="rikaido rikaido--inline" data-rikaido="3"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/19_market_stall.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/19_market_stall.webp" alt="" width="64" height="64" loading="lazy">
       <h3>4 <wbr>企業におけるキャリア形成支援の知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>雇用管理の<wbr>しくみ、<wbr>人事労務の<wbr>施策、<wbr>セルフ・キャリアドック、<wbr>ワーク・ライフ・バランス、<wbr>属性や<wbr>雇用形態ごとの<wbr>課題、<wbr>人事部門との<wbr>協業。</p>
       <div class="guest-say"><span class="guest-say__avatar" aria-hidden="true" style="background:#e9f2f6">⚓</span><p class="guest-say__bubble"><b>シャインさん</b><wbr>会社の<wbr>中で<wbr>働く<wbr>人にも、<wbr>「これだけは<wbr>手放せない」と<wbr>いう<wbr>錨が<wbr>ある。<wbr>何が<wbr>得意か、<wbr>何が<wbr>したいか、<wbr>何に<wbr>価値を<wbr>感じるか<wbr>——3つを<wbr>聞いて<wbr>ごらん。 <wbr><a class="txt-link" href="../../obento/schein/">お話を<wbr>聞きに<wbr>いく <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p></div>
@@ -274,21 +274,21 @@
       <p class="rikaido rikaido--inline" data-rikaido="3"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/05_pinwheel.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/05_pinwheel.webp" alt="" width="64" height="64" loading="lazy">
       <h3>5 <wbr>労働市場の知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>産業構造の<wbr>変化と、<wbr>有効求人倍率・完全失業率などの<wbr>雇用の<wbr>動き。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>統計って、<wbr>数字ばかりで<wbr>目が<wbr>まわる……。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>まずは<wbr>「どこが<wbr>出している<wbr>数字か」から。<wbr>完全失業率は<wbr>総務省、<wbr>有効求人倍率は<wbr>厚生労働省。<wbr>この<wbr>入れ替えが、<wbr>ひっかけの<wbr>定番なんだ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>統計って、<wbr>数字ばかりで<wbr>目が<wbr>まわる……。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>まずは<wbr>「どこが<wbr>出している<wbr>数字か」から。<wbr>完全失業率は<wbr>総務省、<wbr>有効求人倍率は<wbr>厚生労働省。<wbr>この<wbr>入れ替えが、<wbr>ひっかけの<wbr>定番なんだ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/shitsugyoritsu-kyujinbairitsu/">完全失業率と<wbr>有効求人倍率</a>、<wbr><a href="../../terms/rodoryoku-chosa/">労働力調査</a>、<wbr><a href="../../terms/koyo-tokei-dedokoro/">雇用統計の<wbr>出どころ<wbr>早わかり<wbr>(毎月<wbr>勤労統計ほか)</a>、<wbr><a href="../../terms/chingin-kozo-kihon-tokei/">賃金構造基本統計調査</a>、<wbr><a href="../../terms/shugyo-kozo-chosa/">就業構造基本調査</a>、<wbr><a href="../../terms/shuro-joken-chosa/">就労条件総合調査</a>、<wbr><a href="../../terms/rodo-keizai-no-bunseki/">労働経済の<wbr>分析(労働経済白書)</a></p>
       <p><a class="domain-drill" href="../../games/quiz/?g=dom:4">「労働市場・統計」の<wbr>1問1答を<wbr>解く <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="rikaido rikaido--inline" data-rikaido="4"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/09_blue_notebook.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/09_blue_notebook.webp" alt="" width="64" height="64" loading="lazy">
       <h3>6 <wbr>労働政策・労働関係法令・社会保障制度の<wbr>知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>労働基準、<wbr>女性、<wbr>育児・介護、<wbr>職業安定、<wbr>職業能力開発の<wbr>各法律と、<wbr>年金・健康保険・労災保険・雇用保険・介護保険。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>法律が、<wbr>こんなに<wbr>たくさん……。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>「だれを<wbr>守る<wbr>ための<wbr>ルールか」で<wbr>分けると<wbr>覚えやすいよ。<wbr>働く<wbr>人みんな、<wbr>女性、<wbr>子育てや<wbr>介護を<wbr>する<wbr>人、<wbr>仕事を<wbr>探す人、と<wbr>いう<wbr>ふうにね。<wbr>数字は<wbr>「義務か、<wbr>努力義務か」と<wbr>セットで。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>法律が、<wbr>こんなに<wbr>たくさん……。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>「だれを<wbr>守る<wbr>ための<wbr>ルールか」で<wbr>分けると<wbr>覚えやすいよ。<wbr>働く<wbr>人みんな、<wbr>女性、<wbr>子育てや<wbr>介護を<wbr>する<wbr>人、<wbr>仕事を<wbr>探す人、と<wbr>いう<wbr>ふうにね。<wbr>数字は<wbr>「義務か、<wbr>努力義務か」と<wbr>セットで。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/rodo-kijun-ho/">労働基準法</a>、<wbr><a href="../../terms/rodo-keiyaku-ho/">労働契約法</a>、<wbr><a href="../../terms/rodo-anzen-eisei-ho/">労働安全衛生法</a>、<wbr><a href="../../terms/saburoku-kyotei/">36協定(時間外・<wbr>休日労働に<wbr>関する<wbr>協定)</a>、<wbr><a href="../../terms/danjo-koyo-kikai-kinto-ho/">男女雇用機会均等法</a>、<wbr><a href="../../terms/josei-katsuyaku/">女性活躍推進法</a>、<wbr><a href="../../terms/part-yuki-ho/">パートタイム・有期雇用労働法(同一労働同一賃金)</a>、<wbr><a href="../../terms/ikuji-kaigo-kyugyo-ho/">育児・介護休業法</a>、<wbr><a href="../../terms/rodo-shisaku-suishin-ho/">労働施策総合推進法(パワハラ防止法)</a>、<wbr><a href="../../terms/shokugyo-antei-ho/">職業安定法</a>、<wbr><a href="../../terms/wakamono-koyo/">若者雇用促進法(ユースエール)</a>、<wbr><a href="../../terms/rodosha-haken-ho/">労働者派遣法</a>、<wbr><a href="../../terms/konenrei-sha-koyo-antei-ho/">高年齢者雇用安定法</a>、<wbr><a href="../../terms/shogaisha-koyo/">障害者雇用促進法</a>、<wbr><a href="../../terms/shokugyo-nouryoku-kaihatsu-sokushin-ho/">職業能力開発促進法</a>、<wbr><a href="../../terms/saitei-chingin-ho/">最低賃金法</a>、<wbr><a href="../../terms/koyo-hoken/">雇用保険制度</a>、<wbr><a href="../../terms/rosai-hoken/">労災保険</a>、<wbr><a href="../../terms/shakai-hoken/">社会保険制度<wbr>(5つの<wbr>保険)</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -302,11 +302,11 @@
       <p class="rikaido rikaido--inline" data-rikaido="5"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/08_blue_backpack.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/08_blue_backpack.webp" alt="" width="64" height="64" loading="lazy">
       <h3>7 <wbr>学校教育制度とキャリア教育の知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>学校の<wbr>種類ごとの<wbr>教育の<wbr>目標と、<wbr>発達段階に<wbr>応じた<wbr>キャリア教育の<wbr>あり方。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>学校の<wbr>ことも、<wbr>試験に<wbr>出るんだね。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>キャリア教育は、<wbr>特定の<wbr>教科だけでなく、<wbr>学校の<wbr>教育活動ぜんたいで<wbr>行う<wbr>もの<wbr>なんだ。<wbr>キャリア・パスポートは、<wbr>小学校から<wbr>高校まで<wbr>引きついでいく<wbr>記録だよ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>学校の<wbr>ことも、<wbr>試験に<wbr>出るんだね。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>キャリア教育は、<wbr>特定の<wbr>教科だけでなく、<wbr>学校の<wbr>教育活動ぜんたいで<wbr>行う<wbr>もの<wbr>なんだ。<wbr>キャリア・パスポートは、<wbr>小学校から<wbr>高校まで<wbr>引きついでいく<wbr>記録だよ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/career-kyoiku/">キャリア教育と<wbr>キャリア・パスポート</a>、<wbr><a href="../../terms/internship-sanshogoi/">インターンシップ(三省合意の<wbr>見直し)</a>、<wbr><a href="../../terms/hello-work-madoguchi/">ハローワークの<wbr>専門窓口(マザーズ・わか<wbr>もの・新卒応援)</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -318,11 +318,11 @@
       <p class="rikaido rikaido--inline" data-rikaido="6"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/16_hammock.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/16_hammock.webp" alt="" width="64" height="64" loading="lazy">
       <h3>8 <wbr>メンタルヘルスの知識<wbr><span class="hani__level">求められる知識:<wbr>一般的(リファー・職場復帰支援は<wbr>詳細)</span></h3>
       <p>法令や<wbr>指針、<wbr>職場の<wbr>対策、<wbr>ストレスの<wbr>理論、<wbr>代表的な<wbr>精神的な<wbr>病気の<wbr>特徴、<wbr>専門機関への<wbr>リファー、<wbr>職場復帰支援。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>こころの<wbr>病気の<wbr>相談が<wbr>きたら、<wbr>どうしたら<wbr>いいの？</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>診断や<wbr>治療は、<wbr>お医者さんの<wbr>仕事。<wbr>キャリアコンサルタントの<wbr>役目は、<wbr>サインに<wbr>気づいて、<wbr>本人の<wbr>同意を<wbr>得て<wbr>専門家に<wbr>つなぐ<wbr>ことだよ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>こころの<wbr>病気の<wbr>相談が<wbr>きたら、<wbr>どうしたら<wbr>いいの？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>診断や<wbr>治療は、<wbr>お医者さんの<wbr>仕事。<wbr>キャリアコンサルタントの<wbr>役目は、<wbr>サインに<wbr>気づいて、<wbr>本人の<wbr>同意を<wbr>得て<wbr>専門家に<wbr>つなぐ<wbr>ことだよ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/mental-health-care/">メンタルヘルスの<wbr>4つの<wbr>ケア</a>、<wbr><a href="../../terms/stress-check/">ストレスチェック制度</a>、<wbr><a href="../../terms/kokoro-no-byoki/">こころの<wbr>不調の<wbr>基礎知識(うつ病・適応障害)</a>、<wbr><a href="../../terms/shokuba-fukki/">職場復帰支援(リワーク)の<wbr>5ステップ</a>、<wbr><a href="../../terms/coping/">コーピング(ストレス対処)</a>、<wbr><a href="../../terms/gatekeeper/">自殺対策と<wbr>ゲートキーパー</a>、<wbr><a href="../../terms/karoshi-boshi/">過労死等防止対策推進法</a>、<wbr><a href="../../terms/refer/">リファー</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -335,17 +335,17 @@
       <p class="rikaido rikaido--inline" data-rikaido="7"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/14_tree_center.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/14_tree_center.webp" alt="" width="64" height="64" loading="lazy">
       <h3>9 <wbr>中<wbr>高年齢期を<wbr>展望する<wbr>ライフステージと<wbr>発達課題の<wbr>知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>キャリアの<wbr>各段階と、<wbr>出産・育児・介護などの<wbr>ライフイベントで<wbr>向き合う<wbr>課題。<wbr>中長期の<wbr>キャリア・プラン。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>大人に<wbr>なっても、<wbr>まだ<wbr>発達するの？</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>するよ。<wbr>スーパーは、<wbr>キャリアを<wbr>「成長→探索→確立→維持→解放」の<wbr>5つの<wbr>段階で<wbr>考えたんだ。<wbr>順番ごと<wbr>覚えて<wbr>おこう。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>大人に<wbr>なっても、<wbr>まだ<wbr>発達するの？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>するよ。<wbr>スーパーは、<wbr>キャリアを<wbr>「成長→探索→確立→維持→解放」の<wbr>5つの<wbr>段階で<wbr>考えたんだ。<wbr>順番ごと<wbr>覚えて<wbr>おこう。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/shokugyoteki-hattatsu-dankai/">職業的発達段階(スーパーの<wbr>ライフステージ)</a>、<wbr><a href="../../terms/life-span/">ライフスパン</a>、<wbr><a href="../../terms/havighurst/">発達課題(ハヴィガースト)</a>、<wbr><a href="../../terms/marcia-identity/">マーシャの<wbr>アイデンティティ・ステイタス</a>、<wbr><a href="../../terms/jinsei-no-shogo/">ユングの<wbr>「人生の<wbr>正午」</a>、<wbr><a href="../../terms/soc-riron/">バルテスの<wbr>SOC理論(選択<wbr>最適化補償)</a>、<wbr><a href="../../theorists/erikson/">エリクソン</a>、<wbr><a href="../../theorists/levinson/">レビンソン</a></p>
       <p><a class="domain-drill" href="../../games/quiz/?g=dom:8">「ライフステージ・<wbr>多様な<wbr>特性」の<wbr>1問1答を<wbr>解く <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="rikaido rikaido--inline" data-rikaido="8"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/27_picnic_mat.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/27_picnic_mat.webp" alt="" width="64" height="64" loading="lazy">
       <h3>10 <wbr>人生の転機の知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>初めて<wbr>職業を<wbr>選ぶ<wbr>とき、<wbr>転職・退職の<wbr>ときなど、<wbr>転機の<wbr>受け止め方と<wbr>対応の<wbr>しかた。</p>
       <div class="guest-say">
@@ -357,11 +357,11 @@
       <p class="rikaido rikaido--inline" data-rikaido="8"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/25_flowers_right_group.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/25_flowers_right_group.webp" alt="" width="64" height="64" loading="lazy">
       <h3>11 <wbr>個人の多様な特性の知識<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>障害の<wbr>ある<wbr>人、<wbr>ニートなどの<wbr>若者、<wbr>病気の<wbr>治療中の<wbr>人など、<wbr>特性に<wbr>応じた<wbr>見立てと<wbr>配慮。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>ひとりひとり事情が<wbr>ちがうと、<wbr>支え方も<wbr>ちがうのかな。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>そうだね。<wbr>「本人を<wbr>変える」より、<wbr>「環境や<wbr>仕事との<wbr>合わせ方を<wbr>考える」のが<wbr>基本だよ。<wbr>支援機関の<wbr>名前と<wbr>役割も、<wbr>セットで<wbr>覚えよう。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>ひとりひとり事情が<wbr>ちがうと、<wbr>支え方も<wbr>ちがうのかな。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>そうだね。<wbr>「本人を<wbr>変える」より、<wbr>「環境や<wbr>仕事との<wbr>合わせ方を<wbr>考える」のが<wbr>基本だよ。<wbr>支援機関の<wbr>名前と<wbr>役割も、<wbr>セットで<wbr>覚えよう。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/hattatsu-shogai/">発達障害の<wbr>理解と<wbr>支援</a>、<wbr><a href="../../terms/sabetsu-kaisho/">障害者差別解消法と<wbr>合理的配慮</a>、<wbr><a href="../../terms/shuro-shien/">就労移行支援・就労継続支援(A型・B型)</a>、<wbr><a href="../../terms/job-coach/">ジョブコーチ(職場適応援助者)</a>、<wbr><a href="../../terms/shogaisha-shien-kikan/">地域障害者職業センターと<wbr>障害者就業・生活支援センター</a>、<wbr><a href="../../terms/saposute/">地域若者サポートステーション(サポステ)</a>、<wbr><a href="../../terms/job-cafe/">ジョブカフェ(若年者就業支援センター)</a>、<wbr><a href="../../terms/chiryo-shigoto-ryoritsu/">治療と<wbr>仕事の<wbr>両立支援</a>、<wbr><a href="../../terms/gaikokujin-koyo/">外国人雇用(特定技能・育成就労)</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -377,25 +377,25 @@
   </section>
 
   <section class="guide-section hani" id="area-3">
-    <h2><img class="hani__icon" src="../../img/parts/13_blue_yellow_tent.png" alt="" width="56" height="56" loading="lazy">Ⅲ <wbr>キャリアコンサルティングを<wbr>行う<wbr>ために<wbr>必要な<wbr>技能</h2>
-    <figure class="hani-scene"><img src="../../img/lunch-scene.jpg" alt="ピクニックシートでお弁当をかこむ、サニー先生とモヤンの絵" width="1672" height="941" loading="lazy"></figure>
+    <h2><img class="hani__icon" src="../../img/parts/13_blue_yellow_tent.webp" alt="" width="56" height="56" loading="lazy">Ⅲ <wbr>キャリアコンサルティングを<wbr>行う<wbr>ために<wbr>必要な<wbr>技能</h2>
+    <figure class="hani-scene"><img src="../../img/lunch-scene.webp" alt="ピクニックシートでお弁当をかこむ、サニー先生とモヤンの絵" width="1672" height="941" loading="lazy"></figure>
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">技能って、<wbr>試験で<wbr>どうやって<wbr>問われるの？</p>
   </div>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">学科では<wbr>「相談の<wbr>進め方と<wbr>して<wbr>適切なのは<wbr>どれか」と<wbr>いう<wbr>形で<wbr>出るよ。<wbr>本番で<wbr>いちばん問題数が<wbr>多いのは、<wbr>じつは<wbr>ここなんだ。</p>
   </div>
 
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/12_beach_ball.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/12_beach_ball.webp" alt="" width="64" height="64" loading="lazy">
       <h3>1 <wbr>基本的な技能<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>カウンセリングの<wbr>技能、<wbr>グループアプローチ、<wbr>キャリアシート(ジョブ・カードなど)の<wbr>作成指導、<wbr>相談過程全体の<wbr>進行管理。</p>
       <div class="guest-say">
@@ -414,7 +414,7 @@
       <p class="rikaido rikaido--inline" data-rikaido="9"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/04_book_wagon.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/04_book_wagon.webp" alt="" width="64" height="64" loading="lazy">
       <h3>2 <wbr>相談過程において必要な技能<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>相談場面の<wbr>設定、<wbr>自己理解、<wbr>仕事理解、<wbr>自己啓発(啓発的経験)、<wbr>意思決定、<wbr>方策の<wbr>実行、<wbr>新たな<wbr>仕事への<wbr>適応、<wbr>相談過程の<wbr>総括。</p>
       <div class="guest-say"><span class="guest-say__avatar" aria-hidden="true" style="background:#f4f0e6">🔑</span><p class="guest-say__bubble"><b>パーソンズさん</b><wbr>わたしの<wbr>答えは、<wbr>3つの<wbr>手順です。<wbr>自分<wbr>自身を<wbr>知ること、<wbr>仕事の<wbr>世界を<wbr>知ること、そして<wbr>この<wbr>2つを<wbr>結びつける<wbr>こと。 <wbr><a class="txt-link" href="../../obento/parsons/">お話を<wbr>聞きに<wbr>いく <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p></div>
@@ -436,28 +436,28 @@
   </section>
 
   <section class="guide-section hani" id="area-4">
-    <h2><img class="hani__icon" src="../../img/parts/29_potted_plant.png" alt="" width="56" height="56" loading="lazy">Ⅳ <wbr>キャリアコンサルタントの倫理と行動</h2>
+    <h2><img class="hani__icon" src="../../img/parts/29_potted_plant.webp" alt="" width="56" height="56" loading="lazy">Ⅳ <wbr>キャリアコンサルタントの倫理と行動</h2>
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">倫理って、<wbr>「まじめに<wbr>やる」って<wbr>ことじゃないの？</p>
   </div>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">それだけじゃないよ。<wbr>「自分に<wbr>できない<wbr>ことを<wbr>知っている」のも、<wbr>専門家の<wbr>大事な<wbr>力なんだ。<wbr>ひとりで<wbr>抱えこまず、<wbr>専門家に<wbr>つなぐ<wbr>ことも<wbr>入っているよ。</p>
   </div>
 
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/18_bulletin_board.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/18_bulletin_board.webp" alt="" width="64" height="64" loading="lazy">
       <h3>1〜3 <wbr>教育・普及活動、<wbr>環境への働きかけ、<wbr>ネットワーク<wbr><span class="hani__level">求められる知識:<wbr>一般的</span></h3>
       <p>キャリア形成の<wbr>大切さを<wbr>広める<wbr>活動、<wbr>職場や<wbr>学校など<wbr>環境への<wbr>働きかけ、<wbr>専門機関・<wbr>専門家との<wbr>ネットワークと<wbr>紹介(リファー)。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>相談室の<wbr>外でも、<wbr>する<wbr>ことが<wbr>あるんだね。</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>あるよ。<wbr>相談だけでは<wbr>解決できない<wbr>職場の<wbr>問題を、<wbr>人事部門と<wbr>協力して<wbr>伝えたり、<wbr>専門機関と<wbr>日ごろから<wbr>つながって<wbr>おいたりするんだ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>相談室の<wbr>外でも、<wbr>する<wbr>ことが<wbr>あるんだね。</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>あるよ。<wbr>相談だけでは<wbr>解決できない<wbr>職場の<wbr>問題を、<wbr>人事部門と<wbr>協力して<wbr>伝えたり、<wbr>専門機関と<wbr>日ごろから<wbr>つながって<wbr>おいたりするんだ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/refer/">リファー</a>、<wbr><a href="../../terms/self-career-dock/">セルフ・キャリアドック</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -471,21 +471,21 @@
       <p class="rikaido rikaido--inline" data-rikaido="10"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/10_yellow_pencil.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/10_yellow_pencil.webp" alt="" width="64" height="64" loading="lazy">
       <h3>4 <wbr>自己研鑽と、<wbr>指導を受ける必要性<wbr><span class="hani__level">求められる知識:<wbr>詳細</span></h3>
       <p>学び続ける<wbr>こと、<wbr>自分の<wbr>力量の<wbr>限界を<wbr>知ること、<wbr>スーパービジョンを<wbr>受ける<wbr>こと。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>資格を<wbr>取ったら、<wbr>もう<wbr>勉強は<wbr>終わり？</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>ここからが<wbr>本番だよ。<wbr>熟練した<wbr>指導者に<wbr>自分の<wbr>面談を<wbr>見て<wbr>もらう<wbr>ことを、<wbr>スーパービジョンと<wbr>いうんだ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>資格を<wbr>取ったら、<wbr>もう<wbr>勉強は<wbr>終わり？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>ここからが<wbr>本番だよ。<wbr>熟練した<wbr>指導者に<wbr>自分の<wbr>面談を<wbr>見て<wbr>もらう<wbr>ことを、<wbr>スーパービジョンと<wbr>いうんだ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/supervision/">スーパービジョン</a>、<wbr><a href="../../terms/chikugo-kiroku/">逐語記録</a></p>
       <p><a class="domain-drill" href="../../games/quiz/?g=dom:10">「倫理・<wbr>自己研鑽」の<wbr>1問1答を<wbr>解く <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       <p class="rikaido rikaido--inline" data-rikaido="10"><span class="rikaido__label">この<wbr>分野の<wbr>理解度</span><span class="rikaido__track"><span class="rikaido__bar" data-rikaido-bar></span></span><span class="rikaido__text" data-rikaido-text>まだ<wbr>記録が<wbr>ありません</span></p>
     </div>
     <div class="hani__item">
-      <img class="hani__item-icon" src="../../img/parts/29_potted_plant.png" alt="" width="64" height="64" loading="lazy">
+      <img class="hani__item-icon" src="../../img/parts/29_potted_plant.webp" alt="" width="64" height="64" loading="lazy">
       <h3>5 <wbr>キャリアコンサルタントと<wbr>しての<wbr>倫理と<wbr>姿勢<wbr><span class="hani__level">求められる知識:<wbr>詳細</span></h3>
       <p>活動範囲と<wbr>限界、<wbr>守秘義務、<wbr>倫理規定、<wbr>キャリアコンサルタントと<wbr>しての<wbr>姿勢。</p>
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>ひみつは、<wbr>いつまで<wbr>守るの？</p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>キャリアコンサルタントでなくなった<wbr>あとも、<wbr>ずっとだよ。<wbr>ただし、<wbr>相談者の<wbr>身体や<wbr>生命に<wbr>危険が<wbr>ある<wbr>ときなどは<wbr>例外と<wbr>されているんだ。</p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>ひみつは、<wbr>いつまで<wbr>守るの？</p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr>キャリアコンサルタントでなくなった<wbr>あとも、<wbr>ずっとだよ。<wbr>ただし、<wbr>相談者の<wbr>身体や<wbr>生命に<wbr>危険が<wbr>ある<wbr>ときなどは<wbr>例外と<wbr>されているんだ。</p></div>
       <p class="hani__pages"><b>この<wbr>サイトの<wbr>ページ</b><a href="../../terms/rinri-koryo/">キャリアコンサルタントの<wbr>倫理と<wbr>義務</a>、<wbr><a href="../../terms/shokugyo-nouryoku-kaihatsu-sokushin-ho/">職業能力開発促進法</a>、<wbr><a href="../../terms/teni-gyakuteni/">転移・逆転移</a></p>
       <div class="hani__missing"><b>まだ<wbr>ページが<wbr>ない<wbr>もの<wbr>(細目に<wbr>書かれている<wbr>項目)</b>
         <ul>
@@ -501,14 +501,14 @@
 
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">まだ<wbr>ページが<wbr>ない<wbr>ところは、<wbr>どうしたら<wbr>いいの？</p>
   </div>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">テキストや<wbr>公式の<wbr>資料で<wbr>補ってね。<wbr>ページが<wbr>できたら、<wbr>この<wbr>表に<wbr>足していくよ。<wbr>疲れた<wbr>日は、<wbr>閉じても<wbr>大丈夫。</p>
@@ -546,7 +546,7 @@
     </ul>
   </section>
   <aside class="author-profile author-profile--compact">
-      <p class="author-profile__name"><img class="author-profile__icon" src="../../img/chan-map-s.jpg" alt="" width="34" height="34" loading="lazy">この<wbr>記事を<wbr>書いた<wbr>人:ちゃん</p>
+      <p class="author-profile__name"><img class="author-profile__icon" src="../../img/chan-map-s.webp" alt="" width="34" height="34" loading="lazy">この<wbr>記事を<wbr>書いた<wbr>人:ちゃん</p>
       <p class="author-profile__bio">3児の<wbr>母。<wbr>国家資格キャリアコンサルタント養成講座を<wbr>修了。<wbr>2026年11月の<wbr>試験に<wbr>向けて<wbr>勉強中の<wbr>初学者と<wbr>して、<wbr>実際に<wbr>わからなかった<wbr>言葉を<wbr>解説しています。</p>
       <p><a href="../../about/">この<wbr>サイトに<wbr>ついて <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
     </aside>
@@ -562,17 +562,17 @@
 
 <div class="picnic-meadow" aria-hidden="true">
   <svg class="picnic-meadow__wave" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0,74 C420,14 1020,14 1440,74 L1440,160 L0,160 Z" fill="#eef4dd"/></svg>
-  <img class="pm pm-flowerl" src="../../img/parts/23_flowers_left_group.png" alt="" loading="lazy">
-  <img class="pm pm-bush" src="../../img/parts/24_bush_lower_left.png" alt="" loading="lazy">
-  <img class="pm pm-sunny" src="../../img/parts/06_sun_character.png" alt="" loading="lazy">
-  <img class="pm pm-moyan" src="../../img/parts/07_moyan_school_hat_crying.png" alt="" loading="lazy">
-  <img class="pm pm-wagon" src="../../img/parts/04_book_wagon.png" alt="" loading="lazy">
-  <img class="pm pm-flowerr" src="../../img/parts/25_flowers_right_group.png" alt="" loading="lazy">
+  <img class="pm pm-flowerl" src="../../img/parts/23_flowers_left_group.webp" alt="" loading="lazy">
+  <img class="pm pm-bush" src="../../img/parts/24_bush_lower_left.webp" alt="" loading="lazy">
+  <img class="pm pm-sunny" src="../../img/parts/06_sun_character.webp" alt="" loading="lazy">
+  <img class="pm pm-moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" loading="lazy">
+  <img class="pm pm-wagon" src="../../img/parts/04_book_wagon.webp" alt="" loading="lazy">
+  <img class="pm pm-flowerr" src="../../img/parts/25_flowers_right_group.webp" alt="" loading="lazy">
 </div>
 <footer class="site-footer" id="sitemap">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <p class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.png" alt="">キャリコン学びピクニック</p>
+      <p class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.webp" alt="" loading="lazy" decoding="async">キャリコン学びピクニック</p>
       <p class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</p>
       <p class="site-footer__desc">過去問の用語の意味から調べられる、キャリアコンサルタント試験の入門サイト</p>
     </div>

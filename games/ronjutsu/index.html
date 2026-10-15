@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" href="../../img/sunny-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"></noscript></noscript>
 <link rel="stylesheet" href="../../css/style.css?v=2026.1001">
 <link rel="stylesheet" href="../../css/picnic.css?v=2026.1014">
 <link rel="stylesheet" href="../../css/refine.css?v=2026.1001">
@@ -68,7 +68,7 @@
     <div class="site-header__brand">
       <a href="../../" class="site-logo">
         <span class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</span>
-        <span class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.png" alt="">キャリコン学びピクニック</span>
+        <span class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.webp" alt="">キャリコン学びピクニック</span>
       </a>
       <p class="site-header__tagline">「わからない」を持ち寄って、「わかった！」に変える場所</p>
     </div>
@@ -83,7 +83,7 @@
     <div class="header-search" id="search-fab">
       <a class="search-fab__toggle" href="../../search/" aria-expanded="false" aria-controls="search-fab-panel">
         <span class="header-search__label" aria-hidden="true">＼ 用語検索 ／</span>
-        <span class="header-search__chara"><img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="42" height="42" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async"></span>
+        <span class="header-search__chara"><img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="42" height="42" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" decoding="async"></span>
         <span class="header-search__click" aria-hidden="true">⇑クリック⇑</span>
         <span class="visually-hidden">わからない言葉を検索する</span>
       </a>
@@ -102,9 +102,9 @@
 <main data-lb="1" id="main" class="site-main">
 <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../../">ホーム</a></li><li><a href="../../games/">3分ミニゲーム</a></li><li aria-current="page">論述ボードゲーム</li></ol></nav>
 <div class="page-scene" aria-hidden="true">
-  <img class="pgs pgs-a" src="../../img/parts/12_beach_ball.png" alt="" loading="lazy">
-  <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.png" alt="" loading="lazy">
-  <img class="pgs pgs-b" src="../../img/parts/05_pinwheel.png" alt="" loading="lazy">
+  <img class="pgs pgs-a" src="../../img/parts/12_beach_ball.webp" alt="">
+  <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.webp" alt="">
+  <img class="pgs pgs-b" src="../../img/parts/05_pinwheel.webp" alt="">
 </div>
 
 <div class="container container--narrow ronjutsu">
@@ -116,14 +116,14 @@
   </header>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">論述は、<wbr>才能じゃなくて<wbr>「型」だよ。<wbr>主訴→見立て<wbr>→方針の<wbr>順に、<wbr>1マスずつ<wbr>一緒に<wbr>進もう。</p>
   </div>
   <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" decoding="async">
       <span class="chara-guide__name">モヤン</span>
     </div>
     <p class="chara-guide__bubble">すごろくなら、<wbr>ぼくにも<wbr>できそう…！ ふん<wbr>ふん。</p>
@@ -148,7 +148,7 @@
     </div>
     <p class="ron-guide__note">※出題形式の<wbr>最新情報は、<wbr>必ず<wbr>各試験機関の<wbr>公式サイトで<wbr>確認してね。<wbr>この<wbr>ゲームの<wbr>事例と<wbr>設問は<wbr>すべて<wbr>当サイトの<wbr>オリジナルです(過去問の<wbr>転載ではありません)。</p>
     <div class="note-dl">
-      <img class="note-dl__img" src="../../img/parts/09_blue_notebook.png" alt="" loading="lazy" width="72" height="72">
+      <img class="note-dl__img" src="../../img/parts/09_blue_notebook.webp" alt="" loading="lazy" width="72" height="72">
       <div class="note-dl__body">
         <p class="note-dl__label">無料で<wbr>ダウンロード</p>
         <p class="note-dl__title">論述の<wbr>型ノート<wbr>(PDF・A4・4ページ)</p>
@@ -198,7 +198,7 @@
         <p class="ron-feedback__why" data-ron-why></p>
         <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">主訴は<wbr>「相談者自身の<wbr>言葉」を<wbr>手が<wbr>かりに<wbr>まとめるのが<wbr>基本。<wbr>自分の<wbr>解釈で<wbr>言い換えすぎないのが<wbr>コツだよ。</p>
@@ -226,7 +226,7 @@
         <p class="ron-feedback__why" data-ron-why></p>
         <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">JCDAの<wbr>論述は<wbr>「相談者の<wbr>心情・<wbr>自己概念の<wbr>揺れ」を<wbr>逐語から<wbr>読み取る<wbr>力が<wbr>問われるよ。<wbr>感情がにじむ<wbr>言葉に<wbr>線を<wbr>引く<wbr>練習を<wbr>しよう。</p>
@@ -255,7 +255,7 @@
         <p class="ron-feedback__why" data-ron-why></p>
         <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">CC協議会の<wbr>論述は<wbr>「相談者が<wbr>語った<wbr>事実を<wbr>根拠に、<wbr>問題の<wbr>背景を<wbr>整理する」力が<wbr>問われるよ。<wbr>〈根拠→見立て<wbr>〉を<wbr>セットで<wbr>書こう。</p>
@@ -283,7 +283,7 @@
         <p class="ron-feedback__why" data-ron-why></p>
         <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">論述でも<wbr>面接でも、<wbr>「感情の<wbr>反映+開かれた<wbr>質問」は<wbr>自己探索を<wbr>深める<wbr>基本の<wbr>型。<wbr>技法の<wbr>名前と<wbr>一緒に<wbr>覚えよう。</p>
@@ -312,7 +312,7 @@
         <p class="ron-feedback__why" data-ron-why></p>
         <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">方針は<wbr>〈今の<wbr>関係<wbr>づくり→自己理解の<wbr>支援→情報提供・選択肢→意思決定支援〉の<wbr>順で<wbr>書くと、<wbr>採点者に<wbr>伝わりやすいよ。</p>
@@ -357,7 +357,7 @@
       <p>「読む→主訴→気持ち→見立て<wbr>→応答→方針→書く」——論述の<wbr>型を<wbr>ひとまわり<wbr>体験できたね。<wbr>この<wbr>型は、<wbr>どちらの<wbr>試験形式でも<wbr>土台に<wbr>なるよ。</p>
       <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
     <p class="chara-guide__bubble">1回で<wbr>覚えなくて<wbr>大丈夫。<wbr>時間を<wbr>おいて、<wbr>もう<wbr>一周すると<wbr>型が<wbr>身体に<wbr>入ってくるよ。</p>
@@ -382,17 +382,17 @@
 
 <div class="picnic-meadow" aria-hidden="true">
   <svg class="picnic-meadow__wave" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0,74 C420,14 1020,14 1440,74 L1440,160 L0,160 Z" fill="#eef4dd"/></svg>
-  <img class="pm pm-flowerl" src="../../img/parts/23_flowers_left_group.png" alt="" loading="lazy">
-  <img class="pm pm-bush" src="../../img/parts/24_bush_lower_left.png" alt="" loading="lazy">
-  <img class="pm pm-sunny" src="../../img/parts/06_sun_character.png" alt="" loading="lazy">
-  <img class="pm pm-moyan" src="../../img/parts/07_moyan_school_hat_crying.png" alt="" loading="lazy">
-  <img class="pm pm-wagon" src="../../img/parts/04_book_wagon.png" alt="" loading="lazy">
-  <img class="pm pm-flowerr" src="../../img/parts/25_flowers_right_group.png" alt="" loading="lazy">
+  <img class="pm pm-flowerl" src="../../img/parts/23_flowers_left_group.webp" alt="" loading="lazy">
+  <img class="pm pm-bush" src="../../img/parts/24_bush_lower_left.webp" alt="" loading="lazy">
+  <img class="pm pm-sunny" src="../../img/parts/06_sun_character.webp" alt="" loading="lazy">
+  <img class="pm pm-moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" loading="lazy">
+  <img class="pm pm-wagon" src="../../img/parts/04_book_wagon.webp" alt="" loading="lazy">
+  <img class="pm pm-flowerr" src="../../img/parts/25_flowers_right_group.webp" alt="" loading="lazy">
 </div>
 <footer class="site-footer" id="sitemap">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <p class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.png" alt="">キャリコン学びピクニック</p>
+      <p class="site-logo__ja"><img class="logo-sun" src="../../img/parts/06_sun_character.webp" alt="" loading="lazy" decoding="async">キャリコン学びピクニック</p>
       <p class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</p>
       <p class="site-footer__desc">過去問の用語の意味から調べられる、キャリアコンサルタント試験の入門サイト</p>
     </div>

@@ -27,10 +27,10 @@
 
   /* --- サイトのイラストパーツを読み込んでカードを描く --- */
   var PARTS = {
-    sun: "/img/parts/06_sun_character.png",
-    cloud: "/img/parts/28_small_cloud_motif.png",
-    flowersL: "/img/parts/23_flowers_left_group.png",
-    flowersR: "/img/parts/25_flowers_right_group.png",
+    sun: "/img/parts/06_sun_character.webp",
+    cloud: "/img/parts/28_small_cloud_motif.webp",
+    flowersL: "/img/parts/23_flowers_left_group.webp",
+    flowersR: "/img/parts/25_flowers_right_group.webp",
   };
   var imgs = {};
   var loaded = null;
