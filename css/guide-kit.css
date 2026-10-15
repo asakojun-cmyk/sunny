@@ -157,3 +157,21 @@ a.gk-circle:hover { transform: translateY(-3px); }
 .gk-talk .mini-say__bubble b { margin-bottom: 6px; }
 .gk-talk { gap: 20px; }
 @media (max-width: 480px) { .gk-talk { gap: 16px; } .gk-talk .mini-say__bubble b { margin-bottom: 4px; } }
+
+/* ---------- チェックリスト: 実際にチェックを入れられる(js/guide-check.js) ---------- */
+.gk-check { list-style: none; margin: 18px 0 8px !important; padding: 0 !important; background: #fff; border-radius: 16px; overflow: hidden; }
+.gk-check li { margin: 0 !important; padding: 0 !important; border-top: 1px solid var(--gk-line); }
+.gk-check li:first-child { border-top: 0; }
+.gk-check li::before { content: none !important; }
+.gk-check label { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 14px; align-items: start; padding: 14px 18px; cursor: pointer; line-height: 1.85; transition: background-color .15s; }
+.gk-check label:hover { background: #fffdf8; }
+.gk-check input { appearance: none; -webkit-appearance: none; width: 24px; height: 24px; margin: .15em 0 0; border: 2px solid #c9d4c3; border-radius: 7px; background: #fff; display: grid; place-items: center; cursor: pointer; transition: background-color .15s, border-color .15s; }
+.gk-check input::after { content: ""; width: 6px; height: 11px; margin-top: -2px; border-right: 2.5px solid #fff; border-bottom: 2.5px solid #fff; transform: rotate(45deg) scale(0); transition: transform .15s; }
+.gk-check input:checked { background: var(--gk-green); border-color: var(--gk-green); }
+.gk-check input:checked::after { transform: rotate(45deg) scale(1); }
+.gk-check input:focus-visible { outline: 3px solid #ee8466; outline-offset: 2px; }
+.gk-check input:checked + span { color: var(--gk-sub); }
+.gk .gk-check__count { margin: 8px 0 1.6em !important; text-align: right; font-size: .8125rem !important; font-weight: 700; color: var(--gk-sub); }
+.gk .gk-check__count.is-done { color: var(--gk-green); }
+@media (max-width: 480px) { .gk-check label { padding: 12px 14px; gap: 12px; } }
+@media (prefers-reduced-motion: reduce) { .gk-check input, .gk-check input::after { transition: none; } }
