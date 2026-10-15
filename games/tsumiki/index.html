@@ -44,6 +44,7 @@
 <link rel="stylesheet" href="../../css/refine.css?v=2026.1001">
 <link rel="stylesheet" href="../../css/yomiyasu.css?v=2026.1014s">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"ミニゲーム","item":"https://carepicnic.com/games/"},{"@type":"ListItem","position":3,"name":"傾聴のつみきブロック"}]}</script>
+<link rel="stylesheet" href="../../css/game-tsumiki.css?v=2026.1015">
 <link rel="stylesheet" href="../../css/tone.css?v=2026.1015s">
 </head>
 <body>
@@ -99,7 +100,7 @@
     
     <p class="section-header__en" aria-hidden="true">MINI GAME 02</p>
     <h1 class="section-header__title">🧱 <wbr>傾聴のつみきブロック</h1>
-    <p class="section-header__lede">カウンセリングは<wbr>「積む順番」が<wbr>命。<wbr>正しい<wbr>順番で<wbr>つみきを<wbr>積んで、<wbr>崩れない<wbr>カウンセリングタワーを<wbr>建てよう。</p>
+    <p class="section-header__lede">カウンセリングの<wbr>理論は<wbr>「積む順番」が<wbr>命。<wbr>4つの<wbr>タワーを、<wbr>土台から<wbr>正しく<wbr>積んでいこう。<wbr>順番を<wbr>まちが<wbr>えると…く<wbr>ずれちゃうよ！</p>
   </header>
     <div class="chara-guide chara-guide--moyan">
     <div class="chara-guide__figure">
@@ -116,30 +117,39 @@
     <p class="chara-guide__bubble">ふふ、<wbr>ほんとに<wbr>そうかな？<wbr> 積んで<wbr>みれば<wbr>わかるよ。<wbr>下から<wbr>順番に<wbr>タップしてね。</p>
   </div>
 
-    <div class="tsumiki" id="tsumiki-game">
-      <div class="tsumiki__stage">
-        <div class="tsumiki__stack" data-stack aria-live="polite"></div>
-        <div class="tsumiki__ground"></div>
+    <div class="tsx" id="tsumiki-game">
+      <ol class="tsx__steps" data-ts-steps></ol>
+      <div class="tsx__head">
+        <p class="tsx__who" data-ts-who></p>
+        <h2 class="tsx__title" data-ts-title></h2>
+        <p class="tsx__ask" data-ts-ask></p>
       </div>
-      <p class="tsumiki__feedback" data-feedback>👇 土台に<wbr>する<wbr>ブロックから<wbr>タップしてね</p>
-      <div class="tsumiki__bank" data-bank>
-        <button type="button" class="tsumiki-block tsumiki-block--giho" data-block="giho">技法<span>質問・感情の反映・要約…</span></button>
-        <button type="button" class="tsumiki-block tsumiki-block--ningen" data-block="ningen">人間観<span>人は自ら成長する力を持つ</span></button>
-        <button type="button" class="tsumiki-block tsumiki-block--taido" data-block="taido">基本的態度<span>受容・共感・自己一致</span></button>
+      <div class="tsx__stage">
+        <div class="tsx__stack" data-ts-stack aria-live="polite"></div>
+        <div class="tsx__ground"></div>
       </div>
-      <div class="tsumiki__clear" data-clear hidden>
-        <p class="tsumiki__clear-title">🎉 崩れない<wbr>タワーが<wbr>建ったね！</p>
-        <dl class="tsumiki__lesson">
-          <div><dt>🟫 土台: 人間観</dt><dd>「人は<wbr>自ら成長する<wbr>力(実現傾向)を<wbr>持つ」と<wbr>いう<wbr>信頼。<wbr>ここが<wbr>無いと、<wbr>どんな<wbr>技法も<wbr>相手を<wbr>操作する<wbr>道具に<wbr>なってしまう。</dd></div>
-          <div><dt>🟨 2段目: 基本的態度</dt><dd>受容(無条件の<wbr>肯定的配慮)・共感的理解・<wbr>自己一致。<wbr>ロジャーズの<wbr>3条件。<wbr>人間観の<wbr>上に<wbr>はじめて<wbr>成り<wbr>立つ。</dd></div>
-          <div><dt>🟦 3段目: 技法</dt><dd>質問技法・<wbr>感情の<wbr>反映・要約など。<wbr>態度と<wbr>いう<wbr>土台の<wbr>上で<wbr>使うから<wbr>効果が<wbr>出る。<wbr>順番を<wbr>逆に<wbr>すると<wbr>「技法だけの<wbr>冷たい<wbr>面接」に。</dd></div>
-        </dl>
-        <p class="tsumiki__exam">✏️ 試験では<wbr>「技法が<wbr>土台」と<wbr>する<wbr>記述は<wbr>×。<wbr><strong>人間観・<wbr>態度が<wbr>先、<wbr>技法が<wbr>あと</strong><wbr>だよ。</p>
-        <div class="match-game__clear-actions">
-          <button type="button" class="button button--primary" data-retry>もう一回つむ</button>
-          <a class="button button--secondary" href="../../terms/keicho/">傾聴の<wbr>ページで<wbr>おさらい</a>
-        </div>
+      <p class="tsx__msg" data-ts-msg aria-live="polite"></p>
+      <div class="tsx__bank" data-ts-bank></div>
+      <div class="tsx__clear" data-ts-clear hidden>
+        <p class="tsx__clear-title" data-ts-clear-title></p>
+        <p class="tsx__clear-text" data-ts-clear-text></p>
+        <p class="tsx__point"><b>✏️ 試験のポイント</b><span data-ts-point></span></p>
+        <p class="tsx__clear-actions">
+          <button type="button" class="button button--primary" data-ts-next></button>
+          <a class="button button--secondary" data-ts-link href="#"></a>
+        </p>
       </div>
+      <div class="tsx__goal" data-ts-goal hidden>
+        <p class="tsx__clear-title">🎉 4つの<wbr>タワーが、<wbr>ぜんぶ<wbr>建ったね！</p>
+        <p class="tsx__goal-score" data-ts-final></p>
+        <p class="tsx__best" data-ts-best></p>
+        <ul class="tsx__recap" data-ts-recap></ul>
+        <p class="tsx__clear-actions">
+          <button type="button" class="button button--primary" data-ts-retry>もう一回つむ</button>
+          <a class="button button--secondary" href="../../games/catchball/">ことばの<wbr>キャッチボールへ</a>
+        </p>
+      </div>
+      <script type="application/json" id="tsumiki-data">[{"title": "傾聴のタワー", "who": "カウンセリングの基本", "ask": "カウンセリングを<wbr>支える<wbr>3つを、<wbr>土台から<wbr>積もう。", "blocks": [["人間観", "人は自ら成長する力を持つ"], ["基本的態度", "受容・共感的理解・自己一致"], ["技法", "質問・感情の反映・要約…"]], "decoy": null, "clear": "土台は<wbr>「人は<wbr>自ら成長する<wbr>力(実現傾向)を<wbr>持つ」と<wbr>いう<wbr>人間観。<wbr>その<wbr>上に、<wbr>受容・<wbr>共感的理解・<wbr>自己一致の<wbr>態度。<wbr>技法は、<wbr>態度と<wbr>いう<wbr>土台の<wbr>上で<wbr>使うから<wbr>効果が<wbr>出ます。", "point": "試験では<wbr>「技法が<wbr>土台」と<wbr>する<wbr>記述は<wbr>×。<wbr>人間観・<wbr>態度が<wbr>先、<wbr>技法が<wbr>あとです。", "link": ["../../terms/keicho/", "傾聴の<wbr>ページで<wbr>おさらい"]}, {"title": "アイビイの技法ピラミッド", "who": "マイクロカウンセリング", "ask": "マイクロカウンセリングの<wbr>技法を、<wbr>土台から<wbr>積もう。<wbr>1つだけ、<wbr>ちがう<wbr>理論の<wbr>ブロックが<wbr>まざっているよ。", "blocks": [["かかわり行動", "視線・身体言語・声の調子・言語的追跡"], ["基本的傾聴の連鎖", "質問・はげまし・言い換え・感情の反映・要約"], ["積極技法", "指示・自己開示・フィードバック・対決など"], ["技法の統合", "ピラミッドの頂上"]], "decoy": ["手ほどき", "援助の最後の段階", "「手ほどき」は、<wbr>カーカフの<wbr>ヘルピングの<wbr>段階だよ。"], "clear": "アイビイの<wbr>技法の<wbr>階層表。<wbr>土台は<wbr>「かかわり<wbr>行動」、<wbr>その<wbr>上に<wbr>「基本的傾聴の<wbr>連鎖」、<wbr>さらに<wbr>「積極技法」、<wbr>頂上で<wbr>「技法の<wbr>統合」。", "point": "土台を<wbr>「積極技法」と<wbr>する<wbr>ひっかけに<wbr>注意。<wbr>カーカフの<wbr>ヘルピング(4段階)との<wbr>混同も<wbr>定番です。", "link": ["../../terms/microcounseling/", "マイクロカウンセリングの<wbr>ページで<wbr>おさらい"]}, {"title": "カーカフのヘルピングの階段", "who": "ヘルピング", "ask": "援助が<wbr>進む順に、<wbr>下から<wbr>積もう。<wbr>1つだけ、<wbr>ちがう<wbr>理論の<wbr>ブロックが<wbr>まざっているよ。", "blocks": [["かかわり", "まず関わる"], ["応答", "応えて返す"], ["意識化", "自分で気づく"], ["手ほどき", "行動を手伝う"]], "decoy": ["リレーションをつくる", "面接のはじめに", "「リレーションを<wbr>つくる」は、<wbr>國分康孝の<wbr>コーヒーカップ・モデルの<wbr>段階だよ。"], "clear": "カーカフの<wbr>ヘルピングは<wbr>「かかわり→応答→意識化→手ほどき」の<wbr>4段階。<wbr>援助が<wbr>どう<wbr>進んでいくかの<wbr>順番です。", "point": "アイビイ=技法の<wbr>階層表(ピラミッド)、<wbr>カーカフ=援助の<wbr>進行段階。<wbr>作った<wbr>人と<wbr>セットで<wbr>区別します。", "link": ["../../theorists/carkhuff/", "カーカフの<wbr>ページで<wbr>おさらい"]}, {"title": "國分康孝のコーヒーカップ", "who": "コーヒーカップ・モデル", "ask": "面接の<wbr>流れの<wbr>順に、<wbr>下から<wbr>積もう。<wbr>1つだけ、<wbr>ちがう<wbr>理論の<wbr>ブロックが<wbr>まざっているよ。", "blocks": [["リレーションをつくる", "関係構築"], ["問題の核心をつかむ", "問題把握"], ["問題を解決する", "処理"]], "decoy": ["積極技法", "指示・自己開示など", "「積極技法」は、<wbr>アイビイの<wbr>マイクロカウンセリングの<wbr>技法だよ。"], "clear": "國分康孝の<wbr>コーヒーカップ・モデル。<wbr>面接の<wbr>過程を<wbr>「①リレーションを<wbr>つくる<wbr>→②問題の<wbr>核心を<wbr>つかむ<wbr>→③問題を<wbr>解決する」の<wbr>3段階でとらえ、<wbr>コーヒーカップの<wbr>断面図にたとえました。", "point": "相談の<wbr>初期に<wbr>行うのは、<wbr>リレーションづくり。<wbr>カップの<wbr>絵の<wbr>説明が<wbr>出たら<wbr>國分康孝。<wbr>アイビイとの<wbr>人名の<wbr>入れかえが<wbr>定番です。", "link": ["../../terms/coffee-cup-model/", "コーヒーカップ・モデルの<wbr>ページで<wbr>おさらい"]}]</script>
     </div>
   </div>
 </section>
@@ -149,7 +159,7 @@
   </nav>
 </div>
 
-<script src="../../js/game-tsumiki.js" defer></script>
+<script src="../../js/game-tsumiki.js?v=2026.1015" defer></script>
 </main>
 
 <div class="picnic-meadow" aria-hidden="true">

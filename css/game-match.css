@@ -1,0 +1,21 @@
+/* 理論家カードあわせ(2026-10-15 追加: ペアの色・連続正解・タイム・ふりかえり) */
+.mg-time { font-variant-numeric: tabular-nums; color: var(--color-text-subtle); }
+.mg-streak { color: #c0582f; font-weight: 700; }
+.mg-streak.is-pop { animation: mg-pop .4s ease; }
+@keyframes mg-pop { 0% { transform: scale(.6); } 60% { transform: scale(1.25); } 100% { transform: scale(1); } }
+.match-card[data-pair] { position: relative; padding-right: 38px; }
+.match-card[data-pair]::after { content: attr(data-pair); position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 700; color: #fff; background: var(--mg-c, #8fae5d); }
+.match-card[data-pair="1"] { --mg-c: #e08a6f; }
+.match-card[data-pair="2"] { --mg-c: #d9a73e; }
+.match-card[data-pair="3"] { --mg-c: #7fa25a; }
+.match-card[data-pair="4"] { --mg-c: #5f97b0; }
+.match-card[data-pair="5"] { --mg-c: #8b7bb8; }
+.match-card[data-pair="6"] { --mg-c: #c7779a; }
+
+.mg-best { font-weight: 700; color: #5f7a3a; text-align: center; margin: 4px 0 10px; }
+.mg-review { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; }
+.mg-review li { text-align: left; margin: 0; background: #fff; border-radius: 12px; padding: 8px 12px; font-size: 14px; line-height: 1.7; }
+.mg-review li::before, .mg-review li::marker { content: none; }
+.mg-review li a { font-weight: 700; }
+.mg-review li.is-missed { background: #fbefe9; }
+@media (prefers-reduced-motion: reduce) { .mg-streak.is-pop { animation: none; } }

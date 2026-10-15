@@ -57,6 +57,7 @@
 .note-dl .note-dl__body .note-dl__note{margin-top:12px!important;font-size:.8125rem!important;line-height:1.75!important;color:#6f6b63}
 @media(max-width:560px){.note-dl{grid-template-columns:1fr;gap:10px;padding:20px 18px}.note-dl__img{width:56px;height:56px}}
 </style>
+<link rel="stylesheet" href="../../css/game-ronjutsu.css?v=2026.1015">
 <link rel="stylesheet" href="../../css/tone.css?v=2026.1015s">
 </head>
 <body>
@@ -174,7 +175,7 @@
     <p class="ron-case__note">CC=キャリアコンサルタント / CL=相談者(クライエント)</p>
   </section>
 
-  <div class="ron-progress" data-ron-progress>すすみ具合: <wbr><b data-ron-now>1</b><wbr> / 6 マス</div>
+  <div class="rb" data-rb><ol class="rb__path" aria-label="すごろくの盤"><li class="rb__sq rb__sq--start"><span class="rb__btn"><span class="rb__no">🚩</span><span class="rb__name">START</span></span></li><li class="rb__sq" data-rb-sq="0"><button type="button" class="rb__btn" disabled><span class="rb__no">1</span><span class="rb__name">主訴</span></button></li><li class="rb__sq" data-rb-sq="1"><button type="button" class="rb__btn" disabled><span class="rb__no">2</span><span class="rb__name">気持ち</span></button></li><li class="rb__sq" data-rb-sq="2"><button type="button" class="rb__btn" disabled><span class="rb__no">3</span><span class="rb__name">見立て</span></button></li><li class="rb__sq" data-rb-sq="3"><button type="button" class="rb__btn" disabled><span class="rb__no">4</span><span class="rb__name">ひとこと</span></button></li><li class="rb__sq" data-rb-sq="4"><button type="button" class="rb__btn" disabled><span class="rb__no">5</span><span class="rb__name">方針</span></button></li><li class="rb__sq" data-rb-sq="5"><button type="button" class="rb__btn" disabled><span class="rb__no">6</span><span class="rb__name">書く</span></button></li><li class="rb__sq rb__sq--goal" data-rb-goal><span class="rb__btn"><span class="rb__no">🏁</span><span class="rb__name">GOAL</span></span></li></ol><p class="rb__foot"><span class="rb__now">いまは <b data-ron-now>1</b> / 6 マス目</span><button type="button" class="rb__case" data-rb-case aria-expanded="false">📄 事例を見る</button></p><div class="rb__sheet" data-rb-sheet hidden></div></div>
 
   <div class="ron-board">
 
@@ -376,7 +377,7 @@
   </nav>
 </div>
 
-<script src="../../js/ronjutsu.js?v=v2026.0728.1616" defer></script>
+<script src="../../js/ronjutsu.js?v=2026.1015" defer></script>
 </main>
 
 <div class="picnic-meadow" aria-hidden="true">

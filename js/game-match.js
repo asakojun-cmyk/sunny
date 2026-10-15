@@ -20,10 +20,29 @@
   var clearEl = game.querySelector("[data-match-clear]");
   var clearTextEl = game.querySelector("[data-match-clear-text]");
 
+  var timeEl = game.querySelector("[data-match-time]");
+  var streakEl = game.querySelector("[data-match-streak]");
+  var bestEl = game.querySelector("[data-match-best]");
+  var reviewEl = game.querySelector("[data-match-review]");
+  var BEST_KEY = "carepicnic-match-best";
+
   var selected = { theorist: null, theory: null };
   var matched = 0;
   var miss = 0;
   var locked = false;
+  var streak = 0;
+  var startAt = 0;
+  var timer = 0;
+  var round = [];
+  var missed = {};
+
+  function nameOf(slug) { return bySlug(theoristCards, slug).textContent.trim(); }
+  function theoryOf(slug) { return bySlug(theoryCards, slug).querySelector(".match-card__theory").textContent.trim(); }
+  function clock(ms) {
+    var t = Math.floor(ms / 1000);
+    return Math.floor(t / 60) + ":" + ("0" + (t % 60)).slice(-2);
+  }
+  function tick() { timeEl.textContent = "⏱ " + clock(Date.now() - startAt); }
 
   var CHEERS = [
     "そのとおり！",
@@ -64,16 +83,24 @@
     selected.theory = null;
     clearEl.hidden = true;
     feedbackEl.textContent = "";
+    streak = 0;
+    missed = {};
+    streakEl.hidden = true;
+    clearInterval(timer);
+    startAt = 0;
+    timeEl.textContent = "⏱ 0:00";
 
     var slugs = shuffle(
       theoristCards.map(function (c) {
         return c.getAttribute("data-slug");
       })
     ).slice(0, PAIRS_PER_ROUND);
+    round = slugs.slice();
 
     theoristCards.concat(theoryCards).forEach(function (c) {
       c.hidden = true;
       c.classList.remove("is-selected", "is-matched", "is-wrong");
+      c.removeAttribute("data-pair");
       c.disabled = false;
     });
 
@@ -99,6 +126,7 @@
 
   function select(kind, card) {
     if (locked || card.classList.contains("is-matched")) return;
+    if (!startAt) { startAt = Date.now(); timer = setInterval(tick, 500); }
     if (selected[kind] === card) {
       card.classList.remove("is-selected");
       selected[kind] = null;
@@ -122,8 +150,15 @@
       b.classList.add("is-matched");
       a.disabled = true;
       b.disabled = true;
+      // そろったペアは同じ色の番号でつなぐ
+      a.setAttribute("data-pair", matched + 1);
+      b.setAttribute("data-pair", matched + 1);
       matched++;
-      feedbackEl.textContent = "☀️ " + CHEERS[Math.floor(Math.random() * CHEERS.length)];
+      streak++;
+      streakEl.hidden = streak < 2;
+      streakEl.textContent = "🔥 " + streak + "連続";
+      streakEl.classList.remove("is-pop"); void streakEl.offsetWidth; streakEl.classList.add("is-pop");
+      feedbackEl.textContent = "☀️ " + CHEERS[Math.floor(Math.random() * CHEERS.length)] + " " + nameOf(a.getAttribute("data-slug")) + " = " + theoryOf(a.getAttribute("data-slug"));
       selected.theorist = null;
       selected.theory = null;
       locked = false;
@@ -133,7 +168,13 @@
       a.classList.add("is-wrong");
       b.classList.add("is-wrong");
       miss++;
-      feedbackEl.textContent = "🌥️ " + OOPS[Math.floor(Math.random() * OOPS.length)];
+      streak = 0;
+      streakEl.hidden = true;
+      missed[a.getAttribute("data-slug")] = true;
+      missed[b.getAttribute("data-slug")] = true;
+      // どこがちがったかを教える(その理論はだれのものか)
+      var owner = b.getAttribute("data-slug");
+      feedbackEl.textContent = "🌥️ " + OOPS[Math.floor(Math.random() * OOPS.length)] + " 「" + theoryOf(owner) + "」は" + (round.indexOf(owner) >= 0 ? "、" + nameOf(owner) + "の理論だよ。" : "べつの人の理論だよ。");
       updateStatus();
       setTimeout(function () {
         a.classList.remove("is-selected", "is-wrong");
@@ -154,7 +195,30 @@
     } else {
       text = "ミス" + miss + "回。だいじょうぶ、くり返すほど強くなるよ。もう一回いってみよう！";
     }
-    clearTextEl.textContent = "☀️ " + text;
+    clearInterval(timer);
+    var ms = Date.now() - startAt;
+    clearTextEl.textContent = "☀️ " + text + "(タイム " + clock(ms) + ")";
+    var best = null;
+    try { var v = localStorage.getItem(BEST_KEY); best = v ? JSON.parse(v) : null; } catch (e) { /* 保存できない環境 */ }
+    var mine = { miss: miss, ms: ms };
+    var better = !best || miss < best.miss || (miss === best.miss && ms < best.ms);
+    if (better) {
+      try { localStorage.setItem(BEST_KEY, JSON.stringify(mine)); } catch (e) { /* 保存できない環境 */ }
+      bestEl.textContent = best ? "🏅 自己ベスト更新！(前回まで: ミス" + best.miss + "回・" + clock(best.ms) + ")" : "🏅 きょうの記録を、自己ベストとして残したよ。";
+    } else {
+      bestEl.textContent = "自己ベスト: ミス" + best.miss + "回・" + clock(best.ms);
+    }
+    reviewEl.innerHTML = "";
+    round.forEach(function (slug) {
+      var li = document.createElement("li");
+      if (missed[slug]) li.className = "is-missed";
+      var a = document.createElement("a");
+      a.href = "../../theorists/" + slug + "/";
+      a.textContent = nameOf(slug);
+      li.appendChild(a);
+      li.appendChild(document.createTextNode(" = " + theoryOf(slug) + (missed[slug] ? "  ← 見直そう" : "")));
+      reviewEl.appendChild(li);
+    });
     clearEl.hidden = false;
     clearEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }

@@ -1,0 +1,39 @@
+/* 論述ボードゲーム(2026-10-15 すごろくの盤を追加) */
+.rb { position: sticky; top: 0; z-index: 25; max-width: 720px; margin: 22px auto 18px; background: #fbf8f1; border-radius: 20px; padding: 12px 12px 8px; }
+.rb__path { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-start; position: relative; }
+.rb__path::before { content: ""; position: absolute; left: 6%; right: 6%; top: 19px; height: 4px; border-radius: 2px; background: repeating-linear-gradient(90deg, #d9cfbd 0 8px, transparent 8px 14px); }
+.rb__sq { flex: 1 1 0; min-width: 0; margin: 0; padding: 0; position: relative; display: flex; justify-content: center; }
+.rb__sq::before, .rb__sq::marker { content: none; }
+.rb__btn { display: flex; flex-direction: column; align-items: center; gap: 3px; background: none; border: 0; padding: 0; font-family: inherit; color: var(--color-text-subtle); cursor: default; }
+.rb__btn:not(:disabled) { cursor: pointer; }
+.rb__no { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: #fff; font-size: 15px; font-weight: 700; position: relative; transition: background .2s ease, transform .2s ease; }
+.rb__name { font-size: 11px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.rb__sq--start .rb__no, .rb__sq--goal .rb__no { background: transparent; font-size: 20px; }
+.rb__sq.is-done .rb__no { background: #c9dcae; color: #34461f; }
+.rb__sq.is-done .rb__no::after { content: "✓"; position: absolute; right: -4px; top: -6px; width: 18px; height: 18px; border-radius: 50%; background: #5f7a3a; color: #fff; font-size: 11px; display: grid; place-items: center; }
+.rb__sq.is-now .rb__no { background: #33506b; color: #fff; transform: translateY(-2px); }
+.rb__sq.is-now .rb__name { color: #33506b; }
+/* こま(モヤン)が、いまのマスの上に乗る */
+.rb__sq.is-now .rb__no::before { content: ""; position: absolute; left: 50%; top: -24px; width: 26px; height: 26px; margin-left: -13px; background: url(../img/parts/07_moyan_school_hat_crying.png) center / contain no-repeat; animation: rb-hop .6s ease; }
+@keyframes rb-hop { 0% { transform: translateY(-14px); opacity: 0; } 60% { transform: translateY(2px); opacity: 1; } 100% { transform: none; } }
+.rb__sq--goal.is-now .rb__no { background: #f8e7a6; }
+.rb { padding-top: 26px; }
+.rb__foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 8px 4px 0; font-size: 13px; }
+.rb__now b { color: #e9785f; }
+.rb__case { font-family: inherit; font-size: 13px; font-weight: 700; color: #33506b; background: #fff; border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.rb__case:hover { background: #eaf2f3; }
+.rb__sheet { max-height: 52vh; overflow-y: auto; overscroll-behavior: contain; margin-top: 10px; background: #fff; border-radius: 14px; padding: 12px; }
+.rb__sheet[hidden] { display: none; }
+.rb__case-copy { margin: 0; }
+
+/* まだのマスは出さない(前は、ぼかして並べていた) */
+.ron-station.is-locked { display: none; }
+
+@media (max-width: 480px) {
+  .rb { padding: 24px 6px 8px; }
+  .rb__no { width: 32px; height: 32px; border-radius: 10px; font-size: 13px; }
+  .rb__path::before { top: 15px; }
+  .rb__name { font-size: 9.5px; }
+  .rb__sq.is-now .rb__no::before { width: 22px; height: 22px; margin-left: -11px; top: -21px; }
+}
+@media (prefers-reduced-motion: reduce) { .rb__sq.is-now .rb__no::before { animation: none; } }

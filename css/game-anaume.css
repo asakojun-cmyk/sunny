@@ -1,0 +1,47 @@
+/* 理論の図あなうめ(2026-10-15 図の形の上にはめる形に作り直し) */
+.az { --az-ink: #33506b; max-width: 680px; margin: 0 auto; }
+.az [hidden] { display: none !important; }
+.az-board { -webkit-user-select: none; user-select: none; background: var(--color-surface); border-radius: 22px; padding: 18px 16px; margin-top: 12px; }
+.az-board__intro { margin: 0 0 10px; font-size: 15px; font-weight: 700; text-align: center; }
+
+/* 図 */
+.az-fig { position: relative; width: 100%; max-width: 520px; margin: 0 auto; }
+.az-fig__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.az-slot { position: absolute; transform: translate(-50%, -50%); min-height: 34px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding: 4px 8px; border: 0; border-radius: 12px; background: rgba(255, 255, 255, .92); box-shadow: 0 0 0 2px var(--az-ink) inset; color: var(--az-ink); font-family: inherit; cursor: pointer; transition: background .15s ease, transform .15s ease; }
+.az-slot__q { font-size: 14px; font-weight: 700; line-height: 1.3; }
+.az-slot__note { font-size: 10px; line-height: 1.35; color: var(--color-text-subtle); }
+.az-slot.is-picked, .az.is-picking .az-slot:not(.is-filled), .az-board.is-picking .az-slot:not(.is-filled) { background: #eaf2f3; }
+.az-slot.is-over { background: #f8e7a6; transform: translate(-50%, -50%) scale(1.06); }
+.az-slot.is-filled { background: #fff; box-shadow: 0 0 0 2px #8fae5d inset; cursor: default; animation: az-pop .35s ease; }
+.az-slot.is-filled .az-slot__q { color: #3d5a1e; font-size: 13px; }
+.az-slot.is-wrong { animation: az-shake .4s ease; }
+@keyframes az-shake { 0%, 100% { transform: translate(-50%, -50%); } 25% { transform: translate(calc(-50% - 5px), -50%); } 75% { transform: translate(calc(-50% + 5px), -50%); } }
+@keyframes az-pop { 0% { transform: translate(-50%, -50%) scale(.85); } 100% { transform: translate(-50%, -50%) scale(1); } }
+
+/* 言葉 */
+.az-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 16px 0 6px; }
+.az-chip { font-family: inherit; font-size: 14px; font-weight: 700; color: var(--color-text); background: #fff; border: 0; border-radius: 999px; padding: 9px 16px; box-shadow: 0 0 0 1.5px #e3ddd0 inset; cursor: grab; touch-action: pan-x; -webkit-user-select: none; user-select: none; transition: background .15s ease, opacity .2s ease; }
+.az-chip:hover:not(:disabled) { background: #eaf2f3; }
+.az-chip.is-picked { background: var(--az-ink); color: #fff; box-shadow: none; }
+.az-chip.is-used { opacity: .25; cursor: default; text-decoration: line-through; }
+.az-chip.is-wrong { animation: card-shake .4s ease; }
+.az-chip.is-dragging { opacity: .3; }
+.az-ghost { position: fixed; left: 0; top: 0; z-index: 1000; pointer-events: none; box-shadow: 0 10px 24px rgba(39, 39, 34, .18); }
+
+.az-msg { min-height: 1.8em; margin: 6px 0 0; font-size: 14px; font-weight: 700; text-align: center; line-height: 1.7; }
+.az-usage { margin-top: 12px; background: #fdf9dc; border-radius: 16px; padding: 12px 16px; animation: az-in .3s ease; }
+.az-usage p { margin: 0; font-size: 14px; line-height: 1.9; }
+.az-usage .az-usage__title { font-weight: 700; font-size: 15px; }
+.az-all { margin: 14px 0 0; background: #eef4dd; border-radius: 16px; padding: 12px 16px; font-size: 14px; font-weight: 700; text-align: center; line-height: 1.8; }
+@keyframes az-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 480px) {
+  .az-board { padding: 16px 8px; }
+  .az-slot { padding: 3px 5px; min-height: 30px; }
+  .az-slot__q { font-size: 12px; }
+  .az-slot.is-filled .az-slot__q { font-size: 11px; }
+  .az-slot__note { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .az-slot.is-filled, .az-usage { animation: none; }
+}

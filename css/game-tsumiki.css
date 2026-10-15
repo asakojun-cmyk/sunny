@@ -1,0 +1,65 @@
+/* 傾聴のつみきブロック(2026-10-15 4つのタワーに作り直し) */
+.tsx { --ts-ink: #33506b; --ts-cream: #fbf8f1; max-width: 640px; margin: 8px auto 0; scroll-margin-top: 120px; }
+.tsx [hidden] { display: none !important; }
+.tsx__steps { list-style: none; display: flex; justify-content: center; gap: 10px; margin: 0 0 14px; padding: 0; }
+.tsx__steps li { margin: 0; padding: 0; }
+.tsx__steps li::before, .tsx__steps li::marker { content: none; }
+.tsx__steps span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--ts-cream); color: var(--color-text-subtle); font-size: 14px; font-weight: 700; }
+.tsx__steps .is-now span { background: var(--ts-ink); color: #fff; }
+.tsx__steps .is-done span { background: #eef4dd; color: #5f7a3a; }
+.tsx__head { text-align: center; }
+.tsx__who { margin: 0; font-size: 12px; font-weight: 700; color: var(--color-text-subtle); letter-spacing: .06em; }
+.tsx .tsx__title { margin: 2px 0 6px; padding: 0; border: 0; font-size: 20px; color: var(--ts-ink); }
+.tsx__ask { margin: 0 auto 10px; font-size: 14px; line-height: 1.8; max-width: 30em; }
+
+/* タワー */
+.tsx__stage { background: linear-gradient(#eef4f6, #f7f3ea); border-radius: 22px; padding: 22px 16px 0; overflow: hidden; }
+.tsx__stack { display: flex; flex-direction: column-reverse; align-items: center; gap: 4px; min-height: calc(var(--n, 3) * 62px + 8px); transform-origin: 50% 100%; }
+.tsx__stack.is-wobble { animation: ts-wobble .7s ease-in-out; }
+.tsx__stack.is-done .tsx-piece { animation: ts-shine .8s ease; }
+.tsx__ground { height: 14px; margin: 0 -16px; background: #c9d8a8; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+@keyframes ts-wobble { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-4deg); } 45% { transform: rotate(4deg); } 70% { transform: rotate(-3deg); } }
+@keyframes ts-shine { 50% { filter: brightness(1.12); transform: scale(1.03); } }
+
+.tsx-piece { min-height: 58px; border-radius: 12px; padding: 7px 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; animation: ts-drop .35s cubic-bezier(.3, 1.4, .6, 1); }
+.tsx-piece b { font-size: 15px; line-height: 1.35; }
+.tsx-piece span { font-size: 11px; line-height: 1.4; opacity: .8; }
+.tsx-piece--0 { background: #e9c9a4; color: #4e3a24; }
+.tsx-piece--1 { background: #f3dc8a; color: #4e4320; }
+.tsx-piece--2 { background: #b9d3df; color: #22404f; }
+.tsx-piece--3 { background: #c9dcae; color: #34461f; }
+.tsx-piece.is-ghost { background: rgba(255, 255, 255, .55); color: #b9c4cc; animation: none; }
+.tsx-piece.is-wrong { box-shadow: 0 0 0 3px #e08a6f inset; }
+.tsx-piece.is-fall { animation: ts-fall .9s ease-in forwards; }
+@keyframes ts-drop { from { transform: translateY(-40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes ts-fall { to { transform: translate(var(--fx, 0), 340px) rotate(var(--fr, 0)); opacity: 0; } }
+
+.tsx__msg { min-height: 3.4em; margin: 12px 0 8px; font-size: 14px; font-weight: 700; line-height: 1.75; text-align: center; }
+
+/* ブロック置き場 */
+.tsx__bank { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.tsx-block { font-family: inherit; color: var(--color-text); background: #fff; border: 0; border-radius: 14px; padding: 12px 10px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; text-align: center; transition: transform .15s ease, background .15s ease, opacity .2s ease; box-shadow: 0 0 0 1.5px #e3ddd0 inset; }
+.tsx-block:hover:not(:disabled) { background: #eaf2f3; transform: translateY(-2px); }
+.tsx-block b { font-size: 15px; line-height: 1.4; }
+.tsx-block span { font-size: 11px; line-height: 1.45; color: var(--color-text-subtle); }
+.tsx-block.is-used { opacity: .25; cursor: default; }
+.tsx-block.is-out { opacity: .35; cursor: default; text-decoration: line-through; background: #f3ede2; }
+
+/* クリア */
+.tsx__clear, .tsx__goal { margin-top: 16px; background: #fdf9dc; border-radius: 20px; padding: 18px; animation: ts-drop .35s ease; }
+.tsx__clear-title { margin: 0 0 8px; font-size: 17px; font-weight: 700; text-align: center; }
+.tsx__clear-text { margin: 0 0 10px; font-size: 14px; line-height: 1.9; }
+.tsx__point { margin: 0; background: #fff; border-radius: 14px; padding: 10px 14px; font-size: 14px; line-height: 1.85; }
+.tsx__point b { display: block; color: var(--ts-ink); font-size: 13px; }
+.tsx__clear-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 14px 0 0; }
+.tsx__goal-score { margin: 0 0 4px; text-align: center; font-weight: 700; color: var(--ts-ink); }
+.tsx__best { margin: 0 0 10px; text-align: center; font-size: 14px; font-weight: 700; color: #5f7a3a; }
+.tsx__recap { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.tsx__recap li { margin: 0; background: #fff; border-radius: 12px; padding: 8px 12px; font-size: 13px; line-height: 1.7; }
+.tsx__recap li::before, .tsx__recap li::marker { content: none; }
+.tsx__recap b { display: block; color: var(--ts-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tsx-piece, .tsx__stack.is-wobble, .tsx__stack.is-done .tsx-piece, .tsx__clear, .tsx__goal { animation: none; }
+  .tsx-piece.is-fall { animation: none; opacity: 0; }
+}

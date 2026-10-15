@@ -44,6 +44,7 @@
 <link rel="stylesheet" href="../../css/refine.css?v=2026.1001">
 <link rel="stylesheet" href="../../css/yomiyasu.css?v=2026.1014s">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"3分ミニゲーム","item":"https://carepicnic.com/games/"},{"@type":"ListItem","position":3,"name":"ことばのキャッチボール"}]}</script>
+<link rel="stylesheet" href="../../css/game-catchball.css?v=2026.1015">
 <link rel="stylesheet" href="../../css/tone.css?v=2026.1015s">
 </head>
 <body>
@@ -98,7 +99,7 @@
     
     <p class="section-header__en" aria-hidden="true">CATCH BALL</p>
     <h1 class="section-header__title">ことばのキャッチボール</h1>
-    <p class="section-header__lede">相談者役の<wbr>モヤンの<wbr>ことばに、<wbr>どう返す？<wbr>3つの<wbr>選択肢から<wbr>選んで、<wbr>傾聴の<wbr>応答技法を<wbr>身に<wbr>つける<wbr>練習ゲームです。<wbr>面接(ロールプレイ)対策の<wbr>素振りにも<wbr>どうぞ。</p>
+    <p class="section-header__lede">相談者役の<wbr>モヤンと、<wbr>チャットで<wbr>8回やりとりします。<wbr>上手に<wbr>受けとめると、<wbr>モヤンの<wbr>こころの<wbr>天気が<wbr>晴れていくよ。<wbr>面接(ロールプレイ)対策の<wbr>素振りにも<wbr>どうぞ。</p>
   </header>
   <div class="chara-guide chara-guide--sunny">
     <div class="chara-guide__figure">
@@ -115,234 +116,42 @@
     <p class="chara-guide__bubble">き、<wbr>きんちょうするけど…<wbr>話してみるね。</p>
   </div>
 
-  <div class="cb-score" data-cb-progress>ナイスキャッチ: <wbr><b data-cb-score>0</b><wbr> / <wbr><span data-cb-done>0</span><wbr>球</div>
-
-  <div class="cb-court">
-
-    <section class="cb-rally" data-cb-rally="0">
-      <p class="cb-rally__no">1球目 / 8球</p>
-      <p class="cb-scene">モヤンが、<wbr>ぽつり<wbr>ぽつりと<wbr>話し始めたよ。</p>
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
+  <div class="cbx" id="cb-game">
+    <div class="cbx__bar">
+      <span data-cb-no>1球目 / 8球</span>
+      <span class="cbx__weather" title="モヤンのこころの天気"><span class="cbx__weather-label">こころの天気</span><b data-cb-weather>☁️</b></span>
+      <span>ナイスキャッチ <b data-cb-score>0</b></span>
     </div>
-    <p class="chara-guide__bubble">最近、<wbr>仕事に<wbr>行くのが、<wbr>ちょっと<wbr>しんどくて…。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="感情の反映" data-why="相手の気持ちの言葉をそのまま受けとめて返す「感情の反映」。安心して次を話しやすくなるよ。">A. しんどい気持ちが続いているんだね。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="早すぎるアドバイス" data-why="気持ちを受けとめる前のアドバイスは、「わかってもらえなかった」と感じさせやすいんだ。">B. しんどいのは睡眠不足じゃない？早く寝たら？</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="閉ざされた質問(タイミングが早い)" data-why="事実確認の質問が先に来ると、気持ちの話が止まってしまうことがあるよ。">C. 会社は週何日出勤なの？</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/kanjo-no-hanei/">「感情の<wbr>反映」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="1">
-      <p class="cb-rally__no">2球目 / 8球</p>
-      
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
+    <div class="cbx__chat" data-cb-chat></div>
+    <div class="cbx__answer" data-cb-answer hidden>
+      <p class="cbx__prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
+      <div class="cbx__choices" data-cb-choices></div>
     </div>
-    <p class="chara-guide__bubble">上司に<wbr>相談してみたんだけど、<wbr>結局、<wbr>何も<wbr>変わらなかったんだ。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="言い換え(内容の再陳述)" data-why="相手の話した内容を自分の言葉で返す「言い換え」。ちゃんと聴いているよ、が伝わるよ。">A. せっかく勇気を出して相談したのに、変わらなかったんだね。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="自分の話へのすり替え" data-why="共感のつもりでも、主役が聴き手に移ってしまうと相手の話が続かなくなるんだ。">B. そういう上司、多いよね。うちの上司もさ…</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="評価・批判" data-why="原因探しより先に、がっかりした気持ちを受けとめよう。批判は関係づくりの妨げになるよ。">C. 相談の仕方が悪かったんじゃない？</button>
+    <div class="cbx__coach" data-cb-coach aria-live="polite" hidden>
+      <img class="cbx__coach-face" src="../../img/parts/06_sun_character.png" width="44" height="44" alt="">
+      <div class="cbx__coach-body">
+        <p class="cbx__verdict" data-cb-verdict></p>
+        <p class="cbx__giho" data-cb-giho></p>
+        <p class="cbx__why" data-cb-why></p>
+        <p class="cbx__link"><a data-cb-link href="#"></a></p>
+        <p class="cbx__actions"><button type="button" class="button button--primary" data-cb-next></button></p>
       </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/iikae-yoyaku/">「言い換え・要約」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="2">
-      <p class="cb-rally__no">3球目 / 8球</p>
-      
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
     </div>
-    <p class="chara-guide__bubble">本当は<wbr>ね…、<wbr>転職も、<wbr>ちょっとだけ<wbr>考えてたりして。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="開かれた質問" data-why="「はい/いいえ」で終わらない「開かれた質問」。相手が自由に話を広げられるよ。">A. 転職かあ。どんなことを思って、考えるようになったの？</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="閉ざされた質問" data-why="まだ気持ちが揺れている段階で二択を迫ると、話が閉じてしまうよ。">B. 転職するの？しないの？</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="説得・価値観の押しつけ" data-why="聴き手の価値観で方向を決めてしまうと、相談者の自己決定を奪ってしまうんだ。">C. いまの時代、転職なんてやめたほうがいいよ。</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/shitsumon-giho/">「質問技法」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="3">
-      <p class="cb-rally__no">4球目 / 8球</p>
-      <p class="cb-scene">モヤンの<wbr>声が、<wbr>すこし小さくなった。</p>
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
-    </div>
-    <p class="chara-guide__bubble">でも、<wbr>こんな<wbr>こと<wbr>考えるなんて、<wbr>わが<wbr>ままだよね…。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="受容+開かれた質問" data-why="「わがまま」と裁かずにそのまま受けとめる(非審判的態度)。そのうえで気持ちの奥を一緒に見にいけるよ。">A. わがままかもしれない、って思ってるんだね。そう感じるのは、どうしてかな。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="同調(非審判的態度の失敗)" data-why="相手の自己批判にそのまま乗ってしまうと、「やっぱりダメなんだ」を強めてしまうよ。">B. そうだね、ちょっとわがままかも。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="励まし先行" data-why="善意の励ましでも、気持ちを深く話す前に打ち切ってしまうことがあるんだ。まずは受けとめよう。">C. わがままじゃないよ！絶対！元気出して！</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/keicho/">「傾聴」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="4">
-      <p class="cb-rally__no">5球目 / 8球</p>
-      
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
-    </div>
-    <p class="chara-guide__bubble">毎日が<wbr>あっと<wbr>いう<wbr>間でさ、<wbr>自分の<wbr>ことを<wbr>考える<wbr>時間なんて、<wbr>ぜん<wbr>ぜんなくて。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="要約" data-why="話の流れをまとめて返す「要約」。散らばった気持ちが整理されて、次の一歩が見えやすくなるよ。">A. ここまでのお話だと、しんどさの奥に「自分のことを考える時間がない」ことがありそうだね。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="解決策の先出し" data-why="道具の話に飛ぶ前に、時間がないことをどう感じているかを聴きたい場面だよ。">B. 時間管理のアプリ、いいのがあるよ。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="一般化" data-why="「みんなそう」は、その人だけの気持ちを小さく扱ってしまう返し方なんだ。">C. みんなそんなもんだよ、大人になるとね。</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/iikae-yoyaku/">「言い換え・要約」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="5">
-      <p class="cb-rally__no">6球目 / 8球</p>
-      <p class="cb-scene">モヤンが、<wbr>だまってしまった。<wbr>10秒、<wbr>20秒…。</p>
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
-    </div>
-    <p class="chara-guide__bubble">……。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="沈黙の尊重" data-why="沈黙は、相談者が自分の心の中を探している大事な時間。あわてて埋めずに待つのも立派な技法だよ。">A. (急かさずに、モヤンが話し出すのをそっと待つ)</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="沈黙を破る促し過ぎ" data-why="考えている途中で急かされると、生まれかけていた言葉が消えてしまうことがあるよ。">B. どうしたの？黙ってないで何か話してよ。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="話題の転換" data-why="沈黙の直前の話にこそ、大事な気持ちが眠っていることが多いんだ。">C. じゃあ次の話題にいこうか。趣味は何？</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/keicho/">「傾聴」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="6">
-      <p class="cb-rally__no">7球目 / 8球</p>
-      
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
-    </div>
-    <p class="chara-guide__bubble">ぼく、<wbr>せっかく<wbr>勉強して<wbr>資格も<wbr>取ったのに、<wbr>ぜんぜん<wbr>活かせてない<wbr>気が<wbr>するんだ。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="感情の反映(意味の反映)" data-why="言葉の奥にある「がんばったからこそ悔しい」という意味まで汲んで返せているよ。">A. がんばって取った資格だからこそ、活かせていない今が、もどかしいんだね。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="事実確認だけの質問" data-why="情報として大事でも、今は「活かせていない」気持ちのほうを受けとめる場面だよ。">B. 何の資格？いつ取ったの？</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="過小評価" data-why="相手が大切にしているもの(資格・努力)を軽く扱うと、信頼関係が崩れてしまうよ。">C. 資格なんて、無いよりマシくらいに思っておきなよ。</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/kanjo-no-hanei/">「感情の<wbr>反映」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-
-    <section class="cb-rally is-locked" data-cb-rally="7">
-      <p class="cb-rally__no">8球目 / 8球</p>
-      <p class="cb-scene">たくさん<wbr>話して、<wbr>モヤンの<wbr>表情が<wbr>すこしや<wbr>わらかくなってきたよ。</p>
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
-    </div>
-    <p class="chara-guide__bubble">なんだか、<wbr>話してたら、<wbr>ちょっとだけ整理できた<wbr>気が<wbr>する。</p>
-  </div>
-      <p class="cb-prompt">あなたなら、<wbr>なんて<wbr>返す？</p>
-      <div class="cb-choices">
-        <button type="button" class="cb-choice" data-cb-choice data-ok="true" data-giho="要約+ねぎらい" data-why="面談の締めくくりは、話の要約と、勇気を出して話してくれたことへのねぎらいで。次につながる終わり方だよ。">A. 今日は「しんどさ」の奥にある気持ちをたくさん話してくれたね。話してくれてありがとう。</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="宿題の押しつけ" data-why="整理できた直後に課題を積むと、せっかくの前向きな気持ちが負担に変わってしまうよ。">B. じゃあ決まり！明日から早起きして自己分析ね！</button>
-        <button type="button" class="cb-choice" data-cb-choice data-ok="false" data-giho="突き放し" data-why="急な打ち切りは「もう来ないでね」に聞こえることも。ねぎらいと次の見通しで締めよう。">C. 整理できたなら、もう大丈夫だね。はい、終わり！</button>
-      </div>
-      <div class="cb-feedback" data-cb-feedback aria-live="polite" hidden>
-        <p class="cb-feedback__verdict" data-cb-verdict></p>
-        <p class="cb-feedback__giho">この<wbr>返し方は… <wbr><b data-cb-giho></b></p>
-        <p class="cb-feedback__why" data-cb-why></p>
-        <p class="cb-feedback__link"><a href="../../terms/keicho/">「傾聴」の<wbr>ページで<wbr>復習する<wbr> <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        <p class="ron-next"><button type="button" class="button button--primary" data-cb-next>つぎの球へ →</button></p>
-      </div>
-    </section>
-    <section class="cb-goal" data-cb-goal hidden>
-      <p class="ron-goal__title">⚾ キャッチボール終了！ <wbr>おつかれさま！</p>
-      <p class="cb-goal__score" data-cb-final></p>
-      <p data-cb-note></p>
-      <div class="chara-guide chara-guide--moyan">
-    <div class="chara-guide__figure">
-      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.png" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">モヤン</span>
-    </div>
-    <p class="chara-guide__bubble">きいて<wbr>もらえて、<wbr>うれしかったよ。<wbr>ありがとう！</p>
-  </div>
-      <div class="chara-guide chara-guide--sunny">
-    <div class="chara-guide__figure">
-      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.png" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
-      <span class="chara-guide__name">サニー先生</span>
-    </div>
-    <p class="chara-guide__bubble">「まず<wbr>受けとめる<wbr>→それから<wbr>質問」。<wbr>この<wbr>順番は、<wbr>論述にも<wbr>面接にも<wbr>効く<wbr>基本の<wbr>型だよ。</p>
-  </div>
-      <p class="ron-goal__actions">
+    <section class="cbx__goal" data-cb-goal hidden>
+      <p class="cbx__goal-title">⚾ キャッチボール終了！<wbr> <wbr>おつかれさま！</p>
+      <p class="cbx__goal-score" data-cb-final></p>
+      <p class="cbx__goal-note" data-cb-note></p>
+      <p class="cbx__best" data-cb-best></p>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.png" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b>「まず<wbr>受けとめる<wbr>→それから<wbr>質問」。<wbr>この<wbr>順番は、<wbr>論述にも<wbr>面接にも<wbr>効く<wbr>基本の<wbr>型だよ。</p></div>
+      <h2 class="cbx__review-title">きょうの<wbr>キャッチボールの<wbr>ふりかえり</h2>
+      <ol class="cbx__review" data-cb-review></ol>
+      <p class="cbx__goal-actions">
         <button type="button" class="button button--primary" data-cb-retry>もう一回キャッチボールする</button>
-        <a class="button button--ghost" href="../../games/ronjutsu/">論述ボードゲームへ<wbr> <span class="arw" aria-hidden="true">▶︎</span></a>
+        <a class="button button--ghost" href="../../games/ronjutsu/">論述ボードゲームへ <span class="arw" aria-hidden="true">▶︎</span></a>
       </p>
     </section>
+    <script type="application/json" id="cb-data">[{"scene": "モヤンが、<wbr>ぽつり<wbr>ぽつりと<wbr>話し始めたよ。", "say": "最近、<wbr>仕事に<wbr>行くのが、<wbr>ちょっと<wbr>しんどくて…。", "choices": [{"ok": true, "giho": "感情の反映", "why": "相手の<wbr>気持ちの<wbr>言葉を<wbr>そのまま<wbr>受けと<wbr>めて<wbr>返す<wbr>「感情の<wbr>反映」。<wbr>安心して<wbr>次を<wbr>話しやすくなるよ。", "text": "しんどい<wbr>気持ちが<wbr>続いているんだね。", "react": "うん…<wbr>そうなんだ。"}, {"ok": false, "giho": "早すぎるアドバイス", "why": "気持ちを<wbr>受けとめる<wbr>前の<wbr>アドバイスは、<wbr>「わかって<wbr>もらえなかった」と<wbr>感じさせやすいんだ。", "text": "しんどいのは<wbr>睡眠不足じゃない？<wbr>早く<wbr>寝たら？", "react": "…うん、<wbr>寝ては<wbr>いるんだけどね。"}, {"ok": false, "giho": "閉ざされた質問(タイミングが早い)", "why": "事実確認の<wbr>質問が<wbr>先に<wbr>来ると、<wbr>気持ちの<wbr>話が<wbr>止まってしまう<wbr>ことが<wbr>あるよ。", "text": "会社は<wbr>週何日出勤なの？", "react": "えっと、<wbr>週5日だけど…。"}], "link": "../../terms/kanjo-no-hanei/", "linkText": "「感情の<wbr>反映」の<wbr>ページで<wbr>復習する"}, {"scene": "", "say": "上司に<wbr>相談してみたんだけど、<wbr>結局、<wbr>何も<wbr>変わらなかったんだ。", "choices": [{"ok": true, "giho": "言い換え(内容の再陳述)", "why": "相手の<wbr>話した<wbr>内容を<wbr>自分の<wbr>言葉で<wbr>返す<wbr>「言い換え」。<wbr>ちゃんと<wbr>聴いているよ、<wbr>が<wbr>伝わるよ。", "text": "せっかく<wbr>勇気を<wbr>出して<wbr>相談したのに、<wbr>変わらなかったんだね。", "react": "そう…がっかりしちゃって。"}, {"ok": false, "giho": "自分の話へのすり替え", "why": "共感の<wbr>つもりでも、<wbr>主役が<wbr>聴き手に<wbr>移ってしまうと<wbr>相手の<wbr>話が<wbr>続かなくなるんだ。", "text": "そういう<wbr>上司、<wbr>多いよね。<wbr>うちの<wbr>上司もさ…", "react": "あ、<wbr>そうなんだ…。<wbr>(モヤンは、<wbr>自分の<wbr>話を<wbr>やめてしまった<wbr>)"}, {"ok": false, "giho": "評価・批判", "why": "原因探しより<wbr>先に、<wbr>がっかり<wbr>した<wbr>気持ちを<wbr>受けとめよう。<wbr>批判は<wbr>関係づくりの<wbr>妨げに<wbr>なるよ。", "text": "相談の<wbr>仕方が<wbr>悪かったんじゃない？", "react": "…<wbr>やっぱり、<wbr>ぼくの<wbr>言い方が<wbr>悪かったのかな。"}], "link": "../../terms/iikae-yoyaku/", "linkText": "「言い換え・要約」の<wbr>ページで<wbr>復習する"}, {"scene": "", "say": "本当は<wbr>ね…、<wbr>転職も、<wbr>ちょっとだけ<wbr>考えてたりして。", "choices": [{"ok": true, "giho": "開かれた質問", "why": "「は<wbr>い<wbr>/いいえ」で<wbr>終わらない<wbr>「開かれた<wbr>質問」。<wbr>相手が<wbr>自由に<wbr>話を<wbr>広げられるよ。", "text": "転職かあ。<wbr>どんな<wbr>ことを<wbr>思って、<wbr>考えるようになったの？", "react": "うーん、<wbr>なんでだろう…。"}, {"ok": false, "giho": "閉ざされた質問", "why": "まだ<wbr>気持ちが<wbr>揺れている<wbr>段階で<wbr>二択を<wbr>迫ると、<wbr>話が<wbr>閉じてしまうよ。", "text": "転職するの？しないの？", "react": "えっ…<wbr>それは、<wbr>まだわからないよ…。"}, {"ok": false, "giho": "説得・価値観の押しつけ", "why": "聴き手の<wbr>価値観で<wbr>方向を<wbr>決めてしまうと、<wbr>相談者の<wbr>自己決定を<wbr>奪ってしまうんだ。", "text": "いまの<wbr>時代、<wbr>転職なんて<wbr>やめた<wbr>ほうが<wbr>いいよ。", "react": "…<wbr>そっか。<wbr>じゃあ、<wbr>やめて<wbr>おいた<wbr>ほうが<wbr>いいのかな。"}], "link": "../../terms/shitsumon-giho/", "linkText": "「質問技法」の<wbr>ページで<wbr>復習する"}, {"scene": "モヤンの<wbr>声が、<wbr>すこし小さくなった。", "say": "でも、<wbr>こんな<wbr>こと<wbr>考えるなんて、<wbr>わが<wbr>ままだよね…。", "choices": [{"ok": true, "giho": "受容+開かれた質問", "why": "「わが<wbr>まま」と<wbr>裁かずに<wbr>そのまま<wbr>受けとめる<wbr>(非審判的態度)。<wbr>そのうえで<wbr>気持ちの<wbr>奥を<wbr>一緒に<wbr>見に<wbr>いけるよ。", "text": "わが<wbr>ままかもしれない、って<wbr>思ってるんだね。<wbr>そう<wbr>感じるのは、<wbr>どうしてかな。", "react": "どうしてかな…。"}, {"ok": false, "giho": "同調(非審判的態度の失敗)", "why": "相手の<wbr>自己批判に<wbr>そのまま<wbr>乗ってしまうと、<wbr>「やっぱり<wbr>ダメなんだ」を<wbr>強めてしまうよ。", "text": "そうだね、<wbr>ちょっとわが<wbr>ままかも。", "react": "…だよね。<wbr>こんな<wbr>こと、<wbr>言わな<wbr>きゃよかった。"}, {"ok": false, "giho": "励まし先行", "why": "善意の<wbr>励ましでも、<wbr>気持ちを<wbr>深く<wbr>話す前に<wbr>打ち切ってしまう<wbr>ことが<wbr>あるんだ。<wbr>まずは<wbr>受けとめよう。", "text": "わが<wbr>ままじゃないよ！<wbr>絶対！<wbr>元気出して！", "react": "う、<wbr>うん…<wbr>ありがとう。<wbr>(でも、<wbr>なぜそう<wbr>思うのかは<wbr>話せなかった<wbr>)"}], "link": "../../terms/keicho/", "linkText": "「傾聴」の<wbr>ページで<wbr>復習する"}, {"scene": "", "say": "毎日が<wbr>あっと<wbr>いう<wbr>間でさ、<wbr>自分の<wbr>ことを<wbr>考える<wbr>時間なんて、<wbr>ぜん<wbr>ぜんなくて。", "choices": [{"ok": true, "giho": "要約", "why": "話の<wbr>流れを<wbr>まとめて<wbr>返す<wbr>「要約」。<wbr>散らばった<wbr>気持ちが<wbr>整理されて、<wbr>次の<wbr>一歩が<wbr>見えやすくなるよ。", "text": "ここまでの<wbr>お話だと、<wbr>しんどさの<wbr>奥に<wbr>「自分の<wbr>ことを<wbr>考える<wbr>時間が<wbr>ない」ことが<wbr>ありそうだね。", "react": "…うん。<wbr>そうかもしれない。"}, {"ok": false, "giho": "解決策の先出し", "why": "道具の<wbr>話に<wbr>飛ぶ前に、<wbr>時間が<wbr>ない<wbr>ことを<wbr>どう<wbr>感じているかを<wbr>聴きたい<wbr>場面だよ。", "text": "時間管理の<wbr>アプリ、<wbr>いいのが<wbr>あるよ。", "react": "アプリかあ…。<wbr>そういう<wbr>ことじゃないんだけどな。"}, {"ok": false, "giho": "一般化", "why": "「みんな<wbr>そう」は、<wbr>その<wbr>人だけの<wbr>気持ちを<wbr>小さく<wbr>扱ってしまう<wbr>返し方なんだ。", "text": "みんな<wbr>そんな<wbr>もんだよ、<wbr>大人に<wbr>なるとね。", "react": "…<wbr>そうだよね。<wbr>みんな、が<wbr>まんしてるんだよね。"}], "link": "../../terms/iikae-yoyaku/", "linkText": "「言い換え・要約」の<wbr>ページで<wbr>復習する"}, {"scene": "モヤンが、<wbr>だまってしまった。<wbr>10秒、<wbr>20秒…。", "say": "……。", "choices": [{"ok": true, "giho": "沈黙の尊重", "why": "沈黙は、<wbr>相談者が<wbr>自分の<wbr>心の<wbr>中を<wbr>探している<wbr>大事な<wbr>時間。<wbr>あわてて<wbr>埋めずに<wbr>待つのも<wbr>立派な<wbr>技法だよ。", "text": "(急かさずに、<wbr>モヤンが<wbr>話し出すのを<wbr>そっと<wbr>待つ)", "react": "……<wbr>あのね。"}, {"ok": false, "giho": "沈黙を破る促し過ぎ", "why": "考えている<wbr>途中で<wbr>急かされると、<wbr>生まれかけていた<wbr>言葉が<wbr>消えてしまう<wbr>ことが<wbr>あるよ。", "text": "どうしたの？<wbr>黙ってないで<wbr>何か<wbr>話してよ。", "react": "ご、<wbr>ごめん…。<wbr>(言いかけた<wbr>ことを、<wbr>飲みこんでしまった<wbr>)"}, {"ok": false, "giho": "話題の転換", "why": "沈黙の<wbr>直前の<wbr>話にこそ、<wbr>大事な<wbr>気持ちが<wbr>眠っている<wbr>ことが<wbr>多いんだ。", "text": "じゃ<wbr>あ次の<wbr>話題に<wbr>いこうか。<wbr>趣味は<wbr>何？", "react": "…<wbr>あ、<wbr>うん。<wbr>趣味は、とくに…。"}], "link": "../../terms/keicho/", "linkText": "「傾聴」の<wbr>ページで<wbr>復習する"}, {"scene": "", "say": "ぼく、<wbr>せっかく<wbr>勉強して<wbr>資格も<wbr>取ったのに、<wbr>ぜんぜん<wbr>活かせてない<wbr>気が<wbr>するんだ。", "choices": [{"ok": true, "giho": "感情の反映(意味の反映)", "why": "言葉の<wbr>奥に<wbr>ある<wbr>「がんばったからこそ<wbr>悔しい」と<wbr>いう<wbr>意味まで<wbr>汲んで<wbr>返せているよ。", "text": "がんばって<wbr>取った<wbr>資格だからこそ、<wbr>活かせていない<wbr>今が、<wbr>も<wbr>どかしいんだね。", "react": "うん、<wbr>も<wbr>どかしい。<wbr>それだ。"}, {"ok": false, "giho": "事実確認だけの質問", "why": "情報と<wbr>して<wbr>大事でも、<wbr>今は<wbr>「活かせていない」気持ちの<wbr>ほうを<wbr>受けとめる<wbr>場面だよ。", "text": "何の<wbr>資格？<wbr>いつ<wbr>取ったの？", "react": "えっと、<wbr>2年前に…。<wbr>(気持ちの<wbr>話は、<wbr>どこかへ<wbr>いってしまった<wbr>)"}, {"ok": false, "giho": "過小評価", "why": "相手が<wbr>大切に<wbr>している<wbr>もの<wbr>(資格・<wbr>努力)を<wbr>軽く<wbr>扱うと、<wbr>信頼関係が<wbr>崩れてしまうよ。", "text": "資格なんて、<wbr>無いより<wbr>マシくらいに<wbr>思って<wbr>おきなよ。", "react": "…<wbr>そうか。<wbr>ぼくの<wbr>勉強、<wbr>むだだったのかな。"}], "link": "../../terms/kanjo-no-hanei/", "linkText": "「感情の<wbr>反映」の<wbr>ページで<wbr>復習する"}, {"scene": "たくさん<wbr>話して、<wbr>モヤンの<wbr>表情が<wbr>すこしや<wbr>わらかくなってきたよ。", "say": "なんだか、<wbr>話してたら、<wbr>ちょっとだけ整理できた<wbr>気が<wbr>する。", "choices": [{"ok": true, "giho": "要約+ねぎらい", "why": "面談の<wbr>締めくくりは、<wbr>話の<wbr>要約と、<wbr>勇気を<wbr>出して<wbr>話してくれた<wbr>ことへの<wbr>ねぎらいで。<wbr>次に<wbr>つながる<wbr>終わり方だよ。", "text": "今日は<wbr>「しんどさ」の<wbr>奥に<wbr>ある<wbr>気持ちを<wbr>たくさん<wbr>話してくれたね。<wbr>話してくれて<wbr>ありがとう。", "react": "こちらこそ、<wbr>ありがとう。"}, {"ok": false, "giho": "宿題の押しつけ", "why": "整理できた<wbr>直後に<wbr>課題を<wbr>積むと、<wbr>せっかくの<wbr>前向きな<wbr>気持ちが<wbr>負担に<wbr>変わってしまうよ。", "text": "じゃ<wbr>あ<wbr>決まり！<wbr>明日から<wbr>早起きして<wbr>自己分析ね！", "react": "えっ、<wbr>明日から…？<wbr> ちょっと、<wbr>気が<wbr>重くなってきた…。"}, {"ok": false, "giho": "突き放し", "why": "急な<wbr>打ち切りは<wbr>「もう<wbr>来ないでね」に<wbr>聞こえる<wbr>ことも。<wbr>ねぎらいと<wbr>次の<wbr>見通しで<wbr>締めよう。", "text": "整理できたなら、<wbr>もう<wbr>大丈夫だね。<wbr>はい、<wbr>終わり！", "react": "あ…うん。<wbr>(もう<wbr>少し、<wbr>話したかったな<wbr>)"}], "link": "../../terms/keicho/", "linkText": "「傾聴」の<wbr>ページで<wbr>復習する"}]</script>
   </div>
-
   <p class="quiz-drill__foot">※ 相談の<wbr>セリフと<wbr>選択肢は<wbr>すべて<wbr>当サイトの<wbr>オリジナルです。</p>
 </div>
 <div class="container"><nav class="study-nav study-nav--foot" aria-label="試験対策のページ一覧">
@@ -351,7 +160,7 @@
   </nav>
 </div>
 
-<script src="../../js/catchball.js?v=v2026.0728.1616" defer></script>
+<script src="../../js/catchball.js?v=2026.1015" defer></script>
 </main>
 
 <div class="picnic-meadow" aria-hidden="true">
