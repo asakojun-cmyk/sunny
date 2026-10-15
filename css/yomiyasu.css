@@ -924,7 +924,7 @@ h2:has(> .sec-illust){overflow:hidden}
 .camp-banner .nb{display:inline-block;white-space:nowrap}
 .camp-banner__until{margin-top:auto;padding:3px 12px;border-radius:999px;background:#f1ede3;color:#6b665c;font-size:.6875rem;font-weight:700;letter-spacing:.04em;line-height:1.6}
 .camp-banner__until--date{background:#b4573a;color:#fff;animation:camp-blink 1.8s ease-in-out infinite}
-@keyframes camp-blink{0%,100%{opacity:1}50%{opacity:.8}}
+@keyframes camp-blink{0%,100%{transform:none}50%{transform:scale(1.06)}}
 .camp-banner:focus-visible{outline:3px solid #ee8466;outline-offset:4px}
 /* くわしい条件(たたんでおく) */
 .camp-details{max-width:680px;margin:22px auto 0;text-align:left}

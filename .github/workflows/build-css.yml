@@ -1,0 +1,28 @@
+# CSSのまとめ直し: css/ やHTMLを直してpushしたら、ページごとのCSSまとめ(css/_b-*.css)を自動で作り直す
+name: build-css
+on:
+  push:
+    branches: [main]
+    paths:
+      - "css/**"
+      - "**/*.html"
+      - "scripts/build-css.py"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: build-css
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: CSSをまとめ直す
+        run: python3 scripts/build-css.py
+      - name: 変更があればコミット
+        run: |
+          git config user.name "build-css-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A css '*.html'
+          git diff --cached --quiet || (git commit -m "CSSまとめを自動で作り直し" && git pull --rebase && git push)
