@@ -206,3 +206,50 @@ a.gk-circle:hover { transform: translateY(-3px); }
 /* 学校ページの「受講者本人の体験」「運営者の考察」が2つ続く箱も、箱なしに */
 .gk .info-block { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 48px 0 !important; border-radius: 0 !important; }
 .gk .info-block + .info-block { padding-top: 40px !important; border-top: 1px solid var(--gk-line) !important; }
+
+/* 2026-10-15 余分な罫線をなくす(ボタン下の線・表の最後の線・出典の上の黒い線) */
+.gk .school-header { border-bottom: 0; }
+.gk .fact-table { border-top: 0; }
+.gk .fact-row:last-child { border-bottom: 0; }
+.gk .source-list { border-top: 0; padding-top: 0; }
+.gk .source-list li:last-child { border-bottom: 0; }
+.gk .source-list__title { font-size: 18px; }
+
+/* 結論の丸: 同じ種類の文字(ラベル・小見出し・数字・説明・くわしく)の高さを、どの丸でもそろえる */
+.gk-circle { --gk-nm: 0px; --gk-yen-h: 2.8rem; --gk-memo: 2.55rem; display: grid; grid-template-rows: auto var(--gk-nm) var(--gk-yen-h) minmax(var(--gk-memo), auto) auto; justify-items: center; align-content: center; row-gap: 6px; }
+.gk-circles:has(.gk-circle__name) .gk-circle { --gk-nm: 1.6rem; }
+.gk-circle__when { grid-row: 1; }
+.gk-circle__name { grid-row: 2; margin: 0; line-height: 1.6; }
+.gk-circle__yen { grid-row: 3; margin: 0; display: flex; align-items: center; justify-content: center; }
+.gk-circle__memo { grid-row: 4; align-self: start; }
+.gk-circle__go { grid-row: 5; margin: 0; }
+@media (max-width: 480px) {
+  .gk-circle { --gk-yen-h: 2rem; --gk-memo: 2.07rem; row-gap: 4px; }
+  .gk-circles:has(.gk-circle__name) .gk-circle { --gk-nm: 1.3rem; }
+}
+
+/* 見出しの大きさ: 大見出し34 > 章26 > 結論・目次20(PC)。スマホは 24 > 21 > 18 のまま */
+@media (min-width: 481px) {
+  .gk .gk-answer__t, .gk .gk-toc__t { font-size: 1.25rem !important; }
+}
+
+/* 2026-10-15 学校ページ: リードの上に「こんな人へ」、見出しの下に余白 */
+.gk .school-header__for { max-width: 34em; margin: 22px auto 0; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.125rem; line-height: 1.7; color: var(--gk-ink); text-align: center; text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }
+.gk .school-header__for-k { display: block; width: fit-content; margin: 0 auto 8px; padding: 1px 12px; border-radius: 99px; background: var(--gk-lemon); font-size: .75rem; letter-spacing: .08em; }
+.gk .school-header__for + .school-header__lead { margin-top: 14px; }
+.gk .school-section__title { margin-bottom: 36px !important; }
+@media (max-width: 480px) {
+  .gk .school-header__for { font-size: 1rem; margin-top: 18px; }
+  .gk .school-section__title { margin-bottom: 28px !important; }
+}
+
+/* 「安い講座」ページの丸(ys-circle)も、同じ種類の文字の高さをそろえる */
+.gk .ys-circle { display: grid !important; grid-template-rows: auto 1.6rem 2.8rem minmax(3.6rem, auto) auto; justify-items: center; align-content: center; row-gap: 6px; }
+.gk .ys-circle__when { grid-row: 1; }
+.gk .ys-circle__name { grid-row: 2; margin: 0; line-height: 1.6; }
+.gk .ys-circle__yen { grid-row: 3; margin: 0; display: flex; align-items: center; justify-content: center; }
+.gk .ys-circle__memo { grid-row: 4; align-self: start; }
+.gk .ys-circle__go { grid-row: 5; margin: 0; }
+@media (max-width: 480px) {
+  .gk .ys-circle { grid-template-rows: auto 1.3rem 2rem minmax(3rem, auto) auto; row-gap: 4px; }
+}
