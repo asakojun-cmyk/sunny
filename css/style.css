@@ -5531,3 +5531,13 @@ body:not(.is-home) .picnic-meadow .pm-sunny{left:50%;transform:translateX(-50%)}
 }
 .site-main a.txt-link:hover, main a.txt-link:hover { color: #ee8466 !important; }
 .site-main a.txt-link .arw, main a.txt-link .arw { color: inherit; }
+
+/* 2026-10-16 養成講座一覧: カードの上(PR・情報確認日)も学校名と同じく中央に */
+.school-grid--index .school-card__meta{justify-content:center;flex-wrap:wrap}
+/* 「まだ検討中の方は」などの案内は、学校の一覧のあとに */
+.schools-more{display:flex;flex-direction:column;gap:12px;margin:40px 0 8px}
+.schools-more__title{margin:0 0 4px;font-size:1.125rem;text-align:center;text-wrap:balance}
+.schools-more .schools-entry-link{margin:0}
+/* 2026-10-16 一覧ページ: キャラの会話は一覧のあとに(見たいものを先に) */
+.chara-after{display:flex;flex-direction:column;gap:12px;margin:36px 0 8px}
+.chara-after .chara-guide{margin:0}
