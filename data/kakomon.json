@@ -1,0 +1,688 @@
+{
+ "_about": "国家資格キャリアコンサルタント試験 学科試験(第27〜32回・各50問)の問題文と選択肢に、その用語・理論家が出てきた回。問題は試験実施機関が公開しているもの。問題文は転載しない。",
+ "rounds": [
+  27,
+  28,
+  29,
+  30,
+  31,
+  32
+ ],
+ "terms": {
+  "abc-riron": [
+   28,
+   29
+  ],
+  "adler-shinrigaku": [],
+  "assertion": [],
+  "assessment": [
+   27,
+   30
+  ],
+  "bamen-kosei": [],
+  "boei-kisei": [],
+  "career-adaptability": [
+   28,
+   32
+  ],
+  "career-anchor": [
+   27,
+   31,
+   32
+  ],
+  "career-cone": [],
+  "career-insites": [],
+  "career-kochiku-riron": [
+   27,
+   28,
+   31
+  ],
+  "career-kyoiku": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "career-plateau": [],
+  "case-management": [
+   27,
+   29,
+   31
+  ],
+  "chaos-riron": [],
+  "chikugo-kiroku": [
+   27,
+   29
+  ],
+  "chingin-kozo-kihon-tokei": [
+   27
+  ],
+  "chiryo-shigoto-ryoritsu": [
+   28,
+   29,
+   31
+  ],
+  "cip-riron": [],
+  "coffee-cup-model": [
+   30
+  ],
+  "coping": [],
+  "danjo-koyo-kikai-kinto-ho": [
+   27,
+   28,
+   29
+  ],
+  "decent-work": [],
+  "doukizuke-mensetsu": [],
+  "employability": [],
+  "follow-up": [
+   27,
+   28,
+   29,
+   30,
+   31
+  ],
+  "freelance-shinpo": [],
+  "fukugyo-kengyo": [
+   28,
+   30,
+   31
+  ],
+  "gaikokujin-koyo": [],
+  "gatb": [],
+  "gatekeeper": [],
+  "genjitsu-ryoho": [],
+  "gestalt-ryoho": [
+   28
+  ],
+  "ginou-kentei": [
+   27,
+   28,
+   32
+  ],
+  "ginzberg": [],
+  "group-approach": [
+   27,
+   29,
+   30,
+   31
+  ],
+  "group-shurui": [],
+  "hansen-4l": [
+   31
+  ],
+  "hatarakikata-kaikaku": [],
+  "hattatsu-shogai": [
+   27,
+   28,
+   29,
+   30,
+   32
+  ],
+  "havighurst": [
+   28,
+   29,
+   31,
+   32
+  ],
+  "hello-training": [
+   28,
+   30,
+   32
+  ],
+  "hello-work-madoguchi": [
+   29
+  ],
+  "hello-work": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "helping": [],
+  "herzberg": [
+   28,
+   29,
+   30
+  ],
+  "hi-gengo": [],
+  "iikae-yoyaku": [],
+  "ikuji-kaigo-kyugyo-ho": [
+   29,
+   32
+  ],
+  "intake": [],
+  "internship-sanshogoi": [
+   27,
+   28,
+   30,
+   31,
+   32
+  ],
+  "ishikettei-riron-keifu": [],
+  "jiko-gainen": [
+   27,
+   28,
+   29,
+   32
+  ],
+  "jiko-icchi": [
+   30
+  ],
+  "jiko-koryokukan": [
+   27,
+   30,
+   31,
+   32
+  ],
+  "jinsei-no-shogo": [],
+  "jinzai-kaihatsu-josei": [
+   27,
+   29,
+   30,
+   31
+  ],
+  "jisedai-ikusei": [],
+  "job-cafe": [],
+  "job-card": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "job-coach": [
+   29
+  ],
+  "job-tag": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "johari-window": [],
+  "josei-katsuyaku": [
+   27,
+   28
+  ],
+  "kaiketsu-shiko-approach": [],
+  "kaiko-rule": [],
+  "kanjo-no-hanei": [
+   30
+  ],
+  "karoshi-boshi": [],
+  "kazoku-ryoho": [
+   32
+  ],
+  "keicho": [
+   27,
+   29
+  ],
+  "kobetsu-funso-kaiketsu": [],
+  "kodo-ryoho": [
+   27,
+   30,
+   31
+  ],
+  "kokoro-no-byoki": [
+   28,
+   32
+  ],
+  "konenrei-sha-koyo-antei-ho": [],
+  "koryu-bunseki": [
+   27,
+   28,
+   29
+  ],
+  "kosei-teki-group-encounter": [
+   28,
+   31,
+   32
+  ],
+  "koyo-hoken": [
+   28,
+   30,
+   32
+  ],
+  "koyo-tokei-dedokoro": [],
+  "kurepelin": [
+   32
+  ],
+  "kyoiku-kunren-kyufu": [
+   27,
+   28,
+   29,
+   32
+  ],
+  "kyokanteki-rikai": [],
+  "kyushokusha-shien": [
+   27
+  ],
+  "life-career-rainbow": [
+   30
+  ],
+  "life-space": [],
+  "life-span": [],
+  "logotherapy": [],
+  "marcia-identity": [
+   28,
+   29
+  ],
+  "marginal-man": [],
+  "maslow": [
+   30
+  ],
+  "mental-health-care": [
+   28
+  ],
+  "microcounseling": [
+   27,
+   29,
+   30,
+   31,
+   32
+  ],
+  "morita-naikan": [],
+  "mujoken-no-koteiteki-hairyo": [],
+  "muki-tenkan": [],
+  "narrative-approach": [
+   31
+  ],
+  "ninchi-ryoho": [],
+  "noryoku-kaihatsu-kihon-chosa": [
+   27,
+   28,
+   29,
+   30,
+   31
+  ],
+  "nouryoku-kaihatsu-kihon-keikaku": [
+   27,
+   29,
+   31
+  ],
+  "ohby-card": [],
+  "ojt-offjt": [
+   27,
+   28
+  ],
+  "oubo-shorui": [
+   27
+  ],
+  "part-yuki-ho": [
+   27,
+   28,
+   30
+  ],
+  "planned-happenstance": [
+   30
+  ],
+  "positive-uncertainty": [
+   31
+  ],
+  "protean-career": [
+   27,
+   28,
+   29,
+   31
+  ],
+  "raidansha-chushin-ryoho": [
+   29
+  ],
+  "rapport": [
+   28
+  ],
+  "reality-shock": [],
+  "recurrent-reskilling": [
+   28,
+   29,
+   30,
+   32
+  ],
+  "refer": [
+   27,
+   29
+  ],
+  "renzokuteki-ishikettei": [
+   27
+  ],
+  "riasec": [
+   29
+  ],
+  "rinri-koryo": [
+   29,
+   30,
+   31,
+   32
+  ],
+  "rodo-anzen-eisei-ho": [
+   27,
+   29,
+   32
+  ],
+  "rodo-keiyaku-ho": [
+   27,
+   31
+  ],
+  "rodo-keizai-no-bunseki": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "rodo-kijun-ho": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "rodo-kumiai-ho": [
+   27
+  ],
+  "rodo-shisaku-suishin-ho": [],
+  "rodoryoku-chosa": [
+   27,
+   28,
+   32
+  ],
+  "rodosha-haken-ho": [
+   29
+  ],
+  "roe-riron": [],
+  "rosai-hoken": [],
+  "sabetsu-kaisho": [
+   27,
+   28
+  ],
+  "saburoku-kyotei": [
+   29
+  ],
+  "saitei-chingin-ho": [
+   27
+  ],
+  "saposute": [
+   27
+  ],
+  "seishin-bunseki": [
+   28,
+   29,
+   31,
+   32
+  ],
+  "self-career-dock": [
+   27,
+   28,
+   29,
+   31,
+   32
+  ],
+  "shakai-hoken": [
+   32
+  ],
+  "shakai-ninchiteki-career-riron": [
+   30
+  ],
+  "shitsugyoritsu-kyujinbairitsu": [
+   27,
+   29,
+   30,
+   31,
+   32
+  ],
+  "shitsumon-giho": [
+   27
+  ],
+  "shogaisha-koyo": [],
+  "shogaisha-shien-kikan": [],
+  "shokuba-fukki": [
+   29,
+   31
+  ],
+  "shokugyo-antei-ho": [],
+  "shokugyo-nouryoku-hyoka-kijun": [
+   29,
+   30,
+   32
+  ],
+  "shokugyo-nouryoku-kaihatsu-sokushin-ho": [
+   27,
+   32
+  ],
+  "shokugyo-readiness-test": [
+   29,
+   32
+  ],
+  "shokugyoteki-hattatsu-dankai": [
+   27,
+   28,
+   29,
+   31
+  ],
+  "shugyo-kozo-chosa": [
+   32
+  ],
+  "shuro-joken-chosa": [
+   27
+  ],
+  "shuro-shien": [],
+  "silver-jinzai": [],
+  "soc-riron": [],
+  "sst": [
+   31
+  ],
+  "stress-check": [
+   27,
+   28,
+   32
+  ],
+  "supervision": [
+   27,
+   28,
+   30,
+   31,
+   32
+  ],
+  "systematic-approach": [
+   28,
+   29,
+   31
+  ],
+  "teni-gyakuteni": [
+   29
+  ],
+  "tenki": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "tokusei-inshi": [
+   32
+  ],
+  "transition-cycle": [],
+  "transition-riron": [],
+  "trial-koyo": [
+   27,
+   28,
+   29,
+   31,
+   32
+  ],
+  "vpi": [],
+  "wakamono-koyo": [],
+  "work-engagement": [],
+  "work-salience": [],
+  "working-alliance": [],
+  "yg-kensa": []
+ },
+ "theorists": {
+  "adler": [],
+  "anna-freud": [],
+  "bandura": [
+   29,
+   31
+  ],
+  "beck": [],
+  "berne": [
+   27,
+   28,
+   30,
+   31
+  ],
+  "binswanger": [],
+  "bordin": [],
+  "boss": [],
+  "bowlby": [],
+  "bridges": [
+   29
+  ],
+  "brill": [],
+  "bronfenbrenner": [],
+  "buhler": [],
+  "carkhuff": [],
+  "deci": [],
+  "deshazer-berg": [],
+  "ellis": [
+   28,
+   30
+  ],
+  "erikson": [
+   30
+  ],
+  "frankl": [
+   28
+  ],
+  "freud": [
+   30
+  ],
+  "gelatt": [
+   29,
+   31
+  ],
+  "gendlin": [
+   27
+  ],
+  "ginzberg": [],
+  "glasser": [],
+  "gottfredson": [],
+  "hall": [
+   27,
+   28,
+   29,
+   31
+  ],
+  "hansen": [
+   31
+  ],
+  "havighurst": [],
+  "herzberg": [
+   28,
+   29,
+   30
+  ],
+  "hilton": [
+   32
+  ],
+  "holland": [
+   28,
+   29,
+   30
+  ],
+  "husserl": [],
+  "ivey": [
+   29,
+   30,
+   31
+  ],
+  "jung": [],
+  "kokubu": [
+   30
+  ],
+  "krumboltz": [
+   27,
+   29,
+   30,
+   32
+  ],
+  "kubler-ross": [],
+  "levinson": [],
+  "lewin": [],
+  "maslow": [
+   28,
+   30
+  ],
+  "may": [],
+  "mcclelland": [
+   28
+  ],
+  "mcgregor": [],
+  "nicholson": [],
+  "parsons": [
+   27,
+   28,
+   31
+  ],
+  "pavlov": [],
+  "perls": [
+   30
+  ],
+  "piaget": [],
+  "prediger": [],
+  "roe": [],
+  "rogers": [
+   27,
+   31
+  ],
+  "savickas": [
+   27,
+   28,
+   31,
+   32
+  ],
+  "schein": [
+   27,
+   30,
+   31,
+   32
+  ],
+  "schlossberg": [
+   27,
+   29,
+   30,
+   31,
+   32
+  ],
+  "skinner": [],
+  "super": [
+   27,
+   28,
+   29,
+   31
+  ],
+  "taylor": [],
+  "thorndike": [],
+  "tiedeman": [],
+  "vanmaanen": [],
+  "vroom": [],
+  "vygotsky": [],
+  "watson": [],
+  "williamson": [],
+  "wolpe": [
+   27
+  ],
+  "yalom": []
+ }
+}
