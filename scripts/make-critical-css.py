@@ -44,7 +44,7 @@ with sync_playwright() as p:
         for k,v in pg.evaluate(COLLECT).items(): keep.setdefault(k,set()).update(v)
         pg.close()
     pg=b.new_page(viewport={'width':390,'height':844})
-    pg.goto(URL,wait_until='load')
+    pg.goto(URL,wait_until='load'); pg.wait_for_function("[...document.styleSheets].filter(s=>s.href&&s.href.includes('/css/cb-')).length>=3",timeout=15000); pg.wait_for_timeout(300)
     pg.evaluate("k=>{window.__keep=k}",{k:sorted(v) for k,v in keep.items()})
     built=pg.evaluate(BUILD.replace("(keep)=>{","()=>{let keep;"))
     b.close()
