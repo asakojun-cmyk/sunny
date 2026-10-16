@@ -38,12 +38,34 @@
     function (e) {
       var el = e.target && e.target.closest ? e.target.closest("[data-ev]") : null;
       if (!el || typeof window.gtag !== "function") return;
-      window.gtag("event", el.getAttribute("data-ev"), {
-        link_text: (el.textContent || "").replace(/\s+/g, "").slice(0, 40)
-      });
+      var name = el.getAttribute("data-ev");
+      var params = { link_text: (el.textContent || "").replace(/\s+/g, "").slice(0, 40) };
+      /* アクセス解析は最初のタップのあとに読むので、すぐ別のページへ移るときは、記録を次のページで送る */
+      var leaving = false;
+      if (el.tagName === "A" && el.target !== "_blank" && el.href) {
+        try {
+          var u = new URL(el.href, location.href);
+          leaving = u.origin === location.origin && (u.pathname !== location.pathname || u.search !== location.search);
+        } catch (x) {}
+      }
+      if (leaving && !window.google_tag_manager) {
+        try {
+          var q = JSON.parse(sessionStorage.getItem("ev-queue") || "[]");
+          q.push([name, params]);
+          sessionStorage.setItem("ev-queue", JSON.stringify(q.slice(-10)));
+          return;
+        } catch (x) {}
+      }
+      window.gtag("event", name, params);
     },
     true
   );
+  /* 前のページで送りきれなかった記録を送る */
+  try {
+    var q = JSON.parse(sessionStorage.getItem("ev-queue") || "[]");
+    sessionStorage.removeItem("ev-queue");
+    if (typeof window.gtag === "function") q.forEach(function (x) { window.gtag("event", x[0], x[1]); });
+  } catch (x) {}
 })();
 
 /* スクロールで要素がふわっと現れる演出(reduced-motion 設定時は無効) */
