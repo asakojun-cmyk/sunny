@@ -249,8 +249,13 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
    サイト全体の丸い文字(約165KB)は、ページが読み終わってから読む(同じ字形なので見た目は変わらない) */
 @font-face{font-family:"Maru Top";src:url(./fonts/maru-top2.woff2) format("woff2");font-weight:100 900;font-display:swap}
 #picnic-title,#picnic-title *{font-family:"Maru Top","Zen Maru Gothic","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif!important}</style>
-<script>/* サイト全体の丸い文字は、ページの読み込みが終わってから */
-addEventListener("load",function(){try{var f=new FontFace("Zen Maru Gothic","url(./fonts/maru-h2.woff2)",{weight:"100 900",display:"swap"});f.load().then(function(x){document.fonts.add(x)})}catch(e){}});</script>
+<script>/* サイト全体の丸い文字(約165KB)は、最初の画面が出たあとに読む。
+   スクロール・タップしたらすぐ、何もしなくてもページの読み込みが終わって3秒後に */
+(function(){var done=false,ev=["scroll","touchstart","pointerdown","keydown"];
+function go(){if(done)return;done=true;ev.forEach(function(e){removeEventListener(e,go,true)});
+try{var f=new FontFace("Zen Maru Gothic","url(./fonts/maru-h2.woff2)",{weight:"100 900",display:"swap"});f.load().then(function(x){document.fonts.add(x)})}catch(e){}}
+ev.forEach(function(e){addEventListener(e,go,{capture:true,passive:true,once:true})});
+addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 </head>
 <body class="is-home">
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -260,7 +265,7 @@ addEventListener("load",function(){try{var f=new FontFace("Zen Maru Gothic","url
     <div class="site-header__brand">
       <a href="./" class="site-logo">
         <span class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</span>
-        <span class="site-logo__ja"><img class="logo-sun" src="./img/parts/06_sun_character.webp" alt="">キャリコン学びピクニック</span>
+        <span class="site-logo__ja"><img class="logo-sun" src="./img/parts/t/06_sun_character-52.webp" alt="">キャリコン学びピクニック</span>
       </a>
       <p class="site-header__tagline">「わからない」を持ち寄って、「わかった！」に変える場所</p>
     </div>
@@ -275,7 +280,7 @@ addEventListener("load",function(){try{var f=new FontFace("Zen Maru Gothic","url
     <div class="header-search" id="search-fab">
       <a class="search-fab__toggle" href="./search/" aria-expanded="false" aria-controls="search-fab-panel">
         <span class="header-search__label" aria-hidden="true">＼ 用語検索 ／</span>
-        <span class="header-search__chara"><img class="chara chara--sunny" src="./img/parts/06_sun_character.webp" width="42" height="42" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" decoding="async"></span>
+        <span class="header-search__chara"><img class="chara chara--sunny" src="./img/parts/t/06_sun_character-84.webp" width="42" height="42" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" decoding="async"></span>
         <span class="header-search__click" aria-hidden="true">⇑クリック⇑</span>
         <span class="visually-hidden">わからない言葉を検索する</span>
       </a>
@@ -357,8 +362,8 @@ addEventListener("load",function(){try{var f=new FontFace("Zen Maru Gothic","url
       </div>
     </div>
     <div class="lp-bridge">
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">ボクに合う学校は</span><wbr><span class="nb">わかったけど、</span><wbr><span class="nb">不安だなぁ……。</span></p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">不安なことは、</span><wbr><span class="nb">説明会で聞いてみよう。</span><wbr><span class="nb">無料だよ。</span></p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">ボクに合う学校は</span><wbr><span class="nb">わかったけど、</span><wbr><span class="nb">不安だなぁ……。</span></p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">不安なことは、</span><wbr><span class="nb">説明会で聞いてみよう。</span><wbr><span class="nb">無料だよ。</span></p></div>
     </div>
     <div class="lp-cta invite" id="setsumeikai">
       <div class="invite__ticket">
@@ -559,8 +564,8 @@ addEventListener("load",function(){try{var f=new FontFace("Zen Maru Gothic","url
     <i class="map-cloud map-cloud--b" aria-hidden="true"></i>
     <i class="map-cloud map-cloud--c" aria-hidden="true"></i>
     <img class="mp mp-wagon" src="./img/parts/04_book_wagon.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-pinwheel" src="./img/parts/t/05_pinwheel.webp" alt="">
-    <img class="mp mp-mat" src="./img/parts/27_picnic_mat.webp" alt="" loading="lazy" decoding="async">
+    <img srcset="./img/parts/t/05_pinwheel-40.webp 40w, ./img/parts/t/05_pinwheel.webp 72w" sizes="(max-width:760px) 20px, 32px" class="mp mp-pinwheel" src="./img/parts/t/05_pinwheel.webp" alt="">
+    <img class="mp mp-mat" src="./img/parts/t/27_picnic_mat-496.webp" alt="" loading="lazy" decoding="async">
     <img class="mp mp-lunch mp-lunch--a" src="./img/parts/t/11_lunchbox.webp" alt="" loading="lazy" decoding="async">
     <img class="mp mp-suito" src="./img/parts/suito2.webp" alt="" loading="lazy" decoding="async">
     <img class="mp mp-tent1" src="./img/parts/13_blue_yellow_tent.webp" alt="" loading="lazy" decoding="async">
@@ -570,12 +575,12 @@ addEventListener("load",function(){try{var f=new FontFace("Zen Maru Gothic","url
     <img class="mp mp-tree1" src="./img/parts/15_tree_hammock_left.webp" alt="" loading="lazy" decoding="async">
     <img class="mp mp-hammock" src="./img/parts/t/16_hammock.webp" alt="" loading="lazy" decoding="async">
     <img class="mp mp-tree2" src="./img/parts/17_tree_hammock_right.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-flowerl" src="./img/parts/23_flowers_left_group.webp" alt="">
-    <img class="mp mp-bushl" src="./img/parts/24_bush_lower_left.webp" alt="">
-    <img class="mp mp-flowerr" src="./img/parts/25_flowers_right_group.webp" alt="">
-    <img class="mp mp-bushr" src="./img/parts/26_bush_lower_right.webp" alt="">
-    <div class="map-chara" id="map-sunny"><img src="./img/parts/06_sun_character.webp" width="248" height="223" alt="" loading="lazy" decoding="async"></div>
-    <div class="map-chara" id="map-moyan"><img src="./img/parts/07_moyan_school_hat_crying.webp" width="176" height="164" alt="" loading="lazy" decoding="async"></div>
+    <img srcset="./img/parts/t/23_flowers_left_group-116.webp 116w, ./img/parts/23_flowers_left_group.webp 192w" sizes="(max-width:760px) 58px, 90px" class="mp mp-flowerl" src="./img/parts/23_flowers_left_group.webp" alt="">
+    <img srcset="./img/parts/t/24_bush_lower_left-88.webp 88w, ./img/parts/24_bush_lower_left.webp 148w" sizes="(max-width:760px) 43px, 68px" class="mp mp-bushl" src="./img/parts/24_bush_lower_left.webp" alt="">
+    <img srcset="./img/parts/t/25_flowers_right_group-116.webp 116w, ./img/parts/25_flowers_right_group.webp 184w" sizes="(max-width:760px) 58px, 90px" class="mp mp-flowerr" src="./img/parts/25_flowers_right_group.webp" alt="">
+    <img srcset="./img/parts/t/26_bush_lower_right-88.webp 88w, ./img/parts/26_bush_lower_right.webp 144w" sizes="(max-width:760px) 43px, 68px" class="mp mp-bushr" src="./img/parts/26_bush_lower_right.webp" alt="">
+    <div class="map-chara" id="map-sunny"><img src="./img/parts/t/06_sun_character-168.webp" width="248" height="223" alt="" loading="lazy" decoding="async"></div>
+    <div class="map-chara" id="map-moyan"><img src="./img/parts/t/07_moyan_school_hat_crying-132.webp" width="176" height="164" alt="" loading="lazy" decoding="async"></div>
     <p class="map-say map-say--sunny" aria-hidden="true"><b>サニー先生</b><wbr>気に<wbr>なる<wbr>場所を、<wbr>クリックしてみてね！</p>
     <p class="map-say map-say--moyan" aria-hidden="true"><b>モヤン</b><wbr>ここから<wbr>学べるんだね！<wbr> ふん<wbr>ふん。</p>
     
@@ -734,7 +739,7 @@ it.forEach(function(el,i){var r=rs[i],ty=el._ty||0,top=r.top-ty,bottom=r.bottom-
 var a=c((vh-top-76)/span),b=c((bottom-104)/span);
 el._ty=(1-e(a))*28-(1-e(b))*18;el.style.opacity=Math.min(e(a),e(b)).toFixed(3);el.style.transform="translateY("+el._ty.toFixed(1)+"px)";});}
 function req(){if(!busy){busy=true;requestAnimationFrame(draw)}}
-addEventListener("scroll",req,{passive:true});addEventListener("resize",req);draw();})();
+addEventListener("scroll",req,{passive:true});addEventListener("resize",req);addEventListener("load",req);/* 最初の計算は読み込みが終わってから(読み込み中に位置を測ると、ページ全体の計算が先に走って重い) */})();
 </script>
 <script src="./js/school-match.js?v=2026.1013b" defer></script>
 <script src="./js/cta-fab.js?v=2026.1016b" defer></script>
