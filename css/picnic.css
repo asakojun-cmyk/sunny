@@ -1502,3 +1502,30 @@
 .kk-how p{line-height:1.9}
 .kk-date{color:#7a7468;font-size:.8125rem}
 /* 試験対策ページ: 出題傾向への入口(第33回のプランの下) */
+
+/* 30日プラン: 毎日の1問1答カレンダー */
+.dcal-sec h2{text-align:center}
+.dcal__lead,.dcal__msg,.dcal__note,.dcal__go{text-align:center}
+.dcal{background:#fff;border-radius:20px;padding:20px 10px 16px;margin:20px 0 12px;box-sizing:border-box;max-width:100%}
+.dcal__stats{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin:0 0 16px;font-size:15px;color:#5d5850}
+.dcal__stats b{font-family:"Zen Maru Gothic","Hiragino Sans",sans-serif;font-size:24px;color:#29435e;margin:0 2px}
+.dcal__grid{margin:0 auto;padding:0;width:100%;max-width:420px;box-sizing:border-box;display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.dcal__grid>div{min-width:0}
+.dcal__wd{text-align:center;font-size:12px;color:#8a8478;line-height:1.6}
+.dcal__wd.is-sun{color:#c86a4c}.dcal__wd.is-sat{color:#5b84a8}
+.dcal__day{position:relative;aspect-ratio:1/1;max-width:100%;border-radius:12px;background:#f7f3ea;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;line-height:1.1}
+.dcal__date{font-size:12px;color:#6f6b63}
+.dcal__mark{font-size:18px;min-height:20px;line-height:1.1}
+.dcal__day.is-some .dcal__mark{font-size:11px;color:#5d5850;font-weight:700}
+.dcal__day.is-ok{background:#fdf0c4}
+.dcal__day.is-big{background:#fbe394}
+.dcal__kira{position:absolute;top:-6px;right:-4px;font-size:13px}
+.dcal__day.is-future{background:#fbf9f4}
+.dcal__day.is-future .dcal__date{color:#bdb4a5}
+.dcal__day.is-today{box-shadow:0 0 0 2px #c86a4c inset}
+.dcal__day.is-exam{background:#f4f8ed}
+.dcal__day.is-exam .dcal__mark{font-size:11px;font-weight:700;color:#4f6f53}
+.dcal__msg{font-family:"Zen Maru Gothic","Hiragino Sans",sans-serif;font-weight:700;color:#29435e;margin:8px 0 16px}
+.dcal__go{margin:0 0 12px}
+.dcal__note{font-size:14px!important;color:#6f6b63}
+@media (max-width:359px){.dcal__grid{gap:4px}.dcal__mark{font-size:15px}}

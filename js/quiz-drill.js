@@ -104,6 +104,7 @@
   // 理解度の記録: 1問ごとに「まだ=0 / まちがえた=1 / 正解した=2」を、この端末のブラウザにだけ保存する
   var LOG_KEY = "carepicnic-quiz-log-v1";
   var DOM_KEY = "carepicnic-quiz-domains-v1";
+  var DAY_KEY = "carepicnic-quiz-days-v1";
   function recordResult(item, correct) {
     try {
       var i = ALL.indexOf(item);
@@ -122,6 +123,14 @@
       });
       window.localStorage.setItem(DOM_KEY, JSON.stringify(doms));
     } catch (_e) { /* 保存できない環境でも、ドリルはそのまま動かす */ }
+    // 毎日のカレンダー用: その日に解いた数を日付ごとに数える(30日の逆算プランのページで使う)
+    try {
+      var now = new Date();
+      var day = now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+      var days = JSON.parse(window.localStorage.getItem(DAY_KEY) || "{}") || {};
+      days[day] = (days[day] || 0) + 1;
+      window.localStorage.setItem(DAY_KEY, JSON.stringify(days));
+    } catch (_e2) { /* 保存できなくてもドリルは動かす */ }
   }
 
   function judge(item, correct, btn) {
