@@ -264,6 +264,30 @@ function go(){if(done)return;done=true;ev.forEach(function(e){removeEventListene
 try{var f=new FontFace("Zen Maru Gothic","url(./fonts/maru-h2.woff2)",{weight:"100 900",display:"swap"});f.load().then(function(x){document.fonts.add(x)})}catch(e){}}
 ev.forEach(function(e){addEventListener(e,go,{capture:e!=="scroll",passive:true,once:true})});/* scroll はページ自体のスクロールだけ(横に流れる箱の動きでは読まない) */
 addEventListener("load",function(){setTimeout(go,3000)});})();</script>
+<style>/* 何のサイトか・選ぶ流れ・ゴール・試験対策への別ページ案内(2026-10-17) */
+.hero-what{margin:16px auto 0;max-width:30em;text-align:center}
+.hero-what strong{color:#3f6b4a}
+.hero-what__free{margin:6px auto 0;max-width:30em;font-size:.85rem;color:var(--color-text-subtle);text-align:center;line-height:1.7}
+.hero-steps{display:flex;justify-content:center;gap:6px;max-width:30em;margin:22px auto 0;padding:0;list-style:none}
+.hero-steps li{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;border-radius:14px;background:#fffdf8;font-size:.8rem;font-weight:700;line-height:1.5;text-align:center;word-break:keep-all}
+.hero-steps b{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--color-yellow-light);color:#6d5a20;font-size:.85rem}
+.hero-steps__goal{background:#eef4dd!important}
+.hero-steps__goal b{background:#3f6b4a;color:#fff}
+.lp-next{max-width:560px;margin:36px auto 0;padding:24px 20px;border-radius:18px;background:#f5f2eb}
+.lp-next__title{margin:0 0 14px;font-weight:700;font-size:1.05rem;text-align:center}
+.lp-next__list{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.lp-next__list li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:#fffdf8}
+.lp-next__list li>b{flex:none;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--color-yellow-light);color:#6d5a20}
+.lp-next__goal>b{background:#3f6b4a!important;color:#fff!important}
+.lp-next__do{margin:0 0 4px;font-weight:700;line-height:1.6}
+.lp-next__link{margin:0;font-size:.92rem}
+.lp-next__link a{color:#3f6b4a;font-weight:700}
+.lp-next__end{margin:18px 0 0;text-align:center;font-size:.92rem;line-height:1.8;color:#3b342c}
+.lp-study{background:#eaf4fa;text-align:center;padding:40px 0 48px}
+.lp-study__label{display:inline-block;margin:0 0 10px;padding:2px 12px;border-radius:99px;background:#fffdf8;font-size:.8rem;color:var(--color-text-subtle)}
+.lp-study h2{font-size:1.15rem}
+@media(max-width:560px){.hero-steps li{font-size:.74rem;padding:10px 4px}}
+</style>
 </head>
 <body class="is-home">
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -275,7 +299,7 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
         <span class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</span>
         <span class="site-logo__ja"><img class="logo-sun" src="./img/parts/t/06_sun_character-52.webp" alt="">キャリコン学びピクニック</span>
       </a>
-      <p class="site-header__tagline">「わからない」を持ち寄って、「わかった！」に変える場所</p>
+      <p class="site-header__tagline">キャリアコンサルタントの養成講座を、くらべて選べるサイト</p>
     </div>
     <nav class="header-nav" aria-label="主要メニュー">
       <a class="hero-link" href="./careers/">キャリコンとは</a>
@@ -325,9 +349,16 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
   <div class="hero-note">
     <h1 id="picnic-title" class="step step-2"><span class="picnic-kicker hero-note__hook hero-yasashiku">卒業生が<wbr>案内する<wbr>リアル情報</span><em>キャリアコンサルタント</em><br>養成講座ガイド</h1>
     <p class="hero-catch step step-2">学校選びを、<wbr>もっと<wbr>楽に。</p>
+    <p class="hero-note__desc hero-what step step-2">キャリアコンサルタントを<wbr>目指す人が、<wbr><strong>自分に<wbr>合う<wbr>養成講座を<wbr>選ぶための<wbr>サイト</strong>です。<wbr>7校の<wbr>費用・<wbr>期間・<wbr>通い方・<wbr>給付金を、<wbr>公式情報で<wbr>確かめて<wbr>くらべています。</p>
+    <p class="hero-what__free step step-2">どの<wbr>学校の<wbr>運営元でも<wbr>ありません。<wbr>運営者は、<wbr>講座を<wbr>受け終えた<wbr>個人です。</p>
+    <ol class="hero-steps step step-3" aria-label="このページで学校を選ぶ流れ">
+      <li><b>1</b><span>4つ選んで<wbr>しぼる</span></li>
+      <li><b>2</b><span>比較表で<wbr>くらべる</span></li>
+      <li class="hero-steps__goal"><b>3</b><span>説明会で<wbr>確かめる</span></li>
+    </ol>
     <div class="hero-two step step-3">
       <a class="picnic-button" href="#school-match" data-ev="top_hero_match">30秒で合う学校をさがす</a>
-      <a class="picnic-button picnic-button--line" href="./exam/" data-ev="top_hero_study">試験対策はこちら <span class="arw" aria-hidden="true">▶︎</span></a>
+      <a class="picnic-button picnic-button--line" href="./schools/compare/" data-ev="top_hero_compare">7校の比較表を見る <span class="arw" aria-hidden="true">▶︎</span></a>
 </div>
     </div>
   </div>
@@ -369,33 +400,14 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
         <div class="sm" data-school-match><div class="sm__card"><p class="sm__fallback"><a href="./schools/compare/">養成学校の<wbr>比較表を<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p></div></div>
       </div>
     </div>
-    <div class="lp-bridge">
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">ボクに合う学校は</span><wbr><span class="nb">わかったけど、</span><wbr><span class="nb">不安だなぁ……。</span></p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">不安なことは、</span><wbr><span class="nb">説明会で聞いてみよう。</span><wbr><span class="nb">無料だよ。</span></p></div>
+    <div class="lp-next" id="next-step">
+      <p class="lp-next__title">しぼれたら、<wbr>次は<wbr>この<wbr>2つ</p>
+      <ol class="lp-next__list">
+        <li><b>2</b><div><p class="lp-next__do">比較表で、<wbr>費用・<wbr>日程・<wbr>給付金を<wbr>くらべる</p><p class="lp-next__link"><a href="./schools/compare/" data-ev="top_next_compare">7校・<wbr>24項目の<wbr>比較表を<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p></div></li>
+        <li class="lp-next__goal"><b>3</b><div><p class="lp-next__do">候補の<wbr>学校の<wbr>説明会で、<wbr>気に<wbr>なる<wbr>ことを<wbr>直接<wbr>聞く</p><p class="lp-next__link"><a href="./schools/" data-ev="top_next_schools">学校ごとの<wbr>ページから<wbr>説明会の<wbr>日程へ <span class="arw" aria-hidden="true">▶︎</span></a></p></div></li>
+      </ol>
+      <p class="lp-next__end">＼ ここが<wbr>ゴール ／<br>自分に<wbr>合う<wbr>学校が<wbr>決まったら、<wbr>このサイトの<wbr>役目は<wbr>おしまいです。</p>
     </div>
-    <div class="lp-cta invite" id="setsumeikai">
-      <div class="invite__ticket">
-        <div class="invite__main">
-          <p class="invite__label">運営者が<wbr>実際に<wbr>受講した<wbr>講座</p>
-          <p class="invite__school">一般社団法人<wbr><span class="nb">地域連携プラットフォーム</span></p>
-          <ul class="invite__facts" aria-label="説明会のようす">
-            <li><span class="invite__ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M16 9.5V16l4.5 3"/></svg></span><b>約60分</b><span>質問もできる</span></li>
-            <li><span class="invite__ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="13" width="21" height="13.5" rx="2.5"/><path d="M4 9.5h24V13H4zM16 9.5v17"/><path d="M16 9.5c-2-4.5-7.5-4-6.500-1 .6 1.800 4 1.500 6.500 1zM16 9.5c2-4.500 7.500-4 6.500-1-.600 1.800-4 1.500-6.500 1z"/></svg></span><b>無料</b><span>まだ迷い中でOK</span></li>
-            <li><span class="invite__ico" aria-hidden="true"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9.500" width="16.500" height="13" rx="3.500"/><path d="M20.500 14.500l7-3.500v10l-7-3.500z"/></svg></span><b>Zoom</b><span>自宅から参加</span></li>
-          </ul>
-          <blockquote class="invite__voice">
-            <p>参加した<wbr>説明会は、<wbr>3人の<wbr>少人数でした。<wbr>声を<wbr>出して<wbr>質問できて、<wbr>聞きにくい<wbr>お金の<wbr>ことにも<wbr>答えて<wbr>もらえました。<wbr>説明会の<wbr>あとの<wbr>勧誘は<wbr>ありませんでした。</p>
-            <footer>運営者 ちゃん ・ <a href="./schools/chiiki-renkei-platform/#kai" data-ev="top_cta_kai">説明会の<wbr>様子を<wbr>読む <span class="arw" aria-hidden="true">▶︎</span></a></footer>
-          </blockquote>
-          <p class="invite__action"><a class="button button--primary invite__button" href="./schools/chiiki-renkei-platform/" data-ev="top_cta_setsumeikai">無料説明会の<wbr>日程を<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p>
-        </div>
-        <div class="invite__stub">
-          <p class="lp-cta__sub"><a href="./schools/compare/" data-ev="top_cta_compare">ほかの<wbr>学校とも<wbr>比べたい方は<wbr>こちら<wbr><span class="nb">(7校・24項目の比較) <span class="arw" aria-hidden="true">▶︎</span></span></a></p>
-          <p class="lp-cta__note">PR ・ この<wbr>サイトは<wbr>養成学校の<wbr>紹介に<wbr>よる<wbr>収益で<wbr>運営しています。<wbr>紹介リンクを<wbr>含むページには、<wbr>そのつど<wbr>広告である<wbr>旨を<wbr>明記しています。</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -407,22 +419,22 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 <div class="wave-edge" style="--from:#fff;--to:#f5f2eb" aria-hidden="true"></div>
 <section class="section campaign-now" aria-labelledby="campaign-title">
   <div class="container container--article">
-    <h2 id="campaign-title">養成講座の<wbr>キャンペーン・割引</h2>
-    <p class="campaign-now__lead">10月16日に<wbr>各校の<wbr>公式ページで<wbr>確かめた<wbr>内容です。<wbr>申込みの<wbr>前に、<wbr>公式ページでも<wbr>確かめてください。</p>
+    <h2 id="campaign-title">学校ごとの<wbr>キャンペーン・割引</h2>
+    <p class="campaign-now__lead">4校の<wbr>公式ページに<wbr>出ている<wbr>特典です。<wbr>どれも、<wbr>それぞれの<wbr>学校が<wbr>出しているもので、<wbr>このサイトの<wbr>特典では<wbr>ありません。<wbr>10月16日に<wbr>各校の<wbr>公式ページで<wbr>確かめた<wbr>内容です。<wbr>申込みの<wbr>前に、<wbr>公式ページでも<wbr>確かめてください。</p>
     <ul class="camp-banners">
-<li><a class="camp-banner camp-banner--lemon" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3AT5M+59PG+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fcareerjp.work%2Fcc1%2Ftokuten" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="camp-banner__pr">PR</i><span class="camp-banner__stub"><small>子育て特典</small><strong>10,000<i>円分</i></strong><em>Amazonギフト券</em></span><span class="camp-banner__body"><b class="camp-banner__school"><span class="nb">地域連携</span><span class="nb">プラットフォーム</span></b><span class="camp-banner__cond"><span class="nb">18歳以下の子を</span><span class="nb">育てている人が対象</span></span><span class="camp-banner__until"><span class="nb">期限の記載なし</span></span></span></a></li>
 <li data-until="2026-10-31"><a class="camp-banner camp-banner--sky" href="https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fwww.lec-jp.com%2Fcaricon%2Fkouza%2Fyousei%2F" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="camp-banner__pr">PR</i><span class="camp-banner__stub"><small>早割</small><strong>10,000<i>円</i></strong><em>安くなる</em></span><span class="camp-banner__body"><b class="camp-banner__school"><span class="nb">LEC東京</span><span class="nb">リーガルマインド</span></b><span class="camp-banner__cond"><span class="nb">12月〜3月開講の</span><span class="nb">クラスが対象</span></span><span class="camp-banner__until camp-banner__until--date">10月31日まで</span></span></a></li>
-<li><a class="camp-banner camp-banner--leaf" href="https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV8EY+5MF8+5YJRM" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="camp-banner__pr">PR</i><span class="camp-banner__stub"><small><span class="nb">説明会の参加特典</span></small><strong>11,000<i>円</i></strong><em>安くなるクーポン</em></span><span class="camp-banner__body"><b class="camp-banner__school">日本マンパワー</b><span class="camp-banner__cond"><span class="nb">説明会・体験会に</span><span class="nb">参加するともらえる</span></span><span class="camp-banner__until"><span class="nb">期限の記載なし</span></span></span></a></li>
 <li data-until="2026-10-31"><a class="camp-banner camp-banner--peach" href="https://px.a8.net/svt/ejp?a8mat=4BE7SX+DP0GQ+5UHI+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fcmcajapan.com%2Flp%2Fsetsumeikai" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="camp-banner__pr">PR</i><span class="camp-banner__stub"><small>早期割引</small><strong>33,000<i>円</i></strong><em>安くなる</em></span><span class="camp-banner__body"><b class="camp-banner__school">CMCA</b><span class="camp-banner__cond"><span class="nb">無料説明会への</span><span class="nb">参加が条件</span></span><span class="camp-banner__until camp-banner__until--date">10月31日まで</span></span></a></li>
+<li><a class="camp-banner camp-banner--leaf" href="https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV8EY+5MF8+5YJRM" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="camp-banner__pr">PR</i><span class="camp-banner__stub"><small><span class="nb">説明会の参加特典</span></small><strong>11,000<i>円</i></strong><em>安くなるクーポン</em></span><span class="camp-banner__body"><b class="camp-banner__school">日本マンパワー</b><span class="camp-banner__cond"><span class="nb">説明会・体験会に</span><span class="nb">参加するともらえる</span></span></span></a></li>
+<li><a class="camp-banner camp-banner--lemon" href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3AT5M+59PG+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fcareerjp.work%2Fcc1%2Ftokuten" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="camp-banner__pr">PR</i><span class="camp-banner__stub"><small>子育て特典</small><strong>10,000<i>円分</i></strong><em>Amazonギフト券</em></span><span class="camp-banner__body"><b class="camp-banner__school"><span class="nb">地域連携</span><span class="nb">プラットフォーム</span></b><span class="camp-banner__cond"><span class="nb">18歳以下の子を</span><span class="nb">育てている人が対象</span></span></span></a></li>
     </ul>
     <p class="camp-scroll-hint" aria-hidden="true">横にスクロールできます <span class="arw">▶︎</span></p>
     <details class="camp-details">
       <summary>条件を<wbr>くわしく<wbr>見る</summary>
       <dl>
-        <div><dt>地域連携プラットフォーム</dt><dd>18歳以下の<wbr>お子さんを<wbr>育てている<wbr>保護者は、<wbr>Amazonギフト券<wbr>10,000円分が<wbr>もらえます。<wbr>給付金の<wbr>対象外の人(学生・公務員・主婦・個人事業者など)は、<wbr>27,000円の<wbr>割引も<wbr>あります。<wbr>期限の<wbr>記載は<wbr>ありません。<wbr>特典を<wbr>組み合わせられるかは、<wbr>申し込む<wbr>前に<wbr>事務局で<wbr>確かめてください。</dd></div>
-        <div data-until="2026-10-31"><dt>LEC東京リーガルマインド</dt><dd>12月〜3月開講クラスに、<wbr>10月31日(土)までに<wbr>申し込むと、<wbr>受講料が<wbr>10,000円割引(330,000円→320,000円)。<wbr>申込者全員に、<wbr>試験対策Web講座3点セット(参考価格33,000円)も<wbr>つきます。<wbr>こちらは<wbr>期限の<wbr>記載が<wbr>ありません。</dd></div>
-        <div><dt>日本マンパワー</dt><dd>説明会・<wbr>講座体験会に<wbr>参加すると、<wbr>受講料に<wbr>使える<wbr>11,000円引きの<wbr>クーポンが<wbr>もらえます。<wbr>期限の<wbr>記載は<wbr>ありません。</dd></div>
+        <div data-until="2026-10-31"><dt>LEC東京リーガルマインド</dt><dd>12月〜3月開講クラスに、<wbr>10月31日(土)までに<wbr>申し込むと、<wbr>受講料が<wbr>10,000円割引(330,000円→320,000円)。<wbr>申込者全員に、<wbr>試験対策Web講座3点セット(参考価格33,000円)も<wbr>つきます。</dd></div>
         <div data-until="2026-10-31"><dt>CMCA</dt><dd>10月31日までに<wbr>申し込むと、<wbr>受講料(352,000円)が<wbr>割引に<wbr>なります。<wbr>無料説明会への<wbr>参加が<wbr>条件です。<wbr>公式ページには<wbr>「3.3万円」と<wbr>「3万円」の<wbr>2つの<wbr>書き方が<wbr>あります。<wbr>金額は<wbr>説明会で<wbr>確かめてください。</dd></div>
+        <div><dt>日本マンパワー</dt><dd>説明会・<wbr>講座体験会に<wbr>参加すると、<wbr>受講料に<wbr>使える<wbr>11,000円引きの<wbr>クーポンが<wbr>もらえます。</dd></div>
+        <div><dt>地域連携プラットフォーム</dt><dd>18歳以下の<wbr>お子さんを<wbr>育てている<wbr>保護者は、<wbr>Amazonギフト券<wbr>10,000円分が<wbr>もらえます。<wbr>給付金の<wbr>対象外の人(学生・公務員・主婦・個人事業者など)は、<wbr>27,000円の<wbr>割引も<wbr>あります。<wbr>特典を<wbr>組み合わせられるかは、<wbr>申し込む<wbr>前に<wbr>事務局で<wbr>確かめてください。</dd></div>
       </dl>
     </details>
     <script>
@@ -516,119 +528,8 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
     </div>  </div>
 </section>
 
-<div class="wave-edge" style="--from:#f5f2eb;--to:#eef4dd" aria-hidden="true"></div>
-<section class="picnic-map" id="picnic-map" aria-labelledby="picnic-map-title">
-  <div class="picnic-map__head">
-    <p class="picnic-kicker">LEARN ON A PICNIC</p>
-    <h2 id="picnic-map-title">ピクニックしながら<wbr>学ぶ</h2>
-    <p>勉強中・<wbr>試験前の<wbr>方は、<wbr>ここから。<wbr>やりたい<wbr>ことを<wbr>選ぶか、<wbr>地図の<wbr>気に<wbr>なる<wbr>場所を<wbr>押してみてね。</p>
-  </div>
-  <div class="news-list" aria-label="お知らせ">
-    <p class="news-list__tag" aria-hidden="true">＼ NEW ／</p>
-    <a class="news-row" data-news-date="2026-10-16" href="./exam-guide/last-30days/#mainichi"><span class="visually-hidden">新着: </span><b class="news-row__title">毎日の<wbr>1問1答<wbr>カレンダーを<wbr>始めました</b><time class="news-row__date" datetime="2026-10-16">10月16日</time><span class="news-row__go"><span class="news-row__go-text">見てみる</span> <span class="arw" aria-hidden="true">▶︎</span></span></a>
-    <a class="news-row" data-news-date="2026-10-16" href="./kakomon-keiko/"><span class="visually-hidden">新着: </span><b class="news-row__title">過去6回の<wbr>出題傾向を<wbr>まとめました</b><time class="news-row__date" datetime="2026-10-16">10月16日</time><span class="news-row__go"><span class="news-row__go-text">見てみる</span> <span class="arw" aria-hidden="true">▶︎</span></span></a>
-    <a class="news-row" data-news-date="2026-10-15" href="./games/"><span class="visually-hidden">新着: </span><b class="news-row__title">ミニゲームを<wbr>改良しました</b><time class="news-row__date" datetime="2026-10-15">10月15日</time><span class="news-row__go"><span class="news-row__go-text">遊んでみる</span> <span class="arw" aria-hidden="true">▶︎</span></span></a>
-    <a class="news-row" data-news-date="2026-10-13" href="./exam-guide/ronjutsu-moshi/"><span class="visually-hidden">新着: </span><b class="news-row__title">論述模試を<wbr>追加しました</b><time class="news-row__date" datetime="2026-10-13">10月13日</time><span class="news-row__go"><span class="news-row__go-text">解いてみる</span> <span class="arw" aria-hidden="true">▶︎</span></span></a>
-    <a class="news-row" data-news-date="2026-10-11" href="./theorists/super/"><span class="visually-hidden">新着: </span><b class="news-row__title">音声学習機能を<wbr>追加しました</b><time class="news-row__date" datetime="2026-10-11">10月11日</time><span class="news-row__go"><span class="news-row__go-text">聞いてみる</span> <span class="arw" aria-hidden="true">▶︎</span></span></a>
-  </div>
-  <nav class="map-guide" aria-label="おすすめの入り口">
-    <div class="map-guide__want" data-want>
-      <span class="map-guide__sel"><select id="want-select" aria-label="いま、何がしたい？">
-        <optgroup label="まず知りたい">
-          <option value="./start/">何から始めるか知りたい</option>
-          <option value="./exam/">試験の全体像を知りたい</option>
-          <option value="./exam-guide/goukakuritsu/">合格率・難しさを知りたい</option>
-          <option value="./kakomon-keiko/">毎回出るテーマ(過去6回)を知りたい</option>
-          <option value="./careers/">働き方を知りたい</option>
-        </optgroup>
-        <optgroup label="調べたい・覚えたい">
-          <option value="./terms/">わからない言葉を調べたい</option>
-          <option value="./theorists/">理論家を覚えたい</option>
-          <option value="./hinshutsu/">よく出る用語だけ見たい</option>
-          <option value="./laws/">法改正・時事ニュースを知りたい</option>
-          <option value="./exam-guide/shiryo/">白書・調査の要点を知りたい</option>
-        </optgroup>
-        <optgroup label="解きたい">
-          <option value="./games/quiz/">1問1答を解きたい</option>
-          <option value="./exam-guide/moshi/">模擬試験で力だめししたい</option>
-          <option value="./exam-guide/bunya/">分野別に解きたい</option>
-          <option value="./exam-guide/ronjutsu-moshi/">論述の模擬試験を解きたい</option>
-          <option value="./games/ronjutsu/">論述の練習をしたい</option>
-          <option value="./games/">ゲームで覚えたい</option>
-        </optgroup>
-        <optgroup label="試験が近い・ひと休み">
-          <option value="./exam-guide/last-30days/#mainichi">毎日の1問1答に花丸をつけたい(カレンダー)</option>
-          <option value="./exam-guide/last-30days/">試験まで30日の計画を立てたい</option>
-          <option value="https://www.youtube.com/channel/UCpUFUH3VeCqG4cly2HrTZ3w">1分動画で覚えたい(YouTube)</option>
-          <option value="https://note.com/gifted_pansy8788/n/nc7809a9fd224">直前対策テキストがほしい(note・有料)</option>
-          <option value="./column/">ひと休みしたい(コラム)</option>
-        </optgroup>
-      </select></span>
-      <button type="button" class="map-guide__go" data-ev="top_guide_want">ここへ<wbr>行く <span class="arw" aria-hidden="true">▶︎</span></button>
-    </div>
-  </nav>
-  <div class="map-stage" role="img" aria-label="キャリコン学びピクニックの草原の地図。図書館、広場、テント、掲示板、マルシェ、森が点々の小道でつながっていて、モヤンとサニー先生が散歩している">
-    <svg class="map-trail" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
-      <path class="map-trail__base" d="M 300 460 C 330 295, 560 200, 800 205 C 1060 210, 1300 300, 1330 470 C 1350 620, 1120 720, 830 725 C 560 730, 280 640, 300 460 Z" fill="none" stroke="#fdf8ec" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-      <path class="map-trail__dots" d="M 300 460 C 330 295, 560 200, 800 205 C 1060 210, 1300 300, 1330 470 C 1350 620, 1120 720, 830 725 C 560 730, 280 640, 300 460 Z" fill="none" stroke="#e4d3a8" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.5 24"/>
-    </svg>
-    <i class="map-cloud map-cloud--a" aria-hidden="true"></i>
-    <i class="map-cloud map-cloud--b" aria-hidden="true"></i>
-    <i class="map-cloud map-cloud--c" aria-hidden="true"></i>
-    <img srcset="./img/parts/t/04_book_wagon-188.webp 188w, ./img/parts/t/04_book_wagon-292.webp 292w" sizes="(max-width:560px) 22.6vw, (max-width:760px) 93px, 146px" loading="lazy" class="mp mp-wagon" src="./img/parts/t/04_book_wagon-292.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/05_pinwheel-44.webp 44w, ./img/parts/t/05_pinwheel-64.webp 64w" sizes="(max-width:760px) 21px, 32px" loading="lazy" class="mp mp-pinwheel" src="./img/parts/t/05_pinwheel-64.webp" alt="">
-    <img srcset="./img/parts/t/27_picnic_mat-316.webp 316w, ./img/parts/t/27_picnic_mat-380.webp 380w, ./img/parts/t/27_picnic_mat-496.webp 496w" sizes="(max-width:560px) 33.9vw, (max-width:760px) 158px, 247px" loading="lazy" class="mp mp-mat" src="./img/parts/t/27_picnic_mat-496.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/11_lunchbox-88.webp 88w, ./img/parts/t/11_lunchbox-108.webp 108w, ./img/parts/t/11_lunchbox-136.webp 136w" sizes="(max-width:560px) 9.4vw, (max-width:760px) 43px, 68px" loading="lazy" class="mp mp-lunch mp-lunch--a" src="./img/parts/t/11_lunchbox-136.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/suito2-48.webp 48w, ./img/parts/suito2.webp 68w" sizes="(max-width:560px) 4.3vw, (max-width:760px) 22px, 34px" loading="lazy" class="mp mp-suito" src="./img/parts/suito2.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/13_blue_yellow_tent-136.webp 136w, ./img/parts/13_blue_yellow_tent.webp 213w" sizes="(max-width:560px) 18.8vw, (max-width:760px) 68px, 107px" loading="lazy" class="mp mp-tent1" src="./img/parts/13_blue_yellow_tent.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/tent-red-124.webp 124w, ./img/parts/tent-red.webp 190w" sizes="(max-width:560px) 16.0vw, (max-width:760px) 61px, 96px" loading="lazy" class="mp mp-tent2" src="./img/parts/tent-red.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/18_bulletin_board-168.webp 168w, ./img/parts/t/18_bulletin_board-224.webp 224w, ./img/parts/t/18_bulletin_board-260.webp 260w" sizes="(max-width:560px) 19.8vw, (max-width:760px) 83px, 129px" loading="lazy" class="mp mp-board" src="./img/parts/t/18_bulletin_board-260.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/19_market_stall-160.webp 160w, ./img/parts/t/19_market_stall-248.webp 248w" sizes="(max-width:560px) 20.7vw, (max-width:760px) 79px, 124px" loading="lazy" class="mp mp-stall" src="./img/parts/t/19_market_stall-248.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/15_tree_hammock_left-96.webp 96w, ./img/parts/t/15_tree_hammock_left-128.webp 128w, ./img/parts/t/15_tree_hammock_left-148.webp 148w" sizes="(max-width:560px) 11.3vw, (max-width:760px) 47px, 73px" loading="lazy" class="mp mp-tree1" src="./img/parts/t/15_tree_hammock_left-148.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/16_hammock-152.webp 152w, ./img/parts/t/16_hammock-236.webp 236w, ./img/parts/t/16_hammock-276.webp 276w" sizes="(max-width:560px) 24.5vw, (max-width:760px) 75px, 118px" loading="lazy" class="mp mp-hammock" src="./img/parts/t/16_hammock-276.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/17_tree_hammock_right-96.webp 96w, ./img/parts/17_tree_hammock_right.webp 146w" sizes="(max-width:560px) 11.3vw, (max-width:760px) 47px, 73px" loading="lazy" class="mp mp-tree2" src="./img/parts/17_tree_hammock_right.webp" alt="" decoding="async">
-    <img srcset="./img/parts/t/23_flowers_left_group-116.webp 116w, ./img/parts/t/23_flowers_left_group-180.webp 180w" sizes="(max-width:760px) 58px, 90px" loading="lazy" class="mp mp-flowerl" src="./img/parts/t/23_flowers_left_group-180.webp" alt="">
-    <img srcset="./img/parts/t/24_bush_lower_left-88.webp 88w, ./img/parts/t/24_bush_lower_left-136.webp 136w" sizes="(max-width:760px) 43px, 68px" loading="lazy" class="mp mp-bushl" src="./img/parts/t/24_bush_lower_left-136.webp" alt="">
-    <img srcset="./img/parts/t/25_flowers_right_group-116.webp 116w, ./img/parts/t/25_flowers_right_group-180.webp 180w" sizes="(max-width:760px) 58px, 90px" loading="lazy" class="mp mp-flowerr" src="./img/parts/t/25_flowers_right_group-180.webp" alt="">
-    <img srcset="./img/parts/t/26_bush_lower_right-88.webp 88w, ./img/parts/t/26_bush_lower_right-136.webp 136w" sizes="(max-width:760px) 43px, 68px" loading="lazy" class="mp mp-bushr" src="./img/parts/t/26_bush_lower_right-136.webp" alt="">
-    <div class="map-chara" id="map-sunny"><img src="./img/parts/t/06_sun_character-168.webp" width="248" height="223" alt="" loading="lazy" decoding="async"></div>
-    <div class="map-chara" id="map-moyan"><img src="./img/parts/t/07_moyan_school_hat_crying-132.webp" width="176" height="164" alt="" loading="lazy" decoding="async"></div>
-    <p class="map-say map-say--sunny" aria-hidden="true"><b>サニー先生</b><wbr>気に<wbr>なる<wbr>場所を、<wbr>クリックしてみてね！</p>
-    <p class="map-say map-say--moyan" aria-hidden="true"><b>モヤン</b><wbr>ここから<wbr>学べるんだね！<wbr> ふん<wbr>ふん。</p>
-    
-    <a class="map-spot map-spot--blue" href="./terms/" aria-label="キャリア図書館へ入る" style="left:3%;top:12%;width:20%;height:30%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/04_book_wagon.webp" alt=""></i><b>キャリア図書館</b></span>
-      <span class="map-spot__note" aria-hidden="true">難しい用語を<br>調べるよ</span>
-    </a>
-    <a class="map-spot map-spot--coral" href="./obento/" aria-label="ピクニック広場へ入る" style="left:36.5%;top:33%;width:27%;height:31%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/t/11_lunchbox.webp" alt=""></i><b>ピクニック広場</b></span>
-      <span class="map-spot__note" aria-hidden="true">キャリアの理論家と<br>一緒にランチ！</span>
-    </a>
-    <a class="map-spot map-spot--yellow" href="./exam/" aria-label="試験対策テントへ入る" style="left:70%;top:7%;width:19%;height:30%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/13_blue_yellow_tent.webp" alt=""></i><b>試験対策テント</b></span>
-      <span class="map-spot__note" aria-hidden="true">遊びながら<br>試験対策しちゃおう！</span>
-    </a>
-    <a class="map-spot map-spot--pink" href="./terms/rinri-koryo/" aria-label="キャリア相談テントへ入る" style="left:78%;top:43%;width:17%;height:26%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/tent-red.webp" alt=""></i><b>キャリア相談テント</b></span>
-      <span class="map-spot__note" aria-hidden="true">約束事って何？</span>
-    </a>
-    <a class="map-spot map-spot--green" href="./laws/" aria-label="キャリコンNOW掲示板へ入る" style="left:3%;top:47%;width:18%;height:28%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/t/18_bulletin_board.webp" alt=""></i><b>キャリコンNOW掲示板</b></span>
-      <span class="map-spot__note" aria-hidden="true">今知っておくべき<br>情報を更新</span>
-    </a>
-    <a class="map-spot map-spot--lavender" href="./careers/" aria-label="キャリアマルシェへ入る" style="left:32%;top:67%;width:20%;height:27%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/19_market_stall.webp" alt=""></i><b>キャリアマルシェ</b></span>
-      <span class="map-spot__note" aria-hidden="true">キャリコンの<br>働き方</span>
-    </a>
-    <a class="map-spot map-spot--cream" href="./column/" aria-label="ひと休みの森へ入る" style="left:62%;top:64%;width:27%;height:28%">
-      <span class="map-spot__sign"><i aria-hidden="true"><img src="./img/parts/t/16_hammock.webp" alt=""></i><b>ひと<wbr>休みの<wbr>森</b></span>
-      <span class="map-spot__note" aria-hidden="true">モヤンの<br>中の人のコラム</span>
-    </a>
-  </div>
-  <p class="picnic-rest-note">🌳 疲れた<wbr>日は、<wbr>閉じても<wbr>大丈夫。<wbr>ここは<wbr>いつでも<wbr>開いているよ。</p>
-</section>
 
-<div class="wave-edge" style="--from:#eef4dd;--to:#eaf4fa" aria-hidden="true"></div>
+<div class="wave-edge" style="--from:#f5f2eb;--to:#eaf4fa" aria-hidden="true"></div>
 <section class="section lp-profile" aria-labelledby="lp-profile-title">
   <div class="container container--article">
     <div class="picnic-map__head">
@@ -643,6 +544,15 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
         <p class="lp-profile__link"><a href="./about/" data-ev="top_author_about">運営者に<wbr>ついて <wbr><span class="arw" aria-hidden="true">▶︎</span></a></p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section lp-study" aria-labelledby="lp-study-title">
+  <div class="container container--article">
+    <p class="lp-study__label">学校選びとは<wbr>別の<wbr>ページです</p>
+    <h2 id="lp-study-title">講座を<wbr>受けていて、<wbr>試験の<wbr>勉強中の<wbr>方へ</h2>
+    <p>用語・<wbr>理論家・<wbr>1問1答・<wbr>模擬試験は、<wbr>試験対策の<wbr>ページに<wbr>まとめています。</p>
+    <p><a class="picnic-button picnic-button--line" href="./exam/" data-ev="top_study_exam">試験対策の<wbr>ページへ <span class="arw" aria-hidden="true">▶︎</span></a></p>
   </div>
 </section>
 
@@ -662,7 +572,7 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
     <div class="site-footer__brand">
       <p class="site-logo__ja"><img class="logo-sun" src="./img/parts/06_sun_character.webp" alt="" loading="lazy" decoding="async">キャリコン学びピクニック</p>
       <p class="site-logo__en">SUNNY &amp; MOYAN CAREER PICNIC</p>
-      <p class="site-footer__desc">過去問の用語の意味から調べられる、キャリアコンサルタント試験の入門サイト</p>
+      <p class="site-footer__desc">キャリアコンサルタントを目指す人が、自分に合う養成講座を選べる比較サイト。試験の勉強ページもあります。</p>
     </div>
     <nav class="site-footer__sitemap" aria-label="サイト全体のメニュー">
       <p class="drawer__label drawer__label--who">キャリコンって何？という方へ</p>
@@ -715,9 +625,9 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 <nav class="bottom-nav" aria-label="モバイルナビゲーション"><a class="bottom-nav__item is-active" href="./" data-ev="nav_home">
       <span class="bottom-nav__icon bottom-nav__icon--home" aria-hidden="true"></span>
       <span class="bottom-nav__label">ホーム</span>
-    </a><a class="bottom-nav__item bottom-nav__item--cta" href="./schools/chiiki-renkei-platform/#kai" data-ev="nav_soudan">
+    </a><a class="bottom-nav__item bottom-nav__item--cta" href="./#school-match" data-ev="nav_match">
       <span class="bottom-nav__icon bottom-nav__icon--soudan" aria-hidden="true"></span>
-      <span class="bottom-nav__label">無料相談</span>
+      <span class="bottom-nav__label">合う学校</span>
     </a><a class="bottom-nav__item" href="./exam-guide/last-30days/#mainichi" data-ev="nav_daily">
       <span class="bottom-nav__icon bottom-nav__icon--quiz" aria-hidden="true"></span>
       <span class="bottom-nav__label">今日の問題</span>
@@ -750,7 +660,7 @@ function req(){if(!busy){busy=true;requestAnimationFrame(draw)}}
 addEventListener("scroll",req,{passive:true});addEventListener("resize",req);/* 最初の計算は読み込みが終わってから(読み込み中に位置を測ると、ページ全体の計算が先に走って重い) */})();
 </script>
 <script>/* デザインのファイル全体は、最初の画面を描いたあとに読む(最初の画面のデザインはページの中に書いてある) */
-(function(){var JS=["./js/picnic-map.js?v=v2026.0728.1616","./js/reveal.js?v=2026.1016","./js/search-fab.js?v=v2026.0728.1616","./js/news-expire.js?v=2026.1015","./js/school-match.js?v=2026.1013b","./js/cta-fab.js?v=2026.1016b"];
+(function(){var JS=["./js/picnic-map.js?v=v2026.0728.1616","./js/reveal.js?v=2026.1016","./js/search-fab.js?v=v2026.0728.1616","./js/news-expire.js?v=2026.1015","./js/school-match.js?v=2026.1013b"];
 function go(){[].forEach.call(document.querySelectorAll("template.late-css"),function(t){t.parentNode.replaceChild(t.content.cloneNode(true),t)});
 /* 動きのためのプログラムも、最初の画面を描いたあとに(書いた順に動く) */
 JS.forEach(function(u){var e=document.createElement("script");e.src=u;e.async=false;document.body.appendChild(e)})}
