@@ -3087,6 +3087,8 @@ button {
   color: var(--color-text-subtle);
 }
 .column-tag {
+  display: inline-block;
+  white-space: nowrap; /* 「#マイン/ド」のように途中で折れないように */
   font-size: 14px;
   color: var(--color-terracotta);
   font-weight: 700;

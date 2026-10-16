@@ -196,3 +196,10 @@ main~footer{--bg:#e9f3f7}
 }
 .site-main a.txt-link:hover, main a.txt-link:hover { color: #ee8466 !important; }
 .site-main a.txt-link .arw, main a.txt-link .arw { color: inherit; }
+
+/* 2026-10-16 文字の大きさの順番: タイトル(h1)より場面の見出し(h2)が大きく見えていたのを、
+   タイトル > 場面の見出し > おかわりばなし の順に */
+.episode h2,.rainbow h2,.game h2,.basket h2{font-size:clamp(1.5rem,2.6vw,2.125rem)}
+.okawari h2{font-size:clamp(1.375rem,2.3vw,1.875rem)}
+/* お客さまの一言は、<wbr> の位置(文節)でだけ折り返す。「なる？」の「る？」だけが次の行に落ちないように */
+.opening__title>span{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
