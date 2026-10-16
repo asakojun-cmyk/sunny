@@ -196,7 +196,8 @@
 .site-main h1 { text-wrap: balance; }
 
 /* ---------- 9. キャリコンNOW掲示板: 種類の札と、しぼるボタン(2026-10-10) ---------- */
-.now-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 8px; }
+.now-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 10px 0 8px; }
+.now-filter__note { text-align: center; }
 .now-filter__chip { appearance: none; border: 1.5px solid #e3ddcf; background: #fff; border-radius: 99px; padding: 7px 14px; font: inherit; font-size: .875rem; font-weight: 700; letter-spacing: .04em; color: #5b5a52; cursor: pointer; }
 .now-filter__chip[aria-pressed="true"] { background: #5b7f5f; border-color: #5b7f5f; color: #fff; }
 .now-filter__note { margin: 0 0 6px; font-size: .8125rem; line-height: 1.8; color: #7a7468; }
