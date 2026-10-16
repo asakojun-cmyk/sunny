@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
 COMMON = ['style.css', 'picnic.css', 'refine.css', 'yomiyasu.css']
-LINK = re.compile(r'<link rel="stylesheet" href="((?:\./|\.\./)*)css/([^"?]+\.css)(\?[^"]*)?"(?: data-src="([^"]*)")?>')
+LINK = re.compile(r'<link rel="stylesheet" href="((?:\./|\.\./)*)css/([^"?]+\.css)(\?[^"]*)?"(?: data-src="([^"]*)")?((?: (?:media|onload)="[^"]*")*)>')
 
 
 def minify(css: str) -> str:
@@ -58,7 +58,7 @@ def _squash(s: str) -> str:
 
 def expand(link_match):
     """リンク1本 → 元ファイルの一覧 [(name, query)]"""
-    prefix, name, query, data_src = link_match.groups()
+    prefix, name, query, data_src, _extra = link_match.groups()
     if data_src:
         return [tuple(x.split('?', 1)) if '?' in x else (x, '') for x in data_src.split(',')]
     return [(name, (query or '').lstrip('?'))]
@@ -115,7 +115,8 @@ def process(html_path, used):
             bundle = build_bundle(ch)
             used.add(bundle)
             src = ','.join(f'{n}?{q}' if q else n for n, q in ch)
-            tags.append(f'<link rel="stylesheet" href="{prefix}{bundle}" data-src="{src}">')
+            # media / onload(あとから読む指定)があれば、そのまま残す
+            tags.append(f'<link rel="stylesheet" href="{prefix}{bundle}" data-src="{src}"{g[0].group(5) or ""}>')
         tag = '\n'.join(tags)
         edits.append((g[0].start(), g[0].end(), tag))
         for m in g[1:]:
