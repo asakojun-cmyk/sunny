@@ -248,13 +248,19 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 /* トップの最初の画面に出る丸い文字は、その字とかなだけの小さいファイル(約35KB)で先に出す。
    サイト全体の丸い文字(約165KB)は、ページが読み終わってから読む(同じ字形なので見た目は変わらない) */
 @font-face{font-family:"Maru Top";src:url(./fonts/maru-top2.woff2) format("woff2");font-weight:100 900;font-display:swap}
+/* 最初の画面より下のまとまりは、画面に近づいてから組み立てる(読み込み中の計算を減らす)。高さはおおよそを先に伝えておく */
+.is-home main#main>section.lp-last{content-visibility:auto;contain-intrinsic-size:auto 1900px}
+.is-home main#main>section.campaign-now{content-visibility:auto;contain-intrinsic-size:auto 780px}
+.is-home main#main>section.lp-river{content-visibility:auto;contain-intrinsic-size:auto 2800px}
+.is-home main#main>section.picnic-map{content-visibility:auto;contain-intrinsic-size:auto 1300px}
+.is-home main#main>section.lp-profile,.is-home .site-footer{content-visibility:auto;contain-intrinsic-size:auto 760px}
 #picnic-title,#picnic-title *{font-family:"Maru Top","Zen Maru Gothic","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif!important}</style>
 <script>/* サイト全体の丸い文字(約165KB)は、最初の画面が出たあとに読む。
    スクロール・タップしたらすぐ、何もしなくてもページの読み込みが終わって3秒後に */
 (function(){var done=false,ev=["scroll","touchstart","pointerdown","keydown"];
 function go(){if(done)return;done=true;ev.forEach(function(e){removeEventListener(e,go,true)});
 try{var f=new FontFace("Zen Maru Gothic","url(./fonts/maru-h2.woff2)",{weight:"100 900",display:"swap"});f.load().then(function(x){document.fonts.add(x)})}catch(e){}}
-ev.forEach(function(e){addEventListener(e,go,{capture:true,passive:true,once:true})});
+ev.forEach(function(e){addEventListener(e,go,{capture:e!=="scroll",passive:true,once:true})});/* scroll はページ自体のスクロールだけ(横に流れる箱の動きでは読まない) */
 addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 </head>
 <body class="is-home">
@@ -327,24 +333,24 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 <div class="picnic-stage" role="img" aria-label="レモンイエローのサニー先生と、黄色い帽子の雲・モヤンが、草原のピクニックシートで一緒に勉強を始める場面">
     <img class="ps ps-cloud1" src="./img/parts/01_sky_cloud_left.webp" alt="">
     <img class="ps ps-cloud2" src="./img/parts/03_sky_cloud_right.webp" alt="">
-    <img class="ps ps-wagon" src="./img/parts/04_book_wagon.webp" alt="">
-    <img class="ps ps-pinwheel" src="./img/parts/t/05_pinwheel.webp" alt="">
-    <img class="ps ps-tree" src="./img/parts/14_tree_center.webp" alt="">
-    <img class="ps ps-tent" src="./img/parts/13_blue_yellow_tent.webp" alt="">
-    <img class="ps ps-board" src="./img/parts/t/18_bulletin_board.webp" alt="">
-    <img class="ps ps-stall" src="./img/parts/19_market_stall.webp" alt="">
-    <img class="ps ps-mat" src="./img/parts/27_picnic_mat.webp" alt="">
-    <img class="ps ps-sunny" src="./img/parts/06_sun_character.webp" alt="">
-    <img class="ps ps-moyan" src="./img/parts/07_moyan_school_hat_crying.webp" alt="">
-    <img class="ps ps-lunch" src="./img/parts/t/11_lunchbox.webp" alt="">
-    <img class="ps ps-note" src="./img/parts/t/09_blue_notebook.webp" alt="">
-    <img class="ps ps-pencil" src="./img/parts/t/10_yellow_pencil.webp" alt="">
-    <img class="ps ps-ball" src="./img/parts/t/12_beach_ball.webp" alt="">
-    <img class="ps ps-bag" src="./img/parts/t/08_blue_backpack.webp" alt="">
+    <img srcset="./img/parts/t/04_book_wagon-256.webp 256w, ./img/parts/04_book_wagon.webp 336w" sizes="(max-width:760px) 127px, 169px" loading="lazy" class="ps ps-wagon" src="./img/parts/04_book_wagon.webp" alt="">
+    <img loading="lazy" class="ps ps-pinwheel" src="./img/parts/t/05_pinwheel-72.webp" alt="">
+    <img loading="lazy" class="ps ps-tree" src="./img/parts/14_tree_center.webp" alt="">
+    <img loading="lazy" class="ps ps-tent" src="./img/parts/t/13_blue_yellow_tent-212.webp" alt="">
+    <img loading="lazy" class="ps ps-board" src="./img/parts/t/18_bulletin_board-228.webp" alt="">
+    <img loading="lazy" class="ps ps-stall" src="./img/parts/19_market_stall.webp" alt="">
+    <img srcset="./img/parts/t/27_picnic_mat-424.webp 424w, ./img/parts/t/27_picnic_mat-524.webp 524w" sizes="(max-width:560px) 211px, (max-width:760px) 261px, 261px" class="ps ps-mat" src="./img/parts/t/27_picnic_mat-524.webp" alt="">
+    <img srcset="./img/parts/t/06_sun_character-192.webp 192w, ./img/parts/t/06_sun_character-224.webp 224w" sizes="(max-width:560px) 96px, (max-width:760px) 112px, 112px" class="ps ps-sunny" src="./img/parts/t/06_sun_character-224.webp" alt="">
+    <img srcset="./img/parts/t/07_moyan_school_hat_crying-148.webp 148w, ./img/parts/07_moyan_school_hat_crying.webp 176w" sizes="(max-width:560px) 74px, (max-width:760px) 88px, 88px" class="ps ps-moyan" src="./img/parts/07_moyan_school_hat_crying.webp" alt="">
+    <img srcset="./img/parts/t/11_lunchbox-104.webp 104w, ./img/parts/t/11_lunchbox-124.webp 124w" sizes="(max-width:560px) 52px, (max-width:760px) 62px, 62px" class="ps ps-lunch" src="./img/parts/t/11_lunchbox-124.webp" alt="">
+    <img loading="lazy" class="ps ps-note" src="./img/parts/t/09_blue_notebook-92.webp" alt="">
+    <img loading="lazy" class="ps ps-pencil" src="./img/parts/t/10_yellow_pencil-60.webp" alt="">
+    <img loading="lazy" class="ps ps-ball" src="./img/parts/t/12_beach_ball-80.webp" alt="">
+    <img loading="lazy" class="ps ps-bag" src="./img/parts/t/08_blue_backpack-112.webp" alt="">
     <img class="ps ps-flowerl" src="./img/parts/23_flowers_left_group.webp" alt="">
-    <img class="ps ps-bushl" src="./img/parts/24_bush_lower_left.webp" alt="">
+    <img loading="lazy" class="ps ps-bushl" src="./img/parts/24_bush_lower_left.webp" alt="">
     <img class="ps ps-flowerr" src="./img/parts/25_flowers_right_group.webp" alt="">
-    <img class="ps ps-bushr" src="./img/parts/26_bush_lower_right.webp" alt="">
+    <img loading="lazy" class="ps ps-bushr" src="./img/parts/26_bush_lower_right.webp" alt="">
   </div>
 </section>
 
@@ -563,22 +569,22 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
     <i class="map-cloud map-cloud--a" aria-hidden="true"></i>
     <i class="map-cloud map-cloud--b" aria-hidden="true"></i>
     <i class="map-cloud map-cloud--c" aria-hidden="true"></i>
-    <img class="mp mp-wagon" src="./img/parts/04_book_wagon.webp" alt="" loading="lazy" decoding="async">
-    <img srcset="./img/parts/t/05_pinwheel-40.webp 40w, ./img/parts/t/05_pinwheel.webp 72w" sizes="(max-width:760px) 20px, 32px" class="mp mp-pinwheel" src="./img/parts/t/05_pinwheel.webp" alt="">
-    <img class="mp mp-mat" src="./img/parts/t/27_picnic_mat-496.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-lunch mp-lunch--a" src="./img/parts/t/11_lunchbox.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-suito" src="./img/parts/suito2.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-tent1" src="./img/parts/13_blue_yellow_tent.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-tent2" src="./img/parts/tent-red.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-board" src="./img/parts/t/18_bulletin_board.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-stall" src="./img/parts/19_market_stall.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-tree1" src="./img/parts/15_tree_hammock_left.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-hammock" src="./img/parts/t/16_hammock.webp" alt="" loading="lazy" decoding="async">
-    <img class="mp mp-tree2" src="./img/parts/17_tree_hammock_right.webp" alt="" loading="lazy" decoding="async">
-    <img srcset="./img/parts/t/23_flowers_left_group-116.webp 116w, ./img/parts/23_flowers_left_group.webp 192w" sizes="(max-width:760px) 58px, 90px" class="mp mp-flowerl" src="./img/parts/23_flowers_left_group.webp" alt="">
-    <img srcset="./img/parts/t/24_bush_lower_left-88.webp 88w, ./img/parts/24_bush_lower_left.webp 148w" sizes="(max-width:760px) 43px, 68px" class="mp mp-bushl" src="./img/parts/24_bush_lower_left.webp" alt="">
-    <img srcset="./img/parts/t/25_flowers_right_group-116.webp 116w, ./img/parts/25_flowers_right_group.webp 184w" sizes="(max-width:760px) 58px, 90px" class="mp mp-flowerr" src="./img/parts/25_flowers_right_group.webp" alt="">
-    <img srcset="./img/parts/t/26_bush_lower_right-88.webp 88w, ./img/parts/26_bush_lower_right.webp 144w" sizes="(max-width:760px) 43px, 68px" class="mp mp-bushr" src="./img/parts/26_bush_lower_right.webp" alt="">
+    <img srcset="./img/parts/t/04_book_wagon-188.webp 188w, ./img/parts/t/04_book_wagon-292.webp 292w" sizes="(max-width:560px) 22.6vw, (max-width:760px) 93px, 146px" loading="lazy" class="mp mp-wagon" src="./img/parts/t/04_book_wagon-292.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/05_pinwheel-44.webp 44w, ./img/parts/t/05_pinwheel-64.webp 64w" sizes="(max-width:760px) 21px, 32px" loading="lazy" class="mp mp-pinwheel" src="./img/parts/t/05_pinwheel-64.webp" alt="">
+    <img srcset="./img/parts/t/27_picnic_mat-316.webp 316w, ./img/parts/t/27_picnic_mat-380.webp 380w, ./img/parts/t/27_picnic_mat-496.webp 496w" sizes="(max-width:560px) 33.9vw, (max-width:760px) 158px, 247px" loading="lazy" class="mp mp-mat" src="./img/parts/t/27_picnic_mat-496.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/11_lunchbox-88.webp 88w, ./img/parts/t/11_lunchbox-108.webp 108w, ./img/parts/t/11_lunchbox-136.webp 136w" sizes="(max-width:560px) 9.4vw, (max-width:760px) 43px, 68px" loading="lazy" class="mp mp-lunch mp-lunch--a" src="./img/parts/t/11_lunchbox-136.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/suito2-48.webp 48w, ./img/parts/suito2.webp 68w" sizes="(max-width:560px) 4.3vw, (max-width:760px) 22px, 34px" loading="lazy" class="mp mp-suito" src="./img/parts/suito2.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/13_blue_yellow_tent-136.webp 136w, ./img/parts/13_blue_yellow_tent.webp 213w" sizes="(max-width:560px) 18.8vw, (max-width:760px) 68px, 107px" loading="lazy" class="mp mp-tent1" src="./img/parts/13_blue_yellow_tent.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/tent-red-124.webp 124w, ./img/parts/tent-red.webp 190w" sizes="(max-width:560px) 16.0vw, (max-width:760px) 61px, 96px" loading="lazy" class="mp mp-tent2" src="./img/parts/tent-red.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/18_bulletin_board-168.webp 168w, ./img/parts/t/18_bulletin_board-224.webp 224w, ./img/parts/t/18_bulletin_board-260.webp 260w" sizes="(max-width:560px) 19.8vw, (max-width:760px) 83px, 129px" loading="lazy" class="mp mp-board" src="./img/parts/t/18_bulletin_board-260.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/19_market_stall-160.webp 160w, ./img/parts/t/19_market_stall-248.webp 248w" sizes="(max-width:560px) 20.7vw, (max-width:760px) 79px, 124px" loading="lazy" class="mp mp-stall" src="./img/parts/t/19_market_stall-248.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/15_tree_hammock_left-96.webp 96w, ./img/parts/t/15_tree_hammock_left-128.webp 128w, ./img/parts/t/15_tree_hammock_left-148.webp 148w" sizes="(max-width:560px) 11.3vw, (max-width:760px) 47px, 73px" loading="lazy" class="mp mp-tree1" src="./img/parts/t/15_tree_hammock_left-148.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/16_hammock-152.webp 152w, ./img/parts/t/16_hammock-236.webp 236w, ./img/parts/t/16_hammock-276.webp 276w" sizes="(max-width:560px) 24.5vw, (max-width:760px) 75px, 118px" loading="lazy" class="mp mp-hammock" src="./img/parts/t/16_hammock-276.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/17_tree_hammock_right-96.webp 96w, ./img/parts/17_tree_hammock_right.webp 146w" sizes="(max-width:560px) 11.3vw, (max-width:760px) 47px, 73px" loading="lazy" class="mp mp-tree2" src="./img/parts/17_tree_hammock_right.webp" alt="" decoding="async">
+    <img srcset="./img/parts/t/23_flowers_left_group-116.webp 116w, ./img/parts/t/23_flowers_left_group-180.webp 180w" sizes="(max-width:760px) 58px, 90px" loading="lazy" class="mp mp-flowerl" src="./img/parts/t/23_flowers_left_group-180.webp" alt="">
+    <img srcset="./img/parts/t/24_bush_lower_left-88.webp 88w, ./img/parts/t/24_bush_lower_left-136.webp 136w" sizes="(max-width:760px) 43px, 68px" loading="lazy" class="mp mp-bushl" src="./img/parts/t/24_bush_lower_left-136.webp" alt="">
+    <img srcset="./img/parts/t/25_flowers_right_group-116.webp 116w, ./img/parts/t/25_flowers_right_group-180.webp 180w" sizes="(max-width:760px) 58px, 90px" loading="lazy" class="mp mp-flowerr" src="./img/parts/t/25_flowers_right_group-180.webp" alt="">
+    <img srcset="./img/parts/t/26_bush_lower_right-88.webp 88w, ./img/parts/t/26_bush_lower_right-136.webp 136w" sizes="(max-width:760px) 43px, 68px" loading="lazy" class="mp mp-bushr" src="./img/parts/t/26_bush_lower_right-136.webp" alt="">
     <div class="map-chara" id="map-sunny"><img src="./img/parts/t/06_sun_character-168.webp" width="248" height="223" alt="" loading="lazy" decoding="async"></div>
     <div class="map-chara" id="map-moyan"><img src="./img/parts/t/07_moyan_school_hat_crying-132.webp" width="176" height="164" alt="" loading="lazy" decoding="async"></div>
     <p class="map-say map-say--sunny" aria-hidden="true"><b>サニー先生</b><wbr>気に<wbr>なる<wbr>場所を、<wbr>クリックしてみてね！</p>
@@ -638,12 +644,12 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 
 <div class="picnic-meadow" aria-hidden="true">
   <svg class="picnic-meadow__wave" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0,74 C420,14 1020,14 1440,74 L1440,160 L0,160 Z" fill="#eef4dd"/></svg>
-  <img class="pm pm-flowerl" src="./img/parts/23_flowers_left_group.webp" alt="" loading="lazy">
-  <img class="pm pm-bush" src="./img/parts/24_bush_lower_left.webp" alt="" loading="lazy">
-  <img class="pm pm-sunny" src="./img/parts/06_sun_character.webp" alt="" loading="lazy">
-  <img class="pm pm-moyan" src="./img/parts/07_moyan_school_hat_crying.webp" alt="" loading="lazy">
-  <img class="pm pm-wagon" src="./img/parts/04_book_wagon.webp" alt="" loading="lazy">
-  <img class="pm pm-flowerr" src="./img/parts/25_flowers_right_group.webp" alt="" loading="lazy">
+  <img loading="lazy" class="pm pm-flowerl" src="./img/parts/t/23_flowers_left_group-100.webp" alt="">
+  <img loading="lazy" class="pm pm-bush" src="./img/parts/t/24_bush_lower_left-84.webp" alt="">
+  <img loading="lazy" class="pm pm-sunny" src="./img/parts/06_sun_character.webp" alt="">
+  <img loading="lazy" class="pm pm-moyan" src="./img/parts/t/07_moyan_school_hat_crying-144.webp" alt="">
+  <img loading="lazy" class="pm pm-wagon" src="./img/parts/t/04_book_wagon-160.webp" alt="">
+  <img loading="lazy" class="pm pm-flowerr" src="./img/parts/t/25_flowers_right_group-100.webp" alt="">
 </div>
 <footer class="site-footer" id="sitemap">
   <div class="site-footer__inner">
