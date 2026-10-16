@@ -116,6 +116,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
   <a class="newsflash lesson-news" data-news-date="2026-10-11" href="../theorists/super/"><span class="newsflash__tag" aria-hidden="true">＼ NEW ／</span><span class="newsflash__icon" aria-hidden="true"><img src="../img/parts/06_sun_character.webp" alt="" width="64" height="64" loading="lazy"><i>🎧</i></span><span class="newsflash__body"><span class="visually-hidden">新着: </span><b>音声学習機能を<wbr>追加しました</b><small>モヤンと<wbr>サニー先生の<wbr>対話で、<wbr><span class="nb">より理解が深まります。</span><wbr><span class="nb">家事や移動のあいだにも聞けます</span></small></span><span class="newsflash__go">聞いてみる <span class="arw" aria-hidden="true">▶︎</span></span></a>
   <nav class="study-cards" id="all" data-study-cards aria-label="試験対策のページ一覧">
     <div class="study-cards__row">
+      <button type="button" class="study-card" data-acc="g9" aria-expanded="false" aria-controls="acc-g9"><img src="../img/parts/29_potted_plant.webp" alt="" width="120" height="120"><span class="study-card__name">花丸カレンダー</span><span class="study-card__desc">毎日の<wbr>1問1答に、<wbr>花丸を<wbr>つける</span></button>
       <button type="button" class="study-card" data-acc="g0" aria-expanded="false" aria-controls="acc-g0"><img src="../img/parts/05_pinwheel.webp" alt="" width="120" height="120"><span class="study-card__name">出題傾向</span><span class="study-card__desc">毎回出る<wbr>テーマを、<wbr>過去6回<wbr>300問から</span></button>
       <button type="button" class="study-card" data-acc="g1" aria-expanded="false" aria-controls="acc-g1"><img src="../img/parts/06_sun_character.webp" alt="" width="120" height="120"><span class="study-card__name">まず、ここから</span><span class="study-card__desc">何から<wbr>始めるか、<wbr>出題範囲と<wbr>勉強法</span></button>
       <button type="button" class="study-card" data-acc="g2" aria-expanded="false" aria-controls="acc-g2"><img src="../img/parts/04_book_wagon.webp" alt="" width="120" height="120"><span class="study-card__name">ことばを覚える</span><span class="study-card__desc">162の<wbr>用語を、<wbr>図と<wbr>たとえ話で</span></button>
@@ -126,6 +127,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
       <button type="button" class="study-card" data-acc="g7" aria-expanded="false" aria-controls="acc-g7"><img src="../img/parts/09_blue_notebook.webp" alt="" width="120" height="120"><span class="study-card__name">教材</span><span class="study-card__desc">直前対策<wbr>テキストと、<wbr>参考書の<wbr>本棚</span></button>
       <button type="button" class="study-card" data-acc="g8" aria-expanded="false" aria-controls="acc-g8"><img src="../img/parts/16_hammock.webp" alt="" width="120" height="120"><span class="study-card__name">ひと休み</span><span class="study-card__desc">コラムと、<wbr>お守りページ</span></button>
     </div>
+    <div class="study-panel" id="acc-g9" data-acc-panel="g9" hidden><ul><li><a href="../exam-guide/last-30days/#mainichi">毎日の1問1答カレンダー(花丸を見る)</a></li><li><a href="../games/quiz/?n=30#drill">きょうの30問をはじめる</a></li><li><a href="../games/quiz/?n=50#drill">50問でキラキラ花丸をねらう</a></li><li><a href="#daily">今日の3分学びタイム</a></li></ul></div>
     <div class="study-panel" id="acc-g0" data-acc-panel="g0" hidden><ul><li><a href="../kakomon-keiko/">毎回出るテーマ(過去6回の出題傾向)</a></li><li><a href="../hinshutsu/">よく出る用語だけ</a></li><li><a href="../exam-guide/gakka-benkyoho/">学科の勉強法(問題番号ごとの出題傾向)</a></li></ul></div>
     <div class="study-panel" id="acc-g1" data-acc-panel="g1" hidden><ul><li><a href="../exam-guide/last-30days/">試験まで<wbr>30日の<wbr>逆算プラン<wbr>(いっしょに<wbr>ラストスパート)</a></li><li><a href="../start/">学習ルート(どこから始める？)</a></li><li><a href="../exam-guide/gakka-benkyoho/">学科の勉強法(問題番号ごとの出題傾向)</a></li><li><a href="../exam-guide/shutsudai-hani/">出題範囲(公式の細目)と、自分の理解度</a></li><li><a href="../exam-guide/goukakuritsu/">難易度と合格率</a></li></ul></div>
     <div class="study-panel" id="acc-g2" data-acc-panel="g2" hidden><ul><li><a href="../terms/">ことば図鑑(162語)</a></li><li><a href="../hinshutsu/">よく出る用語だけ</a></li><li><a href="../kakomon-keiko/">過去6回の出題傾向</a></li><li><a href="../search/">用語を検索する</a></li><li><a href="../diagrams/">図解ライブラリ(図で覚える)</a></li></ul></div>
@@ -444,7 +446,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
     </a><a class="bottom-nav__item bottom-nav__item--cta" href="../schools/chiiki-renkei-platform/#kai" data-ev="nav_soudan">
       <span class="bottom-nav__icon bottom-nav__icon--soudan" aria-hidden="true"></span>
       <span class="bottom-nav__label">無料相談</span>
-    </a><a class="bottom-nav__item" href="../exam/#daily" data-ev="nav_daily">
+    </a><a class="bottom-nav__item" href="../exam-guide/last-30days/#mainichi" data-ev="nav_daily">
       <span class="bottom-nav__icon bottom-nav__icon--quiz" aria-hidden="true"></span>
       <span class="bottom-nav__label">今日の問題</span>
     </a><a class="bottom-nav__item" href="../schools/compare/" data-ev="nav_compare">
