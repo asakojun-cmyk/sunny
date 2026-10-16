@@ -1489,9 +1489,9 @@
 .kk-dots{display:inline-flex;gap:3px;flex:none}
 /* 丸の中に回の数字。出た回はオレンジ、出なかった回は薄いグレー */
 .kk-dots i{display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:1px 0 0;box-sizing:border-box;border-radius:50%;background:#f3efe7;color:#bdb4a5;font-style:normal;font-size:11px;line-height:1;font-weight:700;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;text-indent:0}
-.kk-dots i.on{background:#f8d3b8;color:#8a4426}
-.kk-count{font-size:.8125rem;color:#7a4a1c;white-space:nowrap}
-.kk-count b{font-size:.9375rem;color:#8a4426;margin:0 1px}
+.kk-dots i.on{background:#f8d257;color:#5c420f}/* モヤンの帽子の黄色 */
+.kk-count{font-size:.8125rem;color:#6b5a3a;white-space:nowrap}
+.kk-count b{font-size:.9375rem;color:#5c420f;margin:0 1px}
 .kk-on-text{color:#a0583d}
 .kk-key__legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
 .kk-leg{display:inline-flex;align-items:center;gap:6px}
