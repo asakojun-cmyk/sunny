@@ -185,6 +185,13 @@
     }
   }
 
+  // 「次の問題へ」などのあと、問題のいちばん上が画面に見えるところまで戻す(上へスクロールし直す手間をなくす)
+  function toTop(el) {
+    if (!el || !el.getBoundingClientRect) return;
+    var smooth = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    try { el.scrollIntoView({ block: "start", behavior: smooth ? "smooth" : "auto" }); } catch (_e) { el.scrollIntoView(true); }
+  }
+
   function begin() {
     if (filter === "mock" || filter === "wrong" || filter === "unseen") applyFilter();
     if (pool.length === 0) {
@@ -235,8 +242,8 @@
 
   root.querySelector("[data-quiz-next]").addEventListener("click", function () {
     idx++;
-    if (idx >= order.length) finish();
-    else renderQuestion();
+    if (idx >= order.length) { finish(); toTop(endBox); }
+    else { renderQuestion(); toTop(card); }
   });
   document.querySelector("[data-quiz-begin]").addEventListener("click", begin);
   var randBtn = document.querySelector("[data-quiz-random]");
