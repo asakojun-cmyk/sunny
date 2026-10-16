@@ -1531,3 +1531,7 @@
 .dcal__go2 a{color:#b4583c}
 .dcal__note{font-size:14px!important;color:#6f6b63}
 @media (max-width:359px){.dcal__grid{gap:4px}.dcal__mark{font-size:15px}}
+
+/* 第33回の日程表: 左の列は折り返さない */
+.exam-table--dates td:first-child,.exam-table--dates th:first-child{white-space:nowrap}
+.exam-table--dates .nb{display:inline-block;white-space:nowrap}
