@@ -1488,11 +1488,11 @@
 .kk-row small{flex-basis:100%;color:#7a7468;font-size:.8125rem}
 .kk-dots{display:inline-flex;gap:3px;flex:none}
 /* 丸の中に回の数字。出た回はオレンジ、出なかった回は薄いグレー */
-.kk-dots i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#f1ece2;color:#b5ad9f;font-style:normal;font-size:10.5px;font-weight:700;font-family:var(--font-sans);letter-spacing:0}
-.kk-dots i.on{background:#b85a36;color:#fff}
+.kk-dots i{display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:1px 0 0;box-sizing:border-box;border-radius:50%;background:#f3efe7;color:#bdb4a5;font-style:normal;font-size:11px;line-height:1;font-weight:700;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;text-indent:0}
+.kk-dots i.on{background:#f8d3b8;color:#8a4426}
 .kk-count{font-size:.8125rem;color:#7a4a1c;white-space:nowrap}
-.kk-count b{font-size:1rem;color:#a0583d;margin:0 1px}
-.kk-on-text{color:#b85a36}
+.kk-count b{font-size:.9375rem;color:#8a4426;margin:0 1px}
+.kk-on-text{color:#a0583d}
 .kk-key__legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
 .kk-leg{display:inline-flex;align-items:center;gap:6px}
 
