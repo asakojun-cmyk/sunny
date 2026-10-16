@@ -1482,17 +1482,22 @@
 .kk-sec h2{margin:0 0 6px;text-align:center}
 .kk-lead{margin:0 0 14px;text-align:center;color:#6f6b63;font-size:.9375rem;text-wrap:balance}
 .kk-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.kk-row a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:12px;row-gap:2px;padding:12px 16px;border-radius:14px;background:#fff;border:1px solid #ece4d4;color:#29435e;text-decoration:none}
+.kk-row a{display:flex;flex-wrap:wrap;align-items:center;column-gap:10px;row-gap:6px;padding:12px 16px;border-radius:14px;background:#fff;border:1px solid #ece4d4;color:#29435e;text-decoration:none}
 .kk-row a:hover{border-color:#e0c79c}
-.kk-name{font-weight:700;line-height:1.5;min-width:0}
-.kk-row small{grid-column:1/-1;color:#7a7468;font-size:.8125rem}
-.kk-dots{display:inline-flex;gap:4px;flex:none}
-.kk-dots i{display:block;width:11px;height:11px;border-radius:50%;background:#e9e3d6}
-.kk-dots i.on{background:#e08a5c}
-.kk-key__legend .kk-dots{vertical-align:middle;margin-right:4px}
+.kk-name{flex-basis:100%;font-weight:700;line-height:1.5;min-width:0}
+.kk-row small{flex-basis:100%;color:#7a7468;font-size:.8125rem}
+.kk-dots{display:inline-flex;gap:3px;flex:none}
+/* 丸の中に回の数字。出た回はオレンジ、出なかった回は薄いグレー */
+.kk-dots i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#f1ece2;color:#b5ad9f;font-style:normal;font-size:10.5px;font-weight:700;font-family:var(--font-sans);letter-spacing:0}
+.kk-dots i.on{background:#b85a36;color:#fff}
+.kk-count{font-size:.8125rem;color:#7a4a1c;white-space:nowrap}
+.kk-count b{font-size:1rem;color:#a0583d;margin:0 1px}
+.kk-on-text{color:#b85a36}
+.kk-key__legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.kk-leg{display:inline-flex;align-items:center;gap:6px}
+
 .kk-newlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
 .kk-newlist li{padding:12px 16px;border-radius:14px;background:#f4f8ed;line-height:1.8}
 .kk-tag{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:#5b7f5f;color:#fff;font-size:.75rem;font-weight:700;white-space:nowrap}
 .kk-how p{line-height:1.9}
 .kk-date{color:#7a7468;font-size:.8125rem}
-@media (max-width:480px){.kk-row a{grid-template-columns:1fr}.kk-dots{margin-top:4px}}

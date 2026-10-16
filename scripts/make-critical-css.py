@@ -59,6 +59,8 @@ src = open(html, encoding='utf-8').read()
 links = re.findall(r'<link rel="stylesheet" href="\./css/(cb-[0-9a-f]+\.css)"', src)
 a = bc.minify(''.join(built.get(n, '') for n in links[:2]))
 b = bc.minify(''.join(built.get(n, '') for n in links[2:]))
+if len(a) < 5000:
+    sys.exit('クリティカルCSSが空です(ローカルのサーバーが動いていない?)。index.html は書き換えません')
 src = re.sub(r'<style id="crit-a">.*?</style>', lambda m: '<style id="crit-a">' + a + '</style>', src, flags=re.S)
 src = re.sub(r'<style id="crit-b">.*?</style>', lambda m: '<style id="crit-b">' + b + '</style>', src, flags=re.S)
 open(html, 'w', encoding='utf-8').write(src)
