@@ -264,3 +264,22 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
   .gk.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) { padding-top: 44px !important; }
   .gk.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-top: 72px !important; }
 }
+
+/* 2026-10-16 「あわせて読みたい」を目次と同じ形に: 左ぞろえ・ラベルの幅をそろえる・矢印は右はし・説明があってもなくても同じ並び。
+   下の空き(64+72+56px)も詰める */
+.gk .related { margin-bottom: 0 !important; }
+.gk.container--article { padding-bottom: 40px; }
+.site-main .gk h2.related__title.related__title { margin: 0 0 18px !important; font-size: 1.25rem !important; text-align: center; }
+.gk .related__title::after { content: ""; display: block; width: 46px; margin: 10px auto 0; border-bottom: 3px dotted #e9785f; opacity: .75; }
+.gk .related__list { border-top: 1px solid var(--gk-line); }
+.gk .related__list li { border-bottom: 1px solid var(--gk-line); }
+.gk .related__list a { display: grid !important; grid-template-columns: 4.2em minmax(0, 1fr) 14px; grid-template-areas: "type title arw" ". desc arw"; align-items: center; justify-content: stretch; text-align: left !important; gap: 2px 12px; padding: 14px 6px !important; }
+.gk .related__type { grid-area: type; justify-self: stretch; text-align: center; margin: 0 !important; }
+.gk .related__item-title { grid-area: title; display: block; font-weight: 700; text-align: left; }
+.gk .related__desc { grid-area: desc; text-align: left !important; color: var(--gk-sub); }
+.gk .related__list a::after { grid-area: arw; justify-self: end; }
+@media (max-width: 480px) {
+  .site-main .gk h2.related__title.related__title { font-size: 1.125rem !important; }
+  .gk .related__list a { gap: 2px 10px; padding: 12px 2px !important; grid-template-columns: 3.9em minmax(0, 1fr) 12px; }
+  .gk .related__item-title { font-size: .9375rem !important; }
+}
