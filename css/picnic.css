@@ -1526,6 +1526,8 @@
 .dcal__day.is-exam{background:#f4f8ed}
 .dcal__day.is-exam .dcal__mark{font-size:11px;font-weight:700;color:#4f6f53}
 .dcal__msg{font-family:"Zen Maru Gothic","Hiragino Sans",sans-serif;font-weight:700;color:#29435e;margin:8px 0 16px}
-.dcal__go{margin:0 0 12px}
+.dcal__go{margin:0 0 8px}
+.dcal__go2{text-align:center;margin:0 0 16px;font-family:"Zen Maru Gothic","Hiragino Sans",sans-serif;font-weight:700}
+.dcal__go2 a{color:#b4583c}
 .dcal__note{font-size:14px!important;color:#6f6b63}
 @media (max-width:359px){.dcal__grid{gap:4px}.dcal__mark{font-size:15px}}

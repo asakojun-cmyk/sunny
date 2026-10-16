@@ -14,7 +14,7 @@
 
   var filter = "all";
   var timeSel = "5";
-  var COUNTS = { "1": 3, "5": 10, "10": 20, "30": 50, all: null };
+  var COUNTS = { "1": 3, "5": 10, "10": 20, "15": 30, "30": 50, all: null };
   var pool = ALL.slice();
   var order = [];
   var idx = 0;
@@ -271,6 +271,15 @@
     var has = [].some.call(genreSel.options, function (o) { return o.value === want; });
     if (has) { genreSel.value = want; filter = want; }
   }
+
+  // 毎日のカレンダーから来たとき(?n=30 / ?n=50)は、その問題数を最初から選んでおく
+  var nm = /[?&]n=(30|50)(?:&|$)/.exec(window.location.search);
+  if (nm && timeSelEl) {
+    timeSel = nm[1] === "30" ? "15" : "30";
+    timeSelEl.value = timeSel;
+  }
+
+
 
   applyFilter();
 })();
