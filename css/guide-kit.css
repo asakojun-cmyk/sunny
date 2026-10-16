@@ -254,12 +254,13 @@ a.gk-circle:hover { transform: translateY(-3px); }
   .gk .ys-circle { grid-template-rows: auto 1.3rem 2rem minmax(3rem, auto) auto; row-gap: 4px; }
 }
 
-/* 2026-10-16 目次を結論の前に移したため、PR表記のすぐ下に章が来るようになり、
-   yomiyasu.css の「PR表記の次の章は上を32pxにつめる」が効いて、波のすぐ下に絵がくっついていた。
-   ほかの章と同じ余白に戻す(色の帯の章: PC128px・スマホ88px／帯なしの章: PC80px・スマホ56px) */
-main .gk details.school-disclosure + .school-section { margin-top: 44px !important; padding-top: 80px !important; }
-main .gk details.school-disclosure + .school-section:is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-top: 128px !important; }
+/* 2026-10-16 波から章の見出し(絵)までの余白を、ガイド・学校ページで少し狭める。
+   どの章も同じだけ狭めて、そろえたまま(色の帯の章: PC104px・スマホ72px／帯なしの章: PC64px・スマホ44px)。
+   PR表記のすぐ下の章も同じ値に(yomiyasu.css の「32pxにつめる」を打ち消す) */
+.gk.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) { padding-top: 64px !important; }
+.gk.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-top: 104px !important; }
+main .gk details.school-disclosure + .school-section { margin-top: 44px !important; }
 @media (max-width: 760px) {
-  main .gk details.school-disclosure + .school-section { padding-top: 56px !important; }
-  main .gk details.school-disclosure + .school-section:is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-top: 88px !important; }
+  .gk.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section) { padding-top: 44px !important; }
+  .gk.container--article:not(.privacy-page) :is(.guide-section, .review-section, .school-section, .column-section):is(:nth-of-type(4n + 2), :nth-of-type(4n + 4)) { padding-top: 72px !important; }
 }
