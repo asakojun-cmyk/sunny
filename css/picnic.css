@@ -1091,7 +1091,8 @@
 .ron-lock-note{display:none}
 .ron-station.is-locked .ron-lock-note{display:block;position:absolute;inset:auto 0 auto 0;top:50%;transform:translateY(-50%);text-align:center;font-weight:700;color:#6c8265;filter:none;z-index:2}
 .cb-rally.is-locked::after{content:"🔒 前の球をキャッチすると開くよ";position:absolute;inset:0;display:grid;place-items:center;font-weight:700;color:#6c8265;z-index:2}
-.ron-station__head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.ron-station__head{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;text-align:center}
+.ron-station__title{flex-basis:100%}
 .ron-station__no{font-size:0.875rem;font-weight:700;letter-spacing:.14em;color:#b0813f;background:#fdf1cf;border-radius:999px;padding:4px 12px}
 .ron-station__title{margin:0;font-size:1.0625rem}
 .ron-station__q{font-weight:600;line-height:1.9}
@@ -1151,7 +1152,7 @@
  * v5.3 キャリコンNOW掲示板(/laws/)の読みやすさ改善
  * ============================================================ */
 .now-board{background:#fdf6e0;border:2px solid #eadfba;border-radius:22px;padding:24px 26px;margin:26px 0 30px;box-shadow:0 10px 24px rgba(120,100,40,.08)}
-.now-board__head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.now-board__head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px}
 .now-board__head h2{margin:0 0 8px;font-size:1.125rem}
 .now-board__updated{margin:0;font-size:0.875rem;color:#8a8371}
 .now-list{list-style:none;margin:8px 0 0;padding:0}
@@ -1250,6 +1251,14 @@
 .site-header__brand .site-logo{display:inline-block}
 .site-header__brand .site-logo__ja{display:flex;align-items:center;justify-content:center}
 .site-header__brand .site-header__tagline{text-align:center}
+/* 2026-10-16 スマホ・タブレット(メニューが隠れる幅)では、ロゴを画面のまん中に。
+   右のサニー先生(用語検索)と同じ幅の余白を左にも取って、左右の余白をそろえる */
+@media (max-width:960px){
+  .site-header__inner{position:relative;justify-content:center!important;padding-left:max(72px,env(safe-area-inset-left,0px))!important;padding-right:max(72px,env(safe-area-inset-right,0px))!important}
+  .site-header__brand{flex:0 1 auto;min-width:0;max-width:100%}
+  .site-header__brand .site-header__tagline{text-wrap:balance}
+  .header-search{position:absolute;right:max(8px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%)}
+}
 
 /* ============================================================
  * v6.0 大人リニューアル: 「上質な絵本・雑誌」路線
@@ -1382,6 +1391,9 @@
   .bottom-nav__icon--talk{border-radius:6px 6px 6px 2px}
   .bottom-nav__icon--talk::before{content:"";position:absolute;top:6px;left:5px;right:5px;height:1.5px;background:currentColor;box-shadow:0 4px 0 currentColor}
   .bottom-nav__icon--talk::after{content:"";position:absolute;left:2px;bottom:-4px;width:0;height:0;border:3px solid transparent;border-top-color:currentColor;border-right-color:currentColor}
+  /* 無料相談(2026-10-16 用語検索から入れかえ): まるい吹き出しに点3つ */
+  .bottom-nav__icon--soudan{border-radius:50% 50% 50% 3px}
+  .bottom-nav__icon--soudan::before{content:"";position:absolute;top:8.5px;left:3.5px;width:3px;height:3px;border-radius:50%;background:currentColor;box-shadow:5px 0 0 currentColor,10px 0 0 currentColor}
 }
 
 /* 961〜1180px: タグラインを隠してメニューを1行に収める */
