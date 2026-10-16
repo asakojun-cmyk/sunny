@@ -30,7 +30,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <link rel="icon" type="image/png" href="../../img/favicon.png">
 <link rel="apple-touch-icon" href="../../img/sunny-icon.png">
 
-<link rel="stylesheet" href="../../css/cb-8d8b1384c4.css" data-src="style.css?v=2026.1001,picnic.css?v=2026.1014,refine.css?v=2026.1001,yomiyasu.css?v=2026.1014s">
+<link rel="stylesheet" href="../../css/cb-82ebbf0bee.css" data-src="style.css?v=2026.1001,picnic.css?v=2026.1014,refine.css?v=2026.1001,yomiyasu.css?v=2026.1014s">
 <link rel="stylesheet" href="../../css/cb-3ebf8a2e3b.css" data-src="tone.css?v=2026.1015s">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"3分ミニゲーム","item":"https://carepicnic.com/games/"},{"@type":"ListItem","position":3,"name":"1問1答ドリル"}]}</script>
 <link rel="preload" href="../../fonts/maru-h2.woff2" as="font" type="font/woff2" crossorigin>
@@ -123,14 +123,14 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
     </div>
     <p class="chara-guide__bubble">1分だけでも<wbr>いいの？<wbr> …<wbr>それなら<wbr>スキマ時間に<wbr>できそう！ ふん<wbr>ふん。</p>
   </div>
-  <div class="quiz-pickers">
+  <div class="quiz-pickers" id="drill">
     <label class="quiz-picker">
       <span class="quiz-picker__label">ジャンル</span>
       <select data-quiz-genre aria-label="ジャンルを選ぶ"><option value="all" selected>ぜんぶ(1152問)</option><option value="honban">本番形式・4つの文から選ぶ(128問)</option><option value="theory">理論ぜんぶ(キャリア+カウンセリング 603問)</option><option value="cat:制度・支援">法規・市場・制度(415問)</option><option value="freq3">よく出るだけ(556問)</option><option value="theorist">理論家(420問)</option><option value="choice">4択だけ(668問)</option><option value="cat:キャリア理論">キャリア理論(492問)</option><option value="cat:カウンセリング理論">カウンセリング理論(111問)</option><option value="cat:カウンセリング技法">カウンセリング技法(134問)</option><optgroup label="くり返し解く"><option value="mock">模擬試験(50問・本番に近い配分)</option><option value="shiryo">白書・調査・報告書の問題(51問)</option><option value="wrong">まちがえた問題だけ</option><option value="unseen">まだ解いていない問題</option></optgroup><optgroup label="本番の出題分野でえらぶ(めやす)"><option value="dom:1">社会的意義・役割(37問)</option><option value="dom:2">キャリア理論・カウンセリング理論(493問)</option><option value="dom:3">職業能力開発・企業の支援(86問)</option><option value="dom:4">労働市場・統計(38問)</option><option value="dom:5">労働の法律・社会保障(119問)</option><option value="dom:6">学校教育(22問)</option><option value="dom:7">メンタルヘルス(45問)</option><option value="dom:8">ライフステージ・多様な特性(124問)</option><option value="dom:9">相談の技能(166問)</option><option value="dom:10">倫理・自己研鑽(22問)</option></optgroup></select>
     </label>
     <label class="quiz-picker">
       <span class="quiz-picker__label">学習時間</span>
-      <select data-quiz-timesel aria-label="学習時間を選ぶ"><option value="1">1分(3問)</option><option value="5" selected>5分(10問)</option><option value="10">10分(20問)</option><option value="30">30分(50問)</option><option value="all">ぜんぶ</option></select>
+      <select data-quiz-timesel aria-label="学習時間を選ぶ"><option value="1">1分(3問)</option><option value="5" selected>5分(10問)</option><option value="10">10分(20問)</option><option value="15">15分(30問)</option><option value="30">30分(50問)</option><option value="all">ぜんぶ</option></select>
     </label>
   </div>
   <div class="quiz-drill__start" data-quiz-start>
@@ -183,7 +183,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 </div>
 
 <script src="../../js/plan-check.js?v=2026.1008" defer></script>
-<script src="../../js/quiz-drill.js?v=2026.1016" defer></script>
+<script src="../../js/quiz-drill.js?v=2026.1016c" defer></script>
 </main>
 
 <div class="picnic-meadow" aria-hidden="true">

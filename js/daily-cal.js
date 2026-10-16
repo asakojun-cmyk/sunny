@@ -82,4 +82,5 @@
     else if (todayN >= GOAL) msg.textContent = "きょうは花丸。あと" + (BIG - todayN) + "問でキラキラ花丸。";
     else msg.textContent = "きょうの花丸まで、あと" + (GOAL - todayN) + "問。";
   }
+
 })();
