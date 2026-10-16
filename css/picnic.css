@@ -863,7 +863,7 @@
 /* スーパーさん: シートの奥にきちんと腰かける */
 .mp-super{left:44.6%;top:16%;width:10.2%}
 /* 案内のふきだし(サニー→モヤンの順にふわっと出て、ゆらゆら) */
-.map-say{position:absolute;z-index:2;margin:0;max-width:250px;padding:12px 16px;background:rgba(255,255,255,.97);border-radius:20px 20px 20px 6px;box-shadow:0 8px 20px rgba(41,67,94,.12);font-size:0.9375rem;line-height:1.8;opacity:0;color:var(--picnic-ink)}
+.map-say{position:absolute;z-index:2;margin:0;max-width:250px;padding:12px 16px;background:rgba(255,255,255,.97);border-radius:20px 20px 20px 6px;box-shadow:0 8px 20px rgba(41,67,94,.12);font-size:0.9375rem;line-height:1.8;visibility:hidden;color:var(--picnic-ink)}
 .map-say b{display:block;font-size:0.8125rem;color:#6c8265;margin-bottom:2px;font-weight:700}
 .map-say--sunny{left:13%;top:30%;background:#fff7dd;border-radius:20px 20px 6px 20px}
 .map-say--sunny b{color:#b08a2e}
@@ -871,10 +871,11 @@
 @media(prefers-reduced-motion:no-preference){
   .map-say--sunny{animation:map-say-in 1s ease 1.2s forwards,pic-loop-float 5s ease-in-out 2.2s infinite}
   .map-say--moyan{animation:map-say-in 1s ease 2.6s forwards,pic-loop-float 5.6s ease-in-out 3.6s infinite}
-  @keyframes map-say-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes map-say-in{from{visibility:visible;transform:translateY(12px) scale(.6)}to{visibility:visible;transform:none}}
   @keyframes pic-loop-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 }
-@media(prefers-reduced-motion:reduce){.map-say{opacity:1}}
+@media(prefers-reduced-motion:reduce){.map-say{visibility:visible}}
+/* 2026-10-16 ふきだしは透明から出すのではなく、ぽんっと大きくなって出る(途中の薄い文字で読みにくくならないように) */
 @media(max-width:640px){
   .map-say{max-width:56vw;font-size:0.875rem;padding:9px 12px}
   .map-say--sunny{left:2%;top:26%}
