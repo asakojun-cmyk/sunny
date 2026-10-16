@@ -1501,3 +1501,7 @@
 .kk-tag{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;background:#5b7f5f;color:#fff;font-size:.75rem;font-weight:700;white-space:nowrap}
 .kk-how p{line-height:1.9}
 .kk-date{color:#7a7468;font-size:.8125rem}
+/* 試験対策ページ: 出題傾向への入口(第33回のプランの下) */
+.plan-banner--trend{margin-top:-4px}
+.plan-banner--trend a{background:#f4f8ed}
+.plan-banner--trend b{color:#4f6f53}
