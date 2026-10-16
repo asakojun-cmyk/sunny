@@ -1253,7 +1253,7 @@
 .site-header__brand .site-logo__ja{display:flex;align-items:center;justify-content:center}
 .site-header__brand .site-header__tagline{text-align:center}
 /* 2026-10-16 スマホ・タブレット(メニューが隠れる幅)のヘッダーは、すっきり1行に。
-   ロゴは左ぞろえ、右に「用語検索」のサニー先生。英字の小見出しとキャッチコピーはパソコンだけ。
+   ロゴは左ぞろえ、右に用語検索の虫めがね。英字の小見出しとキャッチコピーはパソコンだけ。
    ヘッダーは画面の上にずっと付いてくるので、高さを約107px→約52pxに */
 @media (max-width:960px){
   .site-header__inner{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px;min-height:52px;padding-top:6px!important;padding-bottom:6px!important;padding-left:max(16px,env(safe-area-inset-left,0px))!important;padding-right:max(12px,env(safe-area-inset-right,0px))!important}
@@ -1262,15 +1262,18 @@
   .site-header .site-header__brand .site-logo__ja{justify-content:flex-start;font-size:18px!important;letter-spacing:.06em!important;line-height:1.3;white-space:nowrap}
   .site-header__brand .site-logo__ja .logo-sun{width:22px!important;height:auto;margin-right:6px}
   .site-logo__en,.site-header__brand .site-header__tagline{display:none!important}
-  .header-search{position:static;transform:none}
+  .header-search{position:relative;transform:none}
+  /* 虫めがねを押したら、ヘッダーのすぐ下に横長の検索ボックス */
+  .site-header .search-fab__panel{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));top:calc(60px + env(safe-area-inset-top,0px));transform:none;width:auto;max-width:none;box-shadow:0 8px 20px rgba(41,67,94,.15)}
+  .site-header .search-fab__panel::before,.site-header .search-fab__panel::after{display:none}
   .search-fab__toggle{flex-direction:row;gap:2px}
-  .site-header .header-search__chara img{width:30px!important;height:30px!important;transform:scaleX(-1)}/* サニー先生は内側(ことば)のほうを向く */
-  .site-header .header-search__label{font-size:0!important}
-  /* 言葉は出さず、サニー先生の左下に小さな虫めがね(調べる場所だとわかるように) */
+  /* 用語検索は、シンプルな虫めがねのアイコンだけ(押せる範囲は44px) */
   .site-header .header-search__label{display:none!important}
-  .site-header .header-search__chara{position:relative;padding:4px}
-  .site-header .header-search__chara::after{content:"";position:absolute;left:0;bottom:2px;width:9px;height:9px;border:2.5px solid #29435e;border-radius:50%;background:rgba(255,255,255,.85);box-sizing:border-box}
-  .site-header .header-search__chara::before{content:"";position:absolute;left:8px;bottom:-1px;width:2.5px;height:6px;background:#29435e;border-radius:2px;transform:rotate(-45deg);transform-origin:top center}
+  .site-header .header-search__chara img,.site-header .header-search__chara svg{display:none!important}
+  .site-header .search-fab__toggle{width:44px;height:44px;justify-content:center;align-items:center;border-radius:50%}
+  .site-header .header-search__chara{position:relative;display:block;width:22px;height:22px}
+  .site-header .header-search__chara::before{content:"";position:absolute;left:0;top:0;width:16px;height:16px;border:2.5px solid #29435e;border-radius:50%;box-sizing:border-box}
+  .site-header .header-search__chara::after{content:"";position:absolute;left:15px;top:13px;width:2.5px;height:9px;background:#29435e;border-radius:2px;transform:rotate(-45deg);transform-origin:top center}
   .site-header .header-search__click{display:none!important}
 }
 @media (max-width:359px){
