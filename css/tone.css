@@ -487,7 +487,7 @@ li > .shiryo__mark { position: static; margin-right: .4em; }
   .newsflash { width: min(100% - 16px, 320px); column-gap: 12px; margin: 16px auto 0; }
   .newsflash__body { flex-direction: column; align-items: flex-start; gap: 0; }
   .newsflash__go { grid-row: 1 / span 2; font-size: 0; text-decoration: none; }
-  .newsflash__go .arw { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #ef8064; color: #fff; font-size: .75rem; }
+  .newsflash__go .arw { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #c0553a; color: #fff; font-size: .75rem; }
 }
 
 /* ---------- 2026-10-15 「あわせて読みたい」を小さく(大きすぎて、本文より目立っていた) ----------

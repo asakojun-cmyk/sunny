@@ -244,7 +244,7 @@
 .map-spot__hint:after{content:"";position:absolute;left:50%;bottom:-5px;transform:translateX(-50%);border:5px solid transparent;border-top:6px solid #29435e;border-bottom:0}
 @media(hover:hover){.map-spot:hover .map-spot__hint{opacity:1}}
 .map-spot--blue{--sign:#bcd9e8}.map-spot--coral{--sign:#f3c1ae}.map-spot--yellow{--sign:#eeda90}.map-spot--pink{--sign:#f0c6cb}.map-spot--green{--sign:#c9dcb0}.map-spot--lavender{--sign:#d5c9e6}.map-spot--cream{--sign:#e5d9b8}
-.picnic-rest-note{text-align:center;margin:18px 0 0;color:#657a67;font-size:0.9375rem}
+.picnic-rest-note{text-align:center;margin:18px 0 0;color:#536855;font-size:0.9375rem}
 /* 施設カード(絵本風) */
 .facility-cards{padding:85px max(24px,calc((100% - 1120px)/2));background:linear-gradient(#fffdf8,#fbf7ea)}
 .facility-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}

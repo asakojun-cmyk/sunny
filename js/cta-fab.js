@@ -35,13 +35,17 @@
 
   wrap.classList.add("is-show");
   if (!pixelDone) {
-    /* A8の表示計測用の1pxの画像。ボタンを出したときに1回だけ読み込む */
+    /* A8の表示計測用の1pxの画像。ページの読み込みが終わってから1回だけ読み込む(最初の表示を遅らせないため) */
     pixelDone = true;
-    var px = new Image(1, 1);
-    px.alt = "";
-    px.style.cssText = "position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none";
-    px.src = PIXEL;
-    wrap.appendChild(px);
+    var addPixel = function () {
+      var px = new Image(1, 1);
+      px.alt = "";
+      px.style.cssText = "position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none";
+      px.src = PIXEL;
+      wrap.appendChild(px);
+    };
+    if (document.readyState === "complete") addPixel();
+    else window.addEventListener("load", addPixel);
   }
 
   wrap.querySelector(".cta-fab__close").addEventListener("click", function () {

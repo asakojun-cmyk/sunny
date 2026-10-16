@@ -8,13 +8,13 @@
 .news-row:focus-visible { outline: 3px solid #ee8466; outline-offset: 2px; }
 .news-row__title { font-size: 1rem; line-height: 1.5; letter-spacing: .04em; text-align: left; }
 .news-row__date { font-size: .8125rem; font-weight: 500; color: #625d52; white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
-.news-row__go { color: #b3543a; font-size: .875rem; font-weight: 700; white-space: nowrap; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 2px; }
+.news-row__go { color: #a64b31; font-size: .875rem; font-weight: 700; white-space: nowrap; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 2px; }
 .news-row:hover .news-row__go { color: #ee8466; }
 @media (max-width: 640px) {
   .news-list { width: min(100% - 16px, 360px); column-gap: 12px; }
   .news-row__title { font-size: .9375rem; }
   .news-row__go { text-decoration: none; }
   .news-row__go-text { display: none; }
-  .news-row__go .arw { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #ef8064; color: #fff; font-size: .75rem; }
+  .news-row__go .arw { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #c0553a; color: #fff; font-size: .75rem; }
 }
 @media (prefers-reduced-motion: reduce) { .news-list__tag { animation: none; } }

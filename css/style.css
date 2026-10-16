@@ -16,7 +16,7 @@
   --color-yellow: #e7d49a;
   --color-yellow-light: #f5efd9;
 
-  --color-terracotta: #b86f55;
+  --color-terracotta: #a0583d; /* 2026-10-16 白・クリームの上で読みやすい濃さに(元 #b86f55) */
   --color-terracotta-dark: #9d5a43;
   --color-green: #758679;
 
