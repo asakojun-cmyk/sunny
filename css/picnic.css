@@ -1266,20 +1266,16 @@
   .search-fab__toggle{flex-direction:row;gap:2px}
   .site-header .header-search__chara img{width:30px!important;height:30px!important;transform:scaleX(-1)}/* サニー先生は内側(ことば)のほうを向く */
   .site-header .header-search__label{font-size:0!important}
-  .site-header .header-search__label::after{content:"＼用語を調べる／";font-size:11px;letter-spacing:.02em}
+  /* 言葉は出さず、サニー先生の左下に小さな虫めがね(調べる場所だとわかるように) */
+  .site-header .header-search__label{display:none!important}
+  .site-header .header-search__chara{position:relative;padding:4px}
+  .site-header .header-search__chara::after{content:"";position:absolute;left:0;bottom:2px;width:9px;height:9px;border:2.5px solid #29435e;border-radius:50%;background:rgba(255,255,255,.85);box-sizing:border-box}
+  .site-header .header-search__chara::before{content:"";position:absolute;left:8px;bottom:-1px;width:2.5px;height:6px;background:#29435e;border-radius:2px;transform:rotate(-45deg);transform-origin:top center}
   .site-header .header-search__click{display:none!important}
 }
-@media (max-width:430px){
+@media (max-width:359px){
   .site-header .site-header__brand .site-logo__ja{font-size:16px!important;letter-spacing:.02em!important}
   .site-header .site-header__brand .site-logo__ja .logo-sun{width:20px!important;margin-right:4px}
-}
-@media (max-width:380px){
-  .site-header .site-header__brand .site-logo__ja{font-size:15px!important;letter-spacing:0!important}
-  .site-header .header-search__label::after{font-size:10px;letter-spacing:0}
-}
-@media (max-width:355px){
-  .site-header .site-header__brand .site-logo__ja{font-size:15px!important;letter-spacing:0!important}
-  .site-header .header-search__label::after{content:none}
 }
 
 /* ============================================================
