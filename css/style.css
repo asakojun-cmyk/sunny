@@ -2237,11 +2237,12 @@ button {
     gap: 3px;
     text-decoration: none;
     font-size: 11px;
-    color: var(--color-text-subtle);
+    color: var(--color-text);
     padding: 4px 0;
   }
+  /* いま開いているページは太字で(色はオレンジにしない。オレンジは「無料相談」だけ) */
   .bottom-nav__item.is-active {
-    color: var(--color-terracotta);
+    font-weight: 700;
   }
   .bottom-nav__icon {
     display: block;
