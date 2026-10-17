@@ -81,6 +81,7 @@ h1::after,.result h2::after{content:"";display:block;width:48px;margin:10px auto
 .spec{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;margin:14px 0 0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
 .spec b{color:var(--green);font-weight:700;font-variant-numeric:tabular-nums}
 .note{font-size:14px;color:var(--muted);max-width:44em;margin:12px auto 0;text-align:left}
+.nb{display:inline-block}.go-first{margin:20px auto 0;max-width:22em}.go-first button{display:block;width:100%;min-height:56px;font-size:18px;font-weight:700;border-radius:999px;padding:12px 20px;cursor:pointer}.go-first__sub{font-size:13px;color:var(--muted);margin:8px 0 0}
 .sets{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
 button{font:inherit;font-size:14px;font-weight:700;letter-spacing:.04em;border-radius:999px;border:2px solid var(--green);background:var(--surface);color:var(--green);padding:6px 18px;cursor:pointer}
 button.primary{background:var(--coral);border-color:var(--coral);color:var(--on-coral)}
@@ -227,6 +228,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
       <li>合格基準 <b>70点以上</b>（1問2点）</li>
       <li>法令基準日 <b>2026年4月1日</b></li>
     </ul>
+    <div class="go-first"><button class="primary" id="btnGo" type="button">第1回をはじめる</button><p class="go-first__sub"><span class="nb">50問・100分／登録なし・無料。</span><wbr><span class="nb">押すと時計が動きます</span></p></div>
     <p class="note">公式の出題範囲に沿って作った、オリジナルの問題です。過去問の転載ではありません。全5回(各50問・あわせて250問)を、登録なし・無料で解けます。回ごとに扱う論点を変えています。「開始する」を押すと時計が動きます。解答と成績は、この端末に自動で保存されます。採点すると、全問の解説と、まちがえた問題ごとの復習ページを案内します。さいごに、押すだけのアンケートがあります。</p>
     <nav class="sets" id="sets" aria-label="模擬試験の回を選ぶ"></nav>
     <div class="scene" aria-hidden="true"><img data-ill="flowerL" alt="" height="44"><img class="wide" data-ill="pinwheel" alt="" height="70"><img data-ill="note" alt="" height="58"><img data-ill="pencil" alt="" height="58"><img class="wide" data-ill="tent" alt="" height="78"><img data-ill="flowerR" alt="" height="54"></div>
@@ -337,6 +339,7 @@ function paint(){
   $("count").textContent=`解答済み ${done} / ${N}`;
   $("qs").className=S.graded?"graded":"";
   $("btnStart").hidden=!!S.start||S.graded;
+  $("btnGo").textContent=S.graded?`第${cur+1}回の結果と解説を見る`:(S.start?`第${cur+1}回のつづきを解く`:`第${cur+1}回をはじめる`);
   $("btnGrade").hidden=S.graded;
   $("legend").textContent=S.graded?"緑＝正解　赤＝不正解・未解答":"色つき＝解答済み　下線＝あとで見直す";
   result(); tick(); show();
@@ -463,6 +466,10 @@ let pending=null;
 function ask(msg,yes,fn){$("confirmMsg").textContent=msg;$("confirmYes").textContent=yes;pending=fn;$("confirm").hidden=false}
 $("confirmNo").onclick=()=>{$("confirm").hidden=true;pending=null};
 $("confirmYes").onclick=()=>{$("confirm").hidden=true;const f=pending;pending=null;if(f)f()};
+$("btnGo").onclick=()=>{track("moshi_go_top"+sfx());
+  if(S.graded){const r=$("result");if(r&&r.scrollIntoView)r.scrollIntoView();return}
+  if(!S.start)$("btnStart").click();
+  let n=1;while(n<N&&S.ans[n])n++;const t=$("q"+n);if(t)window.scrollTo({top:t.getBoundingClientRect().top+scrollY-$("bar").offsetHeight-8,behavior:"smooth"})};
 $("btnStart").onclick=()=>{S.start=Date.now();save();paint();track("moshi_start"+sfx())};
 $("btnGrade").onclick=()=>{
   const left=N-Object.keys(S.ans).length;
