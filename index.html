@@ -5,7 +5,7 @@
 <!-- 表示を速くするため、アクセス解析(Googleアナリティクス・Clarity)は、最初のタップ・スクロール、または表示の3.5秒後に読む -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-09GCDPKMKD');
-(function(w,d){var done=false;function go(){if(done)return;done=true;
+(function(w,d){var done=false;function go(){if(done)return;done=true;try{if(localStorage.getItem("cp-notrack")==="1")return}catch(e){}
 var g=d.createElement("script");g.async=true;g.src="https://www.googletagmanager.com/gtag/js?id=G-09GCDPKMKD";d.head.appendChild(g);
 w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};var c=d.createElement("script");c.async=true;c.src="https://www.clarity.ms/tag/yxefgkb9kq";d.head.appendChild(c);}
 ["pointerdown","keydown","scroll","touchstart"].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});
@@ -260,7 +260,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 <script>/* サイト全体の丸い文字(約165KB)は、最初の画面が出たあとに読む。
    スクロール・タップしたらすぐ、何もしなくてもページの読み込みが終わって3秒後に */
 (function(){var done=false,ev=["scroll","touchstart","pointerdown","keydown"];
-function go(){if(done)return;done=true;ev.forEach(function(e){removeEventListener(e,go,true)});
+function go(){if(done)return;done=true;try{if(localStorage.getItem("cp-notrack")==="1")return}catch(e){}ev.forEach(function(e){removeEventListener(e,go,true)});
 try{var f=new FontFace("Zen Maru Gothic","url(./fonts/maru-h2.woff2)",{weight:"100 900",display:"swap"});f.load().then(function(x){document.fonts.add(x)})}catch(e){}}
 ev.forEach(function(e){addEventListener(e,go,{capture:e!=="scroll",passive:true,once:true})});/* scroll はページ自体のスクロールだけ(横に流れる箱の動きでは読まない) */
 addEventListener("load",function(){setTimeout(go,3000)});})();</script>
