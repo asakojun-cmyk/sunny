@@ -283,3 +283,59 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
   .gk .related__list a { gap: 2px 10px; padding: 12px 2px !important; grid-template-columns: 3.9em minmax(0, 1fr) 12px; }
   .gk .related__item-title { font-size: .9375rem !important; }
 }
+
+/* ===== 図：すごろくで見る「最大80%」(.gk-sugo) と、手続きの道のり(.gk-road) 2026-10-18 ===== */
+.gk-zu { max-width: 640px; margin: 28px auto 32px; padding: 24px 18px 20px; background: #fff; border-radius: 24px; text-align: center; }
+.gk .gk-zu__t { margin: 0 0 4px; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.0625rem; color: var(--gk-ink); }
+.gk .gk-zu__lede { margin: 0 0 18px !important; font-size: .8125rem !important; line-height: 1.7; color: var(--gk-sub); }
+.gk .gk-zu ol, .gk .gk-zu ul { margin: 0 auto !important; padding: 0 !important; list-style: none; }
+.gk-zu b, .gk-zu small, .gk-zu p, .gk-zu__flag { word-break: keep-all; overflow-wrap: anywhere; }
+.gk-zu li { margin: 0; padding: 0; }
+.gk-zu li::before { content: none !important; }
+.gk .gk-zu__note { margin: 16px auto 0 !important; max-width: 480px; font-size: .8125rem !important; line-height: 1.8; color: var(--gk-sub); }
+.gk-zu__note b { color: var(--gk-ink); background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); padding: 0 2px; }
+
+/* すごろく */
+.gk-sugo__road { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; position: relative; }
+.gk-sugo__road::after { content: ""; position: absolute; left: 12%; right: 12%; top: 46px; border-top: 3px dotted #e9b8a8; z-index: 0; }
+.gk-sugo__sq { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.gk-sugo__box { width: 92px; height: 92px; border-radius: 22px; background: #fffdf8; border: 2px solid var(--gk-line); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.gk-sugo__no { font-size: .625rem; font-weight: 700; letter-spacing: .08em; color: var(--gk-green); }
+.gk-sugo__pct { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15; color: var(--gk-coral); }
+.gk-sugo__pct small { display: block; font-size: .625rem; font-weight: 700; color: var(--gk-sub); }
+.gk-sugo__sq b { font-size: .8125rem; line-height: 1.5; color: var(--gk-ink); word-break: keep-all; }
+.gk-sugo__sq > small { font-size: .6875rem; line-height: 1.5; color: var(--gk-sub); word-break: keep-all; }
+.gk-sugo__sq.is-start .gk-sugo__box { background: var(--color-sky-light, #e8f0f1); border-color: transparent; }
+.gk-sugo__sq.is-start .gk-sugo__pct { color: var(--gk-ink); }
+.gk-sugo__sq.is-goal .gk-sugo__box { background: var(--gk-lemon); border-color: transparent; }
+.gk-sugo__bar { display: flex; height: 18px; margin: 20px auto 6px; max-width: 520px; border-radius: 99px; overflow: hidden; background: #f3efe6; }
+.gk-sugo__bar span { display: block; height: 100%; }
+.gk-sugo__bar .s1 { width: 50%; background: #e9785f; }
+.gk-sugo__bar .s2 { width: 20%; background: #f2a68f; }
+.gk-sugo__bar .s3 { width: 10%; background: #f7cbbb; }
+.gk .gk-sugo__legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 14px; list-style: none; }
+.gk .gk-sugo__legend li { font-size: .6875rem !important; line-height: 1.8 !important; color: var(--gk-sub); }
+.gk-sugo__legend li::before { content: none !important; }
+.gk-sugo__legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+@media (max-width: 480px) {
+  .gk-zu { padding: 20px 12px 18px; border-radius: 20px; }
+  .gk-sugo__road { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 10px; }
+  .gk-sugo__road::after { display: none; }
+  .gk-sugo__box { width: 84px; height: 84px; }
+}
+
+/* 手続きの道のり */
+.gk-road__list { max-width: 460px; margin: 0 auto !important; position: relative; }
+.gk-road__list::before { content: ""; position: absolute; left: 50%; top: 20px; bottom: 20px; border-left: 3px dotted #e9b8a8; transform: translateX(-50%); }
+.gk-road__step { position: relative; z-index: 1; margin: 0 0 14px !important; padding: 14px 16px 12px; background: #fffdf8; border-radius: 18px; border: 2px solid var(--gk-line); }
+.gk-road__step:last-child { margin-bottom: 0 !important; }
+.gk-road__when { display: inline-block; margin-bottom: 6px; padding: 1px 12px; border-radius: 99px; background: var(--gk-green); color: #fff; font-size: .6875rem; font-weight: 700; letter-spacing: .04em; }
+.gk-road__step b { display: block; word-break: keep-all; font-size: .9375rem; line-height: 1.6; color: var(--gk-ink); }
+.gk-road__step small { display: block; margin-top: 2px; font-size: .75rem; line-height: 1.6; color: var(--gk-sub); }
+.gk-road__step.is-due { background: #fff; border-color: #e9785f; }
+.gk-road__step.is-due .gk-road__when { background: var(--gk-coral); }
+.gk-road__flag { display: block; margin-top: 6px; font-size: .75rem; font-weight: 700; color: var(--gk-coral); }
+.gk-road__step.is-money { background: #fffbea; border-color: transparent; }
+.gk-road__gap { margin: 4px auto 14px !important; font-size: .6875rem; font-weight: 700; color: var(--gk-sub); position: relative; z-index: 1; }
+.gk-road__gap span { background: #fff; padding: 0 8px; }
+.gk-zu .nb { display: inline-block; white-space: nowrap; }
