@@ -368,3 +368,8 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 /* うすくて読みにくい文字を、読める濃さに */
 .gk .gk-zu__lede, .gk-sugo__sq > small, .gk .gk-sugo__legend li, .gk-road__step small { color: #4f4a42 !important; }
 .gk-zu__talk { max-width: 640px; margin: 0 auto 32px; }
+/* 背景のカードはなし。水色の地の上に、白い丸をそのまま置く（ページ冒頭の白い丸と同じ） */
+.gk-zu.gk-sugo { background: none; padding: 0; border-radius: 0; }
+.gk-sugo .gk-sugo__box { background: #fff; }
+.gk-sugo .gk-sugo__bar { background: #fff; }
+@media (max-width: 480px) { .gk-zu.gk-sugo { padding: 0; } }
