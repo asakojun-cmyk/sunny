@@ -378,8 +378,8 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .is-home #picnic-title .hero-h1-big{max-width:100%}
 .is-home #picnic-title .hero-h1-big em{font-size:min(1em,7.8vw)}
 .lp-river .lp-river__body h3{white-space:normal;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
-/* Q&Aの答えの文は中央ぞろえ(ちゃんの決まり)。読みやすい幅に収めて、切りのいい所で折り返す */
-.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:center!important;text-wrap:pretty!important;max-width:none;margin-left:0;margin-right:0;padding:0}
+/* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
+.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
 /* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
 .is-home .picnic-map__head h2,.is-home .lp-river .lp-river__body h3,.is-home .flow-h span{white-space:normal!important;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
 .lp-river .qa-ans{margin:0 0 14px;justify-content:center}
