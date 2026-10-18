@@ -381,6 +381,7 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 /* 吹き出しの文は左ぞろえで、名前も左に(ちゃんの指定 2026-10-18) */
 .is-home .qa-talk .mini-say__bubble,.is-home .lp-river .qa-ans .mini-say__bubble,.is-home .flow .flow-talk .mini-say__bubble{flex:1 1 auto!important;max-width:none!important;text-align:left!important;text-wrap:pretty!important;padding:14px 18px!important;line-break:strict}
 .is-home .qa-talk .mini-say__bubble b,.is-home .lp-river .qa-ans .mini-say__bubble b,.is-home .flow .flow-talk .mini-say__bubble b{display:block;text-align:left!important;margin-bottom:4px}
+.is-home .flow .flow-talk .mini-say__bubble{text-wrap:wrap!important}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
 .is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
 /* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
@@ -519,8 +520,8 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="school-match">
         <h3 class="flow-h"><i><small>STEP</small>1</i><span>4つ<wbr>選んで、<wbr>合う<wbr>学校を<wbr>しぼろう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">仕事も家のことも</span><wbr><span class="nb">あるのに、</span><wbr><span class="nb">最後まで続けられるかな……。</span></p></div>
-          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">だから、</span><wbr><span class="nb">暮らしに合う学校を</span><wbr><span class="nb">選ぶのが大事なんだ。</span><wbr><span class="nb">迷った質問は</span><wbr><span class="nb">「まだ決めていない」でOKだよ。</span></p></div>
+          <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">仕事も</span><wbr><span class="nb">家のことも</span><wbr><span class="nb">あるのに、</span><wbr><span class="nb">最後まで</span><wbr><span class="nb">続けられる</span><wbr><span class="nb">かな……。</span></p></div>
+          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">だから、</span><wbr><span class="nb">暮らしに</span><wbr><span class="nb">合う</span><wbr><span class="nb">学校を</span><wbr><span class="nb">選ぶのが</span><wbr><span class="nb">大事</span><wbr><span class="nb">なんだ。</span><wbr><span class="nb">迷った</span><wbr><span class="nb">質問は</span><wbr><span class="nb">「まだ</span><wbr><span class="nb">決めて</span><wbr><span class="nb">いない」で</span><wbr><span class="nb">OKだよ。</span></p></div>
         </div>
         <div class="flow-tool">
         <p class="flow-howto"><b>使い方</b><span class="nb">下の4つの質問に、</span><wbr><span class="nb">ポンポン答えてみよう。</span><wbr><span class="nb">あなたに合う学校から</span><wbr><span class="nb">順に出てくるよ。</span><small>30秒・<wbr>登録なし・<wbr>いつでも<wbr>やり直せる</small></p>
@@ -535,7 +536,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="step-2">
         <h3 class="flow-h"><i><small>STEP</small>2</i><span>比較表で、<wbr>費用・<wbr>日程・<wbr>給付金を<wbr>くらべよう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や日程も、</span><wbr><span class="nb">学校によって</span><wbr><span class="nb">ちがうよ。</span><wbr><span class="nb">お金だけじゃなく、</span><wbr><span class="nb">続けやすさも</span><wbr><span class="nb">くらべてね。</span></p></div>
+          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や</span><wbr><span class="nb">日程も、</span><wbr><span class="nb">学校に</span><wbr><span class="nb">よって</span><wbr><span class="nb">ちがうよ。</span><wbr><span class="nb">お金</span><wbr><span class="nb">だけじゃなく、</span><wbr><span class="nb">続けやすさも</span><wbr><span class="nb">くらべてね。</span></p></div>
         </div>
         <p class="flow-go"><a class="picnic-button picnic-button--line" href="./schools/compare/" data-ev="top_next_compare">7校を<wbr>比較表で<wbr>くらべてみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
       
@@ -545,7 +546,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="step-3">
         <h3 class="flow-h"><i><small>STEP</small>3</i><span>説明会に<wbr>参加して、<wbr>気になる<wbr>ことを<wbr>質問しよう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--chan"><span class="mini-say__avatar mini-say__avatar--chan" aria-hidden="true"><img src="./img/chan-map-s.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>ちゃん</b><wbr><span class="nb">お金のことも、</span><wbr><span class="nb">説明会なら直接聞けますよ。</span><wbr><span class="nb">わたしが出た回は3人だけで、</span><wbr><span class="nb">質問しやすかったです。</span></p></div>
+          <div class="mini-say mini-say--chan"><span class="mini-say__avatar mini-say__avatar--chan" aria-hidden="true"><img src="./img/chan-map-s.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>ちゃん</b><wbr><span class="nb">お金の</span><wbr><span class="nb">ことも、</span><wbr><span class="nb">説明会なら</span><wbr><span class="nb">直接</span><wbr><span class="nb">聞けますよ。</span><wbr><span class="nb">わたしが</span><wbr><span class="nb">出た回は</span><wbr><span class="nb">3人だけで、</span><wbr><span class="nb">質問</span><wbr><span class="nb">しやすかったです。</span></p></div>
         </div>
         <div class="flow-ask">
           <p class="flow-ask__t">説明会で<wbr>聞いておくと<wbr>安心なこと</p>
