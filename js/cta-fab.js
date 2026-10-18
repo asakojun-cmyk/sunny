@@ -1,52 +1,25 @@
 /* 右下にいつも出ている「説明会は無料」の雲のボタン(絵はサイトの水彩の素材)。カーソルを合わせると、雲の後ろからサニー先生がのぞく。
+ * 行き先は、比較表の7校の説明会の申込み先(/schools/compare/#apply-h)。特定の1校には送らない
+ * (このサイトは紹介料の有無で学校を選ばない。2026-10-18に1校の紹介リンクから変更)。
  * ページを開いたときから、いつも出しておく(出たり消えたりしない)。
  * × で閉じると、そのタブを開いている間は出さない。 */
 (function () {
   var KEY = "cta-fab-closed";
   try { if (sessionStorage.getItem(KEY)) return; } catch (e) {}
+  /* 申込み先の一覧があるページ(比較ページ)では出さない */
+  if (document.getElementById("apply-h")) return;
 
   var wrap = document.createElement("div");
   wrap.className = "cta-fab";
   wrap.innerHTML =
-    '<a class="cta-fab__link" href="/schools/chiiki-renkei-platform/" data-ev="fab_setsumeikai" aria-label="養成学校の無料説明会を見てみる。オンラインで参加できます(広告を含むページへ)">' +
+    '<a class="cta-fab__link" href="/schools/compare/#apply-h" data-ev="fab_setsumeikai" aria-label="比較表の7校の無料説明会の申込み先を見る。オンラインで参加できる学校が多いです">' +
       '<span class="cta-fab__note" aria-hidden="true">＼ オンラインでOK！ ／</span>' +
       '<img class="cta-fab__sunny" src="/img/parts/06_sun_character.webp" alt="" width="66" height="66">' +
-      '<span class="cta-fab__sign"><small>おすすめの養成学校<i class="cta-fab__pr">PR</i></small><b>無料説明会を見る <span aria-hidden="true">▶︎</span></b></span>' +
+      '<span class="cta-fab__sign"><small>7校の無料説明会</small><b>申込み先を見る <span aria-hidden="true">▶︎</span></b></span>' +
     '</a>' +
     '<button class="cta-fab__close" type="button" aria-label="このボタンを閉じる">×</button>';
   document.body.appendChild(wrap);
-
-  /* 行き先: 紹介リンク(A8)の無料説明会ページ。
-   * ただし「この記事に紹介リンクは含みません」と明記しているページでは、
-   * その表示と食い違わないよう、サイト内の講座ページへ送る。 */
-  var AFF = "https://px.a8.net/svt/ejp?a8mat=459JRK+G3AT5M+59PG+BW8O2&a8ejpredirect=https%3A%2F%2Fcareerjp.work%2Fcc1%2Fsetsumeikai";
-  var PIXEL = "https://www17.a8.net/0.gif?a8mat=459JRK+G3AT5M+59PG+BW8O2";
-  var link = wrap.querySelector(".cta-fab__link");
-  var disc = document.querySelector(".disclosure");
-  var noAff = !!(disc && /含みません/.test(disc.textContent.replace(/\s+/g, "")));
-  var pixelDone = noAff;
-  if (!noAff) {
-    link.href = AFF;
-    link.target = "_blank";
-    link.rel = "sponsored nofollow noopener noreferrer";
-    link.setAttribute("data-ev", "fab_setsumeikai_aff");
-    link.setAttribute("aria-label", "養成学校の無料説明会のページを開く。オンラインで参加できます(広告・外部サイト)");
-  }
-
   wrap.classList.add("is-show");
-  if (!pixelDone) {
-    /* A8の表示計測用の1pxの画像。ページの読み込みが終わってから1回だけ読み込む(最初の表示を遅らせないため) */
-    pixelDone = true;
-    var addPixel = function () {
-      var px = new Image(1, 1);
-      px.alt = "";
-      px.style.cssText = "position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none";
-      px.src = PIXEL;
-      wrap.appendChild(px);
-    };
-    if (document.readyState === "complete") addPixel();
-    else window.addEventListener("load", addPixel);
-  }
 
   wrap.querySelector(".cta-fab__close").addEventListener("click", function () {
     wrap.classList.remove("is-show");

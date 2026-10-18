@@ -82,20 +82,20 @@
         ]
       },
       "care": {
-        "q": "受講中に大事なのは？",
-        "hint": "",
+        "q": "資格を取ったあと、大事にしたいのは？",
+        "hint": "7校とも、<wbr>休んだ<wbr>ときの<wbr>振替が<wbr>あります。",
         "opts": [
           [
-            "休んでも<wbr>追いつける<wbr>こと<wbr>重視",
-            "欠席した回を<wbr>振替できる"
+            "仕事に<wbr>つながる<wbr>支援重視",
+            "仕事の<wbr>紹介や、<wbr>就業の<wbr>支援が<wbr>ある"
           ],
           [
-            "仕事に<wbr>つながる<wbr>支援重視",
-            "就職・就業の<wbr>支援が<wbr>ある"
+            "独立・副業の<wbr>応援重視",
+            "独立や<wbr>開業を<wbr>手伝う<wbr>講座が<wbr>ある"
           ],
           [
             "仲間との<wbr>つながり重視",
-            "卒業生の<wbr>集まりが<wbr>ある"
+            "修了生の<wbr>集まりが<wbr>ある"
           ],
           [
             "まだわからない",
@@ -115,7 +115,8 @@
       "makeup": "休んでも<wbr>振替できる",
       "prep": "試験対策が<wbr>料金に<wbr>込み",
       "job": "仕事に<wbr>つながる<wbr>支援",
-      "mate": "修了後の<wbr>仲間との<wbr>つながり"
+      "mate": "修了後の<wbr>仲間との<wbr>つながり",
+      "solo": "独立・副業の<wbr>応援"
     },
     "st": {
       "ok": "合う",
@@ -157,7 +158,6 @@
     "notStated": "比較表に<wbr>記載が<wbr>ありません",
     "notStatedTail": "(この条件の記載なし)",
     "more": "くわしく見る",
-    "site": "公式サイトを見る",
     "checked": "情報を<wbr>確かめた<wbr>日",
     "rest": "ほかの{n}校も<wbr>見る<wbr>(合わない・未確認の<wbr>条件あり)",
     "nextK": "NEXT STEP",
@@ -166,7 +166,7 @@
     "nextBtn": "公式サイトを開く",
     "ad": "広告",
     "kindDefault": "説明会・<wbr>資料請求は<wbr>公式サイトで<wbr>確認",
-    "nextAd": "学校の<wbr>公式サイトへの<wbr>ボタンは<wbr>紹介リンク(広告)です。<wbr>申込みが<wbr>あると、<wbr>運営者が<wbr>報酬を<wbr>受け取ることがあります。<wbr>学校の<wbr>並び順や<wbr>内容は、<wbr>広告の<wbr>有無で<wbr>変えていません。",
+    "nextAd": "「広告」と<wbr>付いた<wbr>ボタンは<wbr>紹介リンクです。<wbr>申込みが<wbr>あると、<wbr>運営者が<wbr>報酬を<wbr>受け取ることがあります。<wbr>学校の<wbr>並び順や<wbr>内容は、<wbr>広告の<wbr>有無で<wbr>変えていません。",
     "nextAll": "{all}校すべての<wbr>申込み先を<wbr>見る",
     "nextTable": "この{n}校だけを<wbr>比較表で<wbr>見る",
     "nextKai": "運営者が<wbr>参加した<wbr>説明会の<wbr>様子を<wbr>読む",
@@ -194,13 +194,14 @@
     prep: "試験対策が料金に含まれるか",
     job: "就職支援",
     mate: "卒業生コミュニティ",
+    solo: "独立・副業支援",
     makeup: "振替制度"
   };
   var QS = [
     { id: "place", vals: ["home", "room", ""] },
     { id: "time", vals: ["wd", "ev", "we", ""] },
     { id: "yen", vals: ["cheap", "allin", "prep", ""] },
-    { id: "care", vals: ["makeup", "job", "mate", ""] }
+    { id: "care", vals: ["job", "solo", "mate", ""] }
   ];
   var BUDGET = { cheap: 350000 }; /* 「総額の安さ重視」: 入学金・教材費こみで35万円まで */
   var ME = "chiiki-renkei-platform"; /* 運営者が受講した学校 */

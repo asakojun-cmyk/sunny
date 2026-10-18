@@ -1,7 +1,7 @@
 {
  "version": 2,
- "updatedAt": "2026-10-13",
- "about": "養成講習7校の、公式情報だけを集めたデータ。口コミや推測は入れない。statusは verified(公式で確認) / partial(一部だけ確認) / unverified(未確認) / not_stated(公式に記載なし)。originが「比較表」の項目は schools/compare/ から写したもので、出典URLは記録が残っていない。recheck は、後日の読み直しで比較表と食いちがった所。 watch は、見はり番(scripts/watch-schools.mjs)が毎日たしかめる目印。公式ページ(url)に tokens の数字が残っているかを見る。",
+ "updatedAt": "2026-10-17",
+ "about": "養成講習の公式情報だけを集めたデータ。比較表に載せるのは listed が true の7校で、「通学ゼロで修了できる・土日か夜のクラスがある・休んでも振替できる」を公式ページで確かめた学校(2026-10-17選び直し)。listed が false の学校は学校ページが残っているので消さずに置く(listedNote に理由)。口コミや推測は入れない。statusは verified(公式で確認) / partial(一部だけ確認) / unverified(未確認) / not_stated(公式に記載なし)。originが「比較表」の項目は schools/compare/ から写したもので、出典URLは記録が残っていない。recheck は、後日の読み直しで比較表と食いちがった所。 watch は、見はり番(scripts/watch-schools.mjs)が毎日たしかめる目印。公式ページ(url)に tokens の数字が残っているかを見る。",
  "itemGroups": [
   {
    "name": "費用",
@@ -230,15 +230,19 @@
      "sourceFrom": "学校ページの出典"
     },
     "オンライン完結の可否": {
-     "value": "可(コースによる。要確認)",
-     "status": "partial",
+     "value": "オンラインコースは、修了試験まですべてオンラインで完結",
+     "status": "verified",
      "sources": [
-      "https://careerjp.work/cc1/"
+      "https://careerjp.work/cc1/qa"
      ],
-     "checkedAt": "2026-10-13",
+     "checkedAt": "2026-10-17",
      "origin": "比較表",
      "mark": "good",
-     "sourceFrom": "読み直し(2026-10-13)"
+     "sourceFrom": "選び直しの調査(2026-10-17)",
+     "previous": {
+      "value": "可(コースによる。要確認)",
+      "checkedAt": "2026-10-13"
+     }
     },
     "通学拠点": {
      "value": "あり(場所は公式サイトで確認)",
@@ -555,7 +559,8 @@
     "email": "info@careerjp.work",
     "source": "https://careerjp.work/cc1/",
     "checkedAt": "2026-10-13"
-   }
+   },
+   "listed": true
   },
   {
    "slug": "nippon-manpower",
@@ -700,10 +705,10 @@
      "sourceFrom": "学校ページの出典"
     },
     "オンライン完結の可否": {
-     "value": "スクーリングはオンラインでも受講できる(通学との行き来も可)",
+     "value": "スクーリングはオンラインでも受講できる(通学との行き来も可)。修了試験が60点に届かないときは指定会場で受け直し",
      "status": "verified",
      "sources": [],
-     "checkedAt": "2026-09-28",
+     "checkedAt": "2026-10-17",
      "origin": "比較表"
     },
     "通学拠点": {
@@ -714,10 +719,12 @@
      "origin": "比較表"
     },
     "受講期間": {
-     "value": "通信教育は学習の目安3か月(スクーリングの日程は公式サイトで確認)",
+     "value": "約3か月(スクーリング12日間)",
      "status": "verified",
-     "sources": [],
-     "checkedAt": "2026-09-28",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/training_course/program/"
+     ],
+     "checkedAt": "2026-10-17",
      "origin": "比較表",
      "recheck": {
       "finding": "第35回は2026年11月17日開始〜2027年4月16日修了(約5か月)",
@@ -725,7 +732,12 @@
        "https://www.nipponmanpower.co.jp/cc/training_course/schedule/"
       ],
       "checkedAt": "2026-10-13"
-     }
+     },
+     "previous": {
+      "value": "通信教育は学習の目安3か月(スクーリングの日程は公式サイトで確認)",
+      "checkedAt": "2026-09-28"
+     },
+     "sourceFrom": "選び直しの調査(2026-10-17)"
     },
     "総学習時間": {
      "value": "スクーリングは12日間・96時間の実習(公式サイト記載)。通信教育をふくむ合計は未確認",
@@ -735,11 +747,13 @@
      "origin": "比較表"
     },
     "平日・土日・夜間コース": {
-     "value": "未確認・調査中",
-     "status": "unverified",
-     "sources": [],
-     "checkedAt": "2026-09-28",
-     "origin": "比較表"
+     "value": "オンラインは土曜・日曜・水曜(昼)のクラス(11月開講の例)。平日夜は記載なし",
+     "status": "verified",
+     "sources": [
+      "https://www.nipponmanpower.co.jp/cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "sourceFrom": "選び直しの調査(2026-10-17)"
     },
     "直近の開講": {
      "value": "第35回養成講座:2026年11月17日(火)に受講開始、2027年4月16日(金)に修了。全国15都市とオンラインで開講",
@@ -985,7 +999,8 @@
      "checkedAt": "2026-10-13"
     }
    },
-   "briefingUrl": "https://www.nipponmanpower.co.jp/cc/briefing_session/setsumei"
+   "briefingUrl": "https://www.nipponmanpower.co.jp/cc/briefing_session/setsumei",
+   "listed": true
   },
   {
    "slug": "lec",
@@ -1124,14 +1139,14 @@
      "sourceFrom": "学校ページの出典"
     },
     "オンライン完結の可否": {
-     "value": "「オンライン(Zoom)+通信講座」のコースあり",
+     "value": "Zoomクラスで、通学なしで修了できる(実践編10日間のうち8日以上の出席・添削課題・確認テスト)",
      "status": "verified",
      "sources": [
-      "https://www.lec-jp.com/caricon/kouza/yousei/"
+      "https://www.lec-jp.com/caricon/info/faq/"
      ],
-     "checkedAt": "2026-09-28",
+     "checkedAt": "2026-10-17",
      "origin": "比較表",
-     "sourceFrom": "ことばの照合(2026-10-13)",
+     "sourceFrom": "選び直しの調査(2026-10-17)",
      "watch": {
       "url": "https://www.lec-jp.com/caricon/kouza/yousei/",
       "tokens": [
@@ -1139,6 +1154,10 @@
        "Zoom",
        "通信講座"
       ]
+     },
+     "previous": {
+      "value": "「オンライン(Zoom)+通信講座」のコースあり",
+      "checkedAt": "2026-09-28"
      }
     },
     "通学拠点": {
@@ -1220,15 +1239,19 @@
      "checkedAt": "2026-10-13"
     },
     "振替制度": {
-     "value": "あり(同じ回で定員未満なら他クラスに振替可。Zoomは原則4日前までに申請)",
+     "value": "あり(回数の制限なし・手続き無料。半日単位で振替でき、通学⇔Zoomも可。定員を超えるクラスとZoomの1日目は不可)",
      "status": "verified",
      "sources": [
-      "https://www.lec-jp.com/caricon/kouza/yousei/"
+      "https://www.lec-jp.com/caricon/info/faq/"
      ],
-     "checkedAt": "2026-09-28",
+     "checkedAt": "2026-10-17",
      "origin": "比較表",
      "mark": "good",
-     "sourceFrom": "学校ページの出典"
+     "sourceFrom": "選び直しの調査(2026-10-17)",
+     "previous": {
+      "value": "あり(同じ回で定員未満なら他クラスに振替可。Zoomは原則4日前までに申請)",
+      "checkedAt": "2026-09-28"
+     }
     },
     "欠席の上限と扱い": {
      "value": "スクーリング10日間のうち8日間(80%)以上の出席が修了要件。休んだ回は別クラスの同じ回へ振替できる(回数の制限なし。定員を超えるクラスへは不可)",
@@ -1427,7 +1450,8 @@
      }
     }
    },
-   "briefingUrl": "https://www.lec-jp.com/caricon/event/guidance/"
+   "briefingUrl": "https://www.lec-jp.com/caricon/event/guidance/",
+   "listed": true
   },
   {
    "slug": "recurrent",
@@ -1627,20 +1651,24 @@
      "sourceFrom": "数字の照合(2026-10-13)"
     },
     "平日・土日・夜間コース": {
-     "value": "平日午前・午後、夜間8時開講クラスあり",
+     "value": "オンラインは土曜・日曜・平日夜(18:50〜/20:00〜)・平日昼のクラス",
      "status": "verified",
      "sources": [
-      "https://www.recurrent.co.jp/cc/"
+      "https://www.recurrent.co.jp/cc/kcc/misc/onlineclass/"
      ],
-     "checkedAt": "2026-09-28",
+     "checkedAt": "2026-10-17",
      "origin": "比較表",
-     "sourceFrom": "ことばの照合(2026-10-13)",
+     "sourceFrom": "選び直しの調査(2026-10-17)",
      "watch": {
       "url": "https://www.recurrent.co.jp/cc/",
       "tokens": [
        "平日午前",
        "時開講クラス"
       ]
+     },
+     "previous": {
+      "value": "平日午前・午後、夜間8時開講クラスあり",
+      "checkedAt": "2026-09-28"
      }
     },
     "直近の開講": {
@@ -1840,7 +1868,8 @@
      "note": "サイトに載せるときは、この表示をそのまま使わない"
     }
    },
-   "briefingUrl": "https://www.recurrent.co.jp/cc/kcc/seminar/list.php"
+   "briefingUrl": "https://www.recurrent.co.jp/cc/kcc/seminar/list.php",
+   "listed": true
   },
   {
    "slug": "human-academy",
@@ -2275,7 +2304,9 @@
      "checkedAt": "2026-10-13"
     }
    },
-   "briefingUrl": "https://www.athuman.com/sysform/haa-guidance/?kozcd=59035"
+   "briefingUrl": "https://www.athuman.com/sysform/haa-guidance/?kozcd=59035",
+   "listed": false,
+   "listedNote": "完全オンラインのクラスで、修了の評価までオンラインで受けられるかを公式ページで確かめられなかったため、比較表には入れていません(確かめ中)。"
   },
   {
    "slug": "pasona",
@@ -2775,7 +2806,9 @@
     "address": "東京都千代田区丸の内一丁目5番1号",
     "source": "https://100-year-career.net/tokusyouhou",
     "checkedAt": "2026-10-13"
-   }
+   },
+   "listed": false,
+   "listedNote": "休んだときの振替の決まりを公式ページで確かめられなかったため、比較表には入れていません。"
   },
   {
    "slug": "cmca",
@@ -3227,7 +3260,1414 @@
     "address": "東京都新宿区北新宿1-35-20 富商ビル3F(東京会場)",
     "source": "https://cmcajapan.net/",
     "checkedAt": "2026-10-13"
-   }
+   },
+   "listed": false,
+   "listedNote": "全日程と修了テストまでオンラインで受けられるかを公式ページで確かめられず、振替もないため、比較表には入れていません。"
+  },
+  {
+   "slug": "jaico",
+   "name": "一般社団法人 日本産業カウンセラー協会",
+   "shortName": "日本産業カウンセラー協会",
+   "officialUrl": "https://www.jaico.cc/",
+   "affiliateUrl": null,
+   "isPr": false,
+   "experienced": false,
+   "hasSchoolPage": false,
+   "listed": true,
+   "items": {
+    "受講料金": {
+     "value": "330,000円（税込・教材費込み）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "330,000円 （税込み）・教材費込",
+     "watch": {
+      "url": "https://www.jaico.cc/",
+      "tokens": [
+       "330,000"
+      ]
+     }
+    },
+    "入学金": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "教材費": {
+     "value": "受講料に込み（開講日に自宅へ届く）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "教材費は受講料に含まれます"
+    },
+    "割引・特典": {
+     "value": "会員割引33,000円／早期申込み・説明会参加で各22,000円引き（税込・併用不可）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/discount.php",
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "❶ ❷ ❸ の併用はできず",
+     "mark": "good"
+    },
+    "給付金対象の有無": {
+     "value": "4か月コースは専門実践教育訓練の対象（自己負担は最少66,000円）。6か月コースは対象外",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/system.php",
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail_202610.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "専門実践教育給付金指定講座",
+     "mark": "good"
+    },
+    "給付金の指定番号": {
+     "value": "1310171-1920011-0（2026年12月開講）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/system.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "指定番号：1310171-1920011-0"
+    },
+    "ほかに使える補助": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "別料金。模試は修了者8,800円（会場）／10,000円（オンライン）。対策講座の料金は支部ごと",
+     "status": "partial",
+     "sources": [
+      "https://www.jaico.cc/practice-exam.php",
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/contact-list.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "JAICO養成講習受講者・修了者",
+     "mark": "bad"
+    },
+    "支払い方法": {
+     "value": "振込で一括払い、または学費ローン（ローンはWeb申込みのみ）。手数料は自己負担",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/detail.php",
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講料の振込（一括払いのみ）"
+    },
+    "分割払い・教育ローン": {
+     "value": "三井住友カードの学費ローンで6〜24回払い（実質年利6.0%）、ボーナス併用も可",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/pdf/loan.pdf",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "※別途金利6％が必要です"
+    },
+    "キャンセル・返金": {
+     "value": "4週間前まで2,000円、前日まで15%＋2,000円を引いて返金。開講後は転勤などを除き解約不可",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/support/agreement/index.html",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "事務取扱手数料2,000 円",
+     "mark": "bad"
+    },
+    "受講形式": {
+     "value": "Zoomでのライブ授業12日間（84時間）＋テキストと動画の自宅学習（69時間）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "(スクーリング)12日間：84時間"
+    },
+    "オンライン完結の可否": {
+     "value": "できる（12日間すべてオンラインのコースあり）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "すべてオンラインで受講できるコース",
+     "mark": "good"
+    },
+    "通学拠点": {
+     "value": "全国各地（札幌〜沖縄）。会場により一部の日はオンライン",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "日本全国各地で実施しています。"
+    },
+    "受講期間": {
+     "value": "4か月（2026年12月1日〜2027年3月31日）。6か月コース（10月〜3月）もあり",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail_202610.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講期間は記載のあるコース以外、すべて４カ月です。"
+    },
+    "総学習時間": {
+     "value": "153時間（ライブ授業84時間＋自宅学習69時間）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "在宅学習（通信）69時間"
+    },
+    "平日・土日・夜間コース": {
+     "value": "平日昼（月・水・木・金）と土曜・日曜。1日9:30〜17:30ごろ",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "オンライン・ 金曜コース"
+    },
+    "直近の開講": {
+     "value": "2026年12月1日開講（第32期）。オンラインのライブ授業は12/4〜12/13に始まる",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/detail.php",
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "2026年12月開講 （第32期）"
+    },
+    "申込みの締切": {
+     "value": "先着順で、定員になりしだい終了。早期割引は10/31まで、給付金の手続きは11/16まで",
+     "status": "partial",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/discount.php",
+      "https://www.jaico.cc/detail.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "定員に達した場合は期間内であっても受付を終了"
+    },
+    "受講に必要な環境": {
+     "value": "パソコン・ネット回線・カメラ（顔出し）・ヘッドセット等、個室で本人のみ、メール受信できるアドレス",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/support/agreement/index.html",
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "ビデオオン",
+     "mark": "bad"
+    },
+    "振替制度": {
+     "value": "1〜7日目と10・11日目は別の会場に空きがあれば振替できる",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "振替受講が可能です",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "2日（14時間）まで。最終日（12日目）は試験のため必ず出席",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "欠席は2日間（14時間）までであれば認められます"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "子育て中の通いやすさ": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "クラス規模": {
+     "value": "実習は受講者6人に講師1人の小グループ。オンラインコースの定員は記載なし",
+     "status": "partial",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講者６人に講師が1人",
+     "mark": "good"
+    },
+    "定員・最少開講人数": {
+     "value": "会場により6〜15名（オンラインコースは記載なし）。最少人数に満たないと開講しないことがある",
+     "status": "partial",
+     "sources": [
+      "https://www.jaico.cc/detail.php",
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "最少開講人数に満たない場合は開講されないことがあります"
+    },
+    "グループワーク": {
+     "value": "あり（講師のもと小グループに分かれて実習）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "講師のもと小グループに分かれて"
+    },
+    "ロールプレイ": {
+     "value": "あり（キャリアコンサルタント役と相談者役を何度もくり返す）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "相談者役を繰り返し体験",
+     "mark": "good"
+    },
+    "課題の提出方法": {
+     "value": "自宅学習はe-learningの確認問題に答える（くり返し挑戦できる）",
+     "status": "partial",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "確認問題は繰り返しチャレンジすることができます"
+    },
+    "修了条件": {
+     "value": "84時間中70時間以上出席、最終日の確認試験6割以上、e-learning確認問題各回6割以上",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/support/agreement/index.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "84時間中70時間以上出席すること"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "学科・論述・面接の対策講座を全国で開催（別申込み）。全国統一模試「キャリ模試」もあり",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/practice-exam.php",
+      "https://www.jaico.cc/contact-list.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "学科試験・実技試験(論述・面接)対策講座"
+    },
+    "資格取得後の支援": {
+     "value": "資格更新のための更新講習（オンラインあり）、交流の場「CC倶楽部」",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/koushin/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "更新講習"
+    },
+    "卒業生コミュニティ": {
+     "value": "CC倶楽部（登録・年会費無料、オンラインの全国交流会あり）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/event.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "登録・年会費は無料です。",
+     "mark": "good"
+    },
+    "就職支援": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "独立・副業支援": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "説明会": {
+     "value": "全国13エリアで対面・オンライン開催（無料）。参加してその場で申し込むと22,000円引き",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/",
+      "https://www.jaico.cc/detail_202610.php",
+      "https://www.jaico.cc/discount.php"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講料から￥22,000（税込）の割引があります",
+     "mark": "good"
+    },
+    "説明会の申込みページ": {
+     "value": "エリアごとに各支部のページから申込み（一覧は公式トップの説明会欄）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/index.php#top_info"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "会場ごとのお申し込みとなります"
+    },
+    "公式が出している実績": {
+     "value": "演習指導の満足度97.2%（2026年3月修了者）、キャリアコンサルタント14,000人以上を輩出（移行者含む）",
+     "status": "verified",
+     "sources": [
+      "https://www.jaico.cc/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "演習の満足度は 97.2％"
+    }
+   },
+   "briefingUrl": "https://www.jaico.cc/index.php#top_info",
+   "contact": null
+  },
+  {
+   "slug": "gcdf",
+   "name": "特定非営利活動法人 キャリアカウンセリング協会(GCDF-Japan)",
+   "shortName": "GCDF-Japan",
+   "officialUrl": "https://www.career-npo.org/GCDF/",
+   "affiliateUrl": null,
+   "isPr": false,
+   "experienced": false,
+   "hasSchoolPage": false,
+   "listed": true,
+   "items": {
+    "受講料金": {
+     "value": "396,000円(税込・テキスト代込)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/",
+      "https://www.career-npo.org/GCDF/entry/detail.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "本体価格 396,000円（税込・テキスト代を含む）",
+     "watch": {
+      "url": "https://www.career-npo.org/GCDF/",
+      "tokens": [
+       "396,000"
+      ]
+     }
+    },
+    "入学金": {
+     "value": "なし",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "入学金はございません",
+     "mark": "good"
+    },
+    "教材費": {
+     "value": "受講料に込み(送料も込み)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/detail.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "教材費は受講料に含まれています",
+     "mark": "good"
+    },
+    "割引・特典": {
+     "value": "説明会か個別相談に出て11/30までに1月開講へ申込むと16,500円引き(379,500円・税込)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/entry/schedule.html",
+      "https://www.career-npo.org/GCDF/activity/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講料が16,500円OFF",
+     "mark": "good"
+    },
+    "給付金対象の有無": {
+     "value": "専門実践教育訓練給付金の対象。条件を満たすと受講料の最大80%が戻る",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/benefit2.html",
+      "https://www.career-npo.org/GCDF/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "「専門実践教育訓練給付金」の指定講座です",
+     "mark": "good"
+    },
+    "給付金の指定番号": {
+     "value": "3か月コース 1310167-1720011-7／5か月コース 1310167-1820011-7",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/benefit2.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "3ヶ月コース：1310167-1720011-7"
+    },
+    "ほかに使える補助": {
+     "value": "ひとり親向けの自立支援給付金(自治体)の案内あり。会社負担なら人材開発支援助成金",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/benefit2.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "母子家庭自立支援給付金及び父子家庭自立支援給付金"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "対策講座・模試は別料金。2027年1月開講は模試(31,900円)・過去問・合同ロープレ会が無料",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/gcdf/",
+      "https://www.career-npo.org/GCDF/exam/",
+      "https://www.career-npo.org/GCDF/GCDF/lp/index.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "いずれも別途有料"
+    },
+    "支払い方法": {
+     "value": "クレジットカード・銀行振込・学費ローン(会社払いは請求書)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/detail.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "1) クレジットカード決済、2) 銀行振込"
+    },
+    "分割払い・教育ローン": {
+     "value": "三井住友カード提携の学費ローンで分割可(最大24回・月18,182円から)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/faq/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "月18,182円より、最大24回"
+    },
+    "キャンセル・返金": {
+     "value": "開講日の前日から数えて14日目までは無料。それ以降は受講料の25%→50%→100%",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/policy/study.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "14日目にあたる日以前は無料でキャンセル可能"
+    },
+    "受講形式": {
+     "value": "Zoomのライブ授業(全12回・1日8時間)＋自宅でのWEB学習とホームワーク",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/entry/web.html",
+      "https://www.career-npo.org/GCDF/faq/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "オンライン（Zoomミーティングを使用）"
+    },
+    "オンライン完結の可否": {
+     "value": "できる(Zで始まるコースは全12回Zoom。修了証は郵送)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/web.html",
+      "https://www.career-npo.org/GCDF/faq/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "第1回～第12回すべての回",
+     "mark": "good"
+    },
+    "通学拠点": {
+     "value": "東京・新橋駅周辺(大阪の通学コースの案内もあり。2027年1月開講は東京のみ)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/schedule.html",
+      "https://www.career-npo.org/GCDF/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "会場：新橋駅周辺エリア"
+    },
+    "受講期間": {
+     "value": "約3か月(週1回・全12回)。隔週で約5か月のコースもあり",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/gcdf/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "3ヶ月間（毎週1回ペース）"
+    },
+    "総学習時間": {
+     "value": "150時間(授業96時間＋ホームワーク54時間)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/faq/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "計150時間です"
+    },
+    "平日・土日・夜間コース": {
+     "value": "2027年1月開講のオンラインは土曜・日曜のみ(9:30〜18:30)。時期によって平日コースもあると案内",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/schedule.html",
+      "https://www.career-npo.org/GCDF/faq/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "曜日：土 時間：09:30〜18:30"
+    },
+    "直近の開講": {
+     "value": "オンラインはZG26 2027/1/16(土)・ZH26 1/17(日)・ZI26 1/24(日)開講",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/schedule.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "ZG26コース"
+    },
+    "申込みの締切": {
+     "value": "先着順で定員になりしだい締切。カード払いは開講4日前、振込・ローンは14日前の23:59まで",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/schedule.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "1) は開講日4日前の23：59締切"
+    },
+    "受講に必要な環境": {
+     "value": "カメラ・マイク付きのパソコンとネット環境(Zoom)。Googleドライブも使う",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/web.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "WEBカメラ・マイク必須"
+    },
+    "振替制度": {
+     "value": "3回まで無料で別コースに振替できる(7日前までに連絡・空きがあれば)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/policy.html",
+      "https://www.career-npo.org/GCDF/files/rescheduled-lesson.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "最大3回まで振替可能です（手数料はかかりません）",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "12回中10回以上の出席が必要。第1・2・3・5・7・12回は休めない(振替で補う)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/files/rescheduled-lesson.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "全12回中10回以上の出席"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "30分以上の遅刻・早退は欠席あつかい(その回は振替が必要)",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/policy.html",
+      "https://www.career-npo.org/GCDF/files/rescheduled-lesson.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "30分以上の遅刻・早退の場合は欠席となります"
+    },
+    "子育て中の通いやすさ": {
+     "value": "土日の9:30〜18:30(昼休み1時間)。録画の配信はなし。「家庭と両立できる」と案内",
+     "status": "partial",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/gcdf/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "各日9:30～18:30（昼休憩1時間）"
+    },
+    "クラス規模": {
+     "value": "1コース18名までの少人数・担任制",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/detail.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "定員は18名の少人数制",
+     "mark": "good"
+    },
+    "定員・最少開講人数": {
+     "value": "定員18名。最少人数の数字は出ていない(人数不足で中止なら全額返金)",
+     "status": "partial",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/policy/study.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "定員は18名の少人数制"
+    },
+    "グループワーク": {
+     "value": "あり。キャリア理論や心理検査を受講生どうしで体験しながら学ぶ",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/gcdf/",
+      "https://www.career-npo.org/GCDF/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "グループワークで意見を出し合ったり"
+    },
+    "ロールプレイ": {
+     "value": "あり。実技6日間、受講生どうし＋協会の相談者役と練習し、面談記録を講師が個別に指導",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/gcdf/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "カウンセリング実技6日間",
+     "mark": "good"
+    },
+    "課題の提出方法": {
+     "value": "ホームワーク54時間(面談の文字起こし作成など)。毎回の学びはGoogleドライブのシートに入力",
+     "status": "partial",
+     "sources": [
+      "https://www.career-npo.org/GCDF/entry/detail.html",
+      "https://www.career-npo.org/GCDF/entry/web.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "Googleドライブ上に「GCDF学習軌跡シート」"
+    },
+    "修了条件": {
+     "value": "10回以上出席＋確認テスト70%以上＋ロールプレイ評価6割以上",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/faq/",
+      "https://www.career-npo.org/GCDF/entry/policy.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "各確認テスト・総合テストで70％以上の正解"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "有料講座あり(税込)。学科8,800円・論述8,800円・面接16,500円・3科目模試31,900円",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/exam/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "論述対策トレーニング"
+    },
+    "資格取得後の支援": {
+     "value": "更新講習53講座・セミナー(一部無料)・指導者養成。GCDF資格を取ると受講料約2割引",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/gcdf/",
+      "https://www.career-npo.org/GCDF/GCDF/lp/index.html",
+      "https://www.career-npo.org/GCDF/qualified/features.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "業界最大級の53講座",
+     "mark": "good"
+    },
+    "卒業生コミュニティ": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "就職支援": {
+     "value": "仕事の紹介はなし。GCDF-Japan資格(登録料18,700円)を取った人に仕事情報をメール配信",
+     "status": "partial",
+     "sources": [
+      "https://www.career-npo.org/GCDF/qualified/features.html",
+      "https://www.career-npo.org/GCDF/qualified/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "キャリアコンサルティング関連の仕事情報配信"
+    },
+    "独立・副業支援": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "説明会": {
+     "value": "無料オンライン説明会(60分・週2回 昼12時台/夜18時台・カメラオフ可)。個別相談もあり",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/GCDF/lp/index.html",
+      "https://www.career-npo.org/GCDF/activity/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "毎週2回開催（昼12時台／夜18時台）",
+     "mark": "good"
+    },
+    "説明会の申込みページ": {
+     "value": "説明会は公式フォームで前日23:59まで受付。個別相談(オンライン・電話・対面)は専用フォーム",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/GCDF/lp/index.html#form",
+      "https://www.career-npo.org/GCDF/activity/entry.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "開催日前日の23:59まで受け付けています"
+    },
+    "公式が出している実績": {
+     "value": "GCDF受講者の国家試験合格率85.5%(2024年度・553名中473名)。2023年度88.0%",
+     "status": "verified",
+     "sources": [
+      "https://www.career-npo.org/GCDF/exam/plan.html"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "（６）合格率（目標資格の取得率）",
+     "mark": "good"
+    }
+   },
+   "briefingUrl": "https://www.career-npo.org/GCDF/activity/",
+   "contact": null
+  },
+  {
+   "slug": "ohara",
+   "name": "学校法人 大原学園",
+   "shortName": "大原学園",
+   "officialUrl": "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+   "affiliateUrl": null,
+   "isPr": false,
+   "experienced": false,
+   "hasSchoolPage": false,
+   "listed": true,
+   "items": {
+    "受講料金": {
+     "value": "294,000円(税込)",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "一般価格：294,000円（税込）",
+     "watch": {
+      "url": "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "tokens": [
+       "294,000"
+      ]
+     }
+    },
+    "入学金": {
+     "value": "初めて大原に申し込む人のみ6,000円(税込)。無料説明会の予約で免除クーポンあり",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/faq",
+      "https://www.o-hara.jp/course/career_consultant/eventnews/detail?id=8992"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講料の他に入学金6,000円（税込）が必要です"
+    },
+    "教材費": {
+     "value": "受講料に込み",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_04",
+      "https://www.o-hara.jp/course/career_consultant/faq"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "教材費は受講料に含まれております。",
+     "mark": "good"
+    },
+    "割引・特典": {
+     "value": "大原の講座(2万円以上)を受けたことがある人は3%引き(285,100円・税込)。説明会予約で入学金免除クーポン",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/course/career_consultant/con_discount",
+      "https://www.o-hara.jp/course/career_consultant/eventnews/detail?id=8992"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "大原受講生割引価格【3％OFF】",
+     "mark": "good"
+    },
+    "給付金対象の有無": {
+     "value": "専門実践教育訓練給付の対象。条件を満たせば入学金・受講料の最大80%が戻る",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_other_01"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "専門実践教育訓練給付制度の対象講座です",
+     "mark": "good"
+    },
+    "給付金の指定番号": {
+     "value": "1310222-2010011-7(通信)",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_other_01"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "1310222-2010011-7"
+    },
+    "ほかに使える補助": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "試験対策が料金に含まれるか": {
+     "value": "論述・面接(実技)の対策講習を、修了生は無料で受けられる",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_04"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "論述・実技対策講習を、養成講習生は無料で受講できます。",
+     "mark": "good"
+    },
+    "支払い方法": {
+     "value": "このコースはクレジットカードのみ(ネット申込みのみ)。教育ローンも使える",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/faq"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "お支払方法は「クレジットカードのみ」となります",
+     "mark": "bad"
+    },
+    "分割払い・教育ローン": {
+     "value": "カードの分割・リボ払い、ジャックスの教育ローン(2〜36回・頭金なし)が使える",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/faq",
+      "https://www.o-hara.jp/loan",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_04"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "クレジットカード分割払いやリボ払い、教育ローン",
+     "mark": "good"
+    },
+    "キャンセル・返金": {
+     "value": "開始前は受講料を全額返金(入学金は返らない)。開始後は残りの分から20%(上限5万円)を引いて返金",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/files/page/terms/kiyaku20221214.pdf",
+      "https://www.o-hara.jp/course/career_consultant/faq"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "受講料相当額の20％に相当する金額(上限5万円)"
+    },
+    "受講形式": {
+     "value": "知識編はWeb動画(好きな時に見る)、演習編はZoomのライブ授業",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "Zoomを利用して、オンラインで講義に参加できる受講形態です"
+    },
+    "オンライン完結の可否": {
+     "value": "通学なしで修了できる(演習もZoom)",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "この商品はオンライン校での講義になります。",
+     "mark": "good"
+    },
+    "通学拠点": {
+     "value": "オンライン校は通学なし。教室のコースは東京水道橋・池袋・梅田の3校",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "「梅田校」の3校で開催となります"
+    },
+    "受講期間": {
+     "value": "約4か月(2026年12月24日〜2027年4月8日修了予定)",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_other_01"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "知識編と演習編の並行学習により4ヶ月で終了可能！"
+    },
+    "総学習時間": {
+     "value": "160時間(Web動画72時間+ライブ演習88時間・11日)",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "オンライン校（Webライブ）88時間（11日間）"
+    },
+    "平日・土日・夜間コース": {
+     "value": "土曜クラスか日曜クラス(どちらも9:00〜18:30・全11日)",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "9:00～18:30"
+    },
+    "直近の開講": {
+     "value": "2026年12月24日に動画スタート。演習は2027年1月16日(土)/17日(日)から",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf",
+      "https://www.o-hara.jp/course/career_consultant/con_other_01"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "2026年12月24日開講(知識編 視聴開始)"
+    },
+    "申込みの締切": {
+     "value": "2026年12月21日(月)まで。定員になれば早めに締め切り",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_other_01",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf",
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "2026年8月18日 ～ 2026年12月21日"
+    },
+    "受講に必要な環境": {
+     "value": "Zoomが使えるパソコン(カメラ・マイク)かスマホ・タブレットと、ネット回線",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/faq"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "WEB会議システム「Zoom」を使用して実施します"
+    },
+    "振替制度": {
+     "value": "土曜と日曜のクラスどうしで振替できる(先着・定員あり)。出席扱い。教室への振替は不可",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "どちらの曜日にも振替出席が可能です",
+     "mark": "good"
+    },
+    "欠席の上限と扱い": {
+     "value": "全11日のうち2日まで休める(8割以上の出席が必要)。休んだ回は資料がもらえる",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/faq",
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_04"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "２日間まででしたら欠席することができます"
+    },
+    "遅刻・早退・中座の扱い": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "子育て中の通いやすさ": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "クラス規模": {
+     "value": "1クラス20人。演習はZoomの小部屋で少人数に分かれる",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "1クラス20名"
+    },
+    "定員・最少開講人数": {
+     "value": "定員20人(先着順)。6人以上で開講",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/files/page/course/career_consultant/nt_202612.pdf",
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "（最少催行人数 6 名）"
+    },
+    "グループワーク": {
+     "value": "あり。Zoomの小部屋に分かれて少人数でワーク",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "Zoomのブレイクアウトルームを活用して、少人数でワーク"
+    },
+    "ロールプレイ": {
+     "value": "あり。試験と同じ形式・時間で練習。現役キャリコンがグループごとに助言",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_04"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "試験時間と同じ内容・形式・時間でロールプレイを行う",
+     "mark": "good"
+    },
+    "課題の提出方法": {
+     "value": "知識編で添削問題を3回出す(出し方は公式に書かれていない)",
+     "status": "partial",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_other_01"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "添削問題3回を提出し、平均点60％以上を取得。"
+    },
+    "修了条件": {
+     "value": "添削3回の平均60%以上・演習に8割以上出席・修了試験60%以上",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_other_01"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "演習編に80%以上出席。"
+    },
+    "試験対策(学科・論述・面接)": {
+     "value": "論述・面接の対策講習が無料。学科試験まで動画を見直せる。協議会・JCDAどちらにも対応",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_03",
+      "https://www.o-hara.jp/course/career_consultant/con_feature_04"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "学科試験まで知識編の映像が視聴できます",
+     "mark": "good"
+    },
+    "資格取得後の支援": {
+     "value": "資格の更新に使える更新講習(技能講習)をオンラインで開いている",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/con_feature_01",
+      "https://www.o-hara.jp/course/career_consultant/"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "講習をオンラインで開講しています"
+    },
+    "卒業生コミュニティ": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "就職支援": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "独立・副業支援": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    },
+    "説明会": {
+     "value": "無料のオンライン説明会+ミニ授業(Zoom・平日19〜20時)。動画の説明会と個別相談もあり",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/event",
+      "https://www.o-hara.jp/course/career_consultant/eventnews/detail?id=8992",
+      "https://www.o-hara.jp/course/career_consultant/con_web_seminar"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "～講座説明会＋ミニ授業～",
+     "mark": "good"
+    },
+    "説明会の申込みページ": {
+     "value": "https://www.o-hara.jp/course/career_consultant/event",
+     "status": "verified",
+     "sources": [
+      "https://www.o-hara.jp/course/career_consultant/event"
+     ],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)",
+     "quote": "セミナー説明会"
+    },
+    "公式が出している実績": {
+     "value": "公式ページに記載なし",
+     "status": "not_stated",
+     "sources": [],
+     "checkedAt": "2026-10-17",
+     "origin": "選び直しの調査",
+     "sourceFrom": "公式ページ(2026-10-17)"
+    }
+   },
+   "briefingUrl": "https://www.o-hara.jp/course/career_consultant/event",
+   "contact": null
   }
  ]
 }
