@@ -98,6 +98,7 @@
         });
       }
     }
+    edge();
   }
 
   function onChange() {
@@ -113,6 +114,19 @@
   groupBoxes.forEach(function (cb) {
     cb.addEventListener("change", onChange);
   });
+
+  /* 右はしのぼかし:まだ右に続くときだけ出す */
+  var wrap = document.querySelector("[data-cmp-wrap]");
+  var scroller = wrap && wrap.querySelector(".cmp-scroll");
+  function edge() {
+    if (!scroller) return;
+    var end = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 4;
+    wrap.classList.toggle("is-end", end);
+  }
+  if (scroller) {
+    scroller.addEventListener("scroll", edge, { passive: true });
+    window.addEventListener("resize", edge);
+  }
 
   apply(initialSchools(), listParam("items"));
 })();

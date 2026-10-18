@@ -182,6 +182,15 @@
     "errorBtn": "比較表を見る"
   };
   /*T-END*/
+  /* 結果の下に出す「並び順のきまり」と、表の行の短い名前。並び順は rank() と同じ内容を書く */
+  T.makeupL = "振替";
+  T.termL = "期間";
+  T.site = T.site || "公式サイトを見る";
+  T.order = "並び順は、<wbr>①合わない<wbr>条件が<wbr>少ない順、<wbr>②合う<wbr>条件が<wbr>多い順、<wbr>③確認できた<wbr>金額が<wbr>安い順です。";
+  T.orderFree = "並び順は、<wbr>確認できた<wbr>金額が<wbr>安い順です。";
+  T.orderAd = "紹介料(広告)の<wbr>有無は、<wbr>並び順に<wbr>使っていません。";
+  T.orderAllPr = "この<wbr>条件に<wbr>合ったのが、<wbr>たまたま<wbr>紹介リンクの<wbr>ある<wbr>学校でした。";
+  T.orderAllPrOut = "この<wbr>条件に<wbr>近かったのが、<wbr>たまたま<wbr>紹介リンクの<wbr>ある<wbr>学校でした。";
 
   var COMPARE = "/schools/compare/";
   var KEY = "school-match-v2";
@@ -493,6 +502,8 @@
       .join("");
     var prep = s.cells["試験対策が料金に含まれるか"];
     var date = s.cells["情報確認日"];
+    var makeup = s.cells["振替制度"];
+    var term = s.cells["受講期間"];
     return (
       '<li class="sm-school' +
       (lead ? " sm-school--lead" : "") +
@@ -512,6 +523,8 @@
       "</b></p><dl>" +
       rows +
       (prep ? "<div><dt>" + T.prep + "</dt><dd>" + prep.html + "</dd></div>" : "") +
+      (makeup ? "<div><dt>" + T.makeupL + "</dt><dd>" + makeup.html + "</dd></div>" : "") +
+      (term ? "<div><dt>" + T.termL + "</dt><dd>" + term.html + "</dd></div>" : "") +
       "</dl></div>" +
       '<div class="sm-school__foot">' +
       (s.page || !s.go
@@ -604,6 +617,7 @@
         })
         .join("") +
       "</ul>" +
+      orderNote(kind, lead) +
       (rest.length
         ? '<details class="sm__rest"><summary>' +
           T.rest.replace("{n}", rest.length) +
@@ -668,6 +682,23 @@
       focusIn(".sm__q");
       ev("match_done", { result: kind, count: n, cond: keys.join(",") || "none" });
     }
+  }
+
+  function orderNote(kind, lead) {
+    var allPr =
+      kind !== "free" &&
+      lead.length > 0 &&
+      lead.every(function (r) {
+        return r.s.pr;
+      });
+    return (
+      '<p class="sm__order" style="margin:10px 4px 14px;font-size:13px;line-height:1.8;color:#6f6b63">' +
+      (kind === "free" ? T.orderFree : T.order) +
+      "<wbr>" +
+      T.orderAd +
+      (allPr ? "<wbr>" + (kind === "out" ? T.orderAllPrOut : T.orderAllPr) : "") +
+      "</p>"
+    );
   }
 
   function showError() {

@@ -53,17 +53,23 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 .apply__go{display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
 .apply__go small{font-size:.6875rem;font-weight:700;padding:1px 7px;border-radius:3px;background:rgba(255,255,255,.28);letter-spacing:.06em}
 @media(min-width:720px){.apply__row{grid-template-columns:1fr auto;align-items:center;padding:16px 20px}}
-/* スマホ:項目名を各行の上に小さく出し、学校の列を広く使う(2校半が並ぶ) */
+/* 比較表:右はしのぼかし(まだ右に続くことの目印)。いちばん右まで動かすと消える */
+.cmp-scrollwrap{position:relative}
+.cmp-scrollwrap::after{content:"";position:absolute;top:1px;right:1px;bottom:1px;width:32px;border-radius:0 13px 13px 0;background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.95));pointer-events:none;transition:opacity .2s}
+.cmp-scrollwrap.is-end::after{opacity:0}
+.cmp__swipe{font-weight:700;color:#5c6e51}
+/* スマホ:表の中で縦にスクロールさせない(ページごと縦に動く)。項目名は左に固定 */
 @media(max-width:600px){
-.cmp th,.cmp td{min-width:142px;padding:10px 10px}
-.cmp tbody td{padding-top:32px}
-.cmp tbody th[scope="row"],.cmp thead .cmp__corner{min-width:0;width:0;max-width:0;padding:0;border:0;box-shadow:none;background:transparent!important;overflow:visible}
-.cmp tbody th[scope="row"]{padding-top:8px;text-indent:10px;white-space:nowrap!important;word-break:keep-all;font-size:12px;line-height:1.5;letter-spacing:.04em;color:#5c6e51;z-index:1}
-.cmp tbody th[scope="row"] + td,.cmp thead .cmp__corner + th{border-left:0}
-.cmp tbody th[scope="row"] wbr{display:none}
-.cmp thead .cmp__corner{font-size:0}
-.cmp thead th{font-size:14px}
-.cmp__links{font-size:13px}
+.cmp-scroll{max-height:none;overflow-x:auto;overflow-y:hidden}
+.cmp-scroll .cmp{font-size:14px;line-height:1.7}
+.cmp-scroll .cmp th,.cmp-scroll .cmp td{min-width:150px;padding:10px}
+.cmp-scroll .cmp tbody th[scope="row"],.cmp-scroll .cmp thead .cmp__corner{position:sticky;left:0;min-width:88px;width:88px;max-width:88px;padding:10px 8px;font-size:12px;line-height:1.5;letter-spacing:.02em;word-break:break-all;z-index:2;box-shadow:2px 0 0 #e6e0d2}
+.cmp-scroll .cmp tbody th[scope="row"]{background:#f7f5ef;color:#3a372f}
+.cmp-scroll .cmp thead .cmp__corner{z-index:3;font-size:12px}
+.cmp-scroll .cmp thead th{font-size:14px}
+.cmp-scroll .cmp__links{font-size:13px}
+.cmp-scroll .cmp__group th{padding:8px 10px}
+.cmp-scroll .cmp__group th span{left:10px}
 }
 .setsumei-box{max-width:640px;margin:36px auto;padding:20px 18px;background:#fff;border:2px solid #f3c9ba;border-radius:20px;text-align:center;line-height:1.9}
 .setsumei-box__t{margin:0 0 6px;font-weight:700;font-size:1.08rem;color:#3f6b4a}
@@ -293,7 +299,8 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
     <p class="cmp__status" data-compare-status></p>
     <ul class="cmp__legend"><li><span class="cmp__mark cmp__mark--good">◎</span>読者にとって有利な点</li><li><span class="cmp__mark cmp__mark--bad">△</span>申し込む前に注意したい点</li></ul>
     <p class="cmp__hint">◎と<wbr>△は、<wbr>3校以上で<wbr>公式情報を<wbr>確かめられた<wbr>項目(受講料金・入学金・教材費・オンライン完結・<wbr>振替制度・試験対策が<wbr>含まれるか・ロールプレイ)だけに、<wbr>全校<wbr>同じ<wbr>基準で<wbr>付けています。<wbr>受講料金は<wbr>30万円以下を<wbr>◎、<wbr>39万円以上を<wbr>△に<wbr>しています。<wbr>広告(紹介リンク)の<wbr>ある学校も<wbr>基準は<wbr>同じです。<wbr>未確認の<wbr>項目には<wbr>付けていません。</p>
-    <p class="cmp__hint">表は横にスクロールできます。項目名は、横に動かしても左に残ります。</p>
+    <p class="cmp__hint"><span class="cmp__swipe" aria-hidden="true">→ </span><span class="cmp__swipe">横に<wbr>スクロールできます。</span><wbr>左の<wbr>項目名は、<wbr>横に<wbr>動かしても<wbr>残ります。</p>
+    <div class="cmp-scrollwrap" data-cmp-wrap>
     <div class="cmp-scroll" tabindex="0" role="region" aria-label="養成学校の比較表">
       <table class="cmp">
         <thead><tr><th scope="col" class="cmp__corner">項目</th><th scope="col" data-school="chiiki-renkei-platform" data-pr="1"><span class="cmp__name">地域連携プラットフォーム</span><span class="cmp__links"><a href="../chiiki-renkei-platform/">くわしく</a> ・ <a href="https://px.a8.net/svt/ejp?a8mat=459JRK+G3ASDU+59PG+60OXE" rel="sponsored noopener nofollow" target="_blank">公式サイト</a></span></th><th scope="col" data-school="nippon-manpower" data-pr="1"><span class="cmp__name">日本マンパワー</span><span class="cmp__links"><a href="../nippon-manpower/">くわしく</a> ・ <a href="https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV8EY+5MF8+5YJRM" rel="sponsored noopener nofollow" target="_blank">公式サイト</a></span></th><th scope="col" data-school="lec" data-pr="1"><span class="cmp__name">LEC東京リーガルマインド</span><span class="cmp__links"><a href="../lec/">くわしく</a> ・ <a href="https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fonline.lec-jp.com%2Fdisp%2FNSfKeywordSearch.jsp%3FdispNo%3D%26selkwd%3D%2583L%2583%2583%2583%258A%2583A%2583R%2583%2593%2583T%2583%258B%2583%255E%2583%2593%2583g%26isSearchBar%3D1%26cpp%3D%26srt%3D" rel="sponsored noopener nofollow" target="_blank">公式サイト</a></span></th><th scope="col" data-school="recurrent" data-pr="1"><span class="cmp__name">リカレント</span><span class="cmp__links"><a href="../recurrent/">くわしく</a> ・ <a href="https://px.a8.net/svt/ejp?a8mat=4BE7SX+HV1P6+5BEA+BWVTE" rel="sponsored noopener nofollow" target="_blank">公式サイト</a></span></th><th scope="col" data-school="jaico"><span class="cmp__name">日本産業カウンセラー協会</span><span class="cmp__links"><a href="https://www.jaico.cc/" rel="noopener nofollow" target="_blank">公式サイト</a></span></th><th scope="col" data-school="gcdf"><span class="cmp__name">GCDF-Japan</span><span class="cmp__links"><a href="https://www.career-npo.org/GCDF/" rel="noopener nofollow" target="_blank">公式サイト</a></span></th><th scope="col" data-school="ohara"><span class="cmp__name">大原学園</span><span class="cmp__links"><a href="https://www.o-hara.jp/course/career_consultant/con_feature_03" rel="noopener nofollow" target="_blank">公式サイト</a></span></th></tr></thead>
@@ -330,6 +337,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
           <tr data-group="date"><th scope="row">情報確認日</th><td data-school="chiiki-renkei-platform">2026-10-17</td><td data-school="nippon-manpower">2026-10-17</td><td data-school="lec">2026-10-17</td><td data-school="recurrent">2026-10-17</td><td data-school="jaico">2026-10-17</td><td data-school="gcdf">2026-10-17</td><td data-school="ohara">2026-10-17</td></tr>
         </tbody>
       </table>
+    </div>
     </div>
     </div>
   </section>
@@ -420,7 +428,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
   </section>
 </div>
 <script src="../../js/compare.js" defer></script>
-<script src="../../js/compare-page.js?v=2026.0928j" defer></script>
+<script src="../../js/compare-page.js?v=2026.1018b" defer></script>
 
 </main>
 
@@ -508,7 +516,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 <script src="../../js/search-fab.js?v=v2026.0728.1616" defer></script>
 <script src="../../js/term-hints.js?v=v2026.1018" defer></script>
 
-<script src="../../js/school-match.js?v=2026.1018" defer></script>
+<script src="../../js/school-match.js?v=2026.1018b" defer></script>
 <script src="../../js/cta-fab.js?v=2026.1018" defer></script>
 </body>
 </html>
