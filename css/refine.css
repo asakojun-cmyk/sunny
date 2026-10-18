@@ -823,3 +823,9 @@ strong.nw{white-space:nowrap}
   .site-main .page-scene:has(+ :is(.term-article,.theorist-article)) .pgs-chara{width:40px;bottom:10px}
   .site-main .page-scene:has(+ :is(.term-article,.theorist-article)) .pgs-b{width:36px;bottom:6px}
 }
+/* 用語ページ(スマホ): 名前が長いページでも「ひとこと」が最初の画面に入るよう、飾りを消して見出しを少し小さく(2026-10-18) */
+@media (max-width:640px){
+  .site-main .page-scene:has(+ .term-article){display:none}
+  .site-main .term-article > .term-header h1{font-size:1.45rem!important;line-height:1.45!important;margin-bottom:4px!important}
+  .site-main .term-article > .term-oneliner .term-section-title{font-size:1.05rem!important;line-height:1.5!important}
+}
