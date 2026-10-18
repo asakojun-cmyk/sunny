@@ -374,6 +374,12 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .qa-talk .mini-say__bubble,.lp-river .qa-ans .mini-say__bubble{flex:0 1 auto;max-width:min(400px,78%);padding:12px 18px;text-align:left!important;text-wrap:balance}
 .qa-talk .mini-say__avatar,.lp-river .qa-ans .mini-say__avatar{width:48px;height:48px}
 .qa-talk .mini-say__avatar img,.lp-river .qa-ans .mini-say__avatar img{width:48px;height:48px;object-fit:contain}
+/* スマホで見切れないように: 見出しは折り返してよい・大きな題字は画面幅に合わせて縮む */
+.is-home #picnic-title .hero-h1-big{max-width:100%}
+.is-home #picnic-title .hero-h1-big em{font-size:min(1em,7.8vw)}
+.lp-river .lp-river__body h3{white-space:normal;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
+/* Q&Aの答えの文は左ぞろえで読みやすく(見出しとボタンは中央のまま) */
+.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important}
 .lp-river .qa-ans{margin:0 0 14px;justify-content:center}
 .lp-river .qa-ans .mini-say__bubble{font-weight:700;color:#29435e}
 body.is-home main .lp-river .lp-river__body h3::before{content:"Q" counter(lpstep)!important;display:inline-flex!important;width:auto!important;min-width:40px;height:30px!important;padding:0 10px;border-radius:99px!important;font-size:14px!important;font-weight:700!important;letter-spacing:.04em}
@@ -524,7 +530,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="step-2">
         <h3 class="flow-h"><i><small>STEP</small>2</i><span>比較表で、<wbr>費用・<wbr>日程・<wbr>給付金を<wbr>くらべよう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や日程も、学校によってちがうよ。お金だけじゃなく、続けやすさもくらべてね。</span></p></div>
+          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や日程も、</span><wbr><span class="nb">学校によって</span><wbr><span class="nb">ちがうよ。</span><wbr><span class="nb">お金だけじゃなく、</span><wbr><span class="nb">続けやすさも</span><wbr><span class="nb">くらべてね。</span></p></div>
         </div>
         <p class="flow-go"><a class="picnic-button picnic-button--line" href="./schools/compare/" data-ev="top_next_compare">7校を<wbr>比較表で<wbr>くらべてみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
       
