@@ -381,7 +381,9 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 /* 吹き出しの文は左ぞろえで、名前も左に(ちゃんの指定 2026-10-18) */
 .is-home .qa-talk .mini-say__bubble,.is-home .lp-river .qa-ans .mini-say__bubble,.is-home .flow .flow-talk .mini-say__bubble{flex:1 1 auto!important;max-width:none!important;text-align:left!important;text-wrap:pretty!important;padding:14px 18px!important;line-break:strict}
 .is-home .qa-talk .mini-say__bubble b,.is-home .lp-river .qa-ans .mini-say__bubble b,.is-home .flow .flow-talk .mini-say__bubble b{display:block;text-align:left!important;margin-bottom:4px}
-.is-home .flow .flow-talk .mini-say__bubble{text-wrap:wrap!important}
+.is-home .flow .flow-talk .mini-say__bubble{text-wrap:pretty!important}
+/* 会話は改行位置を決めず、自然に流す(ちゃんの指定 2026-10-18) */
+.is-home .flow .flow-talk .mini-say__bubble .nb{white-space:normal!important;display:inline}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
 .is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
 /* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
@@ -546,7 +548,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="step-3">
         <h3 class="flow-h"><i><small>STEP</small>3</i><span>説明会に<wbr>参加して、<wbr>気になる<wbr>ことを<wbr>質問しよう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--chan"><span class="mini-say__avatar mini-say__avatar--chan" aria-hidden="true"><img src="./img/chan-map-s.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>ちゃん</b><wbr><span class="nb">お金の</span><wbr><span class="nb">ことも、</span><wbr><span class="nb">説明会なら</span><wbr><span class="nb">直接</span><wbr><span class="nb">聞けますよ。</span><wbr><span class="nb">わたしが</span><wbr><span class="nb">出た回は</span><wbr><span class="nb">3人だけで、</span><wbr><span class="nb">質問</span><wbr><span class="nb">しやすかったです。</span></p></div>
+          <div class="mini-say mini-say--chan"><span class="mini-say__avatar mini-say__avatar--chan" aria-hidden="true"><img src="./img/chan-map-s.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>ちゃん</b><wbr><span class="nb">お金の</span><wbr><span class="nb">ことも、</span><wbr><span class="nb">説明会なら</span><wbr><span class="nb">直接</span><wbr><span class="nb">聞けますよ。</span><wbr><span class="nb">わたしが</span><wbr><span class="nb">出た回は</span><wbr><span class="nb">3人だけで、</span><wbr><span class="nb">質問しやすかったです。</span></p></div>
         </div>
         <div class="flow-ask">
           <p class="flow-ask__t">説明会で<wbr>聞いておくと<wbr>安心なこと</p>
