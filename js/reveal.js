@@ -50,25 +50,6 @@
   );
 })();
 
-/* Amazon（本）のリンクが押されたら記録する。イベント名: amazon_click（本の名前・ページつき） */
-(function () {
-  "use strict";
-  document.addEventListener(
-    "click",
-    function (e) {
-      var a = e.target && e.target.closest ? e.target.closest('a[href*="amazon.co.jp"],a[href*="amzn.to"],a[href*="af.moshimo.com"]') : null;
-      if (!a || typeof window.gtag !== "function") return;
-      var card = a.closest(".book-card,li,section");
-      var t = card && card.querySelector(".book-card__title,h3,h4,b,strong");
-      window.gtag("event", "amazon_click", {
-        book: ((t && t.textContent) || a.textContent || "").replace(/\s+/g, "").slice(0, 60),
-        page_path: location.pathname
-      });
-    },
-    true
-  );
-})();
-
 /* data-ev="名前" のついたリンクやボタンが押されたら、その名前でGA4に記録する */
 (function () {
   "use strict";
