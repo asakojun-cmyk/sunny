@@ -359,3 +359,9 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 .gk-sugo .gk-sugo__bar .s1, .gk-sugo .gk-sugo__legend .s1 { background: #e9785f; }
 .gk-sugo .gk-sugo__bar .s2, .gk-sugo .gk-sugo__legend .s2 { background: #f4b19c; }
 .gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: #f1e2a6; }
+/* ％の数字を、丸のまん中にそろえる（ラベルは上、名前は下。+20% などは数字の右にそえるだけ） */
+.gk-sugo .gk-sugo__box { position: relative; display: block; padding: 0; }
+.gk-sugo .gk-sugo__pct { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; }
+.gk-sugo .gk-sugo__pct small { position: absolute; left: 100%; bottom: .3em; margin-left: 3px; white-space: nowrap; }
+.gk-sugo .gk-sugo__no { position: absolute; left: 50%; bottom: calc(50% + 22px); transform: translateX(-50%); }
+.gk-sugo .gk-sugo__box b { position: absolute; left: 6px; right: 6px; top: calc(50% + 21px); text-align: center; }
