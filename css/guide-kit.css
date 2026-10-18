@@ -299,39 +299,53 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 .gk-zu__note b { background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); padding: 0 2px; }
 .gk-zu__note a { font-size: .75rem; }
 
-/* すごろく：トップの「数字の丸」(緑の丸・白い字)と同じ。マスどうしは、トップの3ステップと同じ点線と ▶︎ でつなぐ */
-.gk-zu.gk-sugo { background: var(--color-surface, #fffdf8); border-radius: 24px; padding: 28px 18px 24px; }
-.gk-sugo__road { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 30px; }
+/* すごろく：白い丸のマスを、テラコッタの矢印でつなぐ */
+.gk-sugo__road { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 26px; }
 .gk-sugo__sq { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-.gk-sugo__sq:not(:last-child)::after { content: "▶︎"; position: absolute; top: 60px; right: -27px; width: 24px; transform: translateY(-50%); padding-left: 0; text-align: right; color: #b9c2b6; font-size: .625rem; line-height: 1; border-top: 2px dotted #d8cfb8; padding-top: 0; height: 0; display: flex; align-items: center; justify-content: flex-end; }
-.gk-sugo__box { width: 120px; height: 120px; border-radius: 50%; background: var(--color-green, #758679); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 8px; }
-.gk-sugo__sq.is-goal .gk-sugo__box { background: var(--color-terracotta, #a0583d); }
-.gk-sugo__no { font-size: .6875rem; font-weight: 700; letter-spacing: .08em; color: #fff; opacity: .9; white-space: nowrap; }
-.gk-sugo__pct { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.875rem; line-height: 1.1; color: #fff; white-space: nowrap; }
-.gk-sugo__pct small { font-size: .6875rem; margin-left: 2px; color: #fff; opacity: .9; }
+.gk-sugo__sq:not(:last-child)::after { content: "▶︎"; position: absolute; top: 62px; right: -21px; transform: translateY(-50%); color: #e9785f; font-size: .875rem; line-height: 1; }
+.gk-sugo__box { width: 132px; height: 132px; border-radius: 50%; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 10px; }
+.gk-sugo__no { padding: 1px 10px; border-radius: 99px; background: var(--gk-green); color: #fff; font-size: .625rem; font-weight: 700; letter-spacing: .06em; white-space: nowrap; }
+.gk-sugo__sq.is-goal .gk-sugo__no { background: var(--gk-coral); }
+.gk-sugo__pct { margin-top: 2px; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.625rem; line-height: 1.1; color: var(--gk-coral); }
+.gk-sugo__pct small { font-size: .6875rem; margin-left: 2px; color: var(--gk-sub); }
+.gk-sugo__sq.is-start .gk-sugo__pct { color: var(--gk-ink); }
+.gk-sugo__box b { font-size: .75rem; line-height: 1.45; color: var(--gk-ink); }
 .gk-sugo__sq > small { font-size: .6875rem; line-height: 1.6; color: var(--gk-sub); }
-.gk-sugo__name { font-size: .875rem; font-weight: 700; line-height: 1.5; color: var(--gk-ink); }
+.gk-sugo__bar { display: flex; height: 14px; margin: 24px auto 8px; max-width: 520px; border-radius: 99px; overflow: hidden; background: #fff; }
+.gk-sugo__bar span { display: block; height: 100%; }
+.gk-sugo__bar .s1, .gk-sugo__legend .s1 { width: 50%; background: #c86a50; }
+.gk-sugo__bar .s2, .gk-sugo__legend .s2 { width: 20%; background: #e9a08a; }
+.gk-sugo__bar .s3, .gk-sugo__legend .s3 { width: 10%; background: var(--gk-lemon); }
+.gk .gk-sugo__legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 14px; }
+.gk .gk-sugo__legend li { font-size: .6875rem !important; line-height: 1.8 !important; color: var(--gk-sub); }
+.gk-sugo__legend i { display: inline-block; width: 10px !important; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
 @media (max-width: 560px) {
   .gk-sugo__road { grid-template-columns: minmax(0, 1fr); gap: 0; max-width: 300px; }
-  .gk-zu .gk-sugo__sq { gap: 6px; padding-bottom: 56px; }
+  .gk-zu .gk-sugo__sq { gap: 6px; padding-bottom: 34px; }
   .gk-zu .gk-sugo__sq:last-child { padding-bottom: 0; }
-  .gk-sugo__sq:not(:last-child)::after { content: ""; top: auto; bottom: 8px; right: auto; left: calc(50% - 2px); width: 4px; height: 36px; transform: none; border: 0; background: radial-gradient(circle, #b9c2b6 1.6px, transparent 2px) center top/4px 8px repeat-y; }
+  .gk-sugo__sq:not(:last-child)::after { content: "▼"; top: auto; bottom: 8px; right: auto; left: 50%; transform: translateX(-50%); }
+  .gk-sugo__box { width: 128px; height: 128px; }
 }
 
-/* 手続きの道のり：トップの「3ステップ」と同じ。緑の番号の丸＋見出し、あいだは点線と、緑の小さな文字 */
-.gk-road__list { max-width: 520px; }
-.gk-zu .gk-road__step { position: relative; margin: 0; padding: 0; }
-.gk .gk-road__when { position: relative; margin: 0 0 14px !important; padding-top: 44px; color: #7a8a74; font-size: .8125rem !important; font-weight: 700; letter-spacing: .06em; }
-.gk-road__when::before { content: ""; position: absolute; left: calc(50% - 2px); top: 4px; width: 4px; height: 32px; background: radial-gradient(circle, #b9c2b6 1.6px, transparent 2px) center top/4px 8px repeat-y; }
-.gk-road__step:first-child .gk-road__when { padding-top: 0; }
-.gk-road__step:first-child .gk-road__when::before { content: none; }
-.gk .gk-road__h { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 !important; }
-.gk-road__h i { flex: none; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--color-green, #758679); color: #fff; font-style: normal; font-size: 1rem; font-weight: 700; line-height: 1; }
-.gk-road__step.is-due .gk-road__h i { background: var(--color-terracotta, #a0583d); }
-.gk-road__h b { font-size: 1rem; line-height: 1.6; color: var(--gk-ink); word-break: keep-all; text-align: left; }
-.gk .gk-road__sub { margin: 6px 0 0 !important; font-size: .8125rem !important; line-height: 1.7; color: var(--gk-sub); }
-.gk-road__flag { font-weight: 700; color: var(--gk-ink); background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); padding: 0 2px; }
-@media (max-width: 480px) {
-  .gk .gk-road__h { flex-direction: column; gap: 8px; }
-  .gk-road__h b { text-align: center; }
-}
+/* 手続きの道のり：白いカードを、テラコッタの矢印でつなぐ */
+.gk-road__list { max-width: 460px; }
+.gk-road__step { position: relative; margin: 0 0 30px !important; padding: 16px 16px 14px; background: #fff; border-radius: 20px; }
+.gk-road__step:not(:last-child)::after { content: "▼"; position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%); color: #e9785f; font-size: .75rem; line-height: 1; }
+.gk-road__step:last-child { margin-bottom: 0 !important; }
+.gk-road__when { display: inline-block; margin-bottom: 6px; padding: 1px 12px; border-radius: 99px; background: var(--gk-green); color: #fff; font-size: .6875rem; font-weight: 700; letter-spacing: .04em; }
+.gk-road__step b { display: block; font-size: .9375rem; line-height: 1.6; color: var(--gk-ink); word-break: keep-all; }
+.gk-road__step small { display: block; margin-top: 2px; font-size: .75rem; line-height: 1.6; color: var(--gk-sub); }
+.gk-road__step.is-due .gk-road__when { background: var(--gk-coral); }
+.gk-road__flag { display: inline; margin-top: 6px; font-size: .75rem; font-weight: 700; color: var(--gk-ink); background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); }
+/* すごろくは水色の帯の上にあるので、表(fact-table)と同じクリーム色のカードにのせ、色はサイトの基本色だけにする */
+.gk-zu.gk-sugo { background: var(--color-surface, #fffdf8); border-radius: 24px; padding: 28px 18px 24px; }
+.gk-sugo .gk-sugo__box { background: var(--color-background, #f5f2eb); }
+.gk-sugo__sq:not(:last-child)::after { color: var(--color-terracotta, #a0583d); opacity: .55; }
+.gk-sugo .gk-sugo__pct { color: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__sq.is-goal .gk-sugo__no { background: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__bar { background: var(--color-background, #f5f2eb); }
+.gk-sugo .gk-sugo__bar .s1, .gk-sugo .gk-sugo__legend .s1 { background: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__bar .s2, .gk-sugo .gk-sugo__legend .s2 { background: #c9937d; }
+.gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: var(--color-yellow, #e7d49a); }
+.gk-sugo .gk-zu__note b { background: linear-gradient(transparent 62%, var(--color-yellow-light, #f5efd9) 62%); }
+@media (max-width: 480px) { .gk-zu.gk-sugo { padding: 24px 12px 20px; border-radius: 20px; } }
