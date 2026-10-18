@@ -1199,17 +1199,17 @@ main .school-header .nb{display:inline-block;white-space:nowrap}
 .site-header .header-search__click{color:#9a5038}
 
 /* ===== 吹き出しの見た目を全ページでそろえる(ちゃんの指定 2026-10-18) =====
-   中は白、細い線(1px)をキャラの色で。モヤン=黒・サニー先生=黄・ちゃん=青。
+   中は白、細い線(1px)をキャラの色で。モヤン=青・サニー先生=黄・ちゃん=緑。
    文は左ぞろえ。大切なところは <strong> で太字にする。 */
 html body .mini-say .mini-say__bubble{background:#fff!important;border:1px solid #d9d4ca!important;box-shadow:none!important;text-align:left!important}
-html body .mini-say--moyan .mini-say__bubble{border-color:#3a3a3a!important}
+html body .mini-say--moyan .mini-say__bubble{border-color:#6fa8dc!important}
 html body .mini-say--sunny .mini-say__bubble{border-color:#f2c94c!important}
-html body .mini-say--chan .mini-say__bubble{border-color:#6fa8dc!important}
+html body .mini-say--chan .mini-say__bubble{border-color:#7fb77e!important}
 html body .mini-say .mini-say__bubble::before,html body .mini-say .mini-say__bubble::after{display:none!important}
 html body .mini-say .mini-say__bubble strong,html body .mini-say .mini-say__bubble b:not(:first-child){display:inline!important;font-size:inherit!important;font-weight:700!important;color:#2b2a27!important;background:none!important;margin:0!important;padding:0!important}
 /* 同じそろえ方を、キャラ案内(chara-guide)・お弁当のおはなし(line)・理論家ゲスト(guest-say)の吹き出しにも */
 html body .chara-guide .chara-guide__bubble,html body .line .line__bubble,html body .guest-say .guest-say__bubble{background:#fff!important;border:1px solid #d9d4ca!important;box-shadow:none!important;text-align:left!important}
-html body .chara-guide--moyan .chara-guide__bubble,html body .line--moyan .line__bubble{border-color:#3a3a3a!important}
+html body .chara-guide--moyan .chara-guide__bubble,html body .line--moyan .line__bubble{border-color:#6fa8dc!important}
 html body .chara-guide--sunny .chara-guide__bubble,html body .line--sunny .line__bubble{border-color:#f2c94c!important}
 html body .chara-guide .chara-guide__bubble::before,html body .chara-guide .chara-guide__bubble::after{display:none!important}
 html body .chara-guide .chara-guide__bubble strong,html body .line .line__bubble strong,html body .guest-say .guest-say__bubble strong{font-weight:700!important;color:#2b2a27!important;background:none!important}
