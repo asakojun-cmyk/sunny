@@ -77,7 +77,7 @@
 
   function setLabel() {
     if (!S) return;
-    var text = !audio.paused ? "とめる" : S.started ? "つづきをきく" : S.resumeAt ? "つづきからきく" : "授業をはじめる";
+    var text = !audio.paused ? "とめる" : "授業を聴く";
     each("[data-lesson-label]", function (el) { el.textContent = text; });
     each("[data-lesson-play]", function (el) { el.classList.toggle("is-playing", !audio.paused); });
   }
@@ -280,27 +280,20 @@
 
     mount.className = "lesson";
     mount.setAttribute("role", "group");
-    mount.setAttribute("aria-label", "このページを授業できく");
+    mount.setAttribute("aria-label", "授業を聴く");
     mount.innerHTML =
-      '<div class="lesson__who" aria-hidden="true">' +
-        '<img src="' + imgBase + WHO.sunny.img + '" alt="" width="56" height="56">' +
-        '<img src="' + imgBase + WHO.moyan.img + '" alt="" width="56" height="56">' +
+      '<div class="lesson__controls">' +
+        '<button type="button" class="lesson__play" data-lesson-play><span class="lesson__icon" aria-hidden="true"></span><span data-lesson-label></span></button>' +
+        '<button type="button" class="lesson__speed" data-lesson-speed></button>' +
       '</div>' +
-      '<div class="lesson__body">' +
-        '<p class="lesson__title">このページを、授業できく</p>' +
-        '<p class="lesson__lead">サニー先生とモヤン、理論家さん役の声で読み上げます(約' + minutes + '分)。読んでいるところに色がつきます。</p>' +
-        '<div class="lesson__controls">' +
-          '<button type="button" class="lesson__play" data-lesson-play><span class="lesson__icon" aria-hidden="true"></span><span data-lesson-label></span></button>' +
-          '<button type="button" class="lesson__speed" data-lesson-speed></button>' +
-        '</div>' +
-        '<div class="lesson__seek" hidden>' +
-          '<input type="range" min="0" max="' + Math.floor(data.total) + '" step="1" value="0" aria-label="授業の再生位置">' +
-          '<span class="lesson__time"></span>' +
-        '</div>' +
-        '<p class="lesson__next" hidden>つぎは<a href="#"></a>。聞き終わったら自動で進む <button type="button" class="lesson__auto" data-lesson-auto></button></p>' +
-        '<p class="lesson__note" role="status" hidden>音声を読みこめませんでした。少し待ってから、もう一度押してみてください。</p>' +
-        '<p class="lesson__credit">音声: ' + esc(data.credit) + '</p>' +
-      '</div>';
+      '<p class="lesson__lead">サニー先生とモヤンの声で読み上げます(約' + minutes + '分)。</p>' +
+      '<div class="lesson__seek" hidden>' +
+        '<input type="range" min="0" max="' + Math.floor(data.total) + '" step="1" value="0" aria-label="授業の再生位置">' +
+        '<span class="lesson__time"></span>' +
+      '</div>' +
+      '<p class="lesson__next" hidden>つぎは<a href="#"></a>。聞き終わったら自動で進む <button type="button" class="lesson__auto" data-lesson-auto></button></p>' +
+      '<p class="lesson__note" role="status" hidden>音声を読みこめませんでした。少し待ってから、もう一度押してみてください。</p>' +
+      '<p class="lesson__credit">音声: ' + esc(data.credit) + '</p>';
 
     S = {
       mount: mount, data: data, els: els, keyPos: keyPos, resumeAt: resumeAt, imgBase: imgBase,

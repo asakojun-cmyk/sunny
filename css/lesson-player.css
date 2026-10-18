@@ -3,23 +3,13 @@
    tone.css の方針どおり、枠線と段差の影は使わず、クリーム色の面と余白で区切る
    ========================================================================== */
 
+/* 「授業を聴く」ボタンと短い説明だけ。箱やイラストは使わない */
 .lesson {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 28px 0 36px;
-  padding: 22px 24px;
-  border-radius: 22px;
-  background: var(--tone-cream, #fbf8f1);
+  margin: 8px 0 28px;
   color: var(--tone-ink, #2c3e50);
 }
-.lesson__who { display: flex; flex: none; }
-.lesson__who img { width: 56px; height: 56px; object-fit: contain; }
-.lesson__who img + img { margin-left: -10px; }
-.lesson__body { flex: 1; min-width: 0; }
-.lesson__title { margin: 0; font-size: 1.08rem; font-weight: 700; letter-spacing: .04em; }
-.lesson__lead { margin: 4px 0 0; font-size: .88rem; line-height: 1.7; color: var(--tone-sub, #7a7468); }
-.lesson__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; }
+.lesson__lead { margin: 8px 0 0; font-size: .88rem; line-height: 1.7; color: var(--tone-sub, #7a7468); }
+.lesson__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 
 .lesson__play {
   display: inline-flex;
@@ -101,6 +91,8 @@
 .lesson__time { flex: none; font-size: .8rem; font-variant-numeric: tabular-nums; color: var(--tone-sub, #7a7468); }
 .lesson__next { margin: 12px 0 0; font-size: .84rem; line-height: 1.9; color: var(--tone-sub, #7a7468); }
 .lesson__next[hidden] { display: none; }
+/* 「つぎは」は聴きはじめてから出す */
+html:not(.lesson-on) .lesson .lesson__next { display: none; }
 .lesson__next a { color: var(--tone-ink, #2c3e50); font-weight: 700; }
 .lesson__auto {
   min-height: 32px;
@@ -117,7 +109,7 @@
 .lesson__auto[aria-pressed="true"] { background: var(--tone-lemon, #f4cf57); color: var(--tone-ink, #2c3e50); }
 .lesson__note { margin: 10px 0 0; font-size: .86rem; color: var(--tone-coral, #ee8466); }
 .lesson__note[hidden] { display: none; }
-.lesson__credit { margin: 10px 0 0; font-size: .74rem; color: var(--tone-sub, #7a7468); }
+.lesson__credit { margin: 2px 0 0; font-size: .74rem; color: var(--tone-sub, #7a7468); }
 
 .lesson :focus-visible,
 .lesson-dock :focus-visible { outline: 2px solid var(--tone-coral, #ee8466); outline-offset: 3px; }
@@ -136,15 +128,15 @@
 .lesson-on :is(.term-formal, .term-similar) :is(.term-section-title, dl > div),
 .lesson-on :is(.term-formal__box > p:not(.term-update), .term-kakomon li, .term-riasec .term-section-note, .term-stages .term-section-note:first-of-type),
 .lesson-on :is(.term-try, .kw-talk) :is(.term-section-title, .mini-say__bubble),
+.lesson-on .chara-talk .chara-guide__bubble,
 .lesson-on .term-exam-points :is(.term-section-title, li),
 .lesson-on .term-exam-advice :is(.chara-guide__bubble, .exam-advice__list li),
 .lesson-on .term-pitfall :is(.term-section-title, .term-pitfall__box p),
 .lesson-on .term-episode :is(.term-section-title, .term-section-note, .episode-list li) { cursor: pointer; }
 
 /* ---------- 「理論家とピクニック」のページ ---------- */
-.weather .lesson { max-width: 620px; margin: 34px auto 0; text-align: left; background: #fffdf8; }
+.weather .lesson { max-width: 620px; margin: 34px auto 0; text-align: left; }
 .weather .lesson p { font-size: .88rem; font-weight: 400; }
-.weather .lesson .lesson__title { font-size: 1.08rem; font-weight: 700; }
 .weather .lesson .lesson__credit { font-size: .74rem; }
 .weather .lesson .lesson__next { font-size: .84rem; }
 .weather .lesson span { color: inherit; }
@@ -221,8 +213,6 @@
 .lesson-dock__close:hover { background: rgba(255, 255, 255, .14); }
 
 @media (max-width: 560px) {
-  .lesson { flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px 18px; }
-  .lesson__who img { width: 48px; height: 48px; }
   .lesson__play { flex: 1; justify-content: center; }
   .lesson-dock { gap: 6px; }
 }
