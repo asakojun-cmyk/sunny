@@ -365,3 +365,6 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 .gk-sugo .gk-sugo__pct small { position: absolute; left: 100%; bottom: .3em; margin-left: 3px; white-space: nowrap; }
 .gk-sugo .gk-sugo__no { position: absolute; left: 50%; bottom: calc(50% + 22px); transform: translateX(-50%); }
 .gk-sugo .gk-sugo__box b { position: absolute; left: 6px; right: 6px; top: calc(50% + 21px); text-align: center; }
+/* うすくて読みにくい文字を、読める濃さに */
+.gk .gk-zu__lede, .gk-sugo__sq > small, .gk .gk-sugo__legend li, .gk-road__step small { color: #4f4a42 !important; }
+.gk-zu__talk { max-width: 640px; margin: 0 auto 32px; }
