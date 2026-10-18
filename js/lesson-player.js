@@ -18,7 +18,7 @@
     ".term-formal .term-section-title", ".term-formal__box > p:not(.term-update)", ".term-kakomon li",
     ".term-stages .term-section-note:first-of-type", ".term-formal dl > div", ".term-riasec .term-section-note",
     ".term-try .term-section-title", ".term-try .mini-say__bubble",
-    ".kw-talk .mini-say__bubble",
+    ".kw-talk .mini-say__bubble", ".chara-talk .chara-guide__bubble",
     ".term-exam-points .term-section-title", ".term-exam-points li",
     ".term-exam-advice .chara-guide__bubble", ".term-exam-advice .exam-advice__list li",
     ".term-oboekata .term-section-title", ".term-oboekata .term-prose p",
