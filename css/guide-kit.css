@@ -283,3 +283,96 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
   .gk .related__list a { gap: 2px 10px; padding: 12px 2px !important; grid-template-columns: 3.9em minmax(0, 1fr) 12px; }
   .gk .related__item-title { font-size: .9375rem !important; }
 }
+
+/* ===== 図：すごろくで見る「最大80%」(.gk-sugo) と、手続きの道のり(.gk-road) 2026-10-18
+   ページのトンマナに合わせる：ベージュの地に白い丸・白いカード、緑のラベル、テラコッタの数字、点線の飾り ===== */
+.gk-zu { max-width: 680px; margin: 36px auto 36px; padding: 0; text-align: center; }
+.gk .gk-zu__k { margin: 0 0 4px !important; color: var(--gk-green); font-size: .75rem !important; font-weight: 700; letter-spacing: .15em; }
+.gk .gk-zu__t { margin: 0 !important; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.125rem !important; color: var(--gk-ink); }
+.gk-zu__t::after { content: ""; display: block; width: 46px; margin: 10px auto 0; border-bottom: 3px dotted #e9785f; opacity: .75; }
+.gk .gk-zu__lede { margin: 12px 0 20px !important; font-size: .8125rem !important; line-height: 1.7; color: var(--gk-sub); }
+.gk .gk-zu ol, .gk .gk-zu ul { margin: 0 auto !important; padding: 0 !important; list-style: none; }
+.gk-zu li { margin: 0; padding: 0; }
+.gk-zu li::before { content: none !important; }
+.gk-zu .nb { display: inline-block; white-space: nowrap; }
+.gk .gk-zu__note { margin: 18px auto 0 !important; max-width: 520px; font-size: .875rem !important; line-height: 1.9; color: var(--gk-ink); }
+.gk-zu__note b { background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); padding: 0 2px; }
+.gk-zu__note a { font-size: .75rem; }
+
+/* すごろく：白い丸のマスを、テラコッタの矢印でつなぐ */
+.gk-sugo__road { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 26px; }
+.gk-sugo__sq { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.gk-sugo__sq:not(:last-child)::after { content: "▶︎"; position: absolute; top: 62px; right: -21px; transform: translateY(-50%); color: #e9785f; font-size: .875rem; line-height: 1; }
+.gk-sugo__box { width: 132px; height: 132px; border-radius: 50%; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 10px; }
+.gk-sugo__no { padding: 1px 10px; border-radius: 99px; background: var(--gk-green); color: #fff; font-size: .625rem; font-weight: 700; letter-spacing: .06em; white-space: nowrap; }
+.gk-sugo__sq.is-goal .gk-sugo__no { background: var(--gk-coral); }
+.gk-sugo__pct { margin-top: 2px; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.625rem; line-height: 1.1; color: var(--gk-coral); }
+.gk-sugo__pct small { font-size: .6875rem; margin-left: 2px; color: var(--gk-sub); }
+.gk-sugo__sq.is-start .gk-sugo__pct { color: var(--gk-ink); }
+.gk-sugo__box b { font-size: .75rem; line-height: 1.45; color: var(--gk-ink); }
+.gk-sugo__sq > small { font-size: .6875rem; line-height: 1.6; color: var(--gk-sub); }
+.gk-sugo__bar { display: flex; height: 14px; margin: 24px auto 8px; max-width: 520px; border-radius: 99px; overflow: hidden; background: #fff; }
+.gk-sugo__bar span { display: block; height: 100%; }
+.gk-sugo__bar .s1, .gk-sugo__legend .s1 { width: 50%; background: #c86a50; }
+.gk-sugo__bar .s2, .gk-sugo__legend .s2 { width: 20%; background: #e9a08a; }
+.gk-sugo__bar .s3, .gk-sugo__legend .s3 { width: 10%; background: var(--gk-lemon); }
+.gk .gk-sugo__legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px 14px; }
+.gk .gk-sugo__legend li { font-size: .6875rem !important; line-height: 1.8 !important; color: var(--gk-sub); }
+.gk-sugo__legend i { display: inline-block; width: 10px !important; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+@media (max-width: 560px) {
+  .gk-sugo__road { grid-template-columns: minmax(0, 1fr); gap: 0; max-width: 300px; }
+  .gk-zu .gk-sugo__sq { gap: 6px; padding-bottom: 34px; }
+  .gk-zu .gk-sugo__sq:last-child { padding-bottom: 0; }
+  .gk-sugo__sq:not(:last-child)::after { content: "▼"; top: auto; bottom: 8px; right: auto; left: 50%; transform: translateX(-50%); }
+  .gk-sugo__box { width: 128px; height: 128px; }
+}
+
+/* 手続きの道のり：白いカードを、テラコッタの矢印でつなぐ */
+.gk-road__list { max-width: 460px; }
+.gk-road__step { position: relative; margin: 0 0 30px !important; padding: 16px 16px 14px; background: #fff; border-radius: 20px; }
+.gk-road__step:not(:last-child)::after { content: "▼"; position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%); color: #e9785f; font-size: .75rem; line-height: 1; }
+.gk-road__step:last-child { margin-bottom: 0 !important; }
+.gk-road__when { display: inline-block; margin-bottom: 6px; padding: 1px 12px; border-radius: 99px; background: var(--gk-green); color: #fff; font-size: .6875rem; font-weight: 700; letter-spacing: .04em; }
+.gk-road__step b { display: block; font-size: .9375rem; line-height: 1.6; color: var(--gk-ink); word-break: keep-all; }
+.gk-road__step small { display: block; margin-top: 2px; font-size: .75rem; line-height: 1.6; color: var(--gk-sub); }
+.gk-road__step.is-due .gk-road__when { background: var(--gk-coral); }
+.gk-road__flag { display: inline; margin-top: 6px; font-size: .75rem; font-weight: 700; color: var(--gk-ink); background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); }
+/* すごろくは水色の帯の上にあるので、表(fact-table)と同じクリーム色のカードにのせ、色はサイトの基本色だけにする */
+.gk-zu.gk-sugo { background: var(--color-surface, #fffdf8); border-radius: 24px; padding: 28px 18px 24px; }
+.gk-sugo .gk-sugo__box { background: var(--color-background, #f5f2eb); }
+.gk-sugo__sq:not(:last-child)::after { color: var(--color-terracotta, #a0583d); opacity: .55; }
+.gk-sugo .gk-sugo__pct { color: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__sq.is-goal .gk-sugo__no { background: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__bar { background: var(--color-background, #f5f2eb); }
+.gk-sugo .gk-sugo__bar .s1, .gk-sugo .gk-sugo__legend .s1 { background: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__bar .s2, .gk-sugo .gk-sugo__legend .s2 { background: #c9937d; }
+.gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: var(--color-yellow, #e7d49a); }
+.gk-sugo .gk-zu__note b { background: linear-gradient(transparent 62%, var(--color-yellow-light, #f5efd9) 62%); }
+@media (max-width: 480px) { .gk-zu.gk-sugo { padding: 24px 12px 20px; border-radius: 20px; } }
+/* 色を明るく：数字はページ上の丸と同じ #b3543a、ゴール・矢印・帯はやわらかいコーラル（ボタンと同じ #e9785f） */
+.gk-sugo .gk-sugo__pct { color: var(--gk-coral); }
+.gk-sugo .gk-sugo__sq.is-start .gk-sugo__pct { color: var(--gk-ink); }
+.gk-sugo .gk-sugo__sq.is-goal .gk-sugo__no { background: #e9785f; }
+.gk-sugo__sq:not(:last-child)::after { color: #e9785f; opacity: .7; }
+.gk-road__step:not(:last-child)::after { color: #e9785f; opacity: .7; }
+.gk-road__step.is-due .gk-road__when { background: #e9785f; }
+.gk-sugo .gk-sugo__bar .s1, .gk-sugo .gk-sugo__legend .s1 { background: #e9785f; }
+.gk-sugo .gk-sugo__bar .s2, .gk-sugo .gk-sugo__legend .s2 { background: #f4b19c; }
+.gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: #f1e2a6; }
+/* ％の数字を、丸のまん中にそろえる（ラベルは上、名前は下。+20% などは数字の右にそえるだけ） */
+.gk-sugo .gk-sugo__box { position: relative; display: block; padding: 0; }
+.gk-sugo .gk-sugo__pct { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; }
+.gk-sugo .gk-sugo__pct small { position: absolute; left: 100%; bottom: .3em; margin-left: 3px; white-space: nowrap; }
+.gk-sugo .gk-sugo__no { position: absolute; left: 50%; bottom: calc(50% + 22px); transform: translateX(-50%); }
+.gk-sugo .gk-sugo__box b { position: absolute; left: 6px; right: 6px; top: calc(50% + 21px); text-align: center; }
+/* うすくて読みにくい文字を、読める濃さに */
+.gk .gk-zu__lede, .gk-sugo__sq > small, .gk .gk-sugo__legend li, .gk-road__step small { color: #4f4a42 !important; }
+.gk-zu__talk { max-width: 640px; margin: 0 auto 32px; }
+/* 背景のカードはなし。水色の地の上に、白い丸をそのまま置く（ページ冒頭の白い丸と同じ） */
+.gk-zu.gk-sugo { background: none; padding: 0; border-radius: 0; }
+.gk-sugo .gk-sugo__box { background: #fff; }
+.gk-sugo .gk-sugo__bar { background: #fff; }
+@media (max-width: 480px) { .gk-zu.gk-sugo { padding: 0; } }
+/* 道のりも、背景のカードなし（すごろくとそろえる） */
+.gk-road__step { background: none; padding: 0; border-radius: 0; margin-bottom: 34px !important; }
+.gk-road__step:not(:last-child)::after { bottom: -24px; }
