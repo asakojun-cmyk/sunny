@@ -43,7 +43,7 @@
     mitate: "相談者に足りていない理解や情報は何かを書きます。",
     omoiQ: "思い込みを示す相談者の発言を挙げます。「 」でそのまま引用すると、いちばん確かです。",
     mitateQ: "見立ての根拠になる相談者の発言を挙げます。「 」でそのまま引用すると、いちばん確かです。",
-    two: "問題を2つ挙げたら、根拠も2つ。①②の番号をそろえます。",
+    two: "問題を2つ挙げたら、根拠も2つ。(a)(b)の記号を、①問題と②根拠でそろえます。",
     q3form: "文の終わりを「〜と述べているため。」にします。",
     kankei: "方針の1文目は、気持ちの受け止めと信頼関係です(出題範囲の「相談場面の設定」)。",
     hOmoi: "設問3で挙げた思い込みに、「捉え方を見直す」「事実で確かめる」支援を対応させます。",
@@ -141,8 +141,8 @@
     function ok(k, key) { return res.q[k].items.some(function (i) { return i.key === key && i.ok; }); }
     res.pillars = [
       { name: "主訴", where: "設問1", ok: ok("q1", "chushin") },
-      { name: "相談者の思い込み", where: "設問3", ok: ok("q3a", "omoi") && ok("q3b", "omoiQ") },
-      { name: "キャリコンの見立て", where: "設問3", ok: ok("q3a", "mitate") && ok("q3b", "mitateQ") },
+      { name: "相談者の思い込み", where: "設問3 (a)", ok: ok("q3a", "omoi") && ok("q3b", "omoiQ") },
+      { name: "キャリコンの見立て", where: "設問3 (b)", ok: ok("q3a", "mitate") && ok("q3b", "mitateQ") },
       { name: "今後の方策・展開", where: "設問4", ok: ok("q4", "hOmoi") && ok("q4", "hMitate") }
     ];
     return res;

@@ -133,22 +133,56 @@
     } catch (_e2) { /* 保存できなくてもドリルは動かす */ }
   }
 
+  /* 4択の解説で、選択肢の文が「」でそのまま出てくるところには番号をつける(例: 3「アンダーマイニング効果」はデシ) */
+  function numberedExp(item) {
+    var e = String(item.e || "");
+    if (!isChoice(item)) return e.replace(/^[○×]。\s*/, "");
+    var right = item.o[item.ai];
+    // 先頭の「正解は「…」。」は、上の「正解は 4」と重なるので外す
+    var lead = "正解は「" + right + "」。";
+    if (e.indexOf(lead) === 0) e = e.slice(lead.length);
+    item.o.forEach(function (text, i) {
+      if (i === item.ai) return;
+      var q = "「" + text + "」";
+      var at = e.indexOf(q);
+      if (at !== -1 && e.indexOf(q, at + 1) === -1) e = e.slice(0, at) + (i + 1) + "." + q + e.slice(at + q.length);
+    });
+    return e;
+  }
+
   function judge(item, correct, btn) {
     recordResult(item, correct);
     if (correct) score++;
-    /* 4択は番号も出す。「不適切なもの」を選ぶ問題では、正解の文が「まちがった文」なので、そう書き添える */
-    var label = isChoice(item)
-      ? " " + (item.ai + 1) + ".「" + item.o[item.ai] + "」" + (/不適切/.test(item.q) ? "(これがまちがっている文)" : "")
-      : "「" + (item.a ? "○" : "×") + "」";
-    btn.classList.add(correct ? "is-correct" : "is-wrong");
-    if (!correct && isChoice(item)) {
+    /* いちばん上に「正解は 4」「正解は ○」を1回だけ出す。
+       「不適切なもの」を選ぶ問題では、正解の文が「まちがった文」なので、そう書き添える */
+    var key = isChoice(item) ? String(item.ai + 1) : (item.a ? "○" : "×");
+    btn.classList.add(correct ? "is-correct" : "is-wrong", "is-picked");
+    if (isChoice(item)) {
       var right = choiceBox.querySelectorAll("button")[item.ai];
       if (right) right.classList.add("is-correct");
+    } else {
+      root.querySelectorAll("[data-quiz-ans]").forEach(function (b) {
+        if ((b.getAttribute("data-quiz-ans") === "true") === item.a) b.classList.add("is-correct");
+      });
     }
     var v = root.querySelector("[data-quiz-verdict]");
-    v.textContent = correct ? "🌞 正解！" : "🌥️ おしい！正解は" + label;
-    v.className = "quiz-drill__verdict " + (correct ? "is-ok" : "is-ng");
-    root.querySelector("[data-quiz-exp]").textContent = item.e;
+    v.textContent = "";
+    var k = document.createElement("b");
+    k.className = "quiz-box__keyans";
+    k.textContent = "正解は " + key;
+    v.appendChild(k);
+    if (isChoice(item) && /不適切/.test(item.q)) {
+      var kn = document.createElement("span");
+      kn.className = "quiz-box__keynote";
+      kn.textContent = "(これがまちがっている文)";
+      v.appendChild(kn);
+    }
+    var tag = document.createElement("span");
+    tag.className = "quiz-box__verdict " + (correct ? "is-ok" : "is-ng");
+    tag.textContent = correct ? "あたり！" : "おしい！";
+    v.appendChild(tag);
+    v.className = "quiz-drill__verdict quiz-box__key " + (correct ? "is-ok" : "is-ng");
+    root.querySelector("[data-quiz-exp]").textContent = numberedExp(item);
     var link = root.querySelector("[data-quiz-link]");
     link.setAttribute("href", item.u);
     link.textContent = "「" + item.n + "」のページで復習する ▶︎";
@@ -164,7 +198,7 @@
     root.querySelector("[data-quiz-cat]").textContent = item.c + " / " + item.n;
     root.querySelector("[data-quiz-q]").textContent = item.q;
     hide(root.querySelector("[data-quiz-result]"));
-    root.querySelectorAll("[data-quiz-ans]").forEach(function (b) { b.disabled = false; b.classList.remove("is-correct", "is-wrong"); });
+    root.querySelectorAll("[data-quiz-ans]").forEach(function (b) { b.disabled = false; b.classList.remove("is-correct", "is-wrong", "is-picked"); });
     if (isChoice(item)) {
       hide(oxBox); show(choiceBox);
       choiceBox.textContent = "";

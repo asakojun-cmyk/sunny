@@ -1214,3 +1214,69 @@ html body .chara-guide--sunny .chara-guide__bubble,html body .line--sunny .line_
 html body .chara-guide .chara-guide__bubble::before,html body .chara-guide .chara-guide__bubble::after{display:none!important}
 html body .chara-guide .chara-guide__bubble strong,html body .line .line__bubble strong,html body .guest-say .guest-say__bubble strong{font-weight:700!important;color:#2b2a27!important;background:none!important}
 html body .line .line__bubble:has(.is-speaking){background:#fdf3c4!important}
+
+/* ===== 1問1答の答え合わせ(用語・理論家ページ / ○×ドリル)  2026-10-18 =====
+   ・答えたら、いちばん上に「正解は 4」「正解は ○」を1回だけ(js/quiz.js・js/quiz-drill.js)
+   ・正解の選択肢は 緑の線+✓、まちがえて選んだものは コーラルの線+✗。ほかはうすく
+   ・○×は 大きな丸ボタン(同じ幅・親指で押しやすい)
+   ・白い背景、細い線。緑は #5d9a53(サイトの「正解」の緑)、コーラルは #ef8064 */
+.quiz-box__result,.quiz-drill__result{background:#fff;border:1px solid #e3dccb;border-radius:10px;padding:14px 16px;line-height:1.9}
+.quiz-drill__result{margin-top:16px}
+.quiz-box__key{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:0 0 8px}
+.quiz-box__keyans{font-size:1.125rem;font-weight:700;color:#29435e;letter-spacing:.02em}
+.quiz-box__keynote{font-size:.8125rem;color:#5c6470}
+.quiz-box__verdict{display:inline-block;padding:1px 10px;border-radius:999px;font-size:.8125rem;font-weight:700;line-height:1.8;border:1px solid}
+.quiz-box__verdict.is-ok{background:#eef6e6;border-color:#5d9a53;color:#2f5a2a}
+.quiz-box__verdict.is-ng{background:#fdeee9;border-color:#ef8064;color:#a64c33}
+.quiz-drill__verdict.quiz-box__key{color:inherit}
+.quiz-box__exp{display:block}
+.quiz-box__others-label{display:block;margin-top:10px;font-size:.875rem;font-weight:700;color:#5c6470}
+.quiz-box__others{margin:4px 0 0;padding-left:1.2em;font-size:.9375rem}
+.quiz-box__others li+li{margin-top:4px}
+
+/* 4択の選択肢 */
+.quiz-box__choice,.quiz-drill__choice{position:relative;padding-right:46px}
+.quiz-box__choice:disabled,.quiz-drill__choice:disabled{opacity:.5}
+.quiz-box__choice.is-correct,.quiz-drill__choice.is-correct{opacity:1;border:2px solid #5d9a53;background:#f3f9ef;color:#23421f}
+.quiz-box__choice.is-wrong,.quiz-drill__choice.is-wrong{opacity:1;border:2px solid #ef8064;background:#fff5f2;color:#8f3f29}
+.quiz-box__choice.is-correct::after,.quiz-drill__choice.is-correct::after,
+.quiz-box__choice.is-wrong::after,.quiz-drill__choice.is-wrong::after{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;color:#fff;font-size:15px;font-weight:700;line-height:26px;text-align:center}
+.quiz-box__choice.is-correct::after,.quiz-drill__choice.is-correct::after{content:"✓";background:#5d9a53}
+.quiz-box__choice.is-wrong::after,.quiz-drill__choice.is-wrong::after{content:"✗";background:#ef8064}
+
+/* ○×の大きな丸ボタン */
+.quiz-box__actions,.quiz-drill__actions{display:flex;justify-content:flex-start;gap:28px;margin:6px 0 14px}
+.quiz-box__actions .button,.quiz-drill__actions .quiz-drill__btn{position:relative;flex:none;width:80px;height:80px;min-width:0;min-height:0;padding:0;border-radius:50%;border:2px solid #d8d2c7;background:#fff;color:#29435e;font-size:38px;font-weight:700;line-height:1;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 0 #e3dccb;transition:transform .1s ease,box-shadow .1s ease}
+.quiz-box__actions .button:hover:not(:disabled),.quiz-drill__actions .quiz-drill__btn:hover:not(:disabled){border-color:#ef8064;background:#fff7f4;color:#29435e}
+.quiz-box__actions .button:active:not(:disabled),.quiz-drill__actions .quiz-drill__btn:active:not(:disabled){transform:translateY(2px);box-shadow:none}
+.quiz-box__actions .button:disabled,.quiz-drill__actions .quiz-drill__btn:disabled{opacity:.4;cursor:default;box-shadow:none}
+.quiz-box__actions .button.is-correct,.quiz-drill__actions .quiz-drill__btn.is-correct{opacity:1;border:3px solid #5d9a53;background:#eef6e6;color:#2f5a2a}
+.quiz-box__actions .button.is-wrong,.quiz-drill__actions .quiz-drill__btn.is-wrong{opacity:1;border:3px solid #ef8064;background:#fdeee9;color:#a64c33}
+.quiz-box__actions .button.is-correct::after,.quiz-drill__actions .quiz-drill__btn.is-correct::after,
+.quiz-box__actions .button.is-wrong::after,.quiz-drill__actions .quiz-drill__btn.is-wrong::after{position:absolute;right:-4px;top:-4px;width:26px;height:26px;border-radius:50%;color:#fff;font-size:15px;line-height:26px;text-align:center;border:2px solid #fff}
+.quiz-box__actions .button.is-correct::after,.quiz-drill__actions .quiz-drill__btn.is-correct::after{content:"✓";background:#5d9a53}
+.quiz-box__actions .button.is-wrong::after,.quiz-drill__actions .quiz-drill__btn.is-wrong::after{content:"✗";background:#ef8064}
+
+/* 5問とき終わったあとの結果とサニー先生のひとこと */
+.quiz-score.is-final{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;background:#fff;border:1px solid #e3dccb;border-radius:12px;padding:14px 16px}
+.quiz-score__num{font-size:1.0625rem}
+.quiz-score__sunny{display:flex;align-items:center;gap:10px;flex:1 1 100%}
+.quiz-score__face{width:48px;height:48px;flex:none}
+.quiz-score__say{background:#fff;border:1px solid #f2c94c;border-radius:12px;padding:6px 12px;font-weight:700;color:#2b2a27;line-height:1.7}
+.quiz-score__who{display:block;font-size:.75rem;color:#8a6d1c}
+.quiz-score.is-final .quiz-score__retry{margin-left:0;min-height:44px;padding:6px 20px;border-color:#ef8064;background:#ef8064;color:#fff}
+.quiz-score.is-final .quiz-score__retry:hover{background:#e46f53;border-color:#e46f53;color:#fff}
+
+/* お守りページ: 試験日のボタン・待ち受けの「ダウンロード」が2行に割れないように */
+.omamori-date-preset{margin:10px 0 0}
+.omamori-date-preset__btn{min-height:44px;padding:6px 16px;border-radius:999px;border:1.5px solid #ef8064;background:#fff;color:#a64c33;font-weight:700;font-size:.9375rem;cursor:pointer}
+.omamori-date-preset__btn:hover{background:#fff7f4}
+.omamori-wall .button{white-space:nowrap;padding-left:12px;padding-right:12px;font-size:.875rem}
+.omamori-dl{white-space:nowrap}
+/* ○×ボタンとお守りのボタンを、まん中にそろえてバランスよく(2026-10-18) */
+.quiz-box__actions,.quiz-drill__actions{justify-content:center!important;gap:36px!important;margin:14px 0 18px!important}
+.omamori-date-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px}
+.omamori-date-row label{font-weight:700}
+.omamori-date-row input[type=date]{min-height:44px;padding:6px 10px;border-radius:10px;font-size:1rem;width:160px;max-width:46vw}
+.omamori-date-row .button{min-height:44px;padding:6px 22px;border-radius:999px}
+.omamori-date-preset{margin:12px 0 0;text-align:center}

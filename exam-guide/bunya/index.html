@@ -270,7 +270,6 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
     <main>
       <section class="result" id="result" hidden></section>
       <div id="qs" class="qlist"></div>
-    <p class="pre-enroll pre-enroll--pick" style="max-width:720px;margin:28px auto;padding:0 20px;font-size:.88rem;line-height:1.9;color:#5f5a50;text-align:center">まだ<wbr>養成講座を<wbr>選んでいない方へ:<wbr> 家から<wbr>受けられて、<wbr>休んでも<wbr>振替できる<wbr>7校を、<wbr>30秒で<wbr>しぼれます。<wbr> <a class="txt-link" href="../../#school-match" data-ev="study_to_match">30秒で<wbr>合う<wbr>学校を<wbr>しぼる <span class="arw" aria-hidden="true">▶︎</span></a></p>
 </main>
   </div>
 
@@ -326,7 +325,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const stem=s=>esc(s).replace("最も不適切なもの","最も<u>不適切</u>なもの").replace("含まれないもの","<u>含まれない</u>もの");
 const ext=(u,t)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
-const rev=q=>`<span class="rev"><span>Click▶︎キャリコン学びピクニックで復習しよう</span>${q[7]&&q[7].length?q[7].map(l=>ext(BASE+l[1],esc(l[0]))).join(""):ext(drill(q[0]),q[0]+"の1問1答")}</span>`;
+const rev=q=>`<span class="rev"><span>キャリコン学びピクニックで復習 ▶︎</span>${q[7]&&q[7].length?q[7].map(l=>ext(BASE+l[1],esc(l[0]))).join(""):ext(drill(q[0]),q[0]+"の1問1答")}</span>`;
 const say=(img,name,text)=>`<div class="say${img===IMG_M?" moyan":""}"><figure><img src="${img}" alt="" width="56" height="56"><figcaption>${name}</figcaption></figure><p>${text}</p></div>`;
 const fmt=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
 const kq=(f,i)=>f+(i+1), bid=()=>ST.f+(ST.b+1);
@@ -369,8 +368,8 @@ function result(qs,s){
   const box=$("result"); box.hidden=s.done!==10; if(s.done!==10)return;
   const u=used(), traps={}; qs.forEach(({q,k})=>{if(R(k).c!==q[3])traps[q[4]]=(traps[q[4]]||0)+1});
   const top=Object.entries(traps).sort((a,b)=>b[1]-a[1])[0];
-  const sunny=(s.ok>=7?`10問中${s.ok}問正解！ いい調子だよ。`:`10問中${s.ok}問正解。7問をこえるまで、解き直してみよう。`)+(u<=PACE?` 時間は${fmt(u)}。1問2分のペースも守れているね。`:` 時間は${fmt(u)}。本番は1問2分、10問で20分が目安だよ。`);
-  const moyan=top?`「${top[0]}」に引っかかりやすいみたい！ 解説の Click▶︎ をタップすると復習できるよ！`:`全問正解……すごい！ 次の10問もいってみよう。`;
+  const sunny=(s.ok>=7?`10問中${s.ok}問正解！ いい調子だよ。`:`10問中${s.ok}問正解。7問以上になるまで、解き直してみよう。`)+(u>0&&u<=PACE?` 時間は${fmt(u)}。1問2分のペースも守れているね。`:u>PACE?` 時間は${fmt(u)}。本番は1問2分、10問で20分が目安だよ。`:` 本番は1問2分、10問で20分が目安だよ。`);
+  const moyan=top?`「${top[0]}」に引っかかりやすいみたい！ 解説の下の「キャリコン学びピクニックで復習」のリンクから、復習できるよ！`:`全問正解……すごい！ 次の10問もいってみよう。`;
   const next=ST.b<3?`<button type="button" class="primary" id="btnNext">次の10問へ</button>`:"";
   box.innerHTML=`<h2><img class="ico" src="${ILL.pack}" alt="">${NAME[ST.f]}　${rng(ST.b)}の結果</h2><div class="score"><span class="pts">${s.ok}</span><span>問正解 / 10問</span><span class="verdict ${s.ok>=7?"pass":"fail"}">${s.ok>=7?"7割に到達":"7割まであと"+(7-s.ok)+"問"}</span><span>所要時間 ${fmt(u)}（目安 20:00）</span></div><div class="fb">${say(IMG_S,"サニー先生",sunny)}${say(IMG_M,"モヤン",moyan)}</div><p class="nextrow">${next}</p>${anketo()}<section class="next" aria-label="つづきの案内"><h3>通しで力だめしするなら</h3><p>本番と同じ50問・100分の模擬試験(全5回)も、無料で解けます。</p><p class="rev"><a href="/exam-guide/moshi/">模擬試験(全5回)を解く</a><a href="/games/quiz/">1問1答ドリルで、苦手をうめる</a></p></section>`;
 }
