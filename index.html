@@ -392,7 +392,8 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .is-home .mini-say .mini-say__bubble::before,.is-home .mini-say .mini-say__bubble::after{display:none!important}
 .is-home .mini-say .mini-say__bubble strong{font-weight:700;color:#2b2a27}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
-.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
+.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:justify!important;text-justify:inter-character;text-align-last:left;text-wrap:wrap!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
+.is-home .lp-river .lp-river__body>p:not(.lp-river__link) *{word-break:normal!important;text-wrap:wrap!important}
 /* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
 .is-home .picnic-map__head h2,.is-home .lp-river .lp-river__body h3,.is-home .flow-h span{white-space:normal!important;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
 .lp-river .qa-ans{margin:0 0 14px;justify-content:center}
@@ -648,8 +649,8 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
           <h3>そもそも、<wbr>養成講座って<wbr>なに？</h3>
           <figure class="exam-figure" style="margin:0 0 20px"><img src="./img/exam-guide/exam-flow.webp" alt="養成講習、学科・実技、登録の看板が順に立つ道を歩いていく、リュックを背負った人のイラスト" width="1400" height="788" loading="lazy"></figure>
           <div class="mini-say mini-say--sunny qa-ans"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">国家試験を受けるための</span><wbr><span class="nb">「受験資格」が</span><wbr><span class="nb">とれる講座だよ。</span></p></div>
-          <p>キャリアコンサルタントの<wbr>国家試験は、<wbr>だれでも<wbr>受けられる<wbr>わけでは<wbr>ありません。<wbr>国が<wbr>認めた<wbr>養成講座<wbr>(合計150時間)を<wbr>修了すると、<wbr>受けられるように<wbr>なります。<wbr><strong class="mk">受験する<wbr>人の<wbr>約9割</strong>が、<wbr>この道を<wbr>通っています。</p>
-          <p>期間は<wbr>学校に<wbr>よって<wbr>最短0.5か月から<wbr>6か月ほど。<wbr>週1回、<wbr>土日だけで<wbr>通える<wbr>学校も<wbr>あります。</p>
+          <p>国が<wbr>認めた<wbr>養成講座(150時間)を<wbr>修了すると、<wbr>国家試験を<wbr>受けられます。<wbr><strong class="mk">受験する<wbr>人の<wbr>約9割</strong>が、<wbr>この道です。</p>
+          <p>期間は<wbr>最短0.5〜6か月ほど。<wbr>土日だけで<wbr>通える<wbr>学校も<wbr>あります。</p>
           <p class="lp-river__src">出典: 厚生労働省<wbr>「第31回試験結果の<wbr>概要」</p>
           <p class="lp-river__link"><a data-ev="top_step_4" href="./shikaku-guide/">資格の<wbr>取り方を<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
@@ -672,7 +673,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
         <div class="lp-river__body">
           <h3>どこが<wbr>いい？</h3>
           <div class="mini-say mini-say--sunny qa-ans"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">最後まで</span><wbr><span class="nb">続けられるかで</span><wbr><span class="nb">選ぶといいよ。</span></p></div>
-          <p>家から<wbr>受けられるか、<wbr>土日か<wbr>夜に<wbr>受けられるか、<wbr>休んでも<wbr>振替できるか。<wbr>このサイトの<wbr>7校は、<wbr>この3つを<wbr>満たしています。<wbr>上の<wbr><strong class="mk">30秒診断</strong>で、<wbr>あなたの<wbr>暮らしに<wbr>合う<wbr>学校を<wbr>しぼれます。</p>
+          <p>家から<wbr>受けられる、<wbr>土日や夜に<wbr>通える、<wbr>休んでも<wbr>振替できる。<wbr>このサイトの<wbr>7校は、<wbr><strong class="mk">この3つを<wbr>満たして</strong>います。</p>
           <p class="lp-river__link"><a data-ev="top_qa_compare" href="./schools/compare/">7校を<wbr>比較表で<wbr>くらべてみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
         <p class="flow-arrows qa-arrows" aria-hidden="true"><i></i><i></i><i></i></p>
@@ -695,8 +696,8 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
         <div class="lp-river__body">
           <h3>資格を<wbr>取ったら、<wbr>仕事になる？</h3>
           <div class="mini-say mini-say--sunny qa-ans"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">すぐ仕事になる、</span><wbr><span class="nb">とは言えないよ。</span><wbr><span class="nb">正直に話すね。</span></p></div>
-          <p>国の<wbr>調査では、<wbr>登録者の<wbr><strong class="mk">約3割が<wbr>この1年<wbr>活動していません</strong>でした。<wbr>キャリアコンサルタントの<wbr>仕事だけで<wbr>生計を<wbr>立てている<wbr>人は<wbr>約2割。<wbr>多くの人は、<wbr>会社員のまま<wbr>本業に<wbr>活かしています。</p>
-          <p>活動しない<wbr>理由の<wbr>いちばんは、<wbr>「職場や<wbr>まわりに<wbr>活かす場が<wbr>ない」<wbr>こと。<wbr>だから<wbr>学校選びでは、<wbr>修了後の<wbr>仲間や<wbr>実践の場、<wbr>仕事の<wbr>紹介が<wbr>あるかも<wbr>見ておくと<wbr>安心です。<wbr>上の<wbr>30秒診断の<wbr>4問目で<wbr>しぼれます。</p>
+          <p>登録者の<wbr><strong class="mk">約3割</strong>は、<wbr>この1年<wbr>活動していませんでした。<wbr>多くの人は、<wbr>会社員のまま<wbr>本業に<wbr>活かしています。</p>
+          <p>だから、<wbr>修了後に<wbr>仲間や<wbr>実践の場が<wbr>あるかも<wbr>見ておくと<wbr>安心です。</p>
           <p class="lp-river__src">出典: 労働政策研究・<wbr>研修機構<wbr>「第2回<wbr>キャリアコンサルタント<wbr>登録者の<wbr>活動状況等に<wbr>関する調査」<wbr>(2023年発表・<wbr>2022年調査)</p>
           <p class="lp-river__link"><a data-ev="top_qa_work" href="./school-guides/zaitaku-fukugyo/">在宅や<wbr>副業で<wbr>活かせるか<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
@@ -708,8 +709,8 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
         <div class="lp-river__body">
           <h3>このサイトから<wbr>申し込むと、<wbr>損しない？</h3>
           <div class="mini-say mini-say--sunny qa-ans"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">損はしないよ。</span><wbr><span class="nb">安心してね。</span></p></div>
-          <p>このサイトの<wbr>ボタンは、<wbr>各校の<wbr>公式ページを<wbr>開くだけです。<wbr>このサイトを経由しても、<wbr><strong class="mk">受講料が<wbr>上がることは<wbr>ありません。</strong><wbr>紹介料は、<wbr>学校が<wbr>払う<wbr>しくみです。</p>
-          <p>割引が<wbr>もらえるかは、<wbr>学校ごとの<wbr>条件で<wbr>決まります。<wbr>「説明会に<wbr>出た人だけ」の<wbr>割引も<wbr>あるので、<wbr>申し込む<wbr>前に、<wbr>上の<wbr>キャンペーン欄で<wbr>条件を<wbr>確かめてください。</p>
+          <p>ボタンは<wbr>各校の<wbr>公式ページを<wbr>開くだけ。<wbr><strong class="mk">受講料は<wbr>上がりません。</strong></p>
+          <p>割引の<wbr>条件は<wbr>学校ごとに<wbr>ちがうので、<wbr>申し込む<wbr>前に<wbr>確かめてください。</p>
           <p class="lp-river__link"><a data-ev="top_qa_steps" href="./schools/compare/#steps4-h">申し込むまでの<wbr>4ステップを<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
       </li>
