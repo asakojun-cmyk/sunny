@@ -5,6 +5,8 @@
 
   var KEY_DATE = "kotoba-exam-date";
   var KEY_CHECKS = "kotoba-omamori-checks";
+  /* 第33回 学科・論述試験の日(サイト内の試験日案内と同じ) */
+  var DEFAULT_DATE = "2026-11-01";
 
   function load(key) {
     try {
@@ -30,11 +32,7 @@
   var focus = root.querySelector("[data-focus]");
 
   function render() {
-    var v = load(KEY_DATE);
-    if (!v) {
-      cheer.textContent = "試験日を入れると、あと何日かがいつでも見られるよ。";
-      return;
-    }
+    var v = load(KEY_DATE) || DEFAULT_DATE;
     input.value = v;
     var today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -72,6 +70,15 @@
     save(KEY_DATE, input.value);
     render();
   });
+  var presetBtn = root.querySelector("[data-date-preset]");
+  if (presetBtn) {
+    presetBtn.addEventListener("click", function () {
+      var d = presetBtn.getAttribute("data-date-preset");
+      input.value = d;
+      save(KEY_DATE, d);
+      render();
+    });
+  }
   input.addEventListener("change", function () {
     if (!input.value) return;
     save(KEY_DATE, input.value);
