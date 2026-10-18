@@ -405,6 +405,12 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .is-home .picnic-button--line{background:#ef8064!important;border-color:#ef8064!important;color:#fff!important}
 .is-home .picnic-button--line .arw{color:#fff!important}
 .is-home .picnic-button--line:hover,.is-home .picnic-button--line:focus-visible{background:#e36f53!important;border-color:#e36f53!important}
+/* キャンペーンは最初の3つだけ見せて、残りはボタンで開く/PRの説明は左ぞろえ/最後のあいさつはQ&Aのあとへ(2026-10-18) */
+.is-home .camp-banners.is-short>li.camp-extra{display:none!important}
+.is-home .camp-more{text-align:center;margin:18px 0 6px}
+.is-home .camp-more__btn{font:inherit;font-weight:700;color:#a0583d;background:none;border:0;padding:8px 12px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.is-home .campaign-now__note{text-align:left!important;font-size:.875rem!important;line-height:1.9!important;max-width:34em;margin-left:auto!important;margin-right:auto!important}
+.is-home .qa-goal{margin-top:56px}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
 .is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:justify!important;text-justify:inter-character;text-align-last:left;text-wrap:wrap!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 16px}
 .is-home .lp-river .lp-river__body>p.lp-river__src{padding:0 16px;text-align:left!important}
@@ -586,16 +592,6 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
         <p class="flow-arrows" aria-hidden="true"><i></i><i></i><i></i></p>
       </div>
 
-      <div class="flow-step flow-step--goal" id="step-goal">
-        <p class="flow-goal__lines"><span><b>モヤン</b>「ボクに<wbr>合う<wbr>学校、<wbr>見つかった！」</span><span><b>サニー先生</b>「あとは、<wbr>決めた<wbr>学校で<wbr>学ぶだけ。<wbr>いってらっしゃい！」</span></p>
-        <div class="flow-goal-scene" aria-hidden="true">
-          <svg class="fgs-hill" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,70 C380,8 1060,8 1440,70 L1440,120 L0,120 Z" fill="#eef4dd"/></svg>
-          <img class="fgs-fl" src="./img/parts/t/23_flowers_left_group-116.webp" alt="" width="58" height="58" loading="lazy">
-          <img class="fgs-sunny" src="./img/parts/t/06_sun_character-192.webp" alt="" width="96" height="86" loading="lazy">
-          <img class="fgs-moyan" src="./img/parts/t/moyan_school_hat_smile-200.webp" alt="" width="92" height="86" loading="lazy">
-          <img class="fgs-fr" src="./img/parts/t/25_flowers_right_group-116.webp" alt="" width="58" height="58" loading="lazy">
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -615,8 +611,10 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
 <li><a class="camp-banner" style="--camp:#f6edf3" href="https://www.jaico.cc/index.php#top_info" target="_blank" rel="noopener"><span class="camp-banner__stub"><small><span class="nb">説明会の参加特典</span></small><strong>22,000<i>円</i></strong><em>安くなる</em></span><span class="camp-banner__body"><b class="camp-banner__school"><span class="nb">日本産業</span><span class="nb">カウンセラー協会</span></b><span class="camp-banner__cond"><span class="nb">説明会に参加して、</span><span class="nb">その場で申し込むと</span></span></span></a></li>
 <li><a class="camp-banner" style="--camp:#f4efe2" href="https://www.o-hara.jp/course/career_consultant/event" target="_blank" rel="noopener"><span class="camp-banner__stub"><small><span class="nb">説明会の予約特典</span></small><strong>6,000<i>円</i></strong><em>入学金が0円に</em></span><span class="camp-banner__body"><b class="camp-banner__school">大原学園</b><span class="camp-banner__cond"><span class="nb">説明会を予約すると</span><span class="nb">免除クーポン(はじめての人)</span></span></span></a></li>
     </ul>
+    <p class="camp-more" hidden><button type="button" class="camp-more__btn" aria-expanded="false">ほかの<wbr>特典も<wbr>見る <span class="arw" aria-hidden="true">▼</span></button></p>
+    <script>(function(){var ul=document.querySelector('.camp-banners');var box=document.querySelector('.camp-more');if(!ul||!box)return;function run(){var li=[].filter.call(ul.children,function(x){return !x.hidden&&getComputedStyle(x).display!=='none'});if(li.length<=3)return;li.slice(3).forEach(function(x){x.classList.add('camp-extra')});ul.classList.add('is-short');box.hidden=false;var b=box.querySelector('button');b.addEventListener('click',function(){ul.classList.remove('is-short');box.hidden=true;b.setAttribute('aria-expanded','true')})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run()})();</script>
     <p class="camp-scroll-hint" aria-hidden="true">横にスクロールできます <span class="arw">▶︎</span></p>
-    <p class="campaign-now__note">「PR」の印があるバナーは広告(紹介リンク)で、申込みがあると当サイトが紹介料を受け取ることがあります。あなたの受講料は変わりません。印のないバナーは、公式ページへの通常のリンクです。載せる学校や内容は、紹介料の有無で決めていません。</p>
+    <p class="campaign-now__note">「PR」の<wbr>バナーは<wbr>広告(紹介リンク)です。<wbr>あなたの<wbr>受講料は<wbr>変わりません。<br>載せる<wbr>学校や<wbr>内容は、<wbr>紹介料の<wbr>有無で<wbr>決めていません。</p>
     <details class="camp-details">
       <summary>条件を<wbr>くわしく<wbr>見る</summary>
       <dl>
@@ -744,6 +742,18 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
     <div class="qa-close">
       <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">気になる学校が</span><wbr><span class="nb">見つかったら、</span><wbr><span class="nb">説明会で</span><wbr><span class="nb">聞いてみよう。</span><wbr><span class="nb">申し込むと決めていなくても</span><wbr><span class="nb">参加できるよ。</span></p></div>
       <p class="qa-close__go"><a class="picnic-button" href="./schools/compare/#apply-h" data-ev="top_qa_close">7校の説明会を見てみよう</a></p>
+    </div>
+    <div class="flow qa-goal">
+      <div class="flow-step flow-step--goal" id="step-goal">
+        <p class="flow-goal__lines"><span><b>モヤン</b>「ボクに<wbr>合う<wbr>学校、<wbr>見つかった！」</span><span><b>サニー先生</b>「あとは、<wbr>決めた<wbr>学校で<wbr>学ぶだけ。<wbr>いってらっしゃい！」</span></p>
+        <div class="flow-goal-scene" aria-hidden="true">
+          <svg class="fgs-hill" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,70 C380,8 1060,8 1440,70 L1440,120 L0,120 Z" fill="#eef4dd"/></svg>
+          <img class="fgs-fl" src="./img/parts/t/23_flowers_left_group-116.webp" alt="" width="58" height="58" loading="lazy">
+          <img class="fgs-sunny" src="./img/parts/t/06_sun_character-192.webp" alt="" width="96" height="86" loading="lazy">
+          <img class="fgs-moyan" src="./img/parts/t/moyan_school_hat_smile-200.webp" alt="" width="92" height="86" loading="lazy">
+          <img class="fgs-fr" src="./img/parts/t/25_flowers_right_group-116.webp" alt="" width="58" height="58" loading="lazy">
+        </div>
+      </div>
     </div>
   </div>
 </section>
