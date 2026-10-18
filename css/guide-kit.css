@@ -337,3 +337,15 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 .gk-road__step small { display: block; margin-top: 2px; font-size: .75rem; line-height: 1.6; color: var(--gk-sub); }
 .gk-road__step.is-due .gk-road__when { background: var(--gk-coral); }
 .gk-road__flag { display: inline; margin-top: 6px; font-size: .75rem; font-weight: 700; color: var(--gk-ink); background: linear-gradient(transparent 62%, var(--gk-lemon) 62%); }
+/* すごろくは水色の帯の上にあるので、表(fact-table)と同じクリーム色のカードにのせ、色はサイトの基本色だけにする */
+.gk-zu.gk-sugo { background: var(--color-surface, #fffdf8); border-radius: 24px; padding: 28px 18px 24px; }
+.gk-sugo .gk-sugo__box { background: var(--color-background, #f5f2eb); }
+.gk-sugo__sq:not(:last-child)::after { color: var(--color-terracotta, #a0583d); opacity: .55; }
+.gk-sugo .gk-sugo__pct { color: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__sq.is-goal .gk-sugo__no { background: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__bar { background: var(--color-background, #f5f2eb); }
+.gk-sugo .gk-sugo__bar .s1, .gk-sugo .gk-sugo__legend .s1 { background: var(--color-terracotta, #a0583d); }
+.gk-sugo .gk-sugo__bar .s2, .gk-sugo .gk-sugo__legend .s2 { background: #c9937d; }
+.gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: var(--color-yellow, #e7d49a); }
+.gk-sugo .gk-zu__note b { background: linear-gradient(transparent 62%, var(--color-yellow-light, #f5efd9) 62%); }
+@media (max-width: 480px) { .gk-zu.gk-sugo { padding: 24px 12px 20px; border-radius: 20px; } }
