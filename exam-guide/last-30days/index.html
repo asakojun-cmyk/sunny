@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var jump = document.querySelector('[data-plan-jump="' + cur.id + '"]');
   if (jump) jump.setAttribute("aria-current", "true");
   if (lead && h) {
-    lead.innerHTML = (next ? "最初は" : cur.id === "last" ? "いまは" : "今週は") + '<a href="#' + cur.id + '"></a>。<wbr>ここだけ、<wbr>やれば<wbr>大丈夫。';
+    lead.innerHTML = (next ? "最初は、" : cur.id === "last" ? "いまは、" : "今週は、") + '<a href="#' + cur.id + '"></a><br>ここから、<wbr>1つずつ<wbr>進めよう。';
     lead.querySelector("a").textContent = h.textContent + " ▶︎";
   }
 });

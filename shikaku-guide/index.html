@@ -38,6 +38,9 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 .setsumei-box p{margin:0 0 12px}
 .setsumei-box p:last-child{margin:0}
 .setsumei-box .button{white-space:nowrap}
+/* 給付金の計算表: 金額が途中で折り返さないように(スマホで「175,00/0円」とならない) */
+.kyufu-calc__result td[data-kyufu],.kyufu-calc__result td[data-jifu]{white-space:nowrap;text-align:right}
+.kyufu-calc__result td:first-child{word-break:normal}
 </style>
 <link rel="stylesheet" href="../css/cb-5a5f999fe7.css" data-src="tone.css?v=2026.1015s,guide-kit.css?v=2026.1016d">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "独学だけで受験できますか？", "acceptedAnswer": {"@type": "Answer", "text": "相談の仕事の経験(3年以上)などがない場合は、養成講習を修了することが受験の条件になります。多くの人がこのルートで受験しています。"}}, {"@type": "Question", "name": "試験団体が2つあるけど、どちらがいいの？", "acceptedAnswer": {"@type": "Answer", "text": "合格すれば同じ国家資格です。実技(面接)の評価観点に持ち味の違いがあるので、通う学校がどちらに対応しているかも参考に。くわしくは講習と試験対策の違いガイドへ。"}}, {"@type": "Question", "name": "資格を取ったら、すぐ食べていけますか？", "acceptedAnswer": {"@type": "Answer", "text": "正直に言うと、資格だけで自動的に仕事が来るものではありません。企業内での活用、就労支援機関、副業的な活動など生かし方はさまざま。キャリアコンサルタントの仕事に現実的な情報をまとめています。"}}, {"@type": "Question", "name": "更新にもお金がかかる？", "acceptedAnswer": {"@type": "Answer", "text": "5年ごとの更新には、講習(知識講習8時間+技能講習30時間以上)を受ける必要があり、費用は数万円からが目安です。資格を取ったあとのお金も含めて考えておくと安心です。"}}, {"@type": "Question", "name": "勉強時間は、どのくらい必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "講習の150時間に加えて、自習が100〜200時間ほどが目安です。つまずきやすいのは、専門用語のむずかしさです。"}}]}</script>
@@ -216,9 +219,10 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
       <img class="chara chara--sunny" src="../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
       <span class="chara-guide__name">サニー先生</span>
     </div>
-    <p class="chara-guide__bubble">お金の話も大事だよ。対象講座なら、修了するだけで<strong>受講料の半分が戻る</strong>んだ。</p>
+    <p class="chara-guide__bubble">お金の話も大事だよ。対象講座で、<wbr>自分も<wbr>条件に<wbr>当てはまれば、<wbr>修了すると<strong>受講料の半分が戻る</strong>んだ。</p>
   </div>
     <p>多くの<wbr>養成講習は、<wbr>雇用保険の<strong>専門実践教育訓練給付</strong>の<wbr>対象です。<wbr>条件を<wbr>満たせば、<wbr>まず<wbr>受講費用の<strong>50%</strong>(受講中に<wbr>支給)。<wbr>資格を<wbr>取って<wbr>就職などに<wbr>つながると<strong>+20%</strong>、<wbr>さらに<wbr>お給料が<wbr>上がるなどの<wbr>条件を<wbr>満たすと<strong>+10%</strong>で、<strong class="mk">最大80%</strong>が<wbr>支給されます(それぞれ年間の<wbr>上限額が<wbr>あります)。</p>
+    <p>ただし、<wbr>雇用保険の<wbr>加入期間などの<wbr>条件が<wbr>あり、<wbr>扶養内の<wbr>パートの<wbr>人や、<wbr>仕事を<wbr>やめてから<wbr>時間が<wbr>たった<wbr>人は、<wbr>対象外の<wbr>ことも<wbr>あります。<wbr><a class="txt-link" href="../school-guides/kyufukin/#kyufu-check">自分が<wbr>対象か<wbr>チェックする</a></p>
     <div class="kyufu-calc" id="kyufu-calc">
       <h3>💰 <wbr>実質負担額かんたん計算機</h3>
       <div class="kyufu-calc__row">

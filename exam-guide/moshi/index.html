@@ -306,7 +306,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const stem=s=>esc(s).replace("最も不適切なもの","最も<u>不適切</u>なもの");
 const ext=(u,t)=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
-const rev=q=>`<span class="rev"><span>Click▶︎キャリコン学びピクニックで復習しよう</span>${q[5]&&q[5].length?q[5].map(l=>ext(BASE+l[1],esc(l[0]))).join(""):ext(drill(q[0]),F[q[0]]+"の1問1答")}</span>`;
+const rev=q=>`<span class="rev"><span>キャリコン学びピクニックで復習 ▶︎</span>${q[5]&&q[5].length?q[5].map(l=>ext(BASE+l[1],esc(l[0]))).join(""):ext(drill(q[0]),F[q[0]]+"の1問1答")}</span>`;
 
 function build(){
   $("qs").innerHTML=Q.map((q,i)=>{const n=i+1;
@@ -388,7 +388,7 @@ function result(){
   const {right,pts,by}=score(Q,S), pass=pts>=70, u=used();
   const rows=by.map((b,i)=>{const p=Math.round(b[0]/b[1]*100);
     return `<tr><td>${F[i]}</td><td class="num">${b[0]} / ${b[1]}</td><td><span class="meter${p<70?" low":""}"><i style="width:${p}%"></i></span></td><td class="num">${p}%</td><td>${ext(drill(i),"1問1答")}</td></tr>`}).join("");
-  box.innerHTML=`<h2><img class="ico" src="${ILL.board}" alt="">第${cur+1}回の採点結果</h2><div class="score"><span class="pts">${pts}</span><span>点 / 100点（${right}問正解）</span><span class="verdict ${pass?"pass":"fail"}">${pass?"合格点に到達":"合格点まであと"+(70-pts)+"点"}</span><span>所要時間 ${fmt(u)}${u>LIMIT?"（制限時間を超過）":""}</span></div>${feedback(pts,by)}<div class="tblwrap"><table><thead><tr><th>分野</th><th>正解数</th><th>正答率</th><th></th><th>ピクニックで復習</th></tr></thead><tbody>${rows}</tbody></table></div><p class="hint">解説の下の「Click▶︎キャリコン学びピクニックで復習しよう」から、用語・理論家のくわしいページへ進めます。</p><label class="filter" for="onlyNg"><input type="checkbox" id="onlyNg"${S.onlyNg?" checked":""}>間違えた問題と未解答だけ表示する</label>`;
+  box.innerHTML=`<h2><img class="ico" src="${ILL.board}" alt="">第${cur+1}回の採点結果</h2><div class="score"><span class="pts">${pts}</span><span>点 / 100点（${right}問正解）</span><span class="verdict ${pass?"pass":"fail"}">${pass?"合格点に到達":"合格点まであと"+(70-pts)+"点"}</span><span>所要時間 ${fmt(u)}${u>LIMIT?"（制限時間を超過）":""}</span></div>${feedback(pts,by)}<div class="tblwrap"><table><thead><tr><th>分野</th><th>正解数</th><th>正答率</th><th></th><th>ピクニックで復習</th></tr></thead><tbody>${rows}</tbody></table></div><p class="hint">解説の下の「キャリコン学びピクニックで復習」のリンクから、用語・理論家のくわしいページへ進めます。</p><label class="filter" for="onlyNg"><input type="checkbox" id="onlyNg"${S.onlyNg?" checked":""}>間違えた問題と未解答だけ表示する</label>`;
   box.insertAdjacentHTML("beforeend",anketo());
 }
 
