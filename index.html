@@ -371,15 +371,17 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .qa-talk{max-width:560px;margin:0 auto 36px;text-align:left}
 .qa-talk .mini-say,.lp-river .qa-ans{display:flex;align-items:center;gap:12px;margin:10px 0}
 .qa-talk .mini-say--moyan{flex-direction:row-reverse;justify-content:flex-start}
-.qa-talk .mini-say__bubble,.lp-river .qa-ans .mini-say__bubble{flex:0 1 auto;max-width:min(400px,78%);padding:12px 18px;text-align:left!important;text-wrap:balance}
+.qa-talk .mini-say__bubble,.lp-river .qa-ans .mini-say__bubble{flex:0 1 auto;max-width:min(400px,78%);padding:12px 18px;text-align:center!important;text-wrap:balance}
 .qa-talk .mini-say__avatar,.lp-river .qa-ans .mini-say__avatar{width:48px;height:48px}
 .qa-talk .mini-say__avatar img,.lp-river .qa-ans .mini-say__avatar img{width:48px;height:48px;object-fit:contain}
 /* スマホで見切れないように: 見出しは折り返してよい・大きな題字は画面幅に合わせて縮む */
 .is-home #picnic-title .hero-h1-big{max-width:100%}
 .is-home #picnic-title .hero-h1-big em{font-size:min(1em,7.8vw)}
 .lp-river .lp-river__body h3{white-space:normal;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
-/* Q&Aの答えの文は左ぞろえで読みやすく(見出しとボタンは中央のまま) */
-.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;max-width:30em;margin-left:auto;margin-right:auto;padding:0 18px}
+/* Q&Aの答えの文は中央ぞろえ(ちゃんの決まり)。読みやすい幅に収めて、切りのいい所で折り返す */
+.is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:center!important;text-wrap:balance!important;word-break:keep-all;overflow-wrap:anywhere;max-width:30em;margin-left:auto;margin-right:auto;padding:0 18px}
+/* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
+.is-home .picnic-map__head h2,.is-home .lp-river .lp-river__body h3,.is-home .flow-h span{white-space:normal!important;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
 .lp-river .qa-ans{margin:0 0 14px;justify-content:center}
 .lp-river .qa-ans .mini-say__bubble{font-weight:700;color:#29435e}
 body.is-home main .lp-river .lp-river__body h3::before{content:"Q" counter(lpstep)!important;display:inline-flex!important;width:auto!important;min-width:40px;height:30px!important;padding:0 10px;border-radius:99px!important;font-size:14px!important;font-weight:700!important;letter-spacing:.04em}
