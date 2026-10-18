@@ -391,6 +391,13 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .is-home .mini-say--chan .mini-say__bubble{border-color:#7fb77e!important}
 .is-home .mini-say .mini-say__bubble::before,.is-home .mini-say .mini-say__bubble::after{display:none!important}
 .is-home .mini-say .mini-say__bubble strong{font-weight:700;color:#2b2a27}
+/* Q&Aは、図解・吹き出し・文・ボタンのあいだを広めにとって、ゆっくり見せる(ちゃんの指定 2026-10-18) */
+.is-home .lp-river .lp-river__body>h3{margin-bottom:24px!important}
+.is-home .lp-river .lp-river__body>figure{margin:0 0 32px!important}
+.is-home .lp-river .lp-river__body>.qa-ans{margin:0 0 32px!important}
+.is-home .lp-river .lp-river__body>p:not(.lp-river__link):not(.lp-river__src){line-height:2.1!important;margin:0 0 20px!important}
+.is-home .lp-river .lp-river__body>p.lp-river__src{margin:4px 0 0!important;line-height:1.8}
+.is-home .lp-river .lp-river__body>p.lp-river__link{margin-top:36px!important}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
 .is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:justify!important;text-justify:inter-character;text-align-last:left;text-wrap:wrap!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0}
 .is-home .lp-river .lp-river__body>p.lp-river__src{padding:0;text-align:left!important}
