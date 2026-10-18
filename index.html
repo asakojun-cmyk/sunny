@@ -722,7 +722,7 @@ function req(){if(!busy){busy=true;requestAnimationFrame(draw)}}
 addEventListener("scroll",req,{passive:true});addEventListener("resize",req);/* 最初の計算は読み込みが終わってから(読み込み中に位置を測ると、ページ全体の計算が先に走って重い) */})();
 </script>
 <script>/* デザインのファイル全体は、最初の画面を描いたあとに読む(最初の画面のデザインはページの中に書いてある) */
-(function(){var JS=["./js/picnic-map.js?v=v2026.0728.1616","./js/reveal.js?v=2026.1016","./js/search-fab.js?v=v2026.0728.1616","./js/news-expire.js?v=2026.1015","./js/school-match.js?v=2026.1013b"];
+(function(){var JS=["./js/picnic-map.js?v=v2026.0728.1616","./js/reveal.js?v=2026.1018","./js/search-fab.js?v=v2026.0728.1616","./js/news-expire.js?v=2026.1015","./js/school-match.js?v=2026.1013b"];
 function go(){[].forEach.call(document.querySelectorAll("template.late-css"),function(t){t.parentNode.replaceChild(t.content.cloneNode(true),t)});
 /* 動きのためのプログラムも、最初の画面を描いたあとに(書いた順に動く) */
 JS.forEach(function(u){var e=document.createElement("script");e.src=u;e.async=false;document.body.appendChild(e)})}

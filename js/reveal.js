@@ -1,10 +1,19 @@
-/* 広告リンク(A8)が押された場所をGA4に記録する。イベント名: aff_<学校>_<場所> */
+/* 広告リンク(A8)が押された場所をGA4に記録する。
+   - aff_click：どの学校でも同じ名前。GA4の「キーイベント（成果）」にするのはこれ。中身に 学校・場所・ページ を入れる
+   - aff_<学校>_<場所>：前からある細かい名前（そのまま残す） */
 (function () {
   "use strict";
   var SCHOOLS = {
     "459JRK+G3ASDU": "chiiki",
+    "459JRK+G3AT5M": "chiiki",
     "4B7XX4+BD0U56": "pasona",
-    "45BQMV+6WV8EY": "manpower"
+    "4B7XX4+BD0TDE": "pasona",
+    "45BQMV+6WV8EY": "manpower",
+    "45BQMV+6WV7N6": "manpower",
+    "4BCMO3+2VLGT6": "lec",
+    "4BE7SX+HV1P6": "recurrent",
+    "4BE7SX+DP0GQ": "cmca",
+    "4B1O1P+8V4D0Y": "coconala"
   };
   document.addEventListener(
     "click",
@@ -17,9 +26,20 @@
         ? "top"
         : a.closest("table")
         ? "table"
+        : a.closest(".camp-banners,.camp-details")
+        ? "campaign"
+        : a.closest(".cta-fab,[data-ev^='fab_']")
+        ? "fab"
         : a.classList.contains("button")
         ? "button"
         : "text";
+      var text = (a.textContent || "").replace(/\s+/g, "").slice(0, 40);
+      window.gtag("event", "aff_click", {
+        school: school,
+        link_position: pos,
+        link_text: text,
+        page_path: location.pathname
+      });
       window.gtag("event", "aff_" + school + "_" + pos, {
         school: school,
         link_position: pos,
