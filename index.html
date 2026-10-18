@@ -379,11 +379,17 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .is-home #picnic-title .hero-h1-big em{font-size:min(1em,7.8vw)}
 .lp-river .lp-river__body h3{white-space:normal;word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
 /* 吹き出しの文は左ぞろえで、名前も左に(ちゃんの指定 2026-10-18) */
-.is-home .qa-talk .mini-say__bubble,.is-home .lp-river .qa-ans .mini-say__bubble,.is-home .flow .flow-talk .mini-say__bubble{flex:1 1 auto!important;max-width:none!important;text-align:left!important;text-wrap:pretty!important;padding:14px 18px!important;line-break:strict}
+.is-home .qa-talk .mini-say__bubble,.is-home .lp-river .qa-ans .mini-say__bubble,.is-home .flow .flow-talk .mini-say__bubble{flex:1 1 auto!important;max-width:none!important;text-align:left!important;text-wrap:pretty!important;padding:14px 14px 14px 16px!important;line-break:strict}
 .is-home .qa-talk .mini-say__bubble b,.is-home .lp-river .qa-ans .mini-say__bubble b,.is-home .flow .flow-talk .mini-say__bubble b{display:block;text-align:left!important;margin-bottom:4px}
 .is-home .flow .flow-talk .mini-say__bubble{text-wrap:pretty!important}
 /* 会話は改行位置を決めず、自然に流す(ちゃんの指定 2026-10-18) */
 .is-home .flow .flow-talk .mini-say__bubble .nb{white-space:normal!important;display:inline}
+/* 吹き出しは中を白に、枠をキャラの色で(モヤン=黒・サニー先生=黄・ちゃん=青 / ちゃんの指定 2026-10-18) */
+.is-home .mini-say .mini-say__bubble{background:#fff!important;border:2px solid #d9d4ca!important;box-shadow:none!important;padding-left:16px!important;padding-right:14px!important}
+.is-home .mini-say--moyan .mini-say__bubble{border-color:#3a3a3a!important}
+.is-home .mini-say--sunny .mini-say__bubble{border-color:#f2c94c!important}
+.is-home .mini-say--chan .mini-say__bubble{border-color:#6fa8dc!important}
+.is-home .mini-say .mini-say__bubble::before,.is-home .mini-say .mini-say__bubble::after{display:none!important}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
 .is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
 /* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
