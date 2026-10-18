@@ -203,3 +203,11 @@ main~footer{--bg:#e9f3f7}
 .okawari h2{font-size:clamp(1.375rem,2.3vw,1.875rem)}
 /* お客さまの一言は、<wbr> の位置(文節)でだけ折り返す。「なる？」の「る？」だけが次の行に落ちないように */
 .opening__title>span{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
+
+/* 吹き出しを全ページでそろえる(ちゃんの指定 2026-10-18): 中は白・細い線をキャラの色で。モヤン=黒・サニー先生=黄・ゲスト=グレー */
+html body .line .line__bubble{background:#fff!important;border:1px solid #d9d4ca!important;box-shadow:none!important;text-align:left!important}
+html body .line--moyan .line__bubble{border-color:#3a3a3a!important}
+html body .line--sunny .line__bubble{border-color:#f2c94c!important}
+html body .line .line__bubble strong{font-weight:700!important;color:#2b2a27!important;background:none!important}
+html body .line .line__bubble:has(.is-speaking){background:#fdf3c4!important}
+html body .farewell__line .line__bubble{background:#fff!important;border:1px solid #f2c94c!important}
