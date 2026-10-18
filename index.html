@@ -390,6 +390,7 @@ addEventListener("load",function(){setTimeout(go,3000)});})();</script>
 .is-home .mini-say--sunny .mini-say__bubble{border-color:#f2c94c!important}
 .is-home .mini-say--chan .mini-say__bubble{border-color:#6fa8dc!important}
 .is-home .mini-say .mini-say__bubble::before,.is-home .mini-say .mini-say__bubble::after{display:none!important}
+.is-home .mini-say .mini-say__bubble strong{font-weight:700;color:#2b2a27}
 /* Q&Aの答えの文は、ボタンと同じ幅で左ぞろえ(ちゃんが選んだ形 2026-10-18) */
 .is-home .lp-river .lp-river__body>p:not(.lp-river__link){text-align:left!important;text-wrap:pretty!important;word-break:normal!important;line-break:strict;max-width:none;margin-left:0;margin-right:0;padding:0 8px}
 /* iPhone(Safari)は「折り返さない」設定のとき<wbr>でも改行しないので、見出しが画面の外に切れていた。見出しは<wbr>の所でだけ折り返す */
@@ -528,8 +529,8 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="school-match">
         <h3 class="flow-h"><i><small>STEP</small>1</i><span>4つ<wbr>選んで、<wbr>合う<wbr>学校を<wbr>しぼろう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">仕事も</span><wbr><span class="nb">家のことも</span><wbr><span class="nb">あるのに、</span><wbr><span class="nb">最後まで</span><wbr><span class="nb">続けられる</span><wbr><span class="nb">かな……。</span></p></div>
-          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">だから、</span><wbr><span class="nb">暮らしに</span><wbr><span class="nb">合う</span><wbr><span class="nb">学校を</span><wbr><span class="nb">選ぶのが</span><wbr><span class="nb">大事</span><wbr><span class="nb">なんだ。</span><wbr><span class="nb">迷った</span><wbr><span class="nb">質問は</span><wbr><span class="nb">「まだ</span><wbr><span class="nb">決めて</span><wbr><span class="nb">いない」で</span><wbr><span class="nb">OKだよ。</span></p></div>
+          <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">仕事も</span><wbr><span class="nb">家のことも</span><wbr><span class="nb">あるのに、</span><wbr><span class="nb"><strong>最後まで</span><wbr><span class="nb">続けられる</strong></span><wbr><span class="nb">かな……。</span></p></div>
+          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">だから、</span><wbr><span class="nb"><strong>暮らしに</span><wbr><span class="nb">合う</span><wbr><span class="nb">学校を</span><wbr><span class="nb">選ぶ</strong>のが</span><wbr><span class="nb">大事</span><wbr><span class="nb">なんだ。</span><wbr><span class="nb">迷った</span><wbr><span class="nb">質問は</span><wbr><span class="nb"><strong>「まだ</span><wbr><span class="nb">決めて</span><wbr><span class="nb">いない」でOK</strong>だよ。</span></p></div>
         </div>
         <div class="flow-tool">
         <p class="flow-howto"><b>使い方</b><span class="nb">下の4つの質問に、</span><wbr><span class="nb">ポンポン答えてみよう。</span><wbr><span class="nb">あなたに合う学校から</span><wbr><span class="nb">順に出てくるよ。</span><small>30秒・<wbr>登録なし・<wbr>いつでも<wbr>やり直せる</small></p>
@@ -544,7 +545,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="step-2">
         <h3 class="flow-h"><i><small>STEP</small>2</i><span>比較表で、<wbr>費用・<wbr>日程・<wbr>給付金を<wbr>くらべよう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や</span><wbr><span class="nb">日程も、</span><wbr><span class="nb">学校に</span><wbr><span class="nb">よって</span><wbr><span class="nb">ちがうよ。</span><wbr><span class="nb">お金</span><wbr><span class="nb">だけじゃなく、</span><wbr><span class="nb">続けやすさも</span><wbr><span class="nb">くらべてね。</span></p></div>
+          <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や</span><wbr><span class="nb">日程も、</span><wbr><span class="nb">学校に</span><wbr><span class="nb">よって</span><wbr><span class="nb">ちがうよ。</span><wbr><span class="nb">お金</span><wbr><span class="nb">だけじゃなく、</span><wbr><span class="nb"><strong>続けやすさ</strong>も</span><wbr><span class="nb">くらべてね。</span></p></div>
         </div>
         <p class="flow-go"><a class="picnic-button picnic-button--line" href="./schools/compare/" data-ev="top_next_compare">7校を<wbr>比較表で<wbr>くらべてみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
       
@@ -554,7 +555,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <div class="flow-step" id="step-3">
         <h3 class="flow-h"><i><small>STEP</small>3</i><span>説明会に<wbr>参加して、<wbr>気になる<wbr>ことを<wbr>質問しよう</span></h3>
         <div class="flow-talk">
-          <div class="mini-say mini-say--chan"><span class="mini-say__avatar mini-say__avatar--chan" aria-hidden="true"><img src="./img/chan-map-s.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>ちゃん</b><wbr><span class="nb">お金の</span><wbr><span class="nb">ことも、</span><wbr><span class="nb">説明会なら</span><wbr><span class="nb">直接</span><wbr><span class="nb">聞けますよ。</span><wbr><span class="nb">わたしが</span><wbr><span class="nb">出た回は</span><wbr><span class="nb">3人だけで、</span><wbr><span class="nb">質問しやすかったです。</span></p></div>
+          <div class="mini-say mini-say--chan"><span class="mini-say__avatar mini-say__avatar--chan" aria-hidden="true"><img src="./img/chan-map-s.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>ちゃん</b><wbr><span class="nb">お金の</span><wbr><span class="nb">ことも、</span><wbr><span class="nb"><strong>説明会なら</span><wbr><span class="nb">直接</span><wbr><span class="nb">聞けます</strong>よ。</span><wbr><span class="nb">わたしが</span><wbr><span class="nb">出た回は</span><wbr><span class="nb">3人だけで、</span><wbr><span class="nb">質問しやすかったです。</span></p></div>
         </div>
         <div class="flow-ask">
           <p class="flow-ask__t">説明会で<wbr>聞いておくと<wbr>安心なこと</p>
@@ -635,8 +636,8 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
       <p class="lp-river__lead">申し込む<wbr>前に、<wbr>多くの人が<wbr>迷う<wbr>6つ。<wbr>答えは<wbr>ひとことで。</p>
     </div>
     <div class="qa-talk">
-      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">申し込む前に、</span><wbr><span class="nb">聞いておきたいことが</span><wbr><span class="nb">いっぱいあるの……。</span></p></div>
-      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">よく聞かれる6つに、</span><wbr><span class="nb">わたしが答えるね。</span></p></div>
+      <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">申し込む前に、</span><wbr><span class="nb"><strong>聞いておきたいこと</strong>が</span><wbr><span class="nb">いっぱいあるの……。</span></p></div>
+      <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">よく聞かれる<strong>6つ</strong>に、</span><wbr><span class="nb">わたしが答えるね。</span></p></div>
     </div>
 
 
