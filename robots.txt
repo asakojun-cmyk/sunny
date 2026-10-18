@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /notrack/
 Sitemap: https://carepicnic.com/sitemap.xml

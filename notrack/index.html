@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>この端末を数えない | キャリコン学びピクニック</title>
+<style>
+:root{--bg:#f5f2eb;--card:#fffdf8;--text:#272722;--muted:#6f6b63;--line:#d8d2c7;--coral:#e9775b;--green:#3d5a44;--greenbg:#e2eae2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.8;padding:24px 16px}
+main{max-width:520px;margin:0 auto;background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:28px 20px;text-align:center}
+h1{font-size:22px;margin:0 0 8px}
+p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.state{margin:20px 0;padding:14px;border-radius:14px;font-weight:700;font-size:17px}
+.state.on{background:var(--greenbg);color:var(--green)}
+.state.off{background:#f5efd9;color:#6d5a20}
+button{display:block;width:100%;min-height:56px;border-radius:999px;border:0;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit}
+button[hidden]{display:none}
+#go{background:var(--coral);color:#fff}
+#undo{background:none;color:var(--muted);text-decoration:underline;min-height:44px;margin-top:8px;font-weight:400;font-size:14px}
+a{color:var(--green)}
+</style>
+</head>
+<body>
+<main>
+  <h1>この端末のアクセスを数えない</h1>
+  <p>運営者が自分で確認するときの設定です。<br>オンにすると、この端末・このブラウザで見たページは、アクセス解析（Googleアナリティクス・Clarity）に記録されません。</p>
+  <div class="state" id="state" role="status"></div>
+  <button id="go" type="button">この端末を数えない</button>
+  <button id="undo" type="button">元に戻す（数える）</button>
+  <p style="margin-top:20px;font-size:13px">ブラウザの履歴やサイトのデータを消すと、設定も消えます。SafariとChromeなど、ブラウザごとに1回ずつ設定してください。</p>
+  <p><a href="/">トップへ</a></p>
+</main>
+<script>
+(function(){
+  var K="cp-notrack",st=document.getElementById("state"),go=document.getElementById("go"),undo=document.getElementById("undo");
+  function get(){try{return localStorage.getItem(K)==="1"}catch(e){return null}}
+  function paint(){var v=get();
+    if(v===null){st.className="state off";st.textContent="このブラウザでは設定を保存できません（プライベートブラウズ中かもしれません）";go.hidden=undo.hidden=true;return}
+    st.className="state "+(v?"on":"off");st.textContent=v?"✓ この端末は数えていません":"いまは、この端末も数えています";
+    go.hidden=v;undo.hidden=!v}
+  go.onclick=function(){try{localStorage.setItem(K,"1")}catch(e){}paint()};
+  undo.onclick=function(){try{localStorage.removeItem(K)}catch(e){}paint()};
+  paint();
+})();
+</script>
+</body>
+</html>
