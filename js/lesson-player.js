@@ -105,7 +105,7 @@
     var w = WHO[S.data.segs[idx].s] || { name: S.guestName };
     el.classList.add("is-speaking");
     face.hidden = !w.img;
-    if (w.img) face.src = S.imgBase + w.img;
+    if (w.img) face.src = S.imgBase + faceOf(el, w);
     nameEl.textContent = w.name;
     if (!audio.paused && Date.now() - handScrollAt > 4000) {
       var calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -232,9 +232,41 @@
     tick();
   }
 
+  /* 「ひとことでいうと」をタイトルのすぐ下へ移した(2026-10)。それより前に作った音声は
+   * 「ピクニックのはじまり」のあいさつ → ひとこと の順で読んでいるので、色をつける順もそれに合わせる。
+   * 音声を作り直したら(ページの順で読むようになったら)、ページの順のまま使う */
+  function readOrder(els, segs) {
+    var intro = [], one = [], rest = [];
+    els.forEach(function (el) {
+      if (el.closest(".picnic-intro")) intro.push(el);
+      else if (el.closest(".term-oneliner")) one.push(el);
+      else rest.push(el);
+    });
+    if (!intro.length || !one.length || els[0] !== one[0]) return els;
+    var alt = intro.concat(one, rest);
+    function score(list) {
+      var n = 0;
+      intro.forEach(function (el) {
+        var line = el.closest(".picnic-intro__line");
+        var who = line && /--guest/.test(line.className) ? "guest" : "sunny";
+        var seg = segs[list.indexOf(el)];
+        if (seg && seg.s === who) n++;
+      });
+      return n;
+    }
+    return score(alt) > score(els) ? alt : els;
+  }
+  /* うれしい・わかった、のセリフでは、下のバーのモヤンも笑顔にする */
+  function faceOf(el, w) {
+    if (w !== WHO.moyan) return w.img;
+    var fig = el.closest(".chara-guide--moyan, .mini-say--moyan");
+    var img = fig && fig.querySelector("img");
+    return img && /smile/.test(img.getAttribute("src") || "") ? "t/moyan_school_hat_smile-200.webp" : w.img;
+  }
+
   /* ---------- ページの中のプレーヤー ---------- */
   function setup(mount, data) {
-    var els = Array.prototype.slice.call(document.querySelectorAll(SELECTOR));
+    var els = readOrder(Array.prototype.slice.call(document.querySelectorAll(SELECTOR)), data.segs);
     if (!mount || els.length !== data.segs.length) return false; /* 本文を直して音声と合わなくなったら、出さない */
     var base = new URL(mount.getAttribute("data-lesson"), location.href).href;
     var guestLabel = document.querySelector(".picnic-intro__line--guest b, .line--guest .line__msg b");
