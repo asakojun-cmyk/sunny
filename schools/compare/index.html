@@ -70,6 +70,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 .cmp-scroll .cmp__links{font-size:13px}
 .cmp-scroll .cmp__group th{padding:8px 10px}
 .cmp-scroll .cmp__group th span{left:10px}
+/* 診断などで2校以下にしぼったときは、横に動かさなくても見える幅に */
+.cmp-scroll .cmp[data-shown="1"] td,.cmp-scroll .cmp[data-shown="2"] td,.cmp-scroll .cmp[data-shown="1"] thead th[data-school],.cmp-scroll .cmp[data-shown="2"] thead th[data-school]{min-width:0}
 }
 .setsumei-box{max-width:640px;margin:36px auto;padding:20px 18px;background:#fff;border:2px solid #f3c9ba;border-radius:20px;text-align:center;line-height:1.9}
 .setsumei-box__t{margin:0 0 6px;font-weight:700;font-size:1.08rem;color:#3f6b4a}

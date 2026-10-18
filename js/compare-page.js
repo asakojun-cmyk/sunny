@@ -63,6 +63,7 @@
       cell.hidden = !allSchools && schools.indexOf(cell.getAttribute("data-school")) === -1;
     });
     var shown = allSchools ? total : schools.length;
+    table.setAttribute("data-shown", shown);
     table.querySelectorAll(".cmp__group th").forEach(function (th) {
       th.colSpan = shown + 1;
     });
