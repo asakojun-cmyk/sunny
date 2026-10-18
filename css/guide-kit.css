@@ -349,3 +349,13 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 .gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: var(--color-yellow, #e7d49a); }
 .gk-sugo .gk-zu__note b { background: linear-gradient(transparent 62%, var(--color-yellow-light, #f5efd9) 62%); }
 @media (max-width: 480px) { .gk-zu.gk-sugo { padding: 24px 12px 20px; border-radius: 20px; } }
+/* 色を明るく：数字はページ上の丸と同じ #b3543a、ゴール・矢印・帯はやわらかいコーラル（ボタンと同じ #e9785f） */
+.gk-sugo .gk-sugo__pct { color: var(--gk-coral); }
+.gk-sugo .gk-sugo__sq.is-start .gk-sugo__pct { color: var(--gk-ink); }
+.gk-sugo .gk-sugo__sq.is-goal .gk-sugo__no { background: #e9785f; }
+.gk-sugo__sq:not(:last-child)::after { color: #e9785f; opacity: .7; }
+.gk-road__step:not(:last-child)::after { color: #e9785f; opacity: .7; }
+.gk-road__step.is-due .gk-road__when { background: #e9785f; }
+.gk-sugo .gk-sugo__bar .s1, .gk-sugo .gk-sugo__legend .s1 { background: #e9785f; }
+.gk-sugo .gk-sugo__bar .s2, .gk-sugo .gk-sugo__legend .s2 { background: #f4b19c; }
+.gk-sugo .gk-sugo__bar .s3, .gk-sugo .gk-sugo__legend .s3 { background: #f1e2a6; }
