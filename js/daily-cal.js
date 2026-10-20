@@ -83,4 +83,12 @@
     else msg.textContent = "きょうの花丸まで、あと" + (GOAL - todayN) + "問。";
   }
 
+  var shr = document.querySelector("[data-dcal-share]");
+  if (shr && todayN > 0 && today <= EXAM) {
+    var t = "きょうは1問1答を" + todayN + "問" + (todayN >= BIG ? "。キラキラ花丸💮✨" : todayN >= GOAL ? "。花丸💮" : "") + "\n第33回まで、あと" + Math.round((EXAM - today) / 86400000) + "日\n#キャリピク勉強記録 #キャリコン学びピクニック";
+    var a = shr.querySelector("a");
+    a.href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(t) + "&url=" + encodeURIComponent("https://carepicnic.com/exam-guide/last-30days/");
+    shr.hidden = false;
+  }
+
 })();

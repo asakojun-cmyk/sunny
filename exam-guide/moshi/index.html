@@ -117,6 +117,7 @@ main{min-width:0;display:flex;flex-direction:column;gap:16px}
 .result h2{font-size:20px;color:var(--head);letter-spacing:.06em;margin:0 0 12px}
 .score{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px}
 .score .pts{font-size:56px;font-weight:700;color:var(--head);line-height:1;font-variant-numeric:tabular-nums}
+.shr{margin:18px 0 22px;text-align:center}.shr-l,.shr-n{word-break:keep-all;overflow-wrap:anywhere}.shr-l{margin:0 0 10px;font-weight:700;color:var(--head)}.shr-b{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.shr-b a{display:inline-block;min-width:130px;padding:10px 20px;border-radius:999px;font-weight:700;text-decoration:none;text-align:center}.shr-x{background:var(--ink);color:var(--surface)}.shr-line{background:#06c755;color:#fff}.shr-n{margin:8px 0 0;font-size:13px;color:var(--muted)}
 .verdict{font-weight:700;padding:1px 14px;border-radius:999px;font-size:15px}
 .verdict.pass{background:var(--ok-soft);color:var(--ok)} .verdict.fail{background:var(--ng-soft);color:var(--ng)}
 .tblwrap{overflow-x:auto;margin-top:14px}
@@ -383,12 +384,17 @@ function feedback(pts,by){
   return `<div class="fb">${say(IMG_S,"サニー先生",sunny)}${say(IMG_M,"モヤン",moyan)}${links?`<p class="rev">${links}</p>`:""}</div>`;
 }
 
+function share(pts,pass){
+  const t=`キャリコン模擬試験 第${cur+1}回、${pts}点でした${pass?"（合格点に到達）":""}\u2600\ufe0f\n#キャリピク勉強記録 #キャリコン学びピクニック`, u="https://carepicnic.com/exam-guide/moshi/";
+  return `<div class="shr"><p class="shr-l">きょうの成果を<wbr>報告して、<wbr>勉強仲間と<wbr>つながろう</p><div class="shr-b"><a class="shr-x" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(t)}&url=${encodeURIComponent(u)}" target="_blank" rel="noopener" data-ev="moshi_share_x">Xで報告</a><a class="shr-line" href="https://line.me/R/share?text=${encodeURIComponent(t+" "+u)}" target="_blank" rel="noopener" data-ev="moshi_share_line">LINEで報告</a></div><p class="shr-n">点数は、<wbr>あなたが<wbr>送ったときだけ<wbr>公開されます。</p></div>`;
+}
+
 function result(){
   const box=$("result"); box.hidden=!S.graded; if(!S.graded)return;
   const {right,pts,by}=score(Q,S), pass=pts>=70, u=used();
   const rows=by.map((b,i)=>{const p=Math.round(b[0]/b[1]*100);
     return `<tr><td>${F[i]}</td><td class="num">${b[0]} / ${b[1]}</td><td><span class="meter${p<70?" low":""}"><i style="width:${p}%"></i></span></td><td class="num">${p}%</td><td>${ext(drill(i),"1問1答")}</td></tr>`}).join("");
-  box.innerHTML=`<h2><img class="ico" src="${ILL.board}" alt="">第${cur+1}回の採点結果</h2><div class="score"><span class="pts">${pts}</span><span>点 / 100点（${right}問正解）</span><span class="verdict ${pass?"pass":"fail"}">${pass?"合格点に到達":"合格点まであと"+(70-pts)+"点"}</span><span>所要時間 ${fmt(u)}${u>LIMIT?"（制限時間を超過）":""}</span></div>${feedback(pts,by)}<div class="tblwrap"><table><thead><tr><th>分野</th><th>正解数</th><th>正答率</th><th></th><th>ピクニックで復習</th></tr></thead><tbody>${rows}</tbody></table></div><p class="hint">解説の下の「キャリコン学びピクニックで復習」のリンクから、用語・理論家のくわしいページへ進めます。</p><label class="filter" for="onlyNg"><input type="checkbox" id="onlyNg"${S.onlyNg?" checked":""}>間違えた問題と未解答だけ表示する</label>`;
+  box.innerHTML=`<h2><img class="ico" src="${ILL.board}" alt="">第${cur+1}回の採点結果</h2><div class="score"><span class="pts">${pts}</span><span>点 / 100点（${right}問正解）</span><span class="verdict ${pass?"pass":"fail"}">${pass?"合格点に到達":"合格点まであと"+(70-pts)+"点"}</span><span>所要時間 ${fmt(u)}${u>LIMIT?"（制限時間を超過）":""}</span></div>${feedback(pts,by)}${share(pts,pass)}<div class="tblwrap"><table><thead><tr><th>分野</th><th>正解数</th><th>正答率</th><th></th><th>ピクニックで復習</th></tr></thead><tbody>${rows}</tbody></table></div><p class="hint">解説の下の「キャリコン学びピクニックで復習」のリンクから、用語・理論家のくわしいページへ進めます。</p><label class="filter" for="onlyNg"><input type="checkbox" id="onlyNg"${S.onlyNg?" checked":""}>間違えた問題と未解答だけ表示する</label>`;
   box.insertAdjacentHTML("beforeend",anketo());
 }
 

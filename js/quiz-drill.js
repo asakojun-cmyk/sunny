@@ -258,7 +258,7 @@
         : "模擬試験の合格ライン(70%)まで、あと少し。まちがえた問題は「まちがえた問題だけ」でもう一度解けるよ。";
     }
     root.querySelector("[data-quiz-endnote]").textContent = note;
-    var shareText = "キャリコン1問1答ドリル、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f #キャリコン学びピクニック";
+    var shareText = "キャリコン1問1答ドリル、" + order.length + "問中" + score + "問正解(" + rate + "%)\u2600\ufe0f\n#キャリピク勉強記録 #キャリコン学びピクニック";
     var pageUrl = "https://carepicnic.com/games/quiz/";
     var xBtn = document.querySelector("[data-quiz-share-x]");
     var lineBtn = document.querySelector("[data-quiz-share-line]");
