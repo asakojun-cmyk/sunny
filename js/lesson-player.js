@@ -18,7 +18,7 @@
     ".term-formal .term-section-title", ".term-formal__box > p:not(.term-update)", ".term-kakomon li",
     ".term-stages .term-section-note:first-of-type", ".term-formal dl > div", ".term-riasec .term-section-note",
     ".term-try .term-section-title", ".term-try .mini-say__bubble",
-    ".kw-talk .mini-say__bubble",
+    ".kw-talk .mini-say__bubble", ".chara-talk .chara-guide__bubble",
     ".term-exam-points .term-section-title", ".term-exam-points li",
     ".term-exam-advice .chara-guide__bubble", ".term-exam-advice .exam-advice__list li",
     ".term-oboekata .term-section-title", ".term-oboekata .term-prose p",
@@ -77,7 +77,7 @@
 
   function setLabel() {
     if (!S) return;
-    var text = !audio.paused ? "とめる" : S.started ? "つづきをきく" : S.resumeAt ? "つづきからきく" : "授業をはじめる";
+    var text = !audio.paused ? "とめる" : "授業を聴く";
     each("[data-lesson-label]", function (el) { el.textContent = text; });
     each("[data-lesson-play]", function (el) { el.classList.toggle("is-playing", !audio.paused); });
   }
@@ -105,7 +105,7 @@
     var w = WHO[S.data.segs[idx].s] || { name: S.guestName };
     el.classList.add("is-speaking");
     face.hidden = !w.img;
-    if (w.img) face.src = S.imgBase + w.img;
+    if (w.img) face.src = S.imgBase + faceOf(el, w);
     nameEl.textContent = w.name;
     if (!audio.paused && Date.now() - handScrollAt > 4000) {
       var calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -232,9 +232,41 @@
     tick();
   }
 
+  /* 「ひとことでいうと」をタイトルのすぐ下へ移した(2026-10)。それより前に作った音声は
+   * 「ピクニックのはじまり」のあいさつ → ひとこと の順で読んでいるので、色をつける順もそれに合わせる。
+   * 音声を作り直したら(ページの順で読むようになったら)、ページの順のまま使う */
+  function readOrder(els, segs) {
+    var intro = [], one = [], rest = [];
+    els.forEach(function (el) {
+      if (el.closest(".picnic-intro")) intro.push(el);
+      else if (el.closest(".term-oneliner")) one.push(el);
+      else rest.push(el);
+    });
+    if (!intro.length || !one.length || els[0] !== one[0]) return els;
+    var alt = intro.concat(one, rest);
+    function score(list) {
+      var n = 0;
+      intro.forEach(function (el) {
+        var line = el.closest(".picnic-intro__line");
+        var who = line && /--guest/.test(line.className) ? "guest" : "sunny";
+        var seg = segs[list.indexOf(el)];
+        if (seg && seg.s === who) n++;
+      });
+      return n;
+    }
+    return score(alt) > score(els) ? alt : els;
+  }
+  /* うれしい・わかった、のセリフでは、下のバーのモヤンも笑顔にする */
+  function faceOf(el, w) {
+    if (w !== WHO.moyan) return w.img;
+    var fig = el.closest(".chara-guide--moyan, .mini-say--moyan");
+    var img = fig && fig.querySelector("img");
+    return img && /smile/.test(img.getAttribute("src") || "") ? "t/moyan_school_hat_smile-200.webp" : w.img;
+  }
+
   /* ---------- ページの中のプレーヤー ---------- */
   function setup(mount, data) {
-    var els = Array.prototype.slice.call(document.querySelectorAll(SELECTOR));
+    var els = readOrder(Array.prototype.slice.call(document.querySelectorAll(SELECTOR)), data.segs);
     if (!mount || els.length !== data.segs.length) return false; /* 本文を直して音声と合わなくなったら、出さない */
     var base = new URL(mount.getAttribute("data-lesson"), location.href).href;
     var guestLabel = document.querySelector(".picnic-intro__line--guest b, .line--guest .line__msg b");
@@ -248,27 +280,20 @@
 
     mount.className = "lesson";
     mount.setAttribute("role", "group");
-    mount.setAttribute("aria-label", "このページを授業できく");
+    mount.setAttribute("aria-label", "授業を聴く");
     mount.innerHTML =
-      '<div class="lesson__who" aria-hidden="true">' +
-        '<img src="' + imgBase + WHO.sunny.img + '" alt="" width="56" height="56">' +
-        '<img src="' + imgBase + WHO.moyan.img + '" alt="" width="56" height="56">' +
+      '<div class="lesson__controls">' +
+        '<button type="button" class="lesson__play" data-lesson-play><span class="lesson__icon" aria-hidden="true"></span><span data-lesson-label></span></button>' +
+        '<button type="button" class="lesson__speed" data-lesson-speed></button>' +
       '</div>' +
-      '<div class="lesson__body">' +
-        '<p class="lesson__title">このページを、授業できく</p>' +
-        '<p class="lesson__lead">サニー先生とモヤン、理論家さん役の声で読み上げます(約' + minutes + '分)。読んでいるところに色がつきます。</p>' +
-        '<div class="lesson__controls">' +
-          '<button type="button" class="lesson__play" data-lesson-play><span class="lesson__icon" aria-hidden="true"></span><span data-lesson-label></span></button>' +
-          '<button type="button" class="lesson__speed" data-lesson-speed></button>' +
-        '</div>' +
-        '<div class="lesson__seek" hidden>' +
-          '<input type="range" min="0" max="' + Math.floor(data.total) + '" step="1" value="0" aria-label="授業の再生位置">' +
-          '<span class="lesson__time"></span>' +
-        '</div>' +
-        '<p class="lesson__next" hidden>つぎは<a href="#"></a>。聞き終わったら自動で進む <button type="button" class="lesson__auto" data-lesson-auto></button></p>' +
-        '<p class="lesson__note" role="status" hidden>音声を読みこめませんでした。少し待ってから、もう一度押してみてください。</p>' +
-        '<p class="lesson__credit">音声: ' + esc(data.credit) + '</p>' +
-      '</div>';
+      '<p class="lesson__lead">サニー先生とモヤンの声で読み上げます(約' + minutes + '分)。</p>' +
+      '<div class="lesson__seek" hidden>' +
+        '<input type="range" min="0" max="' + Math.floor(data.total) + '" step="1" value="0" aria-label="授業の再生位置">' +
+        '<span class="lesson__time"></span>' +
+      '</div>' +
+      '<p class="lesson__next" hidden>つぎは<a href="#"></a>。聞き終わったら自動で進む <button type="button" class="lesson__auto" data-lesson-auto></button></p>' +
+      '<p class="lesson__note" role="status" hidden>音声を読みこめませんでした。少し待ってから、もう一度押してみてください。</p>' +
+      '<p class="lesson__credit">音声: ' + esc(data.credit) + '</p>';
 
     S = {
       mount: mount, data: data, els: els, keyPos: keyPos, resumeAt: resumeAt, imgBase: imgBase,

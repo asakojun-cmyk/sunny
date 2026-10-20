@@ -1280,3 +1280,20 @@ html body .line .line__bubble:has(.is-speaking){background:#fdf3c4!important}
 .omamori-date-row input[type=date]{min-height:44px;padding:6px 10px;border-radius:10px;font-size:1rem;width:160px;max-width:46vw}
 .omamori-date-row .button{min-height:44px;padding:6px 22px;border-radius:999px}
 .omamori-date-preset{margin:12px 0 0;text-align:center}
+
+/* 2026-10-18 下のタブ: 「合う学校」がいつも選ばれているように見えないよう、文字は通常の色に。
+   アイコンだけうすくコーラル。いま開いているページは、紺の太字+下に小さな線で示す。 */
+@media (max-width:960px){
+  .bottom-nav .bottom-nav__item{position:relative}
+  .bottom-nav .bottom-nav__item--cta{color:var(--color-text);font-weight:400}
+  .bottom-nav .bottom-nav__item--cta .bottom-nav__icon{color:#d9775c}
+  .bottom-nav .bottom-nav__item.is-active,
+  .bottom-nav .bottom-nav__item[aria-current="page"]{color:#29435e;font-weight:700}
+  .bottom-nav .bottom-nav__item.is-active .bottom-nav__icon,
+  .bottom-nav .bottom-nav__item[aria-current="page"] .bottom-nav__icon{color:#29435e}
+  .bottom-nav .bottom-nav__item.is-active::after,
+  .bottom-nav .bottom-nav__item[aria-current="page"]::after{content:"";position:absolute;left:50%;bottom:0;width:18px;height:3px;margin-left:-9px;border-radius:2px;background:#29435e}
+}
+
+/* 2026-10-18 フッターの作成番号(v2026.xxxx)は読者には見せない(HTMLには残す) */
+.site-footer__version{display:none!important}

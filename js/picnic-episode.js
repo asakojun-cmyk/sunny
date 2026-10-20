@@ -44,41 +44,67 @@
   });
 
   /* ---------- 会話アニメーション ----------
-   * 会話ブロックが画面に入ったら、1言ずつ「…」→本文の順で表示する。
-   * クリックで残りを一気に表示。reduced-motion環境では動かさない。 */
+   * 2026-10-18 見直し: 「画面に何も出ていない」時間をなくす。
+   * - 各ブロックの最初の3言は、はじめから表示する
+   * - 残りは会話ブロックが画面に入ったら、1言ずつ「…」→本文(以前の半分の速さで待つ)
+   * - 読む速さに追いつかないときは、画面の上の方まで来た言葉をすぐ出す。
+   *   ブロックを通りすぎたら、残りをぜんぶ表示
+   * - 会話をタップすると、残りを一気に表示(最初のブロックの上に小さな案内)
+   * - reduced-motion環境やIntersectionObserverがない環境では動かさない(全文表示) */
   (function () {
     var reduced =
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced || !("IntersectionObserver" in window)) return;
 
-    var TYPING_MS = 750; // 「…」を見せる時間
-    var GAP_MS = 420; // 次の一言までの間
+    var SHOW_FIRST = 3; // はじめから見せる言葉の数
+    var TYPING_MS = 380; // 「…」を見せる時間
+    var GAP_MS = 220; // 次の一言までの間
+    var controllers = [];
 
     Array.prototype.forEach.call(
       document.querySelectorAll(".lines"),
-      function (block) {
+      function (block, blockIndex) {
         var lines = Array.prototype.slice.call(
           block.querySelectorAll(".line")
         );
         if (!lines.length) return;
         var after = block.parentElement.querySelector(".dialogue-after");
+        var hint = null;
+
+        var index = Math.min(SHOW_FIRST, lines.length);
+        lines.slice(0, index).forEach(function (line) {
+          line.classList.add("is-visible");
+        });
+        if (index >= lines.length) return; // 全部はじめから見えている
+
         block.setAttribute("data-animate", "");
         if (after) after.classList.add("is-waiting");
 
-        var index = 0;
+        // 最初の会話ブロックにだけ「タップで ぜんぶ表示」の小さな案内
+        if (!controllers.length) {
+          hint = document.createElement("p");
+          hint.className = "lines-hint";
+          hint.textContent = "タップで ぜんぶ表示";
+          block.parentElement.insertBefore(hint, block);
+        }
+
         var timer = null;
+        var started = false;
         var done = false;
+
+        function reveal(line) {
+          line.classList.add("is-visible");
+          line.classList.remove("is-typing");
+        }
 
         function finishAll() {
           if (done) return;
           done = true;
           if (timer) clearTimeout(timer);
-          lines.forEach(function (line) {
-            line.classList.add("is-visible");
-            line.classList.remove("is-typing");
-          });
+          lines.forEach(reveal);
           if (after) after.classList.remove("is-waiting");
+          if (hint) hint.classList.add("is-done");
         }
 
         function playNext() {
@@ -96,26 +122,68 @@
           }, TYPING_MS);
         }
 
-        // 途中で待ちたくない人のために、会話クリックで全部表示
+        // 読む人が先に進んでいたら、待たせずに出す
+        function catchUp() {
+          if (done) return;
+          var vh = window.innerHeight || document.documentElement.clientHeight;
+          var rect = block.getBoundingClientRect();
+          if (rect.bottom < 0 || (after && after.getBoundingClientRect().top < vh * 0.85)) {
+            finishAll(); // ブロックを通りすぎた/会話の下まで来た
+            return;
+          }
+          if (!started) return;
+          while (index < lines.length && lines[index].getBoundingClientRect().top < vh * 0.6) {
+            if (timer) clearTimeout(timer);
+            timer = null;
+            reveal(lines[index]);
+            if (index > 0) reveal(lines[index - 1]);
+            index++;
+          }
+          if (index >= lines.length) finishAll();
+          else if (!timer) timer = setTimeout(playNext, GAP_MS);
+        }
+
+        // 途中で待ちたくない人のために、会話タップで全部表示
         block.addEventListener("click", function (e) {
           if (e.target.closest && e.target.closest("[data-term]")) return;
           finishAll();
         });
+        if (hint) hint.addEventListener("click", finishAll);
 
         var observer = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
+              if (entry.isIntersecting && !started) {
+                started = true;
                 observer.disconnect();
                 playNext();
+                catchUp();
               }
             });
           },
-          { threshold: 0.35 }
+          { threshold: 0, rootMargin: "0px 0px -20% 0px" }
         );
         observer.observe(block);
+        controllers.push(catchUp);
       }
     );
+
+    if (!controllers.length) return;
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        ticking = false;
+        controllers.forEach(function (fn) {
+          fn();
+        });
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    // ページ内リンク(#story など)でとんできた時にも追いつく
+    onScroll();
   })();
 
   /* ---------- 復習バスケット(端末内のみ) ---------- */
@@ -177,10 +245,41 @@
     });
   }
 
-  /* ---------- 一問一答 ---------- */
+  /* ---------- 一問一答 ----------
+   * 2026-10-18: 答えたら「正解！/ざんねん」と正しい答えをはっきり出す。
+   * 最後に「N問中M問 正解」と「もう一回」ボタン */
   var current = 0;
+  var score = 0;
   var quiz = document.querySelector("#quiz");
   var next = document.querySelector("#next-question");
+  var feedback = document.querySelector("#feedback");
+  var restart = document.createElement("button");
+  restart.type = "button";
+  restart.className = "primary quiz-restart";
+  restart.id = "restart-quiz";
+  restart.textContent = "もう一回";
+  restart.hidden = true;
+  next.parentNode.insertBefore(restart, next.nextSibling);
+
+  function setFeedback(ok, q) {
+    feedback.innerHTML = "";
+    feedback.className = "feedback " + (ok ? "is-correct" : "is-wrong");
+    var label = document.createElement("span");
+    label.className = "feedback__label";
+    label.textContent = ok ? "正解！" : "ざんねん";
+    feedback.appendChild(label);
+    var answer = document.createElement("span");
+    answer.className = "feedback__answer";
+    answer.textContent =
+      "正解は「" + (q.answer + 1) + ". " + q.choices[q.answer] + "」";
+    feedback.appendChild(answer);
+    var note = document.createElement("span");
+    note.className = "feedback__note";
+    note.textContent =
+      (ok ? "晴れ間が見えたね。" : "いまは小さな雨。ここが次の「わかった」になるよ。") +
+      (q.explanation || "");
+    feedback.appendChild(note);
+  }
 
   function showQuestion() {
     var q = questions[current];
@@ -189,8 +288,10 @@
     document.querySelector("#question-text").textContent = q.text;
     document.querySelector("#progress-bar").style.width =
       (current / questions.length) * 100 + "%";
-    document.querySelector("#feedback").textContent = "";
+    feedback.textContent = "";
+    feedback.className = "feedback";
     next.hidden = true;
+    restart.hidden = true;
     var box = document.querySelector("#choices");
     box.innerHTML = "";
     q.choices.forEach(function (label, index) {
@@ -204,30 +305,47 @@
             x.disabled = true;
           }
         );
-        if (index === q.answer) {
+        var ok = index === q.answer;
+        if (ok) {
+          score++;
           button.classList.add("correct");
-          document.querySelector("#feedback").textContent =
-            "晴れ間が見えたね。" + q.explanation;
           removeFromBasket(q.id);
         } else {
           button.classList.add("wrong");
           box.children[q.answer].classList.add("correct");
-          document.querySelector("#feedback").textContent =
-            "いまは小さな雨。ここが次の「わかった」になるよ。" + q.explanation;
           addToBasket(q);
         }
+        setFeedback(ok, q);
         saveBasket();
         renderBasket();
+        next.textContent =
+          current + 1 < questions.length ? "次のタネへ" : "結果を見る";
         next.hidden = false;
       });
       box.appendChild(button);
     });
   }
 
-  document.querySelector("#start-quiz").addEventListener("click", function (e) {
-    e.currentTarget.hidden = true;
+  function startQuiz() {
+    current = 0;
+    score = 0;
     quiz.classList.add("active");
     showQuestion();
+  }
+
+  document.querySelector("#start-quiz").addEventListener("click", function (e) {
+    e.currentTarget.hidden = true;
+    startQuiz();
+  });
+
+  restart.addEventListener("click", function () {
+    startQuiz();
+    var text = document.querySelector("#question-text");
+    if (quiz.scrollIntoView) quiz.scrollIntoView({ block: "start" });
+    if (text) {
+      text.setAttribute("tabindex", "-1");
+      text.focus({ preventScroll: true });
+    }
   });
 
   next.addEventListener("click", function () {
@@ -238,12 +356,15 @@
       document.querySelector("#progress-bar").style.width = "100%";
       document.querySelector("#question-count").textContent = "おしまい";
       document.querySelector("#question-text").textContent =
-        "今日のことばのタネを、持ち帰れました。";
+        questions.length + "問中" + score + "問 正解";
       document.querySelector("#choices").innerHTML = "";
-      document.querySelector("#feedback").textContent = basket.length
-        ? "雨のしずくは復習バスケットへ。また晴れ間を見つけに来てね。"
-        : "ぜんぶに晴れ間が見えました。";
+      feedback.className = "feedback feedback--result";
+      feedback.textContent =
+        score === questions.length
+          ? "ぜんぶに晴れ間が見えました。今日のことばのタネを、持ち帰れました。"
+          : "雨のしずくは復習バスケットへ。また晴れ間を見つけに来てね。";
       next.hidden = true;
+      restart.hidden = false;
     }
   });
 })();

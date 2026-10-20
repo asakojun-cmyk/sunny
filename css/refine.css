@@ -799,3 +799,33 @@ strong.mk {
   .gk-table td:last-child::before{content:"対策";display:inline-block;font-size:.8em;font-weight:700;color:#fff;background:#7fae5a;border-radius:99px;padding:.05em .7em;margin-right:.5em}
 }
 .gk-table thead th:first-child{white-space:nowrap}
+
+/* 用語・理論家ページ: 太字のキーワードを語の途中で折り返さない(2026-10)。
+   8文字以内の<strong>にはページ側で class="nw" をつけてある。長いものは<wbr>の位置でだけ折り返す */
+strong.nw{white-space:nowrap}
+:is(.term-article,.theorist-article) :is(.chara-guide__bubble,.mini-say__bubble,.picnic-intro__line p,.exam-advice__box,.term-prose,.term-section-title,.term-formal__box,.term-exam-points,.term-similar) strong{word-break:keep-all;overflow-wrap:anywhere}
+/* 用語・理論家ページ(スマホ): 「ひとことでいうと」が最初の画面に入るよう、タイトルまわりの余白をつめる(2026-10) */
+@media (max-width:640px){
+  .site-main :is(.term-article,.theorist-article) > .term-header{padding-top:12px!important;margin-bottom:18px!important}
+  .site-main .theorist-article > .term-header--theorist{gap:6px!important}
+  .site-main .theorist-article .term-header__portrait .theorist-avatar{width:84px!important;height:84px!important}
+  .site-main :is(.term-article,.theorist-article) .term-header :is(.term-header__number,.term-header__category){margin-bottom:6px!important}
+  .site-main :is(.term-article,.theorist-article) .term-header .updated-date{margin:2px 0 4px!important}
+  .site-main .theorist-article .term-header .term-header__portrait-cta{margin:2px 0 0!important}
+  .site-main .theorist-article > .term-header__portrait-note{margin:0 0 14px!important;font-size:.75rem!important;line-height:1.7!important}
+  .site-main :is(.term-article,.theorist-article) > .term-oneliner{margin-bottom:36px!important}
+  .site-main .term-article .term-header .term-header__reading{margin-bottom:8px!important}
+  .site-main .term-article > .term-oneliner .term-section-title{margin-bottom:10px!important}
+  .site-main .term-article > .term-oneliner .chara-guide{margin:8px 0!important}
+  .site-main .page-scene:has(+ :is(.term-article,.theorist-article)){height:68px}
+  .site-main .page-scene:has(+ :is(.term-article,.theorist-article))::before{height:40px}
+  .site-main .page-scene:has(+ :is(.term-article,.theorist-article)) .pgs-a{width:48px}
+  .site-main .page-scene:has(+ :is(.term-article,.theorist-article)) .pgs-chara{width:40px;bottom:10px}
+  .site-main .page-scene:has(+ :is(.term-article,.theorist-article)) .pgs-b{width:36px;bottom:6px}
+}
+/* 用語ページ(スマホ): 名前が長いページでも「ひとこと」が最初の画面に入るよう、飾りを消して見出しを少し小さく(2026-10-18) */
+@media (max-width:640px){
+  .site-main .page-scene:has(+ .term-article){display:none}
+  .site-main .term-article > .term-header h1{font-size:1.45rem!important;line-height:1.45!important;margin-bottom:4px!important}
+  .site-main .term-article > .term-oneliner .term-section-title{font-size:1.05rem!important;line-height:1.5!important}
+}
