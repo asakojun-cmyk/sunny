@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Nさん">
+<defs><clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath>
+<filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 -.1" result="w"/><feComposite in="w" in2="SourceGraphic" operator="in" result="t"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="t"/></feMerge></filter></defs>
+<g clip-path="url(#c)" filter="url(#g)">
+<circle cx="100" cy="100" r="96" fill="#e8f4fa"/>
+<path d="M48 96 Q44 38 100 38 Q156 38 152 96 L156 150 Q142 156 134 140 L66 140 Q58 156 44 150Z" fill="#4a3b34"/>
+<path d="M28 206 Q30 152 72 146 L128 146 Q170 152 172 206Z" fill="#d8c7a8"/>
+<path d="M80 146 L120 146 L114 206 L86 206Z" fill="#fffdf8"/><path d="M72 147 L86 147 L94 206 L80 206Z M128 147 L114 147 L106 206 L120 206Z" fill="#c9b694"/><path d="M86 148 L100 184 L114 148" stroke="#ef8064" stroke-width="3" fill="none"/><rect x="91" y="183" width="18" height="22" rx="2" fill="#fffdf8" stroke="#29435e" stroke-width="1.8"/><path d="M95 192 L105 192" stroke="#29435e" stroke-width="2" stroke-linecap="round" fill="none"/>
+<rect x="88" y="126" width="24" height="26" rx="10" fill="#f1d2b8"/>
+<ellipse cx="57" cy="96" rx="7" ry="9" fill="#f8dfc8"/><ellipse cx="143" cy="96" rx="7" ry="9" fill="#f8dfc8"/>
+<ellipse cx="100" cy="92" rx="43" ry="47" fill="#f8dfc8"/>
+<path d="M54 98 Q50 42 100 41 Q150 42 146 98 Q144 70 108 56 L100 50 Q88 64 64 70 Q56 80 54 98Z" fill="#4a3b34"/>
+<circle cx="76" cy="108" r="8" fill="#ef8064" opacity=".22"/><circle cx="124" cy="108" r="8" fill="#ef8064" opacity=".22"/>
+<path d="M69 80 L87 73" stroke="#4a3b34" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M113 73 L131 80" stroke="#4a3b34" stroke-width="4" stroke-linecap="round" fill="none"/>
+<circle cx="80" cy="93" r="4.2" fill="#2d3a5c"/><circle cx="120" cy="93" r="4.2" fill="#2d3a5c"/>
+<path d="M91 119 Q100 112 109 119" stroke="#b9715c" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+<path d="M150 62 Q157 74 150 79 Q143 74 150 62Z" fill="#8fc3e6"/>
+<path d="M68 104 Q72 107 76 104" stroke="#e3bfa3" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M124 104 Q128 107 132 104" stroke="#e3bfa3" stroke-width="2" stroke-linecap="round" fill="none"/>
+</g></svg>

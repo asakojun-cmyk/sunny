@@ -230,7 +230,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 </head>
 <body>
 <div class="wrap">
-  <p class="back"><a href="/exam/">◀︎ キャリコン学びピクニック(試験対策マップ)にもどる</a><a href="/exam-guide/moshi/">模擬試験(全5回)はこちら ▶︎</a></p>
+  <p class="back"><a href="/exam/">◀︎ キャリコン学びピクニック(試験対策マップ)にもどる</a><a href="/exam-guide/moshi/">模擬試験(全10回)はこちら ▶︎</a></p>
   <header class="cover">
     <img class="cloud cl" data-ill="cloudL" alt="" width="96" height="62">
     <img class="cloud cr" data-ill="cloudR" alt="" width="96" height="68">
@@ -371,7 +371,7 @@ function result(qs,s){
   const sunny=(s.ok>=7?`10問中${s.ok}問正解！ いい調子だよ。`:`10問中${s.ok}問正解。7問以上になるまで、解き直してみよう。`)+(u>0&&u<=PACE?` 時間は${fmt(u)}。1問2分のペースも守れているね。`:u>PACE?` 時間は${fmt(u)}。本番は1問2分、10問で20分が目安だよ。`:` 本番は1問2分、10問で20分が目安だよ。`);
   const moyan=top?`「${top[0]}」に引っかかりやすいみたい！ 解説の下の「キャリコン学びピクニックで復習」のリンクから、復習できるよ！`:`全問正解……すごい！ 次の10問もいってみよう。`;
   const next=ST.b<3?`<button type="button" class="primary" id="btnNext">次の10問へ</button>`:"";
-  box.innerHTML=`<h2><img class="ico" src="${ILL.pack}" alt="">${NAME[ST.f]}　${rng(ST.b)}の結果</h2><div class="score"><span class="pts">${s.ok}</span><span>問正解 / 10問</span><span class="verdict ${s.ok>=7?"pass":"fail"}">${s.ok>=7?"7割に到達":"7割まであと"+(7-s.ok)+"問"}</span><span>所要時間 ${fmt(u)}（目安 20:00）</span></div><div class="fb">${say(IMG_S,"サニー先生",sunny)}${say(IMG_M,"モヤン",moyan)}</div><p class="nextrow">${next}</p>${anketo()}<section class="next" aria-label="つづきの案内"><h3>通しで力だめしするなら</h3><p>本番と同じ50問・100分の模擬試験(全5回)も、無料で解けます。</p><p class="rev"><a href="/exam-guide/moshi/">模擬試験(全5回)を解く</a><a href="/games/quiz/">1問1答ドリルで、苦手をうめる</a></p></section>`;
+  box.innerHTML=`<h2><img class="ico" src="${ILL.pack}" alt="">${NAME[ST.f]}　${rng(ST.b)}の結果</h2><div class="score"><span class="pts">${s.ok}</span><span>問正解 / 10問</span><span class="verdict ${s.ok>=7?"pass":"fail"}">${s.ok>=7?"7割に到達":"7割まであと"+(7-s.ok)+"問"}</span><span>所要時間 ${fmt(u)}（目安 20:00）</span></div><div class="fb">${say(IMG_S,"サニー先生",sunny)}${say(IMG_M,"モヤン",moyan)}</div><p class="nextrow">${next}</p>${anketo()}<section class="next" aria-label="つづきの案内"><h3>通しで力だめしするなら</h3><p>本番と同じ50問・100分の模擬試験(全10回)も、無料で解けます。</p><p class="rev"><a href="/exam-guide/moshi/">模擬試験(全10回)を解く</a><a href="/games/quiz/">1問1答ドリルで、苦手をうめる</a></p></section>`;
 }
 
 function tabs(){

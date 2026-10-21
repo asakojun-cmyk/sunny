@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Mさん">
+<defs><clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath>
+<filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 -.1" result="w"/><feComposite in="w" in2="SourceGraphic" operator="in" result="t"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="t"/></feMerge></filter></defs>
+<g clip-path="url(#c)" filter="url(#g)">
+<circle cx="100" cy="100" r="96" fill="#ece8f6"/>
+<path d="M50 96 Q46 38 100 38 Q154 38 150 96 L151 126 Q146 134 136 130 L64 130 Q54 134 49 126Z" fill="#7a5a44"/>
+<path d="M28 206 Q30 152 72 146 L128 146 Q170 152 172 206Z" fill="#b9cfe0"/>
+<path d="M80 146 Q100 162 120 146" stroke="#a5bdd0" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M60 176 L58 206" stroke="#a5bdd0" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M140 176 L142 206" stroke="#a5bdd0" stroke-width="2" stroke-linecap="round" fill="none"/>
+<rect x="88" y="126" width="24" height="26" rx="10" fill="#f1d2b8"/>
+<ellipse cx="57" cy="96" rx="7" ry="9" fill="#f8dfc8"/><ellipse cx="143" cy="96" rx="7" ry="9" fill="#f8dfc8"/>
+<ellipse cx="100" cy="92" rx="43" ry="47" fill="#f8dfc8"/>
+<path d="M55 96 Q50 42 100 42 Q150 42 145 96 Q142 70 122 58 Q104 72 74 70 Q60 76 55 96Z" fill="#7a5a44"/>
+<circle cx="76" cy="108" r="8" fill="#ef8064" opacity=".22"/><circle cx="124" cy="108" r="8" fill="#ef8064" opacity=".22"/>
+<path d="M70 79 L87 75" stroke="#7a5a44" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M113 75 L130 79" stroke="#7a5a44" stroke-width="4" stroke-linecap="round" fill="none"/>
+<circle cx="80" cy="93" r="4.2" fill="#2d3a5c"/><circle cx="120" cy="93" r="4.2" fill="#2d3a5c"/>
+<path d="M92 118 Q100 113.5 108 118" stroke="#b9715c" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+<path d="M154 82 L154 66" stroke="#3f6247" stroke-width="3" stroke-linecap="round"/><path d="M154 68 Q146 56 140 64 Q146 72 154 68Z" fill="#7fa96b"/><path d="M154 70 Q162 58 168 66 Q162 74 154 70Z" fill="#7fa96b"/>
+</g></svg>

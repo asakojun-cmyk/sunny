@@ -13,15 +13,15 @@
     { k: "q2", no: "設問2", short: "設問2", pt: 10, lines: 2, ask: "事例記録の【下線B】について、この事例を担当したキャリアコンサルタントは、どのような意図で応答したと考えますか。" },
     { k: "q3a", no: "設問3 ①問題", short: "設問3①", pt: 10, lines: 2, ask: "あなたが考える、相談者の問題(①)は何ですか。" },
     { k: "q3b", no: "設問3 ②その根拠", short: "設問3②", pt: 10, lines: 3, ask: "①の根拠(②)を、相談者の言動を通じて、具体的に書いてください。" },
-    { k: "q4", no: "設問4", short: "設問4", pt: 10, lines: 5, ask: "設問3で答えた内容をふまえて、今後あなたがこのケースを担当するとしたら、どのような方針でキャリアコンサルティングを進めていきますか。" }
+    { k: "q4", no: "設問4", short: "設問4", pt: 10, lines: 6, ask: "設問3で答えた内容をふまえて、今後あなたがこのケースを担当するとしたら、どのような方針でキャリアコンサルティングを進めていきますか。" }
   ];
   QS.forEach(function (q) { q.max = q.lines * PER_LINE; });
 
   /* どの回にも共通する観点のことば */
   var RE = {
-    omoi: "思い込|決めつけ|固定観念|とらわれ|一面的|信じ込|ビリーフ|と決めて|と考えて|と思って|と感じて|と捉えて|と信じて|だけで判断|しか見て|しかないと",
+    omoi: "思い込|決めつけ|固定観念|とらわれ|一面的|信じ込|ビリーフ|と決めて|と考えて|と思って|と感じて|と捉えて|と信じて|だけで判断|しか見て|しかないと|と比べて|比べて(自分|自身)?を?低く|振り回され|左右され",
     fusoku: "不足|ていない|ておらず|できない|分から|わから|乏し|不十分|抱え|曖昧|あいまい|低|ないまま",
-    hataraki: "受け止|受けと|伝え返|返す|返し|言いかえ|言い換え|反映|要約|確かめ|確認|明確",
+    hataraki: "受け止|受けと|伝え返|返す|返し|言いかえ|言い換え|反映|要約|確かめ|確認|明確|質問|尋ね|たずね|問いかけ|引き出",
     nerai: "見つめ直|見直|考え直|向き合|振り返",
     kankei: "信頼関係|ラポール|関係構築|関係を築|受け止め|受けとめ|傾聴|受容|共感|寄り添",
     junban: "まず.*(次に|つぎに|そのうえ|その上|その後|さらに|あわせて|最後|最終)",
@@ -36,7 +36,7 @@
     q1form: "文の終わりを「〜について相談したい。」にすると、設問に答えた形になります。",
     q1pen: "設問1は、相談者が相談したいこと(主訴)です。「自己理解が不足」のような見立ては、設問3に書きます。",
     uketa: "下線Bが、相談者のどのことば・気持ちを受け止めたのかを書きます。",
-    hataraki: "「受け止めて伝え返す」「言いかえて確かめる」のように、応答のはたらきを書きます。",
+    hataraki: "「受け止めて伝え返す」「言いかえて確かめる」「開かれた質問で引き出す」のように、応答のはたらきを書きます。",
     nerai: "受け止めた先で、相談者に何に気づいてほしかったのかまで書きます。",
     q2form: "文の終わりを「〜できるよう促すため。」にします。",
     omoi: "相談者が、確かめないまま決めていること(思い込み)を、その事例のことばで書きます。",
@@ -120,7 +120,7 @@
       return it(key, label, 5, inQuote || has(t.q3b, o.ev || o.quote) || (sim.q3b && anchor.q3b));
     }
     res.q.q1 = { items: [body("q1", "jokyo", R.jokyo.l, 2, spec(R.jokyo)), body("q1", "kimochi", R.kimochi.l, 3, spec(R.kimochi)), body("q1", "chushin", R.chushin.l, 5, spec(R.chushin))] };
-    res.q.q2 = { items: [body("q2", "uketa", R.uketa.l, 3, spec(R.uketa)), body("q2", "hataraki", "応答のはたらき(受け止めて返す・言いかえて確かめる)", 3, RE.hataraki), it("nerai", R.nerai.l, 4, has(t.q2, spec(R.nerai)) || (has(t.q2, RE.nerai) && anchor.q2) || (sim.q2 && anchor.q2))] };
+    res.q.q2 = { items: [body("q2", "uketa", R.uketa.l, 3, spec(R.uketa)), body("q2", "hataraki", "応答のはたらき(受け止めて返す・言いかえて確かめる・質問で引き出す)", 3, RE.hataraki), it("nerai", R.nerai.l, 4, has(t.q2, spec(R.nerai)) || (has(t.q2, RE.nerai) && anchor.q2) || (sim.q2 && anchor.q2))] };
     res.q.q3a = { items: [body("q3a", "omoi", R.omoi.l, 5, [RE.omoi, R.omoi.re]), body("q3a", "mitate", R.mitate.l, 5, [R.mitate.re, RE.fusoku])] };
     res.q.q3b = { items: [basis("omoiQ", "思い込みの根拠を、相談者の発言から挙げている", R.omoi), basis("mitateQ", "見立ての根拠を、相談者の発言から挙げている", R.mitate)] };
     res.q.q4 = { items: [
@@ -159,7 +159,7 @@
   }
 
   function face(c, size, cls) {
-    return '<img class="rm-face ' + (cls || "") + '" src="../../img/ronjutsu/client-' + "abcdef".charAt(c.id - 1) + '.svg" alt="" width="' + size + '" height="' + size + '" loading="lazy">';
+    return '<img class="rm-face ' + (cls || "") + '" src="../../img/ronjutsu/client-' + "abcdefghjklmnprs".charAt(c.id - 1) + '.svg" alt="" width="' + size + '" height="' + size + '" loading="lazy">';
   }
   function renderPicker() {
     var best = store("best") || {};

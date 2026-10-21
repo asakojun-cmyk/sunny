@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Hさん">
+<defs><clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath>
+<filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 -.1" result="w"/><feComposite in="w" in2="SourceGraphic" operator="in" result="t"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="t"/></feMerge></filter></defs>
+<g clip-path="url(#c)" filter="url(#g)">
+<circle cx="100" cy="100" r="96" fill="#e8f4fa"/>
+<path d="M28 206 Q30 152 72 146 L128 146 Q170 152 172 206Z" fill="#5d7a96"/>
+<path d="M66 150 Q100 128 134 150 Q124 168 100 168 Q76 168 66 150Z" fill="#4b6682"/><path d="M91 164 L89 186" stroke="#fffdf8" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M109 164 L111 186" stroke="#fffdf8" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+<rect x="88" y="126" width="24" height="26" rx="10" fill="#f1d2b8"/>
+<ellipse cx="57" cy="96" rx="7" ry="9" fill="#f8dfc8"/><ellipse cx="143" cy="96" rx="7" ry="9" fill="#f8dfc8"/>
+<ellipse cx="100" cy="92" rx="43" ry="47" fill="#f8dfc8"/>
+<path d="M56 90 Q52 44 100 42 Q148 44 144 90 Q140 68 120 62 Q96 60 76 72 Q62 76 56 90Z" fill="#3b3a3d"/><path d="M52 92 Q50 32 100 31 Q150 32 148 92" stroke="#2f3b4f" stroke-width="6" fill="none"/><rect x="45" y="84" width="15" height="24" rx="7" fill="#2f3b4f"/><rect x="140" y="84" width="15" height="24" rx="7" fill="#2f3b4f"/><path d="M54 106 Q60 124 80 126" stroke="#2f3b4f" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="82" cy="126" r="3.5" fill="#ef8064"/>
+<circle cx="76" cy="108" r="8" fill="#ef8064" opacity=".22"/><circle cx="124" cy="108" r="8" fill="#ef8064" opacity=".22"/>
+<path d="M70 79 L87 75" stroke="#3b3a3d" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M113 75 L130 79" stroke="#3b3a3d" stroke-width="4" stroke-linecap="round" fill="none"/>
+<circle cx="78" cy="95" r="4.2" fill="#2d3a5c"/><circle cx="118" cy="95" r="4.2" fill="#2d3a5c"/>
+<path d="M94 118 Q100 115.5 106 118" stroke="#b9715c" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+<rect x="136" y="46" width="34" height="20" rx="10" fill="#fffdf8"/><path d="M142 64 L140 72 L150 65Z" fill="#fffdf8"/><circle cx="145" cy="56" r="2.2" fill="#8fa3b8"/><circle cx="153" cy="56" r="2.2" fill="#8fa3b8"/><circle cx="161" cy="56" r="2.2" fill="#8fa3b8"/>
+</g></svg>
