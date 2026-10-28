@@ -1,0 +1,75 @@
+/* ==========================================================================
+   koe.css — 2026-10-28 トップの「卒業生の声」
+   award.css・tone.css と同じ方針:枠線・段差の影は使わず、余白とクリーム色の面で区切る
+   ========================================================================== */
+.koe[hidden], .koe [hidden] { display: none !important; }
+.is-home .koe { background: #fff; padding: 56px 0 24px; }
+.koe .picnic-map__head { margin-bottom: 28px; }
+.koe__talk { margin-bottom: 28px; }
+
+/* 学校をえらぶ */
+.koe__pick {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 10px 14px; margin: 0 auto 28px; max-width: 560px;
+}
+.koe__pick label { font-weight: 700; color: var(--tone-ink, #2c3e50); font-size: .95rem; }
+.koe__pick select {
+  font: inherit; font-size: 1rem; color: var(--tone-ink, #2c3e50);
+  min-width: min(100%, 300px); padding: 12px 40px 12px 18px;
+  border: 0; border-radius: 999px; background-color: var(--tone-soft, #f7f3ea);
+  -webkit-appearance: none; appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, #a0583d 50%), linear-gradient(135deg, #a0583d 50%, transparent 50%);
+  background-position: calc(100% - 22px) 52%, calc(100% - 16px) 52%;
+  background-size: 6px 6px; background-repeat: no-repeat;
+}
+.koe__pick select:focus-visible { outline: 2px solid var(--tone-coral, #ee8466); outline-offset: 3px; }
+
+/* 1件の声 */
+.koe__list { list-style: none; margin: 0 auto; padding: 0; max-width: 680px; display: grid; gap: 20px; }
+.koe-card {
+  background: var(--tone-cream, #fbf8f1); border-radius: 22px;
+  padding: 26px 28px 22px; text-align: left;
+}
+.koe-card__who { margin: 0 0 6px; font-size: 1.05rem; }
+.koe-card__who b { font-family: "Zen Maru Gothic", "Maru Top", "Hiragino Sans", sans-serif; letter-spacing: .03em; }
+.koe-card__meta { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 16px; padding: 0; }
+.koe-card__meta li {
+  margin: 0; padding: 3px 12px; border-radius: 999px; background: #fff;
+  font-size: .82rem; color: var(--tone-sub, #7a7468); letter-spacing: .03em;
+}
+.koe-card__body { margin: 0; }
+.koe-card__body > div + div { margin-top: 14px; }
+.koe-card__body dt { font-weight: 700; font-size: .85rem; color: #a0583d; margin: 0 0 2px; }
+.koe-card__body dd {
+  margin: 0; line-height: 1.95; white-space: pre-line;
+  word-break: auto-phrase; line-break: strict; overflow-wrap: anywhere;
+}
+
+.koe__count { text-align: center; color: var(--tone-sub, #7a7468); margin: 0 0 8px; }
+.koe__more { text-align: center; margin: 12px 0 0; }
+.koe__note { text-align: center; font-size: .8rem; color: var(--tone-sub, #7a7468); margin: 18px auto 0; }
+
+/* 学校のボタン */
+.koe-go { text-align: center; margin: 28px auto 0; max-width: 560px; }
+.koe-go__btn { word-break: auto-phrase; }
+.koe-go__btn .pr-label { margin-right: 8px; vertical-align: 1px; }
+.koe-go__sub { margin: 14px 0 0; font-size: .92rem; }
+.koe-go__pr { margin: 10px 0 0; font-size: .8rem; color: var(--tone-sub, #7a7468); }
+
+/* 卒業生の方へ(フォームの入口) */
+.koe__invite {
+  margin: 44px auto 0; max-width: 560px; padding: 28px 24px 26px;
+  border-radius: 22px; background: var(--tone-soft, #f7f3ea); text-align: center;
+}
+.koe__invite-t {
+  margin: 0 0 8px; font-weight: 700; font-size: 1.05rem;
+  font-family: "Zen Maru Gothic", "Maru Top", "Hiragino Sans", sans-serif; letter-spacing: .03em;
+}
+.koe__invite-d { margin: 0 0 18px; font-size: .92rem; line-height: 1.9; }
+.koe__invite-go { margin: 0; }
+
+@media (max-width: 760px) {
+  .is-home .koe { padding: 36px 0 12px; }
+  .koe-card { padding: 22px 20px 18px; border-radius: 18px; }
+  .koe__invite { padding: 24px 18px 22px; }
+}

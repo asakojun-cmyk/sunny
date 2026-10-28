@@ -1,0 +1,68 @@
+{
+  "about": "トップの「卒業生の声」で使う、学校とボタンのリンクの対応表(2026-10-28)。名前は data/schools.json の shortName。紹介リンク(pr: true)は、比較表 schools/compare/ の「資料請求・説明会の申込み先」と同じリンク。紹介リンクのない学校は、サイト内に学校のページがないため、比較表の申込み先の段へつなぐ。リンクを変えたら、比較表の申込み先も合わせて直す。aliases は、フォームの答えが正式名で来たときに同じ学校とみなすための名前。",
+  "schools": [
+    {
+      "slug": "chiiki-renkei-platform",
+      "name": "地域連携プラットフォーム",
+      "aliases": ["一般社団法人地域連携プラットフォーム"],
+      "pr": true,
+      "label": "地域連携プラットフォームの無料相談会を見る",
+      "href": "https://px.a8.net/svt/ejp?a8mat=459JRK+G3AT5M+59PG+BW8O2&a8ejpredirect=https%3A%2F%2Fcareerjp.work%2Fcc1%2Fsetsumeikai",
+      "page": "./schools/chiiki-renkei-platform/"
+    },
+    {
+      "slug": "nippon-manpower",
+      "name": "日本マンパワー",
+      "aliases": ["株式会社日本マンパワー"],
+      "pr": true,
+      "label": "日本マンパワーの無料説明会を見る",
+      "href": "https://px.a8.net/svt/ejp?a8mat=45BQMV+6WV7N6+5MF8+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.nipponmanpower.co.jp%2Fcc%2Fbriefing_session%2Fsetsumei",
+      "page": "./schools/nippon-manpower/"
+    },
+    {
+      "slug": "lec",
+      "name": "LEC東京リーガルマインド",
+      "aliases": ["株式会社東京リーガルマインド(LEC)", "LEC"],
+      "pr": true,
+      "label": "LECの無料講座説明会を見る",
+      "href": "https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.lec-jp.com%2Fcaricon%2Fevent%2Fguidance%2F",
+      "page": "./schools/lec/"
+    },
+    {
+      "slug": "recurrent",
+      "name": "リカレント",
+      "aliases": ["リカレント株式会社"],
+      "pr": true,
+      "label": "リカレントの無料体験セミナーを見る",
+      "href": "https://px.a8.net/svt/ejp?a8mat=4BE7SX+HV1P6+5BEA+BWVTE&a8ejpredirect=https%3A%2F%2Fwww.recurrent.co.jp%2Fcc%2Fkcc%2Fseminar%2Flist.php",
+      "page": "./schools/recurrent/"
+    },
+    {
+      "slug": "jaico",
+      "name": "日本産業カウンセラー協会",
+      "aliases": ["一般社団法人 日本産業カウンセラー協会", "一般社団法人日本産業カウンセラー協会"],
+      "pr": false,
+      "label": "日本産業カウンセラー協会の説明会の申込み先を見る",
+      "href": "./schools/compare/#apply-h",
+      "page": ""
+    },
+    {
+      "slug": "gcdf",
+      "name": "GCDF-Japan",
+      "aliases": ["特定非営利活動法人 キャリアカウンセリング協会(GCDF-Japan)", "キャリアカウンセリング協会"],
+      "pr": false,
+      "label": "GCDF-Japanの説明会の申込み先を見る",
+      "href": "./schools/compare/#apply-h",
+      "page": ""
+    },
+    {
+      "slug": "ohara",
+      "name": "大原学園",
+      "aliases": ["学校法人 大原学園", "大原"],
+      "pr": false,
+      "label": "大原学園の説明会の申込み先を見る",
+      "href": "./schools/compare/#apply-h",
+      "page": ""
+    }
+  ]
+}
