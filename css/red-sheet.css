@@ -1,0 +1,106 @@
+/* 赤シート対応の印刷シート(ことば図鑑など)。
+   .rs-sheet で囲んだ所だけを印刷し、.rs-ans の字を赤シートで消える色にする。印刷の1枚は note「直前対策テキスト」と同じデザイン。
+   ボタン [data-rs-print] は js/red-sheet.js。Ctrl+P でページ全体を印刷したときも答えは赤になる。 */
+.rs-sheet--print{display:none}
+/* 画面に出す案内カード。説明の箱のいちばん下に、点線で区切って中央そろえで置く */
+.rs-card{margin:28px 0 0;padding:26px 0 0;border-top:2px dashed #f0dcc0;text-align:center}
+/* 赤シートをのせたプリントの絵(枠線で「紙」とわかるように) */
+.rs-card__fig{position:relative;width:128px;height:124px;margin:0 auto 10px}
+.rs-card__paper{position:absolute;left:18px;top:8px;width:78px;height:106px;padding:12px 10px;border:1.5px solid #d8ccb4;border-radius:5px;background:#fff;transform:rotate(-5deg);display:flex;flex-direction:column;gap:7px;box-sizing:border-box}
+.rs-card__paper i{display:block;height:5px;border-radius:3px;background:#ddd5c4}
+.rs-card__paper i.h{width:70%;height:7px;background:#4a72a0}
+.rs-card__paper i.r{width:62%;background:#eb7f57}
+.rs-card__paper i.s{width:40%}
+.rs-card__film{position:absolute;left:50px;top:40px;width:62px;height:80px;border-radius:5px;background:rgba(232,58,48,.6);transform:rotate(9deg)}
+.rs-card__sun{position:absolute;right:2px;top:-4px;width:40px;height:40px}
+.rs-card__kicker{margin:0 0 2px;font-size:.75rem;font-weight:700;color:#c25a3f;letter-spacing:.08em}
+.rs-card__title{margin:0 0 8px;font-family:"Zen Maru Gothic","Hiragino Sans",sans-serif;font-size:1.25rem;font-weight:700;line-height:1.45;color:#29435e}
+.rs-card__title small{margin-left:8px;font-size:.75rem;font-weight:500;color:#8a8576;white-space:nowrap}
+.rs-card__desc{max-width:30em;margin:0 auto 16px;font-size:.9375rem;line-height:1.85}
+/* ボタンはひかえめ(主役は説明と note の案内) */
+.rs-card__act{margin:0}
+.site-main .rs-card__btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 24px;border:0;border-radius:999px;background:#fdebe2;color:#b4573a;font-size:.9375rem;font-weight:700;box-shadow:none;cursor:pointer}
+.site-main .rs-card__btn:hover{background:#fbdccd}
+.rs-card__how{max-width:30em;margin:8px auto 0;font-size:.75rem;line-height:1.7;color:#8a8576}
+.rs-card__how b{color:#6f6a5c}
+/* note の案内(まとめて使う人へ)。表紙の絵つきで目立たせる */
+.site-main a.rs-card__more{display:flex;align-items:center;gap:20px;max-width:560px;margin:24px auto 0;padding:18px 24px 18px 20px;border-radius:16px;background:#fdf7e4;color:#2f3a58;text-align:left;text-decoration:none}
+.site-main a.rs-card__more:hover{background:#faf0d2}
+.rs-card__cover{flex:none;width:77px;height:auto;border-radius:6px;box-shadow:0 2px 0 rgba(47,58,88,.12);transform:rotate(-3deg)}
+.rs-card__more-body{display:flex;flex-direction:column;gap:2px;min-width:0}
+.rs-card__more-k{font-size:.75rem;font-weight:700;color:#4a72a0;letter-spacing:.04em}
+.rs-card__more-t{font-family:"Zen Maru Gothic","Hiragino Sans",sans-serif;font-size:1.0625rem;line-height:1.4;color:#2f3a58}
+.rs-card__more-d{font-size:.8125rem;line-height:1.65;color:#5b6577}
+.rs-card__more-go{margin-top:4px;font-size:.8125rem;font-weight:700;color:#b4573a}
+@media (max-width:480px){
+  .rs-card__title{font-size:1.125rem}
+  .site-main a.rs-card__more{gap:14px;margin-left:-8px;margin-right:-8px;padding:16px 16px 16px 14px}
+  .rs-card__cover{width:64px}
+}
+
+@media print{
+  @page{size:A4;margin:12mm 14mm 10mm}
+  /* 赤シートで消える色は、note「直前対策テキスト」と同じオレンジ(赤シートで消えることを確認ずみ) */
+  .rs-ans,.rs-ans *,.site-main .rs-ans a.txt-link{color:#eb7f57!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .rs-ans *,.site-main .rs-ans a.txt-link{text-decoration:none!important}
+  .rs-card{display:none!important}
+
+  /* ボタンから印刷したときは、シートだけを出す */
+  html.rs-printing body *:not(:has(.rs-sheet)):not(.rs-sheet):not(.rs-sheet *){display:none!important}
+  html.rs-printing body,html.rs-printing body *:has(.rs-sheet){margin:0!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important;max-width:none!important;width:auto!important;position:static!important;transform:none!important;clip-path:none!important}
+
+  /* ここから下は note のページと同じ見た目 */
+  html.rs-printing .rs-sheet--print{display:block;font-family:"Hiragino Maru Gothic ProN","Zen Maru Gothic","Hiragino Sans",sans-serif;font-size:10pt;line-height:1.75;color:#2f3a58;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html.rs-printing .rs-sheet--print .rs-ans{font-weight:700}
+  html.rs-printing .rsn-head{display:flex;align-items:baseline;gap:3mm;padding:4mm 0 2.5mm;border-top:1px solid #dfe5ec;border-bottom:1px dashed #cdd6e0}
+  html.rs-printing .rsn-title{flex:1;min-width:0}
+  html.rs-printing .rsn-title .rsn-yomi{margin-left:2.5mm;white-space:nowrap}
+  html.rs-printing .rsn-no,html.rs-printing .rsn-star{flex:none;white-space:nowrap}
+  html.rs-printing .rsn-no{align-self:flex-start;margin-top:1.6mm;padding:.4mm 2.6mm;border-radius:2mm;background:#4a72a0;color:#fff;font-size:8.5pt;font-weight:700;letter-spacing:.04em}
+  html.rs-printing .rsn-name{line-height:1.4;font-size:17pt;font-weight:700;letter-spacing:.04em;color:#2f3a58}
+  html.rs-printing .rsn-yomi{font-size:8.5pt;color:#8c96a6}
+  html.rs-printing .rsn-star{align-self:flex-start;margin-top:1mm;margin-left:auto;font-size:12pt;letter-spacing:.02em;color:#d4a52c}
+  html.rs-printing .rsn-one{margin:3mm 0 4mm;font-size:10.5pt;font-weight:700;color:#4a72a0}
+  html.rs-printing .rsn-h{margin:0 0 1mm;font-size:9.5pt;font-weight:700;color:#2f3a58}
+  html.rs-printing .rsn-h::before{content:"";display:inline-block;width:2.2mm;height:2.2mm;margin-right:1.6mm;border-radius:50%;background:#4a72a0;vertical-align:.2mm}
+  html.rs-printing .rsn-p{margin:0 0 4mm;font-size:10pt}
+  /* 理論家ページ:おもなキーワード(名前がオレンジ・説明はそのあと) */
+  html.rs-printing .rsn-kw{margin:0 0 1.4mm;font-size:10pt;line-height:1.7}
+  html.rs-printing .rsn-kw:last-of-type{margin-bottom:4mm}
+  html.rs-printing .rsn-table{width:100%;margin:0 0 4mm;border-collapse:collapse;font-size:9.5pt;line-height:1.6}
+  html.rs-printing .rsn-table th,html.rs-printing .rsn-table td{padding:2mm 2.5mm 2mm 0;text-align:left;vertical-align:top;border-bottom:1px solid #e3e8ee}
+  html.rs-printing .rsn-table thead th{font-size:8pt;font-weight:500;color:#8c96a6}
+  html.rs-printing .rsn-table tbody th{width:36%;font-weight:700}
+  html.rs-printing .rsn-nw{white-space:nowrap}
+  /* サニー先生の吹き出し(note の「試験ではこう出るよ」と同じ形) */
+  html.rs-printing .rsn-sunny{display:flex;align-items:flex-start;gap:3mm;margin:0 0 4mm;break-inside:avoid}
+  html.rs-printing .rsn-sunny__box{position:relative;flex:1;padding:2.6mm 4mm 2.4mm;border:1.2px solid #e8d0a0;border-radius:3mm;background:#fff}
+  html.rs-printing .rsn-sunny__box::after{content:"";position:absolute;right:-2.1mm;top:5mm;width:3.4mm;height:3.4mm;background:#fff;border-top:1.2px solid #e8d0a0;border-right:1.2px solid #e8d0a0;transform:rotate(45deg)}
+  html.rs-printing .rsn-sunny__t{margin:0 0 .8mm;font-size:9pt;font-weight:700}
+  html.rs-printing .rsn-sunny ul{margin:0;padding-left:4.5mm;font-size:9pt;line-height:1.7}
+  html.rs-printing .rsn-sunny li{margin:0 0 .6mm}
+  html.rs-printing .rsn-sunny__fig{flex:none;width:14mm;padding-top:1mm;text-align:center;font-size:6.5pt;font-weight:700;color:#8c96a6}
+  html.rs-printing .rsn-sunny__fig img{display:block;width:11mm;height:11mm;margin:0 auto .8mm}
+  /* モヤンの吹き出し(note の「似た言葉との違い」と同じ形) */
+  html.rs-printing .rsn-moyan{display:flex;align-items:flex-start;gap:3mm;margin:0 0 4mm;break-inside:avoid}
+  html.rs-printing .rsn-moyan__fig{flex:none;width:14mm;padding-top:1mm;text-align:center;font-size:6.5pt;font-weight:700;color:#8c96a6}
+  html.rs-printing .rsn-moyan__fig img{display:block;width:11mm;height:11mm;margin:0 auto .8mm;border-radius:50%;background:#e6f0fa}
+  html.rs-printing .rsn-moyan__box{position:relative;flex:1;padding:2.6mm 4mm 2.4mm;border:1.2px solid #bcd0e2;border-radius:3mm;background:#fff;font-size:9pt;line-height:1.7}
+  html.rs-printing .rsn-moyan__box::before{content:"";position:absolute;left:-2.1mm;top:5mm;width:3.4mm;height:3.4mm;background:#fff;border-bottom:1.2px solid #bcd0e2;border-left:1.2px solid #bcd0e2;transform:rotate(45deg)}
+  html.rs-printing .rsn-moyan__box p{margin:0}
+  html.rs-printing .rsn-moyan__t{margin:0 0 .8mm!important;font-weight:700}
+  /* 一緒に覚えよう(関連する言葉) */
+  html.rs-printing .rsn-rel{margin:0 0 4mm;padding:2.4mm 4mm 2mm;border-radius:3mm;background:#f2f7ea;break-inside:avoid}
+  html.rs-printing .rsn-rel__t{margin:0 0 .8mm;font-size:9pt;font-weight:700;color:#5a8a3c}
+  html.rs-printing .rsn-rel__t::before{content:"🌱 "}
+  html.rs-printing .rsn-rel ul{margin:0;padding:0;list-style:none;font-size:8.8pt;line-height:1.65}
+  html.rs-printing .rsn-rel li{margin:0 0 .6mm}
+  html.rs-printing .rsn-rel li b{margin-right:2mm;color:#2f3a58}
+  html.rs-printing .rsn-rel li b::after{content:" …"; font-weight:400;color:#9aa4b2}
+  /* ○× の箱 */
+  html.rs-printing .rsn-qa{margin:0 0 3mm;padding:2.6mm 4mm 2.4mm;border:1.2px solid #dbe2ea;border-radius:3mm;break-inside:avoid}
+  html.rs-printing .rsn-q{margin:0 0 1.2mm;font-size:9.5pt}
+  html.rs-printing .rsn-ox{display:inline-block;margin-right:2.4mm;padding:0 2.2mm;border-radius:2.4mm;background:#2f3a58;color:#fff;font-size:8pt;font-weight:700;line-height:1.7}
+  html.rs-printing .rsn-a{margin:0;font-size:9.5pt;font-weight:700}
+  html.rs-printing .rsn-foot{display:flex;justify-content:space-between;gap:4mm;margin:6mm 0 0;padding-top:2mm;border-top:1px solid #eef1f5;font-size:7pt;color:#8c96a6}
+}
