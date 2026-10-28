@@ -5,10 +5,14 @@
    - 投稿の文字は、すべて textContent で入れる(HTMLとしては読まない)
    - 学校 → ボタンのリンクは data/koe-schools.json(投稿の文字からリンクは作らない)
    - 読めない・0件のときは、フォームの入口だけ(フォームのURLもなければ、何も出さない)
+   - 声が1件以上あるときだけ、トップの「声を見る」リンク([data-koe-link])を出す
+   - 「卒業生の方へ」の入口は共通部品。置き場所 <div data-koe-invite="ページ名" hidden></div> に、ここで中身を作る
+     (トップ・試験対策トップ・今日の問題で同じもの。フォームのURLが空なら出さない。PR・紹介リンクは置かない)
    - 手元の確かめ用: localhost のときだけ ?koe-csv=… ?koe-form=… で読み先を差しかえられる */
 (function () {
   var root = document.querySelector("[data-koe]");
-  if (!root || !window.fetch) return;
+  var slots = document.querySelectorAll("[data-koe-invite]");
+  if (!root && !slots.length) return;
 
   var cfg = window.KOE_CONFIG || {};
   var csvUrl = cfg.sheetCsvUrl || "";
@@ -43,18 +47,44 @@
     if (text != null) e.textContent = text;
     return e;
   };
+  /* 文のかたまりを、変なところで折れないように並べる(<wbr> のルールと同じ考え) */
+  var phrases = function (p, list) {
+    list.forEach(function (t, i) {
+      if (i) p.appendChild(document.createElement("wbr"));
+      p.appendChild(el("span", "nb", t));
+    });
+    return p;
+  };
   var norm = function (s) { return String(s || "").replace(/[\s　()（）・]/g, "").toLowerCase(); };
+  var hasForm = /^https:\/\//.test(formUrl);
+
+  /* 「卒業生の方へ」の入口(共通部品) */
+  function fillInvites() {
+    if (!hasForm) return false;
+    [].forEach.call(slots, function (slot) {
+      if (slot.firstChild) return;
+      var box = el("aside", "koe-invite");
+      box.setAttribute("aria-label", "卒業生の方へ");
+      phrases(box.appendChild(el("p", "koe-invite__t")), ["卒業生の方へ：", "あなたの声を", "聞かせてください"]);
+      phrases(box.appendChild(el("p", "koe-invite__d")), ["養成講座を受けて", "よかったこと、", "大変だったことを、", "これから選ぶ人に", "届けませんか。", "ニックネームで", "送れます。"]);
+      var go = box.appendChild(el("p", "koe-invite__go"));
+      var a = go.appendChild(el("a", "picnic-button picnic-button--line", "声を送る(Googleフォーム) "));
+      a.href = formUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.setAttribute("data-ev", "koe_form_" + (slot.getAttribute("data-koe-invite") || "page"));
+      a.appendChild(el("span", "arw", "▶︎")).setAttribute("aria-hidden", "true");
+      slot.appendChild(box);
+      slot.hidden = false;
+    });
+    return true;
+  }
+
+  if (!root) { fillInvites(); return; }
+  if (!window.fetch) return;
 
   function showInviteOnly() {
-    if (!formUrl) return; /* 何も出さない */
-    root.hidden = false;
-    setInvite();
-  }
-  function setInvite() {
-    var box = $("[data-koe-invite]");
-    if (!box || !/^https:\/\//.test(formUrl)) return;
-    box.querySelector("a").href = formUrl;
-    box.hidden = false;
+    if (fillInvites()) root.hidden = false; /* フォームのURLもなければ、何も出さない */
   }
 
   /* CSV(RFC 4180: "…" の中のカンマ・改行・"" を正しく読む) */
@@ -178,8 +208,7 @@
       a.appendChild(document.createTextNode(s.label));
       go.appendChild(a);
       if (s.page) {
-        var p = el("p", "koe-go__sub"), b = el("a", "txt-link", "このサイトの学校ページを見る");
-        b.href = s.page;
+        var p = el("p", "koe-go__sub"), b = el("a", "txt-link", "このサイトの学校ページを見る");        b.href = s.page;
         b.setAttribute("data-ev", "top_koe_page_" + s.slug);
         p.appendChild(b);
         go.appendChild(p);
@@ -198,7 +227,8 @@
     draw(false);
     $("[data-koe-body]").hidden = false;
     root.hidden = false;
-    setInvite();
+    fillInvites();
+    [].forEach.call(document.querySelectorAll("[data-koe-link]"), function (l) { l.hidden = false; });
   }
 
   if (!csvUrl) { showInviteOnly(); return; }

@@ -56,20 +56,28 @@
 .koe-go__sub { margin: 14px 0 0; font-size: .92rem; }
 .koe-go__pr { margin: 10px 0 0; font-size: .8rem; color: var(--tone-sub, #7a7468); }
 
-/* 卒業生の方へ(フォームの入口) */
-.koe__invite {
-  margin: 44px auto 0; max-width: 560px; padding: 28px 24px 26px;
-  border-radius: 22px; background: var(--tone-soft, #f7f3ea); text-align: center;
+/* トップの「声を見る」リンク(声が1件以上のときだけ出る) */
+[data-koe-link][hidden], [data-koe-invite][hidden] { display: none !important; }
+.koe-link { text-align: center; margin: 10px 0 0; font-size: .9rem; }
+
+/* 卒業生の方へ(フォームの入口)。共通部品:トップ・試験対策トップ・今日の問題で同じもの */
+[data-koe-invite] { margin: 44px auto 0; max-width: 560px; }
+.koe-invite {
+  padding: 28px 24px 26px; border-radius: 22px;
+  background: var(--tone-soft, #f7f3ea); text-align: center;
 }
-.koe__invite-t {
-  margin: 0 0 8px; font-weight: 700; font-size: 1.05rem;
+/* 試験対策のページは地がクリーム色なので、面は白にする */
+body:not(.is-home) .koe-invite { background: #fff; }
+.koe-invite__t {
+  margin: 0 0 8px !important; font-weight: 700; font-size: 1.05rem; color: var(--tone-ink, #2c3e50);
   font-family: "Zen Maru Gothic", "Maru Top", "Hiragino Sans", sans-serif; letter-spacing: .03em;
 }
-.koe__invite-d { margin: 0 0 18px; font-size: .92rem; line-height: 1.9; }
-.koe__invite-go { margin: 0; }
+.koe-invite__d { margin: 0 0 18px !important; font-size: .92rem; line-height: 1.9; }
+.koe-invite__go { margin: 0 !important; }
+.koe-invite .nb { white-space: nowrap; }
 
 @media (max-width: 760px) {
   .is-home .koe { padding: 36px 0 12px; }
   .koe-card { padding: 22px 20px 18px; border-radius: 18px; }
-  .koe__invite { padding: 24px 18px 22px; }
+  .koe-invite { padding: 24px 18px 22px; }
 }

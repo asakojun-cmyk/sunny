@@ -239,7 +239,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 .lp-intro__link--one a{white-space:nowrap;font-size:clamp(.82rem,4.1vw,1rem)}
 </style>
 <style id="crit-b">:root{--tone-ink: #2c3e50;--tone-sub: #7a7468;--tone-cream: #fbf8f1;--tone-soft: #f7f3ea;--tone-lemon: #f4cf57;--tone-coral: #ee8466}.site-main p,.site-main li,.site-main dd{letter-spacing: 0.035em}.site-main .button--primary,.site-main .picnic-button{box-shadow: none !important;letter-spacing: 0.08em}:where(.site-main) :is(h1,h2,h3){text-align: center}.site-main h1{text-wrap: balance}@media (prefers-reduced-motion: reduce){.site-main *,.site-main ::before,.site-main ::after{transition-duration: 0.001ms !important}}html{overflow-x: clip}:root{--wave-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 44 C 120 44 120 16 240 16 C 360 16 360 44 480 44 C 600 44 600 16 720 16 C 840 16 840 44 960 44 C 1080 44 1080 16 1200 16 C 1320 16 1320 44 1440 44 L1440 60 L0 60 Z'/%3E%3C/svg%3E");--wave-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 16 C 120 16 120 44 240 44 C 360 44 360 16 480 16 C 600 16 600 44 720 44 C 840 44 840 16 960 16 C 1080 16 1080 44 1200 44 C 1320 44 1320 16 1440 16 L1440 0 L0 0 Z'/%3E%3C/svg%3E")}</style>
-<template class="late-css"><link rel="stylesheet" href="./css/cb-f593bed5b8.css" data-src="news-list.css?v=2026.1015,tone.css?v=2026.1015s,koe.css?v=2026.1028"></template>
+<template class="late-css"><link rel="stylesheet" href="./css/cb-edc7e9b27a.css" data-src="news-list.css?v=2026.1015,tone.css?v=2026.1015s,koe.css?v=2026.1028c"></template>
 <style>/* 丸い文字は見出し・ボタンだけ。サイトで使う字だけに絞った軽いファイルを最初から読む。本文は端末の文字 */
 :root{--font-sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--font:var(--font-sans)}
 body{font-family:var(--font-sans)}
@@ -570,6 +570,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
           <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">振替や</span><wbr><span class="nb">日程も、</span><wbr><span class="nb">学校に</span><wbr><span class="nb">よって</span><wbr><span class="nb">ちがうよ。</span><wbr><span class="nb">お金</span><wbr><span class="nb">だけじゃなく、</span><wbr><span class="nb"><strong>続けやすさ</strong>も</span><wbr><span class="nb">くらべてね。</span></p></div>
         </div>
         <p class="flow-go"><a class="picnic-button picnic-button--line" href="./schools/compare/" data-ev="top_next_compare">7校を<wbr>比較表で<wbr>くらべてみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
+        <p class="koe-link" data-koe-link hidden><a class="txt-link" href="#koe" data-ev="top_step2_koe">受けた人の<wbr>声も<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p>
       
         <p class="flow-arrows" aria-hidden="true"><i></i><i></i><i></i></p>
       </div>
@@ -651,20 +652,16 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
     <div class="koe__body" data-koe-body hidden>
       <div class="qa-talk koe__talk">
         <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/07_moyan_school_hat_crying-96.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr><span class="nb">受けた人は、</span><wbr><span class="nb"><strong>どうだった</strong>のかな。</span></p></div>
-        <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">講座を</span><wbr><span class="nb">修了した人の</span><wbr><span class="nb">声だよ。</span><wbr><span class="nb"><strong>学校をえらぶ</strong>と、</span><wbr><span class="nb">その学校の</span><wbr><span class="nb">声だけ</span><wbr><span class="nb">見られるよ。</span></p></div>
+        <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="./img/parts/t/06_sun_character-100.webp" alt="" width="48" height="48" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b><wbr><span class="nb">受けた人が</span><wbr><span class="nb">送ってくれた</span><wbr><span class="nb">声だよ。</span><wbr><span class="nb"><strong>学校をえらぶ</strong>と、</span><wbr><span class="nb">その学校の</span><wbr><span class="nb">声だけ</span><wbr><span class="nb">見られるよ。</span></p></div>
       </div>
       <p class="koe__pick"><label for="koe-school">学校をえらぶ</label><select id="koe-school" data-koe-select></select></p>
       <p class="koe__count" data-koe-count aria-live="polite" hidden></p>
       <ul class="koe__list" data-koe-list></ul>
       <p class="koe__more" data-koe-more hidden><button type="button" class="camp-more__btn">ほかの<wbr>声も<wbr>見る</button></p>
-      <p class="koe__note"><span class="nb">掲載は運営が確認したものです。</span><wbr><span class="nb">内容は書きかえていません。</span></p>
+      <p class="koe__note"><span class="nb">運営が読んでから載せています。</span><wbr><span class="nb">内容は書きかえていません。</span></p>
       <div class="koe-go" data-koe-go aria-live="polite"></div>
     </div>
-    <div class="koe__invite" data-koe-invite hidden>
-      <p class="koe__invite-t">卒業生の方へ：<wbr><span class="nb">あなたの声を</span><wbr><span class="nb">聞かせてください</span></p>
-      <p class="koe__invite-d">養成講座を<wbr>受けて<wbr>よかったこと、<wbr>大変だったことを、<wbr>これから<wbr>選ぶ人に<wbr>届けませんか。<wbr>ニックネームで<wbr>送れます。</p>
-      <p class="koe__invite-go"><a class="picnic-button picnic-button--line" href="#" target="_blank" rel="noopener" data-ev="top_koe_form">声を<wbr>送る(Googleフォーム) <span class="arw" aria-hidden="true">▶︎</span></a></p>
-    </div>
+    <div data-koe-invite="top" hidden></div>
   </div>
 </section>
 <section class="section lp-river" aria-labelledby="lp-river-title">
@@ -738,6 +735,7 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
           <p>だから、<wbr>修了後に<wbr>仲間や<wbr>実践の場が<wbr>あるかも<wbr>見ておくと<wbr>安心です。</p>
           <p class="lp-river__src">出典: 労働政策研究・<wbr>研修機構の<wbr>調査(2022年)</p>
           <p class="lp-river__link"><a data-ev="top_qa_work" href="./school-guides/zaitaku-fukugyo/">在宅や<wbr>副業で<wbr>活かせるか<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
+          <p class="lp-river__link" data-koe-link hidden><a data-ev="top_qa_koe" href="#koe">受けた人が<wbr>いま<wbr>どうしているか、<wbr>声を<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
         </div>
         <p class="flow-arrows qa-arrows" aria-hidden="true"><i></i><i></i><i></i></p>
       </li>
@@ -916,7 +914,7 @@ function req(){if(!busy){busy=true;requestAnimationFrame(draw)}}
 addEventListener("scroll",req,{passive:true});addEventListener("resize",req);/* 最初の計算は読み込みが終わってから(読み込み中に位置を測ると、ページ全体の計算が先に走って重い) */})();
 </script>
 <script>/* デザインのファイル全体は、最初の画面を描いたあとに読む(最初の画面のデザインはページの中に書いてある) */
-(function(){var JS=["./js/picnic-map.js?v=v2026.0728.1616","./js/reveal.js?v=2026.1018b","./js/search-fab.js?v=v2026.0728.1616","./js/news-expire.js?v=2026.1015","./js/school-match.js?v=2026.1018","./js/koe-config.js?v=2026.1028","./js/koe.js?v=2026.1028"];
+(function(){var JS=["./js/picnic-map.js?v=v2026.0728.1616","./js/reveal.js?v=2026.1018b","./js/search-fab.js?v=v2026.0728.1616","./js/news-expire.js?v=2026.1015","./js/school-match.js?v=2026.1018","./js/koe-config.js?v=2026.1028","./js/koe.js?v=2026.1028b"];
 function go(){[].forEach.call(document.querySelectorAll("template.late-css"),function(t){t.parentNode.replaceChild(t.content.cloneNode(true),t)});
 /* 動きのためのプログラムも、最初の画面を描いたあとに(書いた順に動く) */
 JS.forEach(function(u){var e=document.createElement("script");e.src=u;e.async=false;document.body.appendChild(e)})}
