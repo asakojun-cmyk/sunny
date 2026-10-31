@@ -786,6 +786,14 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 </div>
 
 <script src="../js/kyarikon-now.js?v=2026.1010a" defer></script>
+<script>/* いまのニュースは読みこみ後に中身が入って長くなり、その下の #jiji や #shelf-1 などの位置が大きく下へずれる。
+   ページを新しく開いたときだけ、中身が入った時点で飛び先に合わせ直す(読者がもう動かしていたら何もしない) */
+(function(){var id=location.hash.slice(1),t=id&&document.getElementById(id),l=document.querySelector("[data-now-list]"),n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];
+if(!t||!l||!window.MutationObserver||(n&&n.type!=="navigate")||!(l.compareDocumentPosition(t)&4))return;
+var moved=false;["wheel","touchstart","keydown","mousedown"].forEach(function(e){addEventListener(e,function(){moved=true},{once:true,passive:true})});
+var mo=new MutationObserver(function(){mo.disconnect();if(moved)return;try{t.scrollIntoView({behavior:"instant"})}catch(e){t.scrollIntoView()}});
+mo.observe(l,{childList:true})})();
+</script>
 </main>
 
 <div class="picnic-meadow" aria-hidden="true">
