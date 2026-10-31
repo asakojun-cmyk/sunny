@@ -158,3 +158,10 @@
     });
   }, 4000);
 })();
+
+/* 2026-11-01 試験日のあいさつを読みこむ。11/2以降、このかたまりと js/exam-day-open.js・css/exam-day-open.css は消してよい */
+(function () {
+  var c = document.currentScript, s = document.createElement("script");
+  s.src = c.src.replace(/reveal\.js.*$/, "exam-day-open.js");
+  document.head.appendChild(s);
+})();
