@@ -38,6 +38,83 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </template>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"キャリコン学びピクニック","alternateName":"SUNNY & MOYAN CAREER PICNIC","url":"https://carepicnic.com","description":"キャリアコンサルタント試験の「ことば」から学べる試験対策サイト。むずかしい専門用語を、暮らしの中の身近なたとえと、試験に必要な正式な説明の両方から学べます。","inLanguage":"ja","publisher":{"@type":"Person","name":"岩脇 朝子","alternateName":"ちゃん","url":"https://carepicnic.com/about/","description":"3児の母。キャリアコンサルタント養成講習を修了し、国家資格キャリアコンサルタント試験に向けて勉強中。"},"about":"国家資格キャリアコンサルタントの資格の取り方、養成講習の選び方、試験対策"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"キャリコン学びピクニック","url":"https://carepicnic.com","logo":"https://carepicnic.com/img/sunny-icon.png","sameAs":["https://www.youtube.com/channel/UCpUFUH3VeCqG4cly2HrTZ3w","https://note.com/gifted_pansy8788"]}</script>
+<style id="exam-open-style">
+/* 2026-11-01 学科試験の最初の画面。期間が終わったら、この style と body 先頭の <dialog id="exam-open"> のかたまりを消してよい。
+   色はサイトの --picnic-blue・ink・grass・マーカーの黄色・ボタンのコーラルから。影なし */
+.exam-open{position:fixed;inset:0;width:calc(100% - 24px);height:calc(100vh - 24px);height:calc(100dvh - 24px);max-width:none;max-height:none;margin:auto;padding:0;border:0;border-radius:24px;overflow:hidden;background:#fff;color:#29435e}
+.exam-open:focus{outline:none}
+.exam-open::backdrop{background:rgba(41,67,94,.42)}
+html.exam-open-on{overflow:hidden;scrollbar-gutter:stable}
+.exam-open[data-phase="eve"] [data-when="day"],.exam-open[data-phase="day"] [data-when="eve"]{display:none}
+.exam-open__cloud{position:absolute;pointer-events:none;opacity:.9}
+.exam-open__cloud--l{left:-14px;top:30px;width:112px;height:auto}
+.exam-open__cloud--r{right:-28px;top:150px;width:88px;height:auto}
+.exam-open__hill{position:absolute;left:-10%;right:-10%;bottom:-70px;height:130px;border-radius:50%;background:#f1f6e5;pointer-events:none}
+.exam-open__panel{position:relative;z-index:1;display:flex;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;padding:24px 24px 64px;box-sizing:border-box;text-align:center}
+.exam-open__inner{margin:auto;min-width:0;width:100%}
+.exam-open__body{position:relative;z-index:1}
+.exam-open__fig{--fig:min(232px,30vh);--fig:min(232px,30dvh);position:relative;margin:0 auto 28px;width:var(--fig)}
+.exam-open__fig img{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;background:#c9e3f6;border:6px solid #fff;outline:2px solid #bfe0f5;box-sizing:border-box}
+.exam-open__kicker{margin:0 0 4px;font-size:14px;font-weight:700;line-height:1.6;letter-spacing:.06em;color:#5a6554}
+.exam-open__h{margin:0 0 18px;font-size:clamp(21px,6.8vw,30px);font-weight:700;line-height:1.5;letter-spacing:.03em;color:#29435e}
+.exam-open__p{margin:0 0 30px;font-size:clamp(15.5px,4.4vw,17px);line-height:1.85;color:#2f3440}
+.exam-open__line{display:block}
+.exam-open__mark{font-weight:700;color:#29435e;padding:0 .1em;background:linear-gradient(transparent 58%,#fbe3a0 58%) no-repeat 0 0/100% 100%}
+.exam-open__close{display:block;width:min(280px,100%);min-height:56px;margin:0 auto 16px;padding:14px 20px;border:0;border-radius:999px;background:#ef8064;color:#fff;font:inherit;font-size:16px;font-weight:700;letter-spacing:.06em;cursor:pointer}
+.exam-open__close:hover{background:#e87656}
+.exam-open__close:focus-visible,.exam-open__link:focus-visible{outline:3px solid #f0b24a;outline-offset:3px}
+.exam-open__link{display:inline-block;word-break:keep-all}
+.exam-open__stars{position:absolute;inset:0;z-index:0;pointer-events:none}
+.exam-open__stars i{display:none}
+@media (min-width:600px){
+  .exam-open{width:min(640px,92vw);height:min(760px,92vh);height:min(760px,92dvh)}
+  .exam-open__h{font-size:32px}
+  .exam-open__p{font-size:18px}
+}
+@media (min-width:900px){
+  .exam-open{width:min(980px,92vw);height:min(620px,86vh);height:min(620px,86dvh)}
+  .exam-open__cloud--l{left:28px;top:32px;width:128px}
+  .exam-open__cloud--r{right:36px;top:48px;width:120px}
+  .exam-open__hill{bottom:-96px;height:170px}
+  .exam-open__panel{padding:32px 64px 56px;text-align:left}
+  .exam-open__inner{display:flex;align-items:center;justify-content:center;gap:64px}
+  .exam-open__fig{--fig:min(320px,46vh);--fig:min(320px,46dvh);flex:none;margin:0}
+  .exam-open__fig img{border-width:8px}
+  .exam-open__body{min-width:0}
+  .exam-open__h{font-size:38px;margin-bottom:22px;white-space:nowrap}
+  .exam-open__p{margin-bottom:34px}
+  .exam-open__close{margin:0 0 18px}
+  .exam-open__line--pc-inline{display:inline}
+}
+/* 動きは約3秒で1回だけ。ボタンとリンクは最初から押せる */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes exam-open-don{from{transform:translateY(48px) scale(.8)}to{transform:none}}
+  @keyframes exam-open-hop{0%,100%{transform:none}30%{transform:translateY(-14px)}55%{transform:none}78%{transform:translateY(-6px)}}
+  @keyframes exam-open-word{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes exam-open-pen{from{background-size:0 100%}to{background-size:100% 100%}}
+  .exam-open__fig img{animation:exam-open-don .7s cubic-bezier(.2,1.25,.4,1) both,exam-open-hop .75s ease-in-out 2.2s}
+  @keyframes exam-open-star{
+    0%{opacity:0;transform:scale(.2)}
+    10%{opacity:1}
+    42%{opacity:1;transform:translate(calc(var(--x)*var(--fig)/100),calc(var(--y)*var(--fig)/100)) scale(1) rotate(30deg)}
+    56%{opacity:.35}
+    68%{opacity:1}
+    82%{opacity:.3}
+    90%{opacity:.8}
+    100%{opacity:0;transform:translate(calc(var(--x)*var(--fig)/100),calc((var(--y) + 5)*var(--fig)/100)) scale(.55) rotate(60deg)}
+  }
+  .exam-open__stars i{display:block;position:absolute;left:50%;top:50%;width:var(--s);height:var(--s);margin:calc(var(--s)/-2);opacity:0;background:#f2c94c;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:exam-open-star 1.4s cubic-bezier(.15,.7,.3,1) var(--d) both}
+  .exam-open__stars i:nth-child(3n+2){background:#ef8064}
+  .exam-open__stars i:nth-child(3n){background:#6fa8dc}
+  .exam-open__stars i.is-b{animation-duration:.75s}
+  .exam-open__kicker,.exam-open__h{animation:exam-open-word .45s ease-out .5s both}
+  .exam-open__line{animation:exam-open-word .45s ease-out .85s both}
+  .exam-open__line:nth-child(2){animation-delay:1.05s}
+  .exam-open__line:nth-child(3){animation-delay:1.25s}
+  .exam-open__line:nth-child(4){animation-delay:1.45s}
+  .exam-open__mark{animation:exam-open-pen .6s ease-out 1.6s both}
+}
+</style>
 <style id="top-2026-10">
 .hero-note__desc{margin:.6em auto 1.1em;max-width:30em;font-size:1rem;line-height:1.8;color:#3b342c}
 .can-list{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
@@ -443,6 +520,39 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
 </style>
 </head>
 <body class="is-home">
+<!-- 2026-11-01 学科試験の最初の画面(ここから)。data-until をすぎると出ない。同じ人には1回だけ。 -->
+<dialog class="exam-open" id="exam-open" aria-labelledby="exam-open-h" tabindex="-1"
+  data-day-from="2026-11-01T04:00:00+09:00"
+  data-until="2026-11-01T21:00:00+09:00">
+  <span class="exam-open__hill" aria-hidden="true"></span>
+  <img class="exam-open__cloud exam-open__cloud--l" src="./img/parts/01_sky_cloud_left.webp" alt="" width="112" height="76">
+  <img class="exam-open__cloud exam-open__cloud--r" src="./img/parts/03_sky_cloud_right.webp" alt="" width="88" height="60">
+  <div class="exam-open__panel">
+    <div class="exam-open__inner">
+      <figure class="exam-open__fig"><span class="exam-open__stars" aria-hidden="true"><i style="--x:-72;--y:-14;--s:14px;--d:0.50s"></i><i style="--x:-66;--y:-38;--s:18px;--d:0.56s"></i><i style="--x:-52;--y:-58;--s:12px;--d:0.62s"></i><i style="--x:-30;--y:-68;--s:16px;--d:0.68s"></i><i style="--x:-8;--y:-70;--s:11px;--d:0.50s"></i><i style="--x:16;--y:-70;--s:18px;--d:0.56s"></i><i style="--x:38;--y:-62;--s:12px;--d:0.62s"></i><i style="--x:56;--y:-48;--s:16px;--d:0.68s"></i><i style="--x:64;--y:-26;--s:11px;--d:0.50s"></i><i style="--x:64;--y:0;--s:15px;--d:0.56s"></i><i style="--x:-74;--y:12;--s:11px;--d:0.62s"></i><i style="--x:-64;--y:34;--s:14px;--d:0.68s"></i><i style="--x:62;--y:28;--s:12px;--d:0.50s"></i><i style="--x:56;--y:46;--s:10px;--d:0.56s"></i><i class="is-b" style="--x:-60;--y:-20;--s:8px;--d:2.25s"></i><i class="is-b" style="--x:-42;--y:-46;--s:6px;--d:2.29s"></i><i class="is-b" style="--x:-16;--y:-62;--s:10px;--d:2.32s"></i><i class="is-b" style="--x:12;--y:-62;--s:7px;--d:2.26s"></i><i class="is-b" style="--x:40;--y:-48;--s:9px;--d:2.30s"></i><i class="is-b" style="--x:58;--y:-22;--s:6px;--d:2.33s"></i><i class="is-b" style="--x:-62;--y:10;--s:6px;--d:2.27s"></i><i class="is-b" style="--x:60;--y:8;--s:7px;--d:2.31s"></i></span><img data-src="./img/chan-map.webp" alt="地図を広げて歩く、運営者ちゃんのイラスト" width="320" height="320"></figure>
+      <div class="exam-open__body">
+        <p class="exam-open__kicker">キャリアコンサルタント試験</p>
+        <h2 class="exam-open__h" id="exam-open-h"><span data-when="eve">明日は</span><span data-when="day">今日は</span>ついに学科試験！</h2>
+        <p class="exam-open__p" data-when="eve"><span class="exam-open__line exam-open__line--pc-inline">運営者のちゃんも、</span><span class="exam-open__line exam-open__line--pc-inline"><span class="exam-open__mark">みんなと一緒に受けるよ</span>。</span><span class="exam-open__line">ここまで頑張ったみんななら大丈夫。</span><span class="exam-open__line">一緒に頑張ろうね☺️</span></p>
+        <p class="exam-open__p" data-when="day"><span class="exam-open__line exam-open__line--pc-inline">運営者のちゃんも、</span><span class="exam-open__line exam-open__line--pc-inline"><span class="exam-open__mark">みんなと一緒に受けるよ</span>。</span><span class="exam-open__line">一緒に頑張ろうね☺️</span></p>
+        <button class="exam-open__close" type="button" data-ev="top_exam_close">× とじてサイトを見る</button>
+        <a class="exam-open__link hero-two__text" data-when="eve" href="./laws/#jiji" data-ev="top_exam_jiji">時事の一覧を見る <span class="arw" aria-hidden="true">▶︎</span></a>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script>/* 期間の中で、#なしで開いた、まだ見ていない人にだけ、最初の画面を描く前に出す(JSが動かない時と期間のあとは出ない) */
+(function(){var d=document.getElementById("exam-open"),K="cp-exam-1101-seen",now=Date.now(),seen=false;
+try{seen=localStorage.getItem(K)==="1"}catch(e){}
+if(seen||location.hash||typeof d.showModal!=="function"||now>=Date.parse(d.getAttribute("data-until"))){d.parentNode.removeChild(d);return}
+try{localStorage.setItem(K,"1")}catch(e){}
+d.setAttribute("data-phase",now<Date.parse(d.getAttribute("data-day-from"))?"eve":"day");
+var img=d.querySelector("[data-src]"),root=document.documentElement;img.src=img.getAttribute("data-src");
+d.addEventListener("close",function(){root.classList.remove("exam-open-on");d.parentNode.removeChild(d)});
+d.addEventListener("click",function(e){if(e.target===d||e.target.closest(".exam-open__close")||e.target.closest(".exam-open__link"))d.close()});
+root.classList.add("exam-open-on");d.showModal();d.focus()})();
+</script>
+<!-- 2026-11-01 学科試験の最初の画面(ここまで) -->
 <a class="skip-link" href="#main">本文へ移動</a>
 
 <header class="site-header">
@@ -482,9 +592,6 @@ body.is-home .lp-river .lp-river__item::after{display:none!important}
   </div>
 </header>
 <main data-lb="1" id="main" class="site-main">
-
-
-
 
 <section class="picnic-hero picnic-hero--lockup picnic-hero--note is-done" aria-labelledby="picnic-title">
   <div class="hero-intro" aria-hidden="true">
