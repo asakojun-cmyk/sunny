@@ -60,6 +60,9 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
 .gk-answer .gk-circles--3 .gk-circle{flex:0 0 150px;max-width:none;scroll-snap-align:start}
 .gk-answer .gk-circles--3 + .gk-circles-hint{display:block}
 }
+/* 丸は正円に(中身の量で縦に伸びないよう、幅と高さをそろえる) */
+.gk-answer .gk-circles--3 .gk-circle{flex:0 0 224px;width:224px;height:224px;padding:12px 18px}
+@media (max-width:480px){.gk-answer .gk-circles--3 .gk-circle{flex:0 0 152px;width:152px;height:152px;padding:4px 10px}}
 .gk-circles-hint{display:none;margin:2px 0 6px;text-align:center;font-size:.8125rem;color:#8a8f7f}
 </style>
 </head>
