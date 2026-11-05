@@ -376,3 +376,11 @@ main .gk details.school-disclosure + .school-section { margin-top: 44px !importa
 /* 道のりも、背景のカードなし（すごろくとそろえる） */
 .gk-road__step { background: none; padding: 0; border-radius: 0; margin-bottom: 34px !important; }
 .gk-road__step:not(:last-child)::after { bottom: -24px; }
+/* 2026-11-05 ちゃん「ここみにくいので、背景白にしてあげるか、ボックス作ってあげて」
+   → 道のり全体を白い面（角丸・枠線と影なし）にのせる。ラベルと矢印は白の上で読める濃さに */
+.gk-zu.gk-road { background: #fff; border-radius: 24px; padding: 40px 32px 32px; }
+.gk-road .gk-road__when { font-size: .75rem; padding: 2px 14px; background: #5f7d55; }
+.gk-road .gk-road__step.is-due .gk-road__when { background: #c25339; }
+.gk-road .gk-road__step:not(:last-child)::after { color: #d8664c; opacity: 1; }
+.gk .gk-road .gk-zu__note { padding-top: 22px; max-width: none; }
+@media (max-width: 480px) { .gk-zu.gk-road { padding: 32px 16px 24px; border-radius: 20px; } }
