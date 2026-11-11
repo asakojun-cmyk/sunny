@@ -1,13 +1,18 @@
 {
  "checked": "2026-11-11",
  "summary": {
-  "watched": 102,
+  "watched": 101,
   "seen": 99,
   "missing": 2,
-  "skipped": 1,
-  "pages": 30
+  "skipped": 0,
+  "manual": 1,
+  "pages": 29
  },
  "items": {
+  "ohara|受講料金": {
+   "lastSeen": "2026-10-21",
+   "miss": 0
+  },
   "chiiki-renkei-platform|受講料金": {
    "lastSeen": "2026-11-11",
    "miss": 0
@@ -134,7 +139,7 @@
   },
   "lec|割引・特典": {
    "lastSeen": "2026-10-31",
-   "miss": 11,
+   "miss": 12,
    "lost": [
     "10月31日"
    ]
@@ -361,7 +366,7 @@
   },
   "cmca|割引・特典": {
    "lastSeen": "2026-10-31",
-   "miss": 11,
+   "miss": 12,
    "lost": [
     "10月31日",
     "3.3万円",
@@ -418,10 +423,6 @@
   },
   "gcdf|受講料金": {
    "lastSeen": "2026-11-11",
-   "miss": 0
-  },
-  "ohara|受講料金": {
-   "lastSeen": "2026-10-21",
    "miss": 0
   }
  },
@@ -512,10 +513,6 @@
   },
   "https://www.career-npo.org/GCDF/": {
    "fails": 0
-  },
-  "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564": {
-   "fails": 21,
-   "error": "HTTP 503"
   }
  }
 }
