@@ -4224,6 +4224,9 @@
      "sourceFrom": "公式ページ(2026-10-17)",
      "quote": "一般価格：294,000円（税込）",
      "watch": {
+      "manual": true,
+      "lastManualCheck": "2026-10-17",
+      "manualReason": "サイト全体が機械の読み取りを断る(HTTP 503)ので、手で見る",
       "url": "https://www.o-hara.jp/course/career_consultant/course_detail?id=14564",
       "tokens": [
        "294,000"

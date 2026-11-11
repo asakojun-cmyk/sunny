@@ -5,20 +5,17 @@
  * ・schools.json の各項目にある watch(url と tokens)を使う。
  *   url のページに tokens(金額・時間・日付・固有のことば)が残っていれば「確認できた」。
  * ・確認できた日は data/schools-watch.json に自動で書きこむ(項目ごとの lastSeen)。
- * ・2日つづけて見つからない項目があれば schools-notice.md に書き出し、
- *   GitHub Actions が Issue にして運営者に知らせる。
+ * ・見つからない日数(miss)・ページを取れない日数(fails)も同じファイルに残す。
+ *   知らせるのは scripts/watch-report.mjs(残っている間は、まとめに出し続ける)。
+ * ・watch.manual が true の項目(機械では読めない学校のページ)は取りに行かない。
+ *   watch.lastManualCheck(最後に手で確かめた日)から30日たつと、まとめに「手で見る日です」と出る。
  * ・サイトと schools.json の中身は、自動では書きかえない(人が確かめてから直す)。
- * ・手元でも動く: node scripts/watch-schools.mjs
+ * ・手元でも動く: node scripts/watch-schools.mjs(いまいる場所の data/ を読み書きする)
  * ============================================================ */
-import { readFileSync, writeFileSync, existsSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 const DB = "data/schools.json";
 const OUT = "data/schools-watch.json";
-const NOTICE = "schools-notice.md";
-/** 何日つづけて見つからなかったら知らせるか(1日だけの表示くずれで騒がないため) */
-const MISS_DAYS = 2;
-/** 何日つづけてページを取得できなかったら知らせるか */
-const FAIL_DAYS = 3;
 
 function decode(s) {
   return s
@@ -73,7 +70,8 @@ async function fetchText(url) {
 }
 
 function today() {
-  return new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+  /* 見はり番の日 = 日本時間から6時間引いた日付(遅れて0時を回っても、前の晩の日付にする) */
+  return new Date(Date.now() + (9 - 6) * 3600 * 1000).toISOString().slice(0, 10);
 }
 
 async function main() {
@@ -81,11 +79,16 @@ async function main() {
   const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : { items: {}, pages: {} };
   const next = { checked: today(), summary: {}, items: {}, pages: {} };
 
-  /* 見に行くページを集める */
+  /* 見に行くページを集める(手で見る項目は、前回の記録をそのまま残すだけ) */
   const targets = [];
+  let manual = 0;
   for (const school of db.schools) {
     for (const [name, item] of Object.entries(school.items)) {
-      if (item.watch?.url && item.watch.tokens?.length) targets.push({ school, name, item });
+      if (item.watch?.manual) {
+        const key = `${school.slug}|${name}`;
+        if (prev.items?.[key]) next.items[key] = prev.items[key];
+        manual++;
+      } else if (item.watch?.url && item.watch.tokens?.length) targets.push({ school, name, item });
     }
   }
   const urls = [...new Set(targets.map((t) => t.item.watch.url))];
@@ -102,8 +105,6 @@ async function main() {
     }
   }
 
-  const report = {};
-  const add = (school, line) => (report[school] ??= []).push(line);
   let seen = 0;
   let missing = 0;
   let skipped = 0;
@@ -123,44 +124,14 @@ async function main() {
       next.items[key] = { lastSeen: today(), miss: 0 };
       seen++;
     } else {
-      const miss = (old.miss ?? 0) + 1;
-      next.items[key] = { lastSeen: old.lastSeen, miss, lost };
+      next.items[key] = { lastSeen: old.lastSeen, miss: (old.miss ?? 0) + 1, lost };
       missing++;
-      if (miss === MISS_DAYS) {
-        add(
-          school.shortName,
-          `- **${name}**: 「${lost.join("」「")}」が公式ページから見つかりません。\n  - いまの記録: ${item.value}\n  - 見ているページ: ${item.watch.url}\n  - 最後に確認できた日: ${old.lastSeen ?? "記録なし"}`
-        );
-      }
     }
   }
-  for (const [url, p] of Object.entries(next.pages)) {
-    if (p.fails === FAIL_DAYS) add("ページを取得できません", `- ${FAIL_DAYS}日つづけて取得できていません: ${url} (${p.error})`);
-  }
 
-  next.summary = { watched: targets.length, seen, missing, skipped, pages: urls.length };
+  next.summary = { watched: targets.length, seen, missing, skipped, manual, pages: urls.length };
   writeFileSync(OUT, JSON.stringify(next, null, 1) + "\n");
-  console.log(`見はり中 ${targets.length}項目 / 確認できた ${seen} / 見つからない ${missing} / 取得できず ${skipped}`);
-
-  if (existsSync(NOTICE)) rmSync(NOTICE);
-  const names = Object.keys(report);
-  if (names.length) {
-    writeFileSync(
-      NOTICE,
-      [
-        "比較表や学校ページの元になっている事実のうち、公式ページから見つからなくなったものがあります。",
-        "料金・日程・条件が変わった可能性があります。",
-        "",
-        "サイトはまだ何も変えていません。Claude に「学校の情報を確かめて直して」と伝えると、公式ページを読み直して、元データ(data/schools.json)・比較表・学校ページをそろえて直します。",
-        "機械でくらべているので、ページの書き方が変わっただけ(金額は同じ)のこともあります。",
-        "",
-        ...names.flatMap((n) => [`## ${n}`, "", ...report[n], ""]),
-      ].join("\n")
-    );
-    console.log("知らせることあり → " + NOTICE);
-  } else {
-    console.log("知らせることなし");
-  }
+  console.log(`見はり中 ${targets.length}項目 / 確認できた ${seen} / 見つからない ${missing} / 取得できず ${skipped} / 手で見る ${manual}`);
 }
 
 main().catch((e) => {

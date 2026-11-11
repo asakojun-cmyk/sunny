@@ -1,0 +1,53 @@
+# 見はり番(キャンペーン・学校の情報)を毎晩まとめて動かし、結果を1枚にまとめる。
+# ・まとめは data/watch-status.md(手元でも読める)と、ずっと開いておく Issue「見はり番のまとめ」の本文。
+# ・本文は毎日書きかえるだけ(メールは出ない)。新しい項目が出た日と、残りがある月曜だけコメント(メール1通)。
+# ・サイトは自動では変えない(載せる・直すは人が決める)。
+name: watch
+on:
+  schedule:
+    - cron: "17 10 * * *" # 毎日 19:17 (日本時間)。GitHub の混雑で2〜6時間遅れても、2時までに終わるように
+  workflow_dispatch: {}   # 手動実行も可能
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: watch
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: キャンペーンの見はり番(各校の公式ページを前回とくらべる)
+        continue-on-error: true # 止まっても、学校の情報とまとめは続ける(止まったことはまとめに出る)
+        run: node scripts/watch-campaigns.mjs
+      - name: 学校の情報の見はり番(元データと公式ページをくらべる)
+        continue-on-error: true
+        run: node scripts/watch-schools.mjs
+      - name: まとめの1枚を作る
+        run: node scripts/watch-report.mjs
+      - name: 控えとまとめをコミット
+        run: |
+          git config user.name "watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/campaign-watch.json data/schools-watch.json data/watch-status.md
+          git diff --cached --quiet || (git commit -m "見はり番: 控えとまとめを更新" && git pull --rebase -q && git push)
+      - name: まとめの Issue を書きかえる(新しい項目がある日だけコメント)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash # -e と pipefail つき。一覧の取得に失敗したら、新しく作らずにここで止まる
+        run: |
+          title="見はり番のまとめ"
+          num=$(gh issue list --state open --limit 200 --json number,title --jq "[.[] | select(.title == \"$title\")][0].number // empty")
+          if [ -z "$num" ]; then
+            # 初めての日: 担当をつけて作る(このとき1通だけ届く。以後この Issue のコメントが届く)
+            gh issue create --title "$title" --body-file data/watch-status.md --assignee "${{ github.repository_owner }}"
+            exit 0
+          fi
+          gh issue edit "$num" --body-file data/watch-status.md
+          if [ -f watch-comment.md ]; then
+            gh issue comment "$num" --body-file watch-comment.md
+          fi
