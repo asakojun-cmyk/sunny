@@ -60,8 +60,8 @@
       "name": "大原学園",
       "aliases": ["学校法人 大原学園", "大原"],
       "pr": false,
-      "label": "大原学園の説明会の申込み先を見る",
-      "href": "./schools/compare/#apply-h",
+      "label": "大原学園を比較表で見る",
+      "href": "./schools/compare/#cmp-table",
       "page": ""
     }
   ]

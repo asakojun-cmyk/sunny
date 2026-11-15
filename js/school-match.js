@@ -514,8 +514,10 @@
       (prep ? "<div><dt>" + T.prep + "</dt><dd>" + prep.html + "</dd></div>" : "") +
       "</dl></div>" +
       '<div class="sm-school__foot">' +
-      (s.page || !s.go
+      (s.page
         ? '<a class="sm-school__go" href="/schools/' + s.slug + '/" data-ev="match_school_' + s.slug + '">' + T.more + ARW + "</a>"
+        : !s.go
+        ? ""
         : '<a class="sm-school__go" href="' + esc(s.go.href) + '" rel="' + esc(s.go.rel) + '" target="_blank" data-ev="match_site_' + s.slug + '">' +
           T.site + "" + ARW + "</a>") +
       (date ? '<p class="sm-school__date">' + T.checked + " " + date.html + "</p>" : "") +
