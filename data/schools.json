@@ -1,7 +1,7 @@
 {
  "version": 2,
  "updatedAt": "2026-10-17",
- "about": "養成講習の公式情報だけを集めたデータ。比較表に載せるのは listed が true の7校で、「通学ゼロで修了できる・土日か夜のクラスがある・休んでも振替できる」を公式ページで確かめた学校(2026-10-17選び直し)。listed が false の学校は学校ページが残っているので消さずに置く(listedNote に理由)。口コミや推測は入れない。statusは verified(公式で確認) / partial(一部だけ確認) / unverified(未確認) / not_stated(公式に記載なし)。originが「比較表」の項目は schools/compare/ から写したもので、出典URLは記録が残っていない。recheck は、後日の読み直しで比較表と食いちがった所。 watch は、見はり番(scripts/watch-schools.mjs)が毎日たしかめる目印。公式ページ(url)に tokens の数字が残っているかを見る。",
+ "about": "養成講習の公式情報だけを集めたデータ。比較表に載せるのは listed が true の6校で、「通学ゼロで修了できる・土日か夜のクラスがある・休んでも振替できる」を公式ページで確かめた学校(2026-10-17選び直し・2026-11-18に大原学園を外して6校)。listed が false の学校は学校ページが残っているので消さずに置く(listedNote に理由)。口コミや推測は入れない。statusは verified(公式で確認) / partial(一部だけ確認) / unverified(未確認) / not_stated(公式に記載なし)。originが「比較表」の項目は schools/compare/ から写したもので、出典URLは記録が残っていない。recheck は、後日の読み直しで比較表と食いちがった所。 watch は、見はり番(scripts/watch-schools.mjs)が毎日たしかめる目印。公式ページ(url)に tokens の数字が残っているかを見る。",
  "itemGroups": [
   {
    "name": "費用",
@@ -4209,7 +4209,7 @@
    "isPr": false,
    "experienced": false,
    "hasSchoolPage": false,
-   "listed": true,
+   "listed": false,
    "items": {
     "受講料金": {
      "value": "294,000円(税込)",
@@ -4670,7 +4670,8 @@
     }
    },
    "briefingUrl": "https://www.o-hara.jp/course/career_consultant/event",
-   "contact": null
+   "contact": null,
+   "listedNote": "公式サイトが休止中のため、比較表から外した(2026-11-15に確かめた・2026-11-18に6校へ)。学校の情報は消さずに置く。"
   }
  ]
 }
