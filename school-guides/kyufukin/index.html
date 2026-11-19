@@ -66,6 +66,11 @@ body{font-family:var(--font-sans)}
 h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.exam-tool__cta,.daily-cta__label,.daily-cta-kicker,.note-dl__open,.picnic-kicker,.hero-catch,.school-eyebrow,.hitome__kicker,.hitome__sep,.gk-answer__k,.gk-toc__k,.news-list__tag,.newsflash__tag,.exam-tool__badge,.lp-profile__name,.author-profile__name,.osusume__name,.apply__name,.invite__school,.cmp-cheap__q,.setsumei-box__t,.honest-link__label,.drawer__label,.note-dl__title,.lesson__title,.study-card__name,.exam-tool__title,.term-next__label,.exam-advice__lead,.daily-card__label,.term-section-title,.chara-guide__name,.hero__chara-name,.mini-say__bubble>b,.hero-say>b,.invite__facts b,.camp-banner__stub strong,.ctab__v,.ctab__n,.num,.gk-circle__name,.sm__optb,.sm__time,.hsum__who,.cmp__name,.school-kai__k,.sm-wrap__lead strong,button.button--primary,button.button--secondary,button.primary,a.primary,.ctab__tabs button,.ctab__cap,.filter-chip,.lesson__play,.newsflash__go,.newsflash__body b,.news-row__title,.camp-banner__stub *,.camp-banner__school,.camp-banner__until,.hsum__want,.osusume__medals li,.end-cta__say,.end-cta__facts li,p.chapter,.opening__title,.map-spot__sign b,.cta-fab__sign b,.term-next__card b,.gk-circle__go,.gk-circle__when,.quiz-drill__endtitle,.quiz-picker__label,.quiz-drill__score,.moshi-cta__days,.header-search__label,.header-search__click,.search-fab__lead,.sm__step,.note-dl__label{font-family:"Zen Maru Gothic","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif!important}
 /* 丸い文字はかなが小さめなので、字の間を少しつめて読みやすく(英字の見出しは広いまま) */
 h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.exam-tool__cta,.daily-cta__label,.daily-cta-kicker,.note-dl__open,.hero-catch,.hitome__sep,.exam-tool__badge,.lp-profile__name,.author-profile__name,.osusume__name,.apply__name,.invite__school,.cmp-cheap__q,.setsumei-box__t,.honest-link__label,.drawer__label,.note-dl__title,.lesson__title,.study-card__name,.exam-tool__title,.term-next__label,.exam-advice__lead,.daily-card__label,.term-section-title,.chara-guide__name,.hero__chara-name,.mini-say__bubble>b,.hero-say>b,.invite__facts b,.camp-banner__stub strong,.ctab__v,.ctab__n,.num,.gk-circle__name,.sm__optb,.sm__time,.hsum__who,.cmp__name,.school-kai__k,.sm-wrap__lead strong,button.button--primary,button.button--secondary,button.primary,a.primary,.ctab__tabs button,.ctab__cap,.filter-chip,.lesson__play,.newsflash__go,.newsflash__body b,.news-row__title,.camp-banner__stub *,.camp-banner__school,.camp-banner__until,.hsum__want,.osusume__medals li,.end-cta__say,.end-cta__facts li,p.chapter,.opening__title,.map-spot__sign b,.cta-fab__sign b,.term-next__card b,.gk-circle__go,.gk-circle__when,.quiz-drill__endtitle,.quiz-picker__label,.quiz-drill__score,.moshi-cta__days,.search-fab__lead,.sm__step,.note-dl__label{letter-spacing:.03em!important}</style>
+<style>
+/* 給付金の計算機（なるにはのページから移した）: 金額が途中で折り返さないように */
+.kyufu-calc__result td[data-kyufu],.kyufu-calc__result td[data-jifu]{white-space:nowrap;text-align:right}
+.kyufu-calc__result td:first-child{word-break:normal}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -149,7 +154,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
   <details class="disclosure" aria-label="広告・提供関係の開示">
     <summary class="disclosure__title"><span class="disclosure__tag">広告</span>このページに広告(紹介リンク)はありません<span class="disclosure__more">くわしく</span></summary>
     <dl class="disclosure__list">
-      <div><dt>広告・PR</dt><dd>なし(このページに紹介リンクは含みません。右下の説明会のボタンは、比較表の7校の申込み先へのリンクです)</dd></div><div><dt>学校からの<wbr>無償提供</dt><dd>受けていません</dd></div><div><dt>金額の<wbr>根拠</dt><dd>厚生労働省・ハローワークの<wbr>公開情報と、<wbr>各校の<wbr>公式サイト</dd></div>
+      <div><dt>広告・PR</dt><dd>なし(このページに紹介リンクは含みません。右下の説明会のボタンは、比較表の6校の申込み先へのリンクです)</dd></div><div><dt>学校からの<wbr>無償提供</dt><dd>受けていません</dd></div><div><dt>金額の<wbr>根拠</dt><dd>厚生労働省・ハローワークの<wbr>公開情報と、<wbr>各校の<wbr>公式サイト</dd></div>
     </dl>
   </details>
 
@@ -202,6 +207,23 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
       <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b>いちばん下の<wbr>5.94万円が<wbr>いい！<wbr></p></div>
       <div class="mini-say mini-say--sunny"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/06_sun_character.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>サニー先生</b>気持ちは<wbr>わかるよ。<wbr>でも、<wbr>お給料が<wbr>上がるかどうかは、<wbr>資格を<wbr>取った<wbr>あとに<wbr>わかる<wbr>こと。<wbr>申し込む前の<wbr>見積もりは<wbr><strong>「修了しただけ」の<wbr>14.85万円</strong>で<wbr>考えて<wbr>おくと、<wbr>あとでがっかりしないよ。<wbr></p></div>
       
+    </div>
+    <p>受講料を入れると、ケースごとの実質の負担が出ます。</p>
+    <div class="kyufu-calc" id="kyufu-calc">
+      <h3>💰 <wbr>実質負担額かんたん計算機</h3>
+      <div class="kyufu-calc__row">
+        <label for="kyufu-fee">講座の<wbr>受講料(円):</label>
+        <input type="number" id="kyufu-fee" value="350000" min="0" step="10000" inputmode="numeric">
+      </div>
+      <table class="shikaku-cost-table kyufu-calc__result">
+        <thead><tr><th>ケース</th><th>戻る<wbr>額</th><th>実質負担</th></tr></thead>
+        <tbody>
+          <tr><td>受講修了(50%)</td><td data-kyufu="50">—</td><td data-jifu="50">—</td></tr>
+          <tr><td>+資格取得・就職等(70%)</td><td data-kyufu="70">—</td><td data-jifu="70">—</td></tr>
+          <tr><td>+賃金上昇(最大80%)</td><td data-kyufu="80">—</td><td data-jifu="80">—</td></tr>
+        </tbody>
+      </table>
+      <p class="kyufu-calc__note">※年間上限(50%: 40万円 / 70%: 56万円 / 80%: 64万円)を<wbr>自動で<wbr>反映した<wbr>概算です。<wbr>受給には<wbr>雇用保険の<wbr>加入期間などの<wbr>条件が<wbr>あり、<wbr>手続きは<wbr>受講開始<wbr><strong>前</strong><wbr>に<wbr>ハローワークで<wbr>行う<wbr>必要が<wbr>あります。</p>
     </div>
   </section>
 
@@ -278,11 +300,11 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
   </section>
 
 
-  <p class="next-compare" style="margin:28px 0 12px;text-align:center;line-height:2"><a class="txt-link" href="../../#school-match" data-ev="next_match">30秒で合う学校をしぼってみよう ▶︎</a><br><a class="txt-link" href="../../schools/compare/" data-ev="next_compare">続けやすい7校を比較表でくらべてみよう ▶︎</a></p>
+  <p class="next-compare" style="margin:28px 0 12px;text-align:center;line-height:2"><a class="txt-link" href="../../#school-match" data-ev="next_match">30秒で合う学校をしぼってみよう ▶︎</a><br><a class="txt-link" href="../../schools/compare/" data-ev="next_compare">続けやすい6校を比較表でくらべてみよう ▶︎</a></p>
   <aside class="setsumei-box" aria-label="説明会の案内">
     <p class="setsumei-box__t">説明会って、<wbr>どんな<wbr>感じ？</p>
     <p>気に<wbr>なる<wbr>学校の<wbr>説明会で、<wbr>振替や<wbr>子どもの<wbr>映りこみなど、<wbr>気に<wbr>なることを<wbr>直接<wbr>聞いてみよう。<wbr>申し込むと<wbr>決めていなくても<wbr>参加できます。</p>
-    <p><a class="button button--primary" data-ev="side_setsumeikai" href="../../schools/compare/#apply-h">7校の<wbr>説明会を<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
+    <p><a class="button button--primary" data-ev="side_setsumeikai" href="../../schools/compare/#apply-h">6校の<wbr>説明会を<wbr>見てみよう <span class="arw" aria-hidden="true">▶︎</span></a></p>
     <p><a class="txt-link" href="../../schools/chiiki-renkei-platform/#kai">運営者が<wbr>出た<wbr>説明会の<wbr>話を<wbr>読む</a></p>
   </aside>
   <section class="guide-section" id="faq">
@@ -363,7 +385,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
         <li><a href="../../school-guides/kyufukin/">費用と給付金(対象かチェックできます)</a></li>
         <li><a href="../../school-guides/merit-demerit/">やめたほうがいい人・向いている人</a></li>
         <li><a href="../../school-reviews/chiiki-renkei-platform/">運営者の受講体験記</a></li>
-        <li><a href="../../#school-match">30秒で合う学校をしぼる</a></li><li><a href="../../schools/compare/#apply-h">7校の無料説明会の申込み先</a></li><li><a href="../../schools/chiiki-renkei-platform/#kai">運営者が出た説明会の話(地域連携プラットフォーム)</a></li>
+        <li><a href="../../#school-match">30秒で合う学校をしぼる</a></li><li><a href="../../schools/compare/#apply-h">6校の無料説明会の申込み先</a></li><li><a href="../../schools/chiiki-renkei-platform/#kai">運営者が出た説明会の話(地域連携プラットフォーム)</a></li>
         <li><a href="../../schools/compare/">養成学校を比較する</a></li>
         <li><a href="../../schools/">養成学校一覧</a></li>
         <li><a href="../../school-guides/how-to-choose/">養成学校の選び方</a></li>
@@ -420,6 +442,7 @@ h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.ex
     </a></nav>
 <script src="../../js/reveal.js?v=2026.1018b" defer></script>
 <script src="../../js/kyufu-check.js?v=2026.1018k" defer></script>
+<script src="../../js/kyufu-calc.js" defer></script>
 <script src="../../js/search-fab.js?v=v2026.0728.1616" defer></script>
 <script src="../../js/term-hints.js?v=v2026.1018" defer></script>
 

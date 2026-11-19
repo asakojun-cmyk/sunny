@@ -190,7 +190,7 @@
 
       go.textContent = "";
       if (!s) {
-        var a0 = el("a", "picnic-button picnic-button--line koe-go__btn", "7校を比較表でくらべてみよう ");
+        var a0 = el("a", "picnic-button picnic-button--line koe-go__btn", "6校を比較表でくらべてみよう ");
         a0.href = "./schools/compare/";
         a0.setAttribute("data-ev", "top_koe_compare");
         a0.appendChild(el("span", "arw", "▶︎")).setAttribute("aria-hidden", "true");
