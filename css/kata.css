@@ -1,5 +1,5 @@
 /* 新しい型のページの共通の見た目（body に class="kata" をつけたページ） */
-:root{--ink:#2E4A78;--sub:#566E93;--line:#D5E0EE;--grass:#ECF0D8;--hat:#FDD54F;--link:#2A6DB5;--pale:#EAF3FB;--cream:#FBF6EC;--cta:#b4573a}
+:root{--ink:#2E4A78;--sub:#566E93;--line:#D5E0EE;--grass:#EEF4D6;--hat:#FDD54F;--link:#2A6DB5;--pale:#EAF3FB;--cream:#FBF6EC;--cta:#b4573a}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:#fff;color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:16px;line-height:1.9;letter-spacing:.05em;overflow-wrap:anywhere}
