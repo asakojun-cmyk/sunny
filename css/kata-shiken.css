@@ -1,0 +1,78 @@
+/* 試験の側の共通（ラフ_1119 の12枚の tooitsu-1119・kyoutsu-buhin などを1本に）。scripts/ippen_shiken.py が書く。足す規則は css/kata-shiken-plus.css へ */
+body.kata *:not(h1):not(h1 *){font-weight:500!important}
+body.kata .x-step-tag{display:inline-flex;align-items:center;min-height:26px;padding:1px 10px;margin:0 6px 2px 0;border-radius:8px;background:var(--hat);color:var(--ink);font-family:Outfit,"Zen Kaku Gothic New",sans-serif;font-size:13px;line-height:1.5;letter-spacing:.06em;vertical-align:2px;text-decoration:none}
+body.kata .x-exit{padding:24px 0 48px;background:#fff}
+body.kata .x-exit .tt{margin:0 0 14px;text-align:center;font-size:var(--fs-cap);color:var(--sub);letter-spacing:.12em}
+body.kata .x-exit .in2{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:820px;margin:0 auto}
+body.kata .x-exit .in2.one{grid-template-columns:minmax(0,420px);justify-content:center}
+body.kata .x-ex{display:grid;grid-template-columns:52px minmax(0,1fr);gap:2px 14px;align-items:center;padding:12px 18px;border-radius:18px;border:1.5px solid var(--line);background:#fff;color:var(--ink);text-decoration:none}
+body.kata .x-ex img{grid-row:span 3;width:52px;height:52px;object-fit:contain;border-radius:50%;background:var(--pale)}
+body.kata .x-ex .k{font-size:var(--fs-cap);color:var(--sub)}
+body.kata .x-ex .tl{color:var(--link);text-decoration:underline;text-underline-offset:5px;font-size:var(--fs-body)}
+body.kata .x-ex small{font-size:13.5px;color:var(--sub);line-height:1.6}
+body.kata .nxt .go .x-step-tag{font-size:15px;min-height:32px;padding:2px 14px}
+body.kata .nxt .go a{text-decoration:none}
+@media (max-width:760px){body.kata .x-exit .in2{grid-template-columns:1fr;gap:12px}body.kata .x-ex{padding:12px 14px}}
+body.kata .x-step-tag{white-space:nowrap}
+body.kata .nxt .go a:has(.x-step-tag){white-space:nowrap}
+body.kata .x-gone{visibility:hidden!important;opacity:0}
+@media (max-width:760px){body.kata .nxt .go .x-step-tag{font-size:12.5px;letter-spacing:0;padding:2px 8px;min-height:28px}body.kata .x-step-tag{font-size:12px;letter-spacing:.02em}}
+body.kata .x-uhero{position:relative;background:#fff url("../img/kata/hero_library.webp") center bottom/100% auto no-repeat!important;padding-bottom:clamp(320px,36vw,480px)!important;overflow:visible;overflow-x:clip}
+body.kata .x-uhero .x-scene,body.kata .x-uhero .oka,body.kata .x-uhero .hill,body.kata .x-uhero .cld,body.kata .x-uhero .garl,body.kata .x-uhero .deco{display:none!important}
+body.kata .x-uhero > .w,body.kata .x-uhero > .x-col{position:relative;z-index:2}
+@media (max-width:760px){body.kata .x-uhero{background-size:135% auto!important;background-position:60% bottom!important;padding-bottom:205px!important}}
+body.kata .x-uhero:not(:has(+ .sec2.green)):not(:has(+ .finder))::after{content:"";position:absolute;left:0;right:0;bottom:-39px;height:40px;z-index:3;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23EEF4D6'/%3E%3C/svg%3E") no-repeat;background-size:100% 40px;transform:scaleY(-1);pointer-events:none}
+@media (max-width:760px){body.kata .x-uhero:not(:has(+ .sec2.green)):not(:has(+ .finder))::after{height:24px;bottom:-23px;background-size:100% 24px}}
+body.kata section.sec2.green::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23EEF4D6'/%3E%3C/svg%3E")!important}
+body.kata section.sec2.gara{background:#fff url("../img/kata/gara_kimete.webp") center top/780px auto repeat!important;padding-top:112px!important;padding-bottom:112px!important}
+body.kata section.sec2.gara::before,body.kata section.sec2.gara::after{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat!important;background-size:100% 40px!important;pointer-events:none}
+body.kata section.sec2.gara::before{top:-1px;bottom:auto;transform:scaleY(-1)}
+body.kata section.sec2.gara::after{bottom:-1px;top:auto;transform:none}
+body.kata section.sec2.green + section.sec2.gara::before,body.kata section.sec2.sky + section.sec2.gara::before{content:none!important}
+body.kata section.sec2.gara > :is(.w,.x-col,div){position:relative;z-index:1;max-width:900px;box-sizing:border-box;background:#fff;border-radius:32px;box-shadow:0 0 18px 14px #fff;padding-top:40px;padding-bottom:40px}
+body.kata section.sec2.sky{padding-top:104px!important;padding-bottom:104px!important}
+body.kata section.sec2.green{padding-bottom:104px!important}
+body.kata section.sec2.gara + section.sec2{padding-top:112px!important}
+@media (max-width:760px){ body.kata section.sec2.gara{background-size:560px auto!important;padding-top:76px!important;padding-bottom:76px!important} body.kata section.sec2.gara::before,body.kata section.sec2.gara::after{height:24px;background-size:100% 24px!important} body.kata section.sec2.gara > :is(.w,.x-col,div){margin-left:12px;margin-right:12px;padding:28px 16px;border-radius:24px;box-shadow:0 0 14px 12px #fff} body.kata section.sec2.sky{padding-top:68px!important;padding-bottom:68px!important} body.kata section.sec2.green{padding-bottom:68px!important} body.kata section.sec2.gara + section.sec2{padding-top:76px!important}}
+body.kata .x-road ul a{display:inline;padding:0;border-radius:0;background:none!important;color:var(--link)!important;box-shadow:none;text-decoration:underline;text-underline-offset:4px;text-align:left;min-height:0;font-size:15px}
+body.kata .x-road ul li{margin:6px 0;word-break:keep-all;overflow-wrap:anywhere}
+body.kata :is(.x-uhero,.tlh,.zhead){background-position:center calc(100% + 3px)!important}
+@media (max-width:760px){body.kata :is(.x-uhero,.tlh,.zhead){background-position:60% calc(100% + 3px)!important}}
+body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
+body.kata .x-wres .lk a.tl{display:inline;padding:0;border-radius:0;background:none!important;color:var(--link)!important;box-shadow:none;text-decoration:underline;text-underline-offset:4px;text-align:left;min-height:0;font-size:15px}
+body.kata .x-uhero .x-art{display:none}
+body.kata .lst.x-uhero{padding-top:22px}
+body.kata .lst.x-uhero .lst-h{grid-template-columns:minmax(0,1fr)!important}
+body.kata .lst.x-uhero .lst-h .art{display:none!important}
+body.kata .lst.x-uhero .sunline{max-width:640px}
+body.kata section.sec2.green.x-find{padding-top:20px!important;padding-bottom:84px!important}
+body.kata section.sec2.green.x-find .zfind{padding-top:0!important}
+body.kata section.lst.x-ichiran{padding-top:96px;overflow:visible}
+@media (max-width:760px){body.kata section.sec2.green.x-find{padding-bottom:60px!important}body.kata section.lst.x-ichiran{padding-top:64px}}
+@media (min-width:761px){ body.kata section.x-find .zfind{justify-content:center} body.kata section.x-find .chipline{justify-content:center} body.kata section.x-find .frule{text-align:center} }
+body.kata .nf{display:block;flex:none;border-radius:50%;overflow:hidden;background:#fff;border:3px solid #fff;box-shadow:0 0 0 4px #D9E8F6}
+body.kata .nf img,body.kata .pc-face .nf img{position:static;display:block;width:100%;height:100%;max-width:none;margin:0;object-fit:cover}
+body.kata .nf.ini{display:grid;place-items:center;background:#EAF3FB;color:var(--ink);font-weight:700;line-height:1}
+body.kata .nf-card{width:96px;height:96px;margin:4px auto 10px}
+body.kata .nf-chain{width:48px;height:48px;margin:0 auto 4px;border-width:2px;box-shadow:0 0 0 2px #D9E8F6;font-size:15px}
+body.kata .nf-me{width:64px;height:64px;margin:0 auto 6px;font-size:22px}
+body.kata .nf-br{width:52px;height:52px;margin:0 auto 6px;font-size:19px}
+body.kata .pc-face{height:auto!important;display:grid;place-items:center}
+body.kata .pn a.pnf{display:flex;align-items:center;gap:12px}
+body.kata .pn a.nx.pnf{justify-content:flex-end}
+body.kata .nf-pn{width:44px;height:44px;border-width:2px;box-shadow:0 0 0 2px #D9E8F6}
+body.kata .nf-hero{width:176px;height:176px;border-width:5px;box-shadow:0 0 0 8px #D9E8F6,0 6px 14px rgba(46,74,120,.08)}
+@media (max-width:760px){ body.kata .nf-card{width:76px;height:76px} body.kata .nf-hero{width:92px;height:92px;border-width:3px;box-shadow:0 0 0 5px #D9E8F6,0 4px 10px rgba(46,74,120,.08)} body.kata .nf-me{width:56px;height:56px} body.kata .nf-br{width:46px;height:46px} }
+body.kata :has(> img[alt$="の似顔絵"]){background:#DCEDF9!important}
+@media (min-width:761px){ body.kata .zhead .zh-l{margin-left:auto;margin-right:auto;width:100%} }
+body.kata .tgrid .cv{box-sizing:border-box;width:fit-content;height:96px;margin:4px auto 10px;display:flex;flex-direction:column;justify-content:center}
+@media (max-width:760px){ body.kata .nf-card{width:76px;height:76px} body.kata .tgrid .cv{height:76px} body.kata .nf-hero{width:92px;height:92px;border-width:3px;box-shadow:0 0 0 5px #D9E8F6,0 4px 10px rgba(46,74,120,.08)} body.kata .nf-me{width:56px;height:56px} body.kata .nf-br{width:46px;height:46px} }
+@media (min-width:761px){ body.kata section.x-find .zfind{justify-content:center} body.kata section.x-find .frule{text-align:center} body.kata .lst.x-ichiran .tgrid + p{text-align:center} body.kata #keifu .chain{justify-content:center} }
+body.kata .nf-moyan img{object-fit:contain;padding:6px;box-sizing:border-box}
+body.kata .x-uhero .dart img{display:none}
+@media (max-width:760px){body.kata #note .notel{grid-template-columns:1fr;gap:12px;padding:8px 0 0}body.kata #note .notel img{width:72px}}
+body.kata .obh{background:#fff}
+body.kata .obh .garl,body.kata .obh .c1{display:none}
+body.kata section.sec2.green#story::after{bottom:-1px!important;transform:none!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E")!important}
+@media (min-width:1001px){ body.kata .lgrid{display:flex;flex-wrap:wrap;justify-content:center} body.kata .lgrid > *{flex:0 0 calc((100% - 32px) / 3);min-width:0} }
+@media (max-width:760px){body.kata .box8{grid-template-columns:minmax(0,1fr)!important}body.kata .box8 .tb{grid-template-columns:44px minmax(0,1fr)!important;justify-items:start!important;text-align:left!important;padding:12px 14px!important}}

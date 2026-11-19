@@ -1,0 +1,148 @@
+/* 試験の側 08（1119_ラフ_08_ミニゲーム.html の見た目）。scripts/ippen_shiken.py が書く。直すときはラフを直してから回す */
+/* ミニゲームの部品（kata.css に足す案） */
+body.kata [hidden]{display:none!important}
+body.kata .dhero{position:relative;padding:36px 0 40px;background:#fff}
+body.kata .dhero .w{display:grid;grid-template-columns:minmax(0,62fr) minmax(0,38fr);gap:28px;align-items:center}
+body.kata .dhero .sub{margin:14px 0 0;font-size:var(--fs-body);line-height:2}
+body.kata .hsun{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:center}
+body.kata .hsun img{width:96px}
+body.kata .hsun p{position:relative;margin:0;padding:16px 20px;border-radius:20px;background:#fff;border:1.5px solid #BFD3EA;font-size:var(--fs-talk);line-height:1.8}
+body.kata .hsun p::before{content:"";position:absolute;left:-9px;top:calc(50% - 8px);width:16px;height:16px;background:#fff;border-left:1.5px solid #BFD3EA;border-bottom:1.5px solid #BFD3EA;transform:rotate(45deg)}
+body.kata .hsun .who{display:block;font-size:11px;color:var(--sub);letter-spacing:.1em}
+body.kata .dhero .pair{margin:0}
+
+/* 絞りこみ */
+body.kata .filt{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:0 0 34px}
+body.kata .filt .lbl{margin:0 6px 0 0;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.12em}
+body.kata .opt{font:inherit;font-size:14.5px;line-height:1.5;padding:7px 16px;border-radius:999px;border:1.5px solid #BFD3EA;background:#fff;color:var(--ink);cursor:pointer;letter-spacing:.04em}
+body.kata .opt:hover{border-color:var(--link)}
+body.kata .opt[aria-pressed=true]{background:#EAF3FB;border-color:var(--link)}
+body.kata .opt small{font-family:Outfit;font-size:13px;color:var(--sub);font-weight:500}
+
+/* 一覧 */
+body.kata .grp{margin:0 0 46px}
+body.kata .grp:last-child{margin-bottom:0}
+body.kata .gh{display:flex;align-items:center;gap:10px;margin:0 0 6px;font-size:var(--fs-h3)}
+body.kata .gh::before{content:"";flex:none;width:26px;height:26px;background:url("../../img/parts/t/05_pinwheel-64.webp") center/contain no-repeat}
+body.kata .gl{margin:0 0 18px;font-size:14.5px;color:var(--sub)}
+body.kata .gcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+body.kata .gcard{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:22px;border-radius:22px;background:#fff;color:var(--ink);text-decoration:none;border:1.5px solid transparent;transition:border-color .2s}
+body.kata .gcard:hover{border-color:#BFD3EA}
+body.kata .gcard.wide{grid-column:1/-1;grid-template-columns:minmax(0,38fr) minmax(0,62fr)}
+body.kata .canva-old{display:flex;align-items:center;justify-content:center;min-height:130px;padding:12px;border-radius:16px;background:var(--cream);border:1.5px dashed #E3D0AC;color:#8a6a2c;font-size:12px;line-height:1.7;text-align:center}
+body.kata .gno{margin:0;font-family:Outfit;font-size:12.5px;color:var(--sub);letter-spacing:.14em}
+body.kata .gt{margin:2px 0 6px;font-size:var(--fs-h3);font-weight:500;letter-spacing:.06em;line-height:1.55}
+body.kata .gd{margin:0;font-size:14.5px;line-height:1.9}
+body.kata .meta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;margin:12px 0 0;font-size:13.5px;line-height:1.7}
+body.kata .meta dt{color:var(--sub)}
+body.kata .meta dd{margin:0}
+body.kata .meta .num{font-size:15px}
+body.kata .tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+body.kata .tags li{padding:1px 10px;border-radius:999px;background:var(--grass);font-size:12.5px}
+body.kata .gogo{display:inline-block;margin-top:12px;font-weight:500;color:var(--link);text-decoration:underline;text-underline-offset:5px;font-size:15px}
+body.kata .gogo::after{content:"\00a0→"}
+
+body.kata .sfuda{display:inline-block;margin-right:10px;padding:0 10px;border-radius:6px;background:var(--grass);color:var(--ink);font-family:Outfit,"Zen Kaku Gothic New";font-size:12.5px;letter-spacing:.06em;line-height:1.9}
+body.kata .ncard .sfuda{margin-right:6px}
+body.kata .dhero .w.one{grid-template-columns:1fr}
+body.kata .hpair{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:6px}
+body.kata .hmo{display:grid;grid-template-columns:minmax(0,1fr) 80px;gap:12px;align-items:center}
+body.kata .hmo img{width:80px}
+body.kata .hmo p{position:relative;margin:0;padding:14px 18px;border-radius:18px;background:#FFF1C9;font-size:var(--fs-talk);line-height:1.75}
+body.kata .hmo p::after{content:"";position:absolute;right:-7px;top:calc(50% - 7px);width:14px;height:14px;background:#FFF1C9;transform:rotate(45deg)}
+body.kata .hmo .who{display:block;font-size:11px;color:var(--sub);letter-spacing:.1em}
+body.kata .hpair .hsun{grid-template-columns:80px minmax(0,1fr)}
+body.kata .hpair .hsun img{width:80px}
+body.kata .thumb{display:flex;align-items:center;justify-content:center;width:110px;height:110px;border-radius:50%;background:var(--cream)}
+body.kata .thumb img{width:64px;height:64px;object-fit:contain}
+body.kata .gcard{grid-template-columns:110px minmax(0,1fr)!important}
+/* 遊ぶ画面の頭を詰める */
+body.kata .mh{padding:18px 0 22px}
+body.kata .mh .w{grid-template-columns:minmax(0,55fr) minmax(0,45fr);gap:24px}
+body.kata .mh .sub{margin-top:8px;font-size:15px;line-height:1.85}
+body.kata .mh .pairw{display:grid;gap:10px}
+body.kata .mh .hmo img,body.kata .mh .hsun img{width:60px}
+body.kata .mh .hmo{grid-template-columns:minmax(0,1fr) 60px}
+body.kata .mh .hsun{grid-template-columns:60px minmax(0,1fr)}
+body.kata .mh .hmo p,body.kata .mh .hsun p{padding:9px 14px;font-size:15px;line-height:1.65}
+body.kata #board{padding-top:30px!important}
+@media (max-width:760px){body.kata .exit2{flex-direction:column;align-items:flex-start;gap:12px}
+ body.kata .hpair{display:none}
+ body.kata .thumb{width:76px;height:76px}body.kata .thumb img{width:46px;height:46px}
+ body.kata .gcard{grid-template-columns:76px minmax(0,1fr)!important}
+ body.kata .dhero .sub br{display:none}
+ body.kata .mh .w{grid-template-columns:1fr}}
+
+/* 遊ぶ画面 */
+body.kata .stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin:0 0 22px;padding:12px 22px;border-radius:999px;background:#fff;font-size:14.5px}
+body.kata .stat [data-b]{font-family:Outfit;font-size:22px;font-weight:500;padding:0 3px}
+body.kata .stat .rs{margin-left:auto;font:inherit;font-size:14px;padding:6px 16px;border-radius:999px;border:1.5px solid #BFD3EA;background:#fff;color:var(--link);cursor:pointer}
+body.kata .board{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,62fr);gap:22px}
+body.kata .col .lbl{margin:0 0 10px;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.14em;text-align:center}
+body.kata .col .cs{display:grid;gap:10px}
+body.kata .mc{display:flex;align-items:center;min-height:66px;margin:0;padding:12px 18px;border-radius:18px;border:2px solid #fff;background:#fff;color:var(--ink);font:inherit;font-size:15.5px;line-height:1.6;text-align:left;cursor:pointer;transition:background .25s,border-color .25s,opacity .3s}
+body.kata .mc:hover:not([disabled]){border-color:#BFD3EA}
+body.kata .mc [data-b].mark,body.kata .plist [data-b].mark,body.kata .sub [data-b].mark{font-weight:500}
+body.kata .mc.th{justify-content:center;font-size:17px;text-align:center}
+body.kata .mc.sel{border-color:var(--link);background:#F3F8FD}
+body.kata .mc.ok{border-color:#8FAF5A;background:#F1F5E4;cursor:default}
+body.kata .mc.ok::after{content:"✓";margin-left:auto;padding-left:10px;color:#5E7F2E;font-family:Outfit}
+body.kata .mc{position:relative}
+body.kata .mc.th.ok::after{position:absolute;right:10px;top:50%;transform:translateY(-50%);margin:0;padding:0}
+body.kata .mc.ng{border-color:#E2A68D;background:#FFF4EC;animation:yure .4s}
+@keyframes yure{20%{transform:translateX(-5px)}50%{transform:translateX(5px)}80%{transform:translateX(-3px)}}
+@media (prefers-reduced-motion:reduce){body.kata .mc.ng{animation:none}}
+body.kata .hint{margin:18px 0 0;text-align:center;font-size:14px;color:var(--sub)}
+body.kata .clear{margin:26px 0 0;padding:30px 34px 32px;border-radius:24px;background:#fff;text-align:center;animation:fbin .4s ease-out}
+@keyframes fbin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+body.kata .clear .ck{margin:0;font-size:22px;font-weight:500;letter-spacing:.12em}
+body.kata .clear .cs2{margin:8px 0 0;font-size:15px}
+body.kata .clear .cs2 [data-b]{font-family:Outfit;font-size:30px;font-weight:500;padding:0 4px}
+body.kata .plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin:20px 0 24px;padding:0;list-style:none;text-align:left}
+body.kata .plist li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.7}
+body.kata .plist a{font-weight:500}
+body.kata .clear .alt{margin:14px 0 0;font-size:14.5px}
+body.kata .mguide{display:none}
+body.kata #list,body.kata #board{padding-top:48px}
+
+@media (max-width:760px){
+  body.kata .dhero{padding:20px 0 14px}
+  body.kata .dhero .w{grid-template-columns:1fr;gap:16px}
+  body.kata .hsun{grid-template-columns:64px minmax(0,1fr)}
+  body.kata .hsun img{width:64px}
+  body.kata .dhero .pairw{display:none}
+  body.kata .mguide{display:grid;margin:0 0 18px}
+  body.kata #list,body.kata #board{padding-top:28px}
+  body.kata .gcards{grid-template-columns:1fr;gap:14px}
+  body.kata .gcard,body.kata .gcard.wide{grid-template-columns:96px minmax(0,1fr);gap:14px;padding:16px}
+  body.kata .canva-old{min-height:96px;font-size:11px;padding:8px}
+  body.kata .meta{font-size:13px}
+  body.kata .stat{gap:4px 14px;padding:10px 16px;border-radius:18px;font-size:13.5px}
+  body.kata .stat [data-b]{font-size:19px}
+  body.kata .board{grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:10px}
+  body.kata .mc{min-height:72px;padding:10px 12px;font-size:14px;border-radius:14px}
+  body.kata .mc.th{font-size:15px;letter-spacing:.02em;padding:10px 6px}
+  body.kata .mc.th.ok::after{right:5px;top:8px;transform:none;font-size:12px}
+  body.kata .clear{padding:22px 18px 24px}
+  body.kata .plist{grid-template-columns:1fr}
+}
+body.kata .exitw{padding:8px 0 36px}
+body.kata .exit2{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 36px}
+body.kata .ex{display:flex;gap:10px;align-items:center;padding:0;background:none;text-decoration:none;color:var(--ink);font-size:14.5px}
+body.kata .ex img{width:40px}
+body.kata .ex .ek{display:block;font-size:12.5px;color:var(--sub)}
+body.kata .ex .tl{color:var(--link);text-decoration:underline;text-underline-offset:5px}
+/* 11/19 俯瞰の回（04・10にそろえる）：ヒーローは「絵＋下は芝生」。大きな絵が届くまでは、本番の小物を散らした仮の景色。空は白か水色をページごとに切りかえる */
+body.kata .x-hero{position:relative;overflow:hidden;padding-bottom:0!important}
+body.kata .x-hero.sora{background:linear-gradient(180deg,#D9EEFA 0,#EAF6FC 45%,#F6FBFD 100%)}
+body.kata .x-hero.shiro{background:#fff}
+body.kata .x-scene{position:relative;height:230px;margin-top:56px;pointer-events:none}
+body.kata .x-scene::before{content:"";position:absolute;left:calc(50% - 80vw);width:160vw;bottom:0;height:118px;border-radius:50% 50% 0 0/56px 56px 0 0;background:var(--grass)}
+body.kata .x-scene .in{position:relative;max-width:1200px;height:100%;margin:0 auto}
+body.kata .x-scene img{position:absolute;left:var(--x);bottom:var(--b);width:var(--s);height:auto}
+@media (max-width:760px){body.kata .x-scene{height:136px;margin-top:36px}body.kata .x-scene::before{height:70px;border-radius:50% 50% 0 0/30px 30px 0 0}body.kata .x-scene img{width:calc(var(--s) * .55);bottom:calc(var(--b) * .58)}}
+
+/* 08：一覧の頭の上にゆとり・一覧は芝生のあと波線で水色へ */
+@media (min-width:761px){body.kata .dhero.x-hero{padding-top:64px}}
+body.kata .dhero.x-hero .sub{margin-top:18px}
+body.kata .dhero.x-hero .hpair{margin-top:34px}

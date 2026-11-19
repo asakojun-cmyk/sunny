@@ -35,7 +35,7 @@
   var KEY_SPEED = "lesson-speed";
   var KEY_AUTO = "lesson-auto";
   /* 本文を入れかえたあとに、もう一度動かす必要があるスクリプト(1問1答・ピクニックの用語カード) */
-  var RERUN = /\/js\/(quiz|picnic-episode)\.js/;
+  var RERUN = /\/js\/(quiz|picnic-episode|kata-shiken)\.js/; /* kata-shiken＝試験の側の新しい型の動き(2026-11-20) */
 
   function load(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
   function save(key, val) { try { localStorage.setItem(key, val); } catch (e) {} }
