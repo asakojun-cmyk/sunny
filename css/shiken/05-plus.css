@@ -1,0 +1,50 @@
+/* 理論家図鑑（05）：本番の部品をラフ05の見た目に合わせるための足し（2026-11-20）。
+   授業の音声が読む class（picnic-intro__line・term-formal dl>div・mini-say など）を残したまま、ラフの形にする */
+
+/* キーワード（本番の dl>div をラフの .kw のカードに） */
+body.kata .kwbox h2.term-section-title{margin:0 0 18px}
+body.kata .kwbox .term-formal__box{margin:0}
+body.kata .kwbox dl{display:grid;gap:12px;margin:0 0 26px}
+body.kata .kwbox.term-formal dl>div{display:block;padding:18px 22px;border-radius:18px;border:2px solid #BFD3EA;background:#fff}
+body.kata .kwbox.term-formal dl>div:nth-child(-n+2){background:#FFF4CF;border-color:#FFF4CF}
+body.kata .kwbox.term-formal dt{margin:0 0 4px;font-size:17px;font-weight:700;line-height:1.7}
+body.kata .kwbox.term-formal dd{margin:0;font-size:15.5px;line-height:1.95}
+body.kata .kwbox p{font-size:15.5px;line-height:1.95}
+body.kata .kwbox.zx2{margin-top:18px}
+
+/* ピクニックのあいさつ（サニー先生と理論家さん） */
+body.kata .pis{display:grid;gap:12px;margin:0 0 26px}
+body.kata .pis .pi{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:start}
+body.kata .pis .pi>img{width:56px}
+body.kata .pis .pi .nf{width:52px;height:52px}
+body.kata .pis .pi p{position:relative;margin:0;padding:14px 20px;border-radius:18px;background:#fff;border:1.5px solid #BFD3EA;font-size:15.5px;line-height:1.9}
+body.kata .pis .picnic-intro__line--guest p{background:#F6F8EE;border-color:#F6F8EE}
+body.kata .pis .pi p b{display:block;font-size:12px;font-weight:500;color:var(--sub);letter-spacing:.1em}
+
+/* ひとことでいうと（本番の term-oneliner。見出しの文はそのまま小さく） */
+body.kata .one2{margin:0 0 22px}
+body.kata .one2 .lt2{margin:0 0 6px;font-size:13.5px;color:var(--sub);letter-spacing:.08em}
+body.kata .one2 .sun2{margin-top:0}
+body.kata .one2 .sb{font-size:19px}
+body.kata .one2 .sb p{margin:0}
+@media (max-width:760px){body.kata .one2 .sb{font-size:16.5px}}
+
+/* モヤンとサニー先生のひとこと（kw-talk） */
+body.kata .kw-talk{margin:0 0 26px}
+body.kata .kw-talk .mini-say__bubble b{display:block;font-size:11px;font-weight:500;color:var(--sub);letter-spacing:.1em}
+
+/* 試験の出かた */
+body.kata .term-exam-points h2.term-section-title{margin:0 0 16px}
+body.kata .h3s{margin:28px 0 12px;font-size:18px;font-weight:700;line-height:1.6}
+body.kata .term-similar .cmp .cmp-dl dt::before{content:"混同しやすい理論家"}
+body.kata .term-similar .note2{margin-top:10px}
+body.kata .term-similar .note2 a{color:var(--link)}
+
+/* もっと（押すと開く） */
+body.kata .more2 .term-episode .term-section-note{margin:0 0 12px;line-height:1.95}
+body.kata .more2 .episode-list{margin:0 0 18px;padding-left:1.2em;line-height:1.95}
+body.kata .more2 .episode-list li+li{margin-top:.5em}
+body.kata .more2 .note2 a{color:var(--link)}
+body.kata #motto>h2{margin-bottom:0}
+body.kata .pn .pnf{display:flex;align-items:center;gap:12px}
+body.kata .pn .nx.pnf{justify-content:flex-end}

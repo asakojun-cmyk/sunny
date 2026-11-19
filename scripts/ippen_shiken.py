@@ -123,6 +123,15 @@ def write_common_css():
         fh.write(css + "\n")
 
 
+# ---------------------------------------------------------------- 本番のもとのページ
+BASE = "ac71b1714"  # 試験の側を組みかえる前（共通の部品だけ入った版）。何度回しても同じものから組む
+
+
+def prod_html(path):
+    import subprocess
+    return subprocess.run(["git", "-C", ROOT, "show", f"{BASE}:{path}"], capture_output=True, text=True, check=True).stdout
+
+
 # ---------------------------------------------------------------- ラフの本文
 def rough_html(cat):
     return open(os.path.join(ROUGH, ROUGH_FILES[cat]), encoding="utf-8").read()
@@ -215,9 +224,10 @@ def prod_head_parts(prod_html):
 
 def css_links(path, cat, extra=()):
     r = P.rel_root(path)
+    # ラフと同じ順：kata.css → 型の見た目 → 12枚で共通の tooitsu-1119 など
     out = [f'<link rel="stylesheet" href="{r}css/kata.css?v={CSS_VER}">',
-           f'<link rel="stylesheet" href="{r}css/kata-shiken.css?v={CSS_VER}">',
-           f'<link rel="stylesheet" href="{r}css/shiken/{cat}.css?v={CSS_VER}">']
+           f'<link rel="stylesheet" href="{r}css/shiken/{cat}.css?v={CSS_VER}">',
+           f'<link rel="stylesheet" href="{r}css/kata-shiken.css?v={CSS_VER}">']
     for e in extra:
         out.append(f'<link rel="stylesheet" href="{r}css/{e}?v={CSS_VER}">')
     out.append(f'<link rel="stylesheet" href="{r}css/kata-shiken-plus.css?v={CSS_VER}">')

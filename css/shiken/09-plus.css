@@ -1,0 +1,75 @@
+/* お弁当（09）：本番の部品（js/picnic-episode.js の id・会話の .line・授業の音声が読む class）を、
+   ラフ09の見た目に合わせるための足し（2026-11-20） */
+
+body.kata .play[hidden],body.kata [data-lesson-hint][hidden]{display:none!important}
+body.kata .stage .gface{left:calc(50% - 48px);bottom:150px;width:96px;height:96px;z-index:3;display:block;border-radius:50%;overflow:hidden;border:3px solid #fff;box-shadow:0 0 0 4px #D9E8F6}
+body.kata .stage .gface img{display:block;width:100%;height:100%;object-fit:cover}
+body.kata .av>img[alt$="の似顔絵"]{border-radius:50%;background:#DCEDF9;border:2px solid #fff;box-shadow:0 0 0 3px #D9E8F6;object-fit:cover}
+body.kata .fc>img[alt$="の似顔絵"],body.kata .cvb>img[alt$="の似顔絵"]{object-fit:cover}
+body.kata .gc .cvb{display:block;width:96px;height:96px;border-radius:50%;overflow:hidden;background:#DCEDF9}
+body.kata .gc .cvb img{width:100%;height:100%;object-fit:cover}
+body.kata #story [data-lesson]{margin-top:22px;text-align:left}
+body.kata #story .lesson{border-radius:20px;background:#fff;border:1.5px solid #BFD3EA;box-shadow:none}
+
+/* 会話（本番の .line に、ラフの .ln / .bb の見た目） */
+body.kata .lines .line__msg>b:first-child{display:block;margin-bottom:2px;font-weight:500;font-size:var(--fs-cap,12px);color:var(--sub);letter-spacing:.1em}
+body.kata .lines .line__msg strong,body.kata .bye .line__msg strong{font-weight:500;background:linear-gradient(transparent 55%,var(--mark,#FFF1C9) 55%)}
+body.kata .line__dots{display:none}
+body.kata .lines[data-animate] .line{opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+body.kata .lines[data-animate] .line.is-visible{opacity:1;transform:none}
+body.kata .line.is-typing .line__msg{display:none}
+body.kata .line.is-typing .line__dots{display:inline-flex;gap:5px;padding:6px 2px}
+body.kata .line.is-typing .line__dots i{width:7px;height:7px;border-radius:50%;background:#9FB3CE;animation:dot 1s infinite}
+body.kata .line.is-typing .line__dots i:nth-child(2){animation-delay:.15s}
+body.kata .line.is-typing .line__dots i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,100%{opacity:.3}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){body.kata .lines[data-animate] .line{opacity:1;transform:none}}
+body.kata .inline-term{display:inline;margin:0 2px;padding:0 2px;border:0;border-bottom:2px dotted var(--link);background:none;color:var(--link);font:inherit;cursor:pointer}
+body.kata .dialogue-after.is-waiting{opacity:.4}
+body.kata .dialogue-after .find{margin:0}
+body.kata .dialogue-after .term-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+
+/* おかわり（.okawari__card > p は音声が読む） */
+body.kata .okw .okawari__card p{margin:0}
+body.kata .okw .okawari__card small{display:block;margin-top:10px;font-size:var(--fs-cap,12px);color:var(--sub)}
+
+/* ことばのタネ（picnic-episode.js の id のまま） */
+body.kata .qzw #start-quiz{display:block;margin:0 auto;padding:14px 34px;border-radius:999px;border:0;background:#E8865B;box-shadow:0 2px 0 #D06E45;color:#fff;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+body.kata .qzw #start-quiz[hidden]{display:none}
+body.kata #quiz{display:none}
+body.kata #quiz.active{display:block}
+body.kata #quiz .progress{height:8px;border-radius:4px;background:#E3EAF4;overflow:hidden}
+body.kata #quiz .progress span{display:block;height:100%;width:0;background:var(--hat,#FBD86B);transition:width .3s}
+body.kata #quiz .small{margin:10px 0 0;font-size:13px;color:var(--sub)}
+body.kata #quiz h3{margin:6px 0 16px;font-size:var(--fs-h3,19px);line-height:1.7}
+body.kata #quiz .choices{display:grid;gap:10px}
+body.kata #quiz .choice{display:block;width:100%;padding:12px 16px;border-radius:14px;border:1.5px solid #BFD3EA;background:#fff;color:var(--ink);font:inherit;font-size:15px;line-height:1.75;text-align:left;cursor:pointer}
+body.kata #quiz .choice.correct{background:#F6F8EE;border-color:#B9C77E}
+body.kata #quiz .choice.wrong{background:#FFF4EC;border-color:#E9B9A2}
+body.kata #quiz .choice:disabled{cursor:default}
+body.kata #quiz .feedback{margin:16px 0 0;font-size:15px;line-height:1.9}
+body.kata #quiz .feedback:empty{display:none}
+body.kata #quiz .feedback:not(:empty){padding:14px 18px;border-radius:14px;background:#F6F8EE}
+body.kata #quiz #next-question{display:block;margin:14px 0 0 auto;padding:12px 26px;border-radius:999px;border:0;background:#E8865B;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+body.kata #quiz #next-question[hidden]{display:none}
+body.kata .bsk .small{margin-top:10px;font-size:12.5px;color:var(--sub)}
+body.kata .bsk #clear-basket{margin-top:8px;padding:0;border:0;background:none;color:var(--link);font:inherit;font-size:14px;text-decoration:underline;cursor:pointer}
+body.kata .bsk #clear-basket[hidden]{display:none}
+body.kata .bsk #basket-list:empty{display:none}
+
+/* お見送りの吹き出し */
+body.kata .bye .bb{background:var(--cream);border:1.5px solid #E8DCC2}
+body.kata .bye .line__msg>b:first-child{display:block;font-weight:500;font-size:var(--fs-cap,12px);color:var(--sub);letter-spacing:.1em}
+
+/* 用語の図書館（#term-modal を、ラフの .sheet に） */
+body.kata .library.sheet .library__cart{position:relative;width:100%;max-width:560px;max-height:86vh;overflow:auto;padding:26px 28px 24px;border-radius:24px;background:#fff}
+body.kata .library__cart .chapter{margin:0;font-size:13px;color:var(--sub);letter-spacing:.12em}
+body.kata .library__cart h2{margin:4px 0 12px;font-size:var(--fs-h3,19px)}
+body.kata .library__cart dl{margin:0;display:grid;gap:12px}
+body.kata .library__cart dt{font-size:var(--fs-cap,12px);color:var(--sub);letter-spacing:.1em}
+body.kata .library__cart dd{margin:2px 0 0;font-size:15px;line-height:1.9}
+body.kata .library__cart #term-exam{padding:10px 14px;border-radius:12px;background:#F6F8EE}
+body.kata .library__cart .close{position:absolute;right:14px;top:10px;border:0;background:none;font-size:22px;color:var(--sub);cursor:pointer}
+body.kata .library__cart #back-to-picnic{margin-top:18px;padding:10px 22px;border-radius:999px;border:0;background:var(--hat,#FBD86B);color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
+body.kata .library__cart .library__more{display:inline-block;margin:18px 0 0 18px;color:var(--link)}
+body.kata .prog.x-gone{visibility:hidden}

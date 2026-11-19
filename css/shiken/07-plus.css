@@ -1,0 +1,95 @@
+/* 07 論述：本番の js/ronjutsu.js の部品（data-ron-*・data-rb-*）を、ラフ07 の見た目に（2026-11-20） */
+body.kata .ron-play{display:block;max-width:820px;margin:32px auto 0}
+body.kata .modebar{margin:0 0 12px;font-size:14px;color:var(--sub)}
+body.kata .modebar b{font-weight:500;color:var(--ink)}
+body.kata .x-hero .go a.tl,body.kata .toplay a.tl{color:var(--link)}
+
+/* 事例（逐語記録） */
+body.kata .ron-case.case{position:static;max-height:none;max-width:760px;margin:24px auto 0;padding:24px 26px 20px;border-radius:22px;background:var(--cream)}
+body.kata .ron-case h3{margin:0;font-size:17px;font-weight:500;line-height:1.6}
+body.kata .ron-case__profile{margin:10px 0 0;font-size:14.5px;line-height:1.85}
+body.kata .ron-transcript{display:grid;gap:8px;margin:14px 0 0}
+body.kata .ron-line{display:grid;grid-template-columns:42px minmax(0,1fr);gap:8px;margin:0;font-size:15px;line-height:1.85}
+body.kata .ron-line b{font-family:Outfit;font-weight:500;font-size:12.5px;color:var(--sub);padding-top:6px}
+body.kata .ron-line span{padding:6px 12px;border-radius:12px}
+body.kata .ron-line--cl span{background:#fff}
+body.kata .ron-line--cc span{color:var(--sub)}
+body.kata .ron-case__note{margin:10px 0 0;font-size:12.5px;color:var(--sub)}
+
+/* 盤（ページの上に貼りつく） */
+body.kata .rb{position:sticky;top:0;z-index:6;padding:10px 0 12px;background:#fff;border-bottom:1px solid var(--line)}
+body.kata .rb__path{position:relative;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));margin:0;padding:0;list-style:none}
+body.kata .rb__path::before{content:"";position:absolute;left:6%;right:6%;top:21px;border-top:2px dotted #C9D8EA}
+body.kata .rb__sq{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center}
+body.kata .rb__btn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:0;border:0;background:none;font:inherit;color:var(--sub);cursor:pointer}
+body.kata .rb__btn:disabled{cursor:default}
+body.kata .rb__no{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:2px solid #C9D8EA;background:#fff;font-family:Outfit,"Zen Kaku Gothic New";font-size:14px}
+body.kata .rb__name{font-size:11.5px;line-height:1.35;word-break:keep-all}
+body.kata .rb__sq--start .rb__no,body.kata .rb__sq--goal .rb__no{border-color:var(--grass);background:var(--grass);font-size:15px}
+body.kata .rb__sq.is-done .rb__no{border-color:var(--hat);background:var(--hat);color:var(--ink)}
+body.kata .rb__sq.is-now .rb__no{border-color:var(--ink);color:var(--ink);outline:4px solid #fff;box-shadow:0 0 0 6px var(--hat)}
+body.kata .rb__sq.is-now .rb__name{color:var(--ink);font-weight:500}
+body.kata .rb__sq--goal.is-now .rb__no{box-shadow:0 0 0 6px var(--hat)}
+body.kata .rb__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 0;font-size:13.5px;color:var(--sub)}
+body.kata .rb__foot b{font-family:Outfit;font-weight:500;font-size:17px;color:var(--ink)}
+body.kata .rb__case{padding:6px 14px;border-radius:999px;border:1.5px solid #BFD3EA;background:#fff;color:var(--link);font:inherit;font-size:13.5px;cursor:pointer}
+body.kata .rb__sheet{max-height:52vh;overflow:auto;margin-top:10px;padding:16px 18px;border-radius:18px;background:var(--cream)}
+body.kata .rb__sheet[hidden]{display:none}
+body.kata .rb__case-copy h3{margin:0;font-size:15px;font-weight:500}
+@media (max-width:760px){
+  body.kata .rb{margin:0 -16px;padding:10px 16px}
+  body.kata .rb__path::before{top:17px}
+  body.kata .rb__no{width:34px;height:34px;font-size:12.5px}
+  body.kata .rb__name{font-size:10.5px}
+  body.kata .ron-case.case{padding:18px 16px}
+  body.kata .ron-line{font-size:14.5px}
+}
+
+/* マス */
+body.kata .ron-board{display:grid;gap:0}
+body.kata .ron-station{margin-top:18px;padding:28px 30px 30px;border-radius:22px;border:1.5px solid var(--line);background:#fff}
+body.kata .ron-station.is-locked{display:none}
+body.kata .ron-lock-note{display:none}
+body.kata .ron-station__head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+body.kata .ron-station__no{font-family:Outfit,"Zen Kaku Gothic New";font-size:13px;color:var(--sub);letter-spacing:.08em}
+body.kata .ron-station__title{width:100%;margin:8px 0 0;font-size:var(--fs-h3);font-weight:700;line-height:1.6}
+body.kata .ron-station__q{margin:14px 0 0;font-size:var(--fs-body);line-height:1.95}
+body.kata .ron-badge{display:inline-block;padding:1px 10px;border-radius:999px;font-size:12.5px;font-weight:500;letter-spacing:.06em;line-height:1.8;white-space:nowrap}
+body.kata .ron-badge--cc{background:var(--pale)}
+body.kata .ron-badge--jcda{background:var(--mark)}
+body.kata .ron-badge--both{background:var(--grass)}
+html[data-ron-mode="cc"] body.kata .ron-station .ron-badge--cc,html[data-ron-mode="jcda"] body.kata .ron-station .ron-badge--jcda{background:var(--ink);color:#fff}
+body.kata .ron-choices{display:grid;gap:10px;margin:18px 0 0}
+body.kata .ron-choice{display:block;width:100%;margin:0;padding:13px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:15px;line-height:1.75;text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
+body.kata .ron-choice:hover:not(:disabled){border-color:#7FA3D1}
+body.kata .ron-choice:disabled{cursor:default}
+body.kata .ron-choice.is-correct{border-color:#B9C98A;background:var(--grass)}
+body.kata .ron-choice.is-wrong{border-color:#EAC9B4;background:#FFF4EC}
+body.kata .ron-station.is-clear .ron-choice:disabled:not(.is-correct):not(.is-wrong){opacity:.55}
+body.kata .ron-feedback{margin-top:20px;padding-top:20px;border-top:1px dashed #E6DCC6}
+body.kata .ron-feedback[hidden]{display:none}
+body.kata .ron-feedback__verdict{margin:0;font-weight:500;font-size:16px}
+body.kata .ron-feedback__why{margin:6px 0 0;font-size:15px;line-height:1.9}
+body.kata .ron-station .chara-guide,body.kata .ron-goal .chara-guide{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:center;margin-top:18px}
+body.kata .chara-guide__figure img{width:56px;height:auto}
+body.kata .chara-guide__name{display:none}
+body.kata .ron-station .chara-guide__bubble,body.kata .ron-goal .chara-guide__bubble{position:relative;margin:0;padding:12px 18px;border-radius:18px;background:#fff;border:1.5px solid #BFD3EA;font-size:15px;line-height:1.8}
+body.kata .ron-station .chara-guide__bubble strong,body.kata .ron-goal .chara-guide__bubble strong{font-weight:inherit;background:linear-gradient(transparent 55%,var(--mark,#FFF1C9) 55%)}
+body.kata .ron-next{margin:20px 0 0;text-align:center}
+body.kata .ron-next [hidden]{display:none}
+body.kata .ron-station .button,body.kata .ron-goal .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border-radius:999px;border:0;background:#E8865B;box-shadow:0 2px 0 #D06E45;color:#fff;font:inherit;font-size:15.5px;text-decoration:none;cursor:pointer}
+body.kata .ron-goal .button--ghost{background:#fff;border:1.5px solid var(--link);box-shadow:none;color:var(--link)}
+body.kata .ron-write__hint{margin:12px 0 0;padding:12px 16px;border-radius:12px;background:#F6F8EE;font-size:14.5px;line-height:1.85}
+body.kata .ron-write__area{display:block;width:100%;min-height:170px;margin:16px 0 0;padding:14px 16px;border-radius:14px;border:1.5px solid #BFD3EA;background:#fff;color:var(--ink);font:inherit;font-size:16px;line-height:1.9;resize:vertical}
+body.kata .ron-model{margin-top:22px;padding:20px 22px;border-radius:18px;background:var(--cream)}
+body.kata .ron-model[hidden]{display:none}
+body.kata .ron-model h4{margin:0 0 8px;font-size:15px;font-weight:700}
+body.kata .ron-model h4+p,body.kata .ron-model__text{margin:0 0 16px;font-size:15px;line-height:1.95}
+body.kata .ron-checklist{margin:0 0 16px;padding:0;list-style:none;display:grid;gap:6px;font-size:15px;line-height:1.8}
+body.kata .ron-jcda-note{padding:14px 16px;border-radius:14px;background:#fff;font-size:14.5px;line-height:1.85}
+body.kata .ron-jcda-note p{margin:6px 0 0}
+body.kata .ron-goal{margin-top:18px;padding:28px 30px;border-radius:22px;background:var(--grass);text-align:left}
+body.kata .ron-goal[hidden]{display:none}
+body.kata .ron-goal__title{margin:0;font-size:20px;font-weight:700}
+body.kata .ron-goal__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:20px 0 0}
+@media (max-width:760px){body.kata .ron-station,body.kata .ron-goal{padding:20px 18px 22px}}

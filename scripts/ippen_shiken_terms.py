@@ -80,7 +80,7 @@ def bubble(el, who, cls=""):
 def build(slug):
     path = f"terms/{slug}/index.html"
     full = os.path.join(ROOT, path)
-    prod = open(full, encoding="utf-8").read()
+    prod = S.prod_html(path)  # 組みかえる前の版（git）から読む。何度回しても同じ
     if 'http-equiv="refresh"' in prod:
         print(f"{path}: 転送のページなのでさわらない")
         return

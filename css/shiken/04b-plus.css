@@ -1,0 +1,15 @@
+/* ことば図鑑の一覧（/terms/）：本番の162語を流しこむときに足した見た目（2026-11-20）。
+   行の札は .kg（.kh は js/term-hints.js のヒントの名前と同じなので使わない） */
+body.kata .glist .kg{grid-column:1/-1;margin:14px 0 2px;font-size:13px;color:var(--sub);letter-spacing:.14em;list-style:none}
+body.kata .glist [hidden]{display:none!important}
+body.kata .gsec+.gsec{margin-top:40px}
+body.kata .gsec[hidden]{display:none}
+body.kata .gh{margin:0;font-size:20px;font-weight:700;line-height:1.5}
+body.kata .gh small{margin-left:12px;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.08em}
+body.kata .gsec.is-q .kana{display:none}
+body.kata .lst .ld{margin:12px 0 0;font-size:15px;line-height:1.9;color:var(--ink);max-width:640px}
+body.kata .x-find .frule a{color:var(--link)}
+body.kata .glist .o .kh,body.kata .glist .y .kh{text-decoration:none}
+@media (max-width:760px){body.kata .gh{font-size:18px}body.kata .gh small{display:block;margin:2px 0 0}}
+/* スマホの1画面目に「さがす」を入れる（指示書11番）：サニー先生の吹き出しはスマホでは出さない */
+@media (max-width:760px){body.kata .lst.x-uhero .sunline{display:none}body.kata .lst .ld{font-size:14px;margin-top:8px}}

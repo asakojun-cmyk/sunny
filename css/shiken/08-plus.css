@@ -1,0 +1,3 @@
+/* 08 ミニゲームの一覧：本番の一覧に合わせて足した見た目（2026-11-20） */
+body.kata .gcard[hidden],body.kata [data-grp][hidden]{display:none!important}
+body.kata .more3{margin:22px 0 0;text-align:center;font-size:14.5px}
