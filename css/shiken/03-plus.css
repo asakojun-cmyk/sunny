@@ -1,9 +1,0 @@
-/* 03 コラム：頭を記事の型（小山に悩む人）にした所の見た目（2026-11-20） */
-@media (min-width:761px){body.kata .hero1{padding-top:64px}}
-body.kata .hero1 h1{margin-top:14px}
-body.kata .hero1 .hstage{margin-top:12px}
-body.kata .hero1 .tags .x-tg span{display:inline-block;margin-right:10px}
-body.kata .x-talk .x-lead{margin:0 0 26px}
-body.kata .x-talk .x-lead .x-lede{margin:0;font-size:var(--fs-body);line-height:2}
-body.kata .x-talk .x-lead .x-names,body.kata .x-talk .x-lead .x-meta{margin:8px 0 0;font-size:13px;color:var(--sub)}
-@media (max-width:760px){body.kata .hero1{padding-top:12px!important}}

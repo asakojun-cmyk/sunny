@@ -1,7 +1,0 @@
-/* 02 試験対策の記事：本番の文を足した所の見た目（2026-11-20） */
-body.kata .x-fact-t{margin:18px 0 0;font-size:15px;line-height:1.9}
-body.kata .x-upd{margin:10px 0 0;font-size:13px;color:var(--sub)}
-body.kata .x-hokyo{margin:26px 0 0;padding:20px 22px;border-radius:18px;background:#fff}
-body.kata .x-hokyo .tt{margin:0 0 8px;font-weight:700;font-size:15px}
-body.kata .x-hokyo ul{margin:0;padding-left:1.2em;font-size:15px;line-height:1.95}
-body.kata .x-hokyo a{color:var(--link)}

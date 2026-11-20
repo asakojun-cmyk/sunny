@@ -1,3 +1,0 @@
-/* よく出る用語（/hinshutsu/）：本番の語を流しこむときに足した見た目（2026-11-20）。
-   ラフでは <main class="list"> だった一覧を <div class="list"> にした（ページの中身はまるごと <main> に入れるため） */
-body.kata .list [hidden]{display:none!important}

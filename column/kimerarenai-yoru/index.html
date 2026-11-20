@@ -11,6 +11,7 @@ w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};v
 ["pointerdown","keydown","scroll","touchstart"].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});
 function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w.addEventListener("load",later);})(window,document);
 </script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>「協議会か、JCDAか」で眠れない夜の、ジェラット — 決めきれないまま、一歩を踏み出していい(モヤンの中の人の連載)|キャリコン学びピクニック</title>
 <meta name="description" content="キャリ協かJCDAか、ずっと決められない。論述はどっちも厳しい気がする…。意思決定理論家ジェラットの『積極的不確実性』が教えてくれる、迷ったまま前に進む方法。">
@@ -28,184 +29,113 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <meta name="twitter:image" content="https://carepicnic.com/img/ogp.png">
 <link rel="icon" type="image/png" href="../../img/favicon.png">
 <link rel="apple-touch-icon" href="../../img/sunny-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/cb-d2b2494790.css" data-src="kata.css?v=2026.1120s,shiken/03.css?v=2026.1120s,kata-shiken.css?v=2026.1120s,shiken/03-plus.css?v=2026.1120s,kata-shiken-plus.css?v=2026.1120s,kyoutsu.css?v=2026.1120">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"試験対策","item":"https://carepicnic.com/exam/"},{"@type":"ListItem","position":3,"name":"コラム","item":"https://carepicnic.com/column/"},{"@type":"ListItem","position":4,"name":"COLUMN 06","item":"https://carepicnic.com/column/kimerarenai-yoru/"}]}</script>
+
+<link rel="stylesheet" href="../../css/cb-5ef88c43ff.css" data-src="style.css?v=2026.1001,picnic.css?v=2026.1014,refine.css?v=2026.1001,yomiyasu.css?v=2026.1014s">
+<link rel="stylesheet" href="../../css/cb-f4a1e53dfa.css" data-src="tone.css?v=2026.1015s">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://carepicnic.com/column/"},{"@type":"ListItem","position":3,"name":"COLUMN 06"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"「協議会か、JCDAか」で眠れない夜の、ジェラット — 決めきれないまま、一歩を踏み出していい(モヤンの中の人の連載)","description":"キャリ協かJCDAか、ずっと決められない。論述はどっちも厳しい気がする…。意思決定理論家ジェラットの『積極的不確実性』が教えてくれる、迷ったまま前に進む方法。","dateModified":"2026-07-28","author":{"@type":"Person","name":"岩脇 朝子"},"mainEntityOfPage":"https://carepicnic.com/column/kimerarenai-yoru/"}</script>
+<link rel="preload" href="../../fonts/maru-h2.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* 丸い文字は見出し・ボタンだけ。サイトで使う字だけに絞った軽いファイルを最初から読む。本文は端末の文字 */
+@font-face{font-family:"Zen Maru Gothic";src:url(../../fonts/maru-h2.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--font-sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--font:var(--font-sans)}
+body{font-family:var(--font-sans)}
+/* 見出しの役目をする短い文字(見出し・ロゴ・ボタン・ラベル・カードの名前・大きい数字・キャラ名)は、ぜんぶ丸い文字にそろえる */
+h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.exam-tool__cta,.daily-cta__label,.daily-cta-kicker,.note-dl__open,.picnic-kicker,.hero-catch,.school-eyebrow,.hitome__kicker,.hitome__sep,.gk-answer__k,.gk-toc__k,.news-list__tag,.newsflash__tag,.exam-tool__badge,.lp-profile__name,.author-profile__name,.osusume__name,.apply__name,.invite__school,.cmp-cheap__q,.setsumei-box__t,.honest-link__label,.drawer__label,.note-dl__title,.lesson__title,.study-card__name,.exam-tool__title,.term-next__label,.exam-advice__lead,.daily-card__label,.term-section-title,.chara-guide__name,.hero__chara-name,.mini-say__bubble>b,.hero-say>b,.invite__facts b,.camp-banner__stub strong,.ctab__v,.ctab__n,.num,.gk-circle__name,.sm__optb,.sm__time,.hsum__who,.cmp__name,.school-kai__k,.sm-wrap__lead strong,button.button--primary,button.button--secondary,button.primary,a.primary,.ctab__tabs button,.ctab__cap,.filter-chip,.lesson__play,.newsflash__go,.newsflash__body b,.news-row__title,.camp-banner__stub *,.camp-banner__school,.camp-banner__until,.hsum__want,.osusume__medals li,.end-cta__say,.end-cta__facts li,p.chapter,.opening__title,.map-spot__sign b,.cta-fab__sign b,.term-next__card b,.gk-circle__go,.gk-circle__when,.quiz-drill__endtitle,.quiz-picker__label,.quiz-drill__score,.moshi-cta__days,.header-search__label,.header-search__click,.search-fab__lead,.sm__step,.note-dl__label{font-family:"Zen Maru Gothic","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif!important}
+/* 丸い文字はかなが小さめなので、字の間を少しつめて読みやすく(英字の見出しは広いまま) */
+h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.exam-tool__cta,.daily-cta__label,.daily-cta-kicker,.note-dl__open,.hero-catch,.hitome__sep,.exam-tool__badge,.lp-profile__name,.author-profile__name,.osusume__name,.apply__name,.invite__school,.cmp-cheap__q,.setsumei-box__t,.honest-link__label,.drawer__label,.note-dl__title,.lesson__title,.study-card__name,.exam-tool__title,.term-next__label,.exam-advice__lead,.daily-card__label,.term-section-title,.chara-guide__name,.hero__chara-name,.mini-say__bubble>b,.hero-say>b,.invite__facts b,.camp-banner__stub strong,.ctab__v,.ctab__n,.num,.gk-circle__name,.sm__optb,.sm__time,.hsum__who,.cmp__name,.school-kai__k,.sm-wrap__lead strong,button.button--primary,button.button--secondary,button.primary,a.primary,.ctab__tabs button,.ctab__cap,.filter-chip,.lesson__play,.newsflash__go,.newsflash__body b,.news-row__title,.camp-banner__stub *,.camp-banner__school,.camp-banner__until,.hsum__want,.osusume__medals li,.end-cta__say,.end-cta__facts li,p.chapter,.opening__title,.map-spot__sign b,.cta-fab__sign b,.term-next__card b,.gk-circle__go,.gk-circle__when,.quiz-drill__endtitle,.quiz-picker__label,.quiz-drill__score,.moshi-cta__days,.search-fab__lead,.sm__step,.note-dl__label{letter-spacing:.03em!important}</style>
+<link rel="stylesheet" href="../../css/cb-19ba1b8168.css" data-src="kyoutsu.css?v=2026.1120">
 </head>
-<body class="kata">
+<body>
 <a class="skip-link" href="#main">本文へ移動</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
-  <filter id="sticker" x="-45%" y="-25%" width="190%" height="160%" color-interpolation-filters="sRGB">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="7.5" result="b"/>
-    <feComponentTransfer in="b" result="fat"><feFuncA type="linear" slope="22" intercept="-1.9"/></feComponentTransfer>
-    <feGaussianBlur in="fat" stdDeviation="0.6" result="fat2"/>
-    <feFlood flood-color="#fff" result="wc"/><feComposite in="wc" in2="fat2" operator="in" result="white"/>
-    <feGaussianBlur in="fat" stdDeviation="3" result="sb"/><feOffset in="sb" dy="3" result="so"/>
-    <feFlood flood-color="#2E4A78" flood-opacity=".2" result="sc"/><feComposite in="sc" in2="so" operator="in" result="shadow"/>
-    <feMerge><feMergeNode in="shadow"/><feMergeNode in="white"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter></defs></svg>
-<div class="x-prog" aria-hidden="true"><i id="prog"></i></div>
+
 <header class="hd"><div class="w"><a class="logo" href="/"><img src="../../img/kata/sunny.webp" alt="">キャリコン学びピクニック</a><nav class="nav" aria-label="メニュー"><a href="/careers/">キャリコンとは</a><a href="/schools/">講座をえらぶ</a><a href="/school-guides/kyufukin/">費用と給付金</a><a href="/exam/" class="on">試験対策</a><a href="/shikaku-guide/#touroku">受かったあと</a></nav></div></header>
 <nav class="way" aria-label="キャリコンへの道（6つの段）"><div class="w"><p class="wl">キャリコンへの道<br>6つの段</p><ol><li><a href="/careers/"><i>1</i>知る</a></li><li><a href="/schools/compare/"><i>2</i>学校選び</a></li><li class="on"><a href="/exam/"><i>3</i>試験対策<small>いまここ</small></a></li><li><a href="/shikaku-guide/#touroku"><i>4</i>登録</a></li><li><a><i>5</i>はじめの<wbr>一歩</a></li><li><a href="/school-guides/zaitaku-fukugyo/"><i>6</i>稼ぐ</a></li></ol></div></nav>
-<main id="main" class="kmain">
-<div class="kc"><p class="crumb"><a href="/">ホーム</a> › <a href="/exam/">試験対策</a> › <a href="/column/">コラム</a> › COLUMN 06</p></div>
-<section class="hero1 x-col-hero"><div class="w">
-  <p class="x-tagline tags">コラム ― モヤンの中の人の連載　COLUMN 06<span class="x-tg"><br><span>#試験対策</span><span>#団体えらび</span></span></p>
-  <h1><span class="nw">「協議会か、JCDAか」で</span><br><span class="nw">眠れない夜の、ジェラット</span></h1>
-  <div class="hstage">
-    <img class="garl" src="../../img/kata/sora_garland.webp" alt="" aria-hidden="true">
-    <img class="cld c1" src="../../img/parts/01_sky_cloud_left.webp" alt="" aria-hidden="true">
-    <img class="cld c2" src="../../img/parts/03_sky_cloud_right.webp" alt="" aria-hidden="true">
-    <p class="qb"><span class="lb">このページで答える悩み</span>協議会か、JCDAか。<br>ぜんぜん決まらない…<small>どっちを選んでも、論述が怖い</small></p>
-    <div class="who1" aria-hidden="true">
-      <span class="hm m1">？</span><span class="hm m2">？</span>
-      <span class="mpic"><img class="hito" src="../../img/kata/hito_3_yoru.webp" alt=""></span>
+<main data-lb="1" id="main" class="site-main">
+<div class="kc"><p class="crumb"><a href="/">ホーム</a> › <a href="/column/">コラム</a> › COLUMN 06</p></div>
+<div class="page-scene" aria-hidden="true">
+  <img class="pgs pgs-a" src="../../img/parts/15_tree_hammock_left.webp" alt="">
+  <img class="pgs pgs-chara" src="../../img/parts/07_moyan_school_hat_crying.webp" alt="">
+  <img class="pgs pgs-b" src="../../img/parts/17_tree_hammock_right.webp" alt="">
+</div>
+
+<article class="container container--article column-article">
+  <header class="article-header">
+    <p class="article-header__meta"><span class="article-card__category">コラム — モヤンの<wbr>中の<wbr>人の<wbr>連載</span> <span class="column-tag">#試験対策</span><span class="column-tag">#マインド</span></p>
+    <h1>「協議会か、<wbr>JCDAか」<wbr>で眠れない夜の、<wbr>ジェラット <wbr>—<wbr> <wbr>決めきれないまま、<wbr>一歩を踏み出していい</h1>
+    <p class="article-header__lede">比較サイトを<wbr>何度も<wbr>見返して、<wbr>それでも<wbr>決まらない。<wbr>実は<wbr>その<wbr>迷いには、<wbr>ちゃんと<wbr>理論に<wbr>名前が<wbr>ついています。</p>
+    <p class="updated-date"><span>更新日: 2026年7月28日</span></p>
+  </header>
+
+  <div class="chara-guide chara-guide--moyan">
+    <div class="chara-guide__figure">
+      <img class="chara chara--moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" width="72" height="72" alt="モヤン(黄色い帽子をかぶった雲。学び直し中の相棒)" loading="lazy" decoding="async">
+      <span class="chara-guide__name">モヤン</span>
     </div>
-    <img class="deco tent" src="../../img/parts/t/13_blue_yellow_tent-136.webp" alt="" aria-hidden="true">
-    <img class="deco fl1" src="../../img/parts/t/23_flowers_left_group-180.webp" alt="" aria-hidden="true">
-    <img class="deco fl2" src="../../img/parts/t/25_flowers_right_group-180.webp" alt="" aria-hidden="true">
-    <img class="deco bu1" src="../../img/parts/t/24_bush_lower_left-136.webp" alt="" aria-hidden="true">
-    <img class="deco bu2" src="../../img/parts/t/26_bush_lower_right-136.webp" alt="" aria-hidden="true">
+    <p class="chara-guide__bubble">キャリ協に<wbr>しようか、<wbr>JCDAに<wbr>しようか……<wbr>もう<wbr>何日も<wbr>比較サイトを<wbr>見比べてるのに、<wbr>ぜんぜん<wbr>決まらないの。<wbr>おまけに<wbr>論述の<wbr>ことを<wbr>考えると、<wbr>どっちを<wbr>選んでも<wbr>怖くて、<wbr>結局まだ<wbr>動けてない。</p>
   </div>
-  <i class="oka" aria-hidden="true"></i>
-</div></section>
-
-<section class="x-talk sec2 green"><div class="x-col">
-  <div class="x-lead"><p class="x-lede">比較サイトを何度も見返して、それでも決まらない。<br>このコラムでは、2つの団体が公式に出している情報だけを使います。迷いが残ったときのために、最後にジェラットの考え方を少しだけ。</p>
-  <p class="x-names" style="text-align:left;max-width:560px;margin-left:auto;margin-right:auto">協議会＝キャリアコンサルティング協議会、JCDA＝日本キャリア開発協会（試験をする2つの団体）</p>
-  <p class="x-meta" style="text-align:left;max-width:560px;margin-left:auto;margin-right:auto">更新日：2026年11月19日</p></div>
-  <div class="pair">
-    <div class="pm"><p><span class="who">モヤン</span>キャリ協（キャリアコンサルティング協議会）にしようか、JCDAにしようか……もう何日も比較サイトを見比べてるのに、ぜんぜん決まらないの。おまけに論述のことを考えると、どっちを選んでも怖くて、結局まだ動けてない。</p><img src="../../img/parts/t/07_moyan_school_hat_crying-148.webp" alt="モヤン"></div>
-    <div class="ps"><img src="../../img/kata/sunny.webp" alt="サニー先生"><p><span class="who">サニー先生</span>まずは、2つの団体の試験の中身を見てみよう。同じところと、ちがうところがはっきりするよ。それでも決めきれなかったら、ジェラットの<b class="mark">『積極的不確実性』</b>の出番だね。</p></div>
-  </div>
-</div></section>
-
-<article class="x-col">
-  <section class="x-ch" id="ch1">
-    <p class="chn">1</p>
-    <h2>選ぶのは、実技をどちらで受けるか</h2>
-    <p>学科試験は、2つの団体が共同で作る共通問題で、同じ日に行われます。団体えらびで変わるのは、実技（論述と面接）の中身です。学科と実技を、別々の団体で受けることもできます。</p>
-    <p class="x-src">出典：日本キャリア開発協会「試験要項」「よくある質問」、厚生労働省「キャリアコンサルタントになりたい方へ」、キャリアコンサルティング協議会「よくある質問（すべて）」（2026年11月19日確認）</p>
-  </section>
-
-  <section class="x-ch" id="ch2">
-    <p class="chn">2</p>
-    <h2>いちばんちがうのは、論述で読む記録の形</h2>
-    <p>論述は、どちらも50分・50点です。協議会は「事例記録」を読み、相談したいこと・応答の意図・相談者の問題と根拠・今後の方針の4問に答えます。</p>
-    <p>JCDAは、キャリアコンサルタントと相談者のやりとりを書き起こした「逐語記録」を読みます。前半のあとに同じ相談者への【後半A】【後半B】の2通りが続き、第32回・第33回とも、その対応の違いを指定語句5つを使って書く問い（15点）が出ました。</p>
-    <p>問題文から読むと、2回とも後半Aは励ましや提案で返す応答、後半Bは相談者の気持ちに焦点を当てて返す応答でした。この見分け方は、書き手の読み取りです。</p>
-    <p>何を優先して書くかの手がかりになるのは、公表されている配点です。両団体とも、いちばん大きいのは「相談者の問題と根拠」の20点でした。</p>
-    <p class="x-src">出典：キャリアコンサルティング協議会「受験概要」・第32回・第33回 実技（論述）問題用紙、日本キャリア開発協会「試験要項」・第32回・第33回 実技試験（論述）問題用紙（2026年11月19日確認）</p>
-
-    <div class="x-tblw">
-    <table class="x-tbl">
-      <caption>協議会とJCDAの実技（公表されている情報から）</caption>
-      <thead><tr><th></th><th>協議会</th><th>JCDA</th></tr></thead>
-      <tbody>
-        <tr><th>論述で読むもの</th><td>事例記録</td><td>逐語記録<small>後半A・Bの2通り</small></td></tr>
-        <tr><th>論述の問いと配点</th><td>相談したいこと 10<br>応答の意図 10<br>問題と根拠 20<br>今後の方針 10</td><td>後半AとBの対応の違い（指定語句5つ） 15<br>問題と根拠 20<br>成長に向けた方針 15</td></tr>
-        <tr><th>面接の評価区分</th><td>「態度」「展開」「自己評価」</td><td>「主訴・問題の把握」「具体的展開」「傾聴」</td></tr>
-        <tr><th>実技の合格率</th><td>第30回 63.0%<br>第31回 63.8%<br>第32回 60.3%</td><td>第30回 68.2%<br>第31回 67.8%<br>第32回 66.5%</td></tr>
-        <tr><th>論述の平均点（50点満点）</th><td>31.9・32.7・32.2<small>第30〜32回</small></td><td>32.8・32.0・32.9<small>第30〜32回</small></td></tr>
-      </tbody>
-    </table>
-    <p class="x-src">出典：論述・面接は上と同じ。合格率・平均点はキャリアコンサルティング協議会「合格発表」第30〜32回 試験結果、日本キャリア開発協会「試験結果」第30〜32回（2026年11月19日確認）</p>
+  <div class="chara-guide chara-guide--sunny">
+    <div class="chara-guide__figure">
+      <img class="chara chara--sunny" src="../../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" loading="lazy" decoding="async">
+      <span class="chara-guide__name">サニー先生</span>
     </div>
-    <div class="x-mini"><p>読む記録の形が、こんなにちがうんだ。</p><img src="../../img/parts/t/moyan_school_hat_smile-96.webp" alt="モヤン"></div>
-  </section>
-
-  <section class="x-ch" id="ch3">
-    <p class="chn">3</p>
-    <h2>面接の時間と合格の基準は、そろっている</h2>
-    <p>面接は、両団体ともロールプレイ15分と口頭試問5分の計20分です。差があるのは評価区分の名前で、協議会は「態度」「展開」「自己評価」、JCDAは「主訴・問題の把握」「具体的展開」「傾聴」の3つずつです。</p>
-    <p>実技の合格基準は同じです。論述と面接で150点満点の90点以上、そのうえで論述は満点の40%以上、面接は評価区分ごとに満点の40%以上が求められます。</p>
-    <p class="x-src">出典：キャリアコンサルティング協議会「受験概要」、日本キャリア開発協会「試験要項」（2026年11月19日確認）</p>
-    <p>合格率は、第30〜32回の3回ともJCDAが4〜6ポイントほど上でした。一方で、受ける人の数は第32回で協議会3,435人・JCDA 999人と大きく開き、どんな講座や経験の人が受けているかも見えません。この差だけで、受かりやすさは決められません。論述の平均点は、両団体とも32点前後でほぼ同じです。</p>
-    <p class="x-src">出典：キャリアコンサルティング協議会「合格発表」第30〜32回 試験結果、日本キャリア開発協会「試験結果」第30〜32回（2026年11月19日確認）</p>
-  </section>
-
-  <section class="x-ch" id="ch4">
-    <p class="chn">4</p>
-    <h2>2級技能士の試験をしているのは、協議会</h2>
-    <p>国家資格のひとつ上に位置づけられる「2級キャリアコンサルティング技能士」（熟練レベル）。その技能検定を実施しているのは、厚生労働大臣の指定を受けた協議会だけです。</p>
-    <p>2級を受けられる条件は、キャリアコンサルタント試験に合格し、実務経験が3年以上あること。どちらの団体で合格したかは問われないので、JCDAで合格した人にも、同じ道が開いています。</p>
-    <p class="x-src">出典：厚生労働省「キャリアコンサルティング技能士との関係」、キャリアコンサルティング協議会 技能検定サイト「受検概要」（2026年11月19日確認）</p>
-  </section>
-
-  <section class="x-ch" id="ch5">
-    <p class="chn">5</p>
-    <h2>並べても決めきれないときの、ジェラット</h2>
-    <p>ここまでの事実で決まる人もいれば、まだ迷う人もいます。意思決定の理論家ジェラットは、はじめ「情報を集めて比べ、正しい答えを選ぶ」考え方を示し、のちに「積極的不確実性（Positive Uncertainty）」へと考えを移しました。</p>
-    <div class="x-shift" aria-label="ジェラットの考えの変化。前は、情報を集めて論理的に比較して正しい答えを選ぶ。後は、今ある情報で決めて、進みながら軌道修正する">
-      <div><small>もともとの考え</small>情報を集めて、論理的に比較して、正しい答えを選ぶ</div>
-      <span class="ar" aria-hidden="true">→</span>
-      <div class="af"><small>後年の考え（積極的不確実性）</small>今ある情報で決めて、進みながら軌道修正する</div>
-    </div>
-    <p>先のことは変わり続けるので、不確かさを抱えたまま、論理と直感の両方を使って決めていい、という考え方です。団体えらびなら、論述の過去問を両方開き、「この形なら練習を続けられそう」と感じたほうに丸をつける。それも、事実と直感を合わせた決め方です。</p>
-    <div class="x-mini"><p>過去問を、両方ひらいてみるね。</p><img src="../../img/parts/t/moyan_school_hat_smile-96.webp" alt="モヤン"></div>
-  </section>
-
-  
-  <div class="x-step" id="ippo">
-    <p class="tt"><img src="../../img/parts/t/06_sun_character-52.webp" alt="">きょうの、ちいさな一歩</p>
-    <p class="bd">協議会とJCDAは、どちらも論述の問題用紙を公式サイトの「過去問題」に載せています。第33回を1回分ずつ開いて、事例記録と逐語記録を読みくらべてみる。そのうえで、どちらか一つに丸をつける。</p>
-    <ul aria-label="きょうの一歩のチェック">
-      <li><label><input type="checkbox">両団体の論述の問題用紙を、1回分ずつ開いた</label></li>
-      <li><label><input type="checkbox">どちらか一つに丸をつけた</label></li>
-    </ul>
-    <p class="nt">※ 丸はあとで書きかえてもかまいません。</p>
+    <p class="chara-guide__bubble">その<wbr>堂々<wbr>巡り、<wbr>ちゃんと<wbr>理論に<wbr>名前が<wbr>あるよ。<wbr>ジェラットの<wbr><strong>『積極的不確実性』</strong>——答えが<wbr>出そろうのを<wbr>待たずに、<wbr><strong>迷ったまま<wbr>前に<wbr>進む方法</strong>を<wbr>教えてくれる<wbr>意思決定理論なんだ。</p>
   </div>
 
-  <div class="x-srcs" id="shutten">
-    <p class="lb">出典（すべて2026年11月19日に確かめました）</p>
-    <ul>
-      <li>キャリアコンサルティング協議会「受験概要」「過去問題/学習情報」「よくある質問（すべて）」「合格発表」（第30〜32回 試験結果）、第32回・第33回 実技（論述）問題用紙</li>
-      <li>日本キャリア開発協会「試験要項」「過去問題」「よくある質問」「試験結果」（第30〜32回）、第32回・第33回 実技試験（論述）問題用紙</li>
-      <li>キャリアコンサルティング協議会 技能検定サイト「受検概要」</li>
-      <li>厚生労働省「キャリアコンサルタントになりたい方へ」「キャリアコンサルティング技能士との関係」</li>
-    </ul>
-  </div>
+  <section class="column-section">
+    <h2><img class="sec-illust" src="../../img/parts/16_hammock.webp" alt="" width="72" height="72" loading="lazy">「どっちも不安」<wbr>は、<wbr>実はもう答えが出ている</h2>
+    <p>協議会か<wbr>JCDAか。<wbr>この<wbr>2つで<wbr>迷う<wbr>人は、<wbr>想像以上に<wbr>多いです。<wbr>でも、<wbr>実際の<wbr>数字を<wbr>並べてみると、<wbr>学科試験は<wbr>共通問題なので<wbr>ほぼ差が<wbr>ありません。<wbr>実技(論述・面接)の<wbr>合格率も、<wbr>回に<wbr>よって<wbr>上下しながらどちらも<wbr>60%台なかばで<wbr>推移していて、<wbr>「こっちの<wbr>団体の<wbr>方が<wbr>受かりやすい」と<wbr>言い<wbr>切れる<wbr>差は<wbr>ほとんど<wbr>出ていません。</p>
+    <p>つまり、<wbr>「協議会か<wbr>JCDAか」を<wbr>突き詰めて<wbr>比較しても、<wbr>そもそも<wbr>比較できる<wbr>ほどの<wbr>差が<wbr>存在しないのです。<wbr>そして、<wbr>論述が<wbr>怖いと<wbr>感じる<wbr>その<wbr>気持ちは、<wbr>団体を<wbr>変えた<wbr>ところで<wbr>消えません。<wbr>なぜなら<wbr>怖さの<wbr>正体は<wbr>団体の<wbr>違いではなく、<wbr><b>論述と<wbr>いう<wbr>実技<wbr>その<wbr>ものの<wbr>難しさ</b><wbr>だから。<wbr>ここを<wbr>比べ続けている<wbr>限り、<wbr>いつまでも<wbr>「決められない」は<wbr>終わりません。</p>
+    <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>ふん<wbr>ふん。<wbr>ここまでは、<wbr>わかったよ。</p></div>
+  </section>
 
-  <div class="x-honest">
-    <p class="lb">この連載を書いている人について</p>
-    <p style="margin:6px 0 0">わたしはキャリアコンサルタントの養成講習を修了し、2026年11月に国家試験（学科・面接）を受験しました。ただ、いい資格だから勧めますとは書けません。「最悪の国家資格」と言われる3つの理由は、調べたら事実でしたし、向いていない人もいます。</p>
-    <p style="margin:6px 0 0"><a class="tl" href="/school-guides/merit-demerit/">「やめたほうがいい人・向いている人」のページ（30秒の診断つき）</a></p>
-  </div>
+  <section class="column-section">
+    <h2><img class="sec-illust" src="../../img/parts/18_bulletin_board.webp" alt="" width="72" height="72" loading="lazy">ジェラットの『積極的不確実性』</h2>
+    <p>キャリアの<wbr>意思決定理論家ジェラットは、<wbr>もともと<wbr>「情報を<wbr>集めて、<wbr>論理的に<wbr>比較して、<wbr>正しい<wbr>答えを<wbr>選ぶ」と<wbr>いう<wbr>合理的な<wbr>意思決定モデルを<wbr>提唱した<wbr>人でした。<wbr>ところが<wbr>後年、<wbr>彼は<wbr>考えを<wbr>大きく<wbr>変えます。<wbr>将来は<wbr>そもそも<wbr>変化し続ける<wbr>もので、<wbr>どれだけ情報を<wbr>集めても<wbr>「完璧に<wbr>正しい<wbr>選択」なんて<wbr>最初から<wbr>存在しない、と。</p>
+    <p>そこで<wbr>生まれたのが<wbr>「積極的不確実性(Positive Uncertainty)」と<wbr>いう<wbr>考え方です。<wbr>不確実さを、<wbr>不安の<wbr>種と<wbr>してではなく、<wbr>まだ<wbr>何に<wbr>でもなれる<wbr>可能性の<wbr>余地と<wbr>して<wbr>前向きに<wbr>受け止める。<wbr>論理だけでなく<wbr>直感も<wbr>使いながら、<wbr><b>「今ある<wbr>情報で、<wbr>えいやと<wbr>決めて、<wbr>進みながら<wbr>軌道修正する」</b><wbr>姿勢の<wbr>ことです。</p>
+    <p>これは<wbr>「いい<wbr>加減に<wbr>決めろ」と<wbr>いう<wbr>話ではありません。<wbr>むしろ逆で、<wbr>情報が<wbr>すべて<wbr>出そろう日は<wbr>永遠に<wbr>来ないと<wbr>知ったうえで、<wbr>それでも<wbr>自分の<wbr>足で<wbr>歩き出すための、れっきとした<wbr>意思決定の<wbr>技術です。</p>
+  </section>
 
-  <div class="x-back">
-    <p class="eye">試験勉強にもどるなら</p>
-    <div class="chips"><a href="/terms/positive-uncertainty/">積極的不確実性（ジェラット）</a><a href="/terms/ishikettei-riron-keifu/">意思決定理論の系譜</a><a href="/theorists/gelatt/">理論家図鑑：ジェラット</a><a href="/exam-guide/goukakuritsu/">試験の難易度と合格率</a><a href="/games/ronjutsu/">論述ボードゲーム</a></div>
-  </div>
+  <section class="column-section">
+    <h2><img class="sec-illust" src="../../img/parts/moyan-idea-badge.webp" alt="" width="72" height="72" loading="lazy">決めた後にやることの方が、<wbr>ずっと大事</h2>
+    <p>協議会か<wbr>JCDAか、<wbr>その<wbr>一点に<wbr>どれだけ<wbr>時間を<wbr>かけても、<wbr>論述の<wbr>怖さ<wbr>その<wbr>ものは<wbr>1ミリも<wbr>減りません。<wbr>合否を<wbr>分けるのは、<wbr>どちらの<wbr>団体を<wbr>選ぶかではなく、<wbr><b>決めた<wbr>後に<wbr>どれだけ論述の<wbr>練習を<wbr>積めるか</b><wbr>です。<wbr>迷っている<wbr>時間を<wbr>1週間削れば、<wbr>その<wbr>ぶん<wbr>論述の<wbr>練習に<wbr>1週間<wbr>使えます。</p>
+    <p>だから、<wbr>今日この<wbr>場で<wbr>「もう<wbr>迷わない」と<wbr>決めてしまってかまいません。<wbr>どちらに<wbr>丸を<wbr>つけても、<wbr>この<wbr>先やる<wbr>ことは<wbr>同じ<wbr>——論述に<wbr>向き合う<wbr>練習を<wbr>始める<wbr>ことです。</p>
+    <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b>モヤン</b><wbr>なる<wbr>ほど……。<wbr>つぎも<wbr>読んで<wbr>みる。</p></div>
+  </section>
+
+  <aside class="column-step">
+    <p class="column-step__title">🌤️ きょうの、<wbr>ちいさな<wbr>一歩</p>
+    <p class="column-step__body">今<wbr>日中に、<wbr>コインでも<wbr>「えいや」でも<wbr>いいから、<wbr>どちらか<wbr>一つに<wbr>丸を<wbr>つける。<wbr>決めた<wbr>瞬間から<wbr>「もう<wbr>迷わない」と<wbr>決めるのも、<wbr>立派な<wbr>意思決定です。<wbr>そして<wbr>丸を<wbr>つけた<wbr>その<wbr>日の<wbr>うちに、<wbr>論述の<wbr>問題を<wbr>1問だけ、<wbr>10分だけ<wbr>書いてみる。</p>
+    <p class="column-step__note">※ やらなくても<wbr>大丈夫。<wbr>読んだだけで、<wbr>もう<wbr>一歩目です。</p>
+  </aside>
+
+    <aside class="honest-link">
+    <p class="honest-link__label">この<wbr>連載を<wbr>書いている<wbr>人に<wbr>ついて</p>
+    <p class="honest-link__body">わたしは<wbr>キャリアコンサルタントの<wbr>養成講習を<wbr>修了し、<wbr>2026年11月の<wbr>国家試験に<wbr>挑戦中です。<wbr>ただ、<wbr><strong>いい資格だから<wbr>勧めます</strong><wbr>とは<wbr>書けません。<wbr>「最悪の<wbr>国家資格」と<wbr>言われる<wbr>3つの<wbr>理由は、<wbr>調べたら<wbr>事実でしたし、<wbr>向いていない<wbr>人も<wbr>います。</p>
+    <p class="honest-link__act"><a href="../../school-guides/merit-demerit/">やめた<wbr>ほうが<wbr>いい<wbr>人も<wbr>います<wbr>(30秒の<wbr>診断つき) <span class="arw" aria-hidden="true">▶︎</span></a></p>
+  </aside>
+
+<section class="column-related">
+    <h2>試験勉強にもどるなら</h2>
+    <p class="column-related__links">
+      <a href="../../terms/positive-uncertainty/">積極的不確実性(ジェラット)</a><a href="../../terms/ishikettei-riron-keifu/">意思決定理論の<wbr>系譜</a>
+      <a href="../../theorists/gelatt/">ジェラット</a>
+      <a href="../../exam-guide/goukakuritsu/">試験の<wbr>難易度と<wbr>合格率(協議会・JCDAの<wbr>実際の<wbr>数字)</a><a href="../../games/ronjutsu/">論述ボードゲーム(実技対策)</a>
+    </p>
+  </section>
+
+  <p class="column-back"><a href="../../column/">← コラム一覧へ</a></p>
 </article>
-
-<section class="x-more sec2 gara"><div class="w">
-  <p class="eye c">次の一歩</p>
-  <h2 class="c">次に読むコラム</h2>
-  <div class="next3">
-    <a class="ncard" href="/column/guuzen-wo-mikata-ni/"><span class="nn">COLUMN</span><span class="tl">「どうせ無理」と言う日の、クランボルツ</span></a>
-    <a class="ncard" href="/column/jinsei-no-chuuritsuken/"><span class="nn">COLUMN</span><span class="tl">がんばれない時期の、ブリッジス</span></a>
-    <a class="ncard" href="/column/jibun-no-jikan-ga-nai/"><span class="nn">COLUMN</span><span class="tl">朝3時から起きているのに「自分の時間がない」</span></a>
-  </div>
-  <p class="c" style="margin:26px 0 0;font-size:15px"><a class="tl" href="/column/">コラムの一覧（6本）</a></p>
-</div></section>
-
-<section class="x-exit" aria-label="勉強とあわせて"><div class="w">
-  <p class="tt">勉強とあわせて</p>
-  <div class="in2 one">
-    <a class="x-ex" href="/schools/compare/#school-match"><img src="../../img/kata/hito_5_mada.webp" alt=""><span class="k">まだ講座を選んでいない人へ</span><span class="tl">比較表の30秒しぼりこみ</span><small>受けられる日と実質の額で、合う講座をしぼる</small></a>
-  </div>
-</div></section>
-<section class="picnic" aria-hidden="true"><div class="kscene">
-  <img class="flags2" src="../../img/kata/sora_garland.webp" alt="">
-  <img class="pic" src="../../img/kata/hero_picnic.webp" alt="">
-</div></section>
-<section class="nxt"><div class="w">
-  <div class="box"><img src="../../img/kata/sunny.webp" alt=""><div><p class="now">いまは 勉強の道 STEP5 論述と面接（コラムでひと休み）。次は</p><p class="go"><a href="/column/guuzen-wo-mikata-ni/">「どうせ無理」と言う日の、クランボルツ</a> →</p></div><p class="more" style="margin:0;font-size:13.5px"><a class="tl" href="/exam/#michi">勉強の道を、ぜんぶ見る</a></p></div>
-</div></section>
 </main>
+
+<div class="picnic-meadow" aria-hidden="true">
+  <svg class="picnic-meadow__wave" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0,74 C420,14 1020,14 1440,74 L1440,160 L0,160 Z" fill="#eef4dd"/></svg>
+  <img class="pm pm-flowerl" src="../../img/parts/23_flowers_left_group.webp" alt="" loading="lazy">
+  <img class="pm pm-bush" src="../../img/parts/24_bush_lower_left.webp" alt="" loading="lazy">
+  <img class="pm pm-sunny" src="../../img/parts/06_sun_character.webp" alt="" loading="lazy">
+  <img class="pm pm-moyan" src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" loading="lazy">
+  <img class="pm pm-wagon" src="../../img/parts/04_book_wagon.webp" alt="" loading="lazy">
+  <img class="pm pm-flowerr" src="../../img/parts/25_flowers_right_group.webp" alt="" loading="lazy">
+</div>
 <footer class="ft" id="sitemap"><div class="w">
   <nav class="map" aria-label="サイト全体のメニュー">
     <div><h4><i>1</i>知る</h4><ul><li><a href="/shikaku-guide/gimon/">キャリコンって何？（よくある質問40問）</a></li><li><a href="/careers/">キャリアコンサルタントの仕事</a></li><li><a href="/shikaku-guide/">資格まるわかりガイド（とり方・期間）</a></li><li><a href="/exam-guide/goukakuritsu/">試験の難易度と合格率</a></li><li><a href="/school-guides/merit-demerit/">やめたほうがいい人・向いている人</a></li></ul></div>
@@ -220,18 +150,10 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
   <p class="copy">運営者：岩脇 朝子　&copy; 2026 キャリコン学びピクニック</p>
 </div></footer>
 <nav class="bn" aria-label="下のメニュー"><a href="/" data-ev="nav_home"><span><i>⌂</i>ホーム</span></a><a href="/start/" data-ev="nav_michi"><span><i>⋯</i>勉強の道</span></a><a href="/exam-guide/last-30days/#mainichi" data-ev="nav_daily" data-bn-mid><span><i>?</i>今日の問題</span></a><a href="/search/" data-ev="nav_search"><span><i>⌕</i>さがす</span></a><a href="#sitemap" data-ev="nav_menu"><span><i>≡</i>メニュー</span></a></nav>
-<script>
-// 読んだところまで、上の細い線がのびる
-(function(){var p=document.getElementById('prog'),a=document.querySelector('article.x-col');function u(){var r=a.getBoundingClientRect(),h=a.offsetHeight-innerHeight*.6;var v=Math.min(1,Math.max(0,-r.top/h));p.style.width=(v*100)+'%';}addEventListener('scroll',u,{passive:true});u();})();
-</script>
-<script>
-// 上に貼りつく帯は、その段が終わったら消す（出口の段に重ならないように）
-(function(){var bar=document.querySelector('.x-prog'),end=document.querySelector('article.x-col');if(!bar||!end)return;
-function u(){var gone=end.getBoundingClientRect().bottom<bar.offsetHeight+8;bar.classList.toggle('x-gone',gone);}
-addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();})();
-</script>
-<script src="../../js/kata-shiken.js?v=2026.1120s" defer></script>
 <script src="../../js/reveal.js?v=2026.1018b" defer></script>
+<script src="../../js/search-fab.js?v=v2026.0728.1616" defer></script>
 <script src="../../js/term-hints.js?v=v2026.1018" defer></script>
+
+<script src="../../js/cta-fab.js?v=2026.1018" defer></script>
 </body>
 </html>

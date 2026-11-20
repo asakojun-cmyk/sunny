@@ -11,6 +11,7 @@ w.clarity=w.clarity||function(){(w.clarity.q=w.clarity.q||[]).push(arguments)};v
 ["pointerdown","keydown","scroll","touchstart"].forEach(function(e){w.addEventListener(e,go,{once:true,passive:true})});
 function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w.addEventListener("load",later);})(window,document);
 </script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3分ミニゲーム|キャリコン学びピクニック</title>
 <meta name="description" content="キャリアコンサルタント試験の知識を、あそびながら覚える3分ミニゲーム。理論家と理論を結びつけるカードあわせなど。">
@@ -28,176 +29,134 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <meta name="twitter:image" content="https://carepicnic.com/img/ogp.png">
 <link rel="icon" type="image/png" href="../img/favicon.png">
 <link rel="apple-touch-icon" href="../img/sunny-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/cb-792f2bf78c.css" data-src="kata.css?v=2026.1120s,shiken/08.css?v=2026.1120s,kata-shiken.css?v=2026.1120s,kata-shiken-plus.css?v=2026.1120s,kyoutsu.css?v=2026.1120">
-<link rel="stylesheet" href="../css/s?v=2026.1120s">
-<link rel="stylesheet" href="../css/h?v=2026.1120s">
-<link rel="stylesheet" href="../css/i?v=2026.1120s">
-<link rel="stylesheet" href="../css/k?v=2026.1120s">
-<link rel="stylesheet" href="../css/e?v=2026.1120s">
-<link rel="stylesheet" href="../css/n?v=2026.1120s">
-<link rel="stylesheet" href="../css//?v=2026.1120s">
-<link rel="stylesheet" href="../css/0?v=2026.1120s">
-<link rel="stylesheet" href="../css/8?v=2026.1120s">
-<link rel="stylesheet" href="../css/-?v=2026.1120s">
-<link rel="stylesheet" href="../css/p?v=2026.1120s">
-<link rel="stylesheet" href="../css/l?v=2026.1120s">
-<link rel="stylesheet" href="../css/u?v=2026.1120s">
-<link rel="stylesheet" href="../css/s?v=2026.1120s">
-<link rel="stylesheet" href="../css/.?v=2026.1120s">
-<link rel="stylesheet" href="../css/c?v=2026.1120s">
-<link rel="stylesheet" href="../css/s?v=2026.1120s">
-<link rel="stylesheet" href="../css/s?v=2026.1120s">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"試験対策","item":"https://carepicnic.com/exam/"},{"@type":"ListItem","position":3,"name":"ミニゲーム","item":"https://carepicnic.com/games/"}]}</script>
+
+<link rel="stylesheet" href="../css/cb-5ef88c43ff.css" data-src="style.css?v=2026.1001,picnic.css?v=2026.1014,refine.css?v=2026.1001,yomiyasu.css?v=2026.1014s">
+<link rel="stylesheet" href="../css/cb-f4a1e53dfa.css" data-src="tone.css?v=2026.1015s">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://carepicnic.com/"},{"@type":"ListItem","position":2,"name":"ミニゲーム"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"3分ミニゲーム","description":"キャリアコンサルタント試験の知識を、あそびながら覚える3分ミニゲーム。理論家と理論を結びつけるカードあわせなど。","url":"https://carepicnic.com/games/","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"キャリコン学びピクニック","url":"https://carepicnic.com"}}</script>
+<link rel="preload" href="../fonts/maru-h2.woff2" as="font" type="font/woff2" crossorigin>
+<style>/* 丸い文字は見出し・ボタンだけ。サイトで使う字だけに絞った軽いファイルを最初から読む。本文は端末の文字 */
+@font-face{font-family:"Zen Maru Gothic";src:url(../fonts/maru-h2.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--font-sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--font:var(--font-sans)}
+body{font-family:var(--font-sans)}
+/* 見出しの役目をする短い文字(見出し・ロゴ・ボタン・ラベル・カードの名前・大きい数字・キャラ名)は、ぜんぶ丸い文字にそろえる */
+h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.exam-tool__cta,.daily-cta__label,.daily-cta-kicker,.note-dl__open,.picnic-kicker,.hero-catch,.school-eyebrow,.hitome__kicker,.hitome__sep,.gk-answer__k,.gk-toc__k,.news-list__tag,.newsflash__tag,.exam-tool__badge,.lp-profile__name,.author-profile__name,.osusume__name,.apply__name,.invite__school,.cmp-cheap__q,.setsumei-box__t,.honest-link__label,.drawer__label,.note-dl__title,.lesson__title,.study-card__name,.exam-tool__title,.term-next__label,.exam-advice__lead,.daily-card__label,.term-section-title,.chara-guide__name,.hero__chara-name,.mini-say__bubble>b,.hero-say>b,.invite__facts b,.camp-banner__stub strong,.ctab__v,.ctab__n,.num,.gk-circle__name,.sm__optb,.sm__time,.hsum__who,.cmp__name,.school-kai__k,.sm-wrap__lead strong,button.button--primary,button.button--secondary,button.primary,a.primary,.ctab__tabs button,.ctab__cap,.filter-chip,.lesson__play,.newsflash__go,.newsflash__body b,.news-row__title,.camp-banner__stub *,.camp-banner__school,.camp-banner__until,.hsum__want,.osusume__medals li,.end-cta__say,.end-cta__facts li,p.chapter,.opening__title,.map-spot__sign b,.cta-fab__sign b,.term-next__card b,.gk-circle__go,.gk-circle__when,.quiz-drill__endtitle,.quiz-picker__label,.quiz-drill__score,.moshi-cta__days,.header-search__label,.header-search__click,.search-fab__lead,.sm__step,.note-dl__label{font-family:"Zen Maru Gothic","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif!important}
+/* 丸い文字はかなが小さめなので、字の間を少しつめて読みやすく(英字の見出しは広いまま) */
+h1,h2,h3,h4,h5,.site-logo__ja,a.button,.picnic-button,.map-guide__go,.kc__go,.exam-tool__cta,.daily-cta__label,.daily-cta-kicker,.note-dl__open,.hero-catch,.hitome__sep,.exam-tool__badge,.lp-profile__name,.author-profile__name,.osusume__name,.apply__name,.invite__school,.cmp-cheap__q,.setsumei-box__t,.honest-link__label,.drawer__label,.note-dl__title,.lesson__title,.study-card__name,.exam-tool__title,.term-next__label,.exam-advice__lead,.daily-card__label,.term-section-title,.chara-guide__name,.hero__chara-name,.mini-say__bubble>b,.hero-say>b,.invite__facts b,.camp-banner__stub strong,.ctab__v,.ctab__n,.num,.gk-circle__name,.sm__optb,.sm__time,.hsum__who,.cmp__name,.school-kai__k,.sm-wrap__lead strong,button.button--primary,button.button--secondary,button.primary,a.primary,.ctab__tabs button,.ctab__cap,.filter-chip,.lesson__play,.newsflash__go,.newsflash__body b,.news-row__title,.camp-banner__stub *,.camp-banner__school,.camp-banner__until,.hsum__want,.osusume__medals li,.end-cta__say,.end-cta__facts li,p.chapter,.opening__title,.map-spot__sign b,.cta-fab__sign b,.term-next__card b,.gk-circle__go,.gk-circle__when,.quiz-drill__endtitle,.quiz-picker__label,.quiz-drill__score,.moshi-cta__days,.search-fab__lead,.sm__step,.note-dl__label{letter-spacing:.03em!important}</style>
+<link rel="stylesheet" href="../css/cb-19ba1b8168.css" data-src="kyoutsu.css?v=2026.1120">
 </head>
-<body class="kata">
+<body>
 <a class="skip-link" href="#main">本文へ移動</a>
+
 <header class="hd"><div class="w"><a class="logo" href="/"><img src="../img/kata/sunny.webp" alt="">キャリコン学びピクニック</a><nav class="nav" aria-label="メニュー"><a href="/careers/">キャリコンとは</a><a href="/schools/">講座をえらぶ</a><a href="/school-guides/kyufukin/">費用と給付金</a><a href="/exam/" class="on">試験対策</a><a href="/shikaku-guide/#touroku">受かったあと</a></nav></div></header>
 <nav class="way" aria-label="キャリコンへの道（6つの段）"><div class="w"><p class="wl">キャリコンへの道<br>6つの段</p><ol><li><a href="/careers/"><i>1</i>知る</a></li><li><a href="/schools/compare/"><i>2</i>学校選び</a></li><li class="on"><a href="/exam/"><i>3</i>試験対策<small>いまここ</small></a></li><li><a href="/shikaku-guide/#touroku"><i>4</i>登録</a></li><li><a><i>5</i>はじめの<wbr>一歩</a></li><li><a href="/school-guides/zaitaku-fukugyo/"><i>6</i>稼ぐ</a></li></ol></div></nav>
-<main id="main" class="kmain">
-<div class="kc"><p class="crumb"><a href="/">ホーム</a> › <a href="/exam/">試験対策</a> › ミニゲーム</p></div>
-<section class="dhero x-hero x-uhero"><div class="w one">
-  <div>
-    <p class="eye"><span class="sfuda">ひと休み</span>3分ミニゲーム｜あそびながら覚える</p>
-    <h1>3分ミニゲームで覚える</h1>
-    <p class="sub">すきま時間の3分で、あそびながら試験の知識を身につけるコーナー。<br>むずかしい勉強の前の準備運動にもどうぞ。</p>
-  </div>
-  <div class="hpair">
-    <div class="hsun"><img src="../img/kata/sunny.webp" alt="サニー先生"><p><span class="who">サニー先生</span>勉強は「たのしい」がいちばんの近道。まずは1回、あそんでみてね。</p></div>
-    <div class="hmo"><p><span class="who">モヤン</span>理論家がいっぱいいて、だれがどのグループか混ざっちゃう〜！</p><img src="../img/parts/t/07_moyan_school_hat_crying-148.webp" alt="モヤン"></div>
-  </div>
+<main data-lb="1" id="main" class="site-main">
+<div class="kc"><p class="crumb"><a href="/">ホーム</a> › ミニゲーム</p></div>
+<div class="page-scene" aria-hidden="true">
+  <img class="pgs pgs-a" src="../img/parts/12_beach_ball.webp" alt="">
+  <img class="pgs pgs-chara" src="../img/parts/07_moyan_school_hat_crying.webp" alt="">
+  <img class="pgs pgs-b" src="../img/parts/05_pinwheel.webp" alt="">
 </div>
-<div class="x-scene" aria-hidden="true"><div class="in"><img src="../img/parts/t/19_market_stall-160.webp" alt="" style="--x:4%;--b:58px;--s:150px"><img src="../img/parts/s/05_pinwheel.webp" alt="" style="--x:22%;--b:66px;--s:54px"><img src="../img/parts/t/12_beach_ball-80.webp" alt="" style="--x:31%;--b:34px;--s:62px"><img src="../img/parts/t/23_flowers_left_group-180.webp" alt="" style="--x:42%;--b:24px;--s:110px"><img src="../img/parts/t/26_bush_lower_right-136.webp" alt="" style="--x:62%;--b:38px;--s:104px"><img src="../img/parts/t/13_blue_yellow_tent-136.webp" alt="" style="--x:72%;--b:58px;--s:96px"><img src="../img/parts/t/15_tree_hammock_left-128.webp" alt="" style="--x:85%;--b:64px;--s:88px"></div></div></section>
 
-<section class="sec2 green" id="list"><div class="w">
-  <div class="filt" role="group" aria-label="試験のどこに効くかで絞りこむ">
-    <p class="lbl">試験のどこに効く？</p>
-    <button class="opt" type="button" aria-pressed="true" data-f="all">すべて <small>7</small></button>
-    <button class="opt" type="button" aria-pressed="false" data-f="gakka">学科 <small>5</small></button>
-    <button class="opt" type="button" aria-pressed="false" data-f="ronjutsu">論述 <small>2</small></button>
-    <button class="opt" type="button" aria-pressed="false" data-f="mensetsu">面接 <small>2</small></button>
-  </div>
+<section class="section">
+  <div class="container container--narrow">
+    <header class="section-header">
+    
+    <p class="section-header__en" aria-hidden="true">MINI GAMES</p>
+    <h1 class="section-header__title">🎮 <wbr>3分ミニゲームで覚える</h1>
+    <p class="section-header__lede">すきま時間の<wbr>3分で、<wbr>あそびながら<wbr>試験の<wbr>知識を<wbr>身に<wbr>つける<wbr>コーナー。<wbr>むずかしい<wbr>勉強の<wbr>前の<wbr>準備<wbr>運動にも<wbr>どうぞ。</p>
+  </header>
 
-  <div class="grp" data-grp>
-    <h2 class="gh">学科：ことばと理論を覚える</h2>
-    <p class="gl">理論家・理論・図・技法の順番を、手を動かして覚えます。</p>
-    <div class="gcards">
-      <a class="gcard" href="/games/match/" data-t="gakka">
-        <span class="thumb"><img src="../img/parts/09_blue_notebook.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">ミニゲーム 01</p>
-          <p class="gt">理論家カードあわせ</p>
-          <p class="gd">理論家と理論を結びつけるカードゲーム。タイムと連続正解で、自己ベストに挑戦。1回約3分。</p>
-          <dl class="meta"><dt>量の目安</dt><dd>1回 約3分・6組</dd><dt>身につく</dt><dd>理論家と理論の結びつき</dd></dl>
-          <ul class="tags"><li>学科</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
+    <div class="game-list">
+      <a class="game-card-link" href="../games/ronjutsu/">
+        <span class="game-card-link__emoji">📝</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">論述ボードゲーム(実技対策)</span>
+          <span class="game-card-link__desc">オリジナル事例を、<wbr>すごろくの<wbr>盤の<wbr>上で<wbr>1マスずつ読み解いて、<wbr>主訴→見立て<wbr>→方針の<wbr>「論述の<wbr>型」を<wbr>体験。<wbr>CC協議会型・JCDA型の<wbr>案内バッジつき。</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
       </a>
-      <a class="gcard" href="/games/tsumiki/" data-t="gakka mensetsu">
-        <span class="thumb"><img src="../img/parts/04_book_wagon.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">ミニゲーム 02</p>
-          <p class="gt">傾聴のつみきブロック</p>
-          <p class="gd">傾聴の土台・アイビイ・カーカフ・國分康孝。4つのタワーを、土台から正しい順に積もう。まちがえると…くずれちゃう！</p>
-          <dl class="meta"><dt>量の目安</dt><dd>4つのタワー</dd><dt>身につく</dt><dd>カウンセリングの技法を積む順番</dd></dl>
-          <ul class="tags"><li>学科</li><li>面接</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
+      <a class="game-card-link" href="../games/catchball/">
+        <span class="game-card-link__emoji">⚾</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">ことばの<wbr>キャッチボール(傾聴練習)</span>
+          <span class="game-card-link__desc">相談者役の<wbr>モヤンと、<wbr>チャットで<wbr>8回やりとり。<wbr>上手に<wbr>受けとめると、<wbr>モヤンの<wbr>こころの<wbr>天気が<wbr>晴れていく、<wbr>面接対策の<wbr>素振りゲーム。</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
       </a>
-      <a class="gcard" href="/games/ryuha/" data-t="gakka">
-        <span class="thumb"><img src="../img/parts/18_bulletin_board.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">ミニゲーム 03</p>
-          <p class="gt">理論家の流派仕分け</p>
-          <p class="gd">理論家を6つの流派の箱へ。上流から下流へ並べて、理論の広がりをつかもう。</p>
-          <dl class="meta"><dt>量の目安</dt><dd>6つの流派</dd><dt>身につく</dt><dd>だれの考えが、だれに受けつがれたか</dd></dl>
-          <ul class="tags"><li>学科</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
+      <a class="game-card-link" href="../games/quiz/">
+        <span class="game-card-link__emoji">🌈</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">1問1答ドリル(○×・4択)</span>
+          <span class="game-card-link__desc">各用語ページの<wbr>○×だけを<wbr>集めて<wbr>連続出題。<wbr>カテゴリ別・<wbr>「よく<wbr>出るだけ」の<wbr>絞り込みつき。<wbr>すきま時間の<wbr>最強の<wbr>おとも。</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
       </a>
-      <a class="gcard" href="/games/anaume/" data-t="gakka">
-        <span class="thumb"><img src="../img/parts/10_yellow_pencil.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">ミニゲーム 04</p>
-          <p class="gt">理論の図 あなうめゲーム</p>
-          <p class="gd">マズローのピラミッド・スーパーのアーチ・ブロンフェンブレナーの同心円・シャインのコーン。図の上に言葉をはめて完成させよう。</p>
-          <dl class="meta"><dt>量の目安</dt><dd>4つの図</dd><dt>身につく</dt><dd>試験に出る図と「いつ使うか」</dd></dl>
-          <ul class="tags"><li>学科</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
+      <a class="game-card-link" href="../games/tsumiki/">
+        <span class="game-card-link__emoji">🧱</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">傾聴の<wbr>つみきブロック</span>
+          <span class="game-card-link__desc">傾聴の<wbr>土台・アイビイ・カーカフ・國分康孝。<wbr>4つの<wbr>タワーを、<wbr>土台から<wbr>正しい<wbr>順に<wbr>積もう。<wbr>まちが<wbr>えると…く<wbr>ずれちゃう！</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
       </a>
-      <a class="gcard" href="/games/quiz/" data-t="gakka">
-        <span class="thumb"><img src="../img/parts/12_beach_ball.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">ドリル｜○×・4択</p>
-          <p class="gt">1問1答ドリル</p>
-          <p class="gd">各用語ページの○×だけを集めて連続出題。カテゴリ別・「よく出るだけ」の絞り込みつき。すきま時間の最強のおとも。</p>
-          <dl class="meta"><dt>量の目安</dt><dd>全1152問から、1分3問〜</dd><dt>身につく</dt><dd>用語・理論家の○×と4択</dd></dl>
-          <ul class="tags"><li>学科</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
+      <a class="game-card-link" href="../games/match/">
+        <span class="game-card-link__emoji">🃏</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">理論家カードあわせ</span>
+          <span class="game-card-link__desc">理論家と<wbr>理論を<wbr>結びつける<wbr>カードゲーム。<wbr>タイムと<wbr>連続正解で、<wbr>自己ベストに<wbr>挑戦。<wbr>1回約3分。</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
       </a>
+      <a class="game-card-link" href="../games/ryuha/">
+        <span class="game-card-link__emoji">🗃️</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">理論家の<wbr>流派仕分け</span>
+          <span class="game-card-link__desc">理論家を<wbr>6つの<wbr>流派の<wbr>箱へ。<wbr>上流から<wbr>下流へ<wbr>並べて、<wbr>理論の<wbr>広がりを<wbr>つかもう。</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
+      </a>
+      <a class="game-card-link" href="../games/anaume/">
+        <span class="game-card-link__emoji">🧩</span>
+        <span class="game-card-link__body">
+          <span class="game-card-link__title">理論の<wbr>図 あなうめゲーム</span>
+          <span class="game-card-link__desc">マズローの<wbr>ピラミッド・スーパーの<wbr>アーチ・ブロンフェンブレナーの<wbr>同心円・シャインの<wbr>コーン。<wbr>図の<wbr>上に<wbr>言葉を<wbr>はめて<wbr>完成させよう。</span>
+        </span>
+        <span class="game-card-link__arrow">▶︎</span>
+      </a>
+      <!-- 準備中:「30のわたし」診断・キャリアアンカー簡易診断。できあがったら、ここにカードを戻す -->
     </div>
-  </div>
-
-  <div class="grp" data-grp>
-    <h2 class="gh">論述・面接：型をつかむ</h2>
-    <p class="gl">相談の事例と、相談者役のモヤンとのやりとりで、書く型・返す型を体で覚えます。</p>
-    <div class="gcards">
-      <a class="gcard" href="/games/ronjutsu/" data-t="ronjutsu">
-        <span class="thumb"><img src="../img/mendan-scene.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">ボードゲーム｜実技対策</p>
-          <p class="gt">論述ボードゲーム</p>
-          <p class="gd">オリジナル事例を、すごろくの盤の上で1マスずつ読み解いて、主訴→見立て→方針の「論述の型」を体験。CC協議会型・JCDA型の案内バッジつき。</p>
-          <dl class="meta"><dt>量の目安</dt><dd>1つの事例を1マスずつ</dd><dt>身につく</dt><dd>読む→整理する→書く の型</dd></dl>
-          <ul class="tags"><li>論述</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
-      </a>
-      <a class="gcard" href="/games/catchball/" data-t="mensetsu ronjutsu">
-        <span class="thumb"><img src="../img/parts/13_blue_yellow_tent.webp" alt="" loading="lazy"></span>
-        <div>
-          <p class="gno">キャッチボール｜傾聴練習</p>
-          <p class="gt">ことばのキャッチボール</p>
-          <p class="gd">相談者役のモヤンと、チャットで8回やりとり。上手に受けとめると、モヤンのこころの天気が晴れていく、面接対策の素振りゲーム。</p>
-          <dl class="meta"><dt>量の目安</dt><dd>8回のやりとり</dd><dt>身につく</dt><dd>まず受けとめる→それから質問</dd></dl>
-          <ul class="tags"><li>面接</li><li>論述</li></ul>
-          <span class="gogo">あそぶ</span>
-        </div>
-      </a>
+  <div class="chara-after">
+    <div class="chara-guide chara-guide--sunny">
+    <div class="chara-guide__figure">
+      <img class="chara chara--sunny" src="../img/parts/06_sun_character.webp" width="72" height="72" alt="サニー先生(丸眼鏡のレモンイエローの太陽)" decoding="async">
+      <span class="chara-guide__name">サニー先生</span>
     </div>
+    <p class="chara-guide__bubble">勉強は<wbr><strong>「たのしい」が<wbr>いちばんの<wbr>近道</strong>。<wbr>まずは<wbr>1回、<wbr>あそんで<wbr>みてね。</p>
   </div>
-  <p class="more3"><a class="tl" href="/exam/#daily">きょうの3分学習(用語・理論家・1問)もどうぞ</a></p>
-</div></section>
+  </div>
 
-<section class="sec2 gara" id="tsugi"><div class="w">
-  <p class="eye c">次の一歩</p>
-  <h2 class="c">次は、勉強の道 STEP3 法律・制度・白書へ</h2>
-  <div class="next3">
-    <a class="ncard" href="/exam-guide/rodo-hikkake/"><span class="nn"><span class="x-step-tag">勉強の道 STEP3 法律・制度・白書</span></span><span class="tl">労働法のまちがえやすい4つ</span></a>
-    <a class="ncard" href="/exam-guide/shiryo/"><span class="nn"><span class="x-step-tag">勉強の道 STEP3 法律・制度・白書</span></span><span class="tl">白書・調査・報告書の要点</span></a>
-    <a class="ncard" href="/games/quiz/"><span class="nn">覚えたかを確かめるなら</span><span class="tl">1問1答ドリル</span></a>
+    <p class="section__more"><a href="../exam/#daily">きょうの<wbr>3分学習(用語・理論家・1問)も<wbr>どうぞ <span class="arw" aria-hidden="true">▶︎</span></a></p>
   </div>
-</div></section>
+</section>
 
-<section class="x-exit" aria-label="勉強とあわせて"><div class="w">
-  <p class="tt">勉強とあわせて</p>
-  <div class="in2 one">
-    <a class="x-ex" href="/schools/compare/#school-match"><img src="../img/kata/hito_5_mada.webp" alt=""><span class="k">まだ講座を選んでいない人へ</span><span class="tl">比較表の30秒しぼりこみ</span><small>受けられる日と実質の額で、合う講座をしぼる</small></a>
-  </div>
-</div></section>
-<section class="picnic" aria-hidden="true"><div class="kscene">
-  <img class="flags2" src="../img/kata/sora_garland.webp" alt="">
-  <img class="pic" src="../img/kata/hero_picnic.webp" alt="">
-</div></section>
-<section class="nxt"><div class="w">
-  <div class="box"><img src="../img/kata/sunny.webp" alt=""><div><p class="now">いまは 勉強の道 STEP2 ことばと理論（ミニゲーム）。次は</p><p class="go"><a href="/exam/#s3"><span class="x-step-tag">勉強の道 STEP3 法律・制度・白書</span>&nbsp;→</a></p></div><p class="more" style="margin:0;font-size:13.5px"><a class="tl" href="/exam/#michi">勉強の道を、ぜんぶ見る</a></p></div>
-</div></section>
+<div class="container"><nav class="study-nav study-nav--foot" aria-label="試験対策のページ一覧">
+    <p class="study-nav__label"><a href="../exam/#map">試験対策マップ<wbr>に<wbr>もどる <span class="arw" aria-hidden="true">▶︎</span></a></p>
+    <p class="study-nav__all"><a href="../exam/#all">ぜんぶの<wbr>ページを<wbr>見る <span class="arw" aria-hidden="true">▶︎</span></a></p>
+  </nav>
+</div>
+<p class="pre-enroll pre-enroll--pick" style="max-width:720px;margin:28px auto;padding:0 20px;font-size:.88rem;line-height:1.9;color:#5f5a50;text-align:center">まだ<wbr>養成講座を<wbr>選んでいない方へ:<wbr> 家から<wbr>受けられて、<wbr>休んでも<wbr>振替できる<wbr>6校を、<wbr>30秒で<wbr>しぼれます。<wbr> <a class="txt-link" href="../#school-match" data-ev="study_to_match">30秒で<wbr>合う<wbr>学校を<wbr>しぼる <span class="arw" aria-hidden="true">▶︎</span></a></p>
 </main>
+
+<div class="picnic-meadow" aria-hidden="true">
+  <svg class="picnic-meadow__wave" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0,74 C420,14 1020,14 1440,74 L1440,160 L0,160 Z" fill="#eef4dd"/></svg>
+  <img class="pm pm-flowerl" src="../img/parts/23_flowers_left_group.webp" alt="" loading="lazy">
+  <img class="pm pm-bush" src="../img/parts/24_bush_lower_left.webp" alt="" loading="lazy">
+  <img class="pm pm-sunny" src="../img/parts/06_sun_character.webp" alt="" loading="lazy">
+  <img class="pm pm-moyan" src="../img/parts/07_moyan_school_hat_crying.webp" alt="" loading="lazy">
+  <img class="pm pm-wagon" src="../img/parts/04_book_wagon.webp" alt="" loading="lazy">
+  <img class="pm pm-flowerr" src="../img/parts/25_flowers_right_group.webp" alt="" loading="lazy">
+</div>
 <footer class="ft" id="sitemap"><div class="w">
   <nav class="map" aria-label="サイト全体のメニュー">
     <div><h4><i>1</i>知る</h4><ul><li><a href="/shikaku-guide/gimon/">キャリコンって何？（よくある質問40問）</a></li><li><a href="/careers/">キャリアコンサルタントの仕事</a></li><li><a href="/shikaku-guide/">資格まるわかりガイド（とり方・期間）</a></li><li><a href="/exam-guide/goukakuritsu/">試験の難易度と合格率</a></li><li><a href="/school-guides/merit-demerit/">やめたほうがいい人・向いている人</a></li></ul></div>
@@ -212,7 +171,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
   <p class="copy">運営者：岩脇 朝子　&copy; 2026 キャリコン学びピクニック</p>
 </div></footer>
 <nav class="bn" aria-label="下のメニュー"><a href="/" data-ev="nav_home"><span><i>⌂</i>ホーム</span></a><a href="/start/" data-ev="nav_michi"><span><i>⋯</i>勉強の道</span></a><a href="/exam-guide/last-30days/#mainichi" data-ev="nav_daily" data-bn-mid><span><i>?</i>今日の問題</span></a><a href="/search/" data-ev="nav_search"><span><i>⌕</i>さがす</span></a><a href="#sitemap" data-ev="nav_menu"><span><i>≡</i>メニュー</span></a></nav>
-<script src="../js/games-kata.js?v=2026.1120" defer></script>
 <script src="../js/reveal.js?v=2026.1018b" defer></script>
+<script src="../js/search-fab.js?v=v2026.0728.1616" defer></script>
+
 </body>
 </html>
