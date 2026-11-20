@@ -58,6 +58,14 @@ KG = """
   .kgp.anim[data-s="0"] .kg li:nth-child(1) i,.kgp.anim:is([data-s="0"],[data-s="1"],[data-s="2"]) .kg li:nth-child(2) i,.kgp.anim:is([data-s="0"],[data-s="1"],[data-s="2"],[data-s="3"]) .kg li:nth-child(3) i{transform:scaleX(0)}
   .kg-kami{top:120px}
 }
+/* 11/21 ちゃん「スマホ、いまの特典は横スライドにするといいかな」 */
+@media (max-width:700px){
+  ul.tix{display:flex!important;flex-wrap:nowrap!important;gap:12px!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;align-items:stretch!important;margin:14px 0 0!important;padding:4px 2px 14px!important;scrollbar-width:none}
+  ul.tix::-webkit-scrollbar{display:none}
+  ul.tix>li{flex:0 0 82%!important;max-width:82%!important;height:auto!important;min-height:0!important;margin:0!important;scroll-snap-align:start;display:flex!important;flex-direction:column;align-items:center}
+  ul.tix>li>*{width:100%}
+  .tix-h::after{content:"横にスライドすると、ほかの学校の特典も見られます →";display:block;margin-top:6px;font-size:13px;font-weight:400;letter-spacing:.03em;color:var(--sub)}
+}
 """
 
 # 11/21 ちゃん「吹き出しが左揃えでバランスが悪い。吹き出しの中いっぱいに文字を」
