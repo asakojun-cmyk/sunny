@@ -48,3 +48,135 @@ body.kata .more2 .note2 a{color:var(--link)}
 body.kata #motto>h2{margin-bottom:0}
 body.kata .pn .pnf{display:flex;align-items:center;gap:12px}
 body.kata .pn .nx.pnf{justify-content:flex-end}
+
+/* ===== 2026-11-20 ちゃん「理論家図鑑はちょっとぎゅうぎゅうだね。イラストは右において、もっとゆとりを設けて」 =====
+   似顔絵は右・文は左（PC）。スマホは絵を右上に小さく、文が回りこむ。余白・行間・カードの内側を広げる */
+
+/* 見出しの改行：<wbr>（scripts の wb()）の所でだけ折る。1文字落ちをなくす */
+body.kata .zbody h2,body.kata .zbody h3,body.kata .zhead h1,body.kata #tsugi h2,body.kata .ncard .tl,body.kata .one2 .lt2,body.kata .ladder .lt{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance}
+
+/* 人物カード */
+body.kata .zh-card{padding:48px 56px 44px;border-radius:28px}
+body.kata .zh-card .pc.pc-r{grid-template-columns:minmax(0,1fr) 220px;gap:48px;align-items:center}
+body.kata .zh-card .pc-r .pc-face{order:2;width:220px;height:220px;display:flex;align-items:center;justify-content:center}
+body.kata .zh-card .pc-r .nf-hero{width:188px;height:188px}
+body.kata .zh-card .pc-r .pc-t{min-width:0}
+body.kata .zh-card .zh-no{gap:10px 14px}
+body.kata .zh-card h1{margin:16px 0 6px}
+body.kata .zh-card .pc-en{margin-top:4px}
+body.kata .zh-card .pc-facts{margin-top:18px;line-height:1.8}
+body.kata .zh-card .hito1{grid-template-columns:72px minmax(0,1fr);gap:20px;margin-top:40px}
+body.kata .zh-card .hito1 img{width:72px}
+body.kata .zh-card .hito1 p{padding:20px 28px;line-height:1.95}
+body.kata .zh-card .hito1 .who{margin-bottom:4px}
+body.kata .zh-card .era{margin-top:36px;padding-top:32px;line-height:2.05}
+body.kata .zh-card .era p{margin:0 0 16px}
+body.kata .zh-card .era .k{margin-right:12px;padding:2px 12px}
+body.kata .zh-card .zh-tags{margin-top:28px;gap:10px}
+body.kata .zh-card .zh-tags li{padding:6px 16px}
+body.kata .zh-card .frule{margin-top:16px}
+body.kata .zh-l .x-row{gap:20px;margin-top:40px}
+body.kata .zh-l .x-row-t{margin-top:18px;padding-bottom:56px;line-height:1.9}
+
+/* 段と段のあいだ（白い段の中の区切り）と、段の中の並び */
+body.kata .zgrid{gap:80px}
+body.kata .zs{padding-top:108px}
+body.kata .zs:first-child{padding-top:80px}
+body.kata .zs .eye{margin-bottom:10px}
+body.kata .zs h2{margin:8px 0 36px;line-height:1.55}
+body.kata .pis{gap:22px;margin-bottom:56px}
+body.kata .pis .pi{gap:16px}
+body.kata .pis .pi p{padding:20px 26px;line-height:2}
+body.kata .pis .pi p b{margin-bottom:4px}
+body.kata .one2{margin-bottom:40px}
+body.kata .one2 .lt2{margin-bottom:12px}
+body.kata .one2 .sb{line-height:1.85}
+body.kata .ladder{gap:18px}
+body.kata .ladder .lr{grid-template-columns:160px minmax(0,1fr);gap:28px;padding:28px 32px}
+body.kata .ladder .term-prose p{margin:0;line-height:2.05}
+body.kata .kwbox h2.term-section-title{margin-bottom:32px}
+body.kata .kwbox dl{gap:18px;margin-bottom:48px}
+body.kata .kwbox.term-formal dl>div{padding:26px 30px;border-radius:20px}
+body.kata .kwbox.term-formal dt{margin-bottom:8px}
+body.kata .kwbox.term-formal dd{line-height:2.05}
+body.kata .kwbox.zx2{margin-top:32px}
+body.kata .pair{gap:22px}
+body.kata .kw-talk{margin:8px 0 48px}
+body.kata .kw-talk .mini-say__bubble b{margin-bottom:4px}
+body.kata .term-exam-points h2.term-section-title{margin-bottom:28px}
+body.kata .chk3{gap:14px;margin-bottom:40px}
+body.kata .chk3 li{padding:18px 24px 18px 52px;line-height:1.95}
+body.kata .chk3 li::before{left:20px;top:23px}
+body.kata .h3s{margin:56px 0 22px;line-height:1.7}
+body.kata .exam-advice .adv{line-height:2}
+body.kata .exam-advice .adv li+li{margin-top:10px}
+body.kata .cmp{gap:22px;margin-bottom:22px}
+body.kata .cmp .cc{padding:28px 30px;border-radius:20px}
+body.kata .cmp .cn{margin-bottom:14px}
+body.kata .cmp .d,body.kata .cmp dd{line-height:2}
+body.kata .term-similar .note2{margin-top:16px;line-height:1.9}
+
+/* もっと（押すと開く） */
+body.kata .more2{margin-top:72px}
+body.kata .more2 .mh{margin-bottom:12px}
+body.kata .more2 summary{padding:24px 6px}
+body.kata .more2 .in{padding:4px 6px 44px}
+body.kata .more2 .in > p{margin-bottom:18px}
+body.kata .more2 .episode-list{margin-bottom:26px}
+body.kata .more2 .episode-list li+li{margin-top:.8em}
+body.kata .more2 [data-qz-steps]{padding:30px 32px;border-radius:24px}
+body.kata .more2 .qz-flow{margin:12px 0 4px}
+body.kata .rel{gap:16px}
+body.kata .rel a{gap:6px 16px;padding:22px 26px;border-radius:18px}
+body.kata .rel small{line-height:1.9}
+body.kata #motto>h2+*{margin-top:8px}
+body.kata .pn{gap:18px;margin-top:44px}
+body.kata .pn a{padding:18px 24px;border-radius:18px}
+body.kata details.fold{margin-top:32px}
+
+/* 左のしおり */
+body.kata .rail .shiori li+li{margin-top:6px}
+body.kata .rail-x{margin-top:28px}
+body.kata .rail .rs{padding:22px 20px;line-height:1.85}
+
+@media (max-width:760px){
+  /* スマホ：似顔絵は右上に小さく、文が左から回りこむ */
+  body.kata .zh-card{padding:30px 22px 28px;border-radius:24px}
+  body.kata .zh-card .pc.pc-r{display:flow-root}
+  body.kata .zh-card .pc-r .pc-face{float:right;width:96px;height:96px;margin:0 0 10px 16px}
+  body.kata .zh-card .pc-r .nf-hero{width:84px;height:84px}
+  body.kata .zh-card h1{margin-top:12px}
+  body.kata .zh-card .pc-facts{margin-top:12px;clear:right}
+  body.kata .zh-card .hito1{grid-template-columns:48px minmax(0,1fr);gap:12px;margin-top:28px}
+  body.kata .zh-card .hito1 img{width:48px}
+  body.kata .zh-card .hito1 p{padding:16px 18px}
+  body.kata .zh-card .era{margin-top:28px;padding-top:24px}
+  body.kata .zh-card .zh-tags{margin-top:22px}
+  body.kata .zh-l .x-row{margin-top:28px}
+  body.kata .zh-l .x-row-t{margin-top:14px;padding-bottom:8px}
+  body.kata .zs{padding-top:72px}
+  body.kata .zs:first-child{padding-top:44px}
+  body.kata .zs h2{margin-bottom:26px}
+  body.kata .pis{gap:18px;margin-bottom:40px}
+  body.kata .pis .pi{grid-template-columns:44px minmax(0,1fr);gap:10px}
+  body.kata .pis .pi>img{width:44px}
+  body.kata .pis .pi .nf{width:42px;height:42px}
+  body.kata .pis .pi p{padding:16px 18px}
+  body.kata .ladder{gap:14px}
+  body.kata .ladder .lr{grid-template-columns:1fr;gap:8px;padding:22px 22px}
+  body.kata .kwbox dl{gap:14px;margin-bottom:36px}
+  body.kata .kwbox.term-formal dl>div{padding:20px 22px}
+  body.kata .kw-talk{margin-bottom:36px}
+  body.kata .chk3 li{padding:16px 18px 16px 46px}
+  body.kata .chk3 li::before{left:16px;top:21px}
+  body.kata .h3s{margin:44px 0 18px}
+  body.kata .cmp{gap:14px}
+  body.kata .cmp .cc{padding:22px 22px}
+  body.kata .more2{margin-top:52px}
+  body.kata .more2 summary{padding:20px 4px}
+  body.kata .more2 .in{padding-bottom:32px}
+  body.kata .more2 [data-qz-steps]{padding:22px 18px}
+  body.kata .rel a{padding:18px 20px}
+  body.kata .pn{gap:12px;margin-top:32px}
+}
+@media (max-width:760px){body.kata #tsugi h2{font-size:21px;line-height:1.6}}

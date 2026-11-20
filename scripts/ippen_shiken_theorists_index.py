@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ippen_parts as P  # noqa: E402
 import ippen_shiken as S  # noqa: E402
 from ippen_shiken_terms import inner, text, SUNNY, MOYAN, CLOUD  # noqa: E402
+from ippen_shiken_theorists import wb_heads  # noqa: E402
 
 ROOT = P.ROOT
 
@@ -48,9 +49,9 @@ def build():
     def card(p):
         cl = f'<img src="{r}{CLOUD}" alt="">'
         if p["times"] >= 3:
-            f = cl * 3 + f' よく出る・過去6回で{p["times"]}回'
+            f = cl * 3 + f' よく出る・<wbr>過去6回で{p["times"]}回'
         elif p["times"] >= 1:
-            f = cl * 2 + f' ときどき出る・過去6回で{p["times"]}回'
+            f = cl * 2 + f' ときどき出る・<wbr>過去6回で{p["times"]}回'
         else:
             f = cl + " おさえて安心"
         img = (f'<span class="nf nf-card"><img src="{r}img/nigaoe/{p["slug"]}.webp" alt="{p["name_t"]}の似顔絵" loading="lazy"></span>'
@@ -114,6 +115,7 @@ def build():
 """
     js = [f'<script src="{r}js/reveal.js?v=2026.1018b" defer></script>']
     body = body.replace("@@END@@\n", "@@END@@\n" + "\n".join(js) + "\n")
+    body = wb_heads(body)  # 見出しの改行を意味の切れ目で（1文字落ちをなくす）
     crumb = [("ホーム", "/"), ("試験対策", "/exam/"), ("理論家図鑑", None)]
 
     def ld_fix(ld):

@@ -38,6 +38,49 @@ def roster():
     return out
 
 
+WB_AFTER = "、・のを"  # 「が」「で」「は」は「まちがえ」「できる」「はじめ」の中で割れるので入れない
+WB_KEEP = ("勉強の道",)
+WB_TAGS =re.compile(r'(<(h1|h2|h3)\b[^>]*>)(.*?)(</\2>)|(<span class="tl">)([^<]*)(</span>)|(<p class="lt2? term-section-title">)(.*?)(</p>)', re.S)
+
+
+def wb(s):
+    """見出しの文に、意味の切れ目（、・助詞のあと）で <wbr> を入れる。タグの中と文の終わりには入れない。
+    CSS の word-break:keep-all と組で、1文字だけ次の行に落ちるのをなくす（2026-11-20 ちゃん「ぎゅうぎゅう」の直し）"""
+    out = []
+    for part in re.split(r"(<[^>]+>)", s):
+        if part.startswith("<"):
+            out.append(part)
+            continue
+        buf = ""
+        keep = set()  # 1つの言葉として割らない所（「勉強の道」など）
+        for w in WB_KEEP:
+            for m in re.finditer(re.escape(w), part):
+                keep.update(range(m.start(), m.end() - 1))
+        for i, ch in enumerate(part):
+            if i in keep:
+                buf += ch
+                continue
+            buf += ch
+            nxt = part[i + 1:i + 2]
+            if ch in WB_AFTER and nxt and nxt not in "、・）」』。 →" and i < len(part) - 2:
+                buf += "<wbr>"
+        out.append(buf)
+    return "".join(out)
+
+
+def wb_heads(body):
+    """本文の h1・h2・h3・「次の一歩」のカードの言葉に wb() をかける（読む言葉は変えない）"""
+    def one(m):
+        if m.group(2):
+            t = wb(m.group(3))
+            if "<wbr>" in t:
+                t = f'<span class="wbt">{t}</span>'  # h2 は flex なので、<wbr> で文が別々の箱に割れないよう1つに包む
+            return m.group(1) + t + m.group(4)
+        g = (5, 6, 7) if m.group(5) else (8, 9, 10)
+        return m.group(g[0]) + wb(m.group(g[1])) + m.group(g[2])
+    return WB_TAGS.sub(one, body)
+
+
 def face(slug, name, cls):
     return (f'<span class="nf {cls}"><img src="{{r}}img/nigaoe/{slug}.webp" alt="{name}の似顔絵" loading="lazy"></span>'
             if os.path.exists(os.path.join(ROOT, f"img/nigaoe/{slug}.webp"))
@@ -106,9 +149,9 @@ def build(slug):
   <div class="zh"><div class="zh-l">
     <a class="x-step-tag" href="/exam/#s2">勉強の道 STEP2 ことばと理論</a>
     <div class="zh-card" id="jinbutsu">
-      <div class="pc">
+      <div class="pc pc-r">
         <div class="pc-face">{face(slug, name_t, "nf-hero").replace("{r}", r)}</div>
-        <div>
+        <div class="pc-t">
           <p class="zh-no">{f'<span class="no">No.{no:02d}</span>' if no else ''}<span class="gen">{cat}</span></p>
           <h1>{name}</h1>
           <p class="pc-en">{en}</p>
@@ -375,6 +418,7 @@ def build(slug):
           f'<script src="{r}js/reveal.js?v=2026.1018b" defer></script>',
           f'<script src="{r}js/term-hints.js?v=v2026.1018" defer></script>']
     body = body.replace("@@END@@\n", "@@END@@\n" + "\n".join(js) + "\n")
+    body = wb_heads(body)
     crumb = [("ホーム", "/"), ("試験対策", "/exam/"), ("理論家図鑑", "/theorists/"), (name_t, None)]
 
     def ld_fix(ld):
