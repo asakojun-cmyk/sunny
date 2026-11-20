@@ -1,0 +1,14 @@
+{
+ "about": "期限つきの特典・締切の文を、サイトから外す日の控え。scripts/watch-report.mjs が毎晩読み、外す日になったら data/watch-status.md の「対応が要るもの」に出す。外したら done を true にする。",
+ "list": [
+  {
+   "label": "GCDF-Japan｜11/30までの1月開講の割引",
+   "text": "11/30までに1月開講へ申し込むと 16,500円引き(説明会か個別相談に参加した人)",
+   "where": "index.html の特典の段(li.wari の GCDF-Japan)",
+   "until": "2026-11-30",
+   "hazusu": "2026-12-01",
+   "addedAt": "2026-11-20",
+   "done": false
+  }
+ ]
+}

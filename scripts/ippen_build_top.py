@@ -310,6 +310,8 @@ out = out.replace("<h2>養成講座に申し込む前の、よくある不安</h
 # 字の大きさの決まりは html:root で（修正サイトの ink-tools.css の :root に上書きされないように。値は同じ）
 out = out.replace("<style>\n:root{\n  --bg:#fff;", "<style>\nhtml:root{\n  --bg:#fff;", 1)
 out = out.replace("  :root{--side:24px;--sec:88px;--fs-hero:25px;", "  html:root{--side:24px;--sec:88px;--fs-hero:25px;", 1)
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent)); import ippen_kotei_1120 as K  # 11/20 出す前の直し
+out = K.apply("index.html", out)
 for bad in ["仮", "file://", "1115_", "見くらべ", "?today", "?t=", "noauto", "kari"]:
     assert bad not in out, bad
 (REPO / "index.html").write_text(out, encoding="utf-8")

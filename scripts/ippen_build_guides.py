@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ippen_parts as P  # noqa: E402
 import ippen_from_rough as F  # noqa: E402
 import ippen_yomiyasu as Y  # noqa: E402
+import ippen_kotei_1120 as K  # noqa: E402  11/20 出す前の直し（組み直しても消えない）
 
 ROOT = P.ROOT
 CSS = os.path.join(ROOT, "css")
@@ -401,7 +402,7 @@ def build(name, moto_dir):
     body = ("<body class=\"kata\">\n" + svg + "\n" + P.top_parts(path, crumb_html)
             + '<main id="main">\n' + main + "\n</main>\n" + picnic + "\n" + nxt + "\n" + P.end_parts(path)
             + "\n".join(scripts) + "\n</body>\n</html>\n")
-    out = soroe(head + "</head>\n" + body)
+    out = K.apply(os.path.relpath(full, ROOT), soroe(head + "</head>\n" + body))
     with open(full, "w", encoding="utf-8") as fh:
         fh.write(out)
     return src, out

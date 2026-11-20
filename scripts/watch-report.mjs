@@ -43,6 +43,7 @@ const groups = {
   school: { title: "学校の情報が、公式ページで見つからない", hint: "料金・日程・条件が変わったかもしれません。Claude に「学校の情報を確かめて直して」と伝えると、公式ページを読み直して直します(ページの書き方が変わっただけのこともあります)。", list: [] },
   campaign: { title: "キャンペーンの文が増えた・消えた(この7日)", hint: "サイトにはまだ何も載せていません。載せたいものがあれば Claude に「これを載せて」と伝えてください(載せる前に公式ページで期間・条件を確かめます)。7日たつと、ここから消えます。", list: [] },
   manual: { title: "手で見る日です", hint: "機械では読めない学校です。公式ページを開いて、いまの記録と同じかを見てください。見たら Claude に「◯◯を手で確かめた」と伝えると、確かめた日を書きかえます。", list: [] },
+  hazusu: { title: "サイトから外す日です", hint: "期限つきの特典などを載せたときに、外す日を data/site-hazusu.json に入れてあります。Claude に「◯◯を外して」と伝えてください(外すのも本番への公開なので、ちゃんの OK のあと)。外したら site-hazusu.json の done を true に。", list: [] },
   stuck: { title: "ページを開けない・見はり番が動かなかった", hint: "学校のページの住所が変わったか、一時的に止まっているかもしれません。Claude に「見はり番のページを確かめて」と伝えてください。", list: [] },
 };
 const add = (g, key, short, text) => groups[g].list.push({ key, short, text });
@@ -68,6 +69,16 @@ for (const school of db.schools) {
         `**${label}**：「${(st.lost ?? []).join("」「")}」が見つかりません(${st.miss}日つづけて・最後に確認できた日 ${md(st.lastSeen)})。\n  - いまの記録: ${item.value}\n  - 見ているページ: ${w.url}`);
     }
   }
+}
+
+/* 11/20 期限つきの文を外す日(data/site-hazusu.json) */
+const hazusuNotes = [];
+for (const h of read("data/site-hazusu.json", { list: [] }).list ?? []) {
+  if (h.done) continue;
+  if (TODAY >= h.hazusu) {
+    add("hazusu", `h|${h.hazusu}|${h.where}|${h.text}`, `外す日 ${h.label}`,
+      `**${h.label}**：${md(h.hazusu)} に外す予定の文です。\n  - 文: ${h.text}\n  - 場所: ${h.where}`);
+  } else hazusuNotes.push(`${h.label}(外す日 ${md(h.hazusu)})`);
 }
 
 for (const r of [...(cw.recent ?? [])].sort((a, b) => (a.date < b.date ? 1 : -1))) {
@@ -124,6 +135,7 @@ out.push(
   `- 学校の情報：${sum.watched ?? "?"}項目のうち ${sum.seen ?? "?"}項目を公式ページで確認できました(${md(sw.checked)})。`,
   `- キャンペーン：${Object.keys(cw.schools ?? {}).length}校の公式ページを見ました(${md(cw.checked)})。言い回しだけの変化(金額・日付が同じ)は知らせません。`,
   ...(manualNotes.length ? [`- 手で見る学校：${manualNotes.join("、")}`] : []),
+  ...(hazusuNotes.length ? [`- これから外す文：${hazusuNotes.join("、")}`] : []),
   ""
 );
 const rewords = [...(cw.rewords ?? [])].sort((a, b) => (a.date < b.date ? 1 : -1));

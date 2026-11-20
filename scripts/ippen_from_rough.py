@@ -17,6 +17,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ippen_parts as P  # noqa: E402
 import ippen_yomiyasu as Y  # noqa: E402
+import ippen_kotei_1120 as K  # noqa: E402  11/20 出す前の直し（組み直しても消えない）
 
 ROOT = P.ROOT
 ROUGH = "/Users/iwawakiasako/Documents/Obsidian Vault/GitHub/picnic-docs/1108_サイトの設計/イメージ/ラフ_1117"
@@ -186,7 +187,7 @@ def build(name_or_cfg):
     top = P.top_parts(path, P.crumb_html(crumbs))
     body = re.sub(r"(<body[^>]*>\s*<svg.*?</svg>\s*)", lambda m: m.group(1) + top + "\n", body, count=1, flags=re.S)
     body = body.replace("@@END@@\n", P.end_parts(path))
-    out = Y.apply(head + body)   # 11/20 見出しを文節で折る印・読みやすさの決まりが効く印（scripts/ippen_yomiyasu.py）
+    out = K.apply(path, Y.apply(head + body))   # 11/20 K＝出す前の直し。 見出しを文節で折る印・読みやすさの決まりが効く印（scripts/ippen_yomiyasu.py）
     os.makedirs(os.path.dirname(os.path.join(ROOT, path)), exist_ok=True)
     with open(os.path.join(ROOT, path), "w", encoding="utf-8") as fh:
         fh.write(out)

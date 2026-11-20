@@ -13,7 +13,7 @@
   wrap.className = "cta-fab";
   wrap.innerHTML =
     '<a class="cta-fab__link" href="/schools/compare/#apply-h" data-ev="fab_setsumeikai" aria-label="比較表の6校の無料説明会の申込み先を見る。オンラインで参加できる学校が多いです">' +
-      '<span class="cta-fab__note" aria-hidden="true">＼ オンラインでOK！ ／</span>' +
+      '<span class="cta-fab__note" aria-hidden="true">オンラインでOK！</span>' +
       '<img class="cta-fab__sunny" src="/img/parts/06_sun_character.webp" alt="" width="66" height="66">' +
       '<span class="cta-fab__sign"><small>6校の無料説明会</small><b>申込み先を見る <span aria-hidden="true">▶︎</span></b></span>' +
     '</a>' +
