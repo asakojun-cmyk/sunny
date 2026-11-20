@@ -33,6 +33,7 @@
 - [養成学校の一覧](https://carepicnic.com/schools/): 各校の公式情報(出典と確認日つき)
 - [養成講座が安いのはどこ？全22講習の受講料](https://carepicnic.com/school-guides/yasui/): 厚生労働省の一覧(2026年5月)にある全22講習の受講料を安い順に。給付金を使うと実質いくらか、どんな人にどの講座が合うか
 - [給付金で実質いくらになるか](https://carepicnic.com/school-guides/kyufukin/): 専門実践教育訓練給付金の「最大80%」の条件
+- [給付金の手続き・申請はいつまで？](https://carepicnic.com/school-guides/kyufukin-tetsuzuki/): 受講開始日の2週間前までにハローワークへ。順番・持ち物・合格後の70%・80%の申請まで
 - [養成学校の選び方](https://carepicnic.com/school-guides/how-to-choose/)
 - [地域連携プラットフォームの受講体験記](https://carepicnic.com/school-reviews/chiiki-renkei-platform/): 運営者本人の体験。良かった点・気になった点・合わない可能性がある人
 
