@@ -43,7 +43,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/cb-8effffd98c.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-ca31a1ab89.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
 <style id="ippen-guide">
 body.kata .gk{--gk-ink:var(--ink)}
 body.kata .ps.chan .who .tag{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;background:#fff;font-size:10.5px;letter-spacing:.06em;color:var(--sub)}
@@ -56,9 +56,49 @@ body.kata .gk table{max-width:100%}
 body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </style>
 <style id="ippen-h1">@media (max-width:420px){body.kata .hero1 h1{font-size:21px;letter-spacing:.06em}}</style>
-<link rel="stylesheet" href="../../css/cb-19ba1b8168.css" data-src="kyoutsu.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-09b94fd878.css" data-src="kyoutsu.css?v=2026.1120">
+<style id="ippen-guide-soroe">
+/* 道具の段（チェックリスト・計算・診断）は「あお」の地。上下は kata.css の波線 */
+body.kata section.sec2.hb.sky{padding-top:100px!important;padding-bottom:92px!important}
+body.kata .sky .gk-check{background:#fff!important;border:0!important;border-radius:22px!important;padding:4px 22px!important}
+body.kata .sky .gk-check li{border-top-color:var(--line)!important}
+/* 次の一歩は「スタンプ」の地。中身は白い面にのせる（トップの #nayami と同じ形） */
+body.kata section.sec2.gara#tsugi{background:#fff url("../../img/kata/gara_kimete.webp") center top/780px auto repeat!important;padding:104px 0 112px!important}
+body.kata section.sec2.gara#tsugi>.w{background:#fff;border-radius:26px;box-shadow:0 0 20px 22px #fff;padding-top:34px;padding-bottom:40px}
+body.kata section.sec2.gara#tsugi .ncard{background:#fff}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat!important;background-size:100% 40px!important;pointer-events:none}
+body.kata section.sec2.gara#tsugi::before{top:-1px;transform:scaleY(-1)}
+body.kata section.sec2.gara#tsugi::after{bottom:-1px}
+/* 出典・注は小さな字（ほかのページの .src と同じ 13px） */
+body.kata .hb .gk p.src,body.kata .gk .term-section-note{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+/* 強めたい所は黄色の印（太字だけにしない） */
+body.kata .gk strong{padding:0 2px;background:linear-gradient(transparent 60%,#FFEDA6 60%,#FFEDA6 94%,transparent 94%)}
+/* 古い部品を新しい型の形に：注意の箱・正直な話・説明会の箱・ボタン・広告の開示 */
+body.kata .gk .notice-box{max-width:none!important;margin:0 0 36px!important;text-align:left!important}
+body.kata .gk .notice-box p{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+body.kata .gk .honest-link{max-width:none!important;margin:0 0 40px!important;padding:24px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;text-align:left!important}
+body.kata .gk .honest-link__label{margin:0 0 8px!important;font-size:13px!important;font-weight:700;letter-spacing:.1em;color:var(--sub)!important}
+body.kata .gk .honest-link__body{font-size:15.5px!important;line-height:2!important;color:var(--ink)!important}
+body.kata .gk .honest-link__act a{font-size:15px!important}
+body.kata .gk .setsumei-box{max-width:none!important;margin:40px 0 0!important;padding:30px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:none!important;text-align:center}
+body.kata .gk .setsumei-box__t{font-size:18px;color:var(--ink);margin:0 0 8px}
+body.kata .gk .setsumei-box p{font-size:15.5px;line-height:2}
+body.kata .gk .button--primary{display:block;width:100%;max-width:360px;margin:0 auto;box-sizing:border-box;padding:14px 22px;border:1px solid #E07A4F;border-radius:999px;background:#E8865B;color:#fff;box-shadow:0 3px 0 #D06E45;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.04em;text-align:center;white-space:normal!important;text-decoration:none;transform:none}
+body.kata .gk .button--primary:hover{background:#E07A4F;box-shadow:0 3px 0 #D06E45;transform:none}
+body.kata .gk .button--primary[disabled]{opacity:.45;box-shadow:none}
+body.kata .gk .kc__go{max-width:360px;margin:22px auto 0;border:1px solid #E07A4F;background:#E8865B;box-shadow:0 3px 0 #D06E45;font-size:15px;letter-spacing:.04em}
+body.kata .gk .kc__go:hover{background:#E07A4F}
+body.kata .gk details.disclosure .disclosure__more{color:var(--link)!important}
+@media (max-width:760px){
+body.kata section.sec2.hb.sky{padding-top:64px!important;padding-bottom:60px!important}
+body.kata section.sec2.gara#tsugi{background-size:560px auto!important;padding:72px 0 80px!important}
+body.kata section.sec2.gara#tsugi>.w{box-shadow:0 0 12px 12px #fff;padding-top:24px;padding-bottom:28px}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{height:24px;background-size:100% 24px!important}
+body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!important}
+}
+</style>
 </head>
-<body class="kata">
+<body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
   <filter id="sticker" x="-45%" y="-25%" width="190%" height="160%" color-interpolation-filters="sRGB">
     <feGaussianBlur in="SourceAlpha" stdDeviation="7.5" result="b"/>
@@ -75,7 +115,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <main id="main">
 <section class="hero1"><div class="w">
   <p class="eye">考えるためのガイド</p>
-  <h1>キャリアコンサルタントは<wbr/>役に立たない・<wbr/>やめとけ？ <wbr/>—<wbr/> <wbr/>やめたほうがいい人も<wbr/>います</h1>
+  <h1 class="bk">キャリアコンサルタントは<br>役に立たない・<wbr>やめとけ？</h1>
   <div class="hstage">
     <img class="garl" src="../../img/kata/sora_garland.webp" alt="" aria-hidden="true">
     <img class="cld c1" src="../../img/parts/01_sky_cloud_left.webp" alt="" aria-hidden="true">
@@ -96,7 +136,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 green" id="kotae"><div class="w nar">
   <p class="eye c">答え</p>
-  <h2 class="c">結論：<wbr/>「役に<wbr/>立たない」<wbr/>「やめとけ」は<wbr/>本当？<wbr/></h2>
+  <h2 class="c bk">結論：<wbr/>「役に<wbr/>立たない」<wbr/>「やめとけ」は<wbr/>本当？<wbr/></h2>
   <div class="sun2">
     <img src="../../img/kata/sunny.webp" alt="サニー先生" loading="lazy" decoding="async">
     <p class="sb"><span class="who">サニー先生</span>「役に立たない」は半分本当。でも、<b class="mark">取る前から使い道が決まっている人</b>には、役に立つ資格だよ。</p>
@@ -115,7 +155,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt">このページでわかること</p><ol><li><a href="#answer"><span class="tn">1</span><span class="tx">先に結論。半分は本当です</span></a></li><li><a href="#what"><span class="tn">2</span><span class="tx">転職エージェントの「キャリアアドバイザー」とは別もの</span></a></li><li><a href="#sec-0"><span class="tn">3</span><span class="tx">3つの理由を調べたら、3つとも事実でした</span></a></li><li><a href="#sec-1"><span class="tn">4</span><span class="tx">できます。独占業務がないからです</span></a></li><li><a href="#sec-2"><span class="tn">5</span><span class="tx">5年ごとの更新で、お金と時間がかかり続けます</span></a></li><li><a href="#sec-3"><span class="tn">6</span><span class="tx">その数字は、本業のお給料もふくむ個人年収</span></a></li><li><a href="#sec-4"><span class="tn">7</span><span class="tx">4つのタイプ。35万円を使う前に気づけます</span></a></li><li><a href="#sec-5"><span class="tn">8</span><span class="tx">使う場所が先にある人。取った人の満足度も</span></a></li><li><a href="#sec-6"><span class="tn">9</span><span class="tx">決め手は「自分が救われたから」</span></a></li><li><a href="#sec-7"><span class="tn">10</span><span class="tx">6つの質問に答える30秒診断</span></a></li><li><a href="#sec-8"><span class="tn">11</span><span class="tx">申し込む前の5つの順番</span></a></li></ol><p class="tsub"><a href="#faq">よくある質問</a></p></nav>
   <div class="lead2"><p>ネットで<wbr/>「最悪の<wbr/>国家資格」と<wbr/>いう<wbr/>言葉を<wbr/>見て、<wbr/>迷っている方へ。<wbr/>調べてみると、<wbr/>言われている<wbr/>理由は<strong>3つとも<wbr/>事実</strong>でした。<wbr/>その<wbr/>ことを<wbr/>ごまか<wbr/>さずに<wbr/>並べたうえで、<wbr/>それでも<wbr/>取る<wbr/>価値が<wbr/>ある<wbr/>人と、<wbr/>やめた<wbr/>ほうが<wbr/>いい人を<wbr/>分けて<wbr/>書きます。</p><p class="date">更新日: 2026年10月15日 情報確認日: 2026年9月27日</p><div class="gk"><details aria-label="広告・提供関係の開示" class="disclosure">
-<summary class="disclosure__title"><span class="disclosure__tag">広告</span>このページに広告(紹介リンク)はありません<span class="disclosure__more">くわしく</span></summary>
+<summary class="disclosure__title bk"><span class="disclosure__tag">広告</span>この<wbr>ページに<wbr>広告(紹介リンク)は<wbr>ありません<span class="disclosure__more">くわしく</span></summary>
 <dl class="disclosure__list">
 <div><dt>広告・PR</dt><dd>なし(この<wbr/>記事に<wbr/>紹介リンクは<wbr/>含みません)</dd></div><div><dt>学校からの<wbr/>報酬・無償提供</dt><dd>受けていません</dd></div><div><dt>数字の<wbr/>根拠</dt><dd>厚生労働省と、<wbr/>労働政策研究・研修機構(JILPT)の<wbr/>公開情報</dd></div>
 </dl>
@@ -124,7 +164,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="answer"><div class="w nar">
   <p class="eye">くわしく 1</p>
-  <h2>「役に<wbr/>立たない」<wbr/>「やめとけ」は<wbr/>本当？<wbr/> 先に<wbr/>結論です</h2>
+  <h2 class="bk">「役に<wbr/>立たない」<wbr/>「やめとけ」は<wbr/>本当？<wbr/> 先に<wbr/>結論です</h2>
   <div class="gk">
 
 <p><strong class="mk">半分は<wbr/>本当です。</strong>資格を<wbr/>取っただけでは、<wbr/>仕事も<wbr/>収入も<wbr/>増えません。<wbr/>独占業務が<wbr/>なく、<wbr/>お金も<wbr/>かかり続けるからです。</p>
@@ -140,12 +180,12 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="what"><div class="w nar">
   <p class="eye">くわしく 2</p>
-  <h2>そもそも<wbr/>キャリアコンサルタントって、<wbr/>何を<wbr/>する<wbr/>人？</h2>
+  <h2 class="bk">キャリアコンサルタントって、<wbr>何を<wbr>する<wbr>人？</h2>
   <div class="gk">
 
 <p>ひとことで<wbr/>言うと、<strong>働く<wbr/>人の<wbr/>キャリア相談の<wbr/>専門家</strong>です。<wbr/>「これから<wbr/>どう<wbr/>働こう」と<wbr/>いう<wbr/>悩みを、<wbr/>話を<wbr/>聴きながら<wbr/>一緒に<wbr/>整理します。<wbr/>2016年に<wbr/>国家資格に<wbr/>なりました。</p>
 <p>わたしも<wbr/>受講する<wbr/>前は、<wbr/>「何を<wbr/>する<wbr/>人なんだろう？」と<wbr/>思っていました。<wbr/>仕事の<wbr/>内容が<wbr/>よく<wbr/>わからない、と<wbr/>いうのが<wbr/>不安でした。<wbr/>もし<wbr/>自分が<wbr/>相談した<wbr/>経験が<wbr/>なかったら、<wbr/>「転職させる<wbr/>人」と<wbr/>いう<wbr/>イメージだったと<wbr/>思います。</p>
-<h3>「キャリアアドバイザー」とは<wbr/>別の<wbr/>ものです</h3>
+<h3 class="bk">「キャリアアドバイザー」とは<wbr/>別の<wbr/>ものです</h3>
 <p>「やめとけ」で<wbr/>検索すると、<strong>キャリアアドバイザー</strong>の<wbr/>話も<wbr/>混ざって<wbr/>出てきます。<wbr/>キャリアアドバイザーは、<wbr/>おもに<wbr/>人材紹介会社(転職エージェント)で<wbr/>働く<wbr/>人の<wbr/>職種の<wbr/>名前で、<wbr/>資格の<wbr/>名前ではありません。<wbr/>「ノルマが<wbr/>きつい」<wbr/>「激務」と<wbr/>いった<wbr/>話の<wbr/>多くは、<wbr/>こちらの<wbr/>職種に<wbr/>ついての<wbr/>ものです。</p>
 <p>この<wbr/>記事で<wbr/>扱うのは、<wbr/>国家資格の<strong>「キャリアコンサルタント」</strong>の<wbr/>ほうです。<wbr/>どんな<wbr/>仕事なのかは、<a class="txt-link" href="../../careers/">キャリアコンサルタントの<wbr/>仕事</a>の<wbr/>ページに<wbr/>まとめています。</p>
 <div class="pair">
@@ -157,7 +197,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-0"><div class="w nar">
   <p class="eye">くわしく 3</p>
-  <h2>批判されている3つの理由は、<wbr/>事実です</h2>
+  <h2 class="bk">批判されている3つの理由は、<wbr/>事実です</h2>
   <div class="gk">
 
 <p>「キャリアコンサルタント　意味ない」<wbr/>「食えない」で<wbr/>検索すると、<wbr/>かなり<wbr/>厳しい<wbr/>言葉が<wbr/>並びます。<wbr/>挙げられている<wbr/>理由は、<wbr/>おもに<wbr/>この<wbr/>3つです。</p>
@@ -173,7 +213,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-1"><div class="w nar">
   <p class="eye">くわしく 4</p>
-  <h2>①独占業務がない <wbr/>—<wbr/> <wbr/>資格がなくても同じ仕事ができます</h2>
+  <h2 class="bk">①独占業務がない&nbsp;—<br>資格なしでも<wbr>できます</h2>
   <div class="gk">
 
 <p>これが<wbr/>いちばん<wbr/>大きな<wbr/>事実です。<wbr/>キャリアコンサルタントは<strong>名称独占資格</strong>で、<wbr/>業務独占資格ではありません。</p>
@@ -193,7 +233,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-2"><div class="w nar">
   <p class="eye">くわしく 5</p>
-  <h2>②お金がかかり続ける <wbr/>—<wbr/> <wbr/>取って終わりではありません</h2>
+  <h2 class="bk">②お金がかかり続ける <wbr/>—<wbr/> <wbr/>取って終わりではありません</h2>
   <div class="gk">
 
 <p>「お金が<wbr/>かかる」と<wbr/>いうのも、<wbr/>その<wbr/>とおりです。<wbr/>しかも、<wbr/>払うのは<wbr/>一度きりではありません。</p>
@@ -216,7 +256,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-3"><div class="w nar">
   <p class="eye">くわしく 6</p>
-  <h2>③年収の数字には、<wbr/>からくりがあります</h2>
+  <h2 class="bk">③年収の数字には、<wbr/>からくりがあります</h2>
   <div class="gk">
 
 <p>ここは<wbr/>少していねいに<wbr/>説明させてください。<wbr/>ネットでは<wbr/>「キャリアコンサルタントの<wbr/>年収は<wbr/>400万円台」と<wbr/>いう<wbr/>数字を<wbr/>よく<wbr/>見かけますが、<strong>この<wbr/>数字は<wbr/>読み方を<wbr/>間違えやすいので<wbr/>注意が<wbr/>必要です。</strong></p>
@@ -241,7 +281,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-4"><div class="w nar">
   <p class="eye">くわしく 7</p>
-  <h2>キャリアコンサルタントを<wbr/>やめたほうがいい人</h2>
+  <h2 class="bk">キャリアコンサルタントを<wbr/>やめたほうがいい人</h2>
   <div class="gk">
 
 <p>ここまでの<wbr/>3つを<wbr/>踏まえると、<strong>取らない<wbr/>ほうが<wbr/>いい<wbr/>人</strong>が<wbr/>はっきりします。<wbr/>少し<wbr/>厳しい<wbr/>ことも<wbr/>書きますが、<wbr/>35〜55万円と<wbr/>150時間を<wbr/>使ってから<wbr/>気づくより、<wbr/>いま気づいた<wbr/>ほうが<wbr/>いいと<wbr/>思うからです。</p>
@@ -261,7 +301,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-5"><div class="w nar">
   <p class="eye">くわしく 8</p>
-  <h2>それでも<wbr/>キャリアコンサルタント資格を<wbr/>取る価値がある人</h2>
+  <h2 class="bk">それでも<wbr>資格を<wbr>取る価値が<wbr>ある人</h2>
   <div class="gk">
 
 <p>反対に、<strong>使う<wbr/>場所が<wbr/>もう<wbr/>決まっている<wbr/>人</strong>に<wbr/>とっては、<wbr/>はっきり<wbr/>価値が<wbr/>あります。<wbr/>「キャリアコンサルタント」と<wbr/>名乗れる<wbr/>こと自体が、<wbr/>そのまま<wbr/>強みに<wbr/>なるからです。</p>
@@ -272,7 +312,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <div class="fact-row"><dt>公的機関・<wbr/>学校での<wbr/>支援を<wbr/>目指す人</dt><dd>ハローワークや<wbr/>大学の<wbr/>キャリアセンターなどでは、<wbr/>応募の<wbr/>条件に<wbr/>なっていたり、<wbr/>採用で<wbr/>評価されたりする<wbr/>ことがあります。<wbr/>ここでは<wbr/>資格が<wbr/>そのまま<wbr/>役に<wbr/>立ちます。</dd></div>
 </div>
 <p>どの<wbr/>人にも<wbr/>共通しているのは、<strong>「資格を<wbr/>取ってから<wbr/>考える」のではなく<wbr/>「使う<wbr/>場所が<wbr/>先に<wbr/>ある」</strong>ことです。<wbr/>この<wbr/>順番が<wbr/>逆だと、<wbr/>同じ<wbr/>35万円を<wbr/>払っても<wbr/>結果が<wbr/>変わってきます。</p>
-<h3 id="yokatta">取った人は、<wbr/>どう感じている？</h3>
+<h3 class="bk" id="yokatta">取った人は、<wbr/>どう感じている？</h3>
 <p>「使う<wbr/>場所」が<wbr/>まだ<wbr/>はっきりしない<wbr/>方の<wbr/>ために、<wbr/>すでに<wbr/>資格を<wbr/>取った<wbr/>人の<wbr/>答えも<wbr/>載せて<wbr/>おきます。<wbr/>③の<wbr/>年収と<wbr/>同じ、<wbr/>7,586人が<wbr/>回答した<wbr/>2022年の<wbr/>調査です。</p>
 <div class="fact-table">
 <div class="fact-row"><dt>資格は、<wbr/>日々の<wbr/>仕事や<wbr/>生活に<wbr/>役立っている</dt><dd>とても<wbr/>役立っている<wbr/>35.3% + やや<wbr/>役立っている<wbr/>35.6% = <wbr/><strong>約7割</strong></dd></div>
@@ -287,7 +327,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-6"><div class="w nar">
   <p class="eye">くわしく 9</p>
-  <h2>わたしが、<wbr/>それでも取ろうと思った理由</h2>
+  <h2 class="bk">わたしが、<wbr/>それでも取ろうと思った理由</h2>
   <div class="gk">
 
 <p>ここまで<wbr/>厳しい<wbr/>ことを<wbr/>書いてきたので、<wbr/>「じゃあ、<wbr/>あなたは<wbr/>なぜ取るの？」と<wbr/>いう<wbr/>話も<wbr/>しておきます。<wbr/>わたしが<wbr/>養成講習に<wbr/>申し込んだ<wbr/>理由は、<wbr/>4つありました。</p>
@@ -306,9 +346,9 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </div>
 </div></section>
 
-<section class="sec2 hb" id="sec-7"><div class="w nar">
+<section class="sec2 hb sky" id="sec-7"><div class="w nar">
   <p class="eye">くわしく 10</p>
-  <h2>30秒で:<wbr/>あなたは目指すべき？</h2>
+  <h2 class="bk">30秒で:<wbr/>あなたは目指すべき？</h2>
   <div class="gk">
 
 <p>ここまでの<wbr/>内容を、<wbr/>6つの<wbr/>質問に<wbr/>まとめました。<strong>講座を<wbr/>売る<wbr/>ための<wbr/>診断ではありません。</strong>結果が<wbr/>「やめた<wbr/>ほうが<wbr/>いい」に<wbr/>なることもあります。<wbr/>思った<wbr/>とおりに<wbr/>答えてみてください。</p>
@@ -363,7 +403,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-8"><div class="w nar">
   <p class="eye">くわしく 11</p>
-  <h2>迷っているなら、<wbr/>次にやること</h2>
+  <h2 class="bk">迷っているなら、<wbr/>次にやること</h2>
   <div class="gk">
 
 <p>ここまで<wbr/>読んで<wbr/>「やめて<wbr/>おこう」と<wbr/>思えたなら、<wbr/>それも<wbr/>ひとつの<wbr/>答えです。<wbr/>35万円と<wbr/>150時間を<wbr/>使わずに<wbr/>済みました。</p>
@@ -386,14 +426,14 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <p><a class="txt-link" href="../../schools/chiiki-renkei-platform/#kai">運営者が<wbr/>出た<wbr/>説明会の<wbr/>話を<wbr/>読む</a></p>
 </aside></div></div></section>
 
-<section class="sec2" id="faq"><div class="w nar"><h2 class="c">よく<wbr/>ある<wbr/>質問</h2><div class="gk"><p>受験までの<wbr/>流れは、<a class="txt-link" href="../../shikaku-guide/">資格まる<wbr/>わかりガイド</a>に<wbr/>まとめています。</p></div><div class="faq"><details><summary><b class="qn">Q</b><span>キャリアコンサルタントの<wbr/>資格は、<wbr/>役に<wbr/>立たないのですか？<wbr/></span></summary><div class="in"><p>資格を<wbr/>取っただけでは、<wbr/>役に<wbr/>立ちません。<wbr/>独占業務が<wbr/>ないので、<wbr/>資格が<wbr/>なくても<wbr/>同じ<wbr/>仕事が<wbr/>できるからです。<wbr/>いまの<wbr/>職場で<wbr/>使う、<wbr/>いまの<wbr/>仕事に<wbr/>足すなど、<wbr/>使う<wbr/>場所が<wbr/>決まっている<wbr/>人には<wbr/>役に<wbr/>立ちます。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>資格を<wbr/>取れば、<wbr/>仕事は<wbr/>ありますか？<wbr/></span></summary><div class="in"><p>資格だけで<wbr/>仕事が<wbr/>来る<wbr/>ことは、<wbr/>ほとんど<wbr/>ありません。<wbr/>ただ、<wbr/>ハローワークや<wbr/>大学の<wbr/>キャリアセンターなどでは、<wbr/>応募の<wbr/>条件に<wbr/>なっていたり、<wbr/>採用で<wbr/>評価されたりする<wbr/>ことがあります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>キャリアコンサルタントだけで<wbr/>生活できますか？<wbr/></span></summary><div class="in"><p>いきなりは<wbr/>難しいと<wbr/>考えて<wbr/>おいた<wbr/>ほうが<wbr/>安心です。<wbr/>労働政策研究・研修機構(JILPT)の<wbr/>調査でも、<wbr/>資格を<wbr/>持っている<wbr/>人の<wbr/>多くは、<wbr/>別に<wbr/>本業を<wbr/>持っています。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>独学で<wbr/>取れますか？<wbr/></span></summary><div class="in"><p>試験の<wbr/>勉強は<wbr/>独学でも<wbr/>できます。<wbr/>ただし、<wbr/>受験するには<wbr/>条件が<wbr/>あり、<wbr/>養成講習(150時間)を<wbr/>修了するか、<wbr/>3年以上の<wbr/>実務経験などが<wbr/>必要です。<wbr/>経験が<wbr/>ない<wbr/>人は、<wbr/>養成講習を<wbr/>受ける<wbr/>ところから<wbr/>始まります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>キャリアアドバイザーとは、<wbr/>何が<wbr/>違うのですか？<wbr/></span></summary><div class="in"><p>キャリアコンサルタントは<wbr/>国家資格の<wbr/>名前、<wbr/>キャリアアドバイザーは<wbr/>おもに<wbr/>人材紹介会社で<wbr/>働く<wbr/>人の<wbr/>職種の<wbr/>名前です。<wbr/>キャリアアドバイザーと<wbr/>して<wbr/>働くのに、<wbr/>資格は<wbr/>必須ではありません。<wbr/></p></div></details></div></div></section>
+<section class="sec2" id="faq"><div class="w nar"><h2 class="c bk">よく<wbr/>ある<wbr/>質問</h2><div class="gk"><p>受験までの<wbr/>流れは、<a class="txt-link" href="../../shikaku-guide/">資格まる<wbr/>わかりガイド</a>に<wbr/>まとめています。</p></div><div class="faq"><details><summary><b class="qn">Q</b><span>キャリアコンサルタントの<wbr/>資格は、<wbr/>役に<wbr/>立たないのですか？<wbr/></span></summary><div class="in"><p>資格を<wbr/>取っただけでは、<wbr/>役に<wbr/>立ちません。<wbr/>独占業務が<wbr/>ないので、<wbr/>資格が<wbr/>なくても<wbr/>同じ<wbr/>仕事が<wbr/>できるからです。<wbr/>いまの<wbr/>職場で<wbr/>使う、<wbr/>いまの<wbr/>仕事に<wbr/>足すなど、<wbr/>使う<wbr/>場所が<wbr/>決まっている<wbr/>人には<wbr/>役に<wbr/>立ちます。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>資格を<wbr/>取れば、<wbr/>仕事は<wbr/>ありますか？<wbr/></span></summary><div class="in"><p>資格だけで<wbr/>仕事が<wbr/>来る<wbr/>ことは、<wbr/>ほとんど<wbr/>ありません。<wbr/>ただ、<wbr/>ハローワークや<wbr/>大学の<wbr/>キャリアセンターなどでは、<wbr/>応募の<wbr/>条件に<wbr/>なっていたり、<wbr/>採用で<wbr/>評価されたりする<wbr/>ことがあります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>キャリアコンサルタントだけで<wbr/>生活できますか？<wbr/></span></summary><div class="in"><p>いきなりは<wbr/>難しいと<wbr/>考えて<wbr/>おいた<wbr/>ほうが<wbr/>安心です。<wbr/>労働政策研究・研修機構(JILPT)の<wbr/>調査でも、<wbr/>資格を<wbr/>持っている<wbr/>人の<wbr/>多くは、<wbr/>別に<wbr/>本業を<wbr/>持っています。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>独学で<wbr/>取れますか？<wbr/></span></summary><div class="in"><p>試験の<wbr/>勉強は<wbr/>独学でも<wbr/>できます。<wbr/>ただし、<wbr/>受験するには<wbr/>条件が<wbr/>あり、<wbr/>養成講習(150時間)を<wbr/>修了するか、<wbr/>3年以上の<wbr/>実務経験などが<wbr/>必要です。<wbr/>経験が<wbr/>ない<wbr/>人は、<wbr/>養成講習を<wbr/>受ける<wbr/>ところから<wbr/>始まります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>キャリアアドバイザーとは、<wbr/>何が<wbr/>違うのですか？<wbr/></span></summary><div class="in"><p>キャリアコンサルタントは<wbr/>国家資格の<wbr/>名前、<wbr/>キャリアアドバイザーは<wbr/>おもに<wbr/>人材紹介会社で<wbr/>働く<wbr/>人の<wbr/>職種の<wbr/>名前です。<wbr/>キャリアアドバイザーと<wbr/>して<wbr/>働くのに、<wbr/>資格は<wbr/>必須ではありません。<wbr/></p></div></details></div></div></section>
 
 <section class="sec2" id="shutten"><div class="w nar"><div class="kakite" id="kakite"><p class="kk-t">この<wbr/>記事を<wbr/>書いた<wbr/>人:ちゃん</p><p class="kk-d">3児の<wbr/>母。<wbr/>国家資格キャリアコンサルタント養成講座を<wbr/>修了。<wbr/>自分が<wbr/>「この<wbr/>資格、<wbr/>本当に<wbr/>意味が<wbr/>あるのか」で<wbr/>迷った<wbr/>ときに<wbr/>知りたかった<wbr/>ことを、<wbr/>一次情報で<wbr/>確認しながら<wbr/>まとめています。</p><p class="kk-d"><a href="../../about/">この<wbr/>サイトに<wbr/>ついて<wbr/> <span aria-hidden="true" class="arw">▶︎</span></a></p></div></div></section>
 
-<section class="sec2" id="tsugi"><div class="w">
+<section class="sec2 gara" id="tsugi"><div class="w">
   <p class="eye c">次の一歩</p>
-  <h2 class="c">あわせて読みたい</h2>
-  <div class="next3"><a class="ncard" href="../kyufukin/"><span class="nn">ガイド</span><span class="tl">給付金で<wbr/>実質いくらに<wbr/>なるか</span></a><a class="ncard" href="../../careers/"><span class="nn">ガイド</span><span class="tl">資格取得後の<wbr/>働き方</span></a><a class="ncard" href="../../schools/compare/"><span class="nn">比較</span><span class="tl">養成学校を<wbr/>比較する</span></a><a class="ncard" href="../how-to-choose/"><span class="nn">ガイド</span><span class="tl">養成学校の<wbr/>選び方</span></a><a class="ncard" href="../working-mothers/"><span class="nn">ガイド</span><span class="tl">子育て中の<wbr/>学校選び</span></a></div>
+  <h2 class="c bk">あわせて<wbr>読みたい</h2>
+  <div class="next3"><a class="ncard" href="../kyufukin/"><span class="nn bk">ガイド</span><span class="tl">給付金で<wbr/>実質いくらに<wbr/>なるか</span></a><a class="ncard" href="../../careers/"><span class="nn bk">ガイド</span><span class="tl">資格取得後の<wbr/>働き方</span></a><a class="ncard" href="../../schools/compare/"><span class="nn bk">比較</span><span class="tl">養成学校を<wbr/>比較する</span></a><a class="ncard" href="../how-to-choose/"><span class="nn bk">ガイド</span><span class="tl">養成学校の<wbr/>選び方</span></a><a class="ncard" href="../working-mothers/"><span class="nn bk">ガイド</span><span class="tl">子育て中の<wbr/>学校選び</span></a></div>
 </div></section>
 </main>
 <section class="picnic" aria-hidden="true"><div class="kscene">

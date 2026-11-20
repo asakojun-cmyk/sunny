@@ -43,7 +43,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/cb-8effffd98c.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-ca31a1ab89.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
 <style id="ippen-guide">
 body.kata .gk{--gk-ink:var(--ink)}
 body.kata .ps.chan .who .tag{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;background:#fff;font-size:10.5px;letter-spacing:.06em;color:var(--sub)}
@@ -56,9 +56,49 @@ body.kata .gk table{max-width:100%}
 body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </style>
 <style id="ippen-h1">@media (max-width:420px){body.kata .hero1 h1{font-size:21px;letter-spacing:.06em}}</style>
-<link rel="stylesheet" href="../../css/cb-19ba1b8168.css" data-src="kyoutsu.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-09b94fd878.css" data-src="kyoutsu.css?v=2026.1120">
+<style id="ippen-guide-soroe">
+/* 道具の段（チェックリスト・計算・診断）は「あお」の地。上下は kata.css の波線 */
+body.kata section.sec2.hb.sky{padding-top:100px!important;padding-bottom:92px!important}
+body.kata .sky .gk-check{background:#fff!important;border:0!important;border-radius:22px!important;padding:4px 22px!important}
+body.kata .sky .gk-check li{border-top-color:var(--line)!important}
+/* 次の一歩は「スタンプ」の地。中身は白い面にのせる（トップの #nayami と同じ形） */
+body.kata section.sec2.gara#tsugi{background:#fff url("../../img/kata/gara_kimete.webp") center top/780px auto repeat!important;padding:104px 0 112px!important}
+body.kata section.sec2.gara#tsugi>.w{background:#fff;border-radius:26px;box-shadow:0 0 20px 22px #fff;padding-top:34px;padding-bottom:40px}
+body.kata section.sec2.gara#tsugi .ncard{background:#fff}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat!important;background-size:100% 40px!important;pointer-events:none}
+body.kata section.sec2.gara#tsugi::before{top:-1px;transform:scaleY(-1)}
+body.kata section.sec2.gara#tsugi::after{bottom:-1px}
+/* 出典・注は小さな字（ほかのページの .src と同じ 13px） */
+body.kata .hb .gk p.src,body.kata .gk .term-section-note{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+/* 強めたい所は黄色の印（太字だけにしない） */
+body.kata .gk strong{padding:0 2px;background:linear-gradient(transparent 60%,#FFEDA6 60%,#FFEDA6 94%,transparent 94%)}
+/* 古い部品を新しい型の形に：注意の箱・正直な話・説明会の箱・ボタン・広告の開示 */
+body.kata .gk .notice-box{max-width:none!important;margin:0 0 36px!important;text-align:left!important}
+body.kata .gk .notice-box p{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+body.kata .gk .honest-link{max-width:none!important;margin:0 0 40px!important;padding:24px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;text-align:left!important}
+body.kata .gk .honest-link__label{margin:0 0 8px!important;font-size:13px!important;font-weight:700;letter-spacing:.1em;color:var(--sub)!important}
+body.kata .gk .honest-link__body{font-size:15.5px!important;line-height:2!important;color:var(--ink)!important}
+body.kata .gk .honest-link__act a{font-size:15px!important}
+body.kata .gk .setsumei-box{max-width:none!important;margin:40px 0 0!important;padding:30px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:none!important;text-align:center}
+body.kata .gk .setsumei-box__t{font-size:18px;color:var(--ink);margin:0 0 8px}
+body.kata .gk .setsumei-box p{font-size:15.5px;line-height:2}
+body.kata .gk .button--primary{display:block;width:100%;max-width:360px;margin:0 auto;box-sizing:border-box;padding:14px 22px;border:1px solid #E07A4F;border-radius:999px;background:#E8865B;color:#fff;box-shadow:0 3px 0 #D06E45;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.04em;text-align:center;white-space:normal!important;text-decoration:none;transform:none}
+body.kata .gk .button--primary:hover{background:#E07A4F;box-shadow:0 3px 0 #D06E45;transform:none}
+body.kata .gk .button--primary[disabled]{opacity:.45;box-shadow:none}
+body.kata .gk .kc__go{max-width:360px;margin:22px auto 0;border:1px solid #E07A4F;background:#E8865B;box-shadow:0 3px 0 #D06E45;font-size:15px;letter-spacing:.04em}
+body.kata .gk .kc__go:hover{background:#E07A4F}
+body.kata .gk details.disclosure .disclosure__more{color:var(--link)!important}
+@media (max-width:760px){
+body.kata section.sec2.hb.sky{padding-top:64px!important;padding-bottom:60px!important}
+body.kata section.sec2.gara#tsugi{background-size:560px auto!important;padding:72px 0 80px!important}
+body.kata section.sec2.gara#tsugi>.w{box-shadow:0 0 12px 12px #fff;padding-top:24px;padding-bottom:28px}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{height:24px;background-size:100% 24px!important}
+body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!important}
+}
+</style>
 </head>
-<body class="kata">
+<body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
   <filter id="sticker" x="-45%" y="-25%" width="190%" height="160%" color-interpolation-filters="sRGB">
     <feGaussianBlur in="SourceAlpha" stdDeviation="7.5" result="b"/>
@@ -75,7 +115,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <main id="main">
 <section class="hero1"><div class="w">
   <p class="eye">考えるためのガイド</p>
-  <h1>キャリアコンサルタントは、<wbr/>副業や在宅で働けるのか</h1>
+  <h1 class="bk">キャリアコンサルタントは、<wbr/>副業や在宅で働けるのか</h1>
   <div class="hstage">
     <img class="garl" src="../../img/kata/sora_garland.webp" alt="" aria-hidden="true">
     <img class="cld c1" src="../../img/parts/01_sky_cloud_left.webp" alt="" aria-hidden="true">
@@ -96,7 +136,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 green" id="kotae"><div class="w nar">
   <p class="eye c">答え</p>
-  <h2 class="c">結論：キャリアコンサルタントは、<wbr/>在宅・副業で<wbr/>働ける？<wbr/></h2>
+  <h2 class="c bk">結論：キャリアコンサルタントは、<wbr/>在宅・副業で<wbr/>働ける？<wbr/></h2>
   <div class="sun2">
     <img src="../../img/kata/sunny.webp" alt="サニー先生" loading="lazy" decoding="async">
     <p class="sb"><span class="who">サニー先生</span><b class="mark">オンライン面談で、家から相談を受ける働き方</b>は選べるよ。ただ、相談に来てくれる人は、自分で見つけることになるよ。</p>
@@ -115,7 +155,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt">このページでわかること</p><ol><li><a href="#sec-0"><span class="tn">1</span><span class="tx">できること・来ないもの。先に結論です</span></a></li><li><a href="#sec-1"><span class="tn">2</span><span class="tx">資格なしでも相談はできる。でも名乗れない</span></a></li><li><a href="#sec-fukugyo"><span class="tn">3</span><span class="tx">「兼業6割」の本当の意味と、週1回以下の人の割合</span></a></li><li><a href="#sec-2"><span class="tn">4</span><span class="tx">まだわからないことと、子育て中のちゃんの1例</span></a></li><li><a href="#sec-3"><span class="tn">5</span><span class="tx">相談・添削や面接練習・いまの仕事に足す、の3つ</span></a></li><li><a href="#sec-4"><span class="tn">6</span><span class="tx">申し込む前に確かめたい4つ</span></a></li></ol><p class="tsub"><a href="#faq">よくある質問</a></p></nav>
   <div class="lead2"><p>子育てや<wbr/>転勤、<wbr/>家族の<wbr/>事情で、<wbr/>外に<wbr/>出て<wbr/>働く<wbr/>時間が<wbr/>限られている方へ。<wbr/>「家で<wbr/>できる<wbr/>仕事に<wbr/>なるなら<wbr/>取りたい」と<wbr/>考えた<wbr/>とき、<wbr/><strong>いま確かめられている<wbr/>こと</strong><wbr/>と、<wbr/><strong>まだ<wbr/>わからない<wbr/>こと</strong><wbr/>を<wbr/>分けて<wbr/>書きます。</p><p class="date">更新日: 2026年10月15日 情報確認日: 2026年10月8日</p><div class="gk"><details aria-label="広告・提供関係の開示" class="disclosure">
-<summary class="disclosure__title"><span class="disclosure__tag">広告</span>このページに広告(紹介リンク)はありません<span class="disclosure__more">くわしく</span></summary>
+<summary class="disclosure__title bk"><span class="disclosure__tag">広告</span>この<wbr>ページに<wbr>広告(紹介リンク)は<wbr>ありません<span class="disclosure__more">くわしく</span></summary>
 <dl class="disclosure__list">
 <div><dt>広告・PR</dt><dd>なし(このページに紹介リンクは含みません。右下の説明会のボタンは、比較表の6校の申込み先へのリンクです)</dd></div><div><dt>学校からの<wbr/>無償提供</dt><dd>受けていません</dd></div><div><dt>数字の<wbr/>根拠</dt><dd>厚生労働省と、<wbr/>労働政策研究・研修機構(JILPT)の<wbr/>公開情報</dd></div>
 </dl>
@@ -124,7 +164,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-0"><div class="w nar">
   <p class="eye">くわしく 1</p>
-  <h2>先に結論</h2>
+  <h2 class="bk">先に<wbr>結論</h2>
   <div class="gk">
 
 <p>在宅や<wbr/>副業で<wbr/>キャリア相談の<wbr/>仕事を<wbr/>する<wbr/>こと自体は、<wbr/>できます。<wbr/>オンライン面談が<wbr/>広がり、<wbr/>家から<wbr/>相談を<wbr/>受ける<wbr/>働き方も<wbr/>選べるようになりました。</p>
@@ -140,17 +180,17 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-1"><div class="w nar">
   <p class="eye">くわしく 2</p>
-  <h2>わかっていること</h2>
+  <h2 class="bk">わかっている<wbr>こと</h2>
   <div class="gk">
 
 <p>公的な<wbr/>情報で<wbr/>確かめられたのは、<wbr/>次の<wbr/>3つです。</p>
-<h3>①資格がなくても、<wbr/>キャリア相談の仕事はできます</h3>
+<h3 class="bk">①資格がなくても、<wbr/>キャリア相談の仕事はできます</h3>
 <p>キャリアコンサルタントは<wbr/><strong>名称独占資格</strong><wbr/>です。<wbr/>資格が<wbr/>ない<wbr/>人は<wbr/>「キャリアコンサルタント」と<wbr/>名乗れませんが、<wbr/>キャリア相談・面接練習・<wbr/>書類添削と<wbr/>いう<wbr/>仕事<wbr/>その<wbr/>ものは、<wbr/>資格が<wbr/>なくても<wbr/>法律上できます。</p>
 <p class="term-section-note">出典: <wbr/><a class="txt-link" href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000198324.html" rel="noopener nofollow" target="_blank">厚生労働省<wbr/>「キャリアコンサルタント名称独占に<wbr/>ついて」</a><wbr/>(確認日: 2026年9月27日)</p>
 <p>つまり、<wbr/>在宅で<wbr/>相談の<wbr/>仕事を<wbr/>始める<wbr/>ときに、<wbr/>資格は<wbr/>「必ず<wbr/>必要な<wbr/>許可証」ではありません。<wbr/>資格で<wbr/>得られるのは、<wbr/>「キャリアコンサルタント」と<wbr/>名乗れる<wbr/>ことと、<wbr/>きちんと<wbr/>学んだと<wbr/>いう<wbr/>裏づけです。</p>
-<h3>②登録が終わるまでは、<wbr/>「キャリアコンサルタント」<wbr/>と名乗れません</h3>
+<h3 class="bk">②登録が終わるまでは、<wbr/>「キャリアコンサルタント」<wbr/>と名乗れません</h3>
 <p>試験に<wbr/>合格しても、<wbr/>名簿に<wbr/>登録するまでは<wbr/>名乗れません。<wbr/>登録前に<wbr/>相談を<wbr/>受ける<wbr/>場合は、<wbr/>「キャリア相談」など、<wbr/>資格名を<wbr/>使わない<wbr/>形にします。</p>
-<h3>③資格を持っている人の多くは、<wbr/>別に本業を持っています</h3>
+<h3 class="bk">③資格を持っている人の多くは、<wbr/>別に本業を持っています</h3>
 <p>労働政策研究・研修機構(JILPT)が<wbr/>2022年7〜8月に<wbr/>行い、<wbr/>7,586人が<wbr/>回答した<wbr/>調査では、<wbr/>回答者の<wbr/>個人年収の<wbr/>中央値は<wbr/>「400万円〜500万円未満」でした。<wbr/>ただ、<wbr/>これは<wbr/><strong>キャリアコンサルタントと<wbr/>して<wbr/>稼いだ額ではなく、<wbr/>その<wbr/>人の<wbr/>個人年収の<wbr/>総額</strong><wbr/>です。</p>
 <p>同じ<wbr/>調査では、<wbr/>正社員と<wbr/>して<wbr/>働いている<wbr/>人ほど、<wbr/>キャリアコンサルティングの<wbr/>活動で<wbr/>得ている<wbr/>収入の<wbr/>割合が<wbr/>低いことも<wbr/>わかっています。<wbr/>この<wbr/>資格だけで<wbr/>生計を<wbr/>立てている<wbr/>人ばかりではない、と<wbr/>いう<wbr/>ことです。</p>
 <p class="term-section-note">出典: 労働政策研究・研修機構<wbr/>「労働政策研究報告書No.227 第2回キャリアコンサルタント登録者の<wbr/>活動状況等に<wbr/>関する<wbr/>調査」<wbr/>(確認日: 2026年9月27日)。<wbr/>くわしい<wbr/>読み方は<wbr/><a class="txt-link" href="../merit-demerit/#sec-3">「年収の<wbr/>数字には、からくりが<wbr/>あります」</a><wbr/>に<wbr/>まとめています。</p>
@@ -159,14 +199,14 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-fukugyo"><div class="w nar">
   <p class="eye">くわしく 3</p>
-  <h2>副業でやっている人は、<wbr/>どのくらいいるのか</h2>
+  <h2 class="bk">副業でやっている人は、<wbr/>どのくらいいるのか</h2>
   <div class="gk">
 
 <p>「副業」<wbr/>「週1」<wbr/>「土日だけ」で<wbr/>探している<wbr/>方に<wbr/>向けて、<wbr/>上と<wbr/>同じ<wbr/>JILPTの<wbr/>調査(7,586人が<wbr/>回答)から、<wbr/>活動の<wbr/>しかたが<wbr/>わかる<wbr/>数字を<wbr/>拾いました。</p>
-<h3>活動している人の約6割は、<wbr/>ほかの仕事と兼ねています</h3>
+<h3 class="bk">活動している人の約6割は、<wbr/>ほかの仕事と兼ねています</h3>
 <p>キャリアコンサルティングに<wbr/>関連する<wbr/>活動を<wbr/>している<wbr/>5,333人の<wbr/>うち、<wbr/>ほかの<wbr/>活動と<wbr/>あわせて<wbr/>携わっている<wbr/>「兼任・兼業」は<wbr/>61.7%、<wbr/>専ら<wbr/>携わっている<wbr/>「専任・専業」は<wbr/>38.3%でした。</p>
 <p>ただし、<wbr/>ここで<wbr/>いう<wbr/>兼任・兼業は、<wbr/><strong class="mk">「土日に<wbr/>別の<wbr/>場所で<wbr/>副業を<wbr/>している<wbr/>人」とは<wbr/>限りません。</strong><wbr/>兼任・兼業の<wbr/>人の<wbr/>約6割は<wbr/>正規雇用で、<wbr/>主な<wbr/>活動の<wbr/>場は<wbr/>「企業」が<wbr/>52.0%です。<wbr/>報告書は、<wbr/>人事や<wbr/>人材開発と<wbr/>いった<wbr/>本務を<wbr/>持ち、<wbr/>そのかたわらで<wbr/>兼務している<wbr/>働き方が<wbr/>多いと<wbr/>考えられる、としています。</p>
-<h3>週1回・月に数回の人は、<wbr/>あわせて約15%です</h3>
+<h3 class="bk">週1回・月に数回の人は、<wbr/>あわせて約15%です</h3>
 <p>直近1年間の<wbr/>活動の<wbr/>頻度は、<wbr/>次の<wbr/>とおりです。</p>
 <ul>
 <li>ほぼ毎日<wbr/>活動している<wbr/> — 28.4%</li>
@@ -178,10 +218,10 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <li>活動していない<wbr/> — 29.7%</li>
 </ul>
 <p>週1回程度・月に<wbr/>2〜3回程度・月1回程度を<wbr/>あわせると、<wbr/>15.1%です。<wbr/>ここに<wbr/>「不定期」を<wbr/>足すと<wbr/>32.6%で、<wbr/>約3人に<wbr/>1人が、<wbr/>週1回以下か<wbr/>不定期で<wbr/>関わっています。<wbr/>その<wbr/>一方で、<wbr/>約3割は<wbr/>活動していません。</p>
-<h3>活動していない人の、<wbr/>いちばん多い理由</h3>
+<h3 class="bk">活動していない人の、<wbr/>いちばん多い理由</h3>
 <p>活動していない<wbr/>2,253人が<wbr/>挙げた<wbr/>理由(複数回答)で<wbr/>多かったのは、<wbr/>「キャリアコンサルティングとは<wbr/>関係の<wbr/>ない<wbr/>組織、<wbr/>部署等に<wbr/>所属している」<wbr/>(53.4%)、<wbr/>「周囲に<wbr/>キャリアコンサルティングの<wbr/>仕事(ニーズ)が<wbr/>ない」<wbr/>(34.7%)でした。<wbr/>自由記述には、<wbr/>「未経験者の<wbr/>求人が<wbr/>ない」<wbr/>「兼業・副業が<wbr/>できない」と<wbr/>いう<wbr/>声も<wbr/>あります。</p>
 <p>それでも、<wbr/>活動していない<wbr/>人の<wbr/>約7割は、<wbr/>活動を<wbr/>始めたい<wbr/>(再開したい)と<wbr/>答えています。<wbr/>取った<wbr/>あとに<wbr/>止まっている<wbr/>人が<wbr/>少なくない<wbr/>ことは、<wbr/>申し込む前に<wbr/>知って<wbr/>おいてほしい<wbr/>点です。</p>
-<h3>フリーランス・自営の人の、<wbr/>仕事の日数と受け方</h3>
+<h3 class="bk">フリーランス・自営の人の、<wbr/>仕事の日数と受け方</h3>
 <p>フリーランス・<wbr/>自営で<wbr/>活動している<wbr/>人に<wbr/>ついて、<wbr/>報告書は<wbr/>次の<wbr/>数字を<wbr/>示しています。</p>
 <ul>
 <li>キャリアコンサルタントと<wbr/>して<wbr/>仕事を<wbr/>した<wbr/>日数は、<wbr/>1か<wbr/>月あたり7日(中央値)</li>
@@ -192,7 +232,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <p>相談の<wbr/>1時間<wbr/>あたりの<wbr/>報酬は、<wbr/>自分で<wbr/>相手先に<wbr/>営業して<wbr/>仕事を<wbr/>得た<wbr/>人では<wbr/>半数が<wbr/>5,000円以上、<wbr/>それ以外の<wbr/>方法で<wbr/>仕事を<wbr/>得た<wbr/>人では<wbr/>半数が<wbr/>2,825円以上でした。</p>
 <p>ここから<wbr/>読み取れるのは、<wbr/><strong>仕事は、<wbr/>求人よりも<wbr/>人の<wbr/>つながりから<wbr/>来ている</strong><wbr/>と<wbr/>いう<wbr/>ことです。<wbr/>始めたばかりの<wbr/>時期は、<wbr/>月に<wbr/>1日ほどの<wbr/>人が<wbr/>真ん中に<wbr/>います。</p>
 <p class="term-section-note">出典: 労働政策研究・研修機構<wbr/>「労働政策研究報告書No.227 第2回キャリアコンサルタント登録者の<wbr/>活動状況等に<wbr/>関する<wbr/>調査」<wbr/>(確認日: 2026年10月8日)</p>
-<h3>「週1日から」<wbr/>「フルリモート」<wbr/>の求人について</h3>
+<h3 class="bk">「週1日から」<wbr/>「フルリモート」<wbr/>の求人について</h3>
 <p>求人サイトで<wbr/>「キャリアコンサルタント 副業」を<wbr/>探すと、<wbr/>「週1日から<wbr/>OK」<wbr/>「フルリモート」<wbr/>「副業歓迎」と<wbr/>書かれた<wbr/>募集が<wbr/>見つかります<wbr/>(2026年10月8日に<wbr/>確認)。<wbr/>応募する<wbr/>前に、<wbr/>次の<wbr/>3つを<wbr/>見てください。</p>
 <ul>
 <li><strong>仕事の<wbr/>中身</strong>:<wbr/>「キャリアコンサルタント」<wbr/>「キャリアアドバイザー」と<wbr/>いう<wbr/>名前でも、<wbr/>人材紹介の<wbr/>営業職の<wbr/>募集が<wbr/>多く<wbr/>混ざっています</li>
@@ -209,7 +249,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-2"><div class="w nar">
   <p class="eye">くわしく 4</p>
-  <h2>まだわからないこと</h2>
+  <h2 class="bk">まだわからない<wbr>こと</h2>
   <div class="gk">
 
 <p>いちばん知りたい<wbr/>ところほど、<wbr/>まだ<wbr/>確かめられていません。<wbr/>正直に<wbr/>並べます。</p>
@@ -219,7 +259,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <div class="fact-row"><dt>最初の<wbr/>相談者を、<wbr/>どう<wbr/>見つけるのか</dt><dd>フリーランス・<wbr/>自営の<wbr/>人では<wbr/>「紹介」が<wbr/>多い、と<wbr/>いう<wbr/>ところまでは<wbr/>わかっています。<wbr/>経験も<wbr/>人脈も<wbr/>ない<wbr/>状態から、<wbr/>最初の<wbr/>1人に<wbr/>どうたどり着くのかは、<wbr/>確認できていません</dd></div>
 <div class="fact-row"><dt>子育てや<wbr/>転勤と、<wbr/>本当に<wbr/>両立できるのか</dt><dd>両立している<wbr/>人が<wbr/>どの<wbr/>くらいいるのかを<wbr/>示す数字は、<wbr/>確認できていません</dd></div>
 </div>
-<h3 id="sec-2-chan">運営者(ちゃん)の<wbr/>場合 — 1人の<wbr/>例です</h3>
+<h3 class="bk" id="sec-2-chan">運営者(ちゃん)の<wbr/>場合 — 1人の<wbr/>例です</h3>
 <p>公的な<wbr/>数字が<wbr/>ない<wbr/>ところを、<wbr/>わたし自身の<wbr/>活動で<wbr/>お伝えします。<wbr/>3児の<wbr/>母で、<wbr/>転勤の<wbr/>ある<wbr/>家庭です。<wbr/>資格の<wbr/>登録前の<wbr/>活動で、<wbr/>たくさんの<wbr/>人を<wbr/>調べた<wbr/>結果ではありません。</p>
 <div class="fact-table">
 <div class="fact-row"><dt>最初の<wbr/>相談者を、<wbr/>どう<wbr/>見つけたか</dt><dd>最初の<wbr/>相談者は、<wbr/>友人でした。<wbr/>お金を<wbr/>いただいての<wbr/>キャリア相談は、<wbr/>インターネットで<wbr/>所属している<wbr/>コミュニティの<wbr/>中で<wbr/>受けました。<wbr/>最初の<wbr/>金額は、<wbr/>1時間1,000円でした</dd></div>
@@ -241,7 +281,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-3"><div class="w nar">
   <p class="eye">くわしく 5</p>
-  <h2>在宅で活かすときの、<wbr/>3つの形</h2>
+  <h2 class="bk">在宅で活かすときの、<wbr/>3つの形</h2>
   <div class="gk">
 
 <p>在宅で<wbr/>資格を<wbr/>活かす形は、<wbr/>大きく<wbr/>分けて<wbr/>3つあります。<wbr/>どれも<wbr/>「資格を<wbr/>取ったら<wbr/>自動的に<wbr/>始まる」<wbr/>ものではなく、<wbr/>自分で<wbr/>場を<wbr/>作る<wbr/>ものです。</p>
@@ -259,9 +299,9 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </div>
 </div></section>
 
-<section class="sec2 hb" id="sec-4"><div class="w nar">
+<section class="sec2 hb sky" id="sec-4"><div class="w nar">
   <p class="eye">くわしく 6</p>
-  <h2>制約がある人が、<wbr/>申し込む前に確かめたいこと</h2>
+  <h2 class="bk">制約がある人が、<wbr/>申し込む前に確かめたいこと</h2>
   <div class="gk">
 
 <p>費用は<wbr/>35〜55万円前後、<wbr/>講習は<wbr/>150時間です。<wbr/>時間も<wbr/>お金も<wbr/>限られているなら、<wbr/>申し込む前に<wbr/>次の<wbr/>4つを<wbr/>確かめてください。</p>
@@ -276,7 +316,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-5"><div class="w nar">
   <p class="eye">くわしく 7</p>
-  <h2>次に読む</h2>
+  <h2 class="bk">次に<wbr>読む</h2>
   <div class="gk">
 
 <p>ここまで<wbr/>読んで<wbr/>「それでも<wbr/>気に<wbr/>なる」と<wbr/>思えたなら、<wbr/>次は<wbr/>全体の<wbr/>流れと<wbr/>費用を<wbr/>確かめてみてください。</p>
@@ -295,14 +335,14 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <p><a class="txt-link" href="../../schools/chiiki-renkei-platform/#kai">運営者が<wbr/>出た<wbr/>説明会の<wbr/>話を<wbr/>読む</a></p>
 </aside></div></div></section>
 
-<section class="sec2" id="faq"><div class="w nar"><h2 class="c">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>資格を<wbr/>取れば、<wbr/>在宅の<wbr/>仕事は<wbr/>来ますか？<wbr/></span></summary><div class="in"><p>資格を<wbr/>取っても、<wbr/>仕事が<wbr/>自動的に<wbr/>来るわけではありません。<wbr/>相談に<wbr/>来てくれる<wbr/>人は、<wbr/>自分で<wbr/>見つける<wbr/>必要が<wbr/>あります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>資格が<wbr/>なくても、<wbr/>キャリア相談の<wbr/>仕事は<wbr/>できますか？<wbr/></span></summary><div class="in"><p>できます。<wbr/>名称独占資格なので、<wbr/>資格が<wbr/>ないと<wbr/>「キャリアコンサルタント」とは<wbr/>名乗れませんが、<wbr/>相談の<wbr/>仕事<wbr/>その<wbr/>ものは<wbr/>法律上できます。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>副業で<wbr/>活動している<wbr/>人は、<wbr/>多いですか？<wbr/></span></summary><div class="in"><p>活動している<wbr/>人の<wbr/>約6割は<wbr/>ほかの<wbr/>仕事と<wbr/>兼ねていますが、<wbr/>多くは<wbr/>会社の<wbr/>中で<wbr/>人事などと<wbr/>兼務する<wbr/>働き方です。<wbr/>週1回・月に<wbr/>数回の<wbr/>人は、<wbr/>あわせて<wbr/>約15%です。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>在宅だけで、<wbr/>いくら稼げますか？<wbr/></span></summary><div class="in"><p>在宅や<wbr/>オンラインの<wbr/>活動に<wbr/>限った<wbr/>収入を<wbr/>示す公的な<wbr/>数字は、<wbr/>確認できていません。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>子育て<wbr/>中でも、<wbr/>在宅で<wbr/>相談の<wbr/>仕事は<wbr/>できますか？<wbr/></span></summary><div class="in"><p>運営者は、<wbr/>子どもが<wbr/>学校に<wbr/>行っている<wbr/>10時〜15時に<wbr/>相談を<wbr/>受けています。<wbr/>夜は<wbr/>子どもが<wbr/>起きてしまう<wbr/>ことが<wbr/>多く、<wbr/>試している<wbr/>ところです(1人の<wbr/>例です)。<wbr/></p></div></details></div></div></section>
+<section class="sec2" id="faq"><div class="w nar"><h2 class="c bk">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>資格を<wbr/>取れば、<wbr/>在宅の<wbr/>仕事は<wbr/>来ますか？<wbr/></span></summary><div class="in"><p>資格を<wbr/>取っても、<wbr/>仕事が<wbr/>自動的に<wbr/>来るわけではありません。<wbr/>相談に<wbr/>来てくれる<wbr/>人は、<wbr/>自分で<wbr/>見つける<wbr/>必要が<wbr/>あります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>資格が<wbr/>なくても、<wbr/>キャリア相談の<wbr/>仕事は<wbr/>できますか？<wbr/></span></summary><div class="in"><p>できます。<wbr/>名称独占資格なので、<wbr/>資格が<wbr/>ないと<wbr/>「キャリアコンサルタント」とは<wbr/>名乗れませんが、<wbr/>相談の<wbr/>仕事<wbr/>その<wbr/>ものは<wbr/>法律上できます。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>副業で<wbr/>活動している<wbr/>人は、<wbr/>多いですか？<wbr/></span></summary><div class="in"><p>活動している<wbr/>人の<wbr/>約6割は<wbr/>ほかの<wbr/>仕事と<wbr/>兼ねていますが、<wbr/>多くは<wbr/>会社の<wbr/>中で<wbr/>人事などと<wbr/>兼務する<wbr/>働き方です。<wbr/>週1回・月に<wbr/>数回の<wbr/>人は、<wbr/>あわせて<wbr/>約15%です。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>在宅だけで、<wbr/>いくら稼げますか？<wbr/></span></summary><div class="in"><p>在宅や<wbr/>オンラインの<wbr/>活動に<wbr/>限った<wbr/>収入を<wbr/>示す公的な<wbr/>数字は、<wbr/>確認できていません。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>子育て<wbr/>中でも、<wbr/>在宅で<wbr/>相談の<wbr/>仕事は<wbr/>できますか？<wbr/></span></summary><div class="in"><p>運営者は、<wbr/>子どもが<wbr/>学校に<wbr/>行っている<wbr/>10時〜15時に<wbr/>相談を<wbr/>受けています。<wbr/>夜は<wbr/>子どもが<wbr/>起きてしまう<wbr/>ことが<wbr/>多く、<wbr/>試している<wbr/>ところです(1人の<wbr/>例です)。<wbr/></p></div></details></div></div></section>
 
 <section class="sec2" id="shutten"><div class="w nar"><div class="kakite" id="kakite"><p class="kk-t">この<wbr/>記事を<wbr/>書いた<wbr/>人:ちゃん</p><p class="kk-d">3児の<wbr/>母。<wbr/>国家資格キャリアコンサルタント養成講座を<wbr/>修了。<wbr/>自分が<wbr/>迷った<wbr/>ときに<wbr/>知りたかった<wbr/>ことを、<wbr/>一次情報で<wbr/>確認しながら<wbr/>まとめています。</p><p class="kk-d"><a href="../../about/">この<wbr/>サイトに<wbr/>ついて <wbr/><span aria-hidden="true" class="arw">▶︎</span></a></p></div></div></section>
 
-<section class="sec2" id="tsugi"><div class="w">
+<section class="sec2 gara" id="tsugi"><div class="w">
   <p class="eye c">次の一歩</p>
-  <h2 class="c">あわせて読みたい</h2>
-  <div class="next3"><a class="ncard" href="../merit-demerit/"><span class="nn">ガイド</span><span class="tl">やめた<wbr/>ほうが<wbr/>いい<wbr/>人も<wbr/>います</span></a><a class="ncard" href="../../careers/"><span class="nn">ガイド</span><span class="tl">資格取得後の<wbr/>働き方</span></a><a class="ncard" href="../working-mothers/"><span class="nn">ガイド</span><span class="tl">子育て中の<wbr/>学校選び</span></a><a class="ncard" href="../online/"><span class="nn">ガイド</span><span class="tl">オンライン講座の<wbr/>選び方</span></a></div>
+  <h2 class="c bk">あわせて<wbr>読みたい</h2>
+  <div class="next3"><a class="ncard" href="../merit-demerit/"><span class="nn bk">ガイド</span><span class="tl">やめた<wbr/>ほうが<wbr/>いい<wbr/>人も<wbr/>います</span></a><a class="ncard" href="../../careers/"><span class="nn bk">ガイド</span><span class="tl">資格取得後の<wbr/>働き方</span></a><a class="ncard" href="../working-mothers/"><span class="nn bk">ガイド</span><span class="tl">子育て中の<wbr/>学校選び</span></a><a class="ncard" href="../online/"><span class="nn bk">ガイド</span><span class="tl">オンライン講座の<wbr/>選び方</span></a></div>
 </div></section>
 </main>
 <section class="picnic" aria-hidden="true"><div class="kscene">

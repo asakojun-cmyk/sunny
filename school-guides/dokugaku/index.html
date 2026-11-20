@@ -43,7 +43,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/cb-8effffd98c.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-ca31a1ab89.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
 <style id="ippen-guide">
 body.kata .gk{--gk-ink:var(--ink)}
 body.kata .ps.chan .who .tag{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;background:#fff;font-size:10.5px;letter-spacing:.06em;color:var(--sub)}
@@ -56,9 +56,49 @@ body.kata .gk table{max-width:100%}
 body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </style>
 <style id="ippen-h1">@media (max-width:420px){body.kata .hero1 h1{font-size:21px;letter-spacing:.06em}}</style>
-<link rel="stylesheet" href="../../css/cb-19ba1b8168.css" data-src="kyoutsu.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-09b94fd878.css" data-src="kyoutsu.css?v=2026.1120">
+<style id="ippen-guide-soroe">
+/* 道具の段（チェックリスト・計算・診断）は「あお」の地。上下は kata.css の波線 */
+body.kata section.sec2.hb.sky{padding-top:100px!important;padding-bottom:92px!important}
+body.kata .sky .gk-check{background:#fff!important;border:0!important;border-radius:22px!important;padding:4px 22px!important}
+body.kata .sky .gk-check li{border-top-color:var(--line)!important}
+/* 次の一歩は「スタンプ」の地。中身は白い面にのせる（トップの #nayami と同じ形） */
+body.kata section.sec2.gara#tsugi{background:#fff url("../../img/kata/gara_kimete.webp") center top/780px auto repeat!important;padding:104px 0 112px!important}
+body.kata section.sec2.gara#tsugi>.w{background:#fff;border-radius:26px;box-shadow:0 0 20px 22px #fff;padding-top:34px;padding-bottom:40px}
+body.kata section.sec2.gara#tsugi .ncard{background:#fff}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat!important;background-size:100% 40px!important;pointer-events:none}
+body.kata section.sec2.gara#tsugi::before{top:-1px;transform:scaleY(-1)}
+body.kata section.sec2.gara#tsugi::after{bottom:-1px}
+/* 出典・注は小さな字（ほかのページの .src と同じ 13px） */
+body.kata .hb .gk p.src,body.kata .gk .term-section-note{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+/* 強めたい所は黄色の印（太字だけにしない） */
+body.kata .gk strong{padding:0 2px;background:linear-gradient(transparent 60%,#FFEDA6 60%,#FFEDA6 94%,transparent 94%)}
+/* 古い部品を新しい型の形に：注意の箱・正直な話・説明会の箱・ボタン・広告の開示 */
+body.kata .gk .notice-box{max-width:none!important;margin:0 0 36px!important;text-align:left!important}
+body.kata .gk .notice-box p{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+body.kata .gk .honest-link{max-width:none!important;margin:0 0 40px!important;padding:24px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;text-align:left!important}
+body.kata .gk .honest-link__label{margin:0 0 8px!important;font-size:13px!important;font-weight:700;letter-spacing:.1em;color:var(--sub)!important}
+body.kata .gk .honest-link__body{font-size:15.5px!important;line-height:2!important;color:var(--ink)!important}
+body.kata .gk .honest-link__act a{font-size:15px!important}
+body.kata .gk .setsumei-box{max-width:none!important;margin:40px 0 0!important;padding:30px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:none!important;text-align:center}
+body.kata .gk .setsumei-box__t{font-size:18px;color:var(--ink);margin:0 0 8px}
+body.kata .gk .setsumei-box p{font-size:15.5px;line-height:2}
+body.kata .gk .button--primary{display:block;width:100%;max-width:360px;margin:0 auto;box-sizing:border-box;padding:14px 22px;border:1px solid #E07A4F;border-radius:999px;background:#E8865B;color:#fff;box-shadow:0 3px 0 #D06E45;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.04em;text-align:center;white-space:normal!important;text-decoration:none;transform:none}
+body.kata .gk .button--primary:hover{background:#E07A4F;box-shadow:0 3px 0 #D06E45;transform:none}
+body.kata .gk .button--primary[disabled]{opacity:.45;box-shadow:none}
+body.kata .gk .kc__go{max-width:360px;margin:22px auto 0;border:1px solid #E07A4F;background:#E8865B;box-shadow:0 3px 0 #D06E45;font-size:15px;letter-spacing:.04em}
+body.kata .gk .kc__go:hover{background:#E07A4F}
+body.kata .gk details.disclosure .disclosure__more{color:var(--link)!important}
+@media (max-width:760px){
+body.kata section.sec2.hb.sky{padding-top:64px!important;padding-bottom:60px!important}
+body.kata section.sec2.gara#tsugi{background-size:560px auto!important;padding:72px 0 80px!important}
+body.kata section.sec2.gara#tsugi>.w{box-shadow:0 0 12px 12px #fff;padding-top:24px;padding-bottom:28px}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{height:24px;background-size:100% 24px!important}
+body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!important}
+}
+</style>
 </head>
-<body class="kata">
+<body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
   <filter id="sticker" x="-45%" y="-25%" width="190%" height="160%" color-interpolation-filters="sRGB">
     <feGaussianBlur in="SourceAlpha" stdDeviation="7.5" result="b"/>
@@ -75,7 +115,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <main id="main">
 <section class="hero1"><div class="w">
   <p class="eye">養成講座ガイド</p>
-  <h1>キャリアコンサルタントは<wbr/>独学で<wbr/>取れる？<wbr/> <wbr/>—<wbr/> <wbr/>受験資格の条件</h1>
+  <h1 class="bk">キャリアコンサルタントは<wbr/>独学で<wbr/>取れる？<wbr/> <wbr/>—<wbr/> <wbr/>受験資格の条件</h1>
   <div class="hstage">
     <img class="garl" src="../../img/kata/sora_garland.webp" alt="" aria-hidden="true">
     <img class="cld c1" src="../../img/parts/01_sky_cloud_left.webp" alt="" aria-hidden="true">
@@ -96,7 +136,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 green" id="kotae"><div class="w nar">
   <p class="eye c">答え</p>
-  <h2 class="c">結論：キャリアコンサルタントは、<wbr/>独学で<wbr/>取れる？<wbr/></h2>
+  <h2 class="c bk">結論：キャリアコンサルタントは、<wbr/>独学で<wbr/>取れる？<wbr/></h2>
   <div class="sun2">
     <img src="../../img/kata/sunny.webp" alt="サニー先生" loading="lazy" decoding="async">
     <p class="sb"><span class="who">サニー先生</span>独学だけでは受験できないよ。受験資格がいるからね。でも、<b class="mark">試験の勉強そのものは独学でも進められる</b>よ。</p>
@@ -115,7 +155,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt">このページでわかること</p><ol><li><a href="#sec-0"><span class="tn">1</span><span class="tx">宅建やFPとちがって、受験資格がいります</span></a></li><li><a href="#sec-1"><span class="tn">2</span><span class="tx">認められているルートは3つ</span></a></li><li><a href="#sec-2"><span class="tn">3</span><span class="tx">思ったより条件が細かい「3年」の中身</span></a></li><li><a href="#sec-3"><span class="tn">4</span><span class="tx">独学が活躍するのは、試験勉強のほうです</span></a></li><li><a href="#ratio"><span class="tn">5</span><span class="tx">約9割は修了者。実技の合格率に差が出ています</span></a></li><li><a href="#my-study"><span class="tn">6</span><span class="tx">チームで論述を見せ合い、週1回Zoomで練習</span></a></li><li><a href="#sec-4"><span class="tn">7</span><span class="tx">受験料・登録料・5年ごとの更新まで</span></a></li></ol><p class="tsub"><a href="#faq">よくある質問</a></p></nav>
   <div class="lead2"><p>「養成講習は<wbr/>高いし、<wbr/>独学で<wbr/>受けられないかな」と<wbr/>考える方は<wbr/>多いと<wbr/>思います。<wbr/>先に<wbr/>結論を<wbr/>言うと、<wbr/>独学だけでは<wbr/>受験できません。<wbr/>その<wbr/>理由と、<wbr/>受験が<wbr/>認められている<wbr/>3つの<wbr/>ルートを<wbr/>まとめました。</p><p class="date">更新日: 2026年10月15日 情報確認日: 2026年9月24日</p><div class="gk"><details aria-label="広告・提供関係の開示" class="disclosure">
-<summary class="disclosure__title"><span class="disclosure__tag">広告</span>このページに広告(紹介リンク)はありません<span class="disclosure__more">くわしく</span></summary>
+<summary class="disclosure__title bk"><span class="disclosure__tag">広告</span>この<wbr>ページに<wbr>広告(紹介リンク)は<wbr>ありません<span class="disclosure__more">くわしく</span></summary>
 <dl class="disclosure__list">
 <div><dt>広告・PR</dt><dd>なし(このページに紹介リンクは含みません。右下の説明会のボタンは、比較表の6校の申込み先へのリンクです)</dd></div><div><dt>学校からの<wbr/>無償提供</dt><dd>受けていません</dd></div><div><dt>情報の<wbr/>根拠</dt><dd>キャリアコンサルティング協議会・厚生労働省の<wbr/>公開情報</dd></div>
 </dl>
@@ -124,7 +164,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-0"><div class="w nar">
   <p class="eye">くわしく 1</p>
-  <h2>結論:<wbr/>キャリアコンサルタントは<wbr/>独学だけでは<wbr/>受験できません</h2>
+  <h2 class="bk">結論:<wbr/>キャリアコンサルタントは<wbr/>独学だけでは<wbr/>受験できません</h2>
   <div class="gk">
 
 <p>国家資格キャリアコンサルタント試験には<strong>受験資格</strong>が<wbr/>あり、<wbr/>誰でも<wbr/>申し込めるわけではありません。</p>
@@ -139,7 +179,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-1"><div class="w nar">
   <p class="eye">くわしく 2</p>
-  <h2>受験資格と<wbr/>して<wbr/>認められる<wbr/>3つの<wbr/>ルート</h2>
+  <h2 class="bk">受験資格と<wbr/>して<wbr/>認められる<wbr/>3つの<wbr/>ルート</h2>
   <div class="gk">
 
 <p>試験実施機関が<wbr/>公表している<wbr/>受験資格は、<wbr/>次の<wbr/>3つです。</p>
@@ -155,7 +195,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-2"><div class="w nar">
   <p class="eye">くわしく 3</p>
-  <h2>「実務経験3年」<wbr/>は、<wbr/>思ったより条件が細かい</h2>
+  <h2 class="bk">「実務経験3年」<wbr/>は、<wbr/>思ったより条件が細かい</h2>
   <div class="gk">
 
 <p>「人事の<wbr/>仕事を<wbr/>していたから、<wbr/>実務経験に<wbr/>なるのでは？」と<wbr/>思う<wbr/>方も<wbr/>いるかもしれません。<wbr/>ただ、<wbr/>認められる<wbr/>相談には<wbr/>条件が<wbr/>あり、<wbr/>公式には<wbr/>次のように<wbr/>書かれています。</p>
@@ -175,7 +215,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-3"><div class="w nar">
   <p class="eye">くわしく 4</p>
-  <h2>キャリアコンサルタント試験の<wbr/>勉強は、<wbr/>独学でもできます</h2>
+  <h2 class="bk">キャリアコンサルタント試験の<wbr/>勉強は、<wbr/>独学でもできます</h2>
   <div class="gk">
 
 <p>誤解されやすいのですが、<wbr/>独学で<wbr/>どうにもならないのは<strong>受験資格を<wbr/>得る<wbr/>ところ</strong>だけです。<wbr/>受験資格さえ<wbr/>あれば、<strong>試験勉強<wbr/>その<wbr/>ものは<wbr/>独学でも<wbr/>進められます</strong>。</p>
@@ -190,7 +230,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="ratio"><div class="w nar">
   <p class="eye">くわしく 5</p>
-  <h2>養成講習を<wbr/>受けずに<wbr/>受ける<wbr/>人は、<wbr/>どれくらいいる？</h2>
+  <h2 class="bk">養成講習を<wbr/>受けずに<wbr/>受ける<wbr/>人は、<wbr/>どれくらいいる？</h2>
   <div class="gk">
 
 <p>厚生労働省が<wbr/>公表している、<wbr/>第31回試験(2026年3月)の<wbr/>結果を<wbr/>見てみます。</p>
@@ -207,23 +247,23 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="my-study"><div class="w nar">
   <p class="eye">くわしく 6</p>
-  <h2>わたしが<wbr/>修了後に<wbr/>やっている<wbr/>試験勉強(合格前の<wbr/>記録)</h2>
+  <h2 class="bk">わたしが<wbr/>修了後に<wbr/>やっている<wbr/>試験勉強(合格前の<wbr/>記録)</h2>
   <div class="gk">
 
 <p>わたしは<wbr/>養成講習を<wbr/>修了して、<wbr/>2026年11月の<wbr/>試験に<wbr/>挑戦している<wbr/>ところです。<wbr/>まだ合格していないので、<wbr/>「合格した<wbr/>勉強法」ではありません。<wbr/>いまやっている<wbr/>ことを、<wbr/>そのまま<wbr/>書きます。<wbr/>試験は、<wbr/>キャリアコンサルティング協議会で<wbr/>受けます。</p>
-<h3>学科は、<wbr/>過去問を<wbr/>解いて、<wbr/>わからない<wbr/>ところを<wbr/>埋める</h3>
+<h3 class="bk">学科は、<wbr/>過去問を<wbr/>解いて、<wbr/>わからない<wbr/>ところを<wbr/>埋める</h3>
 <p>学科は、<wbr/>過去問を<wbr/>解いています。<wbr/>過去問を<wbr/>解いて、<wbr/>わからない<wbr/>ところの<wbr/>ジャンルを<wbr/>把握して、<wbr/>埋めている<wbr/>感じです。</p>
 <p>やり方は、<strong>過去問を<wbr/>解く<wbr/> → 用語が<wbr/>わからない<wbr/> → この<wbr/>サイトで<wbr/>調べる<wbr/> → 用語の<wbr/>意味や<wbr/>背景も<wbr/>一緒に<wbr/>学ぶ → 定着する</strong>、と<wbr/>いう<wbr/>流れです。<wbr/>この<wbr/>サイトで<wbr/>本当に<wbr/>勉強に<wbr/>なるのか、<wbr/>自分で<wbr/>実験している<wbr/>ところでも<wbr/>あります。</p>
-<h3>論述は、<wbr/>チームで<wbr/>過去問を<wbr/>解いて、<wbr/>見せ合う</h3>
+<h3 class="bk">論述は、<wbr/>チームで<wbr/>過去問を<wbr/>解いて、<wbr/>見せ合う</h3>
 <p>論述と<wbr/>面接は、<wbr/>養成学校の<wbr/>チームで<wbr/>一緒に<wbr/>取り組んでいます。</p>
 <p>論述は、<wbr/>過去問3回分を<wbr/>解いて、<wbr/>LINEで<wbr/>共有し、<wbr/>AIで<wbr/>採点しています。<wbr/>点数が<wbr/>高い人の<wbr/>答案の<wbr/>どこが<wbr/>良かったのか、<wbr/>どんな<wbr/>テンプレートで<wbr/>書けばいいのかを<wbr/>分析して、<wbr/>その<wbr/>3回分を<wbr/>試験まで<wbr/>繰り返し<wbr/>解きます。</p>
-<h3>面接は、<wbr/>週に<wbr/>1回、<wbr/>Zoomで<wbr/>練習する</h3>
+<h3 class="bk">面接は、<wbr/>週に<wbr/>1回、<wbr/>Zoomで<wbr/>練習する</h3>
 <p>面接は<wbr/>週に<wbr/>1回、<wbr/>Zoomで<wbr/>面談と<wbr/>口頭試問の<wbr/>練習を<wbr/>しています。<wbr/>2名いれば<wbr/>始められます。<wbr/>人数が<wbr/>多い<wbr/>ときは<wbr/>3人1チームに<wbr/>なって、<wbr/>キャリアコンサルタント役(CC)・相談者役(CL)・オブザーバーを<wbr/>交代で<wbr/>担当します。</p>
 <p>時間は、<wbr/>面談が<wbr/>15分、<wbr/>口頭試問が<wbr/>5分ほど、<wbr/>その<wbr/>あとに<wbr/>振り返りです。<wbr/>Zoomの<wbr/>40分で、<wbr/>ちょうど<wbr/>1回分に<wbr/>なります。</p>
-<h3>修了後に、<wbr/>お金は<wbr/>かけていません</h3>
+<h3 class="bk">修了後に、<wbr/>お金は<wbr/>かけていません</h3>
 <p>学校の<wbr/>卒業後サポート(キャリア・オアシス)は、<wbr/>費用が<wbr/>高いと<wbr/>感じたので<wbr/>使いませんでした。<wbr/>マンツーマンで<wbr/>勉強したい<wbr/>人や、<wbr/>養成学校で<wbr/>横の<wbr/>つながりが<wbr/>できなかった<wbr/>人は、<wbr/>利用すると<wbr/>いいのかなと<wbr/>思います。</p>
 <p>Zoomの<wbr/>練習に<wbr/>タイミングが<wbr/>合わない<wbr/>人は、<wbr/>キャリコンスタディの<a class="txt-link" href="https://careerconsultant-study.com/roleplay-freeroom/" rel="noopener nofollow" target="_blank">無料ロープレ練習ルーム</a>に<wbr/>参加していました。<wbr/>わたしは<wbr/>参加していないので、<wbr/>開催日や<wbr/>参加の<wbr/>条件は<wbr/>公式ページで<wbr/>確認してください。</p>
-<h3>養成講習だけでは<wbr/>足りなかった<wbr/>もの</h3>
+<h3 class="bk">養成講習だけでは<wbr/>足りなかった<wbr/>もの</h3>
 <p>養成講習だけで<wbr/>足りないと<wbr/>感じたのは、<strong class="mk">面談と<wbr/>ロープレの<wbr/>練習相手、<wbr/>伴走してくれる<wbr/>相手</strong>です。<wbr/>しっかり<wbr/>横の<wbr/>つながりを<wbr/>作る<wbr/>ことが<wbr/>大切だと<wbr/>思います。</p>
 <p>自分が<wbr/>資格を<wbr/>取れたら、<wbr/>初学者が<wbr/>気兼ねなく<wbr/>練習できる<wbr/>コミュニティを<wbr/>作れたら<wbr/>いいな、と<wbr/>考えています。</p>
 <div class="pair">
@@ -236,7 +276,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-4"><div class="w nar">
   <p class="eye">くわしく 7</p>
-  <h2>キャリアコンサルタント資格の<wbr/>取得にかかる<wbr/>費用の全体像</h2>
+  <h2 class="bk">キャリアコンサルタント資格の<wbr/>取得にかかる<wbr/>費用の全体像</h2>
   <div class="gk">
 
 <p>つい養成講習の<wbr/>受講料だけで<wbr/>考えがちですが、<wbr/>キャリアコンサルタントと<wbr/>名乗れるように<wbr/>なるまでには、<wbr/>ほかにも<wbr/>費用が<wbr/>かかります。</p>
@@ -269,14 +309,14 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <p><a class="txt-link" href="../../schools/chiiki-renkei-platform/#kai">運営者が<wbr/>出た<wbr/>説明会の<wbr/>話を<wbr/>読む</a></p>
 </aside></div></div></section>
 
-<section class="sec2" id="faq"><div class="w nar"><h2 class="c">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>独学だけで<wbr/>受験できますか？<wbr/></span></summary><div class="in"><p>できません。<wbr/>受験資格が<wbr/>必要で、<wbr/>養成講習の<wbr/>修了、<wbr/>実務経験3年以上、<wbr/>技能検定の<wbr/>合格の<wbr/>どれかを<wbr/>満たす必要が<wbr/>あります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>人事の<wbr/>仕事の<wbr/>経験は、<wbr/>実務経験に<wbr/>なりますか？<wbr/></span></summary><div class="in"><p>相手が<wbr/>労働者で、<wbr/>相談の<wbr/>中身が<wbr/>職業の<wbr/>選択・職業生活設計・職業能力開発に<wbr/>関する<wbr/>もので、<wbr/>一対一で<wbr/>行う<wbr/>相談であることが<wbr/>条件です。<wbr/>採用面接や<wbr/>人事評価の<wbr/>面談は、<wbr/>当ては<wbr/>まらない<wbr/>ことがあります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>試験の<wbr/>勉強は、<wbr/>独学でも<wbr/>できますか？<wbr/></span></summary><div class="in"><p>できます。<wbr/>受験資格さえ<wbr/>あれば、<wbr/>試験勉強<wbr/>その<wbr/>ものは<wbr/>独学でも<wbr/>進められます。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>養成講習を<wbr/>受けずに<wbr/>受験する<wbr/>人は、<wbr/>どの<wbr/>くらいいますか？<wbr/></span></summary><div class="in"><p>第31回試験の<wbr/>学科試験では、<wbr/>受けた<wbr/>4,983人の<wbr/>うち約12%(581人)が<wbr/>実務経験3年以上の<wbr/>人でした。<wbr/>約88%は<wbr/>養成講習を<wbr/>修了した<wbr/>人です。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>資格を<wbr/>取るまでに、<wbr/>講習の<wbr/>ほかに<wbr/>どんな<wbr/>費用が<wbr/>かかりますか？<wbr/></span></summary><div class="in"><p>受験手数料(学科8,900円・実技29,900円)、<wbr/>登録免許税9,000円、<wbr/>登録手数料8,000円が<wbr/>かかります。<wbr/>5年ごとに、<wbr/>更新手数料と<wbr/>更新講習の<wbr/>費用も<wbr/>かかります。<wbr/></p></div></details></div></div></section>
+<section class="sec2" id="faq"><div class="w nar"><h2 class="c bk">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>独学だけで<wbr/>受験できますか？<wbr/></span></summary><div class="in"><p>できません。<wbr/>受験資格が<wbr/>必要で、<wbr/>養成講習の<wbr/>修了、<wbr/>実務経験3年以上、<wbr/>技能検定の<wbr/>合格の<wbr/>どれかを<wbr/>満たす必要が<wbr/>あります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>人事の<wbr/>仕事の<wbr/>経験は、<wbr/>実務経験に<wbr/>なりますか？<wbr/></span></summary><div class="in"><p>相手が<wbr/>労働者で、<wbr/>相談の<wbr/>中身が<wbr/>職業の<wbr/>選択・職業生活設計・職業能力開発に<wbr/>関する<wbr/>もので、<wbr/>一対一で<wbr/>行う<wbr/>相談であることが<wbr/>条件です。<wbr/>採用面接や<wbr/>人事評価の<wbr/>面談は、<wbr/>当ては<wbr/>まらない<wbr/>ことがあります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>試験の<wbr/>勉強は、<wbr/>独学でも<wbr/>できますか？<wbr/></span></summary><div class="in"><p>できます。<wbr/>受験資格さえ<wbr/>あれば、<wbr/>試験勉強<wbr/>その<wbr/>ものは<wbr/>独学でも<wbr/>進められます。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>養成講習を<wbr/>受けずに<wbr/>受験する<wbr/>人は、<wbr/>どの<wbr/>くらいいますか？<wbr/></span></summary><div class="in"><p>第31回試験の<wbr/>学科試験では、<wbr/>受けた<wbr/>4,983人の<wbr/>うち約12%(581人)が<wbr/>実務経験3年以上の<wbr/>人でした。<wbr/>約88%は<wbr/>養成講習を<wbr/>修了した<wbr/>人です。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>資格を<wbr/>取るまでに、<wbr/>講習の<wbr/>ほかに<wbr/>どんな<wbr/>費用が<wbr/>かかりますか？<wbr/></span></summary><div class="in"><p>受験手数料(学科8,900円・実技29,900円)、<wbr/>登録免許税9,000円、<wbr/>登録手数料8,000円が<wbr/>かかります。<wbr/>5年ごとに、<wbr/>更新手数料と<wbr/>更新講習の<wbr/>費用も<wbr/>かかります。<wbr/></p></div></details></div></div></section>
 
 <section class="sec2" id="shutten"><div class="w nar"><div class="kakite" id="kakite"><p class="kk-t">この<wbr/>記事を<wbr/>書いた<wbr/>人:ちゃん</p><p class="kk-d">3児の<wbr/>母。<wbr/>国家資格キャリアコンサルタント養成講座を<wbr/>修了。<wbr/>自分が<wbr/>調べて<wbr/>わかりにくかった<wbr/>ことを、<wbr/>一次情報で<wbr/>確認しながら<wbr/>まとめています。</p><p class="kk-d"><a href="../../about/">この<wbr/>サイトに<wbr/>ついて<wbr/> <span aria-hidden="true" class="arw">▶︎</span></a></p></div></div></section>
 
-<section class="sec2" id="tsugi"><div class="w">
+<section class="sec2 gara" id="tsugi"><div class="w">
   <p class="eye c">次の一歩</p>
-  <h2 class="c">あわせて読みたい</h2>
-  <div class="next3"><a class="ncard" href="../zaitaku-kokka-shikaku/"><span class="nn">ガイド</span><span class="tl">在宅で<wbr/>取れる<wbr/>国家資格？<wbr/>家か会場か</span></a><a class="ncard" href="../kyufukin/"><span class="nn">費用</span><span class="tl">給付金で<wbr/>実質いくらに<wbr/>なるか</span></a><a class="ncard" href="../../schools/compare/"><span class="nn">比較</span><span class="tl">養成学校を<wbr/>比較する</span></a><a class="ncard" href="../how-to-choose/"><span class="nn">ガイド</span><span class="tl">養成学校の<wbr/>選び方</span></a></div>
+  <h2 class="c bk">あわせて<wbr>読みたい</h2>
+  <div class="next3"><a class="ncard" href="../zaitaku-kokka-shikaku/"><span class="nn bk">ガイド</span><span class="tl">在宅で<wbr/>取れる<wbr/>国家資格？<wbr/>家か会場か</span></a><a class="ncard" href="../kyufukin/"><span class="nn bk">費用</span><span class="tl">給付金で<wbr/>実質いくらに<wbr/>なるか</span></a><a class="ncard" href="../../schools/compare/"><span class="nn bk">比較</span><span class="tl">養成学校を<wbr/>比較する</span></a><a class="ncard" href="../how-to-choose/"><span class="nn bk">ガイド</span><span class="tl">養成学校の<wbr/>選び方</span></a></div>
 </div></section>
 </main>
 <section class="picnic" aria-hidden="true"><div class="kscene">

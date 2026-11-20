@@ -17,6 +17,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ippen_parts as P  # noqa: E402
 import ippen_from_rough as R  # noqa: E402
+import ippen_yomiyasu as Y  # noqa: E402
 
 PATH = "shikaku-guide/gimon/index.html"
 MOTO = "/private/tmp/claude-501/-Users-iwawakiasako/b0ab8e18-46b0-4dd4-a73e-3ba79d54a7bf/scratchpad/ippen_moto/shikaku-guide_gimon_index.html"
@@ -250,6 +251,7 @@ def main():
         '<main data-lb="1" id="main">', hero, "", kotae, "", mokuji, "", tool, "", kwsecs, "", tsugi,
         "".join(scripts).rstrip(), "</main>", picnic, P.end_parts(PATH).rstrip(), *tail_scripts, "</body>\n</html>\n",
     ])
+    out = Y.apply(out)   # 11/20 見出し・問いを文節で折る印（scripts/ippen_yomiyasu.py）
     with open(os.path.join(P.ROOT, PATH), "w", encoding="utf-8") as fh:
         fh.write(out)
     print(f"{PATH}: {len(out)//1024}KB・まとまり {len(secs)}・問い {out.count('class=\"gimon\"')}")

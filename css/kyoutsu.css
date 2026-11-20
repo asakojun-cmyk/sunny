@@ -59,3 +59,38 @@
   body{padding-bottom:0!important}
 }
 @media print{.bn{display:none!important}}
+
+/* ===== 学校えらびの側の読みやすさ（2026-11-20 ナデシコ）=====
+   ちゃん「ボタンの位置やテキストがぎゅうぎゅうなところを確認してください。あと見出しの改行も調整して」
+   .bk と [data-yomi] は scripts/ippen_yomiyasu.py がつける印。試験の側のページにはつかないので、ここの決まりは効かない */
+.bk{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+h1.bk,h2.bk,h3.bk{text-wrap:balance}
+.gimon__q.bk,.gimon__a.bk{text-wrap:balance}
+
+/* 比較表：振替の6校の箱を、まわりの文と同じ左の線にそろえる */
+body.kata[data-yomi] .hb ul.fz{padding-left:0;margin-bottom:22px}
+/* 比較表：説明会の予約先のカード（学校名とボタンのあいだ・文字のリンクもボタンと同じ真ん中に） */
+body.kata[data-yomi] .apply4 .card{gap:16px;padding:22px 20px 24px}
+body.kata[data-yomi] .apply4 .tl{align-self:center}
+body.kata[data-yomi] .apply4 + .nar0{margin-top:28px}
+/* 40の疑問：問いの文が入る幅を広げる（Q の丸・＋の印とのすき間をつめて、文の幅に回す） */
+body.kata[data-yomi] .gimon summary{gap:10px;padding-right:40px}
+body.kata[data-yomi] .gimon summary::after{right:14px}
+/* 40の疑問：答えの下の「学校を見てみよう」の箱（題・ボタン・文字のリンクのあいだ） */
+body.kata[data-yomi] .gimon__cta{padding:24px 20px 22px}
+body.kata[data-yomi] .gimon__cta p{margin:0 0 16px!important}
+body.kata[data-yomi] .gimon__cta2{margin-top:16px;line-height:1.7}
+/* ガイド：広告の札と「くわしく」を1語のまま（「広／告」「くわ／しく」と折れない） */
+[data-yomi] .disclosure__tag,[data-yomi] .disclosure__more{flex:none;white-space:nowrap}
+[data-yomi] details.disclosure > summary{gap:6px 10px;align-items:center}
+[data-yomi] .disclosure__tag{align-self:center;line-height:1.7}
+/* ガイド：説明会の箱（文・ボタン・文字のリンクのあいだ） */
+body.kata[data-yomi] aside.setsumei-box p{margin:0 0 18px}
+body.kata[data-yomi] aside.setsumei-box p:last-child{margin:0}
+body.kata[data-yomi] aside.setsumei-box p.setsumei-box__t{margin:0 0 12px}
+/* ガイド：まとめの下の文字のリンク2本（上下がくっつかないように） */
+[data-yomi] .next-compare{line-height:1.9!important}
+[data-yomi] .next-compare a{display:inline-block;margin:6px 0}
+@media (max-width:760px){
+  body.kata[data-yomi] .gk .honest-link,body.kata[data-yomi] aside.setsumei-box{padding:24px 20px!important}
+}

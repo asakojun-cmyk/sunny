@@ -24,6 +24,7 @@ from bs4 import BeautifulSoup, NavigableString
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ippen_parts as P  # noqa: E402
 import ippen_from_rough as F  # noqa: E402
+import ippen_yomiyasu as Y  # noqa: E402
 
 ROOT = P.ROOT
 CSS = os.path.join(ROOT, "css")
@@ -400,7 +401,7 @@ def build(name, moto_dir):
     body = ("<body class=\"kata\">\n" + svg + "\n" + P.top_parts(path, crumb_html)
             + '<main id="main">\n' + main + "\n</main>\n" + picnic + "\n" + nxt + "\n" + P.end_parts(path)
             + "\n".join(scripts) + "\n</body>\n</html>\n")
-    out = head + "</head>\n" + body
+    out = soroe(head + "</head>\n" + body)
     with open(full, "w", encoding="utf-8") as fh:
         fh.write(out)
     return src, out
@@ -437,8 +438,160 @@ def compare(name, before, after):
     return sum(map(len, lost)), sum(map(len, added)), [("消えた", x) for x in lost] + [("足した", x) for x in added]
 
 
+# ---------- ほかのページ（トップ・学校ページ・給付金の手続き）と見た目をそろえる（11/20 ちゃん「他のページとあってる？」） ----------
+# 指示書_試験の側 25〜28：段の地は 芝生・白・あお・スタンプ の4つ／道具の段は「あお」／次の一歩は「スタンプ」1回／段の切りかえは波線／
+# 太字の代わりに黄色の印／ボタンは行き先1〜2つの所だけオレンジのカプセル（kata.css の .cta と同じ形）
+TOOLS = ("gk-check", "kyufu-calc", "kyufu-check", "shindan", "guide-check")
+WAVE_W = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E"
+          "%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E")
+SOROE_STYLE = """<style id="ippen-guide-soroe">
+/* 道具の段（チェックリスト・計算・診断）は「あお」の地。上下は kata.css の波線 */
+body.kata section.sec2.hb.sky{padding-top:100px!important;padding-bottom:92px!important}
+body.kata .sky .gk-check{background:#fff!important;border:0!important;border-radius:22px!important;padding:4px 22px!important}
+body.kata .sky .gk-check li{border-top-color:var(--line)!important}
+/* 次の一歩は「スタンプ」の地。中身は白い面にのせる（トップの #nayami と同じ形） */
+body.kata section.sec2.gara#tsugi{background:#fff url("../../img/kata/gara_kimete.webp") center top/780px auto repeat!important;padding:104px 0 112px!important}
+body.kata section.sec2.gara#tsugi>.w{background:#fff;border-radius:26px;box-shadow:0 0 20px 22px #fff;padding-top:34px;padding-bottom:40px}
+body.kata section.sec2.gara#tsugi .ncard{background:#fff}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;background:url("WAVE") no-repeat!important;background-size:100% 40px!important;pointer-events:none}
+body.kata section.sec2.gara#tsugi::before{top:-1px;transform:scaleY(-1)}
+body.kata section.sec2.gara#tsugi::after{bottom:-1px}
+/* 出典・注は小さな字（ほかのページの .src と同じ 13px） */
+body.kata .hb .gk p.src,body.kata .gk .term-section-note{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+/* 強めたい所は黄色の印（太字だけにしない） */
+body.kata .gk strong{padding:0 2px;background:linear-gradient(transparent 60%,#FFEDA6 60%,#FFEDA6 94%,transparent 94%)}
+/* 古い部品を新しい型の形に：注意の箱・正直な話・説明会の箱・ボタン・広告の開示 */
+body.kata .gk .notice-box{max-width:none!important;margin:0 0 36px!important;text-align:left!important}
+body.kata .gk .notice-box p{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+body.kata .gk .honest-link{max-width:none!important;margin:0 0 40px!important;padding:24px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;text-align:left!important}
+body.kata .gk .honest-link__label{margin:0 0 8px!important;font-size:13px!important;font-weight:700;letter-spacing:.1em;color:var(--sub)!important}
+body.kata .gk .honest-link__body{font-size:15.5px!important;line-height:2!important;color:var(--ink)!important}
+body.kata .gk .honest-link__act a{font-size:15px!important}
+body.kata .gk .setsumei-box{max-width:none!important;margin:40px 0 0!important;padding:30px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:none!important;text-align:center}
+body.kata .gk .setsumei-box__t{font-size:18px;color:var(--ink);margin:0 0 8px}
+body.kata .gk .setsumei-box p{font-size:15.5px;line-height:2}
+body.kata .gk .button--primary{display:block;width:100%;max-width:360px;margin:0 auto;box-sizing:border-box;padding:14px 22px;border:1px solid #E07A4F;border-radius:999px;background:#E8865B;color:#fff;box-shadow:0 3px 0 #D06E45;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.04em;text-align:center;white-space:normal!important;text-decoration:none;transform:none}
+body.kata .gk .button--primary:hover{background:#E07A4F;box-shadow:0 3px 0 #D06E45;transform:none}
+body.kata .gk .button--primary[disabled]{opacity:.45;box-shadow:none}
+body.kata .gk .kc__go{max-width:360px;margin:22px auto 0;border:1px solid #E07A4F;background:#E8865B;box-shadow:0 3px 0 #D06E45;font-size:15px;letter-spacing:.04em}
+body.kata .gk .kc__go:hover{background:#E07A4F}
+body.kata .gk details.disclosure .disclosure__more{color:var(--link)!important}
+@media (max-width:760px){
+body.kata section.sec2.hb.sky{padding-top:64px!important;padding-bottom:60px!important}
+body.kata section.sec2.gara#tsugi{background-size:560px auto!important;padding:72px 0 80px!important}
+body.kata section.sec2.gara#tsugi>.w{box-shadow:0 0 12px 12px #fff;padding-top:24px;padding-bottom:28px}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{height:24px;background-size:100% 24px!important}
+body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!important}
+}
+</style>""".replace("WAVE", WAVE_W)
+
+
+def _h1_br(html):
+    """11/20 ちゃん：how-to-choose の見出しは「選び方 —」で改行"""
+    html = html.replace("選び方 <wbr/>—<wbr/> <wbr/>比較する前に", "選び方 —<br>比較する前に")
+    return html.replace("選び方 — 比較する前に", "選び方 —<br>比較する前に")
+
+
+# 11/20 ちゃん「長い見出しは短くしてください。ただし意味はちゃんとわかるように。また、SEOにも配慮してください」
+# スマホ375で3行以上になった h1・h2 だけを短くする（前→後は 1119_本番いっぺんの計画.md の「11/20 見出しを短く」）。
+# 検索の題（title・説明文・og:title・構造化データの headline）は本番のまま長い。
+# 鍵＝いまの見出しの文字（空白を除く）。値＝新しい見出し（<wbr>・<br> は改行してよい所）
+MIDASHI = {
+    # h1
+    "キャリアコンサルタント養成講座の選び方—比較する前に決めておく3つのこと":
+        "養成講座の<wbr>選び方 —<br>比べる前に<wbr>決める<wbr>3つのこと",
+    "キャリアコンサルタント養成講座の給付金—教育訓練給付金「最大80%」で実質いくら？":
+        "養成講座の<wbr>給付金 —<br>最大80%で<wbr>実質いくら？",
+    "キャリアコンサルタント養成講座はオンラインで受けられる？—選び方と確認ポイント":
+        "養成講座は<wbr>オンラインで<wbr>受けられる？",
+    "キャリアコンサルタント養成講座が安いのはどこ？全22講習の受講料と給付金で実質いくら":
+        "養成講座が<wbr>安いのはどこ？<br>全22講習の<wbr>受講料と<wbr>実質の負担",
+    "キャリアコンサルタント養成講座は子育て中・働きながらでも通える？":
+        "養成講座は、<wbr>子育て中・<br>働きながらでも<wbr>通える？",
+    "キャリアコンサルタントは役に立たない・やめとけ？—やめたほうがいい人もいます":
+        "キャリアコンサルタントは<br>役に立たない・<wbr>やめとけ？",
+    # h2
+    "まず知っておくこと:どの養成講習も「厚生労働大臣認定」":
+        "どの養成講習も<wbr>「厚生労働大臣認定」",
+    "養成講座の選び方3:総費用の上限(試験対策まで含めて)":
+        "養成講座の選び方3:<wbr>総費用の上限<wbr>(試験対策込み)",
+    "教育訓練給付金の「最大80%」は3段階の合計。無条件ではありません":
+        "給付金の<wbr>「最大80%」は、<wbr>3段階の合計",
+    "給付金を受けるには、受講開始の2週間前までにやることがあります":
+        "給付金は、<wbr>受講開始の<wbr>2週間前までに<wbr>手続きが必要",
+    "そもそもキャリアコンサルタントって、何をする人？":
+        "キャリアコンサルタントって、<wbr>何を<wbr>する<wbr>人？",
+    "①独占業務がない—資格がなくても同じ仕事ができます":
+        "①独占業務がない&nbsp;—<br>資格なしでも<wbr>できます",
+    "それでもキャリアコンサルタント資格を取る価値がある人":
+        "それでも<wbr>資格を<wbr>取る価値が<wbr>ある人",
+    "オンライン養成講座のライブ型と録画(オンデマンド)型の違い":
+        "ライブ型と<wbr>録画(オンデマンド)型の<wbr>違い",
+    "オンラインの養成講座に向く人・向かない可能性がある人":
+        "オンライン受講に<wbr>向く人・<wbr>向かない<wbr>可能性がある人",
+    "子育て・仕事と養成講座の両立でいちばん困るのは「欠席できない仕組み」":
+        "両立で<wbr>いちばん<wbr>困るのは<wbr>「欠席できない仕組み」",
+    "運営者の考え：トータルで見ると、地域連携プラットフォームをすすめます":
+        "運営者の<wbr>おすすめ：<wbr>地域連携<wbr>プラットフォーム",
+}
+def _midashi(html):
+    """長い h1・h2 を短い形に（何回かけても同じ）。
+    h1 から「キャリアコンサルタント」が外れたページは、すぐ上の小さな1行（eye）を「キャリアコンサルタント養成講座ガイド」に"""
+    def one(m):
+        key = re.sub(r"\s+", "", re.sub(r"<[^>]+>", "", m.group(3)))
+        if key not in MIDASHI:
+            return m.group(0)
+        return f"<{m.group(1)}{m.group(2)}>{MIDASHI[key]}</{m.group(1)}>"
+    html = re.sub(r"<(h1|h2)\b([^>]*)>(.*?)</\1>", one, html, flags=re.S)
+    h1 = re.search(r"<h1\b[^>]*>(.*?)</h1>", html, re.S)
+    if h1 and h1.group(1) in MIDASHI.values() and "キャリアコンサルタント" not in re.sub(r"<[^>]+>", "", h1.group(1)):
+        html = re.sub(r'(<section class="hero1"><div class="w">\s*<p class="eye">)養成講座ガイド(</p>)',
+                      r"\1キャリアコンサルタント養成講座ガイド\2", html, count=1)
+    return html
+
+
+def soroe(html):
+    """組んだあとのページに、そろえの手直しを入れる（何回かけても同じ結果）"""
+    html = _midashi(_h1_br(html))
+    html = re.sub(r'<style id="ippen-guide-soroe">.*?</style>\n?', "", html, flags=re.S)
+    html = html.replace("</head>", SOROE_STYLE + "\n</head>", 1)
+    # 段の地：道具がある「くわしく」の段を あお に（あおが続くときは先の1つだけ）
+    parts = re.split(r'(?=<section class="sec2)', html)
+    prev_sky = False
+    for i, p in enumerate(parts):
+        m = re.match(r'<section class="(sec2[^"]*)"', p)
+        if not m:
+            continue
+        cls = m.group(1).split()
+        end = p.find("</section>")
+        body = p[:end] if end >= 0 else p
+        has_tool = any(f'class="{t}' in body for t in TOOLS)
+        if "hb" in cls and has_tool and not prev_sky and "sky" not in cls:
+            cls.append("sky")
+        if 'id="tsugi"' in p[:80] and "gara" not in cls:
+            cls.append("gara")
+        parts[i] = p.replace(m.group(0), f'<section class="{" ".join(cls)}"', 1)
+        prev_sky = "sky" in cls
+    # 11/20 ちゃん「見出しの改行も調整して」：見出しを文節で折る印（ippen_yomiyasu・何回かけても同じ）
+    return Y.apply("".join(parts))
+
+
+def soroe_files(names):
+    for nm in names:
+        f = os.path.join(ROOT, f"school-guides/{nm}/index.html")
+        s = open(f, encoding="utf-8").read()
+        t = soroe(s)
+        if t != s:
+            with open(f, "w", encoding="utf-8") as fh:
+                fh.write(t)
+        print(nm, "そろえ", "直した" if t != s else "変化なし")
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
+    if "--soroe" in args:   # 組み直さずに、いまのページへ そろえ だけ入れる
+        soroe_files([a for a in args if a != "--soroe"] or list(PAGES))
+        sys.exit(0)
     moto = MOTO
     if "--moto" in args:
         i = args.index("--moto")

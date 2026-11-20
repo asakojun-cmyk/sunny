@@ -43,7 +43,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Zen+Kaku+Gothic+New:wght@500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/cb-8effffd98c.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-ca31a1ab89.css" data-src="kata.css?v=2026.1120,guide-kata.css?v=2026.1120">
 <style id="ippen-guide">
 body.kata .gk{--gk-ink:var(--ink)}
 body.kata .ps.chan .who .tag{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;background:#fff;font-size:10.5px;letter-spacing:.06em;color:var(--sub)}
@@ -56,9 +56,49 @@ body.kata .gk table{max-width:100%}
 body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </style>
 <style id="ippen-h1">@media (max-width:420px){body.kata .hero1 h1{font-size:21px;letter-spacing:.06em}}</style>
-<link rel="stylesheet" href="../../css/cb-19ba1b8168.css" data-src="kyoutsu.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/cb-09b94fd878.css" data-src="kyoutsu.css?v=2026.1120">
+<style id="ippen-guide-soroe">
+/* 道具の段（チェックリスト・計算・診断）は「あお」の地。上下は kata.css の波線 */
+body.kata section.sec2.hb.sky{padding-top:100px!important;padding-bottom:92px!important}
+body.kata .sky .gk-check{background:#fff!important;border:0!important;border-radius:22px!important;padding:4px 22px!important}
+body.kata .sky .gk-check li{border-top-color:var(--line)!important}
+/* 次の一歩は「スタンプ」の地。中身は白い面にのせる（トップの #nayami と同じ形） */
+body.kata section.sec2.gara#tsugi{background:#fff url("../../img/kata/gara_kimete.webp") center top/780px auto repeat!important;padding:104px 0 112px!important}
+body.kata section.sec2.gara#tsugi>.w{background:#fff;border-radius:26px;box-shadow:0 0 20px 22px #fff;padding-top:34px;padding-bottom:40px}
+body.kata section.sec2.gara#tsugi .ncard{background:#fff}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat!important;background-size:100% 40px!important;pointer-events:none}
+body.kata section.sec2.gara#tsugi::before{top:-1px;transform:scaleY(-1)}
+body.kata section.sec2.gara#tsugi::after{bottom:-1px}
+/* 出典・注は小さな字（ほかのページの .src と同じ 13px） */
+body.kata .hb .gk p.src,body.kata .gk .term-section-note{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+/* 強めたい所は黄色の印（太字だけにしない） */
+body.kata .gk strong{padding:0 2px;background:linear-gradient(transparent 60%,#FFEDA6 60%,#FFEDA6 94%,transparent 94%)}
+/* 古い部品を新しい型の形に：注意の箱・正直な話・説明会の箱・ボタン・広告の開示 */
+body.kata .gk .notice-box{max-width:none!important;margin:0 0 36px!important;text-align:left!important}
+body.kata .gk .notice-box p{font-size:13px!important;line-height:1.8!important;color:var(--sub)!important}
+body.kata .gk .honest-link{max-width:none!important;margin:0 0 40px!important;padding:24px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;text-align:left!important}
+body.kata .gk .honest-link__label{margin:0 0 8px!important;font-size:13px!important;font-weight:700;letter-spacing:.1em;color:var(--sub)!important}
+body.kata .gk .honest-link__body{font-size:15.5px!important;line-height:2!important;color:var(--ink)!important}
+body.kata .gk .honest-link__act a{font-size:15px!important}
+body.kata .gk .setsumei-box{max-width:none!important;margin:40px 0 0!important;padding:30px 28px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:none!important;text-align:center}
+body.kata .gk .setsumei-box__t{font-size:18px;color:var(--ink);margin:0 0 8px}
+body.kata .gk .setsumei-box p{font-size:15.5px;line-height:2}
+body.kata .gk .button--primary{display:block;width:100%;max-width:360px;margin:0 auto;box-sizing:border-box;padding:14px 22px;border:1px solid #E07A4F;border-radius:999px;background:#E8865B;color:#fff;box-shadow:0 3px 0 #D06E45;font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.04em;text-align:center;white-space:normal!important;text-decoration:none;transform:none}
+body.kata .gk .button--primary:hover{background:#E07A4F;box-shadow:0 3px 0 #D06E45;transform:none}
+body.kata .gk .button--primary[disabled]{opacity:.45;box-shadow:none}
+body.kata .gk .kc__go{max-width:360px;margin:22px auto 0;border:1px solid #E07A4F;background:#E8865B;box-shadow:0 3px 0 #D06E45;font-size:15px;letter-spacing:.04em}
+body.kata .gk .kc__go:hover{background:#E07A4F}
+body.kata .gk details.disclosure .disclosure__more{color:var(--link)!important}
+@media (max-width:760px){
+body.kata section.sec2.hb.sky{padding-top:64px!important;padding-bottom:60px!important}
+body.kata section.sec2.gara#tsugi{background-size:560px auto!important;padding:72px 0 80px!important}
+body.kata section.sec2.gara#tsugi>.w{box-shadow:0 0 12px 12px #fff;padding-top:24px;padding-bottom:28px}
+body.kata section.sec2.gara#tsugi::before,body.kata section.sec2.gara#tsugi::after{height:24px;background-size:100% 24px!important}
+body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!important}
+}
+</style>
 </head>
-<body class="kata">
+<body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
   <filter id="sticker" x="-45%" y="-25%" width="190%" height="160%" color-interpolation-filters="sRGB">
     <feGaussianBlur in="SourceAlpha" stdDeviation="7.5" result="b"/>
@@ -74,8 +114,8 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <div class="kc"><p class="crumb"><a href="/">ホーム</a> › <a href="/schools/">養成学校一覧</a> › 養成学校の選び方 — 比べる前に決めておく3つのこと</p></div>
 <main id="main">
 <section class="hero1"><div class="w">
-  <p class="eye">養成講座ガイド</p>
-  <h1>キャリアコンサルタント<wbr/>養成講座の<wbr/>選び方 <wbr/>—<wbr/> <wbr/>比較する前に<wbr/>決めておく<wbr/>3つのこと</h1>
+  <p class="eye">キャリアコンサルタント養成講座ガイド</p>
+  <h1 class="bk">養成講座の<wbr>選び方 —<br>比べる前に<wbr>決める<wbr>3つのこと</h1>
   <div class="hstage">
     <img class="garl" src="../../img/kata/sora_garland.webp" alt="" aria-hidden="true">
     <img class="cld c1" src="../../img/parts/01_sky_cloud_left.webp" alt="" aria-hidden="true">
@@ -96,7 +136,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 green" id="kotae"><div class="w nar">
   <p class="eye c">答え</p>
-  <h2 class="c">結論：最後まで続けられる学校を選ぶ3つの条件</h2>
+  <h2 class="c bk">結論<wbr>：最後まで<wbr>続けられる<wbr>学校を<wbr>選ぶ<wbr>3つの<wbr>条件</h2>
   <div class="sun2">
     <img src="../../img/kata/sunny.webp" alt="サニー先生" loading="lazy" decoding="async">
     <p class="sb"><span class="who">サニー先生</span>くらべる前に、<b class="mark">通学ゼロ・土日か夜・休んでも振替</b>の3つを決めておくと、続けられる学校にしぼれるよ。</p>
@@ -116,7 +156,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt">このページでわかること</p><ol><li><a href="#sec-0"><span class="tn">1</span><span class="tx">じつは、受験資格につながる講習はぜんぶ認定。差が出るのは別のところです</span></a></li><li><a href="#sec-1"><span class="tn">2</span><span class="tx">受けたい試験の回から逆算すると、自然にしぼれます</span></a></li><li><a href="#sec-2"><span class="tn">3</span><span class="tx">受けた本人が、オンラインで助かったことと困ったこと</span></a></li><li><a href="#sec-3"><span class="tn">4</span><span class="tx">受講料だけ見ていると、あとから出てくるお金があります</span></a></li><li><a href="#sec-4"><span class="tn">5</span><span class="tx">公式サイトで確かめる9つのチェックリスト</span></a></li><li><a href="#sec-5"><span class="tn">6</span><span class="tx">体験談は「その人の条件での話」として読むのがコツ</span></a></li></ol><p class="tsub"><a href="#faq">よくある質問</a></p></nav>
   <div class="lead2"><p>「おすすめは<wbr/>どこ？」と<wbr/>探し始める<wbr/>前に、<wbr/>自分の<wbr/>条件を<wbr/>決めて<wbr/>おくと<wbr/>迷わずに<wbr/>すみます。</p><p class="date">更新日: 2026年10月18日 情報確認日: 2026年7月11日</p><div class="gk"><details aria-label="広告・提供関係の開示" class="disclosure">
-<summary class="disclosure__title"><span class="disclosure__tag">広告</span>このページに広告(紹介リンク)はありません<span class="disclosure__more">くわしく</span></summary>
+<summary class="disclosure__title bk"><span class="disclosure__tag">広告</span>この<wbr>ページに<wbr>広告(紹介リンク)は<wbr>ありません<span class="disclosure__more">くわしく</span></summary>
 <dl class="disclosure__list">
 <div><dt>広告・PR</dt><dd>なし(このページに紹介リンクは含みません。右下の説明会のボタンは、比較表の6校の申込み先へのリンクです)</dd></div><div><dt>学校からの<wbr/>無償提供</dt><dd>受けていません</dd></div><div><dt>受講料</dt><dd>運営者自身が<wbr/>支払っています</dd></div>
 </dl>
@@ -125,7 +165,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-0"><div class="w nar">
   <p class="eye">くわしく 1</p>
-  <h2>まず知っておくこと:<wbr/>どの養成講習も「厚生労働大臣認定」</h2>
+  <h2 class="bk">どの養成講習も<wbr>「厚生労働大臣認定」</h2>
   <div class="gk">
 
 <p>国家試験の<wbr/>受験資格に<wbr/>つながる<wbr/>養成講習は、<wbr/>どれも<wbr/>厚生労働大臣の<wbr/>認定を<wbr/>受けた<wbr/>講習です。<wbr/>なので、<wbr/>「認定されているかどうか」では<wbr/>差が<wbr/>つきません。<wbr/>差が<wbr/>出るのは、<strong>受け方・日程・費用・サポートなど、<wbr/>自分の<wbr/>暮らしに<wbr/>合うか<wbr/>どうか</strong>です。</p><p>認定された<wbr/>講習の<wbr/>一覧は、<wbr/>厚生労働省の<wbr/>サイトで<wbr/>公開されています。<wbr/>気に<wbr/>なっている<wbr/>講座が<wbr/>認定講習か<wbr/>どうかは、<wbr/>必ず<wbr/>公式の<wbr/>情報で<wbr/>確かめましょう。</p>
@@ -139,7 +179,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-1"><div class="w nar">
   <p class="eye">くわしく 2</p>
-  <h2>養成講座の選び方1:<wbr/>いつまでに、<wbr/>どのくらいの<wbr/>ペースで<wbr/>学ぶか</h2>
+  <h2 class="bk">養成講座の選び方1:<wbr/>いつまでに、<wbr/>どのくらいの<wbr/>ペースで<wbr/>学ぶか</h2>
   <div class="gk">
 
 <p>受けたい<wbr/>試験の<wbr/>回から<wbr/>逆算すると、<wbr/>選べる<wbr/>コースが<wbr/>しぼられます。<wbr/>短期集中コースは<wbr/>早く<wbr/>修了できる<wbr/>代わりに<wbr/>1回あたりの<wbr/>量が<wbr/>多く、<wbr/>ゆっくりコースは<wbr/>両立しやすい<wbr/>代わりに<wbr/>期間が<wbr/>長くなります。</p><p>仕事や<wbr/>育児が<wbr/>ある方は、<wbr/>「週に<wbr/>何時間なら<wbr/>勉強に<wbr/>使えるか」を<wbr/>先に<wbr/>考えて<wbr/>おくと、<wbr/>無理の<wbr/>ない<wbr/>コースを<wbr/>選べます。</p>
@@ -154,7 +194,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-2"><div class="w nar">
   <p class="eye">くわしく 3</p>
-  <h2>養成講座の選び方2:<wbr/>オンラインか、<wbr/>通学か</h2>
+  <h2 class="bk">養成講座の選び方2:<wbr/>オンラインか、<wbr/>通学か</h2>
   <div class="gk">
 
 <p>オンラインは<wbr/>移動が<wbr/>ない<wbr/>ぶん<wbr/>両立しやすいですが、<wbr/>家で<wbr/>集中できる<wbr/>環境(時間帯・<wbr/>場所・家族の<wbr/>協力)が<wbr/>必要です。<wbr/>通学は<wbr/>「行かなきゃ」と<wbr/>いう<wbr/>気持ちに<wbr/>なりやすく、<wbr/>仲間も<wbr/>できやすい<wbr/>一方で、<wbr/>移動の<wbr/>時間と<wbr/>交通費が<wbr/>かかります。</p><p>両方を<wbr/>組み合わせた<wbr/>ハイブリッド型も<wbr/>あります。<wbr/>くわしくは<a class="txt-link" href="../online/">オンライン講座の<wbr/>選び方</a>に<wbr/>まとめています。</p>
@@ -168,7 +208,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-3"><div class="w nar">
   <p class="eye">くわしく 4</p>
-  <h2>養成講座の選び方3:<wbr/>総費用の上限<wbr/>(試験対策まで<wbr/>含めて)</h2>
+  <h2 class="bk">養成講座の選び方3:<wbr>総費用の上限<wbr>(試験対策込み)</h2>
   <div class="gk">
 
 <p>見るのは<wbr/>受講料だけではありません。<wbr/>入学金や<wbr/>教材費、<wbr/>それに<wbr/>養成講習とは<wbr/>別料金の<wbr/>ことが<wbr/>多い<wbr/>「試験対策講座」まで<wbr/>含めた、<strong>全部で<wbr/>いくらかかるか</strong>で<wbr/>考えましょう。</p><p>専門実践教育訓練給付金の<wbr/>対象講座なら、<wbr/>自分で<wbr/>払う額を<wbr/>抑えられるかもしれません。<wbr/>ただ、<wbr/>もらえる<wbr/>額は<wbr/>雇用保険に<wbr/>入っていた<wbr/>期間など、<wbr/>人に<wbr/>よって<wbr/>違います。<wbr/>自分の<wbr/>場合は<wbr/>どうなるか、<wbr/>必ず<wbr/>ハローワークで<wbr/>確認してください。</p>
@@ -180,9 +220,9 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 </div>
 </div></section>
 
-<section class="sec2 hb" id="sec-4"><div class="w nar">
+<section class="sec2 hb sky" id="sec-4"><div class="w nar">
   <p class="eye">くわしく 5</p>
-  <h2>養成講座を<wbr/>比較するときの<wbr/>チェックリスト</h2>
+  <h2 class="bk">養成講座を<wbr/>比較するときの<wbr/>チェックリスト</h2>
   <div class="gk">
 
 <p>候補が<wbr/>2〜3校に<wbr/>しぼれたら、<wbr/>次の<wbr/>項目を<wbr/>公式サイトで<wbr/>確かめましょう。</p>
@@ -197,7 +237,7 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 
 <section class="sec2 hb" id="sec-5"><div class="w nar">
   <p class="eye">くわしく 6</p>
-  <h2>最後に:<wbr/>養成講座の<wbr/>口コミより<wbr/>「自分の条件」</h2>
+  <h2 class="bk">最後に:<wbr/>養成講座の<wbr/>口コミより<wbr/>「自分の条件」</h2>
   <div class="gk">
 
 <p>ほかの<wbr/>人に<wbr/>とって<wbr/>最高の<wbr/>学校が、<wbr/>自分にも<wbr/>合うとは<wbr/>限りません。<wbr/>この<wbr/>サイトでも、<wbr/>公式の<wbr/>情報・受講した<wbr/>本人の<wbr/>体験・運営者の<wbr/>考えを<wbr/>分けて<wbr/>載せています。<wbr/>体験談は<wbr/>「その<wbr/>人の<wbr/>条件での<wbr/>話」と<wbr/>して<wbr/>読んで、<wbr/>最後は<wbr/>自分の<wbr/>条件と<wbr/>公式の<wbr/>情報で<wbr/>決めるのが<wbr/>おすすめです。</p>
@@ -221,14 +261,14 @@ body.kata .gk .tblw,body.kata .gk .ys-table-wrap{overflow-x:auto}
 <p><a class="txt-link" href="../../schools/chiiki-renkei-platform/#kai">運営者が<wbr/>出た<wbr/>説明会の<wbr/>話を<wbr/>読む</a></p>
 </aside></div></div></section>
 
-<section class="sec2" id="faq"><div class="w nar"><h2 class="c">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>厚生労働大臣認定の<wbr/>講座なら、<wbr/>どこでも<wbr/>同じですか？<wbr/></span></summary><div class="in"><p>受験資格に<wbr/>つながる<wbr/>養成講習は、<wbr/>すべて<wbr/>厚生労働大臣の<wbr/>認定講習です。<wbr/>差が<wbr/>出るのは、<wbr/>受け方・日程・費用・サポートなど、<wbr/>自分の<wbr/>暮らしに<wbr/>合うか<wbr/>どうかです。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>短期集中と<wbr/>ゆっくりコース、<wbr/>どちらが<wbr/>いいですか？<wbr/></span></summary><div class="in"><p>受けたい<wbr/>試験の<wbr/>回から<wbr/>逆算すると、<wbr/>選べる<wbr/>コースが<wbr/>しぼれます。<wbr/>短期集中は<wbr/>早く<wbr/>修了できる<wbr/>代わりに<wbr/>1回の<wbr/>量が<wbr/>多く、<wbr/>ゆっくりコースは<wbr/>両立しやすい<wbr/>代わりに<wbr/>期間が<wbr/>長くなります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>費用は、<wbr/>受講料だけでくらべていいですか？<wbr/></span></summary><div class="in"><p>入学金・教材費と、<wbr/>別料金の<wbr/>ことが<wbr/>多い<wbr/>試験対策講座まで<wbr/>含めた合計でくらべるのが<wbr/>おすすめです。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>候補を<wbr/>しぼったら、<wbr/>何を<wbr/>確かめればいいですか？<wbr/></span></summary><div class="in"><p>受け方、<wbr/>日程、<wbr/>受講料・入学金・教材費、<wbr/>給付金の<wbr/>対象か、<wbr/>振替の<wbr/>しくみ、<wbr/>修了の<wbr/>条件と<wbr/>課題の<wbr/>量、<wbr/>ロールプレイの<wbr/>やり方、<wbr/>試験対策講座の<wbr/>料金、<wbr/>資格を<wbr/>取った<wbr/>あとの<wbr/>サポートの<wbr/>9つを、<wbr/>公式サイトで<wbr/>確かめましょう。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>口コミは、<wbr/>参考に<wbr/>なりますか？<wbr/></span></summary><div class="in"><p>参考に<wbr/>なりますが、<wbr/>「その<wbr/>人の<wbr/>条件での<wbr/>話」と<wbr/>して<wbr/>読むのが<wbr/>おすすめです。<wbr/>最後は、<wbr/>自分の<wbr/>条件と<wbr/>公式の<wbr/>情報で<wbr/>決めましょう。<wbr/></p></div></details></div></div></section>
+<section class="sec2" id="faq"><div class="w nar"><h2 class="c bk">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>厚生労働大臣認定の<wbr/>講座なら、<wbr/>どこでも<wbr/>同じですか？<wbr/></span></summary><div class="in"><p>受験資格に<wbr/>つながる<wbr/>養成講習は、<wbr/>すべて<wbr/>厚生労働大臣の<wbr/>認定講習です。<wbr/>差が<wbr/>出るのは、<wbr/>受け方・日程・費用・サポートなど、<wbr/>自分の<wbr/>暮らしに<wbr/>合うか<wbr/>どうかです。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>短期集中と<wbr/>ゆっくりコース、<wbr/>どちらが<wbr/>いいですか？<wbr/></span></summary><div class="in"><p>受けたい<wbr/>試験の<wbr/>回から<wbr/>逆算すると、<wbr/>選べる<wbr/>コースが<wbr/>しぼれます。<wbr/>短期集中は<wbr/>早く<wbr/>修了できる<wbr/>代わりに<wbr/>1回の<wbr/>量が<wbr/>多く、<wbr/>ゆっくりコースは<wbr/>両立しやすい<wbr/>代わりに<wbr/>期間が<wbr/>長くなります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>費用は、<wbr/>受講料だけでくらべていいですか？<wbr/></span></summary><div class="in"><p>入学金・教材費と、<wbr/>別料金の<wbr/>ことが<wbr/>多い<wbr/>試験対策講座まで<wbr/>含めた合計でくらべるのが<wbr/>おすすめです。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>候補を<wbr/>しぼったら、<wbr/>何を<wbr/>確かめればいいですか？<wbr/></span></summary><div class="in"><p>受け方、<wbr/>日程、<wbr/>受講料・入学金・教材費、<wbr/>給付金の<wbr/>対象か、<wbr/>振替の<wbr/>しくみ、<wbr/>修了の<wbr/>条件と<wbr/>課題の<wbr/>量、<wbr/>ロールプレイの<wbr/>やり方、<wbr/>試験対策講座の<wbr/>料金、<wbr/>資格を<wbr/>取った<wbr/>あとの<wbr/>サポートの<wbr/>9つを、<wbr/>公式サイトで<wbr/>確かめましょう。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>口コミは、<wbr/>参考に<wbr/>なりますか？<wbr/></span></summary><div class="in"><p>参考に<wbr/>なりますが、<wbr/>「その<wbr/>人の<wbr/>条件での<wbr/>話」と<wbr/>して<wbr/>読むのが<wbr/>おすすめです。<wbr/>最後は、<wbr/>自分の<wbr/>条件と<wbr/>公式の<wbr/>情報で<wbr/>決めましょう。<wbr/></p></div></details></div></div></section>
 
 <section class="sec2" id="shutten"><div class="w nar"><div class="kakite" id="kakite"><p class="kk-t">この<wbr/>記事を<wbr/>書いた<wbr/>人:ちゃん</p><p class="kk-d">3児の<wbr/>母。<wbr/>国家資格キャリアコンサルタント養成講座を<wbr/>修了。<wbr/>2026年11月の<wbr/>試験に<wbr/>挑戦中の<wbr/>初学者と<wbr/>して、<wbr/>実際に<wbr/>わからなかった<wbr/>言葉を<wbr/>解説しています。</p><p class="kk-d"><a href="../../about/">この<wbr/>サイトに<wbr/>ついて<wbr/> <span aria-hidden="true" class="arw">▶︎</span></a></p></div></div></section>
 
-<section class="sec2" id="tsugi"><div class="w">
+<section class="sec2 gara" id="tsugi"><div class="w">
   <p class="eye c">次の一歩</p>
-  <h2 class="c">あわせて読みたい</h2>
-  <div class="next3"><a class="ncard" href="../dokugaku/"><span class="nn">ガイド</span><span class="tl">独学で<wbr/>取れる？<wbr/>受験資格の<wbr/>条件</span></a><a class="ncard" href="../kyufukin/"><span class="nn">費用</span><span class="tl">給付金で<wbr/>実質いくらに<wbr/>なるか</span></a><a class="ncard" href="../../schools/"><span class="nn">学校</span><span class="tl">養成学校一覧</span></a><a class="ncard" href="../../schools/compare/"><span class="nn">比較</span><span class="tl">養成学校を<wbr/>比較する</span></a><a class="ncard" href="../../school-reviews/chiiki-renkei-platform/"><span class="nn">受講体験</span><span class="tl">運営者の<wbr/>受講記録(地域連携プラットフォーム)</span></a></div>
+  <h2 class="c bk">あわせて<wbr>読みたい</h2>
+  <div class="next3"><a class="ncard" href="../dokugaku/"><span class="nn bk">ガイド</span><span class="tl">独学で<wbr/>取れる？<wbr/>受験資格の<wbr/>条件</span></a><a class="ncard" href="../kyufukin/"><span class="nn bk">費用</span><span class="tl">給付金で<wbr/>実質いくらに<wbr/>なるか</span></a><a class="ncard" href="../../schools/"><span class="nn bk">学校</span><span class="tl">養成学校一覧</span></a><a class="ncard" href="../../schools/compare/"><span class="nn bk">比較</span><span class="tl">養成学校を<wbr/>比較する</span></a><a class="ncard" href="../../school-reviews/chiiki-renkei-platform/"><span class="nn bk">受講体験</span><span class="tl">運営者の<wbr/>受講記録(地域連携プラットフォーム)</span></a></div>
 </div></section>
 </main>
 <section class="picnic" aria-hidden="true"><div class="kscene">
