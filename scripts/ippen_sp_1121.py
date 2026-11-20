@@ -40,6 +40,41 @@ TOP = f"""
 }}
 """
 
+# 11/21 ちゃん「グラフのところも文字が重なって読みにくい。グラフを横にするとどうかな？少しコンパクトに」
+# スマホでは、縦の棒を横の棒にする（左に説明・右に棒、棒の下に金額と「半分戻る」）。のびる動きも横向きに。
+KG = """
+@media (max-width:700px){
+  .kgp .kgs .kg{display:grid;grid-template-columns:1fr;gap:16px;padding:4px 2px 0}
+  .kgp .kg li{display:grid;grid-template-columns:142px minmax(0,1fr);grid-template-rows:30px auto auto;column-gap:10px;row-gap:4px;align-items:center;text-align:left}
+  .kgp .kg li::before{display:none!important}
+  .kgp .kg li:first-child b{grid-row:2}
+  .kgp .kg .st{grid-column:1;grid-row:1/4;align-self:start;margin:0;font-size:13px!important;line-height:1.5;word-break:normal!important}
+  .kgp .kg .st small{font-size:12px!important;margin-top:2px}
+  .kgp .kg li i{grid-column:2;grid-row:1;justify-self:start;align-self:stretch;width:var(--h);height:auto;min-height:0;border-radius:4px 10px 10px 4px;transform-origin:0 50%}
+  .kgp .kg li b,.kgp .kg li.main b{position:static;grid-column:2;grid-row:3;justify-self:start;left:auto;right:auto;top:auto;transform:none;font-size:18px;line-height:1.3}
+  .kgp .kg li.main b{font-size:21px}
+  .kgp .kg li em,.kgp .kg li.main em,.kgp .kg li:nth-child(3) em{position:static;grid-column:2;grid-row:2;justify-self:start;align-self:center;width:auto;padding:2px 9px;border-radius:999px;background:#FA9C88;color:#fff;font-size:12px;line-height:1.5}
+  .kgp .kg li em::before{content:"↓ "}
+  .kgp.anim[data-s="0"] .kg li:nth-child(1) i,.kgp.anim:is([data-s="0"],[data-s="1"],[data-s="2"]) .kg li:nth-child(2) i,.kgp.anim:is([data-s="0"],[data-s="1"],[data-s="2"],[data-s="3"]) .kg li:nth-child(3) i{transform:scaleX(0)}
+  .kg-kami{top:120px}
+}
+"""
+
+# 11/21 ちゃん「吹き出しが左揃えでバランスが悪い。吹き出しの中いっぱいに文字を」
+# 「本文のどのテキストも左揃えになってる。端から端まで文章をおいて、みやすいように」
+# スマホでは、左揃えの本文（20字より長いもの）を両端揃えにし、文節でしか折らない決まりをゆるめて行の端まで置く。
+# まん中揃えにしてある所はさわらない（見た目で左揃えのものだけに印をつける）。
+ALLP = """
+@media (max-width:700px){
+  .sp-j{text-align:justify!important;text-justify:inter-character;word-break:normal!important;overflow-wrap:normal!important;line-break:normal}
+  .sp-j wbr{display:none}
+  .kg-talk .say:not(.jk),.kg-moz .say{width:max-content!important;text-align:left!important}
+  .kg-moz .say br{display:inline!important}
+  .kg-moz .say .pc{display:inline!important}.kg-moz .say .sp{display:none!important}
+}
+</style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
+"""
+
 KATA = f"""
 {SP}{{
   body.kata .mpic{{filter:{FUCHI}!important}}
@@ -57,11 +92,13 @@ KATA = f"""
 
 
 def block(css):
-    return '<style id="sp1121">/* 11/21 スマホの見やすさ（scripts/ippen_sp_1121.py） */' + css + '</style>\n'
+    # 終わりの印 sp1121-end まで1まとまり（中に script をはさむため）
+    return ('<style id="sp1121">/* 11/21 スマホの見やすさ（scripts/ippen_sp_1121.py） */' + css + ALLP
+            + '</style><!--sp1121-end-->\n')
 
 
 def main():
-    n_top = n_kata = 0
+    n_top = n_kata = n_other = 0
     for d, ds, fs in os.walk(ROOT):
         ds[:] = [x for x in ds if x not in (".git", "scripts", "node_modules") and not x.startswith("_")]
         for f in fs:
@@ -69,21 +106,23 @@ def main():
                 continue
             p = os.path.join(d, f)
             s = open(p, encoding="utf-8").read()
-            t = re.sub(r'<style id="sp1121">.*?</style>\n', '', s, flags=re.S)
+            t = re.sub(r'<style id="sp1121">.*?</style><!--sp1121-end-->\n', '', s, flags=re.S)
+            t = re.sub(r'<style id="sp1121">.*?</style>\n', '', t, flags=re.S)
             rel = os.path.relpath(p, ROOT)
             if rel == "index.html":
-                css = TOP
+                css = TOP + KG
                 n_top += 1
             elif re.search(r'<body[^>]*class="[^"]*\bkata\b', t):
                 css = KATA
                 n_kata += 1
             else:
-                css = None
-            if css and '</head>' in t:
+                css = ""
+                n_other += 1
+            if '</head>' in t and '<html' in t[:500].lower() + t.lower()[:2000]:
                 t = t.replace('</head>', block(css) + '</head>', 1)
             if t != s:
                 open(p, "w", encoding="utf-8").write(t)
-    print("トップ", n_top, "学校・ガイドの型", n_kata)
+    print("トップ", n_top, "学校・ガイドの型", n_kata, "そのほか", n_other)
 
 
 if __name__ == "__main__":

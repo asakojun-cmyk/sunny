@@ -1022,7 +1022,32 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   body li>a{font-size:14px}
   body .person .fuki{font-size:14.5px!important;line-height:1.6}
 }
-</style>
+
+@media (max-width:700px){
+  .kgp .kgs .kg{display:grid;grid-template-columns:1fr;gap:16px;padding:4px 2px 0}
+  .kgp .kg li{display:grid;grid-template-columns:142px minmax(0,1fr);grid-template-rows:30px auto auto;column-gap:10px;row-gap:4px;align-items:center;text-align:left}
+  .kgp .kg li::before{display:none!important}
+  .kgp .kg li:first-child b{grid-row:2}
+  .kgp .kg .st{grid-column:1;grid-row:1/4;align-self:start;margin:0;font-size:13px!important;line-height:1.5;word-break:normal!important}
+  .kgp .kg .st small{font-size:12px!important;margin-top:2px}
+  .kgp .kg li i{grid-column:2;grid-row:1;justify-self:start;align-self:stretch;width:var(--h);height:auto;min-height:0;border-radius:4px 10px 10px 4px;transform-origin:0 50%}
+  .kgp .kg li b,.kgp .kg li.main b{position:static;grid-column:2;grid-row:3;justify-self:start;left:auto;right:auto;top:auto;transform:none;font-size:18px;line-height:1.3}
+  .kgp .kg li.main b{font-size:21px}
+  .kgp .kg li em,.kgp .kg li.main em,.kgp .kg li:nth-child(3) em{position:static;grid-column:2;grid-row:2;justify-self:start;align-self:center;width:auto;padding:2px 9px;border-radius:999px;background:#FA9C88;color:#fff;font-size:12px;line-height:1.5}
+  .kgp .kg li em::before{content:"↓ "}
+  .kgp.anim[data-s="0"] .kg li:nth-child(1) i,.kgp.anim:is([data-s="0"],[data-s="1"],[data-s="2"]) .kg li:nth-child(2) i,.kgp.anim:is([data-s="0"],[data-s="1"],[data-s="2"],[data-s="3"]) .kg li:nth-child(3) i{transform:scaleX(0)}
+  .kg-kami{top:120px}
+}
+
+@media (max-width:700px){
+  .sp-j{text-align:justify!important;text-justify:inter-character;word-break:normal!important;overflow-wrap:normal!important;line-break:normal}
+  .sp-j wbr{display:none}
+  .kg-talk .say:not(.jk),.kg-moz .say{width:max-content!important;text-align:left!important}
+  .kg-moz .say br{display:inline!important}
+  .kg-moz .say .pc{display:inline!important}.kg-moz .say .sp{display:none!important}
+}
+</style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
+</style><!--sp1121-end-->
 </head>
 <body data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>

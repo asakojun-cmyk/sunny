@@ -77,7 +77,16 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
   body.kata li>a,body.kata a.ncard span.nn,body.kata p.vans>a.tl,body.kata p.more>a.tl,body.kata p.back>a{font-size:14px!important}
   body.kata nav.way li>a{font-size:12px!important;letter-spacing:0!important;word-break:keep-all;line-height:1.35}
 }
-</style>
+
+@media (max-width:700px){
+  .sp-j{text-align:justify!important;text-justify:inter-character;word-break:normal!important;overflow-wrap:normal!important;line-break:normal}
+  .sp-j wbr{display:none}
+  .kg-talk .say:not(.jk),.kg-moz .say{width:max-content!important;text-align:left!important}
+  .kg-moz .say br{display:inline!important}
+  .kg-moz .say .pc{display:inline!important}.kg-moz .say .sp{display:none!important}
+}
+</style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
+</style><!--sp1121-end-->
 </head>
 <body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
