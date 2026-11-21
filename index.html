@@ -1106,7 +1106,6 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   </filter>
 </defs></svg>
 
-<div class="topbar"><div class="wrap"><a href="/start/" data-ev="top_study_exam">試験勉強中の方はこちら ›</a></div></div>
 <header class="hd" id="hd">
   <div class="wrap">
     <a class="logo" href="/"><img src="img/top/sunny.webp" alt=""><span><b>キャリコン学びピクニック</b><small>キャリアコンサルタントの養成講座をくらべて選べるサイト</small></span></a>
@@ -1654,13 +1653,13 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   }
   function play(){
     timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(raf);
-    cnts.forEach(function(el, i){ setCnt(i, i === 0 ? 0 : el.dataset.from); });
+    cnts.forEach(function(el, i){ setCnt(i, el.dataset.from); });
     step(0);
-    [[900,1],[3500,2],[6900,3],[10700,4],[13500,5],[16300,6],[18700,7]].forEach(function(p){ timers.push(setTimeout(function(){ step(p[1]); if (p[1] === 7) cnts.forEach(function(el, i){ setCnt(i, el.dataset.to); }); }, p[0])); });
+    [[150,1],[1900,2],[4300,3],[7000,4],[8900,5],[10800,6],[12400,7]].forEach(function(p){ timers.push(setTimeout(function(){ step(p[1]); if (p[1] === 7) cnts.forEach(function(el, i){ setCnt(i, el.dataset.to); }); }, p[0])); });
   }
   root.classList.add('anim');
   step(0);
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting && (e.intersectionRatio >= 0.8 || e.boundingClientRect.top < innerHeight * 0.3)) { io.disconnect(); play(); } }); }, { threshold: [0.2, 0.4, 0.6, 0.8, 0.9] });
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting && (e.intersectionRatio >= 0.4 || e.boundingClientRect.top < innerHeight * 0.6)) { io.disconnect(); play(); } }); }, { threshold: [0.2, 0.4, 0.6, 0.8, 0.9] });
   io.observe(root);
   root.querySelector('.kg-again').addEventListener('click', play);
 })();

@@ -119,6 +119,17 @@ def main():
     # 2c. ちゃん「給付金は後から戻りますのグラフは最初から33万を見せて。何もない状態ではなく、33万かかることがわかるように」
     #     → 1本め（総額）の棒と金額を、動きの前から出しておく。数字も0から数えず、330,000のまま
     t = t.replace('<span class="cnt" data-from="0" data-to="330000">', '<span class="cnt" data-from="330000" data-to="330000">', 1)
+    # 2d. ちゃん 11/21「試験勉強中の人はこちらのテキストリンクっているかな」→「外してください」
+    #     （入口はヘッダーの「試験対策」と道しるべの③にある）
+    t = re.sub(r'<div class="topbar"><div class="wrap"><a href="/start/" data-ev="top_study_exam">.*?</a></div></div>\s*', '', t, count=1, flags=re.S)
+    # 2e. ちゃん 11/21「給付金は後から戻ります。のところもっとテンポアップしてくれる？しばらく待っていたらアニメーション始まる感じ。あれ？ってなる」
+    #     → 見え始めたらすぐ始める（8割見えるまで待たない）・最初の段をすぐ・全体を約3分の2の長さに。
+    #       1本めの金額は0にもどさず330,000のまま（2cと合わせる）
+    t = t.replace("setCnt(i, i === 0 ? 0 : el.dataset.from)", "setCnt(i, el.dataset.from)")
+    t = t.replace("[[900,1],[3500,2],[6900,3],[10700,4],[13500,5],[16300,6],[18700,7]]",
+                  "[[150,1],[1900,2],[4300,3],[7000,4],[8900,5],[10800,6],[12400,7]]")
+    t = t.replace("e.intersectionRatio >= 0.8 || e.boundingClientRect.top < innerHeight * 0.3",
+                  "e.intersectionRatio >= 0.4 || e.boundingClientRect.top < innerHeight * 0.6")
     # 3. 見た目
     t = re.sub(r'<style id="match1121">.*?</style>\n', "", t, flags=re.S)
     t = t.replace("</head>", CSS + "</head>", 1)
