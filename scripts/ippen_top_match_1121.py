@@ -36,6 +36,8 @@ def block():
 
 
 CSS = """<style id="match1121">
+.kgp.anim[data-s="0"] .kg li:nth-child(1) i{transform:none!important}
+.kgp.anim[data-s="0"] .kg li:nth-child(1) b{opacity:1!important}
 .r5{max-width:600px;margin:22px auto 0}
 .r5-mo{display:flex;flex-direction:row-reverse;align-items:center;justify-content:center;gap:14px;margin-bottom:22px}
 .r5-mo img{width:92px;height:auto;filter:drop-shadow(0 2px 3px rgba(46,74,120,.18))}
@@ -52,7 +54,7 @@ CSS = """<style id="match1121">
 .r5-t br{display:none}
 .r5-c[aria-pressed="true"] .r5-t{color:#D9604A}
 #sel-res{background:none;padding:0;box-shadow:none;border:0}
-.one{max-width:520px;margin:18px auto 0;padding:20px 22px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 2px 0 rgba(46,74,120,.08)}
+.one{max-width:600px;margin:18px auto 0;box-sizing:border-box;padding:20px 22px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 2px 0 rgba(46,74,120,.08)}
 .one-k{margin:0 0 4px;font-size:13.5px;color:var(--sub)}
 .one-h{margin:0;font-size:21px;font-weight:700;color:var(--ink)}
 .one-h .pr{margin-left:8px;vertical-align:middle}
@@ -111,6 +113,12 @@ def main():
     b = t.index("  ps.forEach(", a)
     t = t[:a] + SHOW_JS + t[b:]
     t = t.replace("document.querySelectorAll('.person'), res", "document.querySelectorAll('.r5-c'), res", 1)
+    # 2b. ちゃん「上の丘と今のあなたは？の色が少し違うので統一させて」→ 丘の色を下の段（--grass #EEF4D6）にそろえる。
+    #     丘のふちの筆あとは、前と同じだけ少し濃く
+    t = t.replace('fill="#ECF0D8"', 'fill="#EEF4D6"').replace('stroke="#E7EDD1"', 'stroke="#E9F1CF"')
+    # 2c. ちゃん「給付金は後から戻りますのグラフは最初から33万を見せて。何もない状態ではなく、33万かかることがわかるように」
+    #     → 1本め（総額）の棒と金額を、動きの前から出しておく。数字も0から数えず、330,000のまま
+    t = t.replace('<span class="cnt" data-from="0" data-to="330000">', '<span class="cnt" data-from="330000" data-to="330000">', 1)
     # 3. 見た目
     t = re.sub(r'<style id="match1121">.*?</style>\n', "", t, flags=re.S)
     t = t.replace("</head>", CSS + "</head>", 1)
