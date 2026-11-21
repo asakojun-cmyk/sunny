@@ -1092,6 +1092,7 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   .one-h{font-size:19px}
 }
 </style>
+<style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
 </head>
 <body data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -1108,9 +1109,9 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
 
 <header class="hd" id="hd">
   <div class="wrap">
-    <a class="logo" href="/"><img src="img/top/sunny.webp" alt=""><span><b>キャリコン学びピクニック</b><small>キャリアコンサルタントの養成講座をくらべて選べるサイト</small></span></a>
-    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false"><i></i><i></i><i></i><span>メニュー</span></button>
-    <nav class="nav" aria-label="メニュー"><a href="/careers/">キャリコンとは</a><a href="/schools/">講座をえらぶ</a><a href="/school-guides/kyufukin/">費用と給付金</a><a href="/exam/">試験対策</a><a href="/shikaku-guide/#touroku">受かったあと</a></nav>
+    <a class="logo" href="/"><img src="img/top/sunny.webp" alt=""><span><b><span class="knw"><span class="kn">キャリコン</span>学び<span class="kn">ピクニック</span></span></b><small><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>養成講座を<wbr>くらべて<wbr>選べる<wbr><span class="kn">サイト</span></span></small></span></a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false"><i></i><i></i><i></i><span><span class="knw"><span class="kn">メニュー</span></span></span></button>
+    <nav class="nav" aria-label="メニュー"><a href="/careers/"><span class="knw"><span class="kn">キャリコン</span>とは</span></a><a href="/schools/">講座を<wbr>えらぶ</a><a href="/school-guides/kyufukin/">費用と<wbr>給付金</a><a href="/exam/">試験対策</a><a href="/shikaku-guide/#touroku">受かった<wbr>あと</a></nav>
   </div>
 </header>
 
@@ -1138,11 +1139,11 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
     </div>
     <div class="wrap">
       <div class="hero-text">
-        <h1 class="bk"><span class="h1-big">人の<wbr>話を<wbr>聴く<wbr>仕事、<br>わたしも<wbr>学んでいい</span><span class="h1-sub">キャリアコンサルタント<wbr>養成講座の<wbr>選び方・比較</span></h1>
+        <h1 class="bk"><span class="h1-big">人の<wbr>話を<wbr>聴く<wbr>仕事、<br>わたしも<wbr>学んでいい</span><span class="h1-sub"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span><wbr>養成講座の<wbr>選び方・比較</span></span></h1>
         <div class="lead">
-          <p class="plain">仕事や子育てをしながら、キャリアコンサルタントの養成講座を家で受けたい人へ。</p>
-          <p class="plain">費用と続けやすさで、6校から気になる<span class="nb">2〜3校</span>にしぼれます。</p>
-          <a class="tl down" href="#school-match" data-ev="top_hero_match">いまのあなたに合う学校は？</a>
+          <p class="plain"><span class="knw">仕事や<wbr>子育てを<wbr>しながら、<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>養成講座を<wbr>家で<wbr>受けたい<wbr>人へ。</span></p>
+          <p class="plain">費用と<wbr>続けやすさで、<wbr>6校から<wbr>気に<wbr>なる<span class="nb">2〜3校</span>に<wbr>しぼれます。</p>
+          <a class="tl down" href="#school-match" data-ev="top_hero_match">いまの<wbr>あなたに<wbr>合う<wbr>学校は？</a>
         </div>
       </div>
     </div>
@@ -1153,62 +1154,62 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   <div class="wrap">
     <div class="inner">
       <div class="who" id="school-match">
-        <p class="q">いまのあなたは？<small>近いものを、押してみてね</small></p>
-        <!--match1121--><div class="r5"><div class="r5-mo"><img loading="lazy" decoding="async" src="img/parts/t/moyan_school_hat_smile-200.webp" alt=""><p class="r5-say">わたしは、どれに近いかな？</p></div><div class="r5-list" role="group" aria-label="いまのあなた"><button class="r5-c" type="button" data-k="cost" data-ev="top_match_cost" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/fuan_okane.webp" alt=""></span><span class="r5-t">できるだけ、<br>費用をおさえたい</span></button><button class="r5-c" type="button" data-k="donichi" data-ev="top_match_donichi" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/fuan_tsuzuku.webp" alt=""></span><span class="r5-t">土日に受けたい</span></button><button class="r5-c" type="button" data-k="yoru" data-ev="top_match_yoru" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_yoru.webp" alt=""></span><span class="r5-t">仕事のあと、<br>平日の夜に受けたい</span></button><button class="r5-c" type="button" data-k="support" data-ev="top_match_support" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_furikae.webp" alt=""></span><span class="r5-t">休んでも、<br>振替できる所にしたい</span></button><button class="r5-c r5-wide" type="button" data-k="mada" data-ev="top_match_mada" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_mada.webp" alt=""></span><span class="r5-t">たくさんあって、<br>まだ迷っている</span></button></div></div><!--/match1121-->
+        <p class="q">いまの<wbr>あなたは？<small>近い<wbr>ものを、<wbr>押してみてね</small></p>
+        <!--match1121--><div class="r5"><div class="r5-mo"><img loading="lazy" decoding="async" src="img/parts/t/moyan_school_hat_smile-200.webp" alt=""><p class="r5-say">わたしは、<wbr>どれに<wbr>近いかな？</p></div><div class="r5-list" role="group" aria-label="いまのあなた"><button class="r5-c" type="button" data-k="cost" data-ev="top_match_cost" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/fuan_okane.webp" alt=""></span><span class="r5-t">できるだけ、<br>費用を<wbr>おさえたい</span></button><button class="r5-c" type="button" data-k="donichi" data-ev="top_match_donichi" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/fuan_tsuzuku.webp" alt=""></span><span class="r5-t">土日に<wbr>受けたい</span></button><button class="r5-c" type="button" data-k="yoru" data-ev="top_match_yoru" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_yoru.webp" alt=""></span><span class="r5-t">仕事の<wbr>あと、<br>平日の<wbr>夜に<wbr>受けたい</span></button><button class="r5-c" type="button" data-k="support" data-ev="top_match_support" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_furikae.webp" alt=""></span><span class="r5-t">休んでも、<br>振替できる<wbr>所に<wbr>したい</span></button><button class="r5-c r5-wide" type="button" data-k="mada" data-ev="top_match_mada" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_mada.webp" alt=""></span><span class="r5-t">たくさん<wbr>あって、<br>まだ<wbr>迷っている</span></button></div></div><!--/match1121-->
         <div class="res" id="sel-res" aria-live="polite"></div>
       </div>
 
       <div class="head">
         <div>
           <h2 class="bk">在宅で修了できる<wbr>養成講座 <wbr>6校を比較</h2>
-          <p class="note">ゆっくり横に流れます。さわると止まります。丸いシールは、その学校の特徴です（順位ではありません）</p>
-          <p class="note prnote"><span class="pr">PR</span>は広告（紹介料をいただいている学校）です</p>
+          <p class="note"><span class="knw">ゆっくり横に<wbr>流れます。<wbr>さわると<wbr>止まります。<wbr>丸い<wbr><span class="kn">シール</span>は、<wbr>その<wbr>学校の<wbr>特徴です<wbr>（順位ではありません）</span></p>
+          <p class="note prnote"><span class="pr">PR</span>は<wbr>広告<wbr>（紹介料を<wbr>いただいている<wbr>学校）です</p>
         </div>
         <button class="auto-btn" type="button" id="auto-btn" aria-pressed="false">とめる</button>
       </div>
       <div class="cards" id="cardbox" tabindex="0" aria-label="6校のカード">
-        <article class="card"><p class="bdg">振替<br>何回でも<br>無料</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_manpower.webp" alt=""></div><h3 class="bk"><a href="/schools/nippon-manpower/" data-ev="top_card_nm">日本マンパワー</a><span class="pr">PR</span></h3><p class="forwho">休む回が多くなりそうな人（振替が回数の制限なし・無料）</p><div class="days"><p class="lb">受けられる日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="off">平日夜<span class="vh">は、ここに書いていません</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">曜日は、開講の回ごとに公式で確かめてね</p></div><div class="fee"><p class="lb2">給付金で半分戻ると、実質</p><p class="jis"><b>198,000<small>円</small></b></p><p class="tot1">総額 396,000円のうち、半分が戻る</p></div></article>
-        <article class="card"><p class="bdg">6人に<br>講師1人</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_jaico.webp" alt=""></div><h3 class="bk"><a href="https://www.jaico.cc/" target="_blank" rel="noopener">日本産業<wbr>カウンセラー協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></h3><p class="forwho">少人数で練習したい人（6人に講師1人）</p><div class="days"><p class="lb">受けられる日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="off">平日夜<span class="vh">は、ここに書いていません</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">平日昼（月・水・木・金）と土日 9:30〜17:30ごろ</p></div><div class="fee"><p class="lb2">給付金で半分戻ると、実質</p><p class="jis"><b>165,000<small>円</small></b></p><p class="tot1">総額 330,000円のうち、半分が戻る</p><p class="fnote">4か月コースが対象</p></div></article>
-        <article class="card"><p class="bdg">半日<br>クラス<br>あり</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_lec.webp" alt=""></div><h3 class="bk"><a href="/schools/lec/" data-ev="top_card_lec">LEC<wbr>東京リーガルマインド</a><span class="pr">PR</span></h3><p class="forwho">平日の夜や半日で受けたい人</p><div class="days"><p class="lb">受けられる日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="on">平日夜<span class="vh">あり</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日祝・平日夜・半日</p></div><div class="fee"><p class="lb2">給付金で半分戻ると、実質</p><p class="jis"><b>165,000<small>円</small></b></p><p class="tot1">総額 330,000円のうち、半分が戻る</p></div></article>
-        <article class="card"><p class="bdg">総額<br>297,000円</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_chiiki.webp" alt=""></div><h3 class="bk"><a href="/schools/chiiki-renkei-platform/" data-ev="top_card_chiiki">地域連携<wbr>プラットフォーム</a><span class="pr">PR</span></h3><p class="forwho"><b class="bogo">運営者の母校</b><br>費用をおさえたい人・夜間に受けたい人</p><div class="days"><p class="lb">受けられる日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="on">平日夜<span class="vh">あり</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日祝・平日・午前・午後・夜間</p></div><div class="fee"><p class="lb2">給付金で半分戻ると、実質</p><p class="jis"><b>148,500<small>円</small></b></p><p class="tot1">総額 297,000円のうち、半分が戻る</p></div></article>
-        <article class="card"><p class="bdg">18人まで<br>の担任制</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_gcdf.webp" alt=""></div><h3><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></h3><p class="forwho">担任のいる少人数で学びたい人（18人までの担任制）</p><div class="days"><p class="lb">受けられる日</p><ul class="dtag"><li class="off">平日昼<span class="vh">は、ここに書いていません</span></li><li class="off">平日夜<span class="vh">は、ここに書いていません</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日 9:30〜18:30（時期によって平日も）</p></div><div class="fee"><p class="lb2">給付金で半分戻ると、実質</p><p class="jis"><b>198,000<small>円</small></b></p><p class="tot1">総額 396,000円のうち、半分が戻る</p></div></article>
-        <article class="card"><p class="bdg">平日夜は<br>20:00〜も</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_recurrent.webp" alt=""></div><h3 class="bk"><a href="/schools/recurrent/" data-ev="top_card_rec">リカレント</a><span class="pr">PR</span></h3><p class="forwho">平日の夜に受けたい人（18:50〜／20:00〜）</p><div class="days"><p class="lb">受けられる日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="on">平日夜<span class="vh">あり</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日・平日夜（18:50〜／20:00〜）・平日昼</p></div><div class="fee"><p class="lb2">給付金で半分戻ると、実質</p><p class="jis"><b>249,700<small>円</small></b></p><p class="tot1">総額 499,400円のうち、半分が戻る</p></div></article>
+        <article class="card"><p class="bdg">振替<br>何回でも<br>無料</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_manpower.webp" alt=""></div><h3 class="bk"><a href="/schools/nippon-manpower/" data-ev="top_card_nm"><span class="knw">日本<span class="kn">マンパワー</span></span></a><span class="pr">PR</span></h3><p class="forwho">休む回が<wbr>多くなりそうな<wbr>人<wbr>（振替が<wbr>回数の<wbr>制限なし・無料）</p><div class="days"><p class="lb">受けられる<wbr>日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="off">平日夜<span class="vh">は、<wbr>ここに<wbr>書いていません</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">曜日は、<wbr>開講の<wbr>回ごとに<wbr>公式で<wbr>確かめてね</p></div><div class="fee"><p class="lb2">給付金で<wbr>半分戻ると、<wbr>実質</p><p class="jis"><b>198,000<small>円</small></b></p><p class="tot1">総額 396,000円の<wbr>うち、<wbr>半分が<wbr>戻る</p></div></article>
+        <article class="card"><p class="bdg">6人に<br>講師1人</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_jaico.webp" alt=""></div><h3 class="bk"><a href="https://www.jaico.cc/" target="_blank" rel="noopener"><span class="knw">日本産業<wbr><span class="kn">カウンセラー</span>協会</span><span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></h3><p class="forwho">少人数で<wbr>練習したい<wbr>人<wbr>（6人に<wbr>講師1人）</p><div class="days"><p class="lb">受けられる<wbr>日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="off">平日夜<span class="vh">は、<wbr>ここに<wbr>書いていません</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">平日昼<wbr>（月・水・木・金）と<wbr>土日 9:30〜17:30ごろ</p></div><div class="fee"><p class="lb2">給付金で<wbr>半分戻ると、<wbr>実質</p><p class="jis"><b>165,000<small>円</small></b></p><p class="tot1">総額 330,000円の<wbr>うち、<wbr>半分が<wbr>戻る</p><p class="fnote"><span class="knw">4か<wbr>月<span class="kn">コース</span>が<wbr>対象</span></p></div></article>
+        <article class="card"><p class="bdg">半日<br><span class="knw"><span class="kn">クラス</span></span><br>あり</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_lec.webp" alt=""></div><h3 class="bk"><a href="/schools/lec/" data-ev="top_card_lec"><span class="knw">LEC<wbr>東京<span class="kn">リーガルマインド</span></span></a><span class="pr">PR</span></h3><p class="forwho">平日の<wbr>夜や<wbr>半日で<wbr>受けたい<wbr>人</p><div class="days"><p class="lb">受けられる<wbr>日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="on">平日夜<span class="vh">あり</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日祝・平日夜・半日</p></div><div class="fee"><p class="lb2">給付金で<wbr>半分戻ると、<wbr>実質</p><p class="jis"><b>165,000<small>円</small></b></p><p class="tot1">総額 330,000円の<wbr>うち、<wbr>半分が<wbr>戻る</p></div></article>
+        <article class="card"><p class="bdg">総額<br>297,000円</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_chiiki.webp" alt=""></div><h3 class="bk"><a href="/schools/chiiki-renkei-platform/" data-ev="top_card_chiiki"><span class="knw">地域連携<wbr><span class="kn">プラットフォーム</span></span></a><span class="pr">PR</span></h3><p class="forwho"><b class="bogo">運営者の<wbr>母校</b><br>費用を<wbr>おさえたい<wbr>人・夜間に<wbr>受けたい<wbr>人</p><div class="days"><p class="lb">受けられる<wbr>日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="on">平日夜<span class="vh">あり</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日祝・平日・午前・午後・夜間</p></div><div class="fee"><p class="lb2">給付金で<wbr>半分戻ると、<wbr>実質</p><p class="jis"><b>148,500<small>円</small></b></p><p class="tot1">総額 297,000円の<wbr>うち、<wbr>半分が<wbr>戻る</p></div></article>
+        <article class="card"><p class="bdg">18人まで<br>の<wbr>担任制</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_gcdf.webp" alt=""></div><h3><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></h3><p class="forwho">担任の<wbr>いる<wbr>少人数で<wbr>学びたい<wbr>人<wbr>（18人までの<wbr>担任制）</p><div class="days"><p class="lb">受けられる<wbr>日</p><ul class="dtag"><li class="off">平日昼<span class="vh">は、<wbr>ここに<wbr>書いていません</span></li><li class="off">平日夜<span class="vh">は、<wbr>ここに<wbr>書いていません</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日 9:30〜18:30<wbr>（時期に<wbr>よって<wbr>平日も）</p></div><div class="fee"><p class="lb2">給付金で<wbr>半分戻ると、<wbr>実質</p><p class="jis"><b>198,000<small>円</small></b></p><p class="tot1">総額 396,000円の<wbr>うち、<wbr>半分が<wbr>戻る</p></div></article>
+        <article class="card"><p class="bdg">平日夜は<br>20:00〜も</p><div class="cimg"><img loading="lazy" decoding="async" src="img/top/school_recurrent.webp" alt=""></div><h3 class="bk"><a href="/schools/recurrent/" data-ev="top_card_rec"><span class="knw"><span class="kn">リカレント</span></span></a><span class="pr">PR</span></h3><p class="forwho">平日の<wbr>夜に<wbr>受けたい<wbr>人<wbr>（18:50〜／20:00〜）</p><div class="days"><p class="lb">受けられる<wbr>日</p><ul class="dtag"><li class="on">平日昼<span class="vh">あり</span></li><li class="on">平日夜<span class="vh">あり</span></li><li class="on">土日<span class="vh">あり</span></li></ul><p class="dnote">土日・平日夜<wbr>（18:50〜／20:00〜）・平日昼</p></div><div class="fee"><p class="lb2">給付金で<wbr>半分戻ると、<wbr>実質</p><p class="jis"><b>249,700<small>円</small></b></p><p class="tot1">総額 499,400円の<wbr>うち、<wbr>半分が<wbr>戻る</p></div></article>
       </div>
             <div class="kf-wrap">
-        <div class="kgp"><div class="kgt"><p class="kf-h">給付金は、あとから戻ります<small>例：総額 330,000円のとき</small></p></div>
+        <div class="kgp"><div class="kgt"><p class="kf-h">給付金は、<wbr>あとから<wbr>戻ります<small>例：総額 330,000円の<wbr>とき</small></p></div>
         <div class="kg-talk"><img loading="lazy" decoding="async" class="kg-sun bob" src="img/top/sunny.webp" alt="">
-          <p class="say sv" data-s="2">モヤン、雇用保険に入ってる？</p>
-          <p class="say sv keep" data-s="3 7">それなら、基本的には、半額は戻ってくると思って大丈夫！</p>
-          <p class="say sv" data-s="4">資格を取って働くと、さらに2割</p>
-          <p class="say jk keep" data-s="3 4 5 6 7">雇用保険に3年以上（はじめての人は2年以上）入っていて、講座を修了した人が対象です</p>
+          <p class="say sv" data-s="2"><span class="knw"><span class="kn">モヤン</span>、<wbr>雇用保険に<wbr>入ってる？</span></p>
+          <p class="say sv keep" data-s="3 7">それなら、<wbr>基本的には、<wbr>半額は<wbr>戻ってくると<wbr>思って<wbr>大丈夫！</p>
+          <p class="say sv" data-s="4">資格を<wbr>取って<wbr>働くと、<wbr>さらに<wbr>2割</p>
+          <p class="say jk keep" data-s="3 4 5 6 7">雇用保険に<wbr>3年以上<wbr>（はじめての<wbr>人は<wbr>2年以上）<wbr>入っていて、<wbr>講座を<wbr>修了した<wbr>人が<wbr>対象です</p>
         </div>
         <div class="kgs"><ol class="kg" aria-label="払う金額が下がっていくグラフ">
-          <li style="--h:100%"><b><span class="cnt" data-from="330000" data-to="330000">330,000</span><small>円</small></b><i></i><span class="st">受講料を払う<small>先に全額を払います</small></span></li>
-          <li class="main" style="--h:50%"><em>半分戻る</em><b><span class="cnt" data-from="330000" data-to="165000">165,000</span><small>円</small></b><i></i><span class="st">修了すると、実質<small>50％戻ったとき</small></span></li>
-          <li style="--h:30%"><em>さらに2割戻る</em><b><span class="cnt" data-from="165000" data-to="99000">99,000</span><small>円</small></b><i></i><span class="st">資格を取って働くと、実質<small>合わせて70％戻ったとき</small></span></li>
+          <li style="--h:100%"><b><span class="cnt" data-from="330000" data-to="330000">330,000</span><small>円</small></b><i></i><span class="st">受講料を<wbr>払う<small>先に<wbr>全額を<wbr>払います</small></span></li>
+          <li class="main" style="--h:50%"><em>半分戻る</em><b><span class="cnt" data-from="330000" data-to="165000">165,000</span><small>円</small></b><i></i><span class="st">修了すると、<wbr>実質<small>50％戻った<wbr>とき</small></span></li>
+          <li style="--h:30%"><em>さらに<wbr>2割戻る</em><b><span class="cnt" data-from="165000" data-to="99000">99,000</span><small>円</small></b><i></i><span class="st">資格を<wbr>取って<wbr>働くと、<wbr>実質<small>合わせて<wbr>70％戻った<wbr>とき</small></span></li>
         </ol>
           <div class="kg-moz">
             <img loading="lazy" decoding="async" class="kg-mo mm cry" src="img/parts/t/07_moyan_school_hat_crying-148.webp" alt=""><img loading="lazy" decoding="async" class="kg-mo mm smi" src="img/parts/t/moyan_school_hat_smile-200.webp" alt="">
-            <p class="say fk" data-s="1"><span class="pc">うわ〜、30万以上かかるんだね。<br>高い〜…</span><span class="sp">30万以上かかるんだね。高い〜…</span></p>
+            <p class="say fk" data-s="1"><span class="pc">うわ〜、<wbr>30万以上<wbr>かかるんだね。<br>高い〜…</span><span class="sp">30万以上<wbr>かかるんだね。<wbr>高い〜…</span></p>
             <p class="say fk late" data-s="2">入ってるよ</p>
-            <p class="say fk s-o keep" data-s="5 7">こんなに下がるんだね！<br>助かるね！</p>
-            <p class="say fk s-w" data-s="6">わーい、これなら<br>はじめられそう！</p>
+            <p class="say fk s-o keep" data-s="5 7">こんなに<wbr>下がるんだね！<br>助かるね！</p>
+            <p class="say fk s-w" data-s="6">わーい、<wbr>これなら<br>はじめられそう！</p>
           </div>
         </div>
-        <p class="kg-again-w"><button class="kg-again" type="button">もう一度見る</button></p></div>
+        <p class="kg-again-w"><button class="kg-again" type="button">もう<wbr>一度<wbr>見る</button></p></div>
         <div class="hitokoto">
           <span class="pic hpic"><img loading="lazy" decoding="async" src="img/top/hito_profile.webp" alt="地図を広げている女性の絵"></span>
           <div class="hb">
-            <p class="hk">運営者 岩脇朝子（ちゃん）のひと言</p>
-            <p class="ht">わたしは雇用保険に入っていた期間が足りなくて、給付金は使えなかったよ（笑）。でも、わたしのときは、<span class="nb">地域連携<wbr>プラットフォーム</span>に、給付金を使えない人向けの27,000円引きがあったよ。見てみてね<span class="pr">PR</span></p>
-            <a class="tl" href="/schools/chiiki-renkei-platform/">地域連携<wbr>プラットフォームを<wbr>見る</a>
+            <p class="hk">運営者 岩脇朝子<wbr>（ちゃん）の<wbr>ひと言</p>
+            <p class="ht">わたしは雇用保険に入っていた期間が足りなくて、給付金は使えなかったよ（笑）。でも、わたしのときは、<span class="nb"><span class="knw">地域連携<wbr><span class="kn">プラットフォーム</span></span></span>に、給付金を使えない人向けの27,000円引きがあったよ。見てみてね<span class="pr">PR</span></p>
+            <a class="tl" href="/schools/chiiki-renkei-platform/"><span class="knw">地域連携<wbr><span class="kn">プラットフォーム</span>を<wbr>見る</span></a>
           </div>
         </div>
-        <p class="zentei">雇用保険の条件に合う人が、割引を使わずに受けたときの金額です。「資格を取って働く」は、修了から1年以内に資格を取り、雇用保険に入って働いている（働きはじめる）場合です。<a class="tl" href="/school-guides/kyufukin/" data-ev="top_kyufukin_jouken">給付金の条件を見る</a></p>
+        <p class="zentei">雇用保険の<wbr>条件に<wbr>合う<wbr>人が、<wbr>割引を<wbr>使わずに<wbr>受けた<wbr>ときの<wbr>金額です。<wbr>「資格を<wbr>取って<wbr>働く」は、<wbr>修了から<wbr>1年以内に<wbr>資格を<wbr>取り、<wbr>雇用保険に<wbr>入って<wbr>働いている<wbr>（働きはじめる）<wbr>場合です。<a class="tl" href="/school-guides/kyufukin/" data-ev="top_kyufukin_jouken">給付金の<wbr>条件を<wbr>見る</a></p>
       </div>
       <div class="after">
-        <a class="tl" href="/schools/compare/" data-ev="top_next_compare">全部の比較表を見る</a>
-        <p class="note">金額は、公式ページの料金を足した定価の総額です</p>
+        <a class="tl" href="/schools/compare/" data-ev="top_next_compare">全部の<wbr>比較表を<wbr>見る</a>
+        <p class="note"><span class="knw">金額は、<wbr>公式<span class="kn">ページ</span>の<wbr>料金を<wbr>足した<wbr>定価の<wbr>総額です</span></p>
       </div>
     </div>
   </div>
@@ -1219,32 +1220,32 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
     <div class="inner">
       <div class="head">
         <h2 class="bk">養成講座の<wbr>決め手は、<wbr>3つだけ</h2>
-        <p class="fuda">お金・日程・サポート</p>
+        <p class="fuda"><span class="knw">お金・日程・<span class="kn">サポート</span></span></p>
       </div>
       <div class="talk">
         <div class="t-row" data-n="01">
-          <div class="ask"><span class="mo"><img loading="lazy" decoding="async" src="img/top/hito_1_cost.webp" alt=""></span><div class="fuki2" style="--fc:#FBF1DC"><p class="k"><b>お金</b>いくらかかるかな</p><p class="koe">「総額ざっくりとしか把握できていないから、ちょっと怖い…」</p><small>受講を考えた人の声（note・2022年）</small></div></div>
+          <div class="ask"><span class="mo"><img loading="lazy" decoding="async" src="img/top/hito_1_cost.webp" alt=""></span><div class="fuki2" style="--fc:#FBF1DC"><p class="k"><b>お金</b>いくらかかるかな</p><p class="koe">「総額ざっくりと<wbr>しか<wbr>把握できていないから、<wbr>ちょっと<wbr>怖い…」</p><small>受講を<wbr>考えた<wbr>人の<wbr>声<wbr>（note・2022年）</small></div></div>
           <div class="ans"><div class="abox">
             <h3 class="bk"><span class="pre pre2">給付金で<wbr>半分戻ると、<wbr>実質</span><span class="yen"><i>148,500〜249,700<small>円</small></i></span><span class="pre tot1k">6校の<wbr>総額 297,000〜499,400円の<wbr>うち、<wbr>半分が<wbr>戻る</span></h3>
-            <p class="body">雇用保険の条件に合う人が、対象のコースを修了したあとの金額です（割引を使わない場合）。先にいったん全額を払います。資格を取って働くと、さらに戻ります。</p>
-            <a class="tl" href="/school-guides/kyufukin/">給付金で実質いくらになるか</a>
+            <p class="body"><span class="knw">雇用保険の<wbr>条件に<wbr>合う<wbr>人が、<wbr>対象の<wbr><span class="kn">コース</span>を<wbr>修了した<wbr>あとの<wbr>金額です<wbr>（割引を<wbr>使わない<wbr>場合）。<wbr>先に<wbr>いったん全額を<wbr>払います。<wbr>資格を<wbr>取って<wbr>働くと、<wbr>さらに<wbr>戻ります。</span></p>
+            <a class="tl" href="/school-guides/kyufukin/">給付金で<wbr>実質いくらに<wbr>なるか</a>
           </div></div>
         </div>
         <div class="t-row rev" data-n="02">
-          <div class="ask"><span class="mo"><img loading="lazy" decoding="async" src="img/top/hito_4_support.webp" alt=""></span><div class="fuki2" style="--fc:#E3F0FA"><p class="k"><b>日程</b>続けられるかな</p><p class="koe">「仕事と育児で既にパンパンの毎日。」</p><small>受講を考えた人の声（note・2025年）</small></div></div>
+          <div class="ask"><span class="mo"><img loading="lazy" decoding="async" src="img/top/hito_4_support.webp" alt=""></span><div class="fuki2" style="--fc:#E3F0FA"><p class="k"><b>日程</b>続けられるかな</p><p class="koe"><span class="knw">「仕事と<wbr>育児で<wbr>既に<wbr><span class="kn">パンパン</span>の<wbr>毎日。」</span></p><small>受講を<wbr>考えた<wbr>人の<wbr>声<wbr>（note・2025年）</small></div></div>
           <div class="ans"><div class="abox">
-            <h3 class="bk"><span class="pre">キャリアコンサルタントの<wbr>養成講座は、</span><span class="big">家に<wbr>いたまま<br>修了まで<wbr>受けられます</span></h3>
-            <p class="body">6校とも土日のクラスがあります。平日の夜や半日のクラス、休んだときに振替しやすい学校もあります。</p>
+            <h3 class="bk"><span class="pre"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>養成講座は、</span></span><span class="big">家に<wbr>いたまま<br>修了まで<wbr>受けられます</span></h3>
+            <p class="body"><span class="knw">6校とも<wbr>土日の<wbr><span class="kn">クラス</span>が<wbr>あります。<wbr>平日の<wbr>夜や<wbr>半日の<wbr><span class="kn">クラス</span>、<wbr>休んだ<wbr>ときに<wbr>振替しやすい<wbr>学校も<wbr>あります。</span></p>
           </div></div>
         </div>
         <div class="t-row" data-n="03">
-          <div class="ask"><span class="mo"><img loading="lazy" decoding="async" src="img/top/hito_2_donichi.webp" alt=""></span><div class="fuki2" style="--fc:#EEF4E2"><p class="k"><b>サポート</b>休んだり、つまずいたりしたら</p><p class="koe">「振り替えができるところを条件にしました」</p><small>受講した人の声（note・2024年）</small></div></div>
+          <div class="ask"><span class="mo"><img loading="lazy" decoding="async" src="img/top/hito_2_donichi.webp" alt=""></span><div class="fuki2" style="--fc:#EEF4E2"><p class="k"><b><span class="knw"><span class="kn">サポート</span></span></b>休んだり、<wbr>つまず<wbr>いたりしたら</p><p class="koe">「振り<wbr>替えが<wbr>できる<wbr>ところを<wbr>条件に<wbr>しました」</p><small>受講した<wbr>人の<wbr>声<wbr>（note・2024年）</small></div></div>
           <div class="ans"><div class="abox">
             <h3 class="bk">休んでも、<wbr>少人数でも</h3>
             <ul class="chips">
-              <li>振替が回数の制限なし・無料<span>日本マンパワー・LEC東京リーガルマインド</span></li>
-              <li>6人に講師1人<span>日本産業カウンセラー協会</span></li>
-              <li>18人までの担任制<span>GCDF-Japan</span></li>
+              <li>振替が<wbr>回数の<wbr>制限なし・無料<span><span class="knw">日本<span class="kn">マンパワー</span>・LEC<wbr>東京<span class="kn">リーガルマインド</span></span></span></li>
+              <li>6人に<wbr>講師1人<span><span class="knw">日本産業<wbr><span class="kn">カウンセラー</span>協会</span></span></li>
+              <li>18人までの<wbr>担任制<span>GCDF-Japan</span></li>
             </ul>
           </div></div>
         </div>
@@ -1257,18 +1258,18 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   <div class="wrap">
     <div class="inner panel hon">
       <div class="l">
-        <p class="fuda">実際に通った人の本音</p>
+        <p class="fuda">実際に<wbr>通った<wbr>人の<wbr>本音</p>
         <h2 class="bk" style="margin-top:6px">通ってみて、<br>どうだった？</h2>
-        <p class="lead-h">わたしは3児の母で、2026年5月から8月まで、土曜コース全10回を受けて、修了しました。</p>
+        <p class="lead-h"><span class="knw">わたしは<wbr>3児の<wbr>母で、<wbr>2026年5月から<wbr>8月まで、<wbr>土曜<span class="kn">コース</span>全1<wbr>0回を<wbr>受けて、<wbr>修了しました。</span></p>
         <img loading="lazy" decoding="async" src="img/top/hito_honne.webp" alt="">
       </div>
       <div>
         <ul class="hon-q">
-          <li><b>どうやって学校を選んだか</b><span class="a">見たのは、子育て中のママでも受けられそうか、在宅で修了できるか、金額が安いか。迷いましたが、説明会で気になることを直接聞けたので、申し込むときの不安は特にありませんでした。</span></li>
-          <li><b>仕事や子育てと、どう両立したか</b><span class="a">オンラインなので、授業の直前まで家事ができました。それでも両立は、かなり難しかったです。運営の方に相談して、お菓子やテレビで子どもの気を引く作戦で、同じクラスのまま全10回を受けきりました。</span></li>
-          <li><b>通う前に知りたかったこと</b><span class="a">授業中に子どもが画面に映ってはいけないことは、受講が始まってから知りました（わたしの通った学校のきまりです）。子どもが学校・園にいる時間帯や、寝たあとの夜のクラスを選ぶと映りにくいです。</span></li>
+          <li><b>どうやって<wbr>学校を<wbr>選んだか</b><span class="a">見たのは、<wbr>子育て<wbr>中の<wbr>ママでも<wbr>受けられそうか、<wbr>在宅で<wbr>修了できるか、<wbr>金額が<wbr>安いか。<wbr>迷いましたが、<wbr>説明会で<wbr>気に<wbr>なる<wbr>ことを<wbr>直接聞けたので、<wbr>申し込む<wbr>ときの<wbr>不安は<wbr>特に<wbr>ありませんでした。</span></li>
+          <li><b>仕事や<wbr>子育てと、<wbr>どう<wbr>両立したか</b><span class="a"><span class="knw"><span class="kn">オンライン</span>なので、<wbr>授業の<wbr>直前まで<wbr>家事が<wbr>できました。<wbr>それでも<wbr>両立は、<wbr>かなり<wbr>難しかったです。<wbr>運営の<wbr>方に<wbr>相談して、<wbr>お菓子や<wbr><span class="kn">テレビ</span>で<wbr>子どもの<wbr>気を<wbr>引く<wbr>作戦で、<wbr>同じ<wbr><span class="kn">クラス</span>の<wbr>まま<wbr>全1<wbr>0回を<wbr>受けきりました。</span></span></li>
+          <li><b>通う<wbr>前に<wbr>知りたかった<wbr>こと</b><span class="a"><span class="knw">授業中に<wbr>子どもが<wbr>画面に<wbr>映ってはいけない<wbr>ことは、<wbr>受講が<wbr>始まってから<wbr>知りました<wbr>（わたしの<wbr>通った<wbr>学校の<wbr>きまりです）。<wbr>子どもが<wbr>学校・園に<wbr>いる<wbr>時間帯や、<wbr>寝た<wbr>あとの<wbr>夜の<wbr><span class="kn">クラス</span>を<wbr>選ぶと<wbr>映りにくいです。</span></span></li>
         </ul>
-        <a class="tl" href="/school-reviews/chiiki-renkei-platform/" data-ev="top_more_review">体験記を読む</a>
+        <a class="tl" href="/school-reviews/chiiki-renkei-platform/" data-ev="top_more_review">体験記を<wbr>読む</a>
       </div>
     </div>
   </div>
@@ -1287,15 +1288,15 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
         <img loading="lazy" decoding="async" class="bob" src="img/top/sunny.webp" alt="" style="left:1%;bottom:0;width:22%;--r:6deg">
         <img loading="lazy" decoding="async" class="bob" src="img/parts/t/moyan_school_hat_smile-200.webp" alt="" style="left:77%;bottom:0;width:20%;--r:-6deg;animation-delay:-2.4s">
       </div>
-      <p class="ok-tag">決めてなくても参加OK</p>
+      <p class="ok-tag">決めてなくても<wbr>参加OK</p>
       <h2 class="bk">まずは<wbr>説明会で、<br>雰囲気を<wbr>見てみよう</h2>
       <div class="body">
-        <p>説明会は、申し込む場所ではなく、雰囲気を見に行く場所。気になる<span class="nb">2〜3校</span>をのぞいてから決めて大丈夫です。</p>
-        <p>受けた人の体験記では、説明会のスタッフの対応や、無理にすすめられなかったことが決め手になっていました。</p>
+        <p>説明会は、<wbr>申し込む<wbr>場所ではなく、<wbr>雰囲気を<wbr>見に<wbr>行く<wbr>場所。<wbr>気に<wbr>なる<span class="nb">2〜3校</span>を<wbr>のぞいてから<wbr>決めて<wbr>大丈夫です。</p>
+        <p><span class="knw">受けた<wbr>人の<wbr>体験記では、<wbr>説明会の<wbr><span class="kn">スタッフ</span>の<wbr>対応や、<wbr>無理に<wbr>すすめられなかったことが<wbr>決め手に<wbr>なっていました。</span></p>
       </div>
-      <a class="cta" href="/schools/compare/#apply-h" data-ev="top_cta_apply">説明会の予約先を見る<span aria-hidden="true"></span></a>
-      <p class="camp">説明会に出ると割引がある学校も。<a href="#tokuten">いまの特典 ↓</a></p>
-      <p class="ref note">紹介料をいただいているのは、PRの表示がある学校です。あなたの受講料は変わりません。<br>6校とも同じ項目・同じ確かめ方で載せています。</p>
+      <a class="cta" href="/schools/compare/#apply-h" data-ev="top_cta_apply">説明会の<wbr>予約先を<wbr>見る<span aria-hidden="true"></span></a>
+      <p class="camp">説明会に<wbr>出ると<wbr>割引が<wbr>ある<wbr>学校も。<a href="#tokuten">いまの<wbr>特典 ↓</a></p>
+      <p class="ref note">紹介料を<wbr>いただいているのは、<wbr>PRの<wbr>表示が<wbr>ある<wbr>学校です。<wbr>あなたの<wbr>受講料は<wbr>変わりません。<br>6校とも<wbr>同じ<wbr>項目・同じ<wbr>確かめ方で<wbr>載せています。</p>
     </div>
   </div>
 </section>
@@ -1307,43 +1308,43 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
     <div class="inner">
       <div class="head">
         <h2 class="bk">いまの<wbr>募集</h2>
-        <p class="fuda"><span class="num" style="font-size:15px;letter-spacing:.1em">11/19</span> に確かめました</p>
+        <p class="fuda"><span class="num" style="font-size:15px;letter-spacing:.1em">11/19</span> に<wbr>確かめました</p>
       </div>
       <div class="body" style="margin-top:16px">
-        <p>また来たときに、変わったところがわかるように。申し込む前に、公式ページでも確かめてね。</p>
-        <p class="kyufu-note">給付金を使う人は、表の締切より先に、ハローワークの手続きの期限が来ます（原則、受講開始日の2週間前）。</p>
-        <p class="exam-lead">いま募集中の回で始めると、4校の案内では、いちばん早い試験は<b><span style="white-space:nowrap">第35回</span>（学科・論述 2027年7月4日（日））</b>です。<small>修了して、申込みの期間に申し込むことが前提です。試験の日は2026年11月15日に公式で確かめました</small></p>
+        <p><span class="knw">また<wbr>来た<wbr>ときに、<wbr>変わった<wbr>ところが<wbr>わかるように。<wbr>申し込む前に、<wbr>公式<span class="kn">ページ</span>でも<wbr>確かめてね。</span></p>
+        <p class="kyufu-note"><span class="knw">給付金を<wbr>使う<wbr>人は、<wbr>表の<wbr>締切より<wbr>先に、<wbr><span class="kn">ハローワーク</span>の<wbr>手続きの<wbr>期限が<wbr>来ます<wbr>（原則、<wbr>受講開始日の<wbr>2週間前）。</span></p>
+        <p class="exam-lead">いま募集中の<wbr>回で<wbr>始めると、<wbr>4校の<wbr>案内では、<wbr>いちばん早い<wbr>試験は<b><span style="white-space:nowrap">第35回</span>（学科・論述 2027年7月4日<wbr>（日））</b>です。<small>修了して、<wbr>申込みの<wbr>期間に<wbr>申し込むことが<wbr>前提です。<wbr>試験の<wbr>日は<wbr>2026年11月15日に<wbr>公式で<wbr>確かめました</small></p>
         <table class="tbl tbl-main">
-          <thead><tr><th>学校</th><th>次の開講</th><th>申込みの締切</th><th>いちばん早い試験<br>（学校の案内では）</th></tr></thead>
+          <thead><tr><th>学校</th><th>次の<wbr>開講</th><th>申込みの<wbr>締切</th><th>いちばん早い<wbr>試験<br>（学校の<wbr>案内では）</th></tr></thead>
           <tbody>
-            <tr><th><a href="https://www.jaico.cc/" target="_blank" rel="noopener">日本産業カウンセラー<span class="nb">協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></span></a></th><td data-k="次の開講">12月1日（火）<small>4か月コース</small></td><td data-k="申込みの締切">先着順・定員まで</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第35回</span></b>　2027年7月4日（日）<small>協会の案内「<span style="white-space:nowrap">第35回</span>の国家試験に対応しています」</small></td></tr>
-            <tr><th><a href="/schools/lec/">LEC東京リーガルマインド</a><span class="pr">PR</span></th><td data-k="次の開講">12月13日（日）</td><td data-k="申込みの締切">各クラスの3日目まで・定員まで</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第35回</span></b>　2027年7月4日（日）<small>LECの案内「12月生　<span style="white-space:nowrap">第35回</span>（2027年7月）」</small></td></tr>
-            <tr><th><a href="/schools/chiiki-renkei-platform/">地域連携プラットフォーム</a><span class="pr">PR</span></th><td data-k="次の開講">12月14日（月）</td><td data-k="申込みの締切">締切日は公式に書いていません</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第35回</span></b>　2027年7月4日（日）<small>学校の案内「<span style="white-space:nowrap">第35回</span> 2027年7月受験可能コース」</small></td></tr>
-            <tr><th><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></th><td data-k="次の開講">1月16日（土）</td><td data-k="申込みの締切">定員まで</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b>2027年7月の試験</b>　7月4日（日）<small>学校の案内「2027年7月試験対応」</small></td></tr>
-            <tr><th><a href="/schools/nippon-manpower/">日本マンパワー</a><span class="pr">PR</span></th><td data-k="次の開講">2月19日（金）・3月19日（金）<small><span style="white-space:nowrap">第36回</span>養成講座</small></td><td data-k="申込みの締切">2月19日開講は<span style="white-space:nowrap">2月12日（金）</span>まで<small>3月19日開講は<span style="white-space:nowrap">3月12日（金）</span>まで</small></td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第36回</span></b>　2027年10月31日（日）<small>学校の案内「最短で<span style="white-space:nowrap">第36回</span>国家資格キャリアコンサルタント試験の受験ができます」</small></td></tr>
-            <tr><th><a href="/schools/recurrent/">リカレント</a><span class="pr">PR</span></th><td data-k="次の開講">11月・12月生を募集中</td><td data-k="申込みの締切">公式に書いていません</td><td data-k="いちばん早い試験（学校の案内では）" class="ex no">公式に書いていません<small>説明会で確かめてね</small></td></tr>
+            <tr><th><a href="https://www.jaico.cc/" target="_blank" rel="noopener"><span class="knw">日本産業<span class="kn">カウンセラー</span></span><span class="nb">協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></span></a></th><td data-k="次の開講">12月1日<wbr>（火）<small><span class="knw">4か<wbr>月<span class="kn">コース</span></span></small></td><td data-k="申込みの締切">先着順・定員まで</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第35回</span></b>　2027年7月4日<wbr>（日）<small>協会の<wbr>案内<wbr>「<span style="white-space:nowrap">第35回</span>の<wbr>国家試験に<wbr>対応しています」</small></td></tr>
+            <tr><th><a href="/schools/lec/"><span class="knw">LEC<wbr>東京<span class="kn">リーガルマインド</span></span></a><span class="pr">PR</span></th><td data-k="次の開講">12月13日<wbr>（日）</td><td data-k="申込みの締切"><span class="knw">各<span class="kn">クラス</span>の<wbr>3日目まで・定員まで</span></td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第35回</span></b>　2027年7月4日<wbr>（日）<small>LECの<wbr>案内<wbr>「12月生　<span style="white-space:nowrap">第35回</span>（2027年7月）」</small></td></tr>
+            <tr><th><a href="/schools/chiiki-renkei-platform/"><span class="knw">地域連携<wbr><span class="kn">プラットフォーム</span></span></a><span class="pr">PR</span></th><td data-k="次の開講">12月14日<wbr>（月）</td><td data-k="申込みの締切">締切日は<wbr>公式に<wbr>書いていません</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第35回</span></b>　2027年7月4日<wbr>（日）<small>学校の<wbr>案内<wbr>「<span style="white-space:nowrap">第35回</span> <span class="knw">2027年7月受験可能<span class="kn">コース</span>」</span></small></td></tr>
+            <tr><th><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></th><td data-k="次の開講">1月16日<wbr>（土）</td><td data-k="申込みの締切">定員まで</td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b>2027年7月の<wbr>試験</b>　7月4日<wbr>（日）<small>学校の<wbr>案内<wbr>「2027年7月試験対応」</small></td></tr>
+            <tr><th><a href="/schools/nippon-manpower/"><span class="knw">日本<span class="kn">マンパワー</span></span></a><span class="pr">PR</span></th><td data-k="次の開講">2月19日<wbr>（金）・3月19日<wbr>（金）<small><span style="white-space:nowrap">第36回</span>養成講座</small></td><td data-k="申込みの締切">2月19日開講は<span style="white-space:nowrap">2月12日<wbr>（金）</span>まで<small>3月19日開講は<span style="white-space:nowrap">3月12日<wbr>（金）</span>まで</small></td><td data-k="いちばん早い試験（学校の案内では）" class="ex"><b><span style="white-space:nowrap">第36回</span></b>　2027年10月31日<wbr>（日）<small>学校の<wbr>案内<wbr>「最短で<span style="white-space:nowrap">第36回</span><span class="knw">国家資格<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>試験の<wbr>受験が<wbr>できます」</span></small></td></tr>
+            <tr><th><a href="/schools/recurrent/"><span class="knw"><span class="kn">リカレント</span></span></a><span class="pr">PR</span></th><td data-k="次の開講">11月・12月生を<wbr>募集中</td><td data-k="申込みの締切">公式に<wbr>書いていません</td><td data-k="いちばん早い試験（学校の案内では）" class="ex no">公式に<wbr>書いていません<small>説明会で<wbr>確かめてね</small></td></tr>
           </tbody>
         </table>
         <h3 class="tix-h bk" id="tokuten">いまの<wbr>特典<small>説明会に<wbr>出ると<wbr>割引が<wbr>ある<wbr>学校も</small></h3>
         <ul class="tix">
-          <li class="wari"><p class="sc"><a href="https://www.jaico.cc/" target="_blank" rel="noopener">日本産業カウンセラー<span class="nb">協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></span></a></p><p class="cond">説明会のその場で申し込むと</p><p class="amt"><i>割引</i><b>22,000円引き</b></p><small></small></li>
-          <li class="wari"><p class="sc"><a href="/schools/lec/">LEC東京リーガルマインド</a><span class="pr">PR</span></p><p class="cond">説明会に参加して予約すると</p><p class="amt"><i>割引</i><b>10,000円引き</b></p><small>オンライン説明会で使えるかは、説明会で確かめてね</small></li>
-          <li class="gift"><p class="sc"><a href="/schools/chiiki-renkei-platform/">地域連携プラットフォーム</a><span class="pr">PR</span></p><p class="cond">子育て中の人は</p><p class="amt"><i>Amazonギフト券</i><b>10,000円</b></p><small>特典はどれか1つ</small></li>
-          <li class="wari"><p class="sc"><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></p><p class="cond"><b class="dl">11/30まで</b>に1月開講へ申し込むと</p><p class="amt"><i>割引</i><b>16,500円引き</b></p><small>説明会か個別相談に参加した人</small></li>
-          <li class="wari"><p class="sc"><a href="/schools/nippon-manpower/">日本マンパワー</a><span class="pr">PR</span></p><p class="cond">説明会・個別相談会に参加すると</p><p class="amt"><i>割引</i><b>11,000円引き</b></p><small>クーポンがもらえます（イベント・ランチタイムセミナーは対象外）</small></li>
-          <li class="wari"><p class="sc"><a href="/schools/recurrent/">リカレント</a><span class="pr">PR</span></p><p class="cond">遠方の人は</p><p class="amt"><i>割引</i><b>受講料5％引き</b></p><small></small></li>
+          <li class="wari"><p class="sc"><a href="https://www.jaico.cc/" target="_blank" rel="noopener"><span class="knw">日本産業<span class="kn">カウンセラー</span></span><span class="nb">協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></span></a></p><p class="cond">説明会の<wbr>その<wbr>場で<wbr>申し込むと</p><p class="amt"><i>割引</i><b>22,000円引き</b></p><small></small></li>
+          <li class="wari"><p class="sc"><a href="/schools/lec/"><span class="knw">LEC<wbr>東京<span class="kn">リーガルマインド</span></span></a><span class="pr">PR</span></p><p class="cond">説明会に<wbr>参加して<wbr>予約すると</p><p class="amt"><i>割引</i><b>10,000円引き</b></p><small><span class="knw"><span class="kn">オンライン</span>説明会で<wbr>使えるかは、<wbr>説明会で<wbr>確かめてね</span></small></li>
+          <li class="gift"><p class="sc"><a href="/schools/chiiki-renkei-platform/"><span class="knw">地域連携<wbr><span class="kn">プラットフォーム</span></span></a><span class="pr">PR</span></p><p class="cond">子育て<wbr>中の<wbr>人は</p><p class="amt"><i><span class="knw">Amazon<span class="kn">ギフト</span>券</span></i><b>10,000円</b></p><small>特典は<wbr>どれか<wbr>1つ</small></li>
+          <li class="wari"><p class="sc"><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></p><p class="cond"><b class="dl">11/30まで</b>に<wbr>1月開講へ<wbr>申し込むと</p><p class="amt"><i>割引</i><b>16,500円引き</b></p><small>説明会か<wbr>個別相談に<wbr>参加した<wbr>人</small></li>
+          <li class="wari"><p class="sc"><a href="/schools/nippon-manpower/"><span class="knw">日本<span class="kn">マンパワー</span></span></a><span class="pr">PR</span></p><p class="cond">説明会・個別相談会に<wbr>参加すると</p><p class="amt"><i>割引</i><b>11,000円引き</b></p><small><span class="knw"><span class="kn">クーポン</span>が<wbr>もらえます<wbr>（<span class="kn">イベント・</span><wbr><span class="kn">ランチタイムセミナー</span>は<wbr>対象外）</span></small></li>
+          <li class="wari"><p class="sc"><a href="/schools/recurrent/"><span class="knw"><span class="kn">リカレント</span></span></a><span class="pr">PR</span></p><p class="cond">遠方の<wbr>人は</p><p class="amt"><i>割引</i><b>受講料5％引き</b></p><small></small></li>
         </ul>
         <details class="toku">
-          <summary>くわしい日程を見る</summary>
+          <summary>くわしい<wbr>日程を<wbr>見る</summary>
           <table class="tbl tbl-toku">
-            <thead><tr><th>学校</th><th>日程のくわしいこと</th></tr></thead>
+            <thead><tr><th>学校</th><th>日程の<wbr>くわしい<wbr>こと</th></tr></thead>
             <tbody>
-              <tr><th><a href="https://www.jaico.cc/" target="_blank" rel="noopener">日本産業カウンセラー<span class="nb">協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></span></a></th><td data-k="日程のくわしいこと"><small><i>開講</i>教材が届く日。オンラインの1日目は12/4・12/5など</small><small><i>給付金</i>12月1日開講の回は、ハローワークの手続きの期限（11/16）が過ぎています（協会の案内）</small></td></tr>
-              <tr><th><a href="/schools/lec/">LEC東京リーガルマインド</a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i>半日クラスの初回</small><small><i>給付金</i>12月生は、申込みの期限（受講開始日12/1の2週間前）が過ぎています。12月生の給付金のことは、実施本校への問い合わせの案内です（LECの案内）</small></td></tr>
-              <tr><th><a href="/schools/chiiki-renkei-platform/">地域連携プラットフォーム</a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i>夜間コース（Zoom）</small><small><i>締切</i>締切日は公式に書いていません</small><small><i>給付金</i>使うなら、ハローワークの手続きは開講（12/14）の2週間前まで</small></td></tr>
-              <tr><th><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></th><td data-k="日程のくわしいこと"><small><i>締切</i>振込は開講の14日前、カードは4日前まで</small><small><i>給付金</i>使うなら、ハローワークの手続きは第1回講義（1/16）の2週間前まで</small></td></tr>
-              <tr><th><a href="/schools/nippon-manpower/">日本マンパワー</a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i><span style="white-space:nowrap">第36回</span>養成講座。2月19日開講は東京・オンライン</small><small><i>締切</i>2月19日開講は2027年<span style="white-space:nowrap">2月12日（金）</span>・法人は10日（水）まで。3月19日開講は<span style="white-space:nowrap">3月12日（金）</span>まで</small></td></tr>
-              <tr><th><a href="/schools/recurrent/">リカレント</a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i>クラスごとの日にちは公式で確かめてね</small></td></tr>
+              <tr><th><a href="https://www.jaico.cc/" target="_blank" rel="noopener"><span class="knw">日本産業<span class="kn">カウンセラー</span></span><span class="nb">協会<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></span></a></th><td data-k="日程のくわしいこと"><small><i>開講</i><span class="knw">教材が<wbr>届く日。<wbr><span class="kn">オンライン</span>の<wbr>1日目は<wbr>12/4・12/5など</span></small><small><i>給付金</i><span class="knw">12月1日開講の<wbr>回は、<wbr><span class="kn">ハローワーク</span>の<wbr>手続きの<wbr>期限<wbr>（11/16）が<wbr>過ぎています<wbr>（協会の<wbr>案内）</span></small></td></tr>
+              <tr><th><a href="/schools/lec/"><span class="knw">LEC<wbr>東京<span class="kn">リーガルマインド</span></span></a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i><span class="knw">半日<span class="kn">クラス</span>の<wbr>初回</span></small><small><i>給付金</i>12月生は、<wbr>申込みの<wbr>期限<wbr>（受講開始日12/1の<wbr>2週間前）が<wbr>過ぎています。<wbr>12月生の<wbr>給付金の<wbr>ことは、<wbr>実施本校への<wbr>問い合わせの<wbr>案内です<wbr>（LECの<wbr>案内）</small></td></tr>
+              <tr><th><a href="/schools/chiiki-renkei-platform/"><span class="knw">地域連携<wbr><span class="kn">プラットフォーム</span></span></a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i><span class="knw">夜間<span class="kn">コース</span><wbr>（Zoom）</span></small><small><i>締切</i>締切日は<wbr>公式に<wbr>書いていません</small><small><i>給付金</i><span class="knw">使うなら、<wbr><span class="kn">ハローワーク</span>の<wbr>手続きは<wbr>開講<wbr>（12/14）の<wbr>2週間前まで</span></small></td></tr>
+              <tr><th><a href="https://www.career-npo.org/GCDF/" target="_blank" rel="noopener">GCDF-Japan<span class="ext" aria-label="（公式サイト・新しいタブ）">↗</span></a></th><td data-k="日程のくわしいこと"><small><i>締切</i><span class="knw">振込は<wbr>開講の<wbr>14日前、<wbr><span class="kn">カード</span>は<wbr>4日前まで</span></small><small><i>給付金</i><span class="knw">使うなら、<wbr><span class="kn">ハローワーク</span>の<wbr>手続きは<wbr>第1回講義<wbr>（1/16）の<wbr>2週間前まで</span></small></td></tr>
+              <tr><th><a href="/schools/nippon-manpower/"><span class="knw">日本<span class="kn">マンパワー</span></span></a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i><span style="white-space:nowrap">第36回</span><span class="knw">養成講座。<wbr>2月19日開講は<wbr>東京・<span class="kn">オンライン</span></span></small><small><i>締切</i>2月19日開講は<wbr>2027年<span style="white-space:nowrap">2月12日<wbr>（金）</span>・法人は<wbr>10日<wbr>（水）まで。<wbr>3月19日開講は<span style="white-space:nowrap">3月12日<wbr>（金）</span>まで</small></td></tr>
+              <tr><th><a href="/schools/recurrent/"><span class="knw"><span class="kn">リカレント</span></span></a><span class="pr">PR</span></th><td data-k="日程のくわしいこと"><small><i>開講</i><span class="knw"><span class="kn">クラス</span>ごとの<wbr>日にちは<wbr>公式で<wbr>確かめてね</span></small></td></tr>
             </tbody>
           </table>
         </details>
@@ -1356,123 +1357,123 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   <div class="wrap">
     <div class="inner panel qa-panel">
       <h2 class="bk">申し込む前の、<wbr>よく<wbr>ある<wbr>不安</h2>
-      <p class="note" style="margin-top:6px">いちばん近い不安を押すと、その質問が出ます</p>
+      <p class="note" style="margin-top:6px">いちばん近い<wbr>不安を<wbr>押すと、<wbr>その<wbr>質問が<wbr>出ます</p>
       <div class="qtabs" role="tablist" aria-label="不安の種類">
-        <button class="qtab" type="button" role="tab" data-g="0" data-ev="top_qa_tab0" aria-selected="true" style="--gc:#FFF1C9"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_okane.webp" alt=""><b>お金が不安</b><small>4問</small></button>
-        <button class="qtab" type="button" role="tab" data-g="1" data-ev="top_qa_tab1" aria-selected="false" style="--gc:#DCEBFA"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_tsuzuku.webp" alt=""><b>続けられるか不安</b><small>4問</small></button>
-        <button class="qtab" type="button" role="tab" data-g="2" data-ev="top_qa_tab2" aria-selected="false" style="--gc:#E4F0D6"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_daijoubu.webp" alt=""><b>わたしでも大丈夫？</b><small>2問</small></button>
-        <button class="qtab" type="button" role="tab" data-g="3" data-ev="top_qa_tab3" aria-selected="false" style="--gc:#FBE3D8"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_shiken.webp" alt=""><b>試験のことが不安</b><small>2問</small></button>
+        <button class="qtab" type="button" role="tab" data-g="0" data-ev="top_qa_tab0" aria-selected="true" style="--gc:#FFF1C9"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_okane.webp" alt=""><b>お金が<wbr>不安</b><small>4問</small></button>
+        <button class="qtab" type="button" role="tab" data-g="1" data-ev="top_qa_tab1" aria-selected="false" style="--gc:#DCEBFA"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_tsuzuku.webp" alt=""><b>続けられるか<wbr>不安</b><small>4問</small></button>
+        <button class="qtab" type="button" role="tab" data-g="2" data-ev="top_qa_tab2" aria-selected="false" style="--gc:#E4F0D6"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_daijoubu.webp" alt=""><b>わたしでも<wbr>大丈夫？</b><small>2問</small></button>
+        <button class="qtab" type="button" role="tab" data-g="3" data-ev="top_qa_tab3" aria-selected="false" style="--gc:#FBE3D8"><img loading="lazy" decoding="async" class="cut" src="img/top/fuan_shiken.webp" alt=""><b>試験の<wbr>ことが<wbr>不安</b><small>2問</small></button>
       </div>
       <div class="qa">
         <div class="qg" data-g="0" style="--gc:#FFF1C9">
           <h3 class="bk">お金が<wbr>不安<small>4問</small></h3>
           <details>
-            <summary><span class="qm">Q</span>いくら？ 給付金は、どれくらい戻る？</summary>
+            <summary><span class="qm">Q</span>いくら？<wbr> 給付金は、<wbr>どれくらい<wbr>戻る？</summary>
             <div class="a">
-              <p>対象のコースで雇用保険の条件に合えば、修了後に半分が戻ります。資格を取って修了後1年以内に働けば7割、賃金も上がれば8割です。</p>
-              <a class="tl" href="/school-guides/kyufukin/">給付金のページを見る</a>
+              <p><span class="knw">対象の<wbr><span class="kn">コース</span>で<wbr>雇用保険の<wbr>条件に<wbr>合えば、<wbr>修了後に<wbr>半分が<wbr>戻ります。<wbr>資格を<wbr>取って<wbr>修了後<wbr>1年以内に<wbr>働けば<wbr>7割、<wbr>賃金も<wbr>上がれば<wbr>8割です。</span></p>
+              <a class="tl" href="/school-guides/kyufukin/"><span class="knw">給付金の<wbr><span class="kn">ページ</span>を<wbr>見る</span></a>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>受講料のほかに、かかるお金は？</summary>
+            <summary><span class="qm">Q</span>受講料の<wbr>ほかに、<wbr>かかる<wbr>お金は？</summary>
             <div class="a">
-              <p>試験の受験料は、学科8,900円・実技29,900円です。合格したあと、名簿に登録するときに登録手数料8,000円と登録免許税9,000円がかかります。</p>
-              <p>登録は5年ごとの更新で、更新には講習（知識8時間以上・技能30時間以上）を受けます。</p>
-              <p class="src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/career_consultant01.html" target="_blank" rel="noopener">厚生労働省ホームページ「キャリアコンサルタントになりたい方へ」<span class="ext">↗</span></a>（確かめた日 2026年11月15日）</p>
+              <p>試験の<wbr>受験料は、<wbr>学科8,900円・実技29,900円です。<wbr>合格した<wbr>あと、<wbr>名簿に<wbr>登録する<wbr>ときに<wbr>登録手数料8,000円と<wbr>登録免許税9,000円が<wbr>かかります。</p>
+              <p>登録は<wbr>5年ごとの<wbr>更新で、<wbr>更新には<wbr>講習<wbr>（知識8時間以上・技能30時間以上）を<wbr>受けます。</p>
+              <p class="src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/career_consultant01.html" target="_blank" rel="noopener"><span class="knw">厚生労働省<span class="kn">ホームページ</span><wbr>「<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なりたい方へ」</span><span class="ext">↗</span></a>（確かめた<wbr>日 2026年11月15日）</p>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>給付金は、だれでも使える？</summary>
+            <summary><span class="qm">Q</span>給付金は、<wbr>だれでも<wbr>使える？</summary>
             <div class="a">
-              <p>使えるのは、受講を始める日に、雇用保険に入っていた期間が3年以上ある人です（はじめて使う人は2年以上）。</p>
-              <p>いま仕事をしていない人も、離職日の翌日から受講を始める日までが1年以内で、同じ期間の条件に合えば対象です。前に教育訓練給付金を受けた人は、受講を始める日の前日から3年以内だと使えません。</p>
-              <p>自分が当てはまるかは、ハローワークで確かめられます。</p>
-              <a class="tl" href="/school-guides/kyufukin/">給付金のページを見る</a>
-              <p class="src">出典：ハローワークインターネットサービス「教育訓練給付制度」（確かめた日 2026年11月15日）</p>
+              <p>使えるのは、<wbr>受講を<wbr>始める<wbr>日に、<wbr>雇用保険に<wbr>入っていた<wbr>期間が<wbr>3年以上<wbr>ある<wbr>人です<wbr>（はじめて<wbr>使う<wbr>人は<wbr>2年以上）。</p>
+              <p>いま仕事を<wbr>していない<wbr>人も、<wbr>離職日の<wbr>翌日から<wbr>受講を<wbr>始める<wbr>日までが<wbr>1年以内で、<wbr>同じ<wbr>期間の<wbr>条件に<wbr>合えば<wbr>対象です。<wbr>前に<wbr>教育訓練給付金を<wbr>受けた<wbr>人は、<wbr>受講を<wbr>始める<wbr>日の<wbr>前日から<wbr>3年以内だと<wbr>使えません。</p>
+              <p><span class="knw">自分が<wbr>当ては<wbr>まるかは、<wbr><span class="kn">ハローワーク</span>で<wbr>確かめられます。</span></p>
+              <a class="tl" href="/school-guides/kyufukin/"><span class="knw">給付金の<wbr><span class="kn">ページ</span>を<wbr>見る</span></a>
+              <p class="src"><span class="knw">出典：<span class="kn">ハローワーク</span><wbr><span class="kn">インターネット</span><wbr><span class="kn">サービス</span><wbr>「教育訓練給付制度」<wbr>（確かめた<wbr>日 2026年11月15日）</span></p>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>締切で困らない？</summary>
+            <summary><span class="qm">Q</span>締切で<wbr>困らない？</summary>
             <div class="a">
-              <p>給付金を使うなら、相談とハローワークの手続きは、原則、受講開始日の2週間前までです。申込みの締切より先に来ます。</p>
-              <p>説明会に出ると割引がある学校もあります。いまの特典は「いまの募集」の「いまの特典」で。</p>
+              <p><span class="knw">給付金を<wbr>使うなら、<wbr>相談と<wbr><span class="kn">ハローワーク</span>の<wbr>手続きは、<wbr>原則、<wbr>受講開始日の<wbr>2週間前までです。<wbr>申込みの<wbr>締切より<wbr>先に<wbr>来ます。</span></p>
+              <p>説明会に<wbr>出ると<wbr>割引が<wbr>ある<wbr>学校も<wbr>あります。<wbr>いまの<wbr>特典は<wbr>「いまの<wbr>募集」の<wbr>「いまの<wbr>特典」で。</p>
             </div>
           </details>
         </div>
         <div class="qg hide-js" data-g="1" style="--gc:#DCEBFA">
           <h3 class="bk">続けられるか<wbr>不安<small>4問</small></h3>
           <details>
-            <summary><span class="qm">Q</span>何時間？ 何か月かかる？</summary>
+            <summary><span class="qm">Q</span>何時間？<wbr> 何か<wbr>月かかる？</summary>
             <div class="a">
-              <p>講習の時間は、国の決まりで合計150時間です（学校によって153時間・160時間のところもあります）。</p>
-              <p>6校では、3か月〜6か月のコースが中心で、1.5か月の短いコースがある学校もあります。ライブの授業の日数や時間帯は、学校ごとにちがいます。</p>
-              <a class="tl" href="#cards">6校をひと目で見る</a>
-              <p class="src">出典：厚生労働省ホームページ（講習カリキュラムの別表）・各校の公式ページ（確かめた日 2026年10月13日〜11月15日）</p>
+              <p>講習の<wbr>時間は、<wbr>国の<wbr>決まりで合計150時間です<wbr>（学校に<wbr>よって<wbr>153時間・160時間の<wbr>ところも<wbr>あります）。</p>
+              <p><span class="knw">6校では、<wbr>3か<wbr>月〜6か<wbr>月の<wbr><span class="kn">コース</span>が<wbr>中心で、<wbr>1.5か<wbr>月の<wbr>短い<wbr><span class="kn">コース</span>が<wbr>ある<wbr>学校も<wbr>あります。<wbr><span class="kn">ライブ</span>の<wbr>授業の<wbr>日数や<wbr>時間帯は、<wbr>学校ごとにちが<wbr>います。</span></p>
+              <a class="tl" href="#cards">6校を<wbr>ひと目で<wbr>見る</a>
+              <p class="src"><span class="knw">出典：厚生労働省<span class="kn">ホームページ</span><wbr>（講習<span class="kn">カリキュラム</span>の<wbr>別表）・各校の<wbr>公式<span class="kn">ページ</span><wbr>（確かめた<wbr>日 2026年10月13日〜11月15日）</span></p>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>働きながら、受けられる？</summary>
+            <summary><span class="qm">Q</span>働きながら、<wbr>受けられる？</summary>
             <div class="a">
-              <p>6校とも、土日のクラスがあります。平日の夜や、半日のクラスがある学校もあります。</p>
-              <p>休んだ回を別のクラスに振り替えるしくみは、6校すべてにあります（回数や条件は学校ごとにちがいます）。</p>
-              <a class="tl" href="#cards">6校をひと目で見る</a>
-              <p class="src">出典：各校の公式ページ（確かめた日 2026年7月11日〜10月17日）</p>
+              <p><span class="knw">6校とも、<wbr>土日の<wbr><span class="kn">クラス</span>が<wbr>あります。<wbr>平日の<wbr>夜や、<wbr>半日の<wbr><span class="kn">クラス</span>が<wbr>ある<wbr>学校も<wbr>あります。</span></p>
+              <p><span class="knw">休んだ回を<wbr>別の<wbr><span class="kn">クラス</span>に<wbr>振り替えるしくみは、<wbr>6校すべてに<wbr>あります<wbr>（回数や<wbr>条件は<wbr>学校ごとにちが<wbr>います）。</span></p>
+              <a class="tl" href="#cards">6校を<wbr>ひと目で<wbr>見る</a>
+              <p class="src"><span class="knw">出典：各校の<wbr>公式<span class="kn">ページ</span><wbr>（確かめた<wbr>日 2026年7月11日〜10月17日）</span></p>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>オンラインだけで、修了できる？</summary>
+            <summary><span class="qm">Q</span><span class="knw"><span class="kn">オンライン</span>だけで、<wbr>修了できる？</span></summary>
             <div class="a">
-              <p>6校とも、通学なしで修了まで受けられるコースがあります。動画を見るだけではなく、決まった日時にZoomなどで受けるライブの授業があります。</p>
-              <p>同じ学校でも、通学の日がまざるコースがあります。申し込む前に、コースの名前で確かめてね。</p>
-              <a class="tl" href="#cards">6校をひと目で見る</a>
-              <p class="src">出典：各校の公式ページ（確かめた日 2026年10月13日〜11月8日）</p>
+              <p><span class="knw">6校とも、<wbr>通学なしで<wbr>修了まで<wbr>受けられる<wbr><span class="kn">コース</span>が<wbr>あります。<wbr>動画を<wbr>見るだけではなく、<wbr>決まった<wbr>日時に<wbr>Zoomなどで<wbr>受ける<wbr><span class="kn">ライブ</span>の<wbr>授業が<wbr>あります。</span></p>
+              <p><span class="knw">同じ<wbr>学校でも、<wbr>通学の<wbr>日が<wbr>まざる<wbr><span class="kn">コース</span>が<wbr>あります。<wbr>申し込む前に、<wbr><span class="kn">コース</span>の<wbr>名前で<wbr>確かめてね。</span></p>
+              <a class="tl" href="#cards">6校を<wbr>ひと目で<wbr>見る</a>
+              <p class="src"><span class="knw">出典：各校の<wbr>公式<span class="kn">ページ</span><wbr>（確かめた<wbr>日 2026年10月13日〜11月8日）</span></p>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>休んだら、修了できなくなる？</summary>
+            <summary><span class="qm">Q</span>休んだら、<wbr>修了できなくなる？</summary>
             <div class="a">
-              <p>どの学校にも、修了の条件があります。出席は、6校のうち5校が「8割くらい」と公式に書いています（たとえば、10日のうち8日以上・12回のうち10回以上）。ほかに、添削課題や修了試験の基準があります。</p>
-              <p>休んだ回は、別のクラスに振り替えられます（回数や条件は学校ごと）。条件に届かなかったときにどうなるかは学校ごとにちがうので、説明会で聞いておくと安心です。</p>
-              <a class="tl" href="/schools/compare/">比較表を見る</a>
-              <p class="src">出典：各校の公式ページ（確かめた日 2026年10月13日〜11月15日）</p>
+              <p>どの<wbr>学校にも、<wbr>修了の<wbr>条件が<wbr>あります。<wbr>出席は、<wbr>6校の<wbr>うち5校が<wbr>「8割くらい」と<wbr>公式に<wbr>書いています<wbr>（たとえば、<wbr>10日の<wbr>うち8日以上・12回の<wbr>うち10回以上）。<wbr>ほかに、<wbr>添削課題や<wbr>修了試験の<wbr>基準が<wbr>あります。</p>
+              <p><span class="knw">休んだ回は、<wbr>別の<wbr><span class="kn">クラス</span>に<wbr>振り替えられます<wbr>（回数や<wbr>条件は<wbr>学校ごと）。<wbr>条件に<wbr>届かなかった<wbr>ときに<wbr>どうなるかは<wbr>学校ごとに<wbr>ちがうので、<wbr>説明会で<wbr>聞いて<wbr>おくと<wbr>安心です。</span></p>
+              <a class="tl" href="/schools/compare/">比較表を<wbr>見る</a>
+              <p class="src"><span class="knw">出典：各校の<wbr>公式<span class="kn">ページ</span><wbr>（確かめた<wbr>日 2026年10月13日〜11月15日）</span></p>
             </div>
           </details>
         </div>
         <div class="qg hide-js" data-g="2" style="--gc:#E4F0D6">
           <h3 class="bk">わたしでも<wbr>大丈夫？<small>2問</small></h3>
           <details>
-            <summary><span class="qm">Q</span>どこがいい？</summary>
+            <summary><span class="qm">Q</span>どこが<wbr>いい？</summary>
             <div class="a">
-              <p>順位はつけていません。費用・日程・サポートのうち、いまのあなたが気になる所で<span class="nb">2〜3校</span>にしぼり、説明会で雰囲気を見てから決めて大丈夫です。</p>
-              <a class="tl" href="#cards">6校をひと目で見る</a>
+              <p><span class="knw">順位は<wbr>つけていません。<wbr>費用・日程・<span class="kn">サポート</span>の<wbr>うち、<wbr>いまの<wbr>あなたが<wbr>気に<wbr>なる<wbr>所で</span><span class="nb">2〜3校</span>に<wbr>しぼり、<wbr>説明会で<wbr>雰囲気を<wbr>見てから<wbr>決めて<wbr>大丈夫です。</p>
+              <a class="tl" href="#cards">6校を<wbr>ひと目で<wbr>見る</a>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>40代・50代からでも、受けられる？</summary>
+            <summary><span class="qm">Q</span>40代・50代からでも、<wbr>受けられる？</summary>
             <div class="a">
-              <p>国の受験資格に、年齢の条件は書かれていません。</p>
-              <p>第32回の試験では、受験した人の平均年齢は45.8歳でした。学科を受けた3,804人のうち、40歳以上は2,580人です。</p>
-              <p class="src">出典：厚生労働省ホームページ「第32回キャリアコンサルタント試験結果の概要」・「キャリアコンサルタントになりたい方へ」（確かめた日 2026年11月15日）</p>
+              <p>国の<wbr>受験資格に、<wbr>年齢の<wbr>条件は<wbr>書かれていません。</p>
+              <p>第32回の<wbr>試験では、<wbr>受験した<wbr>人の<wbr>平均年齢は<wbr>45.8歳でした。<wbr>学科を<wbr>受けた<wbr>3,804人の<wbr>うち、<wbr>40歳以上は<wbr>2,580人です。</p>
+              <p class="src"><span class="knw">出典：厚生労働省<span class="kn">ホームページ</span><wbr>「第32回<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>試験結果の<wbr>概要」・<wbr>「<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なりたい方へ」<wbr>（確かめた<wbr>日 2026年11月15日）</span></p>
             </div>
           </details>
         </div>
         <div class="qg hide-js" data-g="3" style="--gc:#FBE3D8">
           <h3 class="bk">試験の<wbr>ことが<wbr>不安<small>2問</small></h3>
           <details>
-            <summary><span class="qm">Q</span>講座が終わったら、試験はいつ？</summary>
+            <summary><span class="qm">Q</span>講座が<wbr>終わったら、<wbr>試験は<wbr>いつ？</summary>
             <div class="a">
-              <p>試験は年3回です（令和8年度は7月・11月・3月）。次の回は、学科と論述が2027年3月7日、その次が2027年7月4日です。</p>
-              <p>養成講習を修了したという受験資格に、有効期限はありません。修了してすぐの回でなくても受けられます。</p>
-              <a class="tl" href="#boshu">いまの募集を見る</a>
-              <p class="src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/career_consultant01.html" target="_blank" rel="noopener">厚生労働省ホームページ「キャリアコンサルタントになりたい方へ」<span class="ext">↗</span></a>・キャリアコンサルティング協議会のよくある質問（確かめた日 2026年11月15日）</p>
+              <p>試験は<wbr>年3回です<wbr>（令和8年度は<wbr>7月・11月・3月）。<wbr>次の<wbr>回は、<wbr>学科と<wbr>論述が<wbr>2027年3月7日、<wbr>その<wbr>次が<wbr>2027年7月4日です。</p>
+              <p>養成講習を<wbr>修了したと<wbr>いう<wbr>受験資格に、<wbr>有効期限は<wbr>ありません。<wbr>修了して<wbr>すぐの<wbr>回でなくても<wbr>受けられます。</p>
+              <a class="tl" href="#boshu">いまの<wbr>募集を<wbr>見る</a>
+              <p class="src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/career_consultant01.html" target="_blank" rel="noopener"><span class="knw">厚生労働省<span class="kn">ホームページ</span><wbr>「<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なりたい方へ」</span><span class="ext">↗</span></a><span class="knw">・<span class="kn">キャリア</span><wbr><span class="kn">コンサルティング</span>協議会の<wbr>よく<wbr>ある<wbr>質問<wbr>（確かめた<wbr>日 2026年11月15日）</span></p>
             </div>
           </details>
           <details>
-            <summary><span class="qm">Q</span>試験の団体が2つあるって、どういうこと？</summary>
+            <summary><span class="qm">Q</span>試験の<wbr>団体が<wbr>2つ<wbr>あるって、<wbr>どういう<wbr>こと？</summary>
             <div class="a">
-              <p>試験は、国に登録された2つの機関（キャリアコンサルティング協議会と、日本キャリア開発協会）が行っています。学科は、2つの機関で同じ日・同じ問題です。受験料も同じです。</p>
-              <p>実技（論述と面接）は機関ごとに行われ、面接の日にちもちがいます。講座がどちらの実技に合わせているかは、申し込む前に説明会で聞いておくと安心です。</p>
-              <p class="src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/career_consultant01.html" target="_blank" rel="noopener">厚生労働省ホームページ「キャリアコンサルタントになりたい方へ」<span class="ext">↗</span></a>（確かめた日 2026年11月15日）</p>
+              <p><span class="knw">試験は、<wbr>国に<wbr>登録された<wbr>2つの<wbr>機関<wbr>（<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルティング</span>協議会と、<wbr>日本<span class="kn">キャリア</span>開発協会）が<wbr>行っています。<wbr>学科は、<wbr>2つの<wbr>機関で<wbr>同じ<wbr>日・<wbr>同じ<wbr>問題です。<wbr>受験料も<wbr>同じです。</span></p>
+              <p>実技<wbr>（論述と<wbr>面接）は<wbr>機関ごとに<wbr>行われ、<wbr>面接の<wbr>日に<wbr>ちもちが<wbr>います。<wbr>講座が<wbr>どちらの<wbr>実技に<wbr>合わせているかは、<wbr>申し込む前に<wbr>説明会で<wbr>聞いて<wbr>おくと<wbr>安心です。</p>
+              <p class="src">出典：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/career_consultant01.html" target="_blank" rel="noopener"><span class="knw">厚生労働省<span class="kn">ホームページ</span><wbr>「<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なりたい方へ」</span><span class="ext">↗</span></a>（確かめた<wbr>日 2026年11月15日）</p>
             </div>
           </details>
         </div>
@@ -1489,8 +1490,8 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
       <div>
         <p class="fuda">運営者</p>
         <p class="name">岩脇 朝子</p>
-        <p class="ptxt">夫の転勤で正社員の仕事を手放し、働き方に迷っていたときに、キャリアの相談をして救われました。そこから養成講座で学び、2026年11月の試験を受け終えて、結果待ち<span style="white-space:nowrap">（12月16日発表）</span>です。</p>
-        <a class="tl" href="/about/" data-ev="top_author_about">このサイトについて</a>
+        <p class="ptxt"><span class="knw">夫の<wbr>転勤で<wbr>正社員の<wbr>仕事を<wbr>手放し、<wbr>働き方に<wbr>迷っていた<wbr>ときに、<wbr><span class="kn">キャリア</span>の<wbr>相談を<wbr>して<wbr>救われました。<wbr>そこから<wbr>養成講座で<wbr>学び、<wbr>2026年11月の<wbr>試験を<wbr>受け終えて、<wbr>結果<wbr>待ち</span><span style="white-space:nowrap">（12月16日発表）</span>です。</p>
+        <a class="tl" href="/about/" data-ev="top_author_about"><span class="knw">この<wbr><span class="kn">サイト</span>に<wbr>ついて</span></a>
       </div>
     </div>
   </div>
@@ -1501,17 +1502,17 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   <div class="wrap">
     <div class="inner">
       <div class="cols">
-        <div><h4>紹介料のこと</h4><p>紹介料をいただいているのは、PRの表示がある学校です。あなたの受講料は変わりません。6校とも同じ項目・同じ確かめ方（公式ページ・確かめた日つき）で載せています。並べ方は、次の開講が近い順（日にちが未定の学校は最後）です。条件でしぼるときも、順位はつけていません。</p></div>
-        <div><h4>確かめ方</h4><p>料金・日程・特典は、各校の公式ページで確かめた日つきで載せています（いまの募集は<span class="nb">2026年11月19日</span>、給付金は<span class="nb">11月11日</span>）。申し込む前に、公式ページでも確かめてね。</p></div>
+        <div><h4>紹介料の<wbr>こと</h4><p><span class="knw">紹介料を<wbr>いただいているのは、<wbr>PRの<wbr>表示が<wbr>ある<wbr>学校です。<wbr>あなたの<wbr>受講料は<wbr>変わりません。<wbr>6校とも<wbr>同じ<wbr>項目・同じ<wbr>確かめ方<wbr>（公式<span class="kn">ページ</span>・<wbr>確かめた<wbr>日つき）で<wbr>載せています。<wbr>並べ方は、<wbr>次の<wbr>開講が<wbr>近い<wbr>順<wbr>（日にちが<wbr>未定の<wbr>学校は<wbr>最後）です。<wbr>条件でしぼる<wbr>ときも、<wbr>順位は<wbr>つけていません。</span></p></div>
+        <div><h4>確かめ方</h4><p><span class="knw">料金・日程・<wbr>特典は、<wbr>各校の<wbr>公式<span class="kn">ページ</span>で<wbr>確かめた<wbr>日つきで<wbr>載せています<wbr>（いまの<wbr>募集は</span><span class="nb">2026年11月19日</span>、<wbr>給付金は<span class="nb">11月11日</span><span class="knw">）。<wbr>申し込む前に、<wbr>公式<span class="kn">ページ</span>でも<wbr>確かめてね。</span></p></div>
       </div>
       <nav class="map" aria-label="サイト全体のメニュー">
-        <div><h4><i>1</i>知る</h4><ul><li><a href="/shikaku-guide/gimon/">キャリコンって何？（よくある質問40問）</a></li><li><a href="/careers/">キャリアコンサルタントの仕事</a></li><li><a href="/shikaku-guide/">資格まるわかりガイド（とり方・期間）</a></li><li><a href="/exam-guide/goukakuritsu/">試験の難易度と合格率</a></li><li><a href="/school-guides/merit-demerit/">やめたほうがいい人・<span style="white-space:nowrap">向いている人</span></a></li></ul></div>
-        <div><h4><i>2</i>学校選び</h4><ul><li><a href="/schools/compare/">6校の比較表</a></li><li><a href="/schools/compare/#apply-h">6校の無料説明会の申込み先</a></li><li><a href="/#school-match">いまのあなたに合う学校をしぼる</a></li><li><a href="/schools/">養成学校一覧</a></li><li><a href="/school-guides/kyufukin/">費用と給付金</a></li><li><a href="/school-guides/kyufukin-tetsuzuki/">給付金の手続き（いつまでに・何を）</a></li><li><a href="/school-guides/how-to-choose/">養成学校の選び方</a></li><li><a href="/school-guides/online/">オンライン講座の選び方</a></li><li><a href="/school-guides/working-mothers/">子育て中の学校選び</a></li><li><a href="/school-guides/training-and-exam-preparation/">養成講習と試験対策講座の違い</a></li><li><a href="/school-reviews/chiiki-renkei-platform/">運営者の受講体験記</a></li><li><a href="/schools/chiiki-renkei-platform/#kai">運営者が出た説明会の話</a></li></ul></div>
-        <div><h4><i>3</i>試験対策</h4><ul><li><a href="/exam/">試験対策トップ（学科・論述・面接）</a></li><li><a href="/start/">初学者の学習ルート</a></li><li><a href="/terms/">キャリコンことば図鑑</a></li><li><a href="/theorists/">理論家図鑑</a></li><li><a href="/laws/">労働法・統計・制度</a></li><li><a href="/games/quiz/">1問1答ドリル</a></li><li><a href="/games/">3分ミニゲーム</a></li><li><a href="/diagrams/">図解ライブラリ</a></li><li><a href="/text/">学科 直前対策テキスト（PDF）</a></li><li><a href="/books/">さらに学べる本棚</a></li><li><a href="/omamori/">お守りページ</a></li></ul></div>
-        <div><h4><i>4</i>登録・その先</h4><ul><li><a href="/shikaku-guide/#touroku">受かったあとの登録</a></li><li><a href="/school-guides/zaitaku-fukugyo/">在宅・副業で働く</a></li></ul><h4 style="margin-top:20px">このサイトのこと</h4><ul><li><a href="/">ホーム</a></li><li><a href="/search/">サイト内検索</a></li><li><a href="/column/">コラム</a></li><li><a href="/about/">このサイトについて</a></li><li><a href="/contact/">お問い合わせ</a></li><li><a href="/privacy/">プライバシーポリシー・免責事項</a></li></ul></div>
+        <div><h4><i>1</i>知る</h4><ul><li><a href="/shikaku-guide/gimon/"><span class="knw"><span class="kn">キャリコン</span>って<wbr>何？<wbr>（よく<wbr>ある<wbr>質問40問）</span></a></li><li><a href="/careers/"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>仕事</span></a></li><li><a href="/shikaku-guide/"><span class="knw">資格まる<wbr>わかり<span class="kn">ガイド</span><wbr>（とり方・期間）</span></a></li><li><a href="/exam-guide/goukakuritsu/">試験の<wbr>難易度と<wbr>合格率</a></li><li><a href="/school-guides/merit-demerit/">やめた<wbr>ほうが<wbr>いい人・<span style="white-space:nowrap">向いている<wbr>人</span></a></li></ul></div>
+        <div><h4><i>2</i>学校選び</h4><ul><li><a href="/schools/compare/">6校の<wbr>比較表</a></li><li><a href="/schools/compare/#apply-h">6校の<wbr>無料説明会の<wbr>申込み先</a></li><li><a href="/#school-match">いまの<wbr>あなたに<wbr>合う<wbr>学校を<wbr>しぼる</a></li><li><a href="/schools/">養成学校一覧</a></li><li><a href="/school-guides/kyufukin/">費用と<wbr>給付金</a></li><li><a href="/school-guides/kyufukin-tetsuzuki/">給付金の<wbr>手続き<wbr>（いつまでに・何を）</a></li><li><a href="/school-guides/how-to-choose/">養成学校の<wbr>選び方</a></li><li><a href="/school-guides/online/"><span class="knw"><span class="kn">オンライン</span>講座の<wbr>選び方</span></a></li><li><a href="/school-guides/working-mothers/">子育て<wbr>中の<wbr>学校選び</a></li><li><a href="/school-guides/training-and-exam-preparation/">養成講習と<wbr>試験対策講座の<wbr>違い</a></li><li><a href="/school-reviews/chiiki-renkei-platform/">運営者の<wbr>受講体験記</a></li><li><a href="/schools/chiiki-renkei-platform/#kai">運営者が<wbr>出た<wbr>説明会の<wbr>話</a></li></ul></div>
+        <div><h4><i>3</i>試験対策</h4><ul><li><a href="/exam/"><span class="knw">試験対策<span class="kn">トップ</span><wbr>（学科・論述・面接）</span></a></li><li><a href="/start/"><span class="knw">初学者の<wbr>学習<span class="kn">ルート</span></span></a></li><li><a href="/terms/"><span class="knw"><span class="kn">キャリコン</span>ことば<wbr>図鑑</span></a></li><li><a href="/theorists/">理論家図鑑</a></li><li><a href="/laws/">労働法・<wbr>統計・<wbr>制度</a></li><li><a href="/games/quiz/"><span class="knw">1問1答<span class="kn">ドリル</span></span></a></li><li><a href="/games/"><span class="knw">3分<span class="kn">ミニゲーム</span></span></a></li><li><a href="/diagrams/"><span class="knw">図解<span class="kn">ライブラリ</span></span></a></li><li><a href="/text/"><span class="knw">学科 直前対策<span class="kn">テキスト</span><wbr>（PDF）</span></a></li><li><a href="/books/">さらに<wbr>学べる<wbr>本棚</a></li><li><a href="/omamori/"><span class="knw">お守り<span class="kn">ページ</span></span></a></li></ul></div>
+        <div><h4><i>4</i>登録・<wbr>その<wbr>先</h4><ul><li><a href="/shikaku-guide/#touroku">受かった<wbr>あとの<wbr>登録</a></li><li><a href="/school-guides/zaitaku-fukugyo/">在宅・副業で<wbr>働く</a></li></ul><h4 style="margin-top:20px"><span class="knw">この<wbr><span class="kn">サイト</span>の<wbr>こと</span></h4><ul><li><a href="/"><span class="knw"><span class="kn">ホーム</span></span></a></li><li><a href="/search/"><span class="knw"><span class="kn">サイト</span>内検索</span></a></li><li><a href="/column/"><span class="knw"><span class="kn">コラム</span></span></a></li><li><a href="/about/"><span class="knw">この<wbr><span class="kn">サイト</span>に<wbr>ついて</span></a></li><li><a href="/contact/">お問い合わせ</a></li><li><a href="/privacy/"><span class="knw"><span class="kn">プライバシーポリシー</span>・免責事項</span></a></li></ul></div>
       </nav>
-      <div class="notes"><p>掲載している学校の料金・日程・給付金などの情報は変更される可能性があります。申込み前に必ず各校の公式サイトで最新情報をご確認ください。</p><p>法律・統計・試験制度に関する記述は、一次資料で確認できた範囲で掲載しています。</p></div>
-      <p class="copy">運営者：岩脇 朝子　&copy; 2026 キャリコン学びピクニック</p>
+      <div class="notes"><p><span class="knw">掲載している<wbr>学校の<wbr>料金・日程・給付金などの<wbr>情報は<wbr>変更される<wbr>可能性が<wbr>あります。<wbr>申込み前に<wbr>必ず<wbr>各校の<wbr>公式<span class="kn">サイト</span>で<wbr>最新情報を<wbr>ご確認ください。</span></p><p>法律・統計・試験制度に<wbr>関する<wbr>記述は、<wbr>一次資料で<wbr>確認できた<wbr>範囲で<wbr>掲載しています。</p></div>
+      <p class="copy"><span class="knw">運営者：岩脇 朝子　&copy; 2026 <span class="kn">キャリコン</span>学び<span class="kn">ピクニック</span></span></p>
     </div>
   </div>
   <div class="land" aria-hidden="true">
@@ -1524,7 +1525,7 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
     <img loading="lazy" decoding="async" src="img/parts/t/25_flowers_right_group-180.webp" alt="" style="right:4%;width:100px">
   </div>
 </footer>
-<nav class="bn" aria-label="下のメニュー"><a href="/" data-ev="nav_home"><span class="on"><i>⌂</i>ホーム</span></a><a href="/schools/compare/" data-ev="nav_compare"><span><i>☰</i>6校くらべ</span></a><a href="/school-guides/kyufukin/" data-ev="nav_cost" data-bn-mid><span><i>¥</i>費用</span></a><a href="/search/" data-ev="nav_search"><span><i>⌕</i>さがす</span></a><a href="#sitemap" data-ev="nav_menu"><span><i>≡</i>メニュー</span></a></nav>
+<nav class="bn" aria-label="下のメニュー"><a href="/" data-ev="nav_home"><span class="on"><i>⌂</i><span class="knw"><span class="kn">ホーム</span></span></span></a><a href="/schools/compare/" data-ev="nav_compare"><span><i>☰</i>6校くらべ</span></a><a href="/school-guides/kyufukin/" data-ev="nav_cost" data-bn-mid><span><i>¥</i>費用</span></a><a href="/search/" data-ev="nav_search"><span><i>⌕</i>さが<wbr>す</span></a><a href="#sitemap" data-ev="nav_menu"><span><i>≡</i><span class="knw"><span class="kn">メニュー</span></span></span></a></nav>
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
