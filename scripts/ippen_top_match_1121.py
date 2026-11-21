@@ -114,8 +114,8 @@ def main():
     t = t[:a] + SHOW_JS + t[b:]
     t = t.replace("document.querySelectorAll('.person'), res", "document.querySelectorAll('.r5-c'), res", 1)
     # 2b. ちゃん「上の丘と今のあなたは？の色が少し違うので統一させて」→ 丘の色を下の段（--grass #EEF4D6）にそろえる。
-    #     丘のふちの筆あとは、前と同じだけ少し濃く
-    t = t.replace('fill="#ECF0D8"', 'fill="#EEF4D6"').replace('stroke="#E7EDD1"', 'stroke="#E9F1CF"')
+    #     丘のふちの芝生（ざらっとした帯）も同じ色に（ちゃん「芝生の色はまだ差がある」）
+    t = t.replace('fill="#ECF0D8"', 'fill="#EEF4D6"').replace('stroke="#E7EDD1"', 'stroke="#EEF4D6"').replace('stroke="#E9F1CF"', 'stroke="#EEF4D6"')
     # 2c. ちゃん「給付金は後から戻りますのグラフは最初から33万を見せて。何もない状態ではなく、33万かかることがわかるように」
     #     → 1本め（総額）の棒と金額を、動きの前から出しておく。数字も0から数えず、330,000のまま
     t = t.replace('<span class="cnt" data-from="0" data-to="330000">', '<span class="cnt" data-from="330000" data-to="330000">', 1)
