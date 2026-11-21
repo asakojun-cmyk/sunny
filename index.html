@@ -1056,6 +1056,40 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
 }
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
+<style id="match1121">
+.r5{max-width:600px;margin:22px auto 0}
+.r5-mo{display:flex;flex-direction:row-reverse;align-items:center;justify-content:center;gap:14px;margin-bottom:22px}
+.r5-mo img{width:92px;height:auto;filter:drop-shadow(0 2px 3px rgba(46,74,120,.18))}
+.r5-say{position:relative;margin:0;padding:12px 18px;background:#fff;border-radius:16px;font-size:16px;font-weight:700;color:var(--ink)}
+.r5-say::before{content:"";position:absolute;right:-7px;top:50%;width:14px;height:14px;margin-top:-7px;background:#fff;transform:rotate(45deg)}
+.r5-list{display:flex;flex-direction:column;border-top:1.5px dashed rgba(46,74,120,.25)}
+.r5-c{display:flex;align-items:center;gap:24px;width:100%;padding:16px 10px;border:0;border-bottom:1.5px dashed rgba(46,74,120,.25);border-radius:0;background:none;font:inherit;color:var(--ink);cursor:pointer;text-align:left}
+.r5-c::after{content:"›";margin-left:auto;font-size:26px;font-weight:700;color:#FA9C88}
+.r5-c[aria-pressed="true"]{background:#FFF7F2}
+@media (hover:hover){.r5-c:hover{background:#FFF7F2}}
+.r5-i{flex:none;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(46,74,120,.10)}
+.r5-i img{display:block;width:46px;height:46px;object-fit:contain}
+.r5-t{font-size:18px;font-weight:700;color:#1F3354;letter-spacing:.02em;line-height:1.5}
+.r5-t br{display:none}
+.r5-c[aria-pressed="true"] .r5-t{color:#D9604A}
+#sel-res{background:none;padding:0;box-shadow:none;border:0}
+.one{max-width:520px;margin:18px auto 0;padding:20px 22px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 2px 0 rgba(46,74,120,.08)}
+.one-k{margin:0 0 4px;font-size:13.5px;color:var(--sub)}
+.one-h{margin:0;font-size:21px;font-weight:700;color:var(--ink)}
+.one-h .pr{margin-left:8px;vertical-align:middle}
+.one-why{margin:8px 0 14px;font-size:15px;line-height:1.7}
+.one-go{display:inline-block;padding:12px 26px;border-radius:999px;background:#FA9C88;color:#fff!important;font-weight:700;text-decoration:none}
+@media (max-width:700px){
+  .r5-mo img{width:70px}
+  .r5-c{gap:18px;padding:14px 6px}
+  .r5-i{width:54px;height:54px}
+  .r5-i img{width:40px;height:40px}
+  .r5-t{font-size:16.5px!important;word-break:keep-all;overflow-wrap:anywhere}
+  .r5-t br{display:inline}
+  .one{padding:18px 16px}
+  .one-h{font-size:19px}
+}
+</style>
 </head>
 <body data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -1118,8 +1152,8 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
   <div class="wrap">
     <div class="inner">
       <div class="who" id="school-match">
-        <p class="q">いまのあなたは？<small>気持ちが近い人を、押してみてね</small></p>
-        <div class="people" role="group" aria-label="いまのあなた"><button class="person" type="button" data-k="cost" data-ev="top_match_cost" aria-pressed="false"><span class="fuki">できるだけ、費用をおさえたい</span><span class="pic"><img loading="lazy" decoding="async" src="img/top/hito_1_cost.webp" alt=""></span></button><button class="person" type="button" data-k="donichi" data-ev="top_match_donichi" aria-pressed="false"><span class="fuki">土日に受けたい</span><span class="pic"><img loading="lazy" decoding="async" src="img/top/hito_2_donichi.webp" alt=""></span></button><button class="person" type="button" data-k="yoru" data-ev="top_match_yoru" aria-pressed="false"><span class="fuki">仕事のあと、平日の夜に受けたい</span><span class="pic"><img loading="lazy" decoding="async" src="img/top/hito_3_yoru.webp" alt=""></span></button><button class="person" type="button" data-k="support" data-ev="top_match_support" aria-pressed="false"><span class="fuki">休んでも、振替できる所にしたい</span><span class="pic"><img loading="lazy" decoding="async" src="img/top/hito_4_support.webp" alt=""><img loading="lazy" decoding="async" class="pet pa" src="img/top/kumo_hiyoko.webp" alt=""><img loading="lazy" decoding="async" class="pet pb" src="img/top/kumo_usagi.webp" alt=""></span></button><button class="person" type="button" data-k="mada" data-ev="top_match_mada" aria-pressed="false"><span class="fuki">たくさんあって、まだ迷っている</span><span class="pic"><img loading="lazy" decoding="async" src="img/top/hito_5_mada.webp" alt=""></span></button></div>
+        <p class="q">いまのあなたは？<small>近いものを、押してみてね</small></p>
+        <!--match1121--><div class="r5"><div class="r5-mo"><img loading="lazy" decoding="async" src="img/parts/t/moyan_school_hat_smile-200.webp" alt=""><p class="r5-say">わたしは、どれに近いかな？</p></div><div class="r5-list" role="group" aria-label="いまのあなた"><button class="r5-c" type="button" data-k="cost" data-ev="top_match_cost" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/fuan_okane.webp" alt=""></span><span class="r5-t">できるだけ、<br>費用をおさえたい</span></button><button class="r5-c" type="button" data-k="donichi" data-ev="top_match_donichi" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/fuan_tsuzuku.webp" alt=""></span><span class="r5-t">土日に受けたい</span></button><button class="r5-c" type="button" data-k="yoru" data-ev="top_match_yoru" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_yoru.webp" alt=""></span><span class="r5-t">仕事のあと、<br>平日の夜に受けたい</span></button><button class="r5-c" type="button" data-k="support" data-ev="top_match_support" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_furikae.webp" alt=""></span><span class="r5-t">休んでも、<br>振替できる所にしたい</span></button><button class="r5-c r5-wide" type="button" data-k="mada" data-ev="top_match_mada" aria-pressed="false"><span class="r5-i"><img loading="lazy" decoding="async" src="img/top/nayami_mada.webp" alt=""></span><span class="r5-t">たくさんあって、<br>まだ迷っている</span></button></div></div><!--/match1121-->
         <div class="res" id="sel-res" aria-live="polite"></div>
       </div>
 
@@ -1521,22 +1555,20 @@ h1.bk,h2.bk,h3.bk{text-wrap:balance}
     rec:{n:'リカレント',h:'/schools/recurrent/',pr:1,fee:'499,400円'}
   };
   var M = {
-    cost:[['chiiki','総額297,000円'],['lec','総額330,000円'],['jaico','総額330,000円']],
-    yoru:[['lec','平日夜のクラスあり'],['chiiki','夜間のコースあり'],['rec','平日夜（18:50〜／20:00〜）']],
-    support:[['nm','振替が回数の制限なし・無料'],['lec','振替が回数の制限なし・無料']],
-    donichi:'6校とも土日のクラスがあります。',
-    mada:'まずは6校を、ひと目で見てみてね。'
+    cost:['chiiki','6校でいちばん安い（総額297,000円）'],
+    donichi:['chiiki','土日のクラスがあって、6校でいちばん安い'],
+    yoru:['lec','平日夜と半日のクラスあり。休んでも振替が回数の制限なし・無料'],
+    support:['lec','振替が回数の制限なし・無料。同じ条件の学校より総額が66,000円安い'],
+    mada:'compare'
   };
-  var ps = document.querySelectorAll('.person'), res = document.getElementById('sel-res');
+  var ps = document.querySelectorAll('.r5-c'), res = document.getElementById('sel-res');
   function show(k){
     var m = M[k], h = '';
-    if (typeof m === 'string') {
-      h = '<p class="msg">' + m + '</p>';
+    if (m === 'compare') {
+      h = '<div class="one"><p class="one-h">まずは、6校をひと目でくらべてみてね</p><p class="one-why">費用・受けられる日・振替を、1つの表に並べました。</p><a class="one-go" href="/schools/compare/" data-ev="top_match_go_compare">6校くらべを見る</a></div>';
     } else {
-      h = '<p class="msg">当てはまる学校（' + m.length + '校・順位はつけていません）</p><ul>' + m.map(function(r){
-        var s = S[r[0]], ext = /^https?:/.test(s.h);
-        return '<li><b><a href="' + s.h + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>' + s.n + (ext ? '<span class="ext">↗</span>' : '') + '</a>' + (s.pr ? '<span class="pr">PR</span>' : '') + '</b><span class="fee">' + s.fee + '</span><span class="why">当てはまる：' + r[1] + '</span></li>';
-      }).join('') + '</ul><p class="after"><a href="/schools/compare/#apply-h">説明会の予約先は、ページの下の「説明会で雰囲気を見てみよう」から</a></p>';
+      var s = S[m[0]], ext = /^https?:/.test(s.h);
+      h = '<div class="one"><p class="one-k">いまのあなたに、いちばん合うのは</p><p class="one-h">' + s.n + (s.pr ? '<span class="pr">PR</span>' : '') + '</p><p class="one-why">' + m[1] + '</p><a class="one-go" href="' + s.h + '" data-ev="top_match_go_' + m[0] + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>くわしく見る</a></div>';
     }
     res.innerHTML = h;
   }
