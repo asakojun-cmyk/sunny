@@ -821,4 +821,6 @@ body.kata .sun2 + .gk{margin-top:40px}
 /* 11/20 ちゃん：ちゃんのアイコンがきれいに切り抜かれていない→丸く切ってふちどる */
 body.kata .ps.chan img{aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #E3D0AC;box-sizing:border-box}
 /* 11/20 ちゃん：手続きはいつまで？の図解は 1・2・3 を等間隔に */
-body.kata .zu-time .zu-span,body.kata .zu-time .zu-span.zu-14{flex:0 0 14%}
+/* 11/22 ちゃん「キャリコンになるまでの期間は、試験日から逆算 の図解が重なってる」：
+   上の14%が縦の図（.zu-v とスマホ）にも効いて、点線の間が0になり、丸と札が重なっていた。横に並ぶ図（PC）だけに効かせる */
+@media (min-width:761px){body.kata .zu-time:not(.zu-v) .zu-span,body.kata .zu-time:not(.zu-v) .zu-span.zu-14{flex:0 0 14%}}
