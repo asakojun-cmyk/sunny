@@ -46,7 +46,7 @@
     var kc = KC[k.kei];
     var a = document.createElement("a");
     a.className = "omk-card " + kc[1] + (hit ? " hit" : "");
-    a.href = "../.." + k.path;
+    a.href = k.path; /* 本番の理論家ページ /theorists/<slug>/ */
     a.innerHTML = '<span class="ph' + (k.imgs.length > 1 ? " two" : "") + '">' + faces(k) +
       '<span class="omk-chip">' + kc[0] + "</span>" +
       (k.not_yet ? '<span class="stand">絵は<br>準備中</span>' : "") + "</span>" +
@@ -136,7 +136,7 @@
         '<p class="omk-uta" aria-label="' + esc(noTag(k.tanka_yomi)) + '">' + tanka + "</p>" +
         '<div class="omk-who">' +
           '<span class="omk-who__box ' + kc[1] + (k.imgs.length > 1 ? " two" : "") + '">' + faces(k).replace(/ alt=""/g, ' alt="' + esc(k.name) + 'の似顔絵"') + "</span>" +
-          (k.not_yet ? '<span class="omk-chip" style="background:#fff;border:1px solid var(--line)">絵は準備中</span><br>' : "") +
+          (k.not_yet ? '<span class="omk-chip">（似顔絵は準備中）</span>' : "") +
           '<span class="omk-chip ' + kc[1] + '">' + kc[0] + "</span>" +
           '<h2 class="nm' + (noTag(k.name).length > 7 ? " xlong" : noTag(k.name).length > 5 ? " long" : "") + '">' + (NAME_BR[k.slug] || esc(k.name)) + "</h2>" +
           (k.en ? '<p class="en">' + esc(k.en) + "</p>" : "") +
@@ -147,7 +147,7 @@
       (shown.length ? '<div class="omk-items">' + shown.map(kwRow).join("") + "</div>" : "") +
       (more ? '<details class="omk-more"' + (Q.get("open") === "1" ? " open" : "") + "><summary>" + label + "</summary><dl>" + more + "</dl></details>" : "") +
       toyou +
-      '<a class="omk-btn" href="../..' + k.path + '">' + esc(k.name) + "のページを読む</a>";
+      '<a class="omk-btn" href="' + k.path + '">' + esc(k.name) + "のページを読む</a>";
     grid(k.slug);
     var sc = scenes.paper;
     sc.classList.remove("omk-paper-anim");
