@@ -9,7 +9,8 @@
 .omk-page{margin:0;background:#fff}
 .omk{--ink:#2E4A78;--sub:#566E93;--grass:#ECF0D8;--cream:#FBF6EC;--pale:#EAF3FB;--line:#D5E0EE;--mark:#FFF1C9;--cta:#b4573a;--cta-dark:#9d4a30;--coral:#ef8a6c;--link:#2A6DB5;
   --f-body:"Zen Kaku Gothic New","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;--f-hand:"Zen Kurenaido","Hiragino Maru Gothic ProN",sans-serif;--f-num:Outfit,"Zen Kaku Gothic New",sans-serif;--side:24px;
-  --rim:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(1px 0 0 #b9c6da) drop-shadow(-1px 0 0 #b9c6da) drop-shadow(0 1px 0 #b9c6da) drop-shadow(0 -1px 0 #b9c6da);
+  /* 11/22 ちゃん「理論家の後ろも緑にしてもらっていい？」：縁取りを白から緑に */
+  --rim:drop-shadow(3px 0 0 #DDE6BE) drop-shadow(-3px 0 0 #DDE6BE) drop-shadow(0 3px 0 #DDE6BE) drop-shadow(0 -3px 0 #DDE6BE) drop-shadow(1px 0 0 #bfcd95) drop-shadow(-1px 0 0 #bfcd95) drop-shadow(0 1px 0 #bfcd95) drop-shadow(0 -1px 0 #bfcd95);
   --k-trait:#FFF7E1;--k-dev:#F0F7E7;--k-cog:#EEF5FB;--k-self:#FCEEF3;--k-psy:#F5F1FA;--k-org:#FEF1E2;
   display:block;color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.9;letter-spacing:.06em;font-weight:500}
 @media (min-width:900px){.omk{--side:96px}}
@@ -26,7 +27,13 @@
 .omk-sky .garland{position:absolute;left:50%;top:10px;width:240px;margin-left:-120px}
 .omk-sky .cl{position:absolute;top:20px;width:58px;opacity:.9}
 .omk-sky .cl.l{left:5%}.omk-sky .cl.r{right:5%;top:34px;width:46px}
-.omk-field{background:var(--grass);border-radius:50% 50% 0 0/28px 28px 0 0;padding:20px var(--side) 36px;position:relative}
+/* 11/22 ちゃん「緑は白に変えようか。後ろの丘はおみくじの3分の２くらいの高さまで下げようか」：
+   地は白にし、緑は筒のうしろの丘だけに。丘のてっぺんは筒の下から3分の2の高さ（--hill-top）。 */
+.omk-field{background:#fff;padding:20px var(--side) 36px;position:relative;overflow:hidden}
+.omk-peek{--tube-h:128px}
+.omk-peek+*{margin-top:22px}
+.omk-ttl,.numline,.omk-field>p{position:relative}
+.omk-peek::before{content:"";position:absolute;left:50%;width:100vw;margin-left:-50vw;bottom:-14px;height:calc(var(--tube-h) * 2 / 3 + 14px);background:var(--grass);border-radius:50% 50% 0 0/40px 40px 0 0}
 .omk-ttl{text-align:center}
 .omk-ttl h1{margin:0;font-size:23px;font-weight:500;letter-spacing:.14em;line-height:1.6;color:var(--ink)}
 .omk-ttl p{margin:4px 0 0;font-size:13.5px;color:var(--sub);line-height:1.8}
@@ -41,7 +48,7 @@
 @media (max-width:899px){
   .omk-sky{height:52px}.omk-sky .garland{top:6px;width:210px;margin-left:-105px}
   .omk-field{padding-top:14px}
-  #omk-start .omk-peek{height:158px;width:240px}
+  #omk-start .omk-peek{height:158px;width:240px;--tube-h:112px}
   #omk-start .omk-peek .omk-face{width:80px}#omk-start .omk-peek .p3{width:70px;margin-left:-35px}
   #omk-start .omk-tube{width:74px;height:112px;margin-left:-37px}
   .omk-ttl h1{font-size:21px}
