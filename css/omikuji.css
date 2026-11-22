@@ -29,7 +29,7 @@
 .omk-sky .cl.l{left:5%}.omk-sky .cl.r{right:5%;top:34px;width:46px}
 /* 11/22 ちゃん「緑は白に変えようか。後ろの丘はおみくじの3分の２くらいの高さまで下げようか」：
    地は白にし、緑は筒のうしろの丘だけに。丘のてっぺんは筒の下から3分の2の高さ（--hill-top）。 */
-.omk-field{background:#fff;padding:20px var(--side) 36px;position:relative;overflow:hidden}
+.omk-field{background:#fff;padding:20px var(--side) 36px;position:relative;overflow-x:clip}
 .omk-peek{--tube-h:128px}
 .omk-peek+*{margin-top:22px}
 .omk-ttl,.numline,.omk-field>p{position:relative}
@@ -83,11 +83,21 @@
 
 /* ---------- ② 引く ---------- */
 .omk-peek--draw .omk-tube{cursor:default}
-.omk-stick{position:absolute;left:50%;top:-20px;margin-left:-56px;width:112px;z-index:3;text-align:center;opacity:0}
-.omk-stick__face{display:flex;justify-content:center;align-items:flex-end;width:112px;height:112px}
-.omk-stick__face img{width:112px}
-.omk-stick__face.two img{width:74px;margin:0 -10px}
-.omk-stick__bar{display:block;width:12px;height:56px;margin:-6px auto 0;background:#fdf6e0;border:1.5px solid #d8c7a4;border-radius:4px}
+/* 番号の書いた棒（11/22）：さかさの筒の穴から下に出る（ちゃん「棒は穴から下に出るよね」）。番号は縦書き */
+.omk-stick{position:absolute;left:50%;top:calc(100% - 14px);margin-left:-14px;width:28px;z-index:1;opacity:0}
+.omk-stick__bar{display:flex;justify-content:center;align-items:flex-end;width:28px;height:104px;padding-bottom:8px;background:#fdf8ec;border:1.5px solid #d8c7a4;border-radius:5px}
+.omk-stick__no{writing-mode:vertical-rl;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--cta-dark);line-height:1;text-combine-upright:none}
+/* 棒が出たあと、理論家が浮かび上がる */
+.omk-peek--draw{margin-top:60px}
+.omk-peek--draw.omk-peek{margin-bottom:112px}
+.omk-rise{position:absolute;left:50%;top:-74px;width:112px;margin-left:-56px;display:flex;justify-content:center;align-items:flex-end;z-index:3;opacity:0}
+.omk-rise img{width:112px}
+.omk-rise.two img{width:74px;margin:0 -10px}
+.omk-draw-anim .omk-rise{animation:omk-rise .8s 2.05s cubic-bezier(.2,.7,.3,1) both}
+.omk-draw-done .omk-rise{opacity:1}
+@keyframes omk-rise{from{opacity:0;transform:translateY(26px) scale(.85)}to{opacity:1;transform:none}}
+.omk-rise img{filter:var(--rim)}
+@media (max-width:899px){.omk-peek--draw{margin-top:52px}.omk-rise{top:-62px;width:100px;margin-left:-50px}.omk-rise img{width:100px}}
 .omk-num{text-align:center;margin:8px 0 0;outline:none}
 .omk-num small{display:block;font-size:13px;color:var(--sub)}
 .omk-num b{display:block;font-family:var(--f-num);font-weight:500;font-size:38px;letter-spacing:.06em;line-height:1.3}
@@ -96,10 +106,7 @@
 /* 動き：筒が左右に3回ゆれる → さかさに傾く → 棒の先に先生が出る → 番号（約2.3秒） */
 .omk-draw-anim .omk-peek--draw .omk-tube{animation:omk-shake 1.5s cubic-bezier(.4,0,.2,1) both}
 .omk-draw-anim .omk-stick{animation:omk-stick .55s 1.45s cubic-bezier(.2,.7,.3,1.2) both}
-.omk-draw-anim .omk-after-draw{animation:omk-fade .4s 2.7s ease-out both}
-/* 11/22 ちゃん「一回逆さまになった理論家でて向きが正面になるようにして」：さかさで出て、くるっと正面に */
-.omk-draw-anim .omk-stick__face{animation:omk-flip .65s 2.05s cubic-bezier(.3,.7,.3,1.25) both}
-@keyframes omk-flip{from{transform:rotate(180deg)}to{transform:rotate(0)}}
+.omk-draw-anim .omk-after-draw{animation:omk-fade .4s 2.95s ease-out both}
 .omk-draw-done .omk-peek--draw .omk-tube{transform:rotate(180deg)}
 .omk-peek--draw{margin-bottom:12px}
 /* さかさにしたとき字がさかさに見えないよう、引く場面の筒は字を出さない */
@@ -113,7 +120,7 @@
 .omk-who .omk-chip{background:none;padding:0;font-size:11px;color:var(--sub);border-radius:0}
 .omk-draw-done .omk-stick{opacity:1}
 @keyframes omk-shake{0%{transform:rotate(0)}10%{transform:rotate(-12deg)}20%{transform:rotate(12deg)}30%{transform:rotate(-12deg)}40%{transform:rotate(12deg)}50%{transform:rotate(-12deg)}60%{transform:rotate(0)}100%{transform:rotate(180deg)}}
-@keyframes omk-stick{from{opacity:0;transform:translateY(60px) scale(.6)}to{opacity:1;transform:none}}
+@keyframes omk-stick{from{opacity:0;transform:translateY(-80px)}to{opacity:1;transform:none}}
 @keyframes omk-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* ---------- ③ 紙 ---------- */
@@ -225,5 +232,5 @@
 /* 動きを減らす設定の人：ゆれ・回転はなし。短いフェードだけ */
 @media (prefers-reduced-motion:reduce){
   .omk-draw-anim .omk-peek--draw .omk-tube{animation:none;transform:rotate(180deg)}
-  .omk-draw-anim .omk-stick,.omk-draw-anim .omk-after-draw,.omk-paper-anim .omk-paper,.omk-paper-anim .omk-after{animation:omk-fade .2s both}
+  .omk-draw-anim .omk-stick,.omk-draw-anim .omk-rise,.omk-draw-anim .omk-after-draw,.omk-paper-anim .omk-paper,.omk-paper-anim .omk-after{animation:omk-fade .2s both}
 }

@@ -88,8 +88,9 @@
   function draw(k, luck) {
     cur = { k: k || pick(D.kami), luck: luck || pick(D.unsei) };
     var f = $("omk-stick-face");
-    f.className = "omk-stick__face" + (cur.k.imgs.length > 1 ? " two" : "");
+    f.className = "omk-rise" + (cur.k.imgs.length > 1 ? " two" : "");
     f.innerHTML = faces(cur.k);
+    $("omk-stick-no").textContent = "第" + cur.k.no + "番";
     $("omk-num-b").innerHTML = "<i>第</i>" + cur.k.no + "<i>番</i><span class=\"nm\">" + esc(cur.k.name) + "</span>";
     var sc = scenes.draw;
     sc.classList.remove("omk-draw-anim", "omk-draw-done");
@@ -98,7 +99,7 @@
     if (anim) {
       void sc.offsetWidth;
       sc.classList.add("omk-draw-anim");
-      timer = setTimeout(function () { sc.classList.add("omk-draw-done"); $("omk-num").focus({ preventScroll: true }); }, 3100);
+      timer = setTimeout(function () { sc.classList.add("omk-draw-done"); $("omk-num").focus({ preventScroll: true }); }, 3400);
     } else {
       sc.classList.add("omk-draw-done");
       $("omk-num").focus({ preventScroll: true });

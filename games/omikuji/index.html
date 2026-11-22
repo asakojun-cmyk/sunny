@@ -46,17 +46,19 @@
   </div></div>
 </section>
 
-<!-- ② 引く：筒がゆれる → さかさになる → 棒の先に先生 → 第◯番 -->
+<!-- ② 引く：筒がゆれる → さかさになる → 番号の書いた棒が出る → 理論家が浮かび上がる → 第◯番
+     11/22 ちゃん「おみくじから棒を出すだけでいいんじゃないかな？先に番号が書いてあるみたいな。棒が出た後に、理論家が浮かび上がる。」 -->
 <section class="omk-scene" id="omk-draw" data-scene="draw" hidden>
   <div class="omk-sky" aria-hidden="true"><img class="cl l" src="../../img/parts/01_sky_cloud_left.webp" alt=""><img class="garland" src="../../img/top/sora_garland.webp" alt=""><img class="cl r" src="../../img/parts/03_sky_cloud_right.webp" alt=""></div>
   <div class="omk-field">
     <div class="omk-peek omk-peek--draw" aria-hidden="true">
-      <div class="omk-stick"><span class="omk-stick__face" id="omk-stick-face"></span><span class="omk-stick__bar"></span></div>
+      <span class="omk-rise" id="omk-stick-face"></span>
+      <div class="omk-stick"><span class="omk-stick__bar"><span class="omk-stick__no" id="omk-stick-no"></span></span></div>
       <span class="omk-tube omk-tube--draw"></span>
     </div>
     <p class="omk-shaking" aria-live="polite">筒をふっています…</p>
     <div class="omk-after-draw">
-      <p class="omk-num" tabindex="-1" id="omk-num"><small>棒の先に、先生が出てきました</small><b id="omk-num-b"></b></p>
+      <p class="omk-num" tabindex="-1" id="omk-num"><small>あらわれたのは、この先生です</small><b id="omk-num-b"></b></p>
       <button type="button" class="omk-btn" id="omk-open">紙をひらく</button>
     </div>
   </div>
