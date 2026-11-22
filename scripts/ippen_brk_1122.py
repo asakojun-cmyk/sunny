@@ -78,6 +78,8 @@ CSS = (
     # （:not(#brk) は強さを上げるため。「body.kata .ft-row span{…!important}」などにも勝つ）
     ":is(.kn,.knw):not(#brk){all:unset!important}"
     "span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}"
+    # 11/22 ちゃん「崩れてる」（安い学校の丸いカード）：1行で収める作りの所では <wbr> で折らない
+    ":is(.ys-circle,[style*=\"white-space:nowrap\"]) wbr{display:none}"
     "</style>"
 )
 

@@ -5,8 +5,8 @@
 
   var KEY_DATE = "kotoba-exam-date";
   var KEY_CHECKS = "kotoba-omamori-checks";
-  /* 第33回 学科・論述試験の日(サイト内の試験日案内と同じ) */
-  var DEFAULT_DATE = "2026-11-01";
+  /* 第34回 学科・論述試験の日(サイト内の試験日案内と同じ。11/22 に第33回から変えた) */
+  var DEFAULT_DATE = "2027-03-07";
 
   function load(key) {
     try {
