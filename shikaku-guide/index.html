@@ -61,6 +61,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
 <style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
+<style id="toc1122">/* 11/22 目次の段は上の緑の続き・目次の箱は白（scripts/ippen_toc_1122.py） */body.kata section.sec2#mokuji{background:#EEF4D6!important;padding-top:8px!important;padding-bottom:40px!important}body.kata section.sec2.mokuji-tsuzuki{display:flow-root;background:#EEF4D6!important;padding-top:0!important;padding-bottom:64px!important}body.kata section.sec2.mokuji-tsuzuki:has(+section.sky)::after{content:none!important}body.kata section.sec2.green#kotae::after{content:none!important}body.kata section.sec2.mokuji-tsuzuki::after{position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;content:""!important;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important;bottom:-39px;top:auto;transform:scaleY(-1)}body.kata #mokuji .toc{background:#fff!important}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:64px!important}@media (max-width:760px){body.kata section.sec2#mokuji{padding-bottom:32px!important}body.kata section.sec2.mokuji-tsuzuki{padding-bottom:44px!important}body.kata section.sec2.mokuji-tsuzuki::after{height:24px;background-size:100% 24px!important;bottom:-23px}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:48px!important}}</style>
+<style id="ir1122">/* 11/22 段の扉＋ベージュと白の交互（scripts/ippen_irodori_1122.py）。11/22 ちゃんのOKで、統一の決まり（11/19）の段の地に「ベージュ（cream）」を足した */body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:104px!important;padding-bottom:104px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;top:-39px;bottom:auto;transform:none;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important}body.kata section.sec2.cream :is(.ft-row>span,.tblw,.tbl,.ofc-g,details.more,.faq details,.card,.box,.zu-box){background:#fff!important}body.kata .tobira{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto 28px}body.kata .tobira>img{width:84px;height:84px;object-fit:contain;margin:0 0 10px}body.kata .tobira .eye{margin:0 0 6px!important;letter-spacing:.12em}body.kata .tobira h2{font-size:26px!important;line-height:1.5!important;text-align:center!important;text-wrap:balance;margin:0!important;padding-left:0!important;background:none!important}body.kata .tobira h2 img,body.kata .tobira h2::before{display:none!important}@media (max-width:760px){body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:68px!important;padding-bottom:68px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{height:24px;background-size:100% 24px!important;top:-23px}body.kata .tobira>img{width:66px;height:66px}body.kata .tobira h2{font-size:22px!important}}</style>
 </head>
 <body class="kata">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -114,6 +116,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt"><span class="knw">この<wbr><span class="kn">ページ</span>で<wbr>わかる<wbr>こと</span></p><ol><li><a href="#kotae"><span class="tn">1</span><span class="tx">講座を<wbr>修了→試験に<wbr>合格→名簿に<wbr>登録</span></a></li><li><a href="#touroku"><span class="tn">2</span><span class="tx">受かったら<wbr>登録17,000円。<wbr>5年ごとに<wbr>更新</span></a></li><li><a href="#shikaku"><span class="tn">3</span><span class="tx">経験が<wbr>なければ、<wbr>養成講習の<wbr>道から</span></a></li><li><a href="#nanikara"><span class="tn">4</span><span class="tx">最初の<wbr>一歩は、<wbr>講座と<wbr>開講日を<wbr>決める<wbr>こと</span></a></li><li><a href="#hiyou"><span class="tn">5</span><span class="tx">費用は<wbr>全部で<wbr>約25万〜49万円<wbr>（給付金の<wbr>前）</span></a></li><li><a href="#kikan"><span class="tn">6</span><span class="tx">いまからなら、<wbr>最短は<wbr>2027年7月の<wbr>試験</span></a></li><li><a href="#ryouritsu"><span class="tn">7</span><span class="tx">受ける<wbr>人は<wbr>40〜50代の<wbr>働く<wbr>世代が<wbr>多い</span></a></li><li><a href="#shiken"><span class="tn">8</span><span class="tx">試験は<wbr>学科と<wbr>実技。<wbr>同時合格は<wbr>5〜6割ほど</span></a></li></ol><p class="tsub"><a href="#nayami">迷った<wbr>人の<wbr>声</a>・<a href="#faq">よく<wbr>ある<wbr>質問<wbr>（6問）</a>・<a href="#shutten">出典</a></p></nav>
+</div></section>
+<section class="sec2 mokuji-tsuzuki"><div class="w nar">
   <div class="lead2">
     <p class="who-for"><b><span class="knw">この<wbr><span class="kn">ページ</span>は、<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なりたいと<wbr>思いはじめた<wbr>人が、<wbr>「何から<wbr>始めて、<wbr>いつまでに、<wbr>いくらかかるのか」の<wbr>見通しを<wbr>立てる<wbr>ための<wbr><span class="kn">ページ</span>です。</span></b></p>
     <p>学校を<wbr>選ぶ前に、<wbr>道の<wbr>全体を<wbr>一度ながめて<wbr>おきたい<wbr>人に<wbr>向けて<wbr>書きました。</p>
@@ -143,9 +147,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <p class="vnote">年齢を<wbr>気に<wbr>している<wbr>人が、<wbr>講習と<wbr>試験に<wbr>年齢の<wbr>決まりが<wbr>あるかを<wbr>たずねています<wbr>（Yahoo!知恵袋・2018年）。<wbr>答えは、<wbr>年齢の<wbr>条件は<wbr>書かれていない<wbr>こと、<wbr>求人は<wbr>資格に<wbr>加えて<wbr>実務の<wbr>経験を<wbr>求める<wbr>ものが<wbr>多い<wbr>こと、でした。</p><p class="vans"><b>答え</b>法律の<wbr>受験資格には、<wbr>年や<wbr>学歴の<wbr>決まりは<wbr>ないんだ。<a class="tl" href="#shikaku">受験資格へ</a></p></article></div></div>
 <div class="vnav"><button class="varr prev" type="button" aria-label="前の声へ">‹</button><p class="vhint"><span class="knw">横に<wbr><span class="kn">スクロール</span>すると、<wbr>ほかの<wbr>声も<wbr>読めます</span></p><button class="varr next" type="button" aria-label="次の声へ">›</button></div></section>
 
-<section class="sec2 hb" id="shikaku"><div class="w nar">
-  <p class="eye">くわしく<wbr> 1</p>
-  <h2>受験資格は、<wbr>主に<wbr>3つの<wbr>道</h2>
+<section class="sec2 hb cream ir" id="shikaku"><div class="w nar">
+  <div class="tobira"><img src="../img/top/fuan_daijoubu.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 1</p><h2>受験資格は、<wbr>主に<wbr>3つの<wbr>道</h2></div>
   <div class="guide-mo solo"><p><span class="who"><span class="knw"><span class="kn">モヤン</span></span></span>相談の<wbr>仕事を<wbr>した<wbr>ことがなくても、<wbr>試験を<wbr>受けられる？</p><img src="../img/parts/t/moyan_school_hat_smile-200.webp" alt="モヤン" loading="lazy" decoding="async"></div>
   <p class="lead1">相談の<wbr>仕事を<wbr>した<wbr>ことがない<wbr>人は、<b class="mark">養成講習を<wbr>修了すれば<wbr>受けられます</b>。</p>
   <figure class="zu" aria-label="相談の仕事を通算3年以上しているなら実務経験の道、していないなら養成講習の道、という分かれ道の図">
@@ -165,8 +168,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 <section class="sec2 hb" id="nanikara"><div class="w">
   <div class="nar0">
-    <p class="eye">くわしく<wbr> 2</p>
-    <h2>何から<wbr>始める？<wbr> まず<wbr>講座を<wbr>選ぶ</h2>
+    <div class="tobira"><img src="../img/parts/04_book_wagon.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 2</p><h2>何から<wbr>始める？<wbr> まず<wbr>講座を<wbr>選ぶ</h2></div>
     <p class="lead1">最初の<wbr>一歩は、<b class="mark">どの<wbr>講座の、<wbr>いつの<wbr>期に<wbr>するかを<wbr>決める<wbr>こと</b>です。</p>
   </div>
   <ol class="flow" id="flow">
@@ -187,9 +189,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
   </div>
 </div></section>
 
-<section class="sec2 hb" id="hiyou"><div class="w nar">
-  <p class="eye">くわしく<wbr> 3</p>
-  <h2><span class="knw"><span class="kn">キャリコン</span>に<wbr>なる<wbr>費用は、<wbr>全部で<wbr>約25万〜49万円</span></h2>
+<section class="sec2 hb cream ir" id="hiyou"><div class="w nar">
+  <div class="tobira"><img src="../img/top/fuan_okane.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 3</p><h2><span class="knw"><span class="kn">キャリコン</span>に<wbr>なる<wbr>費用は、<wbr>全部で<wbr>約25万〜49万円</span></h2></div>
   <p class="lead1">給付金を<wbr>使う<wbr>前の<wbr>額で、<b class="mark">全部で<wbr>約25万〜49万円</b>が<wbr>目安です。</p>
   <figure class="zu" aria-label="かかるお金を積み上げた図。下から養成講習19.8万〜43.78万円、受験料3.88万円、登録1.7万円。合計約25.4万〜49.4万円">
     <div class="zu-box"><div class="zu-stack"><p class="zs-sum">合計　<b>約25.4万〜49.4万円</b></p><div class="zs s3"><span>登録</span><span class="zn">1.7万円</span></div><div class="zs s2"><span>受験料</span><span class="zn">3.88万円</span></div><div class="zs s1"><span>養成講習</span><span class="zn">19.8万〜43.78万円</span></div></div></div>
@@ -208,8 +209,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </div></section>
 
 <section class="sec2 hb" id="kikan"><div class="w nar">
-  <p class="eye">くわしく<wbr> 4</p>
-  <h2><span class="knw"><span class="kn">キャリコン</span>に<wbr>なるまでの<wbr>期間は、<wbr>試験日から<wbr>逆算</span></h2>
+  <div class="tobira"><img src="../img/top/fuan_tsuzuku.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 4</p><h2><span class="knw"><span class="kn">キャリコン</span>に<wbr>なるまでの<wbr>期間は、<wbr>試験日から<wbr>逆算</span></h2></div>
   <p class="lead1">いまから<wbr>始めると、<b class="mark">最短の<wbr>試験は<wbr>2027年7月の<wbr>第35回</b>が<wbr>目安です。</p>
   <figure class="zu" aria-label="第35回を目指すときの5つの点。講座をくらべて開講日を決める、養成講習、2027年4月13日から26日に受験申請、7月4日に学科・論述、8月24日に合格発表">
     <div class="zu-box"><div class="zu-time zu-v"><div class="zu-node"><span class="zu-dot">1</span><b>講座を<wbr>くらべて<wbr>開講日を<wbr>決める</b></div><div class="zu-span"></div><div class="zu-node"><span class="zu-dot">2</span><b>養成講習</b><small>150時間<wbr>以上</small></div><div class="zu-span"></div><div class="zu-node"><span class="zu-dot">3</span><b>受験申請</b><small>2027年<wbr>4月13日<wbr>〜26日<br>（協議会）</small></div><div class="zu-span"></div><div class="zu-node zu-key"><span class="zu-dot">4</span><b>学科・<wbr>論述</b><small>7月4日</small></div><div class="zu-span zu-14"><em class="mark">面接 7/10〜25</em></div><div class="zu-node"><span class="zu-dot">5</span><b>合格発表</b><small>8月24日<wbr>（協議会）</small></div></div></div>
@@ -226,9 +226,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 </div></section>
 
-<section class="sec2 hb" id="ryouritsu"><div class="w nar">
-  <p class="eye">くわしく<wbr> 5</p>
-  <h2>働きながら・子育て<wbr>中でもなれる？</h2>
+<section class="sec2 hb cream ir" id="ryouritsu"><div class="w nar">
+  <div class="tobira"><img src="../img/top/hito_honne.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 5</p><h2>働きながら・子育て<wbr>中でもなれる？</h2></div>
   <p class="lead1"><b class="mark">なれます。</b>受ける<wbr>人は<wbr>40〜50代が<wbr>多く、<wbr>登録している<wbr>人の<wbr>半分ほどは<wbr>正社員などと<wbr>して<wbr>働いています。</p>
   <figure class="zu" aria-label="働きながら・子育て中でもなれる理由と、講座を選ぶ前に確かめる3つ。受けた人の平均は45歳台、登録している人の51.9%は正社員など。確かめるのは、授業の曜日と時間・休んだ回を受け直せるか・ライブ授業の回数">
     <div class="two waku">
@@ -249,8 +248,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </div></section>
 
 <section class="sec2 hb" id="shiken"><div class="w nar">
-  <p class="eye">くわしく<wbr> 6</p>
-  <h2>試験は<wbr>学科と<wbr>実技<wbr>（論述・面接）</h2>
+  <div class="tobira"><img src="../img/top/fuan_shiken.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 6</p><h2>試験は<wbr>学科と<wbr>実技<wbr>（論述・面接）</h2></div>
   <p class="lead1">学科と<wbr>実技の<b class="mark">両方に<wbr>受かると、<wbr>合格</b>です。</p>
   <figure class="zu" aria-label="試験の3つ。学科はマーク50問・100分・70点以上。論述は50分。面接はロールプレイ15分と口頭試問5分。実技は150点満点で90点以上">
     <div class="fig-t"><div class="ft-row "><span class="ft-a">学科<small><span class="knw"><span class="kn">マーク</span>50問・100分</span><br>70点以上</small></span><span class="ft-a">論述<small>50分</small></span><span class="ft-a">面接<small><span class="knw"><span class="kn">ロールプレイ</span>15分</span><br>＋口頭試問5分</small></span></div><i class="ft-line"></i></div>
@@ -268,9 +266,9 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </div></section>
 
 
-<section class="sec2" id="faq"><div class="w nar">
+<section class="sec2 cream ir" id="faq"><div class="w nar">
   <p class="eye c">よく<wbr>ある<wbr>質問</p>
-  <h2 class="c">なり方の<wbr>よく<wbr>ある<wbr>質問</h2>
+  <div class="tobira"><img src="../img/top/kumo_usagi.webp" alt="" loading="lazy" decoding="async"><h2 class="c">なり方の<wbr>よく<wbr>ある<wbr>質問</h2></div>
   <div class="faq"><details><summary><b class="qn">Q1.</b>相談の<wbr>仕事の<wbr>経験が<wbr>なくても、<wbr>なれる？</summary><div class="in">なれます。<wbr>国が<wbr>認めた<wbr>養成講習を<wbr>修了すると、<wbr>試験を<wbr>受けられます。<wbr>第32回の<wbr>学科を<wbr>受けた<wbr>人も、<wbr>ほとんどが<wbr>この<wbr>道でした。</div></details><details><summary><b class="qn">Q2.</b>年齢や<wbr>学歴の<wbr>条件は<wbr>ある？</summary><div class="in">法律と<wbr>省令で<wbr>決まっている<wbr>受験資格に、<wbr>年齢や<wbr>学歴の<wbr>条件は<wbr>入っていません。<wbr>受験した<wbr>人の<wbr>平均年齢は<wbr>45歳台です。</div></details><details><summary><b class="qn">Q3.</b>全部で<wbr>いくらかかる？</summary><div class="in">養成講習・受験料・登録料で、<wbr>約25.4万〜49.4万円が<wbr>目安です<wbr>（給付金の<wbr>前・<wbr>1回で合格・試験対策の<wbr>講座なし）。<wbr>給付金が<wbr>あれば、<wbr>修了した<wbr>ときに<wbr>受講料の<wbr>半分<wbr>（50%）が<wbr>戻ります。</div></details><details><summary><b class="qn">Q4.</b>いまから<wbr>始めて、<wbr>いちばん早い<wbr>試験は？</summary><div class="in">今日から<wbr>講座を<wbr>探す人なら、<wbr>2027年7月4日の<wbr>第35回が<wbr>目安です。<wbr>協議会の<wbr>申込みは<wbr>4月13日〜26日なので、<wbr>その<wbr>時期までに<wbr>講座を<wbr>修了できるかを、<wbr>学校に<wbr>聞いて<wbr>おくと<wbr>計画が<wbr>立ちます。</div></details><details><summary><b class="qn">Q5.</b>講座を<wbr>受けずに、<wbr>独学で<wbr>受けられる？</summary><div class="in">受験資格は、<wbr>養成講習の<wbr>修了の<wbr>ほか、<wbr>相談の<wbr>仕事の<wbr>実務経験3年以上、<wbr>技能検定の<wbr>合格などです。<wbr>どれにも<wbr>当ては<wbr>まらない<wbr>人は、<wbr>養成講習の<wbr>道に<wbr>なります。</div></details><details><summary><b class="qn">Q6.</b>学科か<wbr>実技の<wbr>どちらかに<wbr>落ちたら？</summary><div class="in">受かった<wbr>ほうは、<wbr>次から<wbr>免除に<wbr>なります。<wbr>その合格に<wbr>期限は<wbr>ないので、<wbr>落ちた<wbr>ほうだけを<wbr>次の<wbr>回で<wbr>受けられます。</div></details></div>
 </div></section>
 

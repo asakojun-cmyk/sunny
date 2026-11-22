@@ -208,6 +208,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
 <style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
+<style id="toc1122">/* 11/22 目次の段は上の緑の続き・目次の箱は白（scripts/ippen_toc_1122.py） */body.kata section.sec2#mokuji{background:#EEF4D6!important;padding-top:8px!important;padding-bottom:40px!important}body.kata section.sec2.mokuji-tsuzuki{display:flow-root;background:#EEF4D6!important;padding-top:0!important;padding-bottom:64px!important}body.kata section.sec2.mokuji-tsuzuki:has(+section.sky)::after{content:none!important}body.kata section.sec2.green#kotae::after{content:none!important}body.kata section.sec2.mokuji-tsuzuki::after{position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;content:""!important;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important;bottom:-39px;top:auto;transform:scaleY(-1)}body.kata #mokuji .toc{background:#fff!important}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:64px!important}@media (max-width:760px){body.kata section.sec2#mokuji{padding-bottom:32px!important}body.kata section.sec2.mokuji-tsuzuki{padding-bottom:44px!important}body.kata section.sec2.mokuji-tsuzuki::after{height:24px;background-size:100% 24px!important;bottom:-23px}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:48px!important}}</style>
+<style id="ir1122">/* 11/22 段の扉＋ベージュと白の交互（scripts/ippen_irodori_1122.py）。11/22 ちゃんのOKで、統一の決まり（11/19）の段の地に「ベージュ（cream）」を足した */body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:104px!important;padding-bottom:104px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;top:-39px;bottom:auto;transform:none;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important}body.kata section.sec2.cream :is(.ft-row>span,.tblw,.tbl,.ofc-g,details.more,.faq details,.card,.box,.zu-box){background:#fff!important}body.kata .tobira{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto 28px}body.kata .tobira>img{width:84px;height:84px;object-fit:contain;margin:0 0 10px}body.kata .tobira .eye{margin:0 0 6px!important;letter-spacing:.12em}body.kata .tobira h2{font-size:26px!important;line-height:1.5!important;text-align:center!important;text-wrap:balance;margin:0!important;padding-left:0!important;background:none!important}body.kata .tobira h2 img,body.kata .tobira h2::before{display:none!important}@media (max-width:760px){body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:68px!important;padding-bottom:68px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{height:24px;background-size:100% 24px!important;top:-23px}body.kata .tobira>img{width:66px;height:66px}body.kata .tobira h2{font-size:22px!important}}</style>
 </head>
 <body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -257,6 +259,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt"><span class="knw">この<wbr><span class="kn">ページ</span>で<wbr>わかる<wbr>こと<wbr>（40問）</span></p><ol><li><a href="#k-what"><span class="tn">1</span><span class="tx">働く<wbr>人の<wbr>仕事選びを<wbr>支える<wbr>国家資格</span></a></li><li><a href="#k-yametoke"><span class="tn">2</span><span class="tx">使う<wbr>場所が<wbr>ある<wbr>人には<wbr>価値が<wbr>ある</span></a></li><li><a href="#k-muki"><span class="tn">3</span><span class="tx">「聴くのが<wbr>好き」が<wbr>出発点</span></a></li><li><a href="#k-kasegu"><span class="tn">4</span><span class="tx">いまの<wbr>仕事に<wbr>足すと<wbr>活きる</span></a></li><li><a href="#k-naru"><span class="tn">5</span><span class="tx">養成講習→試験→登録の<wbr>順</span></a></li><li><a href="#k-okane"><span class="tn">6</span><span class="tx">最初は<wbr>35〜55万円前後。<wbr>給付金で<wbr>下がる</span></a></li><li><a href="#k-ryoritsu"><span class="tn">7</span><span class="tx"><span class="knw">土曜だけ・<span class="kn">オンライン</span>の<wbr><span class="kn">クラス</span>も<wbr>ある</span></span></a></li><li><a href="#k-koshu"><span class="tn">8</span><span class="tx">聴く<wbr>力は、<wbr>練習で<wbr>身に<wbr>つく</span></a></li><li><a href="#k-erabu"><span class="tn">9</span><span class="tx">2〜3校に<wbr>しぼって<wbr>説明会へ</span></a></li><li><a href="#k-shiken"><span class="tn">10</span><span class="tx">学科と<wbr>実技。<wbr>片方ずつ<wbr>受け直せる</span></a></li></ol><p class="tsub"><a href="#kw">ことばでさが<wbr>す</a>・<a href="#tsugi">次の<wbr>一歩</a></p></nav>
+</div></section>
+<section class="sec2 mokuji-tsuzuki"><div class="w nar">
   <div class="lead2">
     <p class="who-for"><b><span class="knw">この<wbr><span class="kn">ページ</span>は、<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>資格が<wbr>気に<wbr>なりはじめた<wbr>人が、<wbr>「なるには・費用・稼げる？・やめとけって<wbr>本当？」の<wbr>気に<wbr>なる<wbr>ことを、<wbr>1問ずつ<wbr>確かめる<wbr>ための<wbr><span class="kn">ページ</span>です。</span></b></p>
     <p class="lede"><span class="knw">「どうやってなれるの？」<wbr>「いくらかかる？」<wbr>「稼げるの？」<wbr>「やめとけって本当？」。<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>資格が<wbr>気に<wbr>なりはじめた方の<wbr>質問を、<wbr>40問<wbr>あつめました。<wbr>知りたい<wbr>言葉で<wbr>さが<wbr>して、<wbr>気に<wbr>なる<wbr>ところから<wbr>読んでください。</span></p>
@@ -335,8 +339,7 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 
 <div id="faq">
 <section id="k-what" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 1</p>
-    <h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は、<wbr>どんな<wbr>資格？</span></h2>
+<div class="tobira"><img src="../../img/top/fuan_daijoubu.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 1</p><h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は、<wbr>どんな<wbr>資格？</span></h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>そもそも、<wbr>どんな<wbr>資格なの？</p></div>
     <details class="gimon" id="t07" data-kw="とは 仕事内容 何をする">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>って、<wbr>何を<wbr>する<wbr>人？</span></span><span class="gimon__a bk">その<wbr>人の<wbr>中の<wbr>答えを<wbr>一緒に<wbr>見つける</span></span></summary>
@@ -387,9 +390,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
   
 </div></section>
 
-<section id="k-yametoke" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 2</p>
-    <h2 class="bk">「やめとけ」<wbr>「役に立たない」は<wbr>本当？</h2>
+<section id="k-yametoke" class="kwsec sec2 hb cream ir"><div class="w nar">
+<div class="tobira"><img src="../../img/top/kumo_hiyoko.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 2</p><h2 class="bk">「やめとけ」<wbr>「役に立たない」は<wbr>本当？</h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><span class="knw"><wbr><span class="kn">ネット</span>で<wbr>見て、<wbr>不安になっちゃった…</span></p></div>
     <details class="gimon" id="t05" data-kw="やめとけ 意味ない 最悪 後悔">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>が<wbr>「やめとけ」と<wbr>言われるのは<wbr>なぜ？</span></span><span class="gimon__a bk">使う<wbr>場所が<wbr>ある<wbr>人には<wbr>価値が<wbr>ある</span></span></summary>
@@ -414,8 +416,7 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 </div></section>
 
 <section id="k-muki" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 3</p>
-    <h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>向いている<wbr>人は？</span></h2>
+<div class="tobira"><img src="../../img/top/sora_niji.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 3</p><h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>向いている<wbr>人は？</span></h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>ボクでも、<wbr>だいじょうぶかな？</p></div>
     <details class="gimon" id="t06" data-kw="向いている人 適性 価値">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>、<wbr>どんな<wbr>人なら<wbr>取る<wbr>価値が<wbr>ある？</span></span><span class="gimon__a bk">「聴くのが好き」が<wbr>出発点</span></span></summary>
@@ -449,9 +450,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
   
 </div></section>
 
-<section id="k-kasegu" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 4</p>
-    <h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は<wbr>稼げる？<wbr>年収・副業・働く<wbr>場所</span></h2>
+<section id="k-kasegu" class="kwsec sec2 hb cream ir"><div class="w nar">
+<div class="tobira"><img src="../../img/parts/10_yellow_pencil.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 4</p><h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は<wbr>稼げる？<wbr>年収・副業・働く<wbr>場所</span></h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>取った<wbr>あと、<wbr>お仕事に<wbr>なるのかな？</p></div>
     <details class="gimon" id="t17" data-kw="稼げる 年収 収入 給料 食べていける 儲かる">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>資格を<wbr>取れば、<wbr>すぐ<wbr>食べていける？</span></span><span class="gimon__a bk">今の<wbr>仕事に<wbr>すぐ<wbr>活かせる</span></span></summary>
@@ -486,8 +486,7 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 </div></section>
 
 <section id="k-naru" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 5</p>
-    <h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なるには？<wbr>受験資格と<wbr>期間</span></h2>
+<div class="tobira"><img src="../../img/top/fuan_tsuzuku.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 5</p><h2 class="bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>に<wbr>なるには？<wbr>受験資格と<wbr>期間</span></h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>何から<wbr>始めればいいの？</p></div>
     <details class="gimon" id="t01" data-kw="独学 なり方 なるには 受験資格">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>って、<wbr>独学で<wbr>取れるの？</span></span><span class="gimon__a bk">一緒に<wbr>学ぶ仲間が<wbr>できる</span></span></summary>
@@ -529,9 +528,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
   
 </div></section>
 
-<section id="k-okane" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 6</p>
-    <h2 class="bk">費用は<wbr>いくら？<wbr>給付金は<wbr>もらえる？</h2>
+<section id="k-okane" class="kwsec sec2 hb cream ir"><div class="w nar">
+<div class="tobira"><img src="../../img/top/fuan_okane.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 6</p><h2 class="bk">費用は<wbr>いくら？<wbr>給付金は<wbr>もらえる？</h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>お金の<wbr>こと、<wbr>ちゃんと<wbr>知りたい</p></div>
     <details class="gimon" id="t02" data-kw="費用 お金 料金 値段 いくら 受講料">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>資格、<wbr>全部で<wbr>いくらかかるの？</span></span><span class="gimon__a bk">給付金で<wbr>実質負担が<wbr>下がる</span></span></summary>
@@ -575,8 +573,7 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 </div></section>
 
 <section id="k-ryoritsu" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 7</p>
-    <h2 class="bk">働きながら・子育てしながら<wbr>取れる？</h2>
+<div class="tobira"><img src="../../img/top/hito_honne.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 7</p><h2 class="bk">働きながら・子育てしながら<wbr>取れる？</h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>毎日い<wbr>そがしいけど、<wbr>できるかな？</p></div>
     <details class="gimon" id="t37" data-kw="働きながら 仕事 両立 土日 夜">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は、<wbr>働きながら<wbr>取れる？</span></span><span class="gimon__a bk"><span class="knw">土曜だけ・全10回の<wbr><span class="kn">クラス</span>も</span></span></span></summary>
@@ -628,9 +625,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
   
 </div></section>
 
-<section id="k-koshu" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 8</p>
-    <h2 class="bk">養成講習は、<wbr>どんな<wbr>感じ？</h2>
+<section id="k-koshu" class="kwsec sec2 hb cream ir"><div class="w nar">
+<div class="tobira"><img src="../../img/parts/08_blue_backpack.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 8</p><h2 class="bk">養成講習は、<wbr>どんな<wbr>感じ？</h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>授業って、<wbr>どんな<wbr>ことを<wbr>するの？</p></div>
     <details class="gimon" id="t34" data-kw="内容 カリキュラム 150時間">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>養成講習では、<wbr>何を<wbr>学ぶの？</span></span><span class="gimon__a bk">聴く<wbr>力は<wbr>練習で<wbr>身に<wbr>つく</span></span></summary>
@@ -691,8 +687,7 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
 </div></section>
 
 <section id="k-erabu" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 9</p>
-    <h2 class="bk">養成学校は、<wbr>どう<wbr>選ぶ？</h2>
+<div class="tobira"><img src="../../img/parts/04_book_wagon.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 9</p><h2 class="bk">養成学校は、<wbr>どう<wbr>選ぶ？</h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>学校が<wbr>たくさん<wbr>あって、<wbr>選べないよ…</p></div>
     <details class="gimon" id="t11" data-kw="学校 選び方 比較 おすすめ">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>養成講座、<wbr>どうやって<wbr>選べばいい？</span></span><span class="gimon__a bk">2〜3校に<wbr>しぼって<wbr>説明会へ</span></span></summary>
@@ -718,9 +713,8 @@ body.kata .gimon__detail{padding:4px 14px 18px}body.kata .disclosure__list div{g
   
 </div></section>
 
-<section id="k-shiken" class="kwsec sec2 hb"><div class="w nar">
-<p class="eye">くわしく<wbr> 10</p>
-    <h2 class="bk">試験の<wbr>内容と<wbr>難易度は？</h2>
+<section id="k-shiken" class="kwsec sec2 hb cream ir"><div class="w nar">
+<div class="tobira"><img src="../../img/top/fuan_shiken.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 10</p><h2 class="bk">試験の<wbr>内容と<wbr>難易度は？</h2></div>
     <div class="mini-say mini-say--moyan"><span class="mini-say__avatar" aria-hidden="true"><img src="../../img/parts/07_moyan_school_hat_crying.webp" alt="" width="44" height="44" loading="lazy"></span><p class="mini-say__bubble"><b><span class="knw"><span class="kn">モヤン</span></span></b><wbr>試験、<wbr>受かるかな…</p></div>
     <details class="gimon" id="t35" data-kw="試験 内容 学科 論述 面接 実技">
       <summary><span class="gimon__mark" aria-hidden="true">Q</span><span class="gimon__qt"><span class="gimon__q bk"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>試験って、<wbr>どんな<wbr>内容？</span></span><span class="gimon__a bk">学科と<wbr>論述は<wbr>過去の<wbr>問題が<wbr>公開</span></span></summary>

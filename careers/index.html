@@ -61,6 +61,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
 <style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
+<style id="toc1122">/* 11/22 目次の段は上の緑の続き・目次の箱は白（scripts/ippen_toc_1122.py） */body.kata section.sec2#mokuji{background:#EEF4D6!important;padding-top:8px!important;padding-bottom:40px!important}body.kata section.sec2.mokuji-tsuzuki{display:flow-root;background:#EEF4D6!important;padding-top:0!important;padding-bottom:64px!important}body.kata section.sec2.mokuji-tsuzuki:has(+section.sky)::after{content:none!important}body.kata section.sec2.green#kotae::after{content:none!important}body.kata section.sec2.mokuji-tsuzuki::after{position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;content:""!important;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important;bottom:-39px;top:auto;transform:scaleY(-1)}body.kata #mokuji .toc{background:#fff!important}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:64px!important}@media (max-width:760px){body.kata section.sec2#mokuji{padding-bottom:32px!important}body.kata section.sec2.mokuji-tsuzuki{padding-bottom:44px!important}body.kata section.sec2.mokuji-tsuzuki::after{height:24px;background-size:100% 24px!important;bottom:-23px}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:48px!important}}</style>
+<style id="ir1122">/* 11/22 段の扉＋ベージュと白の交互（scripts/ippen_irodori_1122.py）。11/22 ちゃんのOKで、統一の決まり（11/19）の段の地に「ベージュ（cream）」を足した */body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:104px!important;padding-bottom:104px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;top:-39px;bottom:auto;transform:none;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important}body.kata section.sec2.cream :is(.ft-row>span,.tblw,.tbl,.ofc-g,details.more,.faq details,.card,.box,.zu-box){background:#fff!important}body.kata .tobira{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto 28px}body.kata .tobira>img{width:84px;height:84px;object-fit:contain;margin:0 0 10px}body.kata .tobira .eye{margin:0 0 6px!important;letter-spacing:.12em}body.kata .tobira h2{font-size:26px!important;line-height:1.5!important;text-align:center!important;text-wrap:balance;margin:0!important;padding-left:0!important;background:none!important}body.kata .tobira h2 img,body.kata .tobira h2::before{display:none!important}@media (max-width:760px){body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:68px!important;padding-bottom:68px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{height:24px;background-size:100% 24px!important;top:-23px}body.kata .tobira>img{width:66px;height:66px}body.kata .tobira h2{font-size:22px!important}}</style>
 </head>
 <body class="kata">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -114,6 +116,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt"><span class="knw">この<wbr><span class="kn">ページ</span>で<wbr>わかる<wbr>こと</span></p><ol><li><a href="#kotae"><span class="tn">1</span><span class="tx">仕事選びと<wbr>働き方の<wbr>相談にのる<wbr>国家資格</span></a></li><li><a href="#taisho"><span class="tn">2</span><span class="tx">名乗れるのは<wbr>登録してから・<wbr>5年ごとに<wbr>更新</span></a></li><li><a href="#nayami"><span class="tn">3</span><span class="tx">取る<wbr>価値は<wbr>「どこで<wbr>活かすか」から<wbr>決める</span></a></li><li><a href="#shigoto"><span class="tn">4</span><span class="tx">仕事内容の<wbr>柱は、<wbr>一対一の<wbr>面談</span></a></li><li><a href="#kimeru"><span class="tn">5</span><span class="tx">助言も<wbr>するが、<wbr>選ぶのは<wbr>相談した<wbr>人</span></a></li><li><a href="#mamoru"><span class="tn">6</span><span class="tx">秘密は<wbr>法律で<wbr>守り、<wbr>病気は<wbr>専門家へ</span></a></li><li><a href="#basho"><span class="tn">7</span><span class="tx">会社の<wbr>中で、<wbr>ほかの<wbr>仕事と<wbr>兼ねる<wbr>人が<wbr>多い</span></a></li><li><a href="#michi"><span class="tn">8</span><span class="tx">学ぶ<wbr>→試験→登録の<wbr>順に<wbr>進む</span></a></li></ol><p class="tsub"><a href="#nayami">迷った<wbr>人の<wbr>声</a>・<a href="#faq">よく<wbr>ある<wbr>質問<wbr>（6問）</a>・<a href="#shutten">出典</a></p></nav>
+</div></section>
+<section class="sec2 mokuji-tsuzuki"><div class="w nar">
   <div class="lead2">
     <p class="who-for"><b><span class="knw">この<wbr><span class="kn">ページ</span>は、<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>と<wbr>いう<wbr>言葉を<wbr>聞いたばかりの<wbr>人が、<wbr>「どんな<wbr>仕事で、<wbr>わたしに<wbr>関係<wbr>あるのか」を<wbr>つかむ<wbr>ための<wbr><span class="kn">ページ</span>です。</span></b></p>
     <p>学校を<wbr>選ぶより<wbr>一つ<wbr>手前、<wbr>「そもそも<wbr>何の<wbr>資格？」の<wbr>段に<wbr>いる<wbr>人に<wbr>向けて<wbr>書きました。</p>
@@ -142,9 +146,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 <p class="vnote">子育て<wbr>中に<wbr>資格を<wbr>取った<wbr>人が、<wbr>申し込む前に、<wbr>取った<wbr>あと<wbr>どう<wbr>活かしたいかを<wbr>もっと<wbr>考えておけば<wbr>よかった、と<wbr>ふり<wbr>返っています<wbr>（note・2022年）。<wbr>それでも<wbr>学びは<wbr>多く、<wbr>仲間と<wbr>出会えた<wbr>ことは<wbr>大きかった、とも。</p><p class="vans"><b>答え</b>先に<wbr>仕事の<wbr>中身と<wbr>活かせる<wbr>場所を<wbr>見て、<wbr>自分の<wbr>使い道を<wbr>1つ<wbr>思いう<wbr>かべてみよう。<a class="tl" href="#shigoto">仕事内容へ</a></p></article></div></div>
 <div class="vnav"><button class="varr prev" type="button" aria-label="前の声へ">‹</button><p class="vhint"><span class="knw">横に<wbr><span class="kn">スクロール</span>すると、<wbr>ほかの<wbr>声も<wbr>読めます</span></p><button class="varr next" type="button" aria-label="次の声へ">›</button></div></section>
 
-<section class="sec2 hb" id="shigoto"><div class="w nar">
-  <p class="eye">くわしく<wbr> 1</p>
-  <h2><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>仕事内容</span></h2>
+<section class="sec2 hb cream ir" id="shigoto"><div class="w nar">
+  <div class="tobira"><img src="../img/top/fuan_daijoubu.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 1</p><h2><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr>仕事内容</span></h2></div>
   <p class="lead1">中心に<wbr>なるのは、<wbr>相談する<wbr>人と<b class="mark">一対一で<wbr>話す面談</b>です。</p>
   <figure class="zu" aria-label="仕事は4つ。主役は面談で、ほかに書類づくりの支援、研修・セミナー、制度づくりの支援">
     <div class="fig-t"><div class="ft-row c4"><span class="ft-b">面談<small>一対一の相談・主役</small></span><span class="ft-a">書類づくりの<wbr>支援</span><span class="ft-a"><span class="knw">研修・<wbr><span class="kn">セミナー</span></span></span><span class="ft-a">制度づくりの<wbr>支援</span></div><i class="ft-line"></i></div>
@@ -165,8 +168,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </div></section>
 
 <section class="sec2 hb" id="kimeru"><div class="w nar">
-  <p class="eye">くわしく<wbr> 2</p>
-  <h2>助言は<wbr>しても、<wbr>決めるのは<wbr>本人</h2>
+  <div class="tobira"><img src="../img/top/kumo_hiyoko.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 2</p><h2>助言は<wbr>しても、<wbr>決めるのは<wbr>本人</h2></div>
   <div class="guide-mo solo"><p><span class="who"><span class="knw"><span class="kn">モヤン</span></span></span>「こうしなさい」と<wbr>答えを<wbr>教えてくれる<wbr>人なの？</p><img src="../img/parts/t/moyan_school_hat_smile-200.webp" alt="モヤン" loading="lazy" decoding="async"></div>
   <p class="lead1">助言は<wbr>します。<wbr>けれど、<b class="mark">どの<wbr>道に<wbr>するかを<wbr>決めるのは、<wbr>相談した<wbr>本人</b>です。</p>
   <figure class="zu" aria-label="話を聴く、情報と助言、決めるのは本人、の3つの順番">
@@ -181,9 +183,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 </div></section>
 
-<section class="sec2 hb" id="mamoru"><div class="w nar">
-  <p class="eye">くわしく<wbr> 3</p>
-  <h2>秘密を<wbr>守り、<wbr>専門の<wbr>外は<wbr>専門家へ</h2>
+<section class="sec2 hb cream ir" id="mamoru"><div class="w nar">
+  <div class="tobira"><img src="../img/top/sora_niji.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 3</p><h2>秘密を<wbr>守り、<wbr>専門の<wbr>外は<wbr>専門家へ</h2></div>
   <p class="lead1">相談で<wbr>聞いた<wbr>秘密は、<b class="mark">法律で<wbr>守られています</b>。</p>
   <figure class="zu" aria-label="相談の中身が仕事や働き方のことならキャリアコンサルタントが受け、病気の診断や治療などは専門家につなぐ、という分かれ道の図">
     <div class="zu-box"><div class="zu-fork"><div class="zu-blk"><div class="zu-q"><i>質問</i>相談の<wbr>中身は、<wbr>仕事や<wbr>働き方の<wbr>こと？</div><div class="zu-brs"><div class="zu-br"><span class="zu-yn zu-yes">は<wbr>い</span><div class="zu-res zu-ok"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>が<wbr>受ける</span></div></div><div class="zu-br"><span class="zu-yn">いいえ</span><div class="zu-res zu-out">病気の診断や治療などは、<wbr>専門家につなぐ</div></div></div></div></div></div>
@@ -200,8 +201,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 </div></section>
 
 <section class="sec2 hb" id="basho"><div class="w nar">
-  <p class="eye">くわしく<wbr> 4</p>
-  <h2>活かせる<wbr>場所は、<wbr>会社から<wbr>独立まで</h2>
+  <div class="tobira"><img src="../img/parts/10_yellow_pencil.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 4</p><h2>活かせる<wbr>場所は、<wbr>会社から<wbr>独立まで</h2></div>
   <div class="guide-mo solo"><p><span class="who"><span class="knw"><span class="kn">モヤン</span></span></span><span class="knw">資格を<wbr>取ったら、<wbr><span class="kn">キャリコン</span>だけで<wbr>食べていけるの？</span></p><img src="../img/parts/t/moyan_school_hat_smile-200.webp" alt="モヤン" loading="lazy" decoding="async"></div>
   <p class="lead1">いちばん<wbr>多いのは、<b class="mark">勤め先の<wbr>中で、<wbr>本来の<wbr>仕事と<wbr>兼ねて<wbr>活かす形</b>です。</p>
   <figure class="zu" aria-label="活動の場の割合。企業41.7%、学校20.6%、ハローワーク・人材会社など20.5%、地域・福祉10.7%、その他6.5%。ほかの仕事と兼ねている人は61.7%">
@@ -218,9 +218,8 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 </div></section>
 
-<section class="sec2 hb" id="michi"><div class="w nar">
-  <p class="eye">くわしく<wbr> 5</p>
-  <h2><span class="knw"><span class="kn">キャリコン</span>に<wbr>なるまでの<wbr>道</span></h2>
+<section class="sec2 hb cream ir" id="michi"><div class="w nar">
+  <div class="tobira"><img src="../img/parts/08_blue_backpack.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 5</p><h2><span class="knw"><span class="kn">キャリコン</span>に<wbr>なるまでの<wbr>道</span></h2></div>
   <p class="lead1">なるまでの<wbr>道は、<b class="mark">学ぶ・試験・登録の<wbr>3つの<wbr>段</b>です。</p>
   <figure class="zu" aria-label="学ぶ（養成講習）、試験（学科・実技）、登録、5年ごとに更新、の順番の図">
     <div class="zu-box"><div class="zu-time"><div class="zu-node"><span class="zu-dot">1</span><b>学ぶ</b><small>養成講習</small></div><div class="zu-span"></div><div class="zu-node"><span class="zu-dot">2</span><b>試験</b><small>学科・実技</small></div><div class="zu-span"></div><div class="zu-node zu-key"><span class="zu-dot">3</span><b>登録</b><small>ここで<wbr>名乗れる</small></div><div class="zu-span"></div><div class="zu-node"><span class="zu-dot">4</span><b>5年ごとに<wbr>更新</b></div></div></div>
@@ -237,7 +236,7 @@ function later(){setTimeout(go,3500)}if(d.readyState==="complete")later();else w
 
 <section class="sec2" id="faq"><div class="w nar">
   <p class="eye c">よく<wbr>ある<wbr>質問</p>
-  <h2 class="c"><span class="knw"><span class="kn">キャリコン</span>の<wbr>よく<wbr>ある<wbr>質問</span></h2>
+  <div class="tobira"><img src="../img/top/kumo_usagi.webp" alt="" loading="lazy" decoding="async"><h2 class="c"><span class="knw"><span class="kn">キャリコン</span>の<wbr>よく<wbr>ある<wbr>質問</span></h2></div>
   <div class="faq"><details><summary><b class="qn">Q1.</b><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は<wbr>国家資格？</span></summary><div class="in">はい。<wbr>職業能力開発促進法で<wbr>決められた<wbr>国家資格です。<wbr>2016年<wbr>（平成28年）に<wbr>始まった<wbr>登録制度で、<wbr>試験に<wbr>受かり、<wbr>名簿に<wbr>登録した<wbr>人が<wbr>名乗れます。</div></details><details><summary><b class="qn">Q2.</b>何人くらいいる？</summary><div class="in"><span class="knw">登録している<wbr>人は<wbr>87,221名です<wbr>（2026年10月末・登録<span class="kn">センター</span>）。<wbr>公的な<wbr>調査に<wbr>答えた<wbr>人は、<wbr>女性が<wbr>約6割でした<wbr>（JILPT）。</span></div></details><details><summary><b class="qn">Q3.</b><span class="knw"><span class="kn">アドバイス</span>は<wbr>して<wbr>もらえる？</span></summary><div class="in">はい。<wbr>法律の<wbr>定義には、<wbr>相談にのるだけでなく、<wbr>助言と<wbr>指導も<wbr>入っています。<wbr>ただ、<wbr>最後の<wbr>答えを<wbr>出すのは<wbr>相談した<wbr>人で、<wbr>倫理綱領は<wbr>「自己決定権」を<wbr>大切に<wbr>するよう<wbr>決めています。</div></details><details><summary><b class="qn">Q4.</b>取れば、<wbr>すぐ<wbr>仕事に<wbr>なる？</summary><div class="in">公的な<wbr>調査では、<wbr>兼任・兼業の<wbr>人が<wbr>多く<wbr>（61.7%）、<wbr>資格の<wbr>仕事の<wbr>収入が<wbr>年収に<wbr>占める<wbr>割合は、<wbr>まん中の<wbr>値で<wbr>5.0%でした。<wbr>どこで<wbr>活かすかを<wbr>先に<wbr>考えて<wbr>おくと、<wbr>取った<wbr>あとに<wbr>迷いに<wbr>くくなります。</div></details><details><summary><b class="qn">Q5.</b><span class="knw">産業<span class="kn">カウンセラー</span>とのちがいは？</span></summary><div class="in"><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>は、<wbr>法律で<wbr>決められた<wbr>国家資格で、<wbr>登録と<wbr>5年ごとの<wbr>更新が<wbr>あります。<wbr>産業<span class="kn">カウンセラー</span>は、<wbr>日本産業<wbr><span class="kn">カウンセラー</span>協会が<wbr>認定する<wbr>資格で、<wbr>協会の<wbr>養成講座を<wbr>修了すると<wbr>試験を<wbr>受けられます。</span></div></details><details><summary><b class="qn">Q6.</b><span class="knw"><span class="kn">キャリア</span><wbr><span class="kn">コンサルティング</span>技能士とのちがいは？</span></summary><div class="in"><span class="knw">技能士は、<wbr>国の<wbr>技能検定に<wbr>受かった<wbr>人です。<wbr>厚生労働省は、<wbr>技能検定が<wbr>求める<wbr>力を、<wbr><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>試験より<wbr>上の<wbr>水準と<wbr>しています。<wbr>受けるには<wbr>実務の<wbr>経験が<wbr>要り、<wbr>2級は<wbr>原則5年以上です。</span></div></details></div>
 </div></section>
 

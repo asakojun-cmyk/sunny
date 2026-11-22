@@ -309,6 +309,8 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
 <style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
+<style id="toc1122">/* 11/22 目次の段は上の緑の続き・目次の箱は白（scripts/ippen_toc_1122.py） */body.kata section.sec2#mokuji{background:#EEF4D6!important;padding-top:8px!important;padding-bottom:40px!important}body.kata section.sec2.mokuji-tsuzuki{display:flow-root;background:#EEF4D6!important;padding-top:0!important;padding-bottom:64px!important}body.kata section.sec2.mokuji-tsuzuki:has(+section.sky)::after{content:none!important}body.kata section.sec2.green#kotae::after{content:none!important}body.kata section.sec2.mokuji-tsuzuki::after{position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;content:""!important;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important;bottom:-39px;top:auto;transform:scaleY(-1)}body.kata #mokuji .toc{background:#fff!important}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:64px!important}@media (max-width:760px){body.kata section.sec2#mokuji{padding-bottom:32px!important}body.kata section.sec2.mokuji-tsuzuki{padding-bottom:44px!important}body.kata section.sec2.mokuji-tsuzuki::after{height:24px;background-size:100% 24px!important;bottom:-23px}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:48px!important}}</style>
+<style id="ir1122">/* 11/22 段の扉＋ベージュと白の交互（scripts/ippen_irodori_1122.py）。11/22 ちゃんのOKで、統一の決まり（11/19）の段の地に「ベージュ（cream）」を足した */body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:104px!important;padding-bottom:104px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;top:-39px;bottom:auto;transform:none;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important}body.kata section.sec2.cream :is(.ft-row>span,.tblw,.tbl,.ofc-g,details.more,.faq details,.card,.box,.zu-box){background:#fff!important}body.kata .tobira{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto 28px}body.kata .tobira>img{width:84px;height:84px;object-fit:contain;margin:0 0 10px}body.kata .tobira .eye{margin:0 0 6px!important;letter-spacing:.12em}body.kata .tobira h2{font-size:26px!important;line-height:1.5!important;text-align:center!important;text-wrap:balance;margin:0!important;padding-left:0!important;background:none!important}body.kata .tobira h2 img,body.kata .tobira h2::before{display:none!important}@media (max-width:760px){body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:68px!important;padding-bottom:68px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{height:24px;background-size:100% 24px!important;top:-23px}body.kata .tobira>img{width:66px;height:66px}body.kata .tobira h2{font-size:22px!important}}</style>
 </head>
 <body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -377,6 +379,8 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt"><span class="knw">この<wbr><span class="kn">ページ</span>で<wbr>わかる<wbr>こと</span></p><ol><li><a href="#who"><span class="tn">1</span><span class="tx"><span class="knw">給付金が<wbr>使えるか、<wbr>何を<wbr>大事に<wbr>するかで、<wbr>4つの<wbr><span class="kn">タイプ</span>別に<wbr>答えを<wbr>出しました</span></span></a></li><li><a href="#opinion"><span class="tn">2</span><span class="tx">受講料だけでは<wbr>見えない、<wbr>「休んだ<wbr>ときの<wbr>振替」と<wbr>「通える<wbr>時間」の<wbr>話</span></a></li><li><a href="#list"><span class="tn">3</span><span class="tx">19.8万円から<wbr>43.78万円まで。<wbr>2倍以上の<wbr>差が<wbr>あります</span></a></li><li><a href="#why"><span class="tn">4</span><span class="tx"><span class="knw">8校の<wbr>公式<span class="kn">サイト</span>を<wbr>くらべて<wbr>見えた、<wbr>安さの<wbr>理由</span></span></a></li><li><a href="#kyufu"><span class="tn">5</span><span class="tx">給付金の<wbr>条件に<wbr>当ては<wbr>まれば、<wbr>修了で<wbr>受講料の<wbr>半分が<wbr>戻る</span></a></li><li><a href="#check"><span class="tn">6</span><span class="tx">安さだけで<wbr>決める<wbr>前に、<wbr>確かめたい<wbr>3つの<wbr>こと</span></a></li></ol></nav>
+</div></section>
+<section class="sec2 mokuji-tsuzuki"><div class="w nar">
   <div class="lead2"><p><span class="knw">養成講座は<wbr/>30万円前後の<wbr/>ものが<wbr/>多く、<wbr/>少しでも<wbr/>安い<wbr/>ところを<wbr/>探したくなりますよね。<wbr/>厚生労働省の<wbr/>一覧に<wbr/>ある<wbr/>全22講習の<wbr/>受講料と、<wbr/>給付金を<wbr/>使った<wbr/>ときの<wbr/>実質の<wbr/>負担を、<wbr/>公式<span class="kn">サイト</span>で<wbr/>確かめて<wbr/>まとめました。</span></p><p class="date">更新日: 2026年11月19日 情報を<wbr>確認した<wbr>日: 2026年10月14日〜10月17日<small><span class="knw">(各校の<wbr>公式<span class="kn">サイト</span>)</span></small>、<wbr>11月15日<small>(厚生労働省の<wbr>一覧)</small>、<wbr>11月19日<small><span class="knw">(<span class="kn">キャリコンシーオー</span>の<wbr>公式<span class="kn">サイト</span>)</span></small></p><div class="yasui gk"><details aria-label="広告・提供関係の開示" class="disclosure">
 <summary class="disclosure__title bk"><span class="disclosure__tag">PR</span><span class="knw"><wbr/>この<wbr/><span class="kn">ページ</span>には<wbr/>広告(紹介<span class="kn">リンク</span>)が<wbr/>あります<wbr/></span><span class="disclosure__more">くわしく</span></summary>
 <dl class="disclosure__list">
@@ -389,8 +393,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb" id="who"><div class="w nar">
-  <p class="eye">くわしく<wbr> 1</p>
-  <h2 class="bk">あなたの<wbr/>場合、<wbr/>いちばん<wbr/>安く<wbr/>なるのは<wbr/>どこ？</h2>
+  <div class="tobira"><img src="../../img/top/sora_niji.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 1</p><h2 class="bk">あなたの<wbr/>場合、<wbr/>いちばん<wbr/>安く<wbr/>なるのは<wbr/>どこ？</h2></div>
   <div class="yasui gk">
 
 <p><span class="knw">「給付金が<wbr/>使えるか」と<wbr/>「何を<wbr/>大事に<wbr/>したいか」で、<wbr/>いちばん<wbr/>安くなる<wbr/>講座が<wbr/>変わります。<wbr/>4つの<wbr/><span class="kn">タイプ</span>に<wbr/>分けました。</span></p>
@@ -471,9 +474,8 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div>
 </div></section>
 
-<section class="sec2 hb" id="opinion"><div class="w nar">
-  <p class="eye">くわしく<wbr> 2</p>
-  <h2 class="bk"><span class="knw">運営者の<wbr>おすすめ：<wbr>地域連携<wbr><span class="kn">プラットフォーム</span></span></h2>
+<section class="sec2 hb cream ir" id="opinion"><div class="w nar">
+  <div class="tobira"><img src="../../img/parts/10_yellow_pencil.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 2</p><h2 class="bk"><span class="knw">運営者の<wbr>おすすめ：<wbr>地域連携<wbr><span class="kn">プラットフォーム</span></span></h2></div>
   <div class="yasui gk">
 
 <p>ここからは、<wbr/>運営者の<wbr/>考えです。<wbr/>わたしが<wbr/>受けた<wbr/>学校なので、<wbr/>その<wbr/>つもりで<wbr/>読んでください。</p>
@@ -495,8 +497,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb" id="list"><div class="w nar">
-  <p class="eye">くわしく<wbr> 3</p>
-  <h2 class="bk">全22講習の<wbr/>受講料<wbr/>(安い順)</h2>
+  <div class="tobira"><img src="../../img/top/fuan_okane.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 3</p><h2 class="bk">全22講習の<wbr/>受講料<wbr/>(安い順)</h2></div>
   <div class="yasui gk">
 
 <p><span class="knw">国が<wbr/>認めた<wbr/><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>の<wbr/>養成講習は、<wbr/>全国に<wbr/>22あります。<wbr/>厚生労働省の<wbr/>一覧に<wbr/>ある<wbr/>受講料(基本料金)を、<wbr/>安い順に<wbr/>並べました。<wbr/></span><strong><span class="knw">学校名を<wbr/>押すと、<wbr/>公式<span class="kn">サイト</span>が<wbr/>開きます。</span></strong></p>
@@ -539,9 +540,8 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div>
 </div></section>
 
-<section class="sec2 hb" id="why"><div class="w nar">
-  <p class="eye">くわしく<wbr> 4</p>
-  <h2 class="bk">安い講習は、<wbr/>なぜ安い？<wbr/>中身の<wbr/>ちがい</h2>
+<section class="sec2 hb cream ir" id="why"><div class="w nar">
+  <div class="tobira"><img src="../../img/parts/08_blue_backpack.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 4</p><h2 class="bk">安い講習は、<wbr/>なぜ安い？<wbr/>中身の<wbr/>ちがい</h2></div>
   <div class="yasui gk">
 
 <p><span class="knw">公式<span class="kn">サイト</span>に<wbr/>「なぜ<wbr/>安いか」を<wbr/>書いている<wbr/>講習は、<wbr/>ありませんでした。<wbr/>そのかわり、<wbr/>受け方や<wbr/>給付金の<wbr/>あつかいに、ちが<wbr/>いが<wbr/>あります。<wbr/>受講料が<wbr/>30万円以下の<wbr/>講習を、<wbr/>公式<span class="kn">サイト</span>で<wbr/>確かめました。<wbr/>「安さの<wbr/>わけ」は、<wbr/>確かめた<wbr/>事実から<wbr/>運営者が<wbr/>読み取った<wbr/>ものです。</span></p>
@@ -565,8 +565,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb" id="kyufu"><div class="w nar">
-  <p class="eye">くわしく<wbr> 5</p>
-  <h2 class="bk">給付金を<wbr/>使うと、<wbr/>実質いくら？</h2>
+  <div class="tobira"><img src="../../img/parts/29_potted_plant.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 5</p><h2 class="bk">給付金を<wbr/>使うと、<wbr/>実質いくら？</h2></div>
   <div class="yasui gk">
 
 <p>専門実践教育訓練給付金は、<wbr/>修了すると<wbr/>受講料の<wbr/>50%、<wbr/>資格を<wbr/>取って<wbr/>働くと<wbr/>70%、<wbr/>お給料が<wbr/>上がると<wbr/>80%まで<wbr/>受け取れます。<wbr/>受講料が<wbr/>安い<wbr/>講座と、<wbr/>29.7万円の<wbr/>講座で<wbr/>計算すると、<wbr/>こうなります。</p>
@@ -588,8 +587,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb sky" id="check"><div class="w nar">
-  <p class="eye">くわしく<wbr> 6</p>
-  <h2 class="bk">安さだけで<wbr/>決める前に、<wbr/>確かめたい<wbr/>3つ</h2>
+  <div class="tobira"><img src="../../img/parts/09_blue_notebook.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 6</p><h2 class="bk">安さだけで<wbr/>決める前に、<wbr/>確かめたい<wbr/>3つ</h2></div>
   <div class="yasui gk">
 
 <ul class="gk-check" data-gk-check="check-0" data-gk-count="gk-count-check-0"><li><label><input type="checkbox"/><span><strong>給付金の<wbr/>対象か</strong>：対象外だと、<wbr/>受講料が<wbr/>そのまま<wbr/>自分の<wbr/>負担に<wbr/>なります。</span></label></li><li><label><input type="checkbox"/><span><strong>休んだ<wbr/>ときに<wbr/>どうなるか</strong>：振替が<wbr/>できない<wbr/>講習では、<wbr/>欠席が<wbr/>多いと<wbr/>修了できない<wbr/>ことがあります。</span></label></li><li><label><input type="checkbox"/><span><strong>受講料の<wbr/>ほかに<wbr/>かかる<wbr/>お金</strong><span class="knw">：入学金・教材費・試験対策の<wbr/>料金、<wbr/><span class="kn">キャンセル</span>した<wbr/>ときの<wbr/>返金の<wbr/><span class="kn">ルール</span>。</span></span></label></li></ul>
@@ -604,7 +602,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 
 <section class="sec2" id="matome"><div class="w nar"><div class="yasui gk"><span aria-hidden="true" class="a8px"><img alt="" border="0" height="1" loading="lazy" src="https://www10.a8.net/0.gif?a8mat=459JRK+G3ASDU+59PG+60OXE" width="1"/><img alt="" border="0" height="1" loading="lazy" src="https://www17.a8.net/0.gif?a8mat=459JRK+G3AT5M+59PG+BW8O2" width="1"/><img alt="" border="0" height="1" loading="lazy" src="https://www16.a8.net/0.gif?a8mat=4BCMO3+2VLGT6+1G62+BW8O2" width="1"/><img alt="" border="0" height="1" loading="lazy" src="https://www14.a8.net/0.gif?a8mat=45BQMV+6WV8EY+5MF8+5YJRM" width="1"/><img alt="" border="0" height="1" loading="lazy" src="https://www10.a8.net/0.gif?a8mat=4B7XX4+BD0U56+5TT2+5YJRM" width="1"/><img alt="" border="0" height="1" loading="lazy" src="https://www13.a8.net/0.gif?a8mat=4BE7SX+DP0GQ+5UHI+BW8O2" width="1"/></span></div></div></section>
 
-<section class="sec2" id="faq"><div class="w nar"><h2 class="c bk">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span class="ys-qa__text"><span class="knw">いちばん安い<wbr/><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>養成講座は？</span></span></summary><div class="in"><p><span class="knw">受講料だけなら、<wbr/>東京<span class="kn">アカデミー</span>(2027年1月開講の回。<wbr/>先着5名は<wbr/>受講料12万円＋入会金3万円で<wbr/>合計15万円)、<wbr/>労働調査会(19.8万円)、<wbr/><span class="kn">キャンペーン</span>中の<wbr/><span class="kn">キャリコンシーオー</span>(19.8万円。<wbr/>12月開講の<wbr/>回の<wbr/>給付金の<wbr/>手続きは<wbr/>11月20日で<wbr/>締切)です。<wbr/>ただし、<wbr/>給付金が<wbr/>使える<wbr/>人は、<wbr/>給付金の<wbr/>対象の<wbr/>講座の<wbr/>ほうが<wbr/>実質の<wbr/>負担が<wbr/>小さくなる<wbr/>ことがあります<wbr/>(確認日: 2026年10月14日)。</span></p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">養成講座は<wbr/>全部で<wbr/>いくつある？</span></summary><div class="in"><p>厚生労働省の<wbr/>一覧<wbr/>(2026年10月作成)には、<wbr/>22の<wbr/>講習が<wbr/>載っています。<wbr/>受講料(基本料金)は<wbr/>19.8万円から<wbr/>43.78万円です。</p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">給付金を<wbr/>使うと、<wbr/>実質いくらに<wbr/>なる？</span></summary><div class="in"><p>専門実践教育訓練給付金を<wbr/>最大の<wbr/>80%まで<wbr/>受け取れた<wbr/>場合、<wbr/>29.7万円の<wbr/>講座は<wbr/>実質59,400円、<wbr/>19.8万円の<wbr/>講座(給付金の<wbr/>対象の<wbr/>場合)は<wbr/>実質39,600円です。<wbr/>80%には、<wbr/>資格を<wbr/>取って<wbr/>働く<wbr/>ことなどの<wbr/>条件が<wbr/>あります。</p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">給付金が<wbr/>使えない<wbr/>人は、<wbr/>どこが<wbr/>いちばん<wbr/>安いですか？<wbr/></span></summary><div class="in"><p><span class="knw">東京<span class="kn">アカデミー</span>です(2027年1月開講の回。<wbr/>先着5名は、<wbr/>受講料12万円＋入会金3万円で<wbr/>合計15万円)。<wbr/>6人目からは<wbr/>合計20万円なので、<wbr/>その<wbr/>ときは<wbr/>入会金・教材費の<wbr/>かからない<wbr/>労働調査会(19.8万円)の<wbr/>ほうが<wbr/>少し<wbr/>安くなります。<wbr/></span></p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">試験対策も<wbr/>受講料に<wbr/>まとめたい<wbr/>場合は、<wbr/>どこが<wbr/>安いですか？<wbr/></span></summary><div class="in"><p><span class="knw">比較表の<wbr/>6校で、<wbr/>試験対策が<wbr/>受講料に<wbr/>入っているのは<wbr/>LECと<wbr/><span class="kn">リカレント</span>です。<wbr/></span></p></div></details></div></div></section>
+<section class="sec2 cream ir" id="faq"><div class="w nar"><div class="tobira"><img src="../../img/top/kumo_usagi.webp" alt="" loading="lazy" decoding="async"><h2 class="c bk">よくある<wbr/>質問</h2></div><div class="faq"><details><summary><b class="qn">Q</b><span class="ys-qa__text"><span class="knw">いちばん安い<wbr/><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>養成講座は？</span></span></summary><div class="in"><p><span class="knw">受講料だけなら、<wbr/>東京<span class="kn">アカデミー</span>(2027年1月開講の回。<wbr/>先着5名は<wbr/>受講料12万円＋入会金3万円で<wbr/>合計15万円)、<wbr/>労働調査会(19.8万円)、<wbr/><span class="kn">キャンペーン</span>中の<wbr/><span class="kn">キャリコンシーオー</span>(19.8万円。<wbr/>12月開講の<wbr/>回の<wbr/>給付金の<wbr/>手続きは<wbr/>11月20日で<wbr/>締切)です。<wbr/>ただし、<wbr/>給付金が<wbr/>使える<wbr/>人は、<wbr/>給付金の<wbr/>対象の<wbr/>講座の<wbr/>ほうが<wbr/>実質の<wbr/>負担が<wbr/>小さくなる<wbr/>ことがあります<wbr/>(確認日: 2026年10月14日)。</span></p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">養成講座は<wbr/>全部で<wbr/>いくつある？</span></summary><div class="in"><p>厚生労働省の<wbr/>一覧<wbr/>(2026年10月作成)には、<wbr/>22の<wbr/>講習が<wbr/>載っています。<wbr/>受講料(基本料金)は<wbr/>19.8万円から<wbr/>43.78万円です。</p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">給付金を<wbr/>使うと、<wbr/>実質いくらに<wbr/>なる？</span></summary><div class="in"><p>専門実践教育訓練給付金を<wbr/>最大の<wbr/>80%まで<wbr/>受け取れた<wbr/>場合、<wbr/>29.7万円の<wbr/>講座は<wbr/>実質59,400円、<wbr/>19.8万円の<wbr/>講座(給付金の<wbr/>対象の<wbr/>場合)は<wbr/>実質39,600円です。<wbr/>80%には、<wbr/>資格を<wbr/>取って<wbr/>働く<wbr/>ことなどの<wbr/>条件が<wbr/>あります。</p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">給付金が<wbr/>使えない<wbr/>人は、<wbr/>どこが<wbr/>いちばん<wbr/>安いですか？<wbr/></span></summary><div class="in"><p><span class="knw">東京<span class="kn">アカデミー</span>です(2027年1月開講の回。<wbr/>先着5名は、<wbr/>受講料12万円＋入会金3万円で<wbr/>合計15万円)。<wbr/>6人目からは<wbr/>合計20万円なので、<wbr/>その<wbr/>ときは<wbr/>入会金・教材費の<wbr/>かからない<wbr/>労働調査会(19.8万円)の<wbr/>ほうが<wbr/>少し<wbr/>安くなります。<wbr/></span></p></div></details><details><summary><b class="qn">Q</b><span class="ys-qa__text">試験対策も<wbr/>受講料に<wbr/>まとめたい<wbr/>場合は、<wbr/>どこが<wbr/>安いですか？<wbr/></span></summary><div class="in"><p><span class="knw">比較表の<wbr/>6校で、<wbr/>試験対策が<wbr/>受講料に<wbr/>入っているのは<wbr/>LECと<wbr/><span class="kn">リカレント</span>です。<wbr/></span></p></div></details></div></div></section>
 
 <section class="sec2" id="shutten"><div class="w nar"><div class="kakite" id="kakite"><p class="kk-t">この<wbr/>記事を<wbr/>書いた<wbr/>人:ちゃん</p><p class="kk-d"><span class="knw">3児の<wbr/>母。<wbr/>2026年8月に<wbr/><span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>養成講習を<wbr/>修了。<wbr/>自分が<wbr/>費用で<wbr/>迷った<wbr/>ときに<wbr/>知りたかった<wbr/>ことを、<wbr/>一次情報で<wbr/>確認しながら<wbr/>まとめています。</span></p><p class="kk-d"><a href="../../about/"><span class="knw">この<wbr/><span class="kn">サイト</span>に<wbr/>ついて<wbr/></span> <span aria-hidden="true" class="arw">▶︎</span></a></p></div></div></section>
 

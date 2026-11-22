@@ -88,6 +88,8 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
 <style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
+<style id="toc1122">/* 11/22 目次の段は上の緑の続き・目次の箱は白（scripts/ippen_toc_1122.py） */body.kata section.sec2#mokuji{background:#EEF4D6!important;padding-top:8px!important;padding-bottom:40px!important}body.kata section.sec2.mokuji-tsuzuki{display:flow-root;background:#EEF4D6!important;padding-top:0!important;padding-bottom:64px!important}body.kata section.sec2.mokuji-tsuzuki:has(+section.sky)::after{content:none!important}body.kata section.sec2.green#kotae::after{content:none!important}body.kata section.sec2.mokuji-tsuzuki::after{position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;content:""!important;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important;bottom:-39px;top:auto;transform:scaleY(-1)}body.kata #mokuji .toc{background:#fff!important}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:64px!important}@media (max-width:760px){body.kata section.sec2#mokuji{padding-bottom:32px!important}body.kata section.sec2.mokuji-tsuzuki{padding-bottom:44px!important}body.kata section.sec2.mokuji-tsuzuki::after{height:24px;background-size:100% 24px!important;bottom:-23px}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:48px!important}}</style>
+<style id="ir1122">/* 11/22 段の扉＋ベージュと白の交互（scripts/ippen_irodori_1122.py）。11/22 ちゃんのOKで、統一の決まり（11/19）の段の地に「ベージュ（cream）」を足した */body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:104px!important;padding-bottom:104px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;top:-39px;bottom:auto;transform:none;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important}body.kata section.sec2.cream :is(.ft-row>span,.tblw,.tbl,.ofc-g,details.more,.faq details,.card,.box,.zu-box){background:#fff!important}body.kata .tobira{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto 28px}body.kata .tobira>img{width:84px;height:84px;object-fit:contain;margin:0 0 10px}body.kata .tobira .eye{margin:0 0 6px!important;letter-spacing:.12em}body.kata .tobira h2{font-size:26px!important;line-height:1.5!important;text-align:center!important;text-wrap:balance;margin:0!important;padding-left:0!important;background:none!important}body.kata .tobira h2 img,body.kata .tobira h2::before{display:none!important}@media (max-width:760px){body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:68px!important;padding-bottom:68px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{height:24px;background-size:100% 24px!important;top:-23px}body.kata .tobira>img{width:66px;height:66px}body.kata .tobira h2{font-size:22px!important}}</style>
 </head>
 <body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -136,6 +138,8 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
 
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt"><span class="knw">この<wbr><span class="kn">ページ</span>で<wbr>わかる<wbr>こと</span></p><ol><li><a href="#kotae"><span class="tn">1</span><span class="tx">総額33万円。<wbr>半分戻ると<wbr>実質16.5万円</span></a></li><li><a href="#shuuryou"><span class="tn">2</span><span class="tx">修了は、<wbr>10日の<wbr>うち8日以上の<wbr>出席など</span></a></li><li><a href="#okane"><span class="tn">3</span><span class="tx">入学金・教材費は<wbr>0円</span></a></li><li><a href="#hi"><span class="tn">4</span><span class="tx"><span class="knw">通学か<wbr>Zoom。<wbr>土日祝・平日夜・<wbr>半日の<wbr><span class="kn">クラス</span></span></span></a></li><li><a href="#furikae"><span class="tn">5</span><span class="tx">休んだら<wbr>振替。<wbr>回数の<wbr>制限なし・無料</span></a></li><li><a href="#taisaku"><span class="tn">6</span><span class="tx">学科・論述・面接の<wbr>対策Web講座が<wbr>つく</span></a></li><li><a href="#apply-h"><span class="tn">7</span><span class="tx"><span class="knw">説明会では、<wbr>振替の<wbr>期限と<wbr><span class="kn">カメラ</span>を<wbr>聞く</span></span></a></li></ol><p class="tsub"><a href="#nayami">困った<wbr>人の<wbr>声</a>・<a href="#faq">よく<wbr>ある<wbr>質問<wbr>（5問）</a>・<a href="#shutten">出典</a></p></nav>
+</div></section>
+<section class="sec2 mokuji-tsuzuki"><div class="w nar">
   <div class="lead2">
     <p class="who-for"><b><span class="knw">この<wbr><span class="kn">ページ</span>は、<wbr>LEC<wbr>東京<span class="kn">リーガルマインド</span>の<wbr>養成講座が<wbr>気に<wbr>なる<wbr>人が、<wbr>「わたしに<wbr>合う？<wbr> 全部で<wbr>いくら？」を<wbr>確かめる<wbr>ための<wbr><span class="kn">ページ</span>です。</span></b></p>
     <p><span class="knw">運営者は<wbr>この<wbr>講座を<wbr>受講していません。<wbr>公式<span class="kn">サイト</span>と<wbr>明示書で<wbr>確かめた<wbr>情報だけで<wbr>まとめています。</span><br>ほかの<wbr>学校とくらべたい<wbr>ときは、<a class="tl" href="/schools/compare/#tool">30秒で<wbr>合う<wbr>学校を<wbr>しぼる</a></p>
@@ -164,9 +168,8 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
 <p class="vnote"><span class="knw">LECを<wbr>選んだ<wbr>人が、<wbr><span class="kn">スタッフ</span>の<wbr>対応の<wbr>よさを<wbr>決め手に<wbr>挙げています<wbr>（note・2024年）。</span></p><p class="vans"><b>答え</b>説明会で、<wbr>話しやすいかも<wbr>見てね。<a class="tl" href="#apply-h">説明会の<wbr>予約先へ</a></p></article></div></div>
 <div class="vnav"><button class="varr prev" type="button" aria-label="前の声へ">‹</button><p class="vhint"><span class="knw">横に<wbr><span class="kn">スクロール</span>すると、<wbr>ほかの<wbr>声も<wbr>読めます</span></p><button class="varr next" type="button" aria-label="次の声へ">›</button></div></section>
 
-<section class="sec2 hb" id="okane"><div class="w nar">
-  <p class="eye">くわしく<wbr> 1</p>
-  <h2 class="bk">LECの<wbr>費用：入学金・教材費は<wbr>0円</h2>
+<section class="sec2 hb cream ir" id="okane"><div class="w nar">
+  <div class="tobira"><img src="../../img/top/fuan_okane.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 1</p><h2 class="bk">LECの<wbr>費用：入学金・教材費は<wbr>0円</h2></div>
   <p class="lead1">受講料330,000円<wbr>（税込・<wbr>一般価格）に、<b class="mark">入学金も<wbr>教材費も<wbr>入っています</b>。</p>
   <figure class="zu" data-zu="add1118" aria-label="LECの費用。受講料330,000円（税込・一般価格）、入学金0円、教材費0円">
     <div class="fig-t"><div class="ft-row "><span class="ft-b">受講料<small>330,000円<wbr>（税込・<wbr>一般価格）</small></span><span class="ft-a">入学金<small>0円</small></span><span class="ft-a">教材費<small>0円</small></span></div><i class="ft-line"></i></div>
@@ -178,8 +181,7 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
 </div></section>
 
 <section class="sec2 hb" id="hi"><div class="w nar">
-  <p class="eye">くわしく<wbr> 2</p>
-  <h2 class="bk">受け方と<wbr>日程</h2>
+  <div class="tobira"><img src="../../img/top/fuan_tsuzuku.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 2</p><h2 class="bk">受け方と<wbr>日程</h2></div>
   <p class="lead1"><b class="mark"><span class="knw">通学<wbr>（駅前の<wbr>LEC各本校）か、<wbr><span class="kn">オンライン</span><wbr>（Zoom）</span></b>を<wbr>えらべます。</p>
   <p><span class="knw"><span class="kn">クラス</span>は、<wbr>土曜・日曜・祝日・平日夜間・<wbr>半日など。</span><br>9月から<wbr>3月に<wbr>かけて、<wbr>いくつもの<wbr>教室で<wbr>順に<wbr>始まります。</p>
   <p><span class="knw">期間は<wbr>5か月で、<wbr>1<span class="kn">クラス</span>は<wbr>最大20名です。</span></p>
@@ -190,9 +192,8 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
   <p><span class="knw">いまの<wbr>募集<wbr>（開講日・締切）は、<wbr><span class="kn">トップ</span>の<wbr>「いまの<wbr>募集」の<wbr>表で、<wbr>確かめた<wbr>日と<wbr>いっしょに<wbr>見られます。</span><a class="tl" href="/#boshu">いまの<wbr>募集へ</a></p>
 </div></section>
 
-<section class="sec2 hb" id="furikae"><div class="w nar">
-  <p class="eye">くわしく<wbr> 3</p>
-  <h2 class="bk">休んだ<wbr>ときの<wbr>振替</h2>
+<section class="sec2 hb cream ir" id="furikae"><div class="w nar">
+  <div class="tobira"><img src="../../img/top/nayami_furikae.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 3</p><h2 class="bk">休んだ<wbr>ときの<wbr>振替</h2></div>
   <div class="guide-mo solo"><p><span class="who"><span class="knw"><span class="kn">モヤン</span></span></span>休んだら、<wbr>取り戻せるの？</p><img src="../../img/parts/t/moyan_school_hat_smile-200.webp" alt="モヤン"></div>
   <p class="lead1"><b class="mark">振り<wbr>替えられます</b>。<wbr>回数の<wbr>制限は<wbr>なく、<wbr>手続きは<wbr>無料です。</p>
   <figure class="zu" data-zu="add1118" aria-label="振替の流れ。各クラスの初日から予約、空きのあるクラスを自分で予約、振替先の3日前までにZoomのIDが届く">
@@ -208,8 +209,7 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
 
 
 <section class="sec2 hb" id="taisaku"><div class="w nar">
-  <p class="eye">くわしく<wbr> 4</p>
-  <h2 class="bk">試験対策の<wbr>講座が<wbr>つく</h2>
+  <div class="tobira"><img src="../../img/top/fuan_shiken.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 4</p><h2 class="bk">試験対策の<wbr>講座が<wbr>つく</h2></div>
   <p class="lead1">学科・論述・面接の<b class="mark"><span class="knw">対策Web講座3点<span class="kn">セット</span></span></b>が、<wbr>受講者に<wbr>もらえます。</p>
   <figure class="zu" data-zu="add1118" aria-label="養成講座のスクーリングでロープレ、終えたら対策Web講座3点セット（学科・論述・面接）で試験の準備へ">
     <div class="zu-box"><div class="zu-time"><div class="zu-node"><span class="zu-dot">1</span><b>養成講座</b><small><span class="knw"><span class="kn">ロープレ</span>は<wbr><span class="kn">スクーリング</span>の<wbr>中で</span></small></div><div class="zu-span"></div><div class="zu-node zu-key"><span class="zu-dot">2</span><b><span class="knw">対策Web講座<wbr>3点<span class="kn">セット</span></span></b><small>学科・論述・面接</small></div><div class="zu-span"></div><div class="zu-node"><span class="zu-dot">3</span><b>試験</b></div></div></div>
@@ -219,9 +219,8 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
   <p>資格を<wbr>取った<wbr>人には、<wbr>自治体から<wbr>受けている<wbr>事業の<wbr>仕事を<wbr>紹介しています<wbr>（明示書）。</p>
 </div></section>
 
-<section class="sec2 hb" id="apply-h"><div class="w nar">
-  <p class="eye">くわしく<wbr> 5</p>
-  <h2 class="bk">LECの<wbr>説明会の<wbr>予約先</h2>
+<section class="sec2 hb green ir" id="apply-h"><div class="w nar">
+  <div class="tobira"><img src="../../img/top/sora_niji.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 5</p><h2 class="bk">LECの<wbr>説明会の<wbr>予約先</h2></div>
   <p class="lead1">説明会で<wbr>聞いておきたいのは、<b class="mark"><span class="knw">振替の<wbr>申請の<wbr>期限と、<wbr><span class="kn">カメラ</span>の<wbr>きまり</span></b>です。</p>
   <p class="prnote"><span class="pr" style="margin:0 4px 0 0">PR</span><span class="knw">広告<span class="kn">リンク</span>です<wbr>（紹介料を<wbr>いただいています）。<wbr>運営者は<wbr>この<wbr>講座を<wbr>受講していません。</span></p>
   <p class="ctaw"><a class="cta" data-ev="school_cta_lec" href="https://px.a8.net/svt/ejp?a8mat=4BCMO3+2VLGT6+1G62+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fwww.lec-jp.com%2Fcaricon%2Fevent%2Fguidance%2F" rel="sponsored noopener noreferrer" target="_blank">LECの<wbr>説明会の<wbr>予約先</a><img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BCMO3+2VLGT6+1G62+BW8O2" alt="" style="position:absolute" loading="lazy" decoding="async"></p>
@@ -229,7 +228,7 @@ body.kata :is(.x-uhero,.tlh,.zhead) + *{margin-top:-1px!important}
 
 <section class="sec2" id="faq"><div class="w nar">
   <p class="eye c">よく<wbr>ある<wbr>質問</p>
-  <h2 class="c bk">LECの<wbr>養成講座の<wbr>よく<wbr>ある<wbr>質問</h2>
+  <div class="tobira"><img src="../../img/top/kumo_usagi.webp" alt="" loading="lazy" decoding="async"><h2 class="c bk">LECの<wbr>養成講座の<wbr>よく<wbr>ある<wbr>質問</h2></div>
   <div class="faq"><details><summary><b class="qn">Q1.</b>LECの<wbr>養成講座は、<wbr>いくらですか？</summary><div class="in">受講料は<wbr>330,000円<wbr>（税込・<wbr>一般価格）で、<wbr>入学金と<wbr>教材費は<wbr>0円です。</div></details><details><summary><b class="qn">Q2.</b>給付金は<wbr>使えますか？</summary><div class="in"><span class="knw">教育訓練給付制度の<wbr>対象で、<wbr>雇用保険加入者は<wbr>最大80%との<wbr>記載が<wbr>あります。<wbr>給付区分の<wbr>くわしい<wbr>内容は、<wbr>公式<span class="kn">サイト</span>で<wbr>確かめてください。</span></div></details><details><summary><b class="qn">Q3.</b>試験対策は<wbr>ついていますか？</summary><div class="in"><span class="knw">学科・論述・面接の<wbr>対策Web講座の<wbr>3点<span class="kn">セット</span>が、<wbr>受講者に<wbr>もらえます。</span></div></details><details><summary><b class="qn">Q4.</b>修了の<wbr>条件は<wbr>何ですか？</summary><div class="in"><span class="knw"><span class="kn">スクーリング</span>10日間の<wbr>うち8日以上の<wbr>出席、<wbr>添削課題3回の<wbr>正解率60%以上、<wbr>知識確認<span class="kn">テスト</span>の<wbr>正解率</span><span style="white-space:nowrap">70%以上</span>です。</div></details><details><summary><b class="qn">Q5.</b>休んだ<wbr>ときは、<wbr>振替できますか？</summary><div class="in"><span class="knw">振り<wbr>替えられます。<wbr>回数の<wbr>制限は<wbr>なく、<wbr>手続きは<wbr>無料です。<wbr>半日単位で<wbr>振り替えられ、<wbr>通学と<wbr>Zoomの<wbr>行き来も<wbr>できます。<wbr>定員を<wbr>超える<wbr><span class="kn">クラス</span>と、<wbr>Zoomの<wbr>1日目には<wbr>振り替えられません。<wbr>申請の<wbr>期限は、<wbr>説明会で<wbr>確かめてください。</span></div></details></div>
 </div></section>
 

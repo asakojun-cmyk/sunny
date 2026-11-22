@@ -141,6 +141,8 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </style><script>(function(){if(!matchMedia('(max-width:700px)').matches)return;function f(){var q=document.querySelectorAll('p,li,dd,blockquote,figcaption');for(var i=0;i<q.length;i++){var e=q[i],a=getComputedStyle(e).textAlign;if((a==='start'||a==='left')&&e.textContent.replace(/\s/g,'').length>20&&e.clientWidth>250&&parseFloat(getComputedStyle(e).fontSize)<17.5&&!e.closest('nav,header,footer,.crumb,table,.kgp'))e.classList.add('sp-j')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f()})();</script><style>
 </style><!--sp1121-end-->
 <style id="brk1122">/* 11/22 スマホの改行：<wbr>（scripts/ippen_brk_1122.py が文節に入れた）と句読点でだけ折る。長い英数字は枠の中で折る */:is(h1,h2,h3,h4,p,li,a,dt,dd,th,td,span,small,figcaption,summary,button,strong,b,label):has(wbr){word-break:keep-all;overflow-wrap:anywhere}@media (max-width:700px){.sp-j :is(a,span,small,strong,b,label){word-break:normal!important;overflow-wrap:normal!important}}:is(.kn,.knw):not(#brk){all:unset!important}span.kn:not(#brk){white-space:nowrap!important}.sp-j span.kn:not(#brk){white-space:normal!important}</style>
+<style id="toc1122">/* 11/22 目次の段は上の緑の続き・目次の箱は白（scripts/ippen_toc_1122.py） */body.kata section.sec2#mokuji{background:#EEF4D6!important;padding-top:8px!important;padding-bottom:40px!important}body.kata section.sec2.mokuji-tsuzuki{display:flow-root;background:#EEF4D6!important;padding-top:0!important;padding-bottom:64px!important}body.kata section.sec2.mokuji-tsuzuki:has(+section.sky)::after{content:none!important}body.kata section.sec2.green#kotae::after{content:none!important}body.kata section.sec2.mokuji-tsuzuki::after{position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;content:""!important;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important;bottom:-39px;top:auto;transform:scaleY(-1)}body.kata #mokuji .toc{background:#fff!important}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:64px!important}@media (max-width:760px){body.kata section.sec2#mokuji{padding-bottom:32px!important}body.kata section.sec2.mokuji-tsuzuki{padding-bottom:44px!important}body.kata section.sec2.mokuji-tsuzuki::after{height:24px;background-size:100% 24px!important;bottom:-23px}body.kata section.sec2.mokuji-tsuzuki+section.sec2:not(.sky){padding-top:48px!important}}</style>
+<style id="ir1122">/* 11/22 段の扉＋ベージュと白の交互（scripts/ippen_irodori_1122.py）。11/22 ちゃんのOKで、統一の決まり（11/19）の段の地に「ベージュ（cream）」を足した */body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:104px!important;padding-bottom:104px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{content:""!important;position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none;top:-39px;bottom:auto;transform:none;background:no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 24 Q100 6 200 24 T400 24 T600 24 T800 24 T1000 24 T1200 24 V40 H0 Z' fill='%23ECF0D8'/%3E%3C/svg%3E")!important;background-size:100% 40px!important}body.kata section.sec2.cream :is(.ft-row>span,.tblw,.tbl,.ofc-g,details.more,.faq details,.card,.box,.zu-box){background:#fff!important}body.kata .tobira{display:flex;flex-direction:column;align-items:center;text-align:center;margin:0 auto 28px}body.kata .tobira>img{width:84px;height:84px;object-fit:contain;margin:0 0 10px}body.kata .tobira .eye{margin:0 0 6px!important;letter-spacing:.12em}body.kata .tobira h2{font-size:26px!important;line-height:1.5!important;text-align:center!important;text-wrap:balance;margin:0!important;padding-left:0!important;background:none!important}body.kata .tobira h2 img,body.kata .tobira h2::before{display:none!important}@media (max-width:760px){body.kata section.sec2.ir.cream,body.kata section.sec2.ir.green{padding-top:68px!important;padding-bottom:68px!important}body.kata section.sec2:not(.sky):not(.cream):not(.green)+section.sec2.ir.green::before{height:24px;background-size:100% 24px!important;top:-23px}body.kata .tobira>img{width:66px;height:66px}body.kata .tobira h2{font-size:22px!important}}</style>
 </head>
 <body class="kata" data-yomi>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -198,6 +200,8 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 
 <section class="sec2" id="mokuji"><div class="w nar">
   <nav class="toc toc3" aria-label="このページの目次"><p class="tt"><span class="knw">この<wbr><span class="kn">ページ</span>で<wbr>わかる<wbr>こと</span></p><ol><li><a href="#sec-0"><span class="tn">1</span><span class="tx">じつは<wbr>3段階の<wbr>合計。<wbr>修了しただけなら<wbr>50%です</span></a></li><li><a href="#sec-1"><span class="tn">2</span><span class="tx"><span class="knw">14.85万円・8.91万円・5.94万円の<wbr>3<span class="kn">パターン</span>で<wbr>計算しました</span></span></a></li><li><a href="#sec-2"><span class="tn">3</span><span class="tx"><span class="knw">3つ選ぶだけで、<wbr>目安が<wbr>わかる<wbr><span class="kn">チェック</span>つき</span></span></a></li><li><a href="#sec-3"><span class="tn">4</span><span class="tx">受講開始の<wbr>2週間前までに、<wbr>やることが<wbr>3つあります</span></a></li><li><a href="#sec-4"><span class="tn">5</span><span class="tx">あとで<wbr>「もらえなかった…」と<wbr>ならない<wbr>ための<wbr>4つ</span></a></li></ol><p class="tsub"><a href="#faq">よく<wbr>ある<wbr>質問</a></p></nav>
+</div></section>
+<section class="sec2 mokuji-tsuzuki"><div class="w nar">
   <div class="lead2"><p>養成講習を選ぶとき、費用も気になりますよね。<wbr/>給付金を<wbr/>使うと<wbr/>実質いくらに<wbr/>なるのか、<wbr/>条件に<wbr/>当ては<wbr/>まらないと<wbr/>どうなるのかを、<wbr/>厚生労働省の<wbr/>情報を<wbr/>もとに<wbr/>まとめました。</p><p class="date">更新日: 2026年10月18日 情報を<wbr>確認した<wbr>日: 2026年9月24日〜10月18日<small>(項目ごとの<wbr>日付は、<wbr>各出典の<wbr>横)</small></p><div class="gk"><details aria-label="広告・提供関係の開示" class="disclosure">
 <summary class="disclosure__title bk"><span class="disclosure__tag">広告</span><span class="knw">この<wbr><span class="kn">ページ</span>に<wbr>広告(紹介<span class="kn">リンク</span>)は<wbr>ありません</span><span class="disclosure__more">くわしく</span></summary>
 <dl class="disclosure__list">
@@ -207,8 +211,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb" id="sec-0"><div class="w nar">
-  <p class="eye">くわしく<wbr> 1</p>
-  <h2 class="bk">給付金の<wbr>「最大80%」は、<wbr>3段階の合計</h2>
+  <div class="tobira"><img src="../../img/top/fuan_okane.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 1</p><h2 class="bk">給付金の<wbr>「最大80%」は、<wbr>3段階の合計</h2></div>
   <div class="gk">
 
 <div class="pair">
@@ -244,8 +247,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb sky" id="sec-1"><div class="w nar">
-  <p class="eye">くわしく<wbr> 2</p>
-  <h2 class="bk">297,000円の<wbr/>講座で<wbr/>計算すると、<wbr/>実質いくらか</h2>
+  <div class="tobira"><img src="../../img/parts/04_book_wagon.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 2</p><h2 class="bk">297,000円の<wbr/>講座で<wbr/>計算すると、<wbr/>実質いくらか</h2></div>
   <div class="gk">
 
 <p><span class="knw">受講料297,000円(税込)の<wbr/>講座で<wbr/>計算してみます。<wbr/>どの<wbr/><span class="kn">ケース</span>も、<wbr/>年間の<wbr/>上限額の<wbr/>範囲に<wbr/>収まります。</span></p>
@@ -281,8 +283,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb" id="sec-2"><div class="w nar">
-  <p class="eye">くわしく<wbr> 3</p>
-  <h2 class="bk">給付金の<wbr/>対象になるのは、<wbr/>どんな人か</h2>
+  <div class="tobira"><img src="../../img/top/sora_niji.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 3</p><h2 class="bk">給付金の<wbr/>対象になるのは、<wbr/>どんな人か</h2></div>
   <div class="gk">
 
 <p>ここが<wbr/>いちばん<wbr/>見落としやすい<wbr/>ところです。<wbr/>給付金を<wbr/>受け取るには、<strong>雇用保険に<wbr/>入っていた<wbr/>期間</strong>が<wbr/>必要です。</p>
@@ -315,8 +316,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb" id="sec-3"><div class="w nar">
-  <p class="eye">くわしく<wbr> 4</p>
-  <h2 class="bk">給付金は、<wbr>受講開始の<wbr>2週間前までに<wbr>手続きが必要</h2>
+  <div class="tobira"><img src="../../img/parts/10_yellow_pencil.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 4</p><h2 class="bk">給付金は、<wbr>受講開始の<wbr>2週間前までに<wbr>手続きが必要</h2></div>
   <div class="gk">
 
 <p>この<wbr/>給付金は、<wbr/>講座に<wbr/>申し込めば<wbr/>自動で<wbr/>もらえる<wbr/>ものではありません。<strong>受講を<wbr/>始める<wbr/>前</strong>に、<wbr/>自分で<wbr/>手続きを<wbr/>する<wbr/>必要が<wbr/>あります。</p>
@@ -348,8 +348,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 </div></section>
 
 <section class="sec2 hb sky" id="sec-4"><div class="w nar">
-  <p class="eye">くわしく<wbr> 5</p>
-  <h2 class="bk">申し込む前に<wbr>確認したい<wbr>こと</h2>
+  <div class="tobira"><img src="../../img/parts/09_blue_notebook.webp" alt="" loading="lazy" decoding="async"><p class="eye">くわしく<wbr> 5</p><h2 class="bk">申し込む前に<wbr>確認したい<wbr>こと</h2></div>
   <div class="gk">
 
 <ul class="gk-check" data-gk-check="sec-4-0" data-gk-count="gk-count-sec-4-0"><li><label><input type="checkbox"/><span>その<wbr/>講座は<wbr/><strong>専門実践</strong><wbr/>教育訓練の<wbr/>指定講座か<wbr/>(一般教育訓練だと<wbr/>給付率が<wbr/>下がります)。<wbr/>厚生労働大臣指定番号が<wbr/>あるかを<wbr/>確認</span></label></li><li><label><input type="checkbox"/><span><span class="knw">自分の<wbr/>雇用保険の<wbr/>加入期間が<wbr/>要件を<wbr/>満たすか<wbr/>(<span class="kn">ハローワーク</span>で<wbr/>確認できます)</span></span></label></li><li><label><input type="checkbox"/><span>給付の<wbr/>対象に<wbr/>なる<wbr/>費用の<wbr/>範囲(入学金・教材費が<wbr/>含まれるか、<wbr/>試験対策講座は<wbr/>別料金か)</span></label></li><li><label><input type="checkbox"/><span>受講開始日から<wbr/>逆算して、<wbr/>2週間前までの<wbr/>手続きが<wbr/>間に<wbr/>合うか</span></label></li></ul>
@@ -369,7 +368,7 @@ body.kata .gk .honest-link,body.kata .gk .setsumei-box{padding:20px 18px!importa
 <p><a class="txt-link" href="../../schools/chiiki-renkei-platform/#kai">運営者が<wbr/>出た<wbr/>説明会の<wbr/>話を<wbr/>読む</a></p>
 </aside></div></div></section>
 
-<section class="sec2" id="faq"><div class="w nar"><h2 class="c bk">よくある<wbr/>質問</h2><div class="faq"><details><summary><b class="qn">Q</b><span>給付金は、<wbr/>だれでも<wbr/>もらえますか？<wbr/></span></summary><div class="in"><p>いいえ。<wbr/>雇用保険に<wbr/>入っていた<wbr/>期間が<wbr/>必要です。<wbr/>在職中の<wbr/>方は、<wbr/>受講開始日に<wbr/>支給要件期間が<wbr/>3年以上<wbr/>(初めて<wbr/>利用する<wbr/>場合は<wbr/>2年以上)。<wbr/>離職した<wbr/>方は、<wbr/>離職から<wbr/>受講開始まで<wbr/>1年以内で、<wbr/>同じ<wbr/>期間が<wbr/>必要です。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>専業主婦(主夫)でも、<wbr/>給付金は<wbr/>もらえますか？<wbr/></span></summary><div class="in"><p>雇用保険に<wbr/>入っていた<wbr/>期間が<wbr/>ない<wbr/>場合は、<wbr/>対象に<wbr/>なりません。<wbr/>その<wbr/>場合、<wbr/>費用は<wbr/>全額<wbr/>自分で<wbr/>払うことになります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>給付金は、<wbr/>いつもらえますか？<wbr/></span></summary><div class="in"><p>後<wbr/>払いです。<wbr/>受講を<wbr/>始めてから<wbr/>6か<wbr/>月ごとに<wbr/>申請します。<wbr/>受講料は、<wbr/>いったん全額を<wbr/>自分で<wbr/>払います。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>講座に<wbr/>申し込んだ<wbr/>あと<wbr/>でも、<wbr/>手続きは<wbr/>間に<wbr/>合いますか？<wbr/></span></summary><div class="in"><p><span class="knw"><span class="kn">ハローワーク</span>での<wbr/>受給資格確認の<wbr/>手続きが<wbr/>必要です。<wbr/>手続きの<wbr/>締め切りは、<wbr/>受講開始の<wbr/>2週間前までです。<wbr/>期限を<wbr/>過ぎると、<wbr/>同じ<wbr/>講座を<wbr/>受けても<wbr/>給付金は<wbr/>もらえません。<wbr/>余裕を<wbr/>もって、<wbr/>1か月前には<wbr/><span class="kn">ハローワーク</span>に<wbr/>相談しておくと<wbr/>安心です。<wbr/></span></p></div></details><details><summary><b class="qn">Q</b><span>「最大80%」は、<wbr/>修了すれば<wbr/>もらえますか？<wbr/></span></summary><div class="in"><p>修了して<wbr/>もらえるのは<wbr/>50%です。<wbr/>修了後<wbr/>1年以内に<wbr/>資格を<wbr/>取って<wbr/>就職すると<wbr/>70%、<wbr/>さらに<wbr/>賃金が<wbr/>受講開始前より<wbr/>5%以上<wbr/>上がると<wbr/>80%に<wbr/>なります。<wbr/></p></div></details></div></div></section>
+<section class="sec2 cream ir" id="faq"><div class="w nar"><div class="tobira"><img src="../../img/top/kumo_usagi.webp" alt="" loading="lazy" decoding="async"><h2 class="c bk">よくある<wbr/>質問</h2></div><div class="faq"><details><summary><b class="qn">Q</b><span>給付金は、<wbr/>だれでも<wbr/>もらえますか？<wbr/></span></summary><div class="in"><p>いいえ。<wbr/>雇用保険に<wbr/>入っていた<wbr/>期間が<wbr/>必要です。<wbr/>在職中の<wbr/>方は、<wbr/>受講開始日に<wbr/>支給要件期間が<wbr/>3年以上<wbr/>(初めて<wbr/>利用する<wbr/>場合は<wbr/>2年以上)。<wbr/>離職した<wbr/>方は、<wbr/>離職から<wbr/>受講開始まで<wbr/>1年以内で、<wbr/>同じ<wbr/>期間が<wbr/>必要です。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>専業主婦(主夫)でも、<wbr/>給付金は<wbr/>もらえますか？<wbr/></span></summary><div class="in"><p>雇用保険に<wbr/>入っていた<wbr/>期間が<wbr/>ない<wbr/>場合は、<wbr/>対象に<wbr/>なりません。<wbr/>その<wbr/>場合、<wbr/>費用は<wbr/>全額<wbr/>自分で<wbr/>払うことになります。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>給付金は、<wbr/>いつもらえますか？<wbr/></span></summary><div class="in"><p>後<wbr/>払いです。<wbr/>受講を<wbr/>始めてから<wbr/>6か<wbr/>月ごとに<wbr/>申請します。<wbr/>受講料は、<wbr/>いったん全額を<wbr/>自分で<wbr/>払います。<wbr/></p></div></details><details><summary><b class="qn">Q</b><span>講座に<wbr/>申し込んだ<wbr/>あと<wbr/>でも、<wbr/>手続きは<wbr/>間に<wbr/>合いますか？<wbr/></span></summary><div class="in"><p><span class="knw"><span class="kn">ハローワーク</span>での<wbr/>受給資格確認の<wbr/>手続きが<wbr/>必要です。<wbr/>手続きの<wbr/>締め切りは、<wbr/>受講開始の<wbr/>2週間前までです。<wbr/>期限を<wbr/>過ぎると、<wbr/>同じ<wbr/>講座を<wbr/>受けても<wbr/>給付金は<wbr/>もらえません。<wbr/>余裕を<wbr/>もって、<wbr/>1か月前には<wbr/><span class="kn">ハローワーク</span>に<wbr/>相談しておくと<wbr/>安心です。<wbr/></span></p></div></details><details><summary><b class="qn">Q</b><span>「最大80%」は、<wbr/>修了すれば<wbr/>もらえますか？<wbr/></span></summary><div class="in"><p>修了して<wbr/>もらえるのは<wbr/>50%です。<wbr/>修了後<wbr/>1年以内に<wbr/>資格を<wbr/>取って<wbr/>就職すると<wbr/>70%、<wbr/>さらに<wbr/>賃金が<wbr/>受講開始前より<wbr/>5%以上<wbr/>上がると<wbr/>80%に<wbr/>なります。<wbr/></p></div></details></div></div></section>
 
 <section class="sec2" id="shutten"><div class="w nar"><div class="kakite" id="kakite"><p class="kk-t">この<wbr/>記事を<wbr/>書いた<wbr/>人:ちゃん</p><p class="kk-d"><span class="knw">3児の<wbr/>母。<wbr/>国家資格<span class="kn">キャリア</span><wbr><span class="kn">コンサルタント</span>養成講座を<wbr/>修了。<wbr/>自分が<wbr/>費用で<wbr/>迷った<wbr/>ときに<wbr/>知りたかった<wbr/>ことを、<wbr/>一次情報で<wbr/>確認しながら<wbr/>まとめています。</span></p><p class="kk-d"><a href="../../about/"><span class="knw">この<wbr/><span class="kn">サイト</span>に<wbr/>ついて<wbr/></span> <span aria-hidden="true" class="arw">▶︎</span></a></p></div></div></section>
 
