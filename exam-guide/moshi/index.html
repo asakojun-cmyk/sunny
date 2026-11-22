@@ -510,13 +510,15 @@ function anketo(){
   const qs=AQ.map(q=>{const v=aGet(q[0]);return `<div class="aq"><p>${q[1]}</p><div class="ab">${q[2].map(o=>`<button type="button" data-aq="${q[0]}" data-av="${o[0]}"${v?" disabled":""} aria-pressed="${v===o[0]}">${o[1]}</button>`).join("")}</div></div>`}).join("");
   const more=cur<SETS.length-1?`<button type="button" class="primary" data-set="${cur+1}">第${cur+2}回へすすむ</button>`:"";
   return `<section class="anketo" id="anketo" aria-label="アンケート"><h3>モヤンからのお願い</h3>${say(IMG_M,"モヤン",done?"ありがとう！ みんなの声をもとに、もっといい問題にしていくね。":"さいごまで解いてくれて、ありがとう！ みんなの声が知りたくて、全10回を無料にしたんだ。ボタンを押すだけだから、教えてくれるとうれしいな。")}${qs}<p class="hint">名前などは記録しません。押した答えだけを、集計に使います。</p></section>
-<section class="next" aria-label="つづきの案内"><h3>もっと解きたい方へ</h3><p>模擬試験は全10回(500問)。分野ごとに1問ずつ解説を見ながら進める「分野別演習」(160問)も、無料で解けます。</p><p class="rev">${more}<a href="/exam-guide/bunya/">分野別演習(160問)を解く</a><a href="/games/quiz/">1問1答ドリルで、苦手をうめる</a><a href="/exam-guide/last-30days/">試験まで30日の逆算プラン</a></p></section>${nakama()}`;
+<section class="next" aria-label="つづきの案内"><h3>もっと解きたい方へ</h3><p>模擬試験は全10回(500問)。分野ごとに1問ずつ解説を見ながら進める「分野別演習」(160問)も、無料で解けます。</p><p class="rev">${more}<a href="/exam-guide/bunya/">分野別演習(160問)を解く</a><a href="/games/quiz/">1問1答ドリルで、苦手をうめる</a><a href="/exam-guide/last-30days/">試験まで30日の逆算プラン</a></p></section>
+<section class="next" aria-label="論述と面接の練習"><h3>論述と面接の練習も、はじめておこう</h3><p>実技試験は、論述と面接の2つです。論述は、本番と同じ50分で書ける模擬試験を無料で解けます。面接は、練習相手がいない人のための練習会を準備しています(1人5,000円・オンライン・募集は2027年1月からの予定)。</p><p class="rev"><a href="/exam-guide/ronjutsu-moshi/" data-renshu="ronjutsu">論述の模擬試験(全16回)を解く</a><a href="/exam-guide/mensetsu-renshuukai/" data-renshu="mensetsu">面接練習会の案内を見る</a></p></section>${nakama()}`;
 }
 const NAKAMA_FORM="https://docs.google.com/forms/d/e/1FAIpQLSeKyW7GeirOe7QfJtbIKSCVneK-4PTGskgJqDq4mdwph8NuJA/viewform?usp=pp_url&entry.625638691="+encodeURIComponent("【合格後の仲間の場所】準備ができたら、お知らせがほしいです。");
 function nakama(){
   return `<section class="nakama" aria-label="合格したあとの仲間の場所"><h3>合格したあと、どうする？</h3><div class="fb">${say(IMG_M,"モヤン","ねえサニー先生。合格したら、そのあとってどうしたらいいのかな？ 資格を取っても、どう活かせばいいのか、まだわからなくて……。")}${say(IMG_S,"サニー先生","そう感じる人、じつはとても多いんだよ。合格はゴールじゃなくて、スタート。ひとりで考えていると、迷ってしまうよね。")}${say(IMG_M,"モヤン","ボクも、いっしょに考えてくれる仲間がいたら心強いなあ。")}${say(IMG_S,"サニー先生","だからキャリコン学びピクニックでは、<b>合格した人どうしで、次の一歩をいっしょに考える場所</b>を準備しているよ。次の試験にもう一度チャレンジする人も、もちろん大歓迎。")}${say(IMG_M,"モヤン","準備ができたら、お知らせしてもらえるんだって！")}</div><p class="go"><a href="${NAKAMA_FORM}" target="_blank" rel="noopener" data-nakama>お知らせを受け取る ▶︎</a></p><p class="hint">お問い合わせフォームが開きます。<br>お名前とメールアドレスを入れて、送ってね。</p></section>`;
 }
 document.addEventListener("click",e=>{if(e.target.closest("a[data-nakama]"))track("nakama_click"+sfx())});
+document.addEventListener("click",e=>{const r=e.target.closest("a[data-renshu]");if(r)track("renshu_"+r.dataset.renshu+"_click"+sfx())});
 document.addEventListener("click",e=>{
   const nx=e.target.closest(".next button[data-set]"); if(nx){const t=document.querySelector('#sets button[data-set="'+nx.dataset.set+'"]'); if(t){t.click(); window.scrollTo(0,0)} return}
   const b=e.target.closest("button[data-aq]");if(!b||b.disabled)return;
