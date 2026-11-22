@@ -3,13 +3,16 @@
   "use strict";
   var dayEl = document.querySelector("[data-exam-days]");
   if (dayEl) {
-    var exam = new Date(2026, 10, 1); // 2026年11月1日(第33回)
+    var wrap = document.querySelector("[data-exam-countdown]");
+    // ページ側に data-exam-date="2027-03-07" data-exam-kai="34" があればその回を数える。なければ第33回(2026年11月1日)
+    var ymd = ((wrap && wrap.getAttribute("data-exam-date")) || "2026-11-01").split("-");
+    var kai = (wrap && wrap.getAttribute("data-exam-kai")) || "33";
+    var exam = new Date(+ymd[0], +ymd[1] - 1, +ymd[2]);
     var now = new Date();
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     var days = Math.round((exam - today) / 86400000);
-    var wrap = document.querySelector("[data-exam-countdown]");
     if (days > 0) dayEl.textContent = String(days);
-    else if (wrap) wrap.textContent = days === 0 ? "きょうが試験日。いってらっしゃい！" : "第33回の試験は終わりました。おつかれさまでした。";
+    else if (wrap) wrap.textContent = days === 0 ? "きょうが試験日。いってらっしゃい！" : "第" + kai + "回の試験は終わりました。おつかれさまでした。";
   }
   var KEY = "carepicnic-plan30-v1";
   var boxes = [].slice.call(document.querySelectorAll("[data-plan-check]"));
