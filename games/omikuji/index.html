@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ぴったりな理論家おみくじ（下書き）|キャリコン学びピクニック</title>
+<meta name="description" content="66人のキャリア理論家のだれかが出てくる、おみくじ。運勢と短歌といっしょに、その理論をひとことで読めます。">
+<link rel="icon" type="image/png" href="../../img/favicon.png">
+<link rel="apple-touch-icon" href="../../img/sunny-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/cb-09b94fd878.css" data-src="kyoutsu.css?v=2026.1120">
+<link rel="stylesheet" href="../../css/omikuji.css?v=2026.1122">
+<!-- 答え・結果はこの画面の中だけで使い、どこにも保存・送信しない（アクセス解析も読まない） -->
+</head>
+<body class="omk-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+
+<header class="hd"><div class="w"><a class="logo" href="/"><img src="../../img/kata/sunny.webp" alt="">キャリコン学びピクニック</a><nav class="nav" aria-label="メニュー"><a href="/careers/">キャリコンとは</a><a href="/schools/">講座をえらぶ</a><a href="/school-guides/kyufukin/">費用と給付金</a><a href="/exam/">試験対策</a><a href="/shikaku-guide/#touroku">受かったあと</a></nav></div></header>
+<nav class="way" aria-label="キャリコンへの道（6つの段）"><div class="w"><p class="wl">キャリコンへの道<br>6つの段</p><ol><li><a href="/careers/"><i>1</i>知る</a></li><li><a href="/schools/compare/"><i>2</i>学校選び</a></li><li><a href="/exam/"><i>3</i>試験対策</a></li><li><a href="/shikaku-guide/#touroku"><i>4</i>登録</a></li><li><a><i>5</i>はじめの<wbr>一歩</a></li><li><a href="/school-guides/zaitaku-fukugyo/"><i>6</i>稼ぐ</a></li></ol></div></nav>
+<main id="main" class="omk">
+<div class="kc"><p class="crumb"><a href="/">ホーム</a> › <a href="/games/">ミニゲーム</a> › 理論家おみくじ</p></div>
+
+<!-- ① 最初の画面：筒のうしろから、先生が3人のぞく（案C・11/22 ちゃん決定） -->
+<section class="omk-scene" id="omk-start" data-scene="start">
+  <div class="omk-sky" aria-hidden="true"><img class="cl l" src="../../img/parts/01_sky_cloud_left.webp" alt=""><img class="garland" src="../../img/top/sora_garland.webp" alt=""><img class="cl r" src="../../img/parts/03_sky_cloud_right.webp" alt=""></div>
+  <div class="omk-field">
+    <div class="omk-peek" aria-hidden="true">
+      <img class="p3 omk-face" src="../../img/nigaoe/rogers.webp" alt="">
+      <img class="p1 omk-face" src="../../img/nigaoe/maslow.webp" alt="">
+      <img class="p2 omk-face" src="../../img/nigaoe/schlossberg.webp" alt="">
+      <button type="button" class="omk-tube" id="omk-tube" aria-label="おみくじの筒（押すと、ひけます）"></button>
+    </div>
+    <div class="omk-ttl"><h1>ぴったりな理論家おみくじ</h1><p>筒の中には、66人の理論家。<br>だれが出てくるかは、ひいてからのお楽しみ</p></div>
+    <button type="button" class="omk-btn" id="omk-go">おみくじをひく</button>
+  </div>
+  <!-- 一覧（形1）：ひく前に、筒の中の66人を横に送って見る -->
+  <div class="omk-list"><div class="omk-list__in">
+    <h2>筒の中の66人</h2>
+    <p class="lead">この中のだれか1人が、出てきます</p>
+    <div class="omk-strip" id="omk-strip"></div>
+    <p class="hint">← 指で横に送れます　押すと、その先生のページへ →</p>
+    <ul class="omk-legend"></ul>
+  </div></div>
+</section>
+
+<!-- ② 引く：筒がゆれる → さかさになる → 棒の先に先生 → 第◯番 -->
+<section class="omk-scene" id="omk-draw" data-scene="draw" hidden>
+  <div class="omk-sky" aria-hidden="true"><img class="cl l" src="../../img/parts/01_sky_cloud_left.webp" alt=""><img class="garland" src="../../img/top/sora_garland.webp" alt=""><img class="cl r" src="../../img/parts/03_sky_cloud_right.webp" alt=""></div>
+  <div class="omk-field">
+    <div class="omk-peek omk-peek--draw" aria-hidden="true">
+      <div class="omk-stick"><span class="omk-stick__face" id="omk-stick-face"></span><span class="omk-stick__bar"></span></div>
+      <span class="omk-tube omk-tube--draw"></span>
+    </div>
+    <div class="omk-after-draw">
+      <p class="omk-num" tabindex="-1" id="omk-num"><small>棒の先に、先生が出てきました</small><b id="omk-num-b"></b></p>
+      <button type="button" class="omk-btn" id="omk-open">紙をひらく</button>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 紙 -->
+<section class="omk-scene" id="omk-paper" data-scene="paper" hidden>
+  <div class="omk-paper-wrap"><div class="omk-paper-grid">
+    <article class="omk-paper" id="omk-paper-el" aria-label="おみくじの紙" tabindex="-1"></article>
+    <div class="omk-after">
+      <h2 class="pc-only">ほかの先生にも、会ってみる？</h2>
+      <p class="sub">ひくたびに、ちがう先生が出てきます</p>
+      <button type="button" class="omk-btn-line" id="omk-again">もう一度ひく</button>
+    </div>
+  </div></div>
+  <!-- 一覧（形2）：紙の下に、たたんだ一覧（いま出た先生に印） -->
+  <div class="omk-list"><div class="omk-list__in">
+    <h2>筒の中の66人</h2>
+    <p class="lead">いま出た先生に、印をつけています</p>
+    <div class="omk-fold closed" id="omk-fold"><div class="omk-grid" id="omk-grid"></div>
+      <button class="omk-open-all" type="button" id="omk-open-all">66人ぜんぶ見る</button></div>
+    <ul class="omk-legend"></ul>
+  </div></div>
+</section>
+</main>
+
+<footer class="ft" id="sitemap"><div class="w">
+  <nav class="map" aria-label="サイト全体のメニュー">
+    <div><h4><i>1</i>知る</h4><ul><li><a href="/shikaku-guide/gimon/">キャリコンって何？（よくある質問40問）</a></li><li><a href="/careers/">キャリアコンサルタントの仕事</a></li><li><a href="/shikaku-guide/">資格まるわかりガイド（とり方・期間）</a></li><li><a href="/exam-guide/goukakuritsu/">試験の難易度と合格率</a></li><li><a href="/school-guides/merit-demerit/">やめたほうがいい人・<span style="white-space:nowrap">向いている人</span></a></li></ul></div>
+    <div><h4><i>2</i>学校選び</h4><ul><li><a href="/schools/compare/">6校の比較表</a></li><li><a href="/schools/compare/#apply-h">6校の無料説明会の申込み先</a></li><li><a href="/#school-match">いまのあなたに合う学校をしぼる</a></li><li><a href="/schools/">養成学校一覧</a></li><li><a href="/school-guides/kyufukin/">費用と給付金</a></li><li><a href="/school-guides/kyufukin-tetsuzuki/">給付金の手続き（いつまでに・何を）</a></li><li><a href="/school-guides/how-to-choose/">養成学校の選び方</a></li><li><a href="/school-guides/online/">オンライン講座の選び方</a></li><li><a href="/school-guides/working-mothers/">子育て中の学校選び</a></li><li><a href="/school-guides/training-and-exam-preparation/">養成講習と試験対策講座の違い</a></li><li><a href="/school-reviews/chiiki-renkei-platform/">運営者の受講体験記</a></li><li><a href="/schools/chiiki-renkei-platform/#kai">運営者が出た説明会の話</a></li></ul></div>
+    <div><h4><i>3</i>試験対策</h4><ul><li><a href="/exam/">試験対策トップ（学科・論述・面接）</a></li><li><a href="/start/">初学者の学習ルート</a></li><li><a href="/terms/">キャリコンことば図鑑</a></li><li><a href="/theorists/">理論家図鑑</a></li><li><a href="/laws/">労働法・統計・制度</a></li><li><a href="/games/quiz/">1問1答ドリル</a></li><li><a href="/games/">3分ミニゲーム</a></li><li><a href="/diagrams/">図解ライブラリ</a></li><li><a href="/text/">学科 直前対策テキスト（PDF）</a></li><li><a href="/books/">さらに学べる本棚</a></li><li><a href="/omamori/">お守りページ</a></li></ul></div>
+    <div><h4><i>4</i>登録・その先</h4><ul><li><a href="/shikaku-guide/#touroku">受かったあとの登録</a></li><li><a href="/school-guides/zaitaku-fukugyo/">在宅・副業で働く</a></li></ul><h4>このサイトのこと</h4><ul><li><a href="/">ホーム</a></li><li><a href="/search/">サイト内検索</a></li><li><a href="/column/">コラム</a></li><li><a href="/about/">このサイトについて</a></li><li><a href="/contact/">お問い合わせ</a></li><li><a href="/privacy/">プライバシーポリシー・免責事項</a></li></ul></div>
+  </nav>
+  <div class="cols">
+    <div><h4>紹介料のこと</h4><p>紹介料をいただいているのは、<span class="pr">PR</span>の表示がある学校です。あなたの受講料は変わりません。6校とも同じ項目・同じ確かめ方（公式ページ・確かめた日つき）で載せています。</p></div>
+    <div><h4>ご注意</h4><p>掲載している学校の料金・日程・給付金などの情報は変更される可能性があります。申込み前に必ず各校の公式サイトで最新情報をご確認ください。</p><p>法律・統計・試験制度に関する記述は、一次資料で確認できた範囲で掲載しています。</p></div>
+  </div>
+  <p class="copy">運営者：岩脇 朝子　&copy; 2026 キャリコン学びピクニック</p>
+</div></footer>
+<nav class="bn" aria-label="下のメニュー"><a href="/" data-ev="nav_home"><span><i>⌂</i>ホーム</span></a><a href="/start/" data-ev="nav_michi"><span><i>⋯</i>勉強の道</span></a><a href="/exam-guide/last-30days/#mainichi" data-ev="nav_daily" data-bn-mid><span><i>?</i>今日の問題</span></a><a href="/search/" data-ev="nav_search"><span><i>⌕</i>さがす</span></a><a href="#sitemap" data-ev="nav_menu"><span><i>≡</i>メニュー</span></a></nav>
+<script src="../../js/omikuji-data.js?v=2026.1122"></script>
+<script src="../../js/omikuji.js?v=2026.1122"></script>
+</body>
+</html>
