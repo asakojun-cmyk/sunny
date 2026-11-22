@@ -1013,16 +1013,16 @@
    "hasSchoolPage": true,
    "items": {
     "受講料金": {
-     "value": "330,000円(税込・一般価格。早めに申し込むと割引あり。金額は時期で変わる)",
+     "value": "330,000円(税込・一般価格。割引は時期と条件で変わる)",
      "status": "verified",
      "sources": [
       "https://www.lec-jp.com/caricon/kouza/yousei/"
      ],
-     "checkedAt": "2026-10-13",
+     "checkedAt": "2026-11-23",
      "origin": "比較表",
      "previous": {
-      "value": "330,000円(税込・標準価格。早期申込割引で最大20,000円引)",
-      "checkedAt": "2026-09-28"
+      "value": "330,000円(税込・一般価格。早めに申し込むと割引あり。金額は時期で変わる)",
+      "checkedAt": "2026-10-13"
      },
      "watch": {
       "url": "https://www.lec-jp.com/caricon/kouza/yousei/",
@@ -1048,20 +1048,22 @@
      "mark": "good"
     },
     "割引・特典": {
-     "value": "2026年12月〜2027年3月開講は、10月31日(土)までの申込みで10,000円割引(320,000円)。11月1日からは一般価格330,000円。申込者全員に試験対策Web講座3点セット(参考価格33,000円)。法人提携割引などもあり(併用に制限)",
+     "value": "2026年12月〜2027年3月開講は、2026年11月1日からの申込みは一般価格330,000円(早期申込の割引は10月末で終了)。講座説明会に参加して当日に申込みか予約をすると10,000円割引。申込者全員に試験対策Web講座3点セット(参考価格33,000円)。公務員・パパママ・学生などの割引もあり(併用に制限)",
      "status": "verified",
      "sources": [
       "https://www.lec-jp.com/caricon/kouza/yousei/",
-      "https://www.lec-jp.com/caricon/info/faq/"
+      "https://www.lec-jp.com/caricon/campaign/"
      ],
-     "checkedAt": "2026-10-13",
+     "checkedAt": "2026-11-23",
+     "previous": {
+      "value": "2026年12月〜2027年3月開講は、10月31日(土)までの申込みで10,000円割引(320,000円)。11月1日からは一般価格330,000円。申込者全員に試験対策Web講座3点セット(参考価格33,000円)。法人提携割引などもあり(併用に制限)",
+      "checkedAt": "2026-10-13"
+     },
      "watch": {
       "url": "https://www.lec-jp.com/caricon/kouza/yousei/",
       "tokens": [
-       "10月31日",
-       "10000円",
-       "320000円",
-       "11月1日",
+       "一般価格",
+       "2026年11月1日",
        "330000円",
        "33000円"
       ]
@@ -2867,18 +2869,21 @@
      "sourceFrom": "読み直し(2026-10-13)"
     },
     "割引・特典": {
-     "value": "早期割引(10月31日まで。無料説明会への参加が条件。公式に「3.3万円」と「3万円」の2つの書き方がある)",
+     "value": "早く申し込むと割引の制度あり(金額・期限は公式ページに書いていない。無料説明会で案内)。受講料は金利なしの3回分割ができる",
      "status": "partial",
      "sources": [
+      "https://cmcajapan.net/",
       "https://cmcajapan.com/lp/setsumeikai"
      ],
-     "checkedAt": "2026-10-13",
+     "checkedAt": "2026-11-23",
+     "previous": {
+      "value": "早期割引(10月31日まで。無料説明会への参加が条件。公式に「3.3万円」と「3万円」の2つの書き方がある)",
+      "checkedAt": "2026-10-13"
+     },
      "watch": {
-      "url": "https://cmcajapan.com/lp/setsumeikai",
+      "url": "https://cmcajapan.net/",
       "tokens": [
-       "10月31日",
-       "3.3万円",
-       "3万円"
+       "早期にお申し込みの方には割引制度もあります"
       ]
      }
     },
@@ -3033,12 +3038,13 @@
      }
     },
     "申込みの締切": {
-     "value": "未確認(早期割引は10月31日まで)",
+     "value": "未確認(公式ページに締切の記載なし)",
      "status": "unverified",
      "sources": [
+      "https://cmcajapan.net/",
       "https://cmcajapan.com/lp/setsumeikai"
      ],
-     "checkedAt": "2026-10-13"
+     "checkedAt": "2026-11-23"
     },
     "受講に必要な環境": {
      "value": "未確認",
