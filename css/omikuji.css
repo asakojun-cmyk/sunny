@@ -29,7 +29,7 @@
 .omk-sky .cl.l{left:5%}.omk-sky .cl.r{right:5%;top:34px;width:46px}
 /* 11/22 ちゃん「緑は白に変えようか。後ろの丘はおみくじの3分の２くらいの高さまで下げようか」：
    地は白にし、緑は筒のうしろの丘だけに。丘のてっぺんは筒の下から3分の2の高さ（--hill-top）。 */
-.omk-field{background:#fff;padding:20px var(--side) 36px;position:relative;overflow-x:clip}
+.omk-field{background:#fff;padding:20px var(--side) 36px;position:relative;overflow:clip}
 .omk-peek{--tube-h:128px}
 .omk-peek+*{margin-top:22px}
 .omk-ttl,.numline,.omk-field>p{position:relative}
