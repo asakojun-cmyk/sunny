@@ -98,7 +98,7 @@
     if (anim) {
       void sc.offsetWidth;
       sc.classList.add("omk-draw-anim");
-      timer = setTimeout(function () { sc.classList.add("omk-draw-done"); $("omk-num").focus({ preventScroll: true }); }, 2400);
+      timer = setTimeout(function () { sc.classList.add("omk-draw-done"); $("omk-num").focus({ preventScroll: true }); }, 3100);
     } else {
       sc.classList.add("omk-draw-done");
       $("omk-num").focus({ preventScroll: true });
@@ -162,6 +162,8 @@
   $("omk-again").addEventListener("click", function () { show("start", $("omk-go")); });
   window.__omikuji = { draw: draw, paper: paper, data: D }; /* 手元の確認用 */
 
+  /* 紙の外の一言（v5 の closing）。なければ画面の文のまま */
+  if (D.closing) document.querySelector(".omk-after .sub").textContent = noTag(D.closing);
   legends();
   strip();
   var sc0 = Q.get("scene");

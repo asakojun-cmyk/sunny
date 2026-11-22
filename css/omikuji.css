@@ -96,7 +96,10 @@
 /* 動き：筒が左右に3回ゆれる → さかさに傾く → 棒の先に先生が出る → 番号（約2.3秒） */
 .omk-draw-anim .omk-peek--draw .omk-tube{animation:omk-shake 1.5s cubic-bezier(.4,0,.2,1) both}
 .omk-draw-anim .omk-stick{animation:omk-stick .55s 1.45s cubic-bezier(.2,.7,.3,1.2) both}
-.omk-draw-anim .omk-after-draw{animation:omk-fade .4s 1.95s ease-out both}
+.omk-draw-anim .omk-after-draw{animation:omk-fade .4s 2.7s ease-out both}
+/* 11/22 ちゃん「一回逆さまになった理論家でて向きが正面になるようにして」：さかさで出て、くるっと正面に */
+.omk-draw-anim .omk-stick__face{animation:omk-flip .65s 2.05s cubic-bezier(.3,.7,.3,1.25) both}
+@keyframes omk-flip{from{transform:rotate(180deg)}to{transform:rotate(0)}}
 .omk-draw-done .omk-peek--draw .omk-tube{transform:rotate(180deg)}
 .omk-peek--draw{margin-bottom:12px}
 /* さかさにしたとき字がさかさに見えないよう、引く場面の筒は字を出さない */
@@ -169,11 +172,12 @@
 .pc-only{display:none}
 @media (min-width:900px){
   .omk-field{padding:24px var(--side) 48px}
-  .omk-paper-grid{display:grid;grid-template-columns:420px 1fr;gap:64px;align-items:start;padding:24px var(--side) 0}
-  .omk-paper{margin:16px 0 0}
-  .omk-after{text-align:left;padding:60px 0 0}
-  .omk-after .omk-btn-line{margin-left:0}
-  .omk-after h2{font-size:22px;font-weight:500;letter-spacing:.1em;margin:14px 0 0;line-height:1.6;white-space:nowrap}
+  /* 11/22 ちゃん「もう一度引く？ってあるけど、下に持ってきて」「おみくじは中央に」：PCも1列・紙はまん中・その下に「もう一度ひく」 */
+  .omk-paper-grid{display:block;padding:24px var(--side) 0}
+  .omk-paper{margin:16px auto 0}
+  .omk-after{text-align:center;padding:24px 0 0}
+  .omk-after .omk-btn-line{margin-left:auto;margin-right:auto}
+  .omk-after h2{font-size:20px;font-weight:500;letter-spacing:.1em;margin:0;line-height:1.6}
   .pc-only{display:block}
 }
 
